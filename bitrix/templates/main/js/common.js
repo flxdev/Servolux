@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		videoWrapper = $('.main-video-wrapper'),
 		burger = $('#main-burger'),
 		secMenu = $('.header-menu-modal'),
+		screenLinks = $('.screen-links-wrapper'),
 		logo = $('.logo'),
 		mainTitle = $('.title-wrapper');
 
@@ -56,7 +57,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		var scrollPos = docWindow.scrollTop(),
 			i = (140-((scrollPos/vHeight)*50))/100;
 		videoWrapper.css('opacity', (vHeight/scrollPos)/3).find('video').css('transform', 'translate(-50%, -50%) scale('+ (i<=1 ? 1 : i) +')');
-		mainScreen.css('opacity', ((vHeight/scrollPos)/40))
+		if(scrollPos>200 && !screenLinks.hasClass('hiddened')){
+			screenLinks.fadeOut().addClass('hiddened')
+		}
+		if(scrollPos<200 && screenLinks.hasClass('hiddened')){
+			screenLinks.fadeIn().removeClass('hiddened')
+		}
+		//mainScreen.css('opacity', ((vHeight/scrollPos)/40))
+	}
+
+	function scrollMainTitle(){
+		mainTitle.css('margin-top', -(docWindow.scrollTop())/1.5)
 	}
 
 	docWindow.on('resize', function(){
@@ -66,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	docWindow.scroll(function (event) {
     	//console.log('Scroll '+docFunctions.findScroll())
     	if(!isMobile()){
-    		scrollMainScreen()
+    		scrollMainScreen();
+    		scrollMainTitle();
     	}
     	if(docFunctions.findScroll()>=mainScreen.height()){
     		headerMenu.addClass('sticked')
@@ -79,9 +91,11 @@ document.addEventListener("DOMContentLoaded", function() {
     	}
 	});
 
-	inView('.animateThis').on('enter', function(el){
+	if($(window).width() >= 1024){
+		inView('.animateThis').on('enter', function(el){
 	    	$(el).addClass('animated ' + $(el).data('anim'))
 	    });
+	}
 
 	/*var ctx = document.getElementById("index-chart").getContext('2d');
 	var myChart = new Chart(ctx, {

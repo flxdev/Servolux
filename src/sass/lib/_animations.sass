@@ -1,19 +1,19 @@
 //animations
 .animated
 	&.main-screen-title
-		animation: fadeInDown 2s ease-out 0.5s both
+		animation: fadeInDown 1s ease-out 0.2s both
 	&.header-mainwrap
-		animation: fadeInDownMenu 2s ease-out 0.8s both
+		animation: fadeInDownMenu 1s ease-out 0.4s both
 	&.title-wrapper
 		animation-delay: 0
 		animation-duration: 2s
 		animation-fill-mode: none
 	&.screen-link-text
-		animation: linkText 2s ease-out both
+		animation: linkText 1s ease-out both
 	&.line
-		animation: vertLine 2s ease-in-out 0.5s both
+		animation: vertLine 1s ease-in-out 0.3s both
 	&.line.lineTwo
-		animation: vertLineTwo 2s ease-in-out 1s both
+		animation: vertLineTwo 1s ease-in-out 0.5s both
 
 @keyframes zoomOut
 	from
@@ -27,7 +27,7 @@
 @keyframes fadeInDownMenu
 	from
 		opacity: 0
-		transform: translatey(-200px)
+		transform: translatey(-40px)
 	to
 		opacity: 1
 		transform: translatey(0px)
@@ -35,7 +35,7 @@
 @keyframes fadeInLeft
 	from
 		opacity: 0
-		transform: translate(0,-200px)
+		transform: translate(0,-40px)
 	to
 		opacity: 1
 		transform: translate(0,0px)
@@ -43,7 +43,7 @@
 @keyframes fadeInLeft
 	from
 		opacity: 0
-		transform: translate(0,-200px)
+		transform: translate(0,-40px)
 	to
 		opacity: 1
 		transform: translate(0,0px)
@@ -51,7 +51,7 @@
 @keyframes linkText
 	from
 		opacity: 0
-		transform: translate(0, 100vh)
+		transform: translate(0, 40px)
 	to
 		opacity: 1
 		transform: translate(0,0)
@@ -72,169 +72,22 @@
 		transform: translate(0, 0)
 		opacity: 0.2
 
+@keyframes fadeOutUp
+  from
+    opacity: 1
+  to
+    opacity: 0
+    transform: translate3d(0, -15px, 0)
 
+.fadeOutUp
+  animation-name: fadeOutUp
 
 .animated
-	animation-duration: 1s
+	animation-duration: 0.7s
 	animation-fill-mode: both
 	&.infinite
 		animation-iteration-count: infinite 
 
-
-
-@keyframes pulse
-	from
-		transform: scale3d(1, 1, 1)
-
-	50%
-		transform: scale3d(1.05, 1.05, 1.05)
-
-	to
-		transform: scale3d(1, 1, 1)
-
-
-.pulse
-	animation-name: pulse
-
-@keyframes rubberBand
-	from
-		transform: scale3d(1, 1, 1)
-
-	30%
-		transform: scale3d(1.25, 0.75, 1)
-
-	40%
-		transform: scale3d(0.75, 1.25, 1)
-
-	50%
-		transform: scale3d(1.15, 0.85, 1)
-
-	65%
-		transform: scale3d(0.95, 1.05, 1)
-
-	75%
-		transform: scale3d(1.05, 0.95, 1)
-
-	to
-		transform: scale3d(1, 1, 1)
-
-
-
-
-.bounceIn
-	animation-name: bounceIn
-
-@keyframes bounceInDown
-	from, 60%, 75%, 90%, to
-		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
-
-	0%
-		opacity: 0
-		transform: translate3d(0, -3000px, 0)
-
-	60%
-		opacity: 1
-		transform: translate3d(0, 25px, 0)
-
-	75%
-		transform: translate3d(0, -10px, 0)
-
-	90%
-		transform: translate3d(0, 5px, 0)
-
-	to
-		transform: none
-
-
-.bounceInDown
-	animation-name: bounceInDown
-
-@keyframes bounceInLeft
-	from, 60%, 75%, 90%, to
-		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
-
-	0%
-		opacity: 0
-		transform: translate3d(-3000px, 0, 0)
-
-	60%
-		opacity: 1
-		transform: translate3d(25px, 0, 0)
-
-	75%
-		transform: translate3d(-10px, 0, 0)
-
-	90%
-		transform: translate3d(5px, 0, 0)
-
-	to
-		transform: none
-
-
-.bounceInLeft
-	animation-name: bounceInLeft
-
-@keyframes bounceInRight
-	from, 60%, 75%, 90%, to
-		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
-
-	from
-		opacity: 0
-		transform: translate3d(3000px, 0, 0)
-
-	60%
-		opacity: 1
-		transform: translate3d(-25px, 0, 0)
-
-	75%
-		transform: translate3d(10px, 0, 0)
-
-	90%
-		transform: translate3d(-5px, 0, 0)
-
-	to
-		transform: none
-
-
-.bounceInRight
-	animation-name: bounceInRight
-
-@keyframes bounceInUp
-	from, 60%, 75%, 90%, to
-		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
-
-	from
-		opacity: 0
-		transform: translate3d(0, 3000px, 0)
-
-	60%
-		opacity: 1
-		transform: translate3d(0, -20px, 0)
-
-	75%
-		transform: translate3d(0, 10px, 0)
-
-	90%
-		transform: translate3d(0, -5px, 0)
-
-	to
-		transform: translate3d(0, 0, 0)
-
-
-.bounceInUp
-	animation-name: bounceInUp
-
-@keyframes bounceOut
-	20%
-		transform: scale3d(0.9, 0.9, 0.9)
-
-	50%, 55%
-		opacity: 1
-		transform: scale3d(1.1, 1.1, 1.1)
-
-	to
-		opacity: 0
-		transform: scale3d(0.3, 0.3, 0.3)
 
 
 .fadeIn
@@ -243,7 +96,7 @@
 @keyframes fadeInDown
 	from
 		opacity: 0
-		transform: translate3d(0, -100%, 0)
+		transform: translate3d(0, -15px, 0)
 
 	to
 		opacity: 1
@@ -253,23 +106,11 @@
 .fadeInDown
 	animation-name: fadeInDown
 
-@keyframes fadeInDownBig
-	from
-		opacity: 0
-		transform: translate3d(0, -2000px, 0)
-
-	to
-		opacity: 1
-		transform: none
-
-
-.fadeInDownBig
-	animation-name: fadeInDownBig
 
 @keyframes fadeInLeft
 	from
 		opacity: 0
-		transform: translate3d(-100%, 0, 0)
+		transform: translate3d(-15px, 0, 0)
 
 	to
 		opacity: 1
@@ -279,23 +120,10 @@
 .fadeInLeft
 	animation-name: fadeInLeft
 
-@keyframes fadeInLeftBig
-	from
-		opacity: 0
-		transform: translate3d(-2000px, 0, 0)
-
-	to
-		opacity: 1
-		transform: none
-
-
-.fadeInLeftBig
-	animation-name: fadeInLeftBig
-
 @keyframes fadeInRight
 	from
 		opacity: 0
-		transform: translate3d(100%, 0, 0)
+		transform: translate3d(15px, 0, 0)
 
 	to
 		opacity: 1
@@ -304,21 +132,11 @@
 .fadeInRight
 	animation-name: fadeInRight
 
-@keyframes fadeInRightBig
-	from
-		opacity: 0
-		transform: translate3d(2000px, 0, 0)
-	to
-		opacity: 1
-		transform: none
-
-.fadeInRightBig
-	animation-name: fadeInRightBig
 
 @keyframes fadeInUp
 	from
 		opacity: 0
-		transform: translate3d(0, 100%, 0)
+		transform: translate3d(0, 15px, 0)
 	to
 		opacity: 1
 		transform: none
@@ -326,16 +144,6 @@
 .fadeInUp
 	animation-name: fadeInUp
 
-@keyframes fadeInUpBig
-	from
-		opacity: 0
-		transform: translate3d(0, 2000px, 0)
-	to
-		opacity: 1
-		transform: none
-
-.fadeInUpBig
-	animation-name: fadeInUpBig
 
 
 .rotateIn
@@ -345,9 +153,32 @@
 @keyframes rotateIn
 	from
 		transform-origin: center
-		transform: rotate3d(0, 0, 1, -200deg)
+		transform: translate3d(0, 0px, 0) rotate3d(0, 0, 1, -200deg)
 		opacity: 0
 	to
 		transform-origin: center
 		transform: none
 		opacity: 1
+
+*
+	+r(1024)
+		.animated
+			/*CSS transitions*/
+			opacity: 1
+			-o-transition-property: none !important
+			-moz-transition-property: none !important
+			-ms-transition-property: none !important
+			-webkit-transition-property: none !important
+			transition-property: none !important
+			/*CSS transforms*/
+			-o-transform: none !important
+			-moz-transform: none !important
+			-ms-transform: none !important
+			-webkit-transform: none !important
+			transform: none !important
+			/*CSS animations*/
+			-webkit-animation: none !important
+			-moz-animation: none !important
+			-o-animation: none !important
+			-ms-animation: none !important
+			animation: none !important
