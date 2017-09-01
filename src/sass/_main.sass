@@ -1,0 +1,1013 @@
+input[type='number']
+	-moz-appearance: textfield;
+input[type='submit']
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none; 
+input::-webkit-clear-button,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+	-webkit-appearance: none;
+input[type="password"]
+	font: small-caption
+	line-height: 1.65
+input
+	box-shadow : none
+	font-family: $o
+	color: #000
+	+rem(font-size,16px)
+	+placeholder 
+		font-family: $o
+	&::-ms-clear
+		display: none;
+svg
+	display: inline-block
+	max-width: 100%
+	max-height: 100%
+button
+	background: 0 0
+a
+	text-decoration: none
+
+*
+	+box
+	-webkit-tap-highlight-color: transparent
+	+placeholder 
+		font-family: $o
+		+rem(font-size,16px)
+
+textarea
+	resize: none
+	+placeholder 
+		font-family: $o
+		+rem(font-size,14px)
+ul
+	li>a 
+		display: inline-block
+		width: 100%
+html
+	font-size: 16px
+	line-height: 1
+	// overflow-x: hidden
+	+r(1150)
+		font-size: 15px
+	+r(768)
+		font-size: 12px
+	+r(348)
+		font-size: 10px
+body
+	background-attachment: fixed
+	+box
+	+font-smoothing
+	text-rendering: optimizeLegibility
+	font-family: $o
+	min-width: 320px
+	min-height: 100vh
+	-webkit-overflow-scrolling: touch
+	position: relative
+	&.menu-stuck:not(.mobile)
+		overflow: hidden !important
+		padding-right: 18px
+
+
+
+
+
+//::-webkit-scrollbar-track
+//	background-color: #fff
+//
+//::-webkit-scrollbar
+//	width: 5px
+//	background-color: transparent
+//
+//::-webkit-scrollbar-thumb
+//	background-color: $green
+
+
+.hidden
+	display: none !important
+
+.svg-green
+	fill: $white
+
+.svg-blue
+	fill: $white
+
+.green
+	color: $green
+
+.gray
+	background-color: #f5f6f6
+
+
+// --- Base Fonts Settings
+
+a
+	+ff('Roboto', 700, 18px)
+	color: $green
+	text-decoration: none
+	+rem(line-height, 24px)
+	&:active, &:hover
+		color: $active
+
+h1
+	+ff('GothamPro', 800, 70px)
+	color: $text-h
+h2
+	+ff('GothamPro', 400, 38px)
+	color: $text-h
+	+rem(line-height, 48px)
+	margin-bottom: 20px
+h3
+	+ff('Roboto', 600, 26px)
+	color: $green
+h4
+	+ff('Roboto', 700, 18px)
+	color: $green
+p
+	+ff('Roboto', 300, 18px)
+	color: $text-gray
+	a
+		font-weight: inherit
+p.annotation
+	+rem(font-size, 26px)
+	color: $text-annotation
+	+rem(line-height, 36px)
+p.darker
+	color: $text-darker
+p.sub
+	+ff('Roboto', 600, 16px)
+	+rem(line-height, 30px)
+p.caption
+	+rem(font-size, 16px)
+	color: $text-light-gray
+	+rem(line-height, 24px)
+
+// --- End Base Fonts Settings
+
+
+.flex-block
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	&>*
+		position: relative
+	&:nth-of-type(2)
+		margin-top: 70px
+	+r(768)
+		flex-direction: column
+	.one-half
+		width: 50%
+		+r(768)
+			width: 100%
+	.one-four
+		width: 25%
+
+.text-wrap
+	+rem(max-width, 520px)
+
+.count
+	+rem(max-width, 200px)
+	color: $white
+	h2
+		+rem(font-size, 70px)
+		font-weight: 500
+	p
+		font-weight: 600
+		opacity: 0.5
+		+rem(line-height, 28px)
+		+rem(margin-top, 20px)
+
+
+.paralax
+	h1, h2, h3, h4, p
+		color: $white
+
+a.green-arrow
+	display: inline-block
+	position: relative
+	margin-top: 45px
+	color: $green
+	background-color: transparent
+	+ff('Roboto', 600, 16px)
+	+rem(padding, 10px)
+	border: 1px solid $text-light-gray
+	+rem(border-radius, 1000px)
+	+rem(padding-right, 50px)
+	+rem(padding-top, 12px)
+	+rem(padding-left, 20px)
+	transition: border 0.2s ease-in, background-color 0.2s ease-in, color 0.2s ease-in
+	line-height: 16px
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		+rem(height, 32px)
+		+rem(width, 32px)
+		background-color: $green
+		border-radius: 100%
+		+rem(right, 3px)
+		+rem(top, 3px)
+		transition: background-color 0.2s ease-in
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		border-right: 2px solid $white
+		border-bottom: 2px solid $white
+		+rem(height, 7px)
+		+rem(width, 7px)
+		+rem(right, 16px)
+		+rem(top, 15px)
+		z-index: 1
+		transform: rotate(-45deg)
+		transition: border-right 0.2s ease-in, border-bottom 0.2s ease-in
+	&:hover
+		color: $white
+		background-color: $active
+		border: 1px solid transparent
+		&:after
+			background-color: $white
+		&:before
+			border-right: 2px solid $active
+			border-bottom: 2px solid $active
+
+.search
+	margin: auto
+	+rem(max-width, 480px)
+	position: relative
+	+r(768)
+		width: 250px
+	+r(480)
+		width: 84%
+	input
+		border: none
+		background: none
+		height: 100%
+		width: 100%
+		padding-left: 20px
+		padding-right: 50px
+		position: absolute
+		+rem(height, 43px)
+		+placeholder
+			color: $text-light-gray
+		&:focus + label
+			border: 1px solid $green
+	label
+		width: 100%
+		display: block
+		border: 1px solid #d0d0d0
+		border-radius: 50px
+		+rem(height, 43px)
+		position: relative
+		pointer-events: none
+		.search-icon
+			opacity: 0.2
+			+rem(width, 20px)
+			position: absolute
+			+rem(right, 20px)
+
+
+main
+	width: 100%
+	margin: auto
+
+.header-mainwrap
+	z-index: 999
+	left: 0
+	top: 0
+	width: 100%
+	position: absolute
+	.boxed
+		position: relative
+		z-index: 999
+		.logo-wrapper
+			+rem(width, 198px)
+			+rem(height, 21px)
+			position: absolute
+			+rem(left, $sidestep)
+			+rem(top, $topstep)
+			z-index: 100
+		.burger-menu
+			cursor: pointer
+			position: absolute
+			+rem(right, $sidestep)
+			+rem(top, $topstep - 7px)
+			+rem(height, 36px)
+			+rem(padding-top, 15px)
+			padding-left: 10px
+			padding-right: 10px
+			z-index: 100
+			&:before, &:after
+				display: block
+				content: ''
+				+rem(width, 35px)
+				height: 2px
+				background-color: $white
+				transition: transform 0.2s ease-in
+			&:before
+				transform: translate(0, -5px)
+			&:after
+				transform: translate(0, 5px)
+			&:hover
+				&:before, &:after, .burger-stick
+					background-color: $active
+			.burger-stick
+				+rem(width, 35px)
+				height: 2px
+				background-color: $white
+				transition: transform 0.2s ease-in, opacity 0.2s
+		.header-menu
+			z-index: 100
+			nav
+				position: absolute
+				+rem(right, $sidestep+35px+$sidestep)
+				+rem(top, $topstep - 6px)
+				+r(768)
+					display: none
+				a
+					color: $white
+					display: inline-block
+					line-height: 36px
+					+ff('Roboto', 600, 18px)
+					+rem(height, 37px)
+					+rem(padding-left, 16px)
+					+rem(padding-right, 16px)
+					border-radius: 5px
+					&:hover, &:focus
+						background-color: $active
+					&.active
+						background-color: $green
+			.menu-modal-wrap
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+			.header-menu-modal
+				background-color: $white
+				visibility: hidden
+				opacity: 0
+				z-index: 100
+				width: 100%
+				min-height: 100vh
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 2
+				transition: transform 0.3s ease-out, opacity 0.3s ease-in
+				transform: translate(0px, -50%)
+				+r(768)
+					height: 100%
+				.menu-modal-top
+					position: absolute
+					width: 100%
+					+rem(top, $topstep - 11px)
+					+r(480)
+						+rem(top, $topstep + 60px)
+				.menu-modal-middle
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: center
+					align-items: center
+					min-height: 100vh
+					width: 100%
+					+r(768)
+						background-color: $white
+						padding-bottom: 50px
+						height: auto
+				.menu-columns
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					+rem(max-width, 1400px)
+					margin: auto
+					justify-content: space-between
+					background-color: $white
+					+r(768)
+						display: block
+						+rem(margin-top, 100px)
+						width: 100%
+					+r(480)
+						+rem(margin-top, 160px)
+					.column
+						+rem(max-width, 290px)
+						display: inline-block
+						+rem(padding-top, 20px)
+						+rem(padding-left, $sidestep+10px)
+						+rem(padding-right, $sidestep+10px)
+						+r(768)
+							display: block
+							padding-top: 0
+						.column-href
+							+ff('Roboto', 400, 26px)
+							color: $text-h
+							display: block
+							margin-top: 2vh
+							margin-bottom: 2vh
+							+rem(line-height, 36px)
+							+r(768)
+								+rem(margin-top, 34px)
+							&:hover, &:active
+								color: $active
+						.column-sub-hrefs
+							+r(768)
+								display: none
+							li
+								display: block
+								margin-top: 2vh
+								margin-bottom: 2vh
+							a
+								+ff('Roboto', 400, 18px)
+								+rem(line-height, 28px)
+								color: $text-annotation
+								&:hover, &:active
+									color: $active
+	&.active
+		nav
+			padding-right: 18px
+		.boxed
+			.logo-wrapper
+				.logo
+					+rem(left, $sidestep - 20px)
+					.svg-green
+						fill: $svg-green
+					.svg-blue
+						fill: $svg-blue
+			.burger-menu
+				+rem(right, $sidestep+20px)
+				&:before
+					transform: translate(0, 2px) rotate(45deg)
+					background-color: $text-h
+				&:after
+					transform: translate(0, -2px) rotate(-45deg)
+					background-color: $text-h
+				.burger-stick
+					transform: translate(-20px, 0)
+					opacity: 0
+					background-color: $text-h
+			.header-menu
+				.header-menu-modal
+					transform: translate(0px, 0px)
+					visibility: visible
+					opacity: 1
+	&.sticked
+		position: fixed
+		top: 0
+		.logo-wrapper
+			+rem(top, $topstep - 17px)
+		.svg-green
+			fill: $svg-green
+		.svg-blue
+			fill: $svg-blue
+		.search
+			+rem(top, $topstep - 60px)
+		.header-menu-modal
+			.menu-modal-wrap
+				.menu-modal-top
+					.change-lang
+						+rem(top, $topstep - 50px)
+		.boxed
+			.header-menu
+				+rem(min-height, 75px)
+				background-color: $white
+				box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1)
+				nav
+					+rem(top, $topstep - 26px)
+					a
+						color: $text-h
+						&:hover
+							color: $white
+			#main-burger
+				+rem(top, $topstep - 25px)
+				&:before, &:after, .burger-stick
+					background-color: $text-h
+
+.main-screen-wrapper
+	height: 100vh
+	width: 100%
+	margin: 0
+	padding: 0
+	position: relative
+	overflow: hidden
+	+r(1024)
+		height: auto
+		+rem(min-height, 500px)
+	+r(492)
+		+rem(min-height, 380px)
+	.main-video-wrapper
+		position: fixed
+		width: 100%
+		height: 100vh
+		z-index: -1
+		.filter
+			position: absolute
+			width: 100%
+			height: 100vh
+			background-color: $green-place
+			opacity: 0.3
+		video
+			min-width: 100%
+			min-height: 100vh
+			position: absolute
+			z-index: -200
+			left: 0
+			right: 0
+			margin: auto
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%) scale(1.4)
+			opacity: 1
+		img
+			min-width: 100%
+			min-height: 100vh
+			position: absolute
+			+vcenter
+	.main-screen
+		width: 100%
+		height: 100%
+		overflow: hidden
+		position: relative
+		+r(1024)
+			height: auto
+			+rem(min-height, 500px)
+		+r(492)
+			+rem(min-height, 380px)
+		.line
+			position: absolute
+			height: 100%
+			width: 1px
+			background-color: #fff
+			top: 0
+			right: 0
+		.main-screen-title
+			position: absolute
+			top: 0
+			bottom: 0
+			margin: auto
+			width: 100%
+			+rem(height, 200px)
+			.title-wrapper
+				transform: scale(1)
+				transition: transform 0.6s ease-in-out
+				&.active
+					transform: scale(0.7)
+				+r(1024)
+					max-width: 100%
+					+rem(margin-top, 50px)
+				+r(492)
+					+rem(margin-top, 75px)
+			.title-sup
+				+ff('GothamPro', 800, 50px)
+				text-transform: uppercase
+				color: #e7e8d6
+				text-align: center
+				+rem(margin-bottom, 100px)
+				+rem(line-height, 0px)
+				+r(1024)
+					+rem(font-size, 25px)
+					+rem(margin-bottom, 55px)
+				+r(492)
+					+rem(font-size, 16px)
+					+rem(margin-bottom, 35px)
+			.title-main
+				+ff('GothamPro', 800, 140px)
+				text-transform: uppercase
+				color: $white
+				text-align: center
+				+rem(line-height, 0px)
+				+r(1024)
+					+rem(font-size, 70px)
+				+r(492)
+					+rem(font-size, 42px)
+		.screen-links-wrapper
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			position: relative
+			+r(1024)
+				display: none
+			.screen-link
+				width: 33%
+				flex-grow: 1
+				height: 100vh
+				position: relative
+				overflow: hidden
+				img
+					transform: translate(0px, 200px) scale(0.2)
+					position: absolute
+					opacity: 0
+					transition: transform 0.4s ease-out, opacity 0.6s ease-out
+					width: 100%
+					min-height: 100%
+				&:nth-of-type(2)
+					.screen-link-text
+						animation-delay: 1s
+				&:nth-of-type(3)
+					.screen-link-text
+						animation-delay: 1.2s
+				.screen-link-text
+					position: absolute
+					z-index: 2
+					+rem(height, 200px)
+					+rem(width, 240px)
+					margin: auto
+					left: 0
+					right: 0
+					text-align: center
+					bottom: 0
+					animation-delay: 0.8s
+					.screen-link-title
+						position: absolute
+						left: 0
+						right: 0
+						margin: auto
+						color: $white
+						+ff('GothamPro', 400, 26px)
+						transform: translate(0, 80px)
+						transition: transform 0.4s ease-out
+					p
+						position: absolute
+						left: 0
+						right: 0
+						margin: auto
+						opacity: 0
+						transform: translate(0, 120px)
+						transition: transform 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.1s
+						color: $white
+						+rem(font-size, 16px)
+						font-weight: 600
+						+rem(line-height, 30px)
+					&:hover
+						&+img
+							transform: translate(0,0) scale(1)
+							opacity: 1
+						.screen-link-title
+							transform: translate(0, 40px)
+						p
+							transform: translate(0, 80px)
+							opacity: 1
+
+
+.animateThis
+	opacity: 0
+
+
+#main-content
+	background-color: $white
+
+.box
+	width: 100%
+	padding-left: $sidestep
+	padding-right: $sidestep
+	.block
+		+rem(max-width, 1400px)
+		margin: auto
+		padding-top: 12vh
+		padding-bottom: 12vh
+.brands-wrapper
+	margin-top: 60px
+	.brands
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		.brand
+			border: 1px solid $text-light-gray
+			+rem(padding, 20px)
+			+rem(width, 200px)
+			+rem(height, 220px)
+			flex-grow: 1
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: border-color 0.2s ease-in
+			+r(1280)
+				+rem(width, 300px)
+				+rem(height, 330px)
+			+r(992)
+				+rem(width, 250px)
+				+rem(height, 300px)
+			+r(768)
+				+rem(width, 200px)
+				+rem(height, 220px)
+			img
+				+rem(max-width, 150px)
+				+rem(max-height, 95px)
+				display: inline-block
+				vertical-align: middle
+			&:hover
+				border-color: $active
+			&:nth-of-type(odd)
+				animation-delay: 0.2s
+
+#scheme
+	width: 100%
+	+rem(max-height, 600px)
+	+rem(max-width, 600px)
+	.scheme-part
+		fill: $white
+	.scheme-part-green
+		fill: $green
+	.scheme-part-icon
+		fill: $text-light-gray
+		&.two
+			fill: none
+			stroke: $text-light-gray
+			stroke-linecap: round
+			stroke-linejoin: round
+			stroke-miterlimit: 10
+	.scheme-part-circle
+		fill: #EFEFEF
+	.scheme-button
+		cursor: pointer
+		&.active
+			cursor: pointer
+			.scheme-part, .scheme-part-green
+				fill: $green
+			.scheme-part-icon
+				fill: $white
+				&.two
+					fill: none
+					stroke: $green
+		&:hover
+			.scheme-part, .scheme-part-green
+				fill: $active
+			.scheme-part-icon
+				fill: $white
+				&.two
+					fill: none
+					stroke: $white
+
+
+.download
+	+rem(margin-top, 50px)
+	+rem(margin-bottom, 30px)
+	svg
+		+rem(width, 38px)
+		+rem(height, 38px)
+		display: inline-block
+		vertical-align: top
+		+rem(margin-top, 10px)
+	.download-text
+		display: inline-block
+		+rem(margin-left, 10px)
+		vertical-align: top
+		p
+			color: $text-light-gray
+			+rem(margin-top, 5px)
+
+
+.counts-wrapper
+	background-image: url("../img/index/paralax-bg.jpg")
+	background-attachment: fixed
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+
+.carousel-buttons
+	background-color: #f5f6f6
+	display: inline-block
+	+rem(border-radius, 100px)
+	overflow: hidden
+	+rem(margin-bottom, 40px)
+	.carousel-buttons-wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		+rem(height, 43px)
+		.button
+			+rem(padding, 14px)
+			+rem(padding-left, 20px)
+			+rem(padding-right, 20px)
+			cursor: pointer
+			border: 1px solid transparent
+			p
+				color: $text-darker
+				font-weight: 400
+				+rem(font-size, 16px)
+			&.active
+				border: 1px solid $green
+				background-color: #FFF
+				p
+					color: $green
+				&:first-of-type
+					border-radius: 100px 0 0 100px
+				&:last-of-type
+					border-radius: 0 100px 100px 0
+			&:hover
+				background-color: $active
+				border: 1px solid transparent
+				p
+					color: #fff
+
+
+#index-chart
+	width: 100%
+	.chart-wrapper
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		.chart-bar
+			background-color: $green
+			+rem(height, 66px)
+			position: relative
+			&:nth-of-type(2)
+				opacity: 0.9
+			&:nth-of-type(3)
+				opacity: 0.8
+			&:nth-of-type(4)
+				opacity: 0.7
+			&:nth-of-type(5)
+				opacity: 0.6
+			&:nth-of-type(6)
+				opacity: 0.5
+			&:nth-of-type(7)
+				opacity: 0.4
+			p
+				position: absolute
+				+rem(top, 26px)
+				+rem(left, 25px)
+				color: $white
+				+rem(font-size, 16px)
+				&.annotation
+					+rem(right, 25px)
+					left: auto
+					+rem(top, 15px)
+					+rem(font-size, 26px)
+			&:hover
+				background-color: $active
+				opacity: 1
+
+.block-news
+	border-top: 1px solid $text-light-gray
+	h2
+		margin-bottom: 7vh
+	.one-half:not(:first-of-type)
+		+rem(margin-left, 30px)
+	.one-half:first-of-type
+		+rem(margin-right, 30px)
+	.news
+		img
+			width: 100%
+		a
+			margin-top: 2vh
+			margin-bottom: 2vh
+			display: block
+			+rem(font-size, 26px)
+			+rem(line-height, 36px)
+			font-weight: 600
+		p
+			+rem(line-height, 26px)
+			+rem(font-size, 16px)
+			margin-bottom, 2vh
+			margin-top, 2vh
+			display: block
+			&.caption
+				margin-top: 2vh
+		&:not(.big-news)
+			a
+				margin-top: 0
+				+rem(font-size, 16px)
+				+rem(line-height, 30px)
+				font-weight: 700
+			.text-news
+				padding-bottom: 6vh
+				&:not(:first-of-type)
+					padding-top: 6vh
+				&:not(:last-of-type)
+					border-bottom: 1px solid $text-light-gray
+	.green-arrow
+		margin-top: 2vh
+
+
+.callback-wrap
+	margin-top: 10vh
+	margin-bottom: 10vh
+	&.callback
+		+r(768)
+			border-top: 1px solid $text-light-gray
+			padding-top: 5vh
+			margin-bottom: 7vh
+	&.vacancy
+		+r(768)
+			border-bottom: 1px solid $text-light-gray
+			padding-bottom: 5vh
+			margin-top: 0
+	p.sub
+		margin-bottom: 3vh
+		+rem(font-size, 16px)
+		font-weight: 400
+	.tell
+		color: $text-h
+		font-weight: 700
+		margin-bottom: 1.5vh
+	.mail
+		font-weight: 600
+	.icon
+		+rem(height, 35px)
+		+rem(margin-right, 10px)
+	svg
+		+rem(width, 35px)
+
+.callback-button
+	background-color: $green
+	+rem(width, 183px)
+	+rem(height, 43px)
+	+rem(border-radius, 50px)
+	color: $white
+	&:focus, &:hover
+		background-color: $active
+
+.change-lang
+	position: absolute
+	+rem(right, $sidestep+55px+$sidestep)
+	+rem(top, 14px)
+	+r(768)
+		display: none
+	a
+		color: $text-gray
+		&:not(:first-of-type)
+			+rem(margin-left, 10px)
+		&.active
+			color: $text-h
+		&:focus, &:hover
+			color: $active
+
+footer
+	background-color: $white
+	border-top: 1px solid $text-gray
+	.callback-wrap
+		margin-top: 0
+	p.caption
+		font-weight: 600
+	.footer-hrefs
+		a
+			display: block
+			color: $text-h
+			&:not(:last-of-type)
+				+rem(margin-bottom, 28px)
+			&.active
+				color: $text-light-gray
+				border-bottom: 1px solid $text-light-gray
+				display: inline-block
+				+rem(padding-bottom, 3px)
+			&:hover
+				color: $active
+	.footer-lang-caption
+		position: absolute
+		bottom: 0
+		.change-lang
+			+rem(margin-bottom, 40px)
+			position: relative
+			right: auto
+			top: auto
+	.footer-contacts
+		.tell
+			+rem(font-size, 26px)
+			+rem(margin-bottom, 10px)
+			+rem(margin-top, 20px)
+	.footer-office-wrapper
+		position: absolute
+		bottom: 0
+		p.office-title
+			+rem(font-size, 18px)
+			+rem(line-height, 30px)
+			+rem(margin-bottom, 20px)
+			font-weight: 700
+			color: $text-h
+		p.darker
+			+rem(font-size, 16px)
+			+rem(margin-top, 5px)
+			+rem(margin-bottom, 5px)
+			font-weight: 600
+		a
+			+rem(margin-top, 20px)
+			display: block
+			+rem(font-size, 16px)
+	.footer-makers
+		position: absolute
+		bottom: 0
+		.caption
+			+rem(margin-bottom, 5px)

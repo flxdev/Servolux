@@ -1,0 +1,28 @@
+$colors: (
+  white:  #fff, 
+  primary: #80baa6, 
+  primaryh: #5fab91, 
+  primarya: #439a7c, 
+  primarybg: #eff9f4, 
+  secondary: #d56c72,
+  secondarya: #c55d63,
+  secondarya2: #b1474d,
+  secondarybg: #fcf6f5,
+  textblk: #323232,
+  textlight: #7d7d7d,
+  headertop: #656565,
+  textgray: #8b8b8b,
+  bggray: #f8fcfa,
+  bcolor: #c3c3c3,
+  hborder: #e6e6e6,
+  error: #bb0000,
+);
+:root {
+  // each item in color map
+  @each $name, $color in $colors {
+    --color-#{$name}: $color;
+  }
+}
+@function color($color-name) {
+  @return var(--color-#{$color-name});
+}

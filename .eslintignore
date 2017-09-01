@@ -1,0 +1,3 @@
+src/js/lib/**/*.js
+src/js/lib.js
+bitrix/templates/main/js/**/*.js

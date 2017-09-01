@@ -1,0 +1,11 @@
+//suggest component without logic
+//когда в инпут введено больше 3 симолов на .search-wrapper вешаем класс .focus
+.search-wrapper.suggest-wrapper
+	.suggest-wrapper-inner
+		form.search-inner.search-suggest
+			input(type="text" placeholder="1000 и одна услуга" required="required" autocomplete="off" aria-owns="res" aria-autocomplete="both").search-input.biginput
+			button(type='submit').search-submit
+				svg(class="icon icon-search")
+					use(xlink:href="#search" xmlns:xlink="http://www.w3.org/1999/xlink")
+		.suggest-list
+			.suggest-list-inner

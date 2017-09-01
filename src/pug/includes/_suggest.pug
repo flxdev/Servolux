@@ -1,0 +1,10 @@
+//suggest component
+.search-wrapper.suggest-wrapper.js-suggest
+	.suggest-wrapper-inner
+		form.search-inner.search-suggest
+			input(type="text" placeholder="1000 и одна услуга" required="required" autocomplete="off" aria-owns="res" aria-autocomplete="both").search-input.biginput
+			button(type='submit').search-submit
+				svg(class="icon icon-search")
+					use(xlink:href="#search" xmlns:xlink="http://www.w3.org/1999/xlink")
+		.suggest-list.js-suggest-list
+			.suggest-list-inner
