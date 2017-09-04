@@ -157,13 +157,21 @@ p.caption
 	&:nth-of-type(2)
 		margin-top: 70px
 	+r(768)
+		&:not(.row)
+			flex-direction: column
+	+r(400)
 		flex-direction: column
 	.one-half
 		width: 50%
 		+r(768)
 			width: 100%
+			&:nth-of-type(2)
+				margin: auto
+				+rem(margin-top, 80px)
 	.one-four
 		width: 25%
+		+r(768)
+			width: 50%
 
 .text-wrap
 	+rem(max-width, 520px)
@@ -185,55 +193,75 @@ p.caption
 	h1, h2, h3, h4, p
 		color: $white
 
-a.green-arrow
+.button-green-wrapper
 	display: inline-block
+a.button-green
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
 	position: relative
+	justify-content: flex-start
 	margin-top: 45px
 	color: $green
 	background-color: transparent
-	+ff('Roboto', 600, 16px)
-	+rem(padding, 10px)
 	border: 1px solid $text-light-gray
 	+rem(border-radius, 1000px)
-	+rem(padding-right, 50px)
-	+rem(padding-top, 12px)
-	+rem(padding-left, 20px)
-	transition: border 0.2s ease-in, background-color 0.2s ease-in, color 0.2s ease-in
-	line-height: 16px
-	&:after
-		content: ''
-		display: block
-		position: absolute
-		+rem(height, 32px)
-		+rem(width, 32px)
-		background-color: $green
-		border-radius: 100%
-		+rem(right, 3px)
-		+rem(top, 3px)
-		transition: background-color 0.2s ease-in
-	&:before
-		content: ''
-		display: block
-		position: absolute
-		border-right: 2px solid $white
-		border-bottom: 2px solid $white
-		+rem(height, 7px)
-		+rem(width, 7px)
-		+rem(right, 16px)
-		+rem(top, 15px)
-		z-index: 1
-		transform: rotate(-45deg)
-		transition: border-right 0.2s ease-in, border-bottom 0.2s ease-in
-	&:hover
-		color: $white
-		background-color: $active
-		border: 1px solid transparent
-		&:after
-			background-color: $white
-		&:before
-			border-right: 2px solid $active
-			border-bottom: 2px solid $active
+	transition: border 0.2s ease-in, background-color 0.2s ease-in-out
+	width: 50%
+	overflow: hidden
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 
+	&:hover
+		border: 1px solid transparent
+		background-color: $active
+		.button-green__text-block
+			transform: translatex(0%)
+	.button-green__text-block
+		position: relative
+		+rem(padding-right, 50px)
+		+rem(padding-top, 12px)
+		+rem(padding-left, 20px)
+		+rem(border-radius, 50px)
+		+rem(padding-bottom, 11px)
+		transform: translatex(-100%)
+		transition: transform 0.3s ease-in-out
+		&:first-of-type
+			p
+				color: $white
+			.button-green__text-block__circle
+				background-color: $white
+				&:before
+					border-right: 1px solid $active
+					border-top: 1px solid $active
+	p
+		+rem(line-height, 16px)
+		+rem(font-size, 16px)
+		word-wrap: normal
+		word-break: keep-all
+		white-space: nowrap
+		color: $green
+	.button-green__text-block__circle
+		display: block
+		position: absolute
+		+rem(width, 30px)
+		+rem(height, 30px)
+		background-color: $green
+		+rem(border-radius, 50px)
+		+rem(right, 5px)
+		+rem(top, 5px)
+		&:before
+			position: absolute
+			display: block
+			content: ''
+			+rem(width, 8px)
+			+rem(height, 8px)
+			border-right: 1px solid $white
+			border-top: 1px solid $white
+			+rem(top, 11px)
+			transform: rotate(45deg)
+			+rem(right, 12px)
 .search
 	margin: auto
 	+rem(max-width, 480px)
@@ -290,6 +318,8 @@ main
 			+rem(left, $sidestep)
 			+rem(top, $topstep)
 			z-index: 100
+			.logo
+				height: 100%
 		.burger-menu
 			cursor: pointer
 			position: absolute
@@ -372,10 +402,8 @@ main
 					display: -ms-flex
 					display: -o-flex
 					display: flex
-					justify-content: center
 					align-items: center
-					min-height: 100vh
-					width: 100%
+					height: 100vh
 					+r(768)
 						background-color: $white
 						padding-bottom: 50px
@@ -436,12 +464,16 @@ main
 			.logo-wrapper
 				.logo
 					+rem(left, $sidestep - 20px)
+					+r(492)
+						+rem(left, $sidestep - 20px)
 					.svg-green
 						fill: $svg-green
 					.svg-blue
 						fill: $svg-blue
 			.burger-menu
 				+rem(right, $sidestep+20px)
+				+r(492)
+					+rem(right, $sidestep - 20px)
 				&:before
 					transform: translate(0, 2px) rotate(45deg)
 					background-color: $text-h
@@ -666,8 +698,11 @@ main
 
 .box
 	width: 100%
-	padding-left: $sidestep
-	padding-right: $sidestep
+	+rem(padding-left, $sidestep)
+	+rem(padding-right, $sidestep)
+	+r(492)
+		+rem(padding-left, $sidestep - 20px)
+		+rem(padding-right, $sidestep - 20px)
 	.block
 		+rem(max-width, 1400px)
 		margin: auto
@@ -684,46 +719,215 @@ main
 		justify-content: center
 		flex-wrap: wrap
 		.brand
-			border: 1px solid $text-light-gray
-			+rem(padding, 20px)
+			outline: 1px solid $text-light-gray
 			+rem(width, 200px)
 			+rem(height, 220px)
+			margin-left: -1px
+			z-index: 0
 			flex-grow: 1
-			display: -webkit-flex
-			display: -moz-flex
-			display: -ms-flex
-			display: -o-flex
-			display: flex
-			justify-content: center
-			align-items: center
-			transition: border-color 0.2s ease-in
+			position: relative
+			padding: 5px
+			margin-top: 1px
+			margin-left: 1px
+			&:before
+				display: block
+				position: absolute
+				content: ''
+				bottom: -1px
+				left: -1px
+				width: 100%
+				height: 0
+				border-left: 1px solid $active
+				border-right: 1px solid $active
+				border-top: 1px solid transparent
+				border-bottom: 1px solid transparent
+				transition: height 0.15s ease-in-out, border-top 0s 0s, border-bottom 0s 0.15s
+			.brand-anim-block
+				position: relative
+				width: 100%
+				bottom: 0
+			a
+				width: 100%
+				position: absolute
+				bottom: 0
+				left: 0
+				top: 0
+				right: 0
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: center
+				align-items: center
+				+rem(height, 210px)
+				+rem(padding, 20px)
+				img
+					+rem(max-width, 150px)
+					+rem(max-height, 95px)
+					display: inline-block
+					vertical-align: middle
+				+r(1280)
+					height: 300px
+					img
+						+rem(margin-top, -40px)
+				+r(992)
+					height: 250px
+					img
+						+rem(margin-top, -100px)
+			//transition: border-color 0.1s ease-in
 			+r(1280)
 				+rem(width, 300px)
-				+rem(height, 330px)
+				+rem(height, 300px)
 			+r(992)
 				+rem(width, 250px)
-				+rem(height, 300px)
-			+r(768)
-				+rem(width, 200px)
-				+rem(height, 220px)
-			img
-				+rem(max-width, 150px)
-				+rem(max-height, 95px)
-				display: inline-block
-				vertical-align: middle
+				+rem(height, 250px)
 			&:hover
-				border-color: $active
+				z-index: 2
+				&:before
+					height: 100%
+					border-top: 1px solid $active
+					border-bottom: 1px solid $active
+					transition: height 0.15s ease-in-out, border-top 0s 0.15s, border-bottom 0s 0s
 			&:nth-of-type(odd)
-				animation-delay: 0.2s
+				animation-delay: 0.15s
+
+
+$slSize: 440px
+
+.scheme-wrapper
+	position: relative
+	+rem(max-height, 600px)
+	+rem(max-width, 600px)
+	width: 100%
+	+r(768)
+		margin: auto
+		+rem(margin-top, 100px)
+	.scheme-slider-wrapper
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		+rem(width, $slSize)
+		+rem(height, $slSize)
+		margin: auto
+		border-radius: 50%
+		overflow: hidden
+		+r(1024)
+			+rem(width, $slSize - 70px)
+			+rem(height, $slSize - 70px)
+		+r(768)
+			+rem(width, $slSize)
+			+rem(height, $slSize)
+		+r(492)
+			+rem(width, $slSize - 100px)
+			+rem(height, $slSize - 100px)
+		.scheme-slider
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			overflow: hidden
+			position: relative
+			.scheme-slider__slide
+				+rem(width, $slSize)
+				+rem(height, $slSize)
+				position: absolute
+				border-radius: 50%
+				overflow: hidden
+				z-index: 1
+				+r(1024)
+					+rem(width, $slSize - 70px)
+					+rem(height, $slSize - 70px)
+				+r(768)
+					+rem(width, $slSize)
+					+rem(height, $slSize)
+				+r(492)
+					+rem(width, $slSize - 100px)
+					+rem(height, $slSize - 100px)
+				&-inner
+					position: relative
+					width: 100%
+					height: 100%
+					z-index: 0
+					border-radius: 50%
+					overflow: hidden
+				&-image 
+					+coverdiv
+					+cover 
+					z-index: -1
+					border-radius: 50%
+					overflow: hidden
+				&-text 
+					position: absolute
+					+rem(top, 100px)
+					+rem(max-width, 350px)
+					left: 0
+					right: 0
+					margin: auto
+					h3
+						color: $text-h
+						+rem(font-size, 26px)
+						+rem(line-height, 32px)
+						font-weight: 400
+						+rem(margin-bottom, 20px)
+						text-align: center
+					p
+						+rem(line-height, 28px)
+						color: $text-h
+						text-align: center
+				&.active
+					z-index: 2
+				img
+					position: absolute
+					width: 100%
+					z-index: 0
+			&__update
+				position: absolute
+				+rem(width, 40px)
+				+rem(height, 40px)
+				+rem(bottom, 50px)
+				left: 0
+				right: 0
+				margin: auto
+				z-index: 2
+				border-radius: 50%
+				transition: transform 0.2s ease-in-out
+				svg
+					.scheme-circle
+						fill-rule:evenodd
+						clip-rule:evenodd
+						fill:#FFFFFF
+						transition: fill 0.2s ease-in-out
+					.scheme-refresh-arrow
+						fill:#0C0C0C
+						transition: fill 0.2s ease-in-out
+				&:hover
+					transform: rotate(360deg)
+					svg
+						.scheme-circle
+							fill: $active
+						.scheme-refresh-arrow
+							fill: $white
+
+
 
 #scheme
 	width: 100%
 	+rem(max-height, 600px)
-	+rem(max-width, 600px)
+	height: 100vh
+	.scheme-menu
+		transform-origin: 50% 50%
+		transition: transform 0.5s ease-in-out
+		g.icon
+			transform-origin: 50% 50%
+			transition: transform 0.5s ease-in-out
 	.scheme-part
 		fill: $white
+		transition: fill 0.2s ease-in-out
 	.scheme-part-green
 		fill: $green
+		transition: fill 0.1s ease-in-out
 	.scheme-part-icon
 		fill: $text-light-gray
 		&.two
@@ -744,7 +948,7 @@ main
 				fill: $white
 				&.two
 					fill: none
-					stroke: $green
+					stroke: $white
 		&:hover
 			.scheme-part, .scheme-part-green
 				fill: $active
@@ -754,10 +958,10 @@ main
 					fill: none
 					stroke: $white
 
-
 .download
 	+rem(margin-top, 50px)
 	+rem(margin-bottom, 30px)
+	display: block
 	svg
 		+rem(width, 38px)
 		+rem(height, 38px)
@@ -768,9 +972,12 @@ main
 		display: inline-block
 		+rem(margin-left, 10px)
 		vertical-align: top
+		p.download-main-text
+			color: $green
+			font-weight: 600
 		p
 			color: $text-light-gray
-			+rem(margin-top, 5px)
+			+rem(margin-top, 3px)
 
 
 .counts-wrapper
@@ -829,10 +1036,12 @@ main
 		display: -o-flex
 		display: flex
 		flex-direction: column
+		overflow: hidden
 		.chart-bar
 			background-color: $green
 			+rem(height, 66px)
 			position: relative
+			opacity: 1
 			&:nth-of-type(2)
 				opacity: 0.9
 			&:nth-of-type(3)
@@ -936,6 +1145,7 @@ main
 	+rem(width, 183px)
 	+rem(height, 43px)
 	+rem(border-radius, 50px)
+	+rem(font-size, 16px)
 	color: $white
 	&:focus, &:hover
 		background-color: $active
