@@ -535,7 +535,8 @@ main {
   background-color: #FFF; }
   #header-mainwrap .boxed {
     position: relative;
-    z-index: 999; }
+    z-index: 999;
+    height: 0px; }
     #header-mainwrap .boxed .logo-wrapper {
       width: 12.375rem;
       height: 1.3125rem;
@@ -2162,6 +2163,9 @@ footer {
     top: 6.625rem; } }
 
 @media only screen and (max-width: 400px) {
+
+  h2 {
+    font-size: 1.875rem; }
 
   .flex-block {
     -webkit-box-orient: vertical;
