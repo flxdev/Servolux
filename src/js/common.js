@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	$schemeButton.on('click', function(){
 		var _self = $(this);
-
+		console.log(ell)
 		if(!_self.hasClass('active')){
 
 			// Removing all active classes on buttons
@@ -234,24 +234,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 
 			// Removing all active classes on slides
-			$schemeSlides.eq(ell-1).fadeOut(200).removeClass('active')
+			// $schemeSlides.eq(ell-1).removeClass('active')
 
 
 			// Add active class to pressed button
-			_self.addClass('active');
+			_self.addClass('active').siblings().removeClass('active');
 
 
 			var slide = $schemeSlides.eq(_self.data('slide')-1);
 
-			slide.addClass('active animated scaleIn').show()
-
-			setTimeout(function(){
-				slide.removeClass('animated scaleIn')
-			}, 1000)
+			slide.addClass('active').siblings().removeClass('active');
 
 			ell = _self.data('slide')
-
-
 			$('#scheme .scheme-menu').css('transform', 'rotate(' + (((360/8)*(- _self.data('slide'))) + 45) + 'deg)')
 			$('#scheme .scheme-menu g.icon').css('transform', 'rotate(' + (((360/8)*(_self.data('slide')))-45) + 'deg)')
 		}
@@ -259,8 +253,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Scheme update button trigger
 	$('#update-scheme-slider').on('click', function(){
-		ell >= 8 ? ell = 1 : ell++;
+		ell > 8 ? ell = 1 : ell++;
 		$schemeButton.eq(ell-1).trigger('click')
+		console.log(ell)
 	})
 
 
