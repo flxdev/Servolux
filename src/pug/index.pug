@@ -6,10 +6,10 @@ block config
 	- var main = true
 block content
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js")
-	.main-screen-wrapper
-		.main-video-wrapper(data-src="/img/index/main-screen-video.mp4")
+	#main-screen-wrapper
+		#main-video-wrapper(data-src="/img/index/main-screen-video.mp4")
 			img(src="/img/index/video-poster.jpg", alt="").video-poster
-		.main-screen
+		#main-screen
 			.screen-links-wrapper
 				.screen-link
 					.screen-link-text.animated
@@ -29,7 +29,7 @@ block content
 						p Мы производим 33% всего мяса птицы в стране
 					img(src="/img/index/screen-link.jpg", alt="Лидерство")
 			.main-screen-title
-				.title-wrapper.animated.fadeInDownMenu
+				#title-wrapper.animated.fadeInDownMenu
 					p.title-sup Группа компаний
 					p.title-main Серволюкс
 	#main-content

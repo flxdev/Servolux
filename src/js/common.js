@@ -3,27 +3,32 @@ window.onload = function() {
 };
 
 
+function isMobile()	{
+    return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent) );
+}
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
-	if(!isMobile()){
-		var videoWrapper = $('.main-video-wrapper');
-		videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video id="#video" preload loop><source src="'+videoWrapper.data('src')+'" type="video/mp4"></video></div></div>')
-		videoWrapper.find('.video-poster').remove()
-	}
 
 	var docWindow = $(window),
 		vHeight = docWindow.height(),
-		mainScreen = $('.main-screen'),
-		headerMenu = $('.header-mainwrap'),
-		videoWrapper = $('.main-video-wrapper'),
+		mainScreen = $('#main-screen'),
+		headerMenu = $('#header-mainwrap'),
+		videoWrapper = $('#main-video-wrapper'),
+		screenWrapperHeight = $('#main-screen-wrapper').height(),
 		burger = $('#main-burger'),
-		secMenu = $('.header-menu-modal'),
-		screenLinks = $('.screen-links-wrapper'),
-		logo = $('.logo'),
-		mainTitle = $('.title-wrapper'),
+		secMenu = $('#header-mainwrap .header-menu-modal'),
+		screenLinks = $('#main-screen .screen-links-wrapper'),
+		mainTitle = $('#title-wrapper'),
 		mobile = isMobile(),
 		screenLinksHeight = screenLinks.height();
 
+	// Video append if not mobile
+	if(!isMobile()){
+		videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video id="#video" preload loop><source src="'+videoWrapper.data('src')+'" type="video/mp4"></video></div></div>')
+		videoWrapper.find('.video-poster').remove()
+	}
 
 
 	//burger-menu
@@ -37,28 +42,19 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	});
 
-	//main-screen-title-scale
-	$('.screen-link-text').on('mouseenter', function(){
+	// Main screen "three list" events
+	$('#main-screen .screen-link-text').on('mouseenter', function(){
 		if(!mainTitle.hasClass('activated')){
 			mainTitle.addClass('activated')
 		}
 		mainTitle.addClass('active')
 	});
-	$('.screen-link-text').on('mouseleave', function(){
+	$('#main-screen .screen-link-text').on('mouseleave', function(){
 		mainTitle.removeClass('active')
 	});
 
-	
-	var docFunctions = {
-		findHeight: function(){
-			return docWindow.height()
-		},
-		findScroll: function(){
-			return docWindow.scrollTop()
-		}
-	}
 
-
+	// Main screen fade out and video zoom out on scroll
 	function scrollMainScreen(scrollPos){
 		var i = (140-((scrollPos/vHeight)*50))/100;
 		videoWrapper.css('opacity', (vHeight/scrollPos)/3).find('video').css('transform', 'translate(-50%, -50%) scale('+ (i<=1 ? 1 : i) +')');
@@ -71,10 +67,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 
+
+	// Main title fade out on scroll
 	function scrollMainTitle(scrollPos){
 		mainTitle.css('margin-top', -(scrollPos)/1.5)
 	}
 
+
+
+	// PARALLAX event on scroll trigger
 	var $parallax = $('#parallax');
 
 	function scrollParallax(scrollPos){
@@ -84,16 +85,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 
-	docWindow.on('resize', function(){
-		//console.log('Height '+docFunctions.findHeight())
-	});
+	// docWindow.on('resize', function(){
+	// 	console.log('Height '+docFunctions.findHeight())
+	// });
 
 
+	// Scroll triggers
 	docWindow.scroll(function (event) {
 
 		var scrollPos = docWindow.scrollTop();
 
-		if(scrollPos > screenLinksHeight) {
+		if(scrollPos > screenWrapperHeight) {
 		
 			headerMenu.addClass('sticked animated fadeInDownFast').css('animation-delay', '0')
 			return;
@@ -114,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				
 	});
 
+	// InView checker
 	if($(window).width() >= 1024){
 		inView.offset(100)
 		inView('.animateThis').on('enter', function(el){
@@ -121,7 +124,151 @@ document.addEventListener("DOMContentLoaded", function() {
 	    });
 	}
 
-	/*var ctx = document.getElementById("index-chart").getContext('2d');
+	// Chart bar width maker
+	$('#index-chart .chart-bar').filter(function(){
+		$(this).css('width', $(this).data('scale')+'%')
+	})
+
+
+
+	// Brands appender and changer
+	var elemsInView = [],
+		isPaused = false,
+		$brands = $('#brands')
+		$brandsBlocks = $('#brands .brand-anim-block');
+
+	$brandsBlocks.filter(function(el){
+		var _this = $(this),
+			rand = Math.floor(Math.random() * (15000 - 8000)) + 8000,
+			brandCounter = 0;
+
+		// Brand appender
+		if(brandCounter < $brandsBlocks.length+1){
+
+			// Random element
+			var elem = Math.floor(Math.random() * brandElems.brands.length)
+
+			// Random while element exist
+			while(elemsInView[elem]){
+				elem = Math.floor(Math.random() * brandElems.brands.length)
+			}
+
+			// Write element in array
+			elemsInView[elem] = true;
+
+			// Append brand
+			_this.append('<a href="' + brandElems.brands[elem].href + '"><img src="' + brandElems.brands[elem].src + '" alt="brand"></a>')
+			
+			brandCounter++;
+		}
+
+		// Brands changer
+		if(!mobile){
+			setInterval( function(){
+
+				// Skip changing when mouse enter
+				if(!isPaused){
+
+					// Random while elem exist
+					while(elemsInView[elem]){
+						elem = Math.floor(Math.random() * brandElems.brands.length);
+					};
+
+					// Append new brand
+					_this.append('<a href="' + brandElems.brands[elem].href + '"><img src="' + brandElems.brands[elem].src + '" alt="brand"></a>');
+					
+					// Animating new appended brand
+					_this.children('a:nth-of-type(2)').addClass('animated slideBrand')
+					
+					// Animate Out old Brand
+					_this.children('a:first-of-type').addClass('animated slideBrandOut')
+					
+					// Write new brand
+					elemsInView[elem] = true;
+
+					// Removing old brand after 1 sec
+					setTimeout(function(){
+
+						// Search and destroy old brand
+						for(var key in brandElems.brands){
+							if(brandElems.brands[key].src == _this.children('a:first-of-type').children('img').attr('src')){
+								elemsInView[key] = false;
+							};
+						};
+
+						// Remove animation from new brand
+						_this.children('a').removeClass('animated slideBrand');
+
+						// Destroy old brand
+						_this.children('a:first-of-type').remove();
+
+					}, 1000);
+
+				}
+			}, rand)
+		}
+	})
+
+	$brands.on('mouseenter', function(){
+		isPaused = true
+	})
+	$brands.on('mouseleave', function(){
+		isPaused = false
+	})
+
+
+	// Scheme rotator and activator
+	var ell = 1,
+		$schemeButton = $('#scheme .scheme-button'),
+		$schemeSlider = $('#scheme-slider'),
+		$schemeSlides = $('#scheme-slider .scheme-slider__slide');
+
+	$schemeButton.on('click', function(){
+		var _self = $(this);
+
+		if(!_self.hasClass('active')){
+
+			// Removing all active classes on buttons
+			$schemeButton.filter(function(){ 
+				$(this).removeClass('active') 
+			});
+
+			// Removing all active classes on slides
+			$schemeSlides.eq(ell-1).fadeOut(200).removeClass('active')
+
+
+			// Add active class to pressed button
+			_self.addClass('active');
+
+
+			var slide = $schemeSlides.eq(_self.data('slide')-1);
+
+			slide.addClass('active animated scaleIn').show()
+
+			setTimeout(function(){
+				slide.removeClass('animated scaleIn')
+			}, 1000)
+
+			ell = _self.data('slide')
+
+
+			$('#scheme .scheme-menu').css('transform', 'rotate(' + (((360/8)*(- _self.data('slide'))) + 45) + 'deg)')
+			$('#scheme .scheme-menu g.icon').css('transform', 'rotate(' + (((360/8)*(_self.data('slide')))-45) + 'deg)')
+		}
+	})
+
+	// Scheme update button trigger
+	$('#update-scheme-slider').on('click', function(){
+		ell >= 8 ? ell = 1 : ell++;
+		$schemeButton.eq(ell-1).trigger('click')
+	})
+
+
+})
+
+
+
+/*var ctx = document.getElementById("index-chart").getContext('2d');
 	var myChart = new Chart(ctx, {
 	    type: 'horizontalBar',
 	    data: {
@@ -175,118 +322,3 @@ document.addEventListener("DOMContentLoaded", function() {
 	        },
 	    }
 	});*/
-
-	$('#index-chart .chart-bar').filter(function(){
-		$(this).css('width', $(this).data('scale')+'%')
-	})
-
-	var elemsInView = [],
-		isPaused = false,
-		$brands = $('#brands')
-		$brandsBlocks = $('#brands .brand-anim-block');
-
-	$brandsBlocks.filter(function(el){
-		var _this = $(this),
-			rand = Math.floor(Math.random() * (15000 - 8000)) + 8000,
-			brandCounter = 0;
-		if(brandCounter < 6){
-			var elem = Math.floor(Math.random() * brandElems.brands.length)
-			while(elemsInView[elem] == true){
-				elem = Math.floor(Math.random() * brandElems.brands.length)
-			}
-			elemsInView[elem] = true;
-			_this.append('<a href="' + brandElems.brands[elem].href + '"><img src="' + brandElems.brands[elem].src + '" alt="brand"></a>')
-			brandCounter++;
-		}
-		if(!mobile){
-			setInterval( function(){
-				if(!isPaused){
-					while(elemsInView[elem]){
-						elem = Math.floor(Math.random() * brandElems.brands.length);
-					};
-					_this.append('<a href="' + brandElems.brands[elem].href + '"><img src="' + brandElems.brands[elem].src + '" alt="brand"></a>');
-					_this.children('a:nth-of-type(2)').addClass('animated slideBrand')
-					_this.children('a:first-of-type').addClass('animated slideBrandOut')
-					elemsInView[elem] = true;
-					setTimeout(function(){
-						for(var key in brandElems.brands){
-							if(brandElems.brands[key].src == _this.children('a:first-of-type').children('img').attr('src')){
-								elemsInView[key] = false;
-							};
-						};
-						_this.children('a').removeClass('animated slideBrand');
-						_this.children('a:first-of-type').remove();
-					}, 1000);
-
-				}
-			}, rand)
-		}
-	})
-
-	$brands.on('mouseenter', function(){
-		isPaused = true
-	})
-	$brands.on('mouseleave', function(){
-		isPaused = false
-	})
-
-
-
-	var ell = 1,
-		// isSchemePaused = false,
-		$schemeButton = $('#scheme .scheme-button'),
-		$schemeSlider = $('#scheme-slider');
-
-	$schemeButton.on('click', function(elem){
-		var _self = $(this);
-		if(!_self.hasClass('active')){
-			$schemeButton.filter(function(){ 
-				$(this).removeClass('active') 
-			})
-			$('#scheme-slider .scheme-slider__slide').filter(function(){
-				if($(this).hasClass('active')){
-					var $activeSlide = $(this)
-					$activeSlide.fadeOut(500)
-					setTimeout(function(){
-						$activeSlide.removeClass('animated fadeOut active')
-					}, 1000)
-				}
-			})
-			_self.addClass('active')
-			var slide = $schemeSlider.children(':nth-of-type(' + _self.data('slide') + ')');
-			$schemeSlider.children('active').removeClass('active')
-			slide.addClass('active animated scaleIn').show()
-			setTimeout(function(){
-				slide.removeClass('animated scaleIn')
-			}, 1000)
-			ell = _self.data('slide')
-
-
-			$('#scheme .scheme-menu').css('transform', 'rotate(' + (((360/8)*(- _self.data('slide'))) + 45) + 'deg)')
-			$('#scheme .scheme-menu g.icon').css('transform', 'rotate(' + (((360/8)*(_self.data('slide')))-45) + 'deg)')
-		}
-	})
-
-	$('#update-scheme-slider').on('click', function(){
-		// if(!isSchemePaused){
-			if(ell > 7){
-				ell = 0
-			}
-			ell++;
-			$schemeButton.eq(ell-1).trigger('click')
-		// }
-	})
-
-	// $schemeButton.on('mouseenter', function(){
-	// 	isSchemePaused = true
-	// })
-	// $schemeButton.on('mouseleave', function(){
-	// 	isSchemePaused = false
-	// })
-
-
-})
-
-function isMobile()	{
-    return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent) );
-}
