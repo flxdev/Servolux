@@ -587,7 +587,7 @@ main {
         position: absolute;
         right: 7.1875rem;
         top: 2.5rem; }
-        #header-mainwrap .boxed .header-menu nav a {
+        #header-mainwrap .boxed .header-menu nav .nav-href {
           color: #fff;
           display: inline-block;
           line-height: 36px;
@@ -601,7 +601,7 @@ main {
           border-radius: 5px;
           position: relative;
           z-index: 2; }
-          #header-mainwrap .boxed .header-menu nav a:after {
+          #header-mainwrap .boxed .header-menu nav .nav-href:after {
             content: '';
             display: block;
             position: absolute;
@@ -620,12 +620,12 @@ main {
             transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
             border-radius: 5px;
             z-index: -1; }
-          #header-mainwrap .boxed .header-menu nav a:hover:after, #header-mainwrap .boxed .header-menu nav a:focus:after {
+          #header-mainwrap .boxed .header-menu nav .nav-href:hover:after, #header-mainwrap .boxed .header-menu nav .nav-href:focus:after {
             -webkit-transform: scale(1);
             -ms-transform: scale(1);
             transform: scale(1);
             opacity: 1; }
-          #header-mainwrap .boxed .header-menu nav a.active:after {
+          #header-mainwrap .boxed .header-menu nav .nav-href.active:after {
             -webkit-transform: scale(1);
             -ms-transform: scale(1);
             transform: scale(1);
