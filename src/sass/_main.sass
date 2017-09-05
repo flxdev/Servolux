@@ -63,11 +63,12 @@ body
 	min-height: 100vh
 	-webkit-overflow-scrolling: touch
 	position: relative
+	overflow-x: hidden
 	&.menu-stuck:not(.mobile)
-		overflow: hidden
+		overflow: hidden!important
 		padding-right: 18px
 	&.menu-mobile
-		overflow: hidden
+		overflow: hidden!important
 
 
 
@@ -154,29 +155,36 @@ p.caption
 
 .flex-block
 	display: flex
+	flex-wrap: wrap
 	&>*
 		position: relative
 	&:nth-of-type(2)
 		margin-top: 70px
-	+r(768)
+	+r(992)
 		&:not(.row)
 			flex-direction: column
+			align-items: center
 	+r(400)
 		flex-direction: column
 	.one-half
 		width: 50%
-		+r(768)
+		+r(992)
 			width: 100%
+			margin: 0
+			padding: 0
 			&:nth-of-type(2)
 				margin: auto
-				+rem(margin-top, 80px)
 	.one-four
 		width: 25%
-		+r(768)
+		+r(992)
 			width: 50%
+			margin: 0
+			padding: 0
 
 .text-wrap
 	+rem(max-width, 520px)
+	+r(992)
+		max-width: 100%
 
 .count
 	+rem(max-width, 200px)
@@ -463,7 +471,7 @@ main
 				position: absolute
 				+rem(right, $sidestep+35px+$sidestep)
 				+rem(top, $topstep - 6px)
-				+r(768)
+				+r(992)
 					display: none
 				.nav-href
 					color: $white
@@ -502,6 +510,7 @@ main
 			.header-menu-modal
 				background-color: $white
 				opacity: 0
+				visibility: hidden
 				width: 100%
 				position: relative
 				z-index: 2
@@ -524,7 +533,7 @@ main
 						position: relative
 						align-items: center
 						min-height: 500px
-						+r(768)
+						+r(992)
 							background-color: $white
 							padding-bottom: 50px
 							height: auto
@@ -534,7 +543,7 @@ main
 							margin: auto
 							justify-content: space-between
 							background-color: $white
-							+r(768)
+							+r(992)
 								display: block
 								+rem(margin-top, 80px)
 								width: 100%
@@ -544,7 +553,7 @@ main
 								+rem(padding-top, 20px)
 								+rem(padding-left, $sidestep+10px)
 								+rem(padding-right, $sidestep+10px)
-								+r(768)
+								+r(992)
 									display: block
 									padding-top: 0
 								.column-href
@@ -554,12 +563,12 @@ main
 									margin-top: 2vh
 									margin-bottom: 2vh
 									+rem(line-height, 36px)
-									+r(768)
+									+r(992)
 										+rem(margin-top, 34px)
 									&:hover, &:active
 										color: $active
 								.column-sub-hrefs
-									+r(768)
+									+r(992)
 										display: none
 									li
 										display: block
@@ -623,6 +632,7 @@ main
 		.boxed
 			height: 100vh
 			overflow-y: auto
+			max-height: 100vh
 			.logo-wrapper
 				.logo
 					+rem(left, $sidestep - 20px)
@@ -836,8 +846,8 @@ main
 	.block
 		+rem(max-width, 1400px)
 		margin: auto
-		padding-top: 12vh
-		padding-bottom: 12vh
+		+rem(padding-top, 100px)
+		+rem(padding-bottom, 100px)
 .brands-wrapper
 	margin-top: 60px
 	#brands
@@ -889,21 +899,7 @@ main
 					+rem(max-height, 95px)
 					display: inline-block
 					vertical-align: middle
-				+r(1280)
-					height: 300px
-					img
-						+rem(margin-top, -40px)
-				+r(992)
-					height: 250px
-					img
-						+rem(margin-top, -100px)
-			//transition: border-color 0.1s ease-in
-			+r(1280)
-				+rem(width, 300px)
-				+rem(height, 300px)
-			+r(992)
-				+rem(width, 250px)
-				+rem(height, 250px)
+
 			&:hover
 				z-index: 2
 				&:before
@@ -922,9 +918,15 @@ $slSize: 440px
 	+rem(max-height, 600px)
 	+rem(max-width, 600px)
 	width: 100%
-	+r(768)
+	+r(992)
 		margin: auto
-		+rem(margin-top, 100px)
+		+rem(margin-top, 140px)
+	+r(550)
+		+rem(margin-top, 90px)
+	+r(492)
+		+rem(margin-top, 60px)
+	+r(400)
+		+rem(margin-top, 20px)
 	.scheme-slider-wrapper
 		position: absolute
 		top: 0
@@ -939,9 +941,15 @@ $slSize: 440px
 		+r(1024)
 			+rem(width, $slSize - 70px)
 			+rem(height, $slSize - 70px)
+		+r(992)
+			+rem(width, $slSize + 10px)
+			+rem(height, $slSize + 10px)
 		+r(768)
 			+rem(width, $slSize)
 			+rem(height, $slSize)
+		+r(555)
+			+rem(width, $slSize - 85px)
+			+rem(height, $slSize - 85px)
 		+r(492)
 			+rem(width, $slSize - 100px)
 			+rem(height, $slSize - 100px)
@@ -962,9 +970,15 @@ $slSize: 440px
 				+r(1024)
 					+rem(width, $slSize - 70px)
 					+rem(height, $slSize - 70px)
+				+r(992)
+					+rem(width, $slSize + 10px)
+					+rem(height, $slSize + 10px)
 				+r(768)
 					+rem(width, $slSize)
 					+rem(height, $slSize)
+				+r(555)
+					+rem(width, $slSize - 85px)
+					+rem(height, $slSize - 85px)
 				+r(492)
 					+rem(width, $slSize - 100px)
 					+rem(height, $slSize - 100px)
@@ -1046,6 +1060,14 @@ $slSize: 440px
 	width: 100%
 	+rem(max-height, 600px)
 	height: 100vh
+	+r(1024)
+		+rem(height, $slSize + 280px)
+	+r(768)
+		+rem(height, $slSize + 160px)
+	+r(555)
+		+rem(height, $slSize + 40px)
+	+r(492)
+		+rem(height, $slSize + 20px)
 	.scheme-menu
 		transform-origin: 50% 50%
 		transition: transform 0.5s ease-in-out
@@ -1156,6 +1178,12 @@ $slSize: 440px
 				p
 					color: #fff
 
+#chart
+	.flex-block
+		.one-half
+			+r(992)
+				+rem(padding-top, 50px)
+
 
 #index-chart
 	width: 100%
@@ -1192,7 +1220,7 @@ $slSize: 440px
 				background-color: $green
 				z-index: -1
 				transition: background-color 0.15s ease-in-out
-				+r(1024)
+				+r(992)
 					width: 100%
 			p
 				position: absolute
@@ -1216,8 +1244,20 @@ $slSize: 440px
 		+rem(margin-bottom, 60px)
 	.one-half:not(:first-of-type)
 		+rem(margin-left, 30px)
+		+r(1024)
+			+rem(margin-left, 0px)
+			+rem(padding-left, 18px)
+			flex-grow: 1
+		+r(1024)
+			+rem(padding-left, 0px)
 	.one-half:first-of-type
 		+rem(margin-right, 30px)
+		+r(1024)
+			+rem(margin-right, 0px)
+			+rem(padding-right, 18px)
+			flex-grow: 1
+		+r(768)
+			+rem(padding-right, 0px)
 	.news
 		img
 			width: 100%
@@ -1313,14 +1353,22 @@ $slSize: 440px
 		&:focus, &:hover
 			color: $active
 
-footer
+.footer
 	background-color: $white
 	border-top: 1px solid $lineColor
+	+r(992)
+		width: 100%
+		.one-four
+			width: 100%
 	.callback-wrap
 		margin-top: 0
 	p.caption
 		font-weight: 600
 	.footer-hrefs
+		+r(992)
+			position: relative
+			margin-bottom: 50px
+			margin-top: 50px
 		a
 			display: block
 			color: $text-h
@@ -1341,6 +1389,8 @@ footer
 			position: relative
 			right: auto
 			top: auto
+		+r(992)
+			position: relative
 	.footer-contacts
 		.tell
 			+rem(font-size, 26px)
@@ -1364,6 +1414,9 @@ footer
 			+rem(margin-top, 20px)
 			display: block
 			+rem(font-size, 16px)
+		+r(992)
+			position: relative
+			margin-bottom: 50px
 	.footer-makers
 		position: absolute
 		bottom: 0
@@ -1377,3 +1430,6 @@ footer
 		&:hover
 			.href
 				color: $active
+		+r(992)
+			position: relative
+			margin-top: 50px
