@@ -50,9 +50,9 @@ html
 	+r(1150)
 		font-size: 15px
 	+r(768)
-		font-size: 12px
+		font-size: 14px
 	+r(348)
-		font-size: 10px
+		font-size: 13px
 body
 	background-attachment: fixed
 	+box
@@ -66,10 +66,8 @@ body
 	&.menu-stuck:not(.mobile)
 		overflow: hidden
 		padding-right: 18px
-	+rh(650)
-		&.menu-stuck
-			overflow: hidden
-			padding-right: 0px
+	&.menu-mobile
+		overflow: hidden
 
 
 
@@ -414,6 +412,7 @@ main
 	top: 0
 	width: 100%
 	position: absolute
+	background-color: #FFF
 	.boxed
 		position: relative
 		z-index: 999
@@ -457,7 +456,6 @@ main
 				transition: transform 0.2s ease-in, opacity 0.2s
 		.header-menu
 			z-index: 100
-			height: 100%
 			nav
 				position: absolute
 				+rem(right, $sidestep+35px+$sidestep)
@@ -498,118 +496,130 @@ main
 							transform: scale(1)
 							opacity: 1
 							background-color: $green
-			.menu-modal-wrap
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
 			.header-menu-modal
 				background-color: $white
-				visibility: hidden
 				opacity: 0
-				z-index: 100
 				width: 100%
-				min-height: 100vh
-				position: absolute
-				top: 0
-				left: 0
+				position: relative
 				z-index: 2
 				transition: transform 0.3s ease-out, opacity 0.3s ease-in
 				transform: translate(0px, -50%)
-				+r(768)
-					height: 100%
-				.menu-modal-top
-					position: absolute
+				padding-top: 80px
+				min-height: 700px
+				padding-bottom: 50px
+				.menu-modal-wrap
 					width: 100%
-					+rem(top, $topstep - 11px)
-					+r(480)
-						+rem(top, $topstep + 60px)
-				.menu-modal-middle
-					display: flex
-					align-items: center
-					min-height: 100vh
-					+r(768)
-						background-color: $white
-						padding-bottom: 50px
-						height: auto
-				.menu-columns
-					display: flex
-					+rem(max-width, 1400px)
-					margin: auto
-					justify-content: space-between
-					background-color: $white
-					+r(768)
-						display: block
-						+rem(margin-top, 100px)
+					height: 100%
+					.menu-modal-top
+						position: absolute
 						width: 100%
-					+r(480)
-						+rem(margin-top, 160px)
-					.column
-						+rem(max-width, 290px)
-						display: inline-block
-						+rem(padding-top, 20px)
-						+rem(padding-left, $sidestep+10px)
-						+rem(padding-right, $sidestep+10px)
+						+rem(top, $topstep - 11px)
+						+r(480)
+							+rem(top, $topstep + 60px)
+					.menu-modal-middle
+						display: flex
+						position: relative
+						align-items: center
+						min-height: 500px
 						+r(768)
-							display: block
-							padding-top: 0
-						.column-href
-							+ff('Roboto', 400, 26px)
-							color: $text-h
-							display: block
-							margin-top: 2vh
-							margin-bottom: 2vh
-							+rem(line-height, 36px)
-							+rh(650)
-								+rem(margin-top, 5px)
-								+rem(margin-bottom, 5px)
+							background-color: $white
+							padding-bottom: 50px
+							height: auto
+						.menu-columns
+							display: flex
+							+rem(max-width, 1400px)
+							margin: auto
+							justify-content: space-between
+							background-color: $white
 							+r(768)
-								+rem(margin-top, 34px)
-							&:hover, &:active
-								color: $active
-						.column-sub-hrefs
-							+r(768)
-								display: none
-							li
 								display: block
-							a
-								+ff('Roboto', 400, 18px)
-								display: block
-								padding-top: 0.9vh
-								padding-bottom: 0.9vh
-								+rem(line-height, 28px)
-								color: $text-annotation
-								+rh(650)
-									+rem(padding-top, 5px)
-									+rem(padding-bottom, 5px)
-								&:hover, &:active
-									color: $active
+								+rem(margin-top, 80px)
+								width: 100%
+							.column
+								+rem(max-width, 290px)
+								display: inline-block
+								+rem(padding-top, 20px)
+								+rem(padding-left, $sidestep+10px)
+								+rem(padding-right, $sidestep+10px)
+								+r(768)
+									display: block
+									padding-top: 0
+								.column-href
+									+ff('Roboto', 400, 26px)
+									color: $text-h
+									display: block
+									margin-top: 2vh
+									margin-bottom: 2vh
+									+rem(line-height, 36px)
+									+r(768)
+										+rem(margin-top, 34px)
+									&:hover, &:active
+										color: $active
+								.column-sub-hrefs
+									+r(768)
+										display: none
+									li
+										display: block
+									a
+										+ff('Roboto', 400, 18px)
+										display: block
+										padding-top: 0.9vh
+										padding-bottom: 0.9vh
+										+rem(line-height, 28px)
+										color: $text-annotation
+										&:hover, &:active
+											color: $active
+	
+	&.sticked
+		position: fixed
+		top: 0
+		.logo-wrapper
+			+rem(top, $topstep - 17px)
+		.svg-green
+			fill: $svg-green
+		.svg-blue
+			fill: $svg-blue
+		.search
+			+rem(top, $topstep - 60px)
+		.header-menu-modal
+			.menu-modal-wrap
+				.menu-modal-top
+					.change-lang
+						+rem(top, $topstep - 50px)
+		.boxed
+			.header-menu
+				+rem(height, 75px)
+				background-color: $white
+				box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1)
+				nav
+					+rem(top, $topstep - 26px)
+					a
+						color: $text-h
+						&:hover
+							color: $white
+			#main-burger
+				+rem(top, $topstep - 25px)
+				&:before, &:after, .burger-stick
+					background-color: $text-h
+
+
 	&.active
+		&:before
+			position: fixed
+			content: ''
+			display: block
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 100vh
+			background-color: #333
+			z-index: 999
+			opacity: .5
 		nav
 			padding-right: 18px
 		.boxed
-			+rh(650)
-				overflow-y: scroll
-				+rem(min-height, 700px)
-				display: inline-block
-				width: 100%
-				.header-menu
-					+rem(min-height, 800px)
-					display: block
-					position: relative
-				.menu-modal-wrap
-					+rem(min-height, 800px)
-					position: relative
-					margin: 0
-					.menu-modal-top
-						position: relative
-						margin: 0
-					.menu-modal-middle
-						+rem(min-height, 900px)
-						margin-top: 50px
-						margin-bottom: 50px
-						position: relative
-						display: block
+			height: 100vh
+			overflow-y: auto
 			.logo-wrapper
 				.logo
 					+rem(left, $sidestep - 20px)
@@ -635,42 +645,12 @@ main
 					background-color: $text-h
 			.header-menu
 				position: relative
+				height: auto
 				.header-menu-modal
 					transform: translate(0px, 0px)
 					visibility: visible
 					opacity: 1
-	&.sticked
-		position: fixed
-		top: 0
-		.logo-wrapper
-			+rem(top, $topstep - 17px)
-		.svg-green
-			fill: $svg-green
-		.svg-blue
-			fill: $svg-blue
-		.search
-			+rem(top, $topstep - 60px)
-		.header-menu-modal
-			.menu-modal-wrap
-				+rem(min-height, 760px)
-				.menu-modal-top
-					.change-lang
-						+rem(top, $topstep - 50px)
-		.boxed
-			.header-menu
-				+rem(min-height, 75px)
-				background-color: $white
-				box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1)
-				nav
-					+rem(top, $topstep - 26px)
-					a
-						color: $text-h
-						&:hover
-							color: $white
-			#main-burger
-				+rem(top, $topstep - 25px)
-				&:before, &:after, .burger-stick
-					background-color: $text-h
+					min-height: 100vh
 
 #main-screen-wrapper
 	height: 100vh
@@ -789,10 +769,10 @@ main
 					min-height: 100%
 				&:nth-of-type(2)
 					.screen-link-text
-						animation-delay: 0.4s
+						animation-delay: 0.3s
 				&:nth-of-type(3)
 					.screen-link-text
-						animation-delay: 0.6s
+						animation-delay: 0.4s
 				.screen-link-text
 					position: absolute
 					z-index: 2
@@ -803,7 +783,7 @@ main
 					right: 0
 					text-align: center
 					bottom: 0
-					animation-delay: 0.8s
+					animation-delay: 0.2s
 					.screen-link-title
 						position: absolute
 						left: 0
@@ -1023,7 +1003,7 @@ $slSize: 440px
 					transition-delay: .3s
 				&:not(.active)
 					opacity: 0
-					transform: scale(1.2)
+					transform: scale(0.6)
 					transition-delay: .1s
 				img
 					position: absolute

@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		var scrollPos = docWindow.scrollTop();
 
-		if(scrollPos > screenWrapperHeight) {
+		if(scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
 		
 			headerMenu.addClass('sticked animated fadeInDownFast').css('animation-delay', '0')
 			return;
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
     		scrollParallax(scrollPos);
     	}
 
-		headerMenu.removeClass('sticked animated fadeInDown')
+		headerMenu.removeClass('sticked animated fadeInDownFast')
 				
 	});
 
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Scheme update button trigger
 	$('#update-scheme-slider').on('click', function(){
-		ell > 8 ? ell = 1 : ell++;
+		ell >= 8 ? ell = 1 : ell++;
 		$schemeButton.eq(ell-1).trigger('click')
 		console.log(ell)
 	})
