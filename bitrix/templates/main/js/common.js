@@ -75,6 +75,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		mainTitle.css('margin-top', -(scrollPos)/1.5)
 	}
 
+	var $parallax = $('#parallax');
+
+	function scrollParallax(scrollPos){
+		if( scrollPos >= $parallax.offset() && scrollPos <= ($parallax.offset()+$parallax.height())){
+			console.log(true)
+		}
+	}
+
 
 	docWindow.on('resize', function(){
 		//console.log('Height '+docFunctions.findHeight())
@@ -91,10 +99,15 @@ document.addEventListener("DOMContentLoaded", function() {
 			return;
 		}
 
+		else if(scrollPos < 0){
+			return
+		}
+
 
     	if(!mobile){
     		scrollMainScreen(scrollPos);
     		scrollMainTitle(scrollPos);
+    		scrollParallax(scrollPos);
     	}
 
 		headerMenu.removeClass('sticked animated fadeInDown')
@@ -163,14 +176,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	    }
 	});*/
 
-	$('.chart-bar').each(function(){
+	$('#index-chart .chart-bar').filter(function(){
 		$(this).css('width', $(this).data('scale')+'%')
 	})
 
 	var elemsInView = [],
-		isPaused = false;
+		isPaused = false,
+		$brands = $('#brands')
+	$brandsBlocks = $('#brands .brand-anim-block');
 
-	$('.brand-anim-block').each(function(el){
+	$brandsBlocks.filter(function(el){
 		var _this = $(this),
 			rand = Math.floor(Math.random() * (15000 - 8000)) + 8000,
 			brandCounter = 0;
@@ -208,58 +223,66 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	})
 
-	$('.brands').on('mouseenter', function(){
+	$brands.on('mouseenter', function(){
 		isPaused = true
 	})
-	$('.brands').on('mouseleave', function(){
+	$brands.on('mouseleave', function(){
 		isPaused = false
 	})
 
 
 
-	var ell = 0,
-		isSchemePaused = false
+	var ell = 1,
+		// isSchemePaused = false,
+		$schemeButton = $('#scheme .scheme-button'),
+		$schemeSlider = $('#scheme-slider');
 
-	$('.scheme-button').on('click', function(elem){
+	$schemeButton.on('click', function(elem){
 		var _self = $(this);
 		if(!_self.hasClass('active')){
-			$('.scheme-button').each(function(){
+			$schemeButton.filter(function(){
 				$(this).removeClass('active')
 			})
-			$('.scheme-slider__slide').each(function(){
-				$(this).removeClass('active')
+			$('#scheme-slider .scheme-slider__slide').filter(function(){
+				if($(this).hasClass('active')){
+					var $activeSlide = $(this)
+					$activeSlide.fadeOut(500)
+					setTimeout(function(){
+						$activeSlide.removeClass('animated fadeOut active')
+					}, 1000)
+				}
 			})
 			_self.addClass('active')
-			var slide = $('.scheme-slider').children(':nth-of-type(' + _self.data('slide') + ')');
-			$('.scheme-slider').children('active').removeClass('active')
-			slide.addClass('animated scaleIn active')
+			var slide = $schemeSlider.children(':nth-of-type(' + _self.data('slide') + ')');
+			$schemeSlider.children('active').removeClass('active')
+			slide.addClass('active animated scaleIn').show()
 			setTimeout(function(){
 				slide.removeClass('animated scaleIn')
 			}, 1000)
 			ell = _self.data('slide')
-			$('svg#scheme .scheme-menu').css('transform', 'rotate(' + (((360/8)*(- _self.data('slide'))) + 45) + 'deg)')
-			$('svg#scheme .scheme-menu g.icon').css('transform', 'rotate(' + (((360/8)*(_self.data('slide')))-45) + 'deg)')
+
+
+			$('#scheme .scheme-menu').css('transform', 'rotate(' + (((360/8)*(- _self.data('slide'))) + 45) + 'deg)')
+			$('#scheme .scheme-menu g.icon').css('transform', 'rotate(' + (((360/8)*(_self.data('slide')))-45) + 'deg)')
 		}
 	})
 
-	setInterval(function(){
-		if(!isSchemePaused){
-			$('.scheme-button').eq(ell).trigger('click')
-			ell ++;
-
-			if(ell > 8){
-				ell = 0
-			}
+	$('#update-scheme-slider').on('click', function(){
+		// if(!isSchemePaused){
+		if(ell > 7){
+			ell = 0
 		}
-
-	}, 10000)
-
-	$('.scheme-button').on('mouseenter', function(){
-		isSchemePaused = true
+		ell++;
+		$schemeButton.eq(ell-1).trigger('click')
+		// }
 	})
-	$('.scheme-button').on('mouseleave', function(){
-		isSchemePaused = false
-	})
+
+	// $schemeButton.on('mouseenter', function(){
+	// 	isSchemePaused = true
+	// })
+	// $schemeButton.on('mouseleave', function(){
+	// 	isSchemePaused = false
+	// })
 
 
 })

@@ -1,7 +1,0 @@
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-  <style>
-    .button-fill-round{fill-rule:evenodd;clip-rule:evenodd;fill:#56B622;} .button-fill-arrow{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#FFFFFF;stroke-width:1.8;stroke-miterlimit:10;}
-  </style>
-  <path class="button-fill-round" d="M15 0c8.3 0 15 6.7 15 15s-6.7 15-15 15S0 23.3 0 15 6.7 0 15 0z"/>
-  <path class="button-fill-arrow" d="M13 10l5 5-5 5"/>
-</svg>

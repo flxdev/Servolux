@@ -12,10 +12,13 @@ include _mixins.pug
 				.menu-modal-wrap
 					.menu-modal-top
 						.search
-							input#search-input(type="text" name='search-input' placeholder="Я ищу...")
-							label(for="search-input")
-								svg(class="icon search-icon")
-									use(xlink:href="#search" xmlns:xlink="http://www.w3.org/1999/xlink")
+							form(action="#")
+								input#search-input(type="text" name='search-input' placeholder="Я ищу...")
+								label(for="search-input")
+								button(type="submit").search-icon
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.2 22")
+										path.seach-loop(d="M15.3 15l6.2 6.2")
+										path.search-stick(d="M9.1 1.5c4.2 0 7.6 3.4 7.6 7.6 0 4.2-3.4 7.6-7.6 7.6-4.2 0-7.6-3.4-7.6-7.6 0-4.2 3.4-7.6 7.6-7.6m0-1.5C4.1 0 0 4.1 0 9.1c0 5.1 4.1 9.1 9.1 9.1s9.1-4.1 9.1-9.1S14.1 0 9.1 0z")
 						.change-lang
 							a(href="#") Eng
 							a(href="#").active Рус
@@ -82,7 +85,7 @@ include _mixins.pug
 								a(href="#").column-href Контакты
 								.callback.callback-wrap
 									p.sub Связаться с нами
-									p.tell +375 22 232 33-34
+									a(href="tel:+375222323334").tell +375 22 232 33-34
 									a(href="mailto:mail@servolux.com").mail.green mail@servolux.com
 								.vacancy.callback-wrap
 									p.sub Следить за вакансиями

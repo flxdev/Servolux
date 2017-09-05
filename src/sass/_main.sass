@@ -26,8 +26,6 @@ svg
 	max-height: 100%
 button
 	background: 0 0
-a
-	text-decoration: none
 
 *
 	+box
@@ -66,8 +64,12 @@ body
 	-webkit-overflow-scrolling: touch
 	position: relative
 	&.menu-stuck:not(.mobile)
-		overflow: hidden !important
+		overflow: hidden
 		padding-right: 18px
+	+rh(650)
+		&.menu-stuck
+			overflow: hidden
+			padding-right: 0px
 
 
 
@@ -86,6 +88,9 @@ body
 
 .hidden
 	display: none !important
+
+.href
+	transition: color 0.1s ease-in-out
 
 .svg-green
 	fill: $white
@@ -106,6 +111,7 @@ a
 	+ff('Roboto', 700, 18px)
 	color: $green
 	text-decoration: none
+	transition: color 0.1s ease-in-out
 	+rem(line-height, 24px)
 	&:active, &:hover
 		color: $active
@@ -133,7 +139,7 @@ p.annotation
 	+rem(font-size, 26px)
 	color: $text-annotation
 	+rem(line-height, 36px)
-p.darker
+p.darker, a.darker
 	color: $text-darker
 p.sub
 	+ff('Roboto', 600, 16px)
@@ -189,9 +195,10 @@ p.caption
 		+rem(margin-top, 20px)
 
 
-.paralax
+#parallax
 	h1, h2, h3, h4, p
 		color: $white
+
 
 .button-green-wrapper
 	display: inline-block
@@ -209,15 +216,20 @@ a.button-green
 	border: 1px solid $text-light-gray
 	+rem(border-radius, 1000px)
 	transition: border 0.2s ease-in, background-color 0.2s ease-in-out
-	width: 50%
 	overflow: hidden
 	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
-
 	&:hover
 		border: 1px solid transparent
 		background-color: $active
-		.button-green__text-block
-			transform: translatex(0%)
+		p
+			color: $white
+		.button-green__text-block__circle
+			.button-fill-round
+				fill: $white
+			.button-fill-arrow
+				transform: translatex(40px)
+				&.blue
+					transform: translatex(0px)
 	.button-green__text-block
 		position: relative
 		+rem(padding-right, 50px)
@@ -225,16 +237,7 @@ a.button-green
 		+rem(padding-left, 20px)
 		+rem(border-radius, 50px)
 		+rem(padding-bottom, 11px)
-		transform: translatex(-100%)
 		transition: transform 0.3s ease-in-out
-		&:first-of-type
-			p
-				color: $white
-			.button-green__text-block__circle
-				background-color: $white
-				&:before
-					border-right: 1px solid $active
-					border-top: 1px solid $active
 	p
 		+rem(line-height, 16px)
 		+rem(font-size, 16px)
@@ -242,26 +245,105 @@ a.button-green
 		word-break: keep-all
 		white-space: nowrap
 		color: $green
+		transition: color 0.2s ease-in-out
 	.button-green__text-block__circle
 		display: block
 		position: absolute
 		+rem(width, 30px)
 		+rem(height, 30px)
-		background-color: $green
-		+rem(border-radius, 50px)
 		+rem(right, 5px)
 		+rem(top, 5px)
-		&:before
+		svg
+			position: relative
+		.button-fill-round
+			fill-rule: evenodd
+			clip-rule:e venodd
+			fill: $green
+			transition: fill 0.2s ease-in-out
+		.button-fill-arrow
+			fill-rule: evenodd
+			clip-rule: evenodd
+			fill: none
+			stroke: $white
+			stroke-width: 1.8
+			stroke-miterlimit: 10
 			position: absolute
-			display: block
-			content: ''
-			+rem(width, 8px)
-			+rem(height, 8px)
-			border-right: 1px solid $white
-			border-top: 1px solid $white
-			+rem(top, 11px)
-			transform: rotate(45deg)
-			+rem(right, 12px)
+			transition: transform 0.2s ease-in-out
+			&.blue
+				transform: translatex(-40px)
+				stroke: $active
+
+// .button-green-wrapper
+// 	display: inline-block
+// a.button-green
+// 	display: -webkit-flex
+// 	display: -moz-flex
+// 	display: -ms-flex
+// 	display: -o-flex
+// 	display: flex
+// 	position: relative
+// 	justify-content: flex-start
+// 	margin-top: 45px
+// 	color: $green
+// 	background-color: transparent
+// 	border: 1px solid $text-light-gray
+// 	+rem(border-radius, 1000px)
+// 	transition: border 0.2s ease-in, background-color 0.2s ease-in-out
+// 	width: 50%
+// 	overflow: hidden
+// 	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+// 	&:hover
+// 		border: 1px solid transparent
+// 		background-color: $active
+// 		.button-green__text-block
+// 			transform: translatex(0%)
+// 	.button-green__text-block
+// 		position: relative
+// 		+rem(padding-right, 50px)
+// 		+rem(padding-top, 12px)
+// 		+rem(padding-left, 20px)
+// 		+rem(border-radius, 50px)
+// 		+rem(padding-bottom, 11px)
+// 		transform: translatex(-100%)
+// 		transition: transform 0.3s ease-in-out
+// 		&:first-of-type
+// 			p
+// 				color: $white
+// 			.button-green__text-block__circle
+// 				background-color: $white
+// 				&:before
+// 					border-right: 1px solid $active
+// 					border-top: 1px solid $active
+// 	p
+// 		+rem(line-height, 16px)
+// 		+rem(font-size, 16px)
+// 		word-wrap: normal
+// 		word-break: keep-all
+// 		white-space: nowrap
+// 		color: $green
+// 	.button-green__text-block__circle
+// 		display: block
+// 		position: absolute
+// 		+rem(width, 30px)
+// 		+rem(height, 30px)
+// 		background-color: $green
+// 		+rem(border-radius, 50px)
+// 		+rem(right, 5px)
+// 		+rem(top, 5px)
+// 		&:before
+// 			position: absolute
+// 			display: block
+// 			content: ''
+// 			+rem(width, 8px)
+// 			+rem(height, 8px)
+// 			border-right: 1px solid $white
+// 			border-top: 1px solid $white
+// 			+rem(top, 11px)
+// 			transform: rotate(45deg)
+// 			+rem(right, 12px)
+
+
 .search
 	margin: auto
 	+rem(max-width, 480px)
@@ -270,6 +352,10 @@ a.button-green
 		width: 250px
 	+r(480)
 		width: 84%
+	form
+		+rem(max-width, 480px)
+		position: relative
+		+rem(height, 43px)
 	input
 		border: none
 		background: none
@@ -279,10 +365,21 @@ a.button-green
 		padding-right: 50px
 		position: absolute
 		+rem(height, 43px)
+		z-index: 1
 		+placeholder
 			color: $text-light-gray
-		&:focus + label
-			border: 1px solid $green
+		&:focus
+			& + label
+				border: 1px solid $green
+			& ~ .search-icon
+				opacity: 1
+				cursor: pointer
+				z-index: 10000
+				&:hover
+					.seach-loop
+						stroke: $active
+					.search-stick
+						fill: $active
 	label
 		width: 100%
 		display: block
@@ -291,11 +388,28 @@ a.button-green
 		+rem(height, 43px)
 		position: relative
 		pointer-events: none
-		.search-icon
-			opacity: 0.2
-			+rem(width, 20px)
-			position: absolute
-			+rem(right, 20px)
+		z-index: 1
+	.search-icon
+		opacity: 0.2
+		+rem(width, 20px)
+		position: absolute
+		+rem(right, 20px)
+		+rem(top, 2px)
+		display: block
+		height: 100%
+		.seach-loop
+			fill-rule: evenodd
+			clip-rule: evenodd
+			fill: none
+			stroke: #484F42
+			stroke-width: 1.5
+			stroke-linecap: round
+			stroke-linejoin: round
+			stroke-miterlimit: 10
+			transition: stroke 0.1s ease-in-out
+		.search-stick
+			fill: #484F42
+			transition: fill 0.1s ease-in-out
 
 
 main
@@ -351,6 +465,7 @@ main
 				transition: transform 0.2s ease-in, opacity 0.2s
 		.header-menu
 			z-index: 100
+			height: 100%
 			nav
 				position: absolute
 				+rem(right, $sidestep+35px+$sidestep)
@@ -366,10 +481,31 @@ main
 					+rem(padding-left, 16px)
 					+rem(padding-right, 16px)
 					border-radius: 5px
-					&:hover, &:focus
+					position: relative
+					z-index: 2
+					&:after
+						content: ''
+						display: block
+						position: absolute
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
 						background-color: $active
+						opacity: 0
+						transform: scale(1.05)
+						transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out
+						border-radius: 5px
+						z-index: -1
+					&:hover, &:focus
+						&:after
+							transform: scale(1)
+							opacity: 1
 					&.active
-						background-color: $green
+						&:after
+							transform: scale(1)
+							opacity: 1
+							background-color: $green
 			.menu-modal-wrap
 				position: absolute
 				top: 0
@@ -403,7 +539,7 @@ main
 					display: -o-flex
 					display: flex
 					align-items: center
-					height: 100vh
+					min-height: 100vh
 					+r(768)
 						background-color: $white
 						padding-bottom: 50px
@@ -440,6 +576,9 @@ main
 							margin-top: 2vh
 							margin-bottom: 2vh
 							+rem(line-height, 36px)
+							+rh(650)
+								+rem(margin-top, 5px)
+								+rem(margin-bottom, 5px)
 							+r(768)
 								+rem(margin-top, 34px)
 							&:hover, &:active
@@ -449,18 +588,44 @@ main
 								display: none
 							li
 								display: block
-								margin-top: 2vh
-								margin-bottom: 2vh
 							a
 								+ff('Roboto', 400, 18px)
+								display: block
+								padding-top: 0.9vh
+								padding-bottom: 0.9vh
 								+rem(line-height, 28px)
 								color: $text-annotation
+								+rh(650)
+									+rem(padding-top, 5px)
+									+rem(padding-bottom, 5px)
 								&:hover, &:active
 									color: $active
 	&.active
 		nav
 			padding-right: 18px
 		.boxed
+			+rh(650)
+				overflow-y: scroll
+				+rem(min-height, 700px)
+				display: inline-block
+				width: 100%
+				.header-menu
+					+rem(min-height, 800px)
+					display: block
+					position: relative
+				.menu-modal-wrap
+					+rem(min-height, 800px)
+					position: relative
+					margin: 0
+					.menu-modal-top
+						position: relative
+						margin: 0
+					.menu-modal-middle
+						+rem(min-height, 900px)
+						margin-top: 50px
+						margin-bottom: 50px
+						position: relative
+						display: block
 			.logo-wrapper
 				.logo
 					+rem(left, $sidestep - 20px)
@@ -485,6 +650,7 @@ main
 					opacity: 0
 					background-color: $text-h
 			.header-menu
+				position: relative
 				.header-menu-modal
 					transform: translate(0px, 0px)
 					visibility: visible
@@ -502,6 +668,7 @@ main
 			+rem(top, $topstep - 60px)
 		.header-menu-modal
 			.menu-modal-wrap
+				+rem(min-height, 760px)
 				.menu-modal-top
 					.change-lang
 						+rem(top, $topstep - 50px)
@@ -710,7 +877,7 @@ main
 		padding-bottom: 12vh
 .brands-wrapper
 	margin-top: 60px
-	.brands
+	#brands
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -719,7 +886,7 @@ main
 		justify-content: center
 		flex-wrap: wrap
 		.brand
-			outline: 1px solid $text-light-gray
+			outline: 1px solid $lineColor
 			+rem(width, 200px)
 			+rem(height, 220px)
 			margin-left: -1px
@@ -823,7 +990,7 @@ $slSize: 440px
 		+r(492)
 			+rem(width, $slSize - 100px)
 			+rem(height, $slSize - 100px)
-		.scheme-slider
+		#scheme-slider
 			width: 100%
 			height: 100%
 			border-radius: 50%
@@ -882,33 +1049,33 @@ $slSize: 440px
 					position: absolute
 					width: 100%
 					z-index: 0
-			&__update
-				position: absolute
-				+rem(width, 40px)
-				+rem(height, 40px)
-				+rem(bottom, 50px)
-				left: 0
-				right: 0
-				margin: auto
-				z-index: 2
-				border-radius: 50%
-				transition: transform 0.2s ease-in-out
+		.scheme-slider__update
+			position: absolute
+			+rem(width, 40px)
+			+rem(height, 40px)
+			+rem(bottom, 50px)
+			left: 0
+			right: 0
+			margin: auto
+			z-index: 2
+			border-radius: 50%
+			transition: transform 0.2s ease-in-out
+			svg
+				.scheme-circle
+					fill-rule:evenodd
+					clip-rule:evenodd
+					fill:#FFFFFF
+					transition: fill 0.2s ease-in-out
+				.scheme-refresh-arrow
+					fill:#0C0C0C
+					transition: fill 0.2s ease-in-out
+			&:hover
+				transform: rotate(360deg)
 				svg
 					.scheme-circle
-						fill-rule:evenodd
-						clip-rule:evenodd
-						fill:#FFFFFF
-						transition: fill 0.2s ease-in-out
+						fill: $active
 					.scheme-refresh-arrow
-						fill:#0C0C0C
-						transition: fill 0.2s ease-in-out
-				&:hover
-					transform: rotate(360deg)
-					svg
-						.scheme-circle
-							fill: $active
-						.scheme-refresh-arrow
-							fill: $white
+						fill: $white
 
 
 
@@ -972,21 +1139,24 @@ $slSize: 440px
 		display: inline-block
 		+rem(margin-left, 10px)
 		vertical-align: top
-		p.download-main-text
+		.href
 			color: $green
 			font-weight: 600
 		p
 			color: $text-light-gray
 			+rem(margin-top, 3px)
+		&:hover
+			.href
+				color: $active
+
 
 
 .counts-wrapper
 	background-image: url("../img/index/paralax-bg.jpg")
 	background-attachment: fixed
-	background-position: center
+	background-position : 50% 0px
 	background-repeat: no-repeat
 	background-size: cover
-
 
 .carousel-buttons
 	background-color: #f5f6f6
@@ -1007,6 +1177,7 @@ $slSize: 440px
 			+rem(padding-right, 20px)
 			cursor: pointer
 			border: 1px solid transparent
+			transition: border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out
 			p
 				color: $text-darker
 				font-weight: 400
@@ -1038,10 +1209,11 @@ $slSize: 440px
 		flex-direction: column
 		overflow: hidden
 		.chart-bar
-			background-color: $green
 			+rem(height, 66px)
 			position: relative
-			opacity: 1
+			opacity: 0.99
+			width: 0
+			cursor: pointer
 			&:nth-of-type(2)
 				opacity: 0.9
 			&:nth-of-type(3)
@@ -1054,6 +1226,17 @@ $slSize: 440px
 				opacity: 0.5
 			&:nth-of-type(7)
 				opacity: 0.4
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				width: 0
+				height: 100%
+				background-color: $green
+				z-index: -1
+				transition: background-color 0.15s ease-in-out
 			p
 				position: absolute
 				+rem(top, 26px)
@@ -1066,13 +1249,14 @@ $slSize: 440px
 					+rem(top, 15px)
 					+rem(font-size, 26px)
 			&:hover
-				background-color: $active
-				opacity: 1
+				opacity: 0.99
+				&:after
+					background-color: $active
 
 .block-news
-	border-top: 1px solid $text-light-gray
+	border-top: 1px solid $lineColor
 	h2
-		margin-bottom: 7vh
+		+rem(margin-bottom, 60px)
 	.one-half:not(:first-of-type)
 		+rem(margin-left, 30px)
 	.one-half:first-of-type
@@ -1080,48 +1264,50 @@ $slSize: 440px
 	.news
 		img
 			width: 100%
-		a
-			margin-top: 2vh
-			margin-bottom: 2vh
+		.href
+			+rem(margin-top, 20px)
+			+rem(margin-bottom, 20px)
 			display: block
 			+rem(font-size, 26px)
 			+rem(line-height, 36px)
 			font-weight: 600
-		p
+			color: $green
+			transition: color 0.15s ease-in-out
+		p:not(.href)
 			+rem(line-height, 26px)
 			+rem(font-size, 16px)
-			margin-bottom, 2vh
-			margin-top, 2vh
+			+rem(margin-top, 20px)
+			+rem(margin-bottom, 20px)
 			display: block
-			&.caption
-				margin-top: 2vh
 		&:not(.big-news)
-			a
+			.href
 				margin-top: 0
 				+rem(font-size, 16px)
 				+rem(line-height, 30px)
 				font-weight: 700
 			.text-news
-				padding-bottom: 6vh
+				+rem(padding-bottom, 14px)
+				display: block
 				&:not(:first-of-type)
-					padding-top: 6vh
+					+rem(padding-top, 40px)
 				&:not(:last-of-type)
-					border-bottom: 1px solid $text-light-gray
-	.green-arrow
-		margin-top: 2vh
+					border-bottom: 1px solid $lineColor
+	a:hover
+		.href
+			color: $active
 
 
 .callback-wrap
-	margin-top: 10vh
-	margin-bottom: 10vh
+	margin-top: 7vh
+	margin-bottom: 7vh
 	&.callback
 		+r(768)
-			border-top: 1px solid $text-light-gray
+			border-top: 1px solid $lineColor
 			padding-top: 5vh
 			margin-bottom: 7vh
 	&.vacancy
 		+r(768)
-			border-bottom: 1px solid $text-light-gray
+			border-bottom: 1px solid $lineColor
 			padding-bottom: 5vh
 			margin-top: 0
 	p.sub
@@ -1131,7 +1317,10 @@ $slSize: 440px
 	.tell
 		color: $text-h
 		font-weight: 700
-		margin-bottom: 1.5vh
+		+rem(margin-bottom, 12px)
+		+rem(font-size, 26px)
+		display: block
+		+rem(min-width, 230px)
 	.mail
 		font-weight: 600
 	.icon
@@ -1146,7 +1335,9 @@ $slSize: 440px
 	+rem(height, 43px)
 	+rem(border-radius, 50px)
 	+rem(font-size, 16px)
+	+rem(padding-top, 3px)
 	color: $white
+	transition: background-color 0.15s ease-in-out
 	&:focus, &:hover
 		background-color: $active
 
@@ -1167,7 +1358,7 @@ $slSize: 440px
 
 footer
 	background-color: $white
-	border-top: 1px solid $text-gray
+	border-top: 1px solid $lineColor
 	.callback-wrap
 		margin-top: 0
 	p.caption
@@ -1207,7 +1398,7 @@ footer
 			+rem(margin-bottom, 20px)
 			font-weight: 700
 			color: $text-h
-		p.darker
+		a.darker
 			+rem(font-size, 16px)
 			+rem(margin-top, 5px)
 			+rem(margin-bottom, 5px)
@@ -1219,5 +1410,13 @@ footer
 	.footer-makers
 		position: absolute
 		bottom: 0
+		display: block
+		left: 0
 		.caption
-			+rem(margin-bottom, 5px)
+			+rem(margin-bottom, 3px)
+		.href
+			font-weight: 600
+			color: $green
+		&:hover
+			.href
+				color: $active

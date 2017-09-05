@@ -4,6 +4,18 @@ mixin button(text, hr="#")
 			.button-green__text-block
 				p= text
 				.button-green__text-block__circle
-			.button-green__text-block
-				p= text
-				.button-green__text-block__circle
+					svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30")
+						path.button-fill-round(d="M15 0c8.3 0 15 6.7 15 15s-6.7 15-15 15S0 23.3 0 15 6.7 0 15 0z")
+						path.button-fill-arrow(d="M13 10l5 5-5 5")
+						path.button-fill-arrow.blue(d="M13 10l5 5-5 5")
+
+
+//- mixin button(text, hr="#")
+//- 	.button-green-wrapper
+//- 		a(href=hr).button-green
+//- 			.button-green__text-block
+//- 				p= text
+//- 				.button-green__text-block__circle
+//- 			.button-green__text-block
+//- 				p= text
+//- 				.button-green__text-block__circle
