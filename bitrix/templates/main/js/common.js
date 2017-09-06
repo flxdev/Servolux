@@ -109,7 +109,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		if(scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
 
 			headerMenu.addClass('sticked animated fadeInDownFast').css('animation-delay', '0')
-			scrollParallax(scrollPos);
+			if(!mobile){
+				scrollParallax(scrollPos);
+			}
 			return;
 		}
 
