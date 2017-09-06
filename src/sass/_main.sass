@@ -50,16 +50,16 @@ html
 	+r(1150)
 		font-size: 15px
 	+r(992)
-		font-size: 16px
+		font-size: 14px
 	+r(480)
-		font-size: 18px
+		font-size: 13px
 body
 	background-attachment: fixed
 	+box
 	+font-smoothing
 	text-rendering: optimizeLegibility
 	font-family: $o
-	min-width: 480px
+	min-width: 320px
 	min-height: 100vh
 	-webkit-overflow-scrolling: touch
 	position: relative
@@ -527,6 +527,8 @@ main
 	width: 100%
 	margin: auto
 
+// Menu
+
 #header-mainwrap
 	z-index: 999
 	left: 0
@@ -693,7 +695,6 @@ main
 										color: $text-annotation
 										&:hover, &:active
 											color: $active
-	
 	&.sticked
 		position: fixed
 		top: 0
@@ -726,8 +727,6 @@ main
 				+rem(top, $topstep - 25px)
 				&:before, &:after, .burger-stick
 					background-color: $text-h
-
-
 	&.active
 		&:before
 			position: fixed
@@ -779,6 +778,12 @@ main
 					visibility: visible
 					opacity: 1
 					min-height: 100vh
+
+// Menu end
+
+
+
+
 
 #main-screen-wrapper
 	height: 100vh
@@ -857,6 +862,7 @@ main
 			left: 50%
 			transform: translate(-50%, -50%) scale(1.4)
 			opacity: 1
+			will-change: transform
 		img
 			min-width: 100%
 			min-height: 100vh
@@ -1225,12 +1231,25 @@ $slSize: 440px
 
 
 
-.counts-wrapper
-	background-image: url("../img/index/paralax-bg.jpg")
-	background-attachment: fixed
-	background-position : 50% 0px
-	background-repeat: no-repeat
-	background-size: cover
+// .counts-wrapper
+// 	background-image: url("../img/index/paralax-bg.jpg")
+// 	background-attachment: fixed
+// 	background-position : 50% 0px
+// 	background-repeat: no-repeat
+// 	background-size: cover
+
+#parallax
+	background-color: transparent
+	position: relative
+	overflow: hidden
+	img
+		height: 100vh
+		width: 100%
+		z-index: 0
+		top: -50%
+		left: 0
+		position: absolute
+		display: block
 
 .carousel-buttons
 	background-color: #f5f6f6

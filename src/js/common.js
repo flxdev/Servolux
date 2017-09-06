@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Video append if not mobile
 	if(!isMobile()){
-		videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video id="#video" preload loop><source src="'+videoWrapper.data('src')+'" type="video/mp4"></video></div></div>')
+		videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video id="#video" muted loop><source src="'+videoWrapper.data('src')+'" type="video/mp4"></video></div></div>')
 		videoWrapper.find('.video-poster').remove()
 	}
 
@@ -83,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// PARALLAX event on scroll trigger
 	if($('#parallax').length){
-		var $parallax = $('#parallax');
+		var $parallax = $('#parallax'),
+			$parallaxImg = $('#parallax>img');
 
 			parallaxFieldViewTop = $parallax.offset().top - vHeight
 			parallaxFieldViewBottom =  $parallax.offset().top + $parallax.height()
@@ -92,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		function scrollParallax(scrollPos){
 			console.log()
 			if( scrollPos >= parallaxFieldViewTop && scrollPos <= parallaxFieldViewBottom){
-				$parallax.css('background-position', '50% ' + (-((scrollPos - parallaxFieldViewTop)-(parallaxFieldView/2))/2) + 'px')
+				$parallaxImg.css('transform', 'translate( 0, ' + (-((scrollPos - parallaxFieldViewTop)-(parallaxFieldView/2))/6) + 'px)')
 			}
 		}
 	}
