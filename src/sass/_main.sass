@@ -134,6 +134,7 @@ h4
 p
 	+ff('Roboto', 300, 18px)
 	color: $text-gray
+	+rem(line-height, 30px)
 	a
 		font-weight: inherit
 p.annotation
@@ -778,6 +779,9 @@ main
 					visibility: visible
 					opacity: 1
 					min-height: 100vh
+					display: flex
+					justify-content: center
+					align-items: center
 
 // Menu end
 
@@ -1040,8 +1044,11 @@ $slSize: 440px
 			+rem(width, $slSize - 85px)
 			+rem(height, $slSize - 85px)
 		+r(492)
-			+rem(width, $slSize - 140px)
-			+rem(height, $slSize - 140px)
+			+rem(width, $slSize - 120px)
+			+rem(height, $slSize - 120px)
+		+r(380)
+			+rem(width, $slSize - 160px)
+			+rem(height, $slSize - 160px)
 		#scheme-slider
 			width: 100%
 			height: 100%
@@ -1069,13 +1076,16 @@ $slSize: 440px
 					+rem(width, $slSize - 85px)
 					+rem(height, $slSize - 85px)
 				+r(492)
-					+rem(width, $slSize - 140px)
-					+rem(height, $slSize - 140px)
+					+rem(width, $slSize - 120px)
+					+rem(height, $slSize - 120px)
 					h3
 						+rem(font-size, 18px)
 						margin-bottom: 0
 					p
 						+rem(font-size, 12px)
+				+r(380)
+					+rem(width, $slSize - 160px)
+					+rem(height, $slSize - 160px)
 				&-inner
 					position: relative
 					width: 100%
@@ -1243,13 +1253,17 @@ $slSize: 440px
 	position: relative
 	overflow: hidden
 	img
-		height: 100vh
+		min-height: 100vh
 		width: 100%
 		z-index: 0
 		top: -50%
 		left: 0
 		position: absolute
 		display: block
+		+r(992)
+			top: 0
+			height: 100%
+			width: auto
 
 .carousel-buttons
 	background-color: #f5f6f6
