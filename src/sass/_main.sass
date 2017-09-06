@@ -581,9 +581,11 @@ main
 				transition: transform 0.2s ease-in, opacity 0.2s
 		.header-menu
 			z-index: 100
+			overflow: hidden
 			pointer-events: none
 			nav
 				position: absolute
+				pointer-events: auto
 				+rem(right, $sidestep+35px+$sidestep)
 				+rem(top, $topstep - 6px)
 				+r(992)
@@ -625,7 +627,6 @@ main
 			.header-menu-modal
 				background-color: $white
 				opacity: 0
-				visibility: hidden
 				width: 100%
 				position: relative
 				z-index: 2
@@ -1275,7 +1276,7 @@ $slSize: 440px
 		display: flex
 		+rem(height, 43px)
 		.button
-			+rem(padding, 14px)
+			+rem(padding, 7px)
 			+rem(padding-left, 20px)
 			+rem(padding-right, 20px)
 			cursor: pointer

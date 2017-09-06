@@ -695,9 +695,11 @@ main {
         transition: transform 0.2s ease-in, opacity 0.2s, -webkit-transform 0.2s ease-in; }
     #header-mainwrap .boxed .header-menu {
       z-index: 100;
+      overflow: hidden;
       pointer-events: none; }
       #header-mainwrap .boxed .header-menu nav {
         position: absolute;
+        pointer-events: auto;
         right: 6.1875rem;
         top: 2.5rem; }
         #header-mainwrap .boxed .header-menu nav .nav-href {
@@ -747,7 +749,6 @@ main {
       #header-mainwrap .boxed .header-menu .header-menu-modal {
         background-color: #fff;
         opacity: 0;
-        visibility: hidden;
         width: 100%;
         position: relative;
         z-index: 2;
@@ -1373,7 +1374,7 @@ main {
     display: flex;
     height: 2.6875rem; }
     .carousel-buttons .carousel-buttons-wrap .button {
-      padding: 0.875rem;
+      padding: 0.4375rem;
       padding-left: 1.25rem;
       padding-right: 1.25rem;
       cursor: pointer;
