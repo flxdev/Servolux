@@ -1402,8 +1402,7 @@ main {
     position: relative; }
     #news .news .news-item {
       width: 50%;
-      float: right;
-      padding-left: 1.25rem; }
+      float: right; }
       #news .news .news-item:hover .text-news-wrapper .href {
         color: #0056b8; }
       #news .news .news-item .img-news-wrapper {
@@ -1460,8 +1459,7 @@ main {
         padding-top: 2.5rem; }
       #news .news .news-item:first-of-type {
         float: left;
-        padding-right: 1.25rem;
-        padding-left: 0; }
+        padding-right: 2.5rem; }
       #news .news .news-item.big-news .img-news-wrapper {
         display: block; }
       #news .news .news-item.big-news .text-news-wrapper .href {
