@@ -202,10 +202,21 @@ p.caption
 		+rem(padding-left, $sidestep - 20px)
 		+rem(padding-right, $sidestep - 20px)
 	.block
-		+rem(max-width, 1400px)
+		+rem(max-width, 1440px)
+		+rem(padding-left, 120px)
+		+rem(padding-right, 120px)
 		margin: auto
 		+rem(padding-top, 65px)
 		+rem(padding-bottom, 110px)
+		+r(1440)
+			+rem(padding-left, 60px)
+			+rem(padding-right, 60px)
+		+r(1024)
+			+rem(padding-left, 20px)
+			+rem(padding-right, 20px)
+		+r(500)
+			+rem(padding-left, 5px)
+			+rem(padding-right, 5px)
 .brands-wrapper
 	margin-top: 60px
 	#brands
@@ -214,7 +225,8 @@ p.caption
 		flex-wrap: wrap
 		.brand
 			outline: 1px solid $lineColor
-			+rem(width, 200px)
+			+rem(max-width, 200px)
+			+rem(min-width, 180px)
 			+rem(height, 220px)
 			margin-left: -1px
 			z-index: 0
@@ -223,6 +235,15 @@ p.caption
 			padding: 5px
 			margin-top: 1px
 			margin-left: 1px
+			+r(1024)
+				+rem(max-width, 200px)
+				+rem(min-width, 150px)
+			+r(992)
+				+rem(max-width, 260px)
+				+rem(min-width, 220px)
+			+r(492)
+				+rem(max-width, 320px)
+				+rem(min-width, 250px)
 			&:before
 				display: block
 				position: absolute
@@ -557,6 +578,7 @@ main
 				transition: transform 0.2s ease-in, opacity 0.2s
 		.header-menu
 			z-index: 100
+			pointer-events: none
 			nav
 				position: absolute
 				+rem(right, $sidestep+35px+$sidestep)
@@ -675,6 +697,7 @@ main
 	&.sticked
 		position: fixed
 		top: 0
+		will-change: transform
 		.logo-wrapper
 			+rem(top, $topstep - 17px)
 		.svg-green
@@ -717,6 +740,7 @@ main
 			background-color: #333
 			z-index: 999
 			opacity: .5
+			will-change: transform
 		nav
 			padding-right: 18px
 		.boxed
@@ -749,6 +773,7 @@ main
 			.header-menu
 				position: relative
 				height: auto
+				pointer-events: auto
 				.header-menu-modal
 					transform: translate(0px, 0px)
 					visibility: visible
@@ -767,9 +792,51 @@ main
 		+rem(min-height, 500px)
 	+r(492)
 		+rem(min-height, 380px)
+	&.advancedPage
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+		+rem(height, 420px)
+		#main-screen
+			margin: auto
+			+rem(max-width, 1440px)
+			+rem(padding-left, 120px)
+			+rem(padding-right, 120px)
+			.main-screen-title
+				+rem(top, 185px)
+				+rem(max-width, 1440px)
+				margin: auto
+				position: relative
+				#title-wrapper.animated.fadeInDownMenu
+					p.title-main
+						text-align: left
+						+rem(font-size, 70px)
+						+rem(line-height, 55px)
+						letter-spacing: 1px
+					.bread
+						a
+							+rem(font-size, 16px)
+							color: #fff
+							opacity: 0.5
+							display: inline-block
+							position: relative
+							padding-right: 16px
+							transition: opacity .2s, color .2s
+							font-weight: 400
+							margin-bottom: 20px
+							&:after
+								content: '/'
+								display: block
+								position: absolute
+								right: 0
+								top: 0
+							&:hover
+								color: $active
+								opacity: 1
 	#main-video-wrapper
 		position: fixed
 		width: 100%
+		will-change: transform
 		height: 100vh
 		z-index: -1
 		.filter
@@ -967,8 +1034,8 @@ $slSize: 440px
 			+rem(width, $slSize - 85px)
 			+rem(height, $slSize - 85px)
 		+r(492)
-			+rem(width, $slSize - 100px)
-			+rem(height, $slSize - 100px)
+			+rem(width, $slSize - 140px)
+			+rem(height, $slSize - 140px)
 		#scheme-slider
 			width: 100%
 			height: 100%
@@ -996,8 +1063,13 @@ $slSize: 440px
 					+rem(width, $slSize - 85px)
 					+rem(height, $slSize - 85px)
 				+r(492)
-					+rem(width, $slSize - 100px)
-					+rem(height, $slSize - 100px)
+					+rem(width, $slSize - 140px)
+					+rem(height, $slSize - 140px)
+					h3
+						+rem(font-size, 18px)
+						margin-bottom: 0
+					p
+						+rem(font-size, 12px)
 				&-inner
 					position: relative
 					width: 100%
@@ -1218,6 +1290,8 @@ $slSize: 440px
 			opacity: 0.99
 			width: 0
 			cursor: pointer
+			+r(675)
+				+rem(height, 100px)
 			&:nth-of-type(2)
 				opacity: 0.9
 			&:nth-of-type(3)
@@ -1254,6 +1328,10 @@ $slSize: 440px
 					left: auto
 					+rem(top, 15px)
 					+rem(font-size, 26px)
+					+r(675)
+						position: relative
+						+rem(margin-left, 50px)
+						+rem(margin-top, 30px)
 			&:hover
 				opacity: 0.99
 				&:after
@@ -1493,7 +1571,6 @@ $slSize: 440px
 
 #content-first-screen
 	height: 500px
-	background-color: #eee
 #fullpage-wrapper
 	position: relative
 	background-color: #FFF

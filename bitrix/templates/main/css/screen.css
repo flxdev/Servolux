@@ -357,7 +357,9 @@ p.caption {
   padding-left: 2rem;
   padding-right: 2rem; }
   .box .block {
-    max-width: 87.5rem;
+    max-width: 90rem;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
     margin: auto;
     padding-top: 4.0625rem;
     padding-bottom: 6.875rem; }
@@ -378,7 +380,8 @@ p.caption {
     flex-wrap: wrap; }
     .brands-wrapper #brands .brand {
       outline: 1px solid #ccc;
-      width: 12.5rem;
+      max-width: 12.5rem;
+      min-width: 11.25rem;
       height: 13.75rem;
       margin-left: -1px;
       z-index: 0;
@@ -690,7 +693,8 @@ main {
         transition: transform 0.2s ease-in, opacity 0.2s;
         transition: transform 0.2s ease-in, opacity 0.2s, -webkit-transform 0.2s ease-in; }
     #header-mainwrap .boxed .header-menu {
-      z-index: 100; }
+      z-index: 100;
+      pointer-events: none; }
       #header-mainwrap .boxed .header-menu nav {
         position: absolute;
         right: 6.1875rem;
@@ -820,7 +824,8 @@ main {
                     color: #0056b8; }
   #header-mainwrap.sticked {
     position: fixed;
-    top: 0; }
+    top: 0;
+    will-change: transform; }
     #header-mainwrap.sticked .logo-wrapper {
       top: 1.8125rem; }
     #header-mainwrap.sticked .svg-green {
@@ -856,7 +861,8 @@ main {
     height: 100vh;
     background-color: #333;
     z-index: 999;
-    opacity: .5; }
+    opacity: .5;
+    will-change: transform; }
   #header-mainwrap.active nav {
     padding-right: 18px; }
   #header-mainwrap.active .boxed {
@@ -889,7 +895,8 @@ main {
         background-color: #484f42; }
     #header-mainwrap.active .boxed .header-menu {
       position: relative;
-      height: auto; }
+      height: auto;
+      pointer-events: auto; }
       #header-mainwrap.active .boxed .header-menu .header-menu-modal {
         -webkit-transform: translate(0px, 0px);
         -ms-transform: translate(0px, 0px);
@@ -905,9 +912,50 @@ main {
   padding: 0;
   position: relative;
   overflow: hidden; }
+  #main-screen-wrapper.advancedPage {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 26.25rem; }
+    #main-screen-wrapper.advancedPage #main-screen {
+      margin: auto;
+      max-width: 90rem;
+      padding-left: 7.5rem;
+      padding-right: 7.5rem; }
+      #main-screen-wrapper.advancedPage #main-screen .main-screen-title {
+        top: 11.5625rem;
+        max-width: 90rem;
+        margin: auto;
+        position: relative; }
+        #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper.animated.fadeInDownMenu p.title-main {
+          text-align: left;
+          font-size: 4.375rem;
+          line-height: 3.4375rem;
+          letter-spacing: 1px; }
+        #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper.animated.fadeInDownMenu .bread a {
+          font-size: 1rem;
+          color: #fff;
+          opacity: 0.5;
+          display: inline-block;
+          position: relative;
+          padding-right: 16px;
+          -webkit-transition: opacity .2s, color .2s;
+          transition: opacity .2s, color .2s;
+          font-weight: 400;
+          margin-bottom: 20px; }
+          #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper.animated.fadeInDownMenu .bread a:after {
+            content: '/';
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0; }
+          #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper.animated.fadeInDownMenu .bread a:hover {
+            color: #0056b8;
+            opacity: 1; }
   #main-screen-wrapper #main-video-wrapper {
     position: fixed;
     width: 100%;
+    will-change: transform;
     height: 100vh;
     z-index: -1; }
     #main-screen-wrapper #main-video-wrapper .filter {
@@ -1584,8 +1632,7 @@ main {
       color: #0056b8; }
 
 #content-first-screen {
-  height: 500px;
-  background-color: #eee; }
+  height: 500px; }
 
 #fullpage-wrapper {
   position: relative;
@@ -2026,12 +2073,26 @@ main {
   * {
     -webkit-text-size-adjust: none; } }
 
+@media only screen and (max-width: 1440px) {
+
+  .box .block {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem; } }
+
 @media only screen and (max-width: 1150px) {
 
   html {
     font-size: 15px; } }
 
 @media only screen and (max-width: 1024px) {
+
+  .box .block {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; }
+
+  .brands-wrapper #brands .brand {
+    max-width: 12.5rem;
+    min-width: 9.375rem; }
 
   #main-screen-wrapper {
     height: auto;
@@ -2103,6 +2164,10 @@ main {
     margin: 0;
     padding: 0;
     margin-top: 3.125rem; }
+
+  .brands-wrapper #brands .brand {
+    max-width: 16.25rem;
+    min-width: 13.75rem; }
 
   .text-wrap {
     max-width: 100%; }
@@ -2240,6 +2305,16 @@ main {
   .change-lang {
     display: none; } }
 
+@media only screen and (max-width: 675px) {
+
+  #index-chart .chart-wrapper .chart-bar {
+    height: 6.25rem; }
+
+  #index-chart .chart-wrapper .chart-bar p.annotation {
+    position: relative;
+    margin-left: 3.125rem;
+    margin-top: 1.875rem; } }
+
 @media only screen and (max-width: 555px) {
 
   .scheme-wrapper .scheme-slider-wrapper {
@@ -2258,11 +2333,21 @@ main {
   .scheme-wrapper {
     margin-top: 5.625rem; } }
 
+@media only screen and (max-width: 500px) {
+
+  .box .block {
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem; } }
+
 @media only screen and (max-width: 492px) {
 
   .box {
     padding-left: 0.75rem;
     padding-right: 0.75rem; }
+
+  .brands-wrapper #brands .brand {
+    max-width: 20rem;
+    min-width: 15.625rem; }
 
   #header-mainwrap.active .boxed .logo-wrapper .logo {
     left: 0.75rem; }
@@ -2280,12 +2365,19 @@ main {
     margin-top: 3.75rem; }
 
   .scheme-wrapper .scheme-slider-wrapper {
-    width: 21.25rem;
-    height: 21.25rem; }
+    width: 18.75rem;
+    height: 18.75rem; }
 
   .scheme-wrapper .scheme-slider-wrapper #scheme-slider .scheme-slider__slide {
-    width: 21.25rem;
-    height: 21.25rem; }
+    width: 18.75rem;
+    height: 18.75rem; }
+
+  .scheme-wrapper .scheme-slider-wrapper #scheme-slider .scheme-slider__slide h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0; }
+
+  .scheme-wrapper .scheme-slider-wrapper #scheme-slider .scheme-slider__slide p {
+    font-size: 0.75rem; }
 
   #scheme {
     height: 28.75rem; } }

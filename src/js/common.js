@@ -64,10 +64,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		var i = (140-((scrollPos/vHeight)*50))/100;
 		videoWrapper.css('opacity', (vHeight/scrollPos)/3).find('video').css('transform', 'translate(-50%, -50%) scale('+ (i<=1 ? 1 : i) +')');
-		if(scrollPos>200 && !screenLinks.hasClass('hiddened')){
+		if(scrollPos>150 && !screenLinks.hasClass('hiddened')){
 			screenLinks.fadeOut().addClass('hiddened')
 		} 
-		else if(scrollPos<200 && screenLinks.hasClass('hiddened')){
+		else if(scrollPos<150 && screenLinks.hasClass('hiddened')){
 			screenLinks.fadeIn().removeClass('hiddened')
 		}
 	}
@@ -82,16 +82,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	// PARALLAX event on scroll trigger
-	var $parallax = $('#parallax');
+	if($('#parallax').length){
+		var $parallax = $('#parallax');
 
-		parallaxFieldViewTop = $parallax.offset().top-$(window).height()
-		parallaxFieldViewBottom =  $parallax.offset().top+$parallax.height()
-		parallaxFieldView = parallaxFieldViewBottom - parallaxFieldViewTop
+			parallaxFieldViewTop = $parallax.offset().top - vHeight
+			parallaxFieldViewBottom =  $parallax.offset().top + $parallax.height()
+			parallaxFieldView = parallaxFieldViewBottom - parallaxFieldViewTop
 
-	function scrollParallax(scrollPos){
-		console.log()
-		if( scrollPos >= parallaxFieldViewTop && scrollPos <= parallaxFieldViewBottom){
-			$parallax.css('background-position', '50% ' + (-((scrollPos - parallaxFieldViewTop)-(parallaxFieldView/2))/2) + 'px')
+		function scrollParallax(scrollPos){
+			console.log()
+			if( scrollPos >= parallaxFieldViewTop && scrollPos <= parallaxFieldViewBottom){
+				$parallax.css('background-position', '50% ' + (-((scrollPos - parallaxFieldViewTop)-(parallaxFieldView/2))/2) + 'px')
+			}
 		}
 	}
 
