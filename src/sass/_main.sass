@@ -180,6 +180,7 @@ p.caption
 			width: 50%
 			margin: 0
 			padding: 0
+			+rem(margin-top, 50px)
 
 .text-wrap
 	+rem(max-width, 520px)
@@ -766,7 +767,7 @@ main
 			display: flex
 			position: relative
 			+r(1024)
-				display: none
+				display: none!important
 			.screen-link
 				width: 33%
 				flex-grow: 1
@@ -1247,14 +1248,14 @@ $slSize: 440px
 		+r(1024)
 			+rem(padding-left, 18px)
 			flex-grow: 1
-		+r(768)
+		+r(992)
 			+rem(padding-left, 0px)
 	.one-half:first-of-type
 		+rem(padding-right, 20px)
 		+r(1024)
 			+rem(padding-right, 18px)
 			flex-grow: 1
-		+r(768)
+		+r(992)
 			+rem(padding-right, 0px)
 	.news
 		img
@@ -1274,6 +1275,10 @@ $slSize: 440px
 			+rem(margin-top, 20px)
 			+rem(margin-bottom, 20px)
 			display: block
+		&.big-news
+			display: block
+			+r(992)
+				+rem(margin-bottom, 35px)
 		&:not(.big-news)
 			.href
 				margin-top: 0
@@ -1283,10 +1288,16 @@ $slSize: 440px
 			.text-news
 				+rem(padding-bottom, 14px)
 				display: block
+				+r(992)
+					border-top: 1px solid $lineColor
+					+rem(padding-bottom, 30px)
 				&:not(:first-of-type)
 					+rem(padding-top, 40px)
 				&:not(:last-of-type)
 					border-bottom: 1px solid $lineColor
+					+r(992)
+						border-bottom: 0
+						+rem(padding-top, 40px)
 	a:hover
 		.href
 			color: $active
