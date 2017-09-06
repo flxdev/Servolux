@@ -118,7 +118,7 @@ a
 h1
 	+ff('GothamPro', 800, 70px)
 	color: $text-h
-h2
+h2, .h2
 	+ff('GothamPro', 400, 38px)
 	color: $text-h
 	+rem(line-height, 48px)
@@ -276,10 +276,11 @@ p.caption
 .count
 	+rem(max-width, 200px)
 	color: $white
-	h2
+	.h2
 		+rem(font-size, 70px)
 		font-weight: 500
-	p
+		color: $white
+	.count-sub
 		font-weight: 600
 		opacity: 0.5
 		+rem(line-height, 28px)
@@ -287,7 +288,7 @@ p.caption
 
 
 #parallax
-	h1, h2, h3, h4, p
+	h1, h2, h3, h4, p, .h2
 		color: $white
 
 
@@ -1260,7 +1261,7 @@ $slSize: 440px
 
 #news
 	border-top: 1px solid $lineColor
-	h2
+	.h2
 		+rem(margin-bottom, 60px)
 	.button-green-wrapper
 		float: left
@@ -1408,7 +1409,7 @@ $slSize: 440px
 		&:focus, &:hover
 			color: $active
 
-.footer
+#footer
 	background-color: $white
 	border-top: 1px solid $lineColor
 	+r(992)
@@ -1488,3 +1489,14 @@ $slSize: 440px
 		+r(992)
 			position: relative
 			margin-top: 50px
+
+
+#content-first-screen
+	height: 500px
+	background-color: #eee
+#fullpage-wrapper
+	position: relative
+	background-color: #FFF
+	.fullpage-section
+		height: 100vh
+		background-color: #FFF

@@ -277,7 +277,7 @@ h1 {
   font-style: normal;
   color: #484f42; }
 
-h2 {
+h2, .h2 {
   font-family: "GothamPro";
   font-weight: 400;
   font-size: 2.375rem;
@@ -452,16 +452,17 @@ p.caption {
 .count {
   max-width: 12.5rem;
   color: #fff; }
-  .count h2 {
+  .count .h2 {
     font-size: 4.375rem;
-    font-weight: 500; }
-  .count p {
+    font-weight: 500;
+    color: #fff; }
+  .count .count-sub {
     font-weight: 600;
     opacity: 0.5;
     line-height: 1.75rem;
     margin-top: 1.25rem; }
 
-#parallax h1, #parallax h2, #parallax h3, #parallax h4, #parallax p {
+#parallax h1, #parallax h2, #parallax h3, #parallax h4, #parallax p, #parallax .h2 {
   color: #fff; }
 
 .button-green-wrapper {
@@ -1394,7 +1395,7 @@ main {
 
 #news {
   border-top: 1px solid #ccc; }
-  #news h2 {
+  #news .h2 {
     margin-bottom: 3.75rem; }
   #news .button-green-wrapper {
     float: left;
@@ -1520,67 +1521,78 @@ main {
     .change-lang a:focus, .change-lang a:hover {
       color: #0056b8; }
 
-.footer {
+#footer {
   background-color: #fff;
   border-top: 1px solid #ccc; }
-  .footer .callback-wrap {
+  #footer .callback-wrap {
     margin-top: 0; }
-  .footer p.caption {
+  #footer p.caption {
     font-weight: 600; }
-  .footer .footer-hrefs a {
+  #footer .footer-hrefs a {
     display: block;
     color: #484f42; }
-    .footer .footer-hrefs a:not(:last-of-type) {
+    #footer .footer-hrefs a:not(:last-of-type) {
       margin-bottom: 1.75rem; }
-    .footer .footer-hrefs a.active {
+    #footer .footer-hrefs a.active {
       color: #bac0b7;
       border-bottom: 1px solid #bac0b7;
       display: inline-block;
       padding-bottom: 0.1875rem; }
-    .footer .footer-hrefs a:hover {
+    #footer .footer-hrefs a:hover {
       color: #0056b8; }
-  .footer .footer-lang-caption {
+  #footer .footer-lang-caption {
     position: absolute;
     bottom: 0; }
-    .footer .footer-lang-caption .change-lang {
+    #footer .footer-lang-caption .change-lang {
       margin-bottom: 2.5rem;
       position: relative;
       right: auto;
       top: auto; }
-  .footer .footer-contacts .tell {
+  #footer .footer-contacts .tell {
     font-size: 1.625rem;
     margin-bottom: 0.625rem;
     margin-top: 1.25rem; }
-  .footer .footer-office-wrapper {
+  #footer .footer-office-wrapper {
     position: absolute;
     bottom: 0; }
-    .footer .footer-office-wrapper p.office-title {
+    #footer .footer-office-wrapper p.office-title {
       font-size: 1.125rem;
       line-height: 1.875rem;
       margin-bottom: 1.25rem;
       font-weight: 700;
       color: #484f42; }
-    .footer .footer-office-wrapper a.darker {
+    #footer .footer-office-wrapper a.darker {
       font-size: 1rem;
       margin-top: 0.3125rem;
       margin-bottom: 0.3125rem;
       font-weight: 600; }
-    .footer .footer-office-wrapper a {
+    #footer .footer-office-wrapper a {
       margin-top: 1.25rem;
       display: block;
       font-size: 1rem; }
-  .footer .footer-makers {
+  #footer .footer-makers {
     position: absolute;
     bottom: 0;
     display: block;
     left: 0; }
-    .footer .footer-makers .caption {
+    #footer .footer-makers .caption {
       margin-bottom: 0.1875rem; }
-    .footer .footer-makers .href {
+    #footer .footer-makers .href {
       font-weight: 600;
       color: #56b622; }
-    .footer .footer-makers:hover .href {
+    #footer .footer-makers:hover .href {
       color: #0056b8; }
+
+#content-first-screen {
+  height: 500px;
+  background-color: #eee; }
+
+#fullpage-wrapper {
+  position: relative;
+  background-color: #FFF; }
+  #fullpage-wrapper .fullpage-section {
+    height: 100vh;
+    background-color: #FFF; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
@@ -2177,25 +2189,25 @@ main {
     padding-bottom: 2.5rem;
     padding-right: 0; }
 
-  .footer {
+  #footer {
     width: 100%; }
 
-  .footer .one-four {
+  #footer .one-four {
     width: 100%; }
 
-  .footer .footer-hrefs {
+  #footer .footer-hrefs {
     position: relative;
     margin-bottom: 50px;
     margin-top: 50px; }
 
-  .footer .footer-lang-caption {
+  #footer .footer-lang-caption {
     position: relative; }
 
-  .footer .footer-office-wrapper {
+  #footer .footer-office-wrapper {
     position: relative;
     margin-bottom: 50px; }
 
-  .footer .footer-makers {
+  #footer .footer-makers {
     position: relative;
     margin-top: 50px; } }
 
@@ -2301,7 +2313,7 @@ main {
 
 @media only screen and (max-width: 400px) {
 
-  h2 {
+  h2, .h2 {
     font-size: 1.875rem; }
 
   .flex-block {

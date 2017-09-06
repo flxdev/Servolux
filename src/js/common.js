@@ -1,5 +1,7 @@
 window.onload = function() {
-	$('video').get(0).play();
+	if($('video').length){
+		$('video').get(0).play();
+	}
 };
 
 
@@ -22,13 +24,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		screenLinks = $('#main-screen .screen-links-wrapper'),
 		mainTitle = $('#title-wrapper'),
 		mobile = isMobile(),
-		screenLinksHeight = screenLinks.height();
+		screenLinksHeight = screenLinks.height(),
+		$fullPage = $('#fullpage');
 
 	// Video append if not mobile
 	if(!isMobile()){
 		videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video id="#video" preload loop><source src="'+videoWrapper.data('src')+'" type="video/mp4"></video></div></div>')
 		videoWrapper.find('.video-poster').remove()
 	}
+
+
 
 
 	//burger-menu
@@ -56,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Main screen fade out and video zoom out on scroll
 	function scrollMainScreen(scrollPos){
+
 		var i = (140-((scrollPos/vHeight)*50))/100;
 		videoWrapper.css('opacity', (vHeight/scrollPos)/3).find('video').css('transform', 'translate(-50%, -50%) scale('+ (i<=1 ? 1 : i) +')');
 		if(scrollPos>200 && !screenLinks.hasClass('hiddened')){
@@ -78,9 +84,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	// PARALLAX event on scroll trigger
 	var $parallax = $('#parallax');
 
+		parallaxFieldViewTop = $parallax.offset().top-$(window).height()
+		parallaxFieldViewBottom =  $parallax.offset().top+$parallax.height()
+		parallaxFieldView = parallaxFieldViewBottom - parallaxFieldViewTop
+
 	function scrollParallax(scrollPos){
-		if( scrollPos >=  $parallax.offset() && scrollPos <=  ($parallax.offset()+$parallax.height())){
-			console.log(true)
+		console.log()
+		if( scrollPos >= parallaxFieldViewTop && scrollPos <= parallaxFieldViewBottom){
+			$parallax.css('background-position', '50% ' + (-((scrollPos - parallaxFieldViewTop)-(parallaxFieldView/2))/2) + 'px')
 		}
 	}
 
@@ -98,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		if(scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
 		
 			headerMenu.addClass('sticked animated fadeInDownFast').css('animation-delay', '0')
+			scrollParallax(scrollPos);
 			return;
 		}
 
@@ -109,7 +121,6 @@ document.addEventListener("DOMContentLoaded", function() {
     	if(!mobile){
     		scrollMainScreen(scrollPos);
     		scrollMainTitle(scrollPos);
-    		scrollParallax(scrollPos);
     	}
 
 		headerMenu.removeClass('sticked animated fadeInDownFast')
@@ -257,6 +268,58 @@ document.addEventListener("DOMContentLoaded", function() {
 		$schemeButton.eq(ell-1).trigger('click')
 		console.log(ell)
 	})
+
+
+	if($('.left_scroll-container').length){
+
+
+        var scrolling = false,
+        	contentSections = $('.block-section'),
+            verticalNavigation = $('.left_scroll_pagin-wrap'),
+            navigationItems = verticalNavigation.find('.left_scroll-item');
+
+            $(window).on('scroll', checkScroll);
+
+            function checkScroll() {
+                if( !scrolling ) {
+                    scrolling = true;
+                    (!window.requestAnimationFrame) ? setTimeout(updateSections, 300) : window.requestAnimationFrame(updateSections);
+                }
+            }
+
+            verticalNavigation.on('click','.left_scroll-item',function(event){
+                event.preventDefault();
+                smoothScroll($(this));
+                verticalNavigation.removeClass('open');
+            });
+
+            function updateSections() {
+                var halfWindowHeight = $(window).height()/2,
+                    scrollTop = $(window).scrollTop();
+                contentSections.each(function(){
+                    var section = $(this),
+                        sectionId = section.attr('id'),
+                        count = section.data('count'),
+                        trg = section.data('target');
+                        navigationItem = navigationItems.filter("[data-target=" + trg + "]");
+                    ( (section.offset().top - halfWindowHeight < scrollTop ) && ( section.offset().top + section.outerHeight() - halfWindowHeight > scrollTop) )
+                        ? navigationItem.addClass('active')
+                        : navigationItem.removeClass('active');
+                });
+                scrolling = false;
+            }
+
+    function smoothScroll(target) {
+        var data = target.data('target');
+        var elem = $('.' + data);
+
+       $('body,html').animate(
+            {'scrollTop':elem.offset().top},
+            500
+        );
+    }
+
+}
 
 
 })

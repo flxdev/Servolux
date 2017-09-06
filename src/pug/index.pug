@@ -4,8 +4,8 @@ block title
 	title Index
 block config
 	- var main = true
+	- var chart = false
 block content
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js")
 	#main-screen-wrapper
 		#main-video-wrapper(data-src="/img/index/main-screen-video.mp4")
 			img(src="/img/index/video-poster.jpg", alt="").video-poster
@@ -37,7 +37,7 @@ block content
 			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInLeft")
-						h2 Наши бренды
+						p.h2 Наши бренды
 					.one-half.animateThis(data-anim="fadeInRight")
 						.text-wrap
 							p.annotation Продукция группы компаний «Серволюкс»  пользуется высоким спросом не только у белорусских потребителей — до 50% реализуется на экспортных рынках.
@@ -48,7 +48,7 @@ block content
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInLeft")
 						.text-wrap
-							h2 «Серволюкс» — группа компаний, состоящая из 15 предприятий-лидеров агропромышленного комплекса Беларуси
+							p.h2 «Серволюкс» — группа компаний, состоящая из 15 предприятий-лидеров агропромышленного комплекса Беларуси
 							p.sub Вертикальная интеграция — наше главное конкурентное преимущество на рынке. Мы горды единством наших подразделений и высоким уровнем организации взаимодействия между ними.
 							+button('Виды деятельности')
 					.one-half
@@ -161,33 +161,33 @@ block content
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
 						.text-wrap
-							h2 Крупнейший игрок агропромышленного комплекса Беларуси
+							p.h2 Крупнейший игрок агропромышленного комплекса Беларуси
 					.one-half.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
 						.text-wrap
 							p.annotation Компания является лидером рынка в сегменте птицеводства и стремительно наращивает мощности по производству комбикормов, постоянно расширяя ассортимент и рынки сбыта продукции.
 				.flex-block.row
 					.one-four.animateThis(data-anim="fadeInUp" style="animation-delay: 0.3s")
 						.count
-							h2 15
-							p Компаний в ГК Серволюкс
+							p.h2 15
+							p.count-sub Компаний в ГК Серволюкс
 					.one-four.animateThis(data-anim="fadeInUp" style="animation-delay: 0.4s")
 						.count
-							h2 12
-							p Известных брендов в ГК Серволюкс
+							p.h2 12
+							p.count-sub Известных брендов в ГК Серволюкс
 					.one-four.animateThis(data-anim="fadeInUp" style="animation-delay: 0.5s")
 						.count
-							h2 19
-							p Лет опыта на рынке сельского хозяйства и девелопмента
+							p.h2 19
+							p.count-sub Лет опыта на рынке сельского хозяйства и девелопмента
 					.one-four.animateThis(data-anim="fadeInUp" style="animation-delay: 0.6s")
 						.count
-							h2 8000
-							p Квалифицированных сотрудников
+							p.h2 8000
+							p.count-sub Квалифицированных сотрудников
 		.box#chart
 			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInLeft")
 						.text-wrap
-							h2 Динамично развивающийся игрок аграрного сектора
+							p.h2 Динамично развивающийся игрок аграрного сектора
 							a(href="#").download
 								svg(class="icon search-icon")
 									use(xlink:href="#pdf" xmlns:xlink="http://www.w3.org/1999/xlink")
@@ -221,7 +221,7 @@ block content
 										p.annotation 10 300 тонн
 		.box
 			.block#news
-				h2 Новости
+				p.h2 Новости
 				.flex-block
 					.news
 						a(href="#").news-item.big-news.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
