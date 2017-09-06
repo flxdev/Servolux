@@ -49,17 +49,17 @@ html
 	// overflow-x: hidden
 	+r(1150)
 		font-size: 15px
-	+r(768)
-		font-size: 14px
-	+r(348)
-		font-size: 13px
+	+r(992)
+		font-size: 16px
+	+r(480)
+		font-size: 18px
 body
 	background-attachment: fixed
 	+box
 	+font-smoothing
 	text-rendering: optimizeLegibility
 	font-family: $o
-	min-width: 320px
+	min-width: 480px
 	min-height: 100vh
 	-webkit-overflow-scrolling: touch
 	position: relative
@@ -140,11 +140,15 @@ p.annotation
 	+rem(font-size, 26px)
 	color: $text-annotation
 	+rem(line-height, 36px)
+	+r(992)
+		margin-bottom: 40px
 p.darker, a.darker
 	color: $text-darker
 p.sub
 	+ff('Roboto', 600, 16px)
 	+rem(line-height, 30px)
+	+r(992)
+		margin-bottom: 40px
 p.caption
 	+rem(font-size, 16px)
 	color: $text-light-gray
@@ -181,6 +185,88 @@ p.caption
 			margin: 0
 			padding: 0
 			+rem(margin-top, 50px)
+
+
+.animateThis
+	opacity: 0
+
+
+#main-content
+	background-color: $white
+
+.box
+	width: 100%
+	+rem(padding-left, $sidestep)
+	+rem(padding-right, $sidestep)
+	+r(492)
+		+rem(padding-left, $sidestep - 20px)
+		+rem(padding-right, $sidestep - 20px)
+	.block
+		+rem(max-width, 1400px)
+		margin: auto
+		+rem(padding-top, 65px)
+		+rem(padding-bottom, 110px)
+.brands-wrapper
+	margin-top: 60px
+	#brands
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		.brand
+			outline: 1px solid $lineColor
+			+rem(width, 200px)
+			+rem(height, 220px)
+			margin-left: -1px
+			z-index: 0
+			flex-grow: 1
+			position: relative
+			padding: 5px
+			margin-top: 1px
+			margin-left: 1px
+			&:before
+				display: block
+				position: absolute
+				content: ''
+				bottom: -1px
+				left: -1px
+				width: 100%
+				height: 0
+				border-left: 1px solid $active
+				border-right: 1px solid $active
+				border-top: 1px solid transparent
+				border-bottom: 1px solid transparent
+				transition: height 0.15s ease-in-out, border-top 0s 0s, border-bottom 0s 0.15s
+			.brand-anim-block
+				position: relative
+				width: 100%
+				bottom: 0
+			a
+				width: 100%
+				position: absolute
+				bottom: 0
+				left: 0
+				top: 0
+				right: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				+rem(height, 210px)
+				+rem(padding, 20px)
+				img
+					+rem(max-width, 150px)
+					+rem(max-height, 95px)
+					display: inline-block
+					vertical-align: middle
+
+			&:hover
+				z-index: 2
+				&:before
+					height: 100%
+					border-top: 1px solid $active
+					border-bottom: 1px solid $active
+					transition: height 0.15s ease-in-out, border-top 0s 0.15s, border-bottom 0s 0s
+			&:nth-of-type(odd)
+				animation-delay: 0.15s
 
 .text-wrap
 	+rem(max-width, 520px)
@@ -219,6 +305,8 @@ a.button-green
 	transition: border 0.2s ease-in, background-color 0.2s ease-in-out
 	overflow: hidden
 	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+	+r(992)
+		margin-top: 0
 	&:hover
 		border: 1px solid transparent
 		background-color: $active
@@ -735,11 +823,17 @@ main
 				transition: transform 0.6s ease-in-out
 				&.active
 					transform: scale(0.7)
-				+r(1024)
+				+r(992)
 					max-width: 100%
+					position: absolute
+					left: 0
+					right: 0
+					top: 0
+					bottom: 0
+					margin: auto
 					+rem(margin-top, 50px)
-				+r(492)
-					+rem(margin-top, 75px)
+				+r(480)
+					+rem(margin-top, 80px)
 			.title-sup
 				+ff('GothamPro', 800, 50px)
 				text-transform: uppercase
@@ -747,26 +841,26 @@ main
 				text-align: center
 				+rem(margin-bottom, 100px)
 				+rem(line-height, 0px)
-				+r(1024)
+				+r(992)
 					+rem(font-size, 25px)
 					+rem(margin-bottom, 55px)
-				+r(492)
-					+rem(font-size, 16px)
-					+rem(margin-bottom, 35px)
+				+r(480)
+					+rem(font-size, 24px)
+					+rem(margin-bottom, 50px)
 			.title-main
 				+ff('GothamPro', 800, 140px)
 				text-transform: uppercase
 				color: $white
 				text-align: center
 				+rem(line-height, 0px)
-				+r(1024)
+				+r(992)
 					+rem(font-size, 70px)
-				+r(492)
-					+rem(font-size, 42px)
+				+r(480)
+					+rem(font-size, 52px)
 		.screen-links-wrapper
 			display: flex
 			position: relative
-			+r(1024)
+			+r(992)
 				display: none!important
 			.screen-link
 				width: 33%
@@ -830,86 +924,6 @@ main
 							opacity: 1
 
 
-.animateThis
-	opacity: 0
-
-
-#main-content
-	background-color: $white
-
-.box
-	width: 100%
-	+rem(padding-left, $sidestep)
-	+rem(padding-right, $sidestep)
-	+r(492)
-		+rem(padding-left, $sidestep - 20px)
-		+rem(padding-right, $sidestep - 20px)
-	.block
-		+rem(max-width, 1400px)
-		margin: auto
-		+rem(padding-top, 100px)
-		+rem(padding-bottom, 100px)
-.brands-wrapper
-	margin-top: 60px
-	#brands
-		display: flex
-		justify-content: center
-		flex-wrap: wrap
-		.brand
-			outline: 1px solid $lineColor
-			+rem(width, 200px)
-			+rem(height, 220px)
-			margin-left: -1px
-			z-index: 0
-			flex-grow: 1
-			position: relative
-			padding: 5px
-			margin-top: 1px
-			margin-left: 1px
-			&:before
-				display: block
-				position: absolute
-				content: ''
-				bottom: -1px
-				left: -1px
-				width: 100%
-				height: 0
-				border-left: 1px solid $active
-				border-right: 1px solid $active
-				border-top: 1px solid transparent
-				border-bottom: 1px solid transparent
-				transition: height 0.15s ease-in-out, border-top 0s 0s, border-bottom 0s 0.15s
-			.brand-anim-block
-				position: relative
-				width: 100%
-				bottom: 0
-			a
-				width: 100%
-				position: absolute
-				bottom: 0
-				left: 0
-				top: 0
-				right: 0
-				display: flex
-				justify-content: center
-				align-items: center
-				+rem(height, 210px)
-				+rem(padding, 20px)
-				img
-					+rem(max-width, 150px)
-					+rem(max-height, 95px)
-					display: inline-block
-					vertical-align: middle
-
-			&:hover
-				z-index: 2
-				&:before
-					height: 100%
-					border-top: 1px solid $active
-					border-bottom: 1px solid $active
-					transition: height 0.15s ease-in-out, border-top 0s 0.15s, border-bottom 0s 0s
-			&:nth-of-type(odd)
-				animation-delay: 0.15s
 
 
 $slSize: 440px
@@ -1112,25 +1126,26 @@ $slSize: 440px
 					stroke: $white
 
 .download
-	+rem(margin-top, 50px)
-	+rem(margin-bottom, 30px)
+	+rem(margin-top, 30px)
+	+rem(margin-bottom, 45px)
 	display: block
 	svg
-		+rem(width, 38px)
-		+rem(height, 38px)
+		+rem(width, 30px)
+		+rem(height, 30px)
 		display: inline-block
 		vertical-align: top
-		+rem(margin-top, 10px)
+		+rem(margin-top, 5px)
 	.download-text
 		display: inline-block
-		+rem(margin-left, 10px)
+		+rem(margin-left, 15px)
 		vertical-align: top
 		.href
 			color: $green
 			font-weight: 600
-		p
+		.download-size
 			color: $text-light-gray
-			+rem(margin-top, 3px)
+			+rem(margin-top, 0px)
+			+rem(font-size, 16px)
 		&:hover
 			.href
 				color: $active
@@ -1180,10 +1195,14 @@ $slSize: 440px
 					color: #fff
 
 #chart
+	+rem(padding-top, 30px)
 	.flex-block
 		.one-half
 			+r(992)
 				+rem(padding-top, 50px)
+			&:first-of-type
+				+r(992)
+					+rem(padding-top, 0px)
 
 
 #index-chart
@@ -1289,21 +1308,15 @@ $slSize: 440px
 					transition: color 0.15s ease-in-out
 					overflow: hidden
 					text-overflow: ellipsis
-					display: -webkit-box
-					display: box
-					-webkit-box-orient: vertical
+					display: flex
 					box-orient: vertical
-					-webkit-line-clamp: 3
 					line-clamp: 3
 					+rem(max-height, 90px)
 				.text-news
 					overflow: hidden
 					text-overflow: ellipsis
-					display: -webkit-box
-					display: box
-					-webkit-box-orient: vertical
+					display: flex
 					box-orient: vertical
-					-webkit-line-clamp: 2
 					line-clamp: 2
 					+rem(line-height, 26px)
 					+rem(max-height, 52px)
@@ -1332,7 +1345,6 @@ $slSize: 440px
 					.href
 						+rem(font-size, 26px)
 						+rem(line-height, 36px)
-						-webkit-line-clamp: 3
 						line-clamp: 3
 						+rem(max-height, 108px)
 
