@@ -220,25 +220,30 @@ block content
 										p Молоко
 										p.annotation 10 300 тонн
 		.box
-			.block.block-news
+			.block#news
 				h2 Новости
 				.flex-block
-					.one-half.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-						a(href="#").news.big-news
-							img(src="/img/index/news.jpg", alt="")
-							.text-news
+					.news
+						a(href="#").news-item.big-news.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+							.img-news-wrapper
+								img(src="/img/index/news.jpg", alt="")
+							.text-news-wrapper
 								p.href «Серволюкс» получает престижную награду «Лучший экспортер 2016 года
-								p В Минске подведены итоги республиканского конкурса для предприятий различных форм собственности «Лучший экспортер 2016 года».
+								p.text-news В Минске подведены итоги республиканского конкурса для предприятий различных форм собственности «Лучший экспортер 2016 года». В Минске подведены итоги республиканского конкурса для предприятий различных форм собственности «Лучший экспортер 2016 года».
 								p.caption 21 мая 2017
-					.one-half
-						.news
-							a(href="#").text-news.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
-								p.href «Серволюкс» получает престижную награду «Лучший экспортер 2016 года
-								p В Минске подведены итоги республиканского конкурса для предприятий различных форм собственности «Лучший экспортер 2016 года».
+						a(href="#").news-item.text-news.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
+							.img-news-wrapper
+								img(src="/img/index/news.jpg", alt="")
+							.text-news-wrapper
+								p.href «Серволюкс» получает престижную награду «Лучший экспортер 2016 года» Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem itaque sunt similique harum iure illo laudantium ad quidem fugiat necessitatibus, iusto inventore quas quisquam neque labore eaque dolores molestias repudiandae?
+								p.text-news В Минске подведены итоги республиканского конкурса для предприятий различных форм собственности «Лучший экспортер 2016 года».
 								p.caption 21 мая 2017
-							a(href="#").text-news.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
+						a(href="#").news-item.text-news.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
+							.img-news-wrapper
+								img(src="/img/index/news.jpg", alt="")
+							.text-news-wrapper
 								p.href «Серволюкс» получает престижную награду «Лучший экспортер 2016 года
-								p В Минске подведены итоги республиканского конкурса для предприятий различных форм собственности «Лучший экспортер 2016 года».
+								p.text-news В Минске подведены итоги республиканского конкурса для предприятий различных форм собственности «Лучший экспортер 2016 года».
 								p.caption 21 мая 2017
 						+button('Все новости')
 
