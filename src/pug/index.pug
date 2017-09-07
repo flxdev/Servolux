@@ -189,13 +189,7 @@ block content
 					.one-half.animateThis(data-anim="fadeInLeft")
 						.text-wrap
 							p.h2 Динамично развивающийся игрок аграрного сектора
-							a(href="#").download
-								svg(class="icon search-icon")
-									use(xlink:href="#pdf" xmlns:xlink="http://www.w3.org/1999/xlink")
-								.download-text
-									p.href Скачать презентацию
-									.download-size
-										p.download-size .PDF ~24 Мб
+							+download_pdf('Скачать презентацию')
 							+button('Больше информации')
 					.one-half
 						.carousel-buttons.animateThis(data-anim="fadeInRight")

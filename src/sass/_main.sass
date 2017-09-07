@@ -125,9 +125,12 @@ h2, .h2
 	margin-bottom: 20px
 	+r(400)
 		+rem(font-size, 30px)
-h3
-	+ff('Roboto', 600, 26px)
-	color: $green
+h3, .h3
+	+ff('Roboto', 400, 26px)
+	color: $text-annotation
+	+rem(line-height, 36px)
+	+rem(padding-top, 10px)
+	+rem(padding-bottom, 10px)
 h4
 	+ff('Roboto', 700, 18px)
 	color: $green
@@ -148,6 +151,8 @@ p.darker, a.darker
 p.sub
 	+ff('Roboto', 600, 16px)
 	+rem(line-height, 30px)
+	+rem(padding-top, 10px)
+	+rem(padding-bottom, 10px)
 	+r(992)
 		margin-bottom: 40px
 p.caption
@@ -186,6 +191,9 @@ p.caption
 			margin: 0
 			padding: 0
 			+rem(margin-top, 50px)
+		+r(400)
+			width: 100%
+			max-width: 250px
 
 
 .animateThis
@@ -1603,11 +1611,26 @@ $slSize: 440px
 			margin-top: 50px
 
 
-#content-first-screen
-	height: 500px
-#fullpage-wrapper
-	position: relative
-	background-color: #FFF
-	.fullpage-section
-		height: 100vh
-		background-color: #FFF
+.advantages
+	justify-content: center
+	align-items: center
+	.one-four
+		position: relative
+	.advantage-wrapper
+		+rem(padding-right, 70px)
+		+rem(margin-top, 50px)
+		width: 100%
+		+r(992)
+			margin: auto
+		+r(550)
+			+rem(padding-right, 20px)
+			+rem(padding-left, 20px)
+		+r(400)
+			+rem(padding-right, 0px)
+			+rem(padding-left, 0px)
+		.advantage-img
+			+rem(margin-bottom, 20px)
+			img
+				+rem(max-height, 70px)
+		.advantage-text
+			max-width: 100%
