@@ -346,7 +346,7 @@ p.caption {
   .flex-block > * {
     position: relative; }
   .flex-block:nth-of-type(2) {
-    margin-top: 70px; }
+    margin-top: 50px; }
   .flex-block .one-half {
     width: 50%; }
   .flex-block .one-four {
@@ -2201,7 +2201,8 @@ main {
     width: 50%;
     margin: 0;
     padding: 0;
-    margin-top: 3.125rem; }
+    margin-top: 1.875rem;
+    padding: 0.625rem; }
 
   .brands-wrapper #brands .brand {
     max-width: 16.25rem;
@@ -2458,7 +2459,7 @@ main {
   h2, .h2 {
     font-size: 1.875rem; }
 
-  .flex-block {
+  .flex-block:not(.row) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -2466,8 +2467,14 @@ main {
     flex-direction: column; }
 
   .flex-block .one-four {
-    width: 100%;
+    width: 50%;
     max-width: 250px; }
+
+  .count .h2 {
+    font-size: 3.75rem; }
+
+  .count .count-sub {
+    font-size: 1.0625rem; }
 
   .scheme-wrapper {
     margin-top: 1.25rem; }

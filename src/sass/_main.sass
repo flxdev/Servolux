@@ -169,13 +169,14 @@ p.caption
 	&>*
 		position: relative
 	&:nth-of-type(2)
-		margin-top: 70px
+		margin-top: 50px
 	+r(992)
 		&:not(.row)
 			flex-direction: column
 			align-items: center
 	+r(400)
-		flex-direction: column
+		&:not(.row)
+			flex-direction: column
 	.one-half
 		width: 50%
 		+r(992)
@@ -190,9 +191,10 @@ p.caption
 			width: 50%
 			margin: 0
 			padding: 0
-			+rem(margin-top, 50px)
+			+rem(margin-top, 30px)
+			+rem(padding, 10px)
 		+r(400)
-			width: 100%
+			width: 50%
 			max-width: 250px
 
 
@@ -310,11 +312,15 @@ p.caption
 		+rem(font-size, 70px)
 		font-weight: 500
 		color: $white
+		+r(400)
+			+rem(font-size, 60px)
 	.count-sub
 		font-weight: 600
 		opacity: 0.5
 		+rem(line-height, 28px)
 		+rem(margin-top, 20px)
+		+r(400)
+			+rem(font-size, 17px)
 
 
 #parallax
