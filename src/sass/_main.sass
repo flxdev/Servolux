@@ -89,7 +89,7 @@ body
 	display: none !important
 
 .href
-	transition: color 0.1s ease-in-out
+	transition: color 0.1s cubic-bezier(.445,.05,.55,.95)
 
 .svg-green
 	fill: $white
@@ -110,7 +110,7 @@ a
 	+ff('Roboto', 700, 18px)
 	color: $green
 	text-decoration: none
-	transition: color 0.1s ease-in-out
+	transition: color 0.1s cubic-bezier(.445,.05,.55,.95)
 	+rem(line-height, 24px)
 	&:active, &:hover
 		color: $active
@@ -272,7 +272,7 @@ p.caption
 				border-right: 1px solid $active
 				border-top: 1px solid transparent
 				border-bottom: 1px solid transparent
-				transition: height 0.15s ease-in-out, border-top 0s 0s, border-bottom 0s 0.15s
+				transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0s, border-bottom 0s 0.15s
 			.brand-anim-block
 				position: relative
 				width: 100%
@@ -301,7 +301,7 @@ p.caption
 					height: 100%
 					border-top: 1px solid $active
 					border-bottom: 1px solid $active
-					transition: height 0.15s ease-in-out, border-top 0s 0.15s, border-bottom 0s 0s
+					transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0.15s, border-bottom 0s 0s
 			&:nth-of-type(odd)
 				animation-delay: 0.15s
 
@@ -344,7 +344,7 @@ a.button-green
 	background-color: transparent
 	border: 1px solid $text-light-gray
 	+rem(border-radius, 1000px)
-	transition: border 0.2s ease-in, background-color 0.2s ease-in-out
+	transition: border 0.2s ease-in, background-color 0.2s cubic-bezier(.445,.05,.55,.95)
 	overflow: hidden
 	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 	+r(992)
@@ -368,7 +368,7 @@ a.button-green
 		+rem(padding-left, 20px)
 		+rem(border-radius, 50px)
 		+rem(padding-bottom, 11px)
-		transition: transform 0.3s ease-in-out
+		transition: transform 0.3s cubic-bezier(.445,.05,.55,.95)
 	p
 		+rem(line-height, 16px)
 		+rem(font-size, 16px)
@@ -376,7 +376,7 @@ a.button-green
 		word-break: keep-all
 		white-space: nowrap
 		color: $green
-		transition: color 0.2s ease-in-out
+		transition: color 0.2s cubic-bezier(.445,.05,.55,.95)
 	.button-green__text-block__circle
 		display: block
 		position: absolute
@@ -390,7 +390,7 @@ a.button-green
 			fill-rule: evenodd
 			clip-rule:e venodd
 			fill: $green
-			transition: fill 0.2s ease-in-out
+			transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
 		.button-fill-arrow
 			fill-rule: evenodd
 			clip-rule: evenodd
@@ -399,7 +399,7 @@ a.button-green
 			stroke-width: 1.8
 			stroke-miterlimit: 10
 			position: absolute
-			transition: transform 0.2s ease-in-out
+			transition: transform 0.2s cubic-bezier(.445,.05,.55,.95)
 			&.blue
 				transform: translatex(-40px)
 				stroke: $active
@@ -419,7 +419,7 @@ a.button-green
 // 	background-color: transparent
 // 	border: 1px solid $text-light-gray
 // 	+rem(border-radius, 1000px)
-// 	transition: border 0.2s ease-in, background-color 0.2s ease-in-out
+// 	transition: border 0.2s ease-in, background-color 0.2s cubic-bezier(.445,.05,.55,.95)
 // 	width: 50%
 // 	overflow: hidden
 // 	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
@@ -437,7 +437,7 @@ a.button-green
 // 		+rem(border-radius, 50px)
 // 		+rem(padding-bottom, 11px)
 // 		transform: translatex(-100%)
-// 		transition: transform 0.3s ease-in-out
+// 		transition: transform 0.3s cubic-bezier(.445,.05,.55,.95)
 // 		&:first-of-type
 // 			p
 // 				color: $white
@@ -537,10 +537,10 @@ a.button-green
 			stroke-linecap: round
 			stroke-linejoin: round
 			stroke-miterlimit: 10
-			transition: stroke 0.1s ease-in-out
+			transition: stroke 0.1s cubic-bezier(.445,.05,.55,.95)
 		.search-stick
 			fill: #484F42
-			transition: fill 0.1s ease-in-out
+			transition: fill 0.1s cubic-bezier(.445,.05,.55,.95)
 
 
 main
@@ -617,6 +617,7 @@ main
 					+rem(height, 37px)
 					+rem(padding-left, 16px)
 					+rem(padding-right, 16px)
+					+rem(margin-right, 7px)
 					border-radius: 5px
 					position: relative
 					z-index: 2
@@ -631,7 +632,7 @@ main
 						background-color: $active
 						opacity: 0
 						transform: scale(1.05)
-						transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out
+						transition: transform 0.15s cubic-bezier(.445,.05,.55,.95), opacity 0.15s cubic-bezier(.445,.05,.55,.95)
 						border-radius: 5px
 						z-index: -1
 					&:hover, &:focus
@@ -826,6 +827,16 @@ main
 		background-size: cover
 		background-repeat: no-repeat
 		+rem(height, 420px)
+		#main-first-screen-fading-wrapper
+			.firstScreenFading
+				position: absolute
+				top: 0
+				left: 50%
+				min-width: 100%
+				right: 0
+				bottom: 0
+				margin: auto
+				transform: translate(-50%, -50%) scale(1.4)
 		#main-screen
 			margin: auto
 			+rem(max-width, 1440px)
@@ -862,7 +873,7 @@ main
 							&:hover
 								color: $active
 								opacity: 1
-	#main-video-wrapper
+	#main-first-screen-fading-wrapper
 		position: fixed
 		width: 100%
 		will-change: transform
@@ -887,7 +898,7 @@ main
 			transform: translate(-50%, -50%) scale(1.4)
 			opacity: 1
 			will-change: transform
-		img
+		.video-poster
 			min-width: 100%
 			min-height: 100vh
 			position: absolute
@@ -897,7 +908,7 @@ main
 		height: 100%
 		overflow: hidden
 		position: relative
-		+r(1024)
+		+r(992)
 			height: auto
 			+rem(min-height, 500px)
 		+r(492)
@@ -909,6 +920,7 @@ main
 			background-color: #fff
 			top: 0
 			right: 0
+			opacity: 0.2
 		.main-screen-title
 			position: absolute
 			top: 0
@@ -918,7 +930,7 @@ main
 			+rem(height, 200px)
 			#title-wrapper
 				transform: scale(1)
-				transition: transform 0.6s ease-in-out
+				//transition: transform 0.6s cubic-bezier(.445,.05,.55,.95)
 				&.active
 					transform: scale(0.7)
 				+r(992)
@@ -1082,7 +1094,7 @@ $slSize: 440px
 				border-radius: 50%
 				overflow: hidden
 				z-index: 1
-				transition: transform .4s ease-in-out, opacity .4s
+				transition: transform .4s cubic-bezier(.445,.05,.55,.95), opacity .4s
 				+r(1024)
 					+rem(width, $slSize - 70px)
 					+rem(height, $slSize - 70px)
@@ -1160,16 +1172,16 @@ $slSize: 440px
 			margin: auto
 			z-index: 2
 			border-radius: 50%
-			transition: transform 0.2s ease-in-out
+			transition: transform 0.2s cubic-bezier(.445,.05,.55,.95)
 			svg
 				.scheme-circle
 					fill-rule:evenodd
 					clip-rule:evenodd
 					fill:#FFFFFF
-					transition: fill 0.2s ease-in-out
+					transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
 				.scheme-refresh-arrow
 					fill:#0C0C0C
-					transition: fill 0.2s ease-in-out
+					transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
 			&:hover
 				transform: rotate(360deg)
 				svg
@@ -1194,16 +1206,16 @@ $slSize: 440px
 		+rem(height, $slSize + 20px)
 	.scheme-menu
 		transform-origin: 50% 50%
-		transition: transform 0.5s ease-in-out
+		transition: transform 0.5s cubic-bezier(.445,.05,.55,.95)
 		g.icon
 			transform-origin: 50% 50%
-			transition: transform 0.5s ease-in-out
+			transition: transform 0.5s cubic-bezier(.445,.05,.55,.95)
 	.scheme-part
 		fill: $white
-		transition: fill 0.2s ease-in-out
+		transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
 	.scheme-part-green
 		fill: $green
-		transition: fill 0.1s ease-in-out
+		transition: fill 0.1s cubic-bezier(.445,.05,.55,.95)
 	.scheme-part-icon
 		fill: $text-light-gray
 		&.two
@@ -1304,7 +1316,7 @@ $slSize: 440px
 			cursor: pointer
 			border: 1px solid transparent
 			margin-left: -1px
-			transition: border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out
+			transition: border 0.15s cubic-bezier(.445,.05,.55,.95), color 0.15s cubic-bezier(.445,.05,.55,.95), background-color 0.15s cubic-bezier(.445,.05,.55,.95)
 			p
 				color: $text-darker
 				font-weight: 400
@@ -1371,7 +1383,7 @@ $slSize: 440px
 				height: 100%
 				background-color: $green
 				z-index: -1
-				transition: background-color 0.15s ease-in-out
+				transition: background-color 0.15s cubic-bezier(.445,.05,.55,.95)
 				+r(992)
 					width: 100%
 			p
@@ -1441,7 +1453,7 @@ $slSize: 440px
 					+rem(line-height, 30px)
 					font-weight: 600
 					color: $green
-					transition: color 0.15s ease-in-out
+					transition: color 0.15s cubic-bezier(.445,.05,.55,.95)
 					overflow: hidden
 					text-overflow: ellipsis
 					display: flex
@@ -1525,7 +1537,7 @@ $slSize: 440px
 	+rem(font-size, 16px)
 	+rem(padding-top, 3px)
 	color: $white
-	transition: background-color 0.15s ease-in-out
+	transition: background-color 0.15s cubic-bezier(.445,.05,.55,.95)
 	&:focus, &:hover
 		background-color: $active
 
@@ -1547,6 +1559,7 @@ $slSize: 440px
 #footer
 	background-color: $white
 	border-top: 1px solid $lineColor
+	padding-top: 30px
 	+r(992)
 		width: 100%
 		.one-four
@@ -1593,7 +1606,7 @@ $slSize: 440px
 		p.office-title
 			+rem(font-size, 18px)
 			+rem(line-height, 30px)
-			+rem(margin-bottom, 20px)
+			+rem(margin-bottom, 10px)
 			font-weight: 700
 			color: $text-h
 		a.darker
@@ -1722,3 +1735,124 @@ $slSize: 440px
 		stroke: $green
 	.mg-area1-color
 		fill: $green
+
+
+
+$galleryBigHeight: 590px
+
+#gallery
+	background-color: #f5f5f5
+	.block
+	.gallery-block
+		margin-top: 75px
+		position: relative
+		&:after
+			position: relative
+			display: block
+			clear: both
+			content: ''
+		.gallery-item
+			+rem(height, $galleryBigHeight)
+			+rem(padding, 5px)
+			display: inline-block
+			position: relative
+			overflow: hidden
+			&-inner
+				background-position: 50% 50%
+				background-size: cover
+				background-repeat: no-repeat
+				display: block
+				width: 100%
+				height: 100%
+			&.gallery-big
+				width: 50%
+				.gallery-item-inner
+					.gallery-item-text-wrapper
+						.gallery-item-title
+							+rem(font-size, 26px)
+							+rem(margin-bottom, 5px)
+			&.gallery-medium
+				+rem(height, $galleryBigHeight/2)
+				width: 50%
+			&.gallery-small
+				+rem(height, $galleryBigHeight/2)
+				width: 25%
+			&.gallery-left
+				float: left
+			&.gallery-right
+				float: right
+			.gallery-item-inner
+				position: relative
+				.gallery-item-img
+					height: 100%
+					width: 100%
+					overflow: hidden
+					.gallery-item-img-inner
+						background-position: 50% 50%
+						background-size: cover
+						background-repeat: no-repeat
+						width: 100%
+						height: 100%
+						transform: scale(1)
+						transition: transform 1s cubic-bezier(.445,.05,.55,.95)
+				.gallery-item-text-wrapper
+					position: absolute
+					+rem(bottom, 30px)
+					+rem(left, 30px)
+					z-index: 2
+					transition: bottom 0.2s
+					.gallery-item-title
+						+rem(font-size, 18px)
+						+rem(line-height, 26px)
+						color: #fff
+						font-weight: 600
+					.gallery-item-subtitle
+						+rem(font-size, 16px)
+						+rem(line-height, 26px)
+						color: #fff
+						font-weight: 400
+				&:after
+					position: absolute
+					display: block
+					content: ''
+					width: 100%
+					+rem(height, 150px)
+					background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0))
+					bottom: 0
+					transition: height 0.5s cubic-bezier(.445,.05,.55,.95)
+					z-index: 0
+				&:hover
+					.gallery-item-img
+						.gallery-item-img-inner
+							transform: scale(1.1)
+					.gallery-item-text-wrapper
+						+rem(bottom, 50px)
+					&:after
+						+rem(height, 300px)
+
+
+#company-map
+	position: relative
+	.block
+		&>.flex-block
+			.one-half:first-of-type
+				padding-right: 50px
+	.map-advantage-wrapper
+		+rem(margin-top, 10px)
+		.map-advantage
+			+rem(padding-right, 50px)
+			+rem(margin-top, 15px)
+			.map-advantage-count
+				.map-green-count
+					+ff('GothamPro', 500, 30px)
+					+rem(line-height, 32px)
+					color: $green
+					margin-bottom: 0
+	#map
+		width: 50%
+		height: 100%
+		position: absolute
+		right: 0
+		top: 0
+
+

@@ -242,8 +242,8 @@ body {
   display: none !important; }
 
 .href {
-  -webkit-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out; }
+  -webkit-transition: color 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: color 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
 
 .svg-green {
   fill: #fff; }
@@ -264,8 +264,8 @@ a {
   font-style: normal;
   color: #56b622;
   text-decoration: none;
-  -webkit-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out;
+  -webkit-transition: color 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: color 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   line-height: 1.5rem; }
   a:active, a:hover {
     color: #0056b8; }
@@ -418,8 +418,8 @@ p.caption {
         border-right: 1px solid #0056b8;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
-        -webkit-transition: height 0.15s ease-in-out, border-top 0s 0s, border-bottom 0s 0.15s;
-        transition: height 0.15s ease-in-out, border-top 0s 0s, border-bottom 0s 0.15s; }
+        -webkit-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.15s;
+        transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.15s; }
       .brands-wrapper #brands .brand .brand-anim-block {
         position: relative;
         width: 100%;
@@ -456,8 +456,8 @@ p.caption {
           height: 100%;
           border-top: 1px solid #0056b8;
           border-bottom: 1px solid #0056b8;
-          -webkit-transition: height 0.15s ease-in-out, border-top 0s 0.15s, border-bottom 0s 0s;
-          transition: height 0.15s ease-in-out, border-top 0s 0.15s, border-bottom 0s 0s; }
+          -webkit-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0.15s, border-bottom 0s 0s;
+          transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0.15s, border-bottom 0s 0s; }
       .brands-wrapper #brands .brand:nth-of-type(odd) {
         -webkit-animation-delay: 0.15s;
         animation-delay: 0.15s; }
@@ -499,8 +499,8 @@ a.button-green {
   background-color: transparent;
   border: 1px solid #bac0b7;
   border-radius: 62.5rem;
-  -webkit-transition: border 0.2s ease-in, background-color 0.2s ease-in-out;
-  transition: border 0.2s ease-in, background-color 0.2s ease-in-out;
+  -webkit-transition: border 0.2s ease-in, background-color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: border 0.2s ease-in, background-color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   overflow: hidden;
   -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); }
   a.button-green:hover {
@@ -525,10 +525,10 @@ a.button-green {
     padding-left: 1.25rem;
     border-radius: 3.125rem;
     padding-bottom: 0.6875rem;
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: -webkit-transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   a.button-green p {
     line-height: 1rem;
     font-size: 1rem;
@@ -536,8 +536,8 @@ a.button-green {
     word-break: keep-all;
     white-space: nowrap;
     color: #56b622;
-    -webkit-transition: color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out; }
+    -webkit-transition: color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   a.button-green .button-green__text-block__circle {
     display: block;
     position: absolute;
@@ -550,8 +550,8 @@ a.button-green {
     a.button-green .button-green__text-block__circle .button-fill-round {
       fill-rule: evenodd;
       fill: #56b622;
-      -webkit-transition: fill 0.2s ease-in-out;
-      transition: fill 0.2s ease-in-out; }
+      -webkit-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
     a.button-green .button-green__text-block__circle .button-fill-arrow {
       fill-rule: evenodd;
       clip-rule: evenodd;
@@ -560,10 +560,10 @@ a.button-green {
       stroke-width: 1.8;
       stroke-miterlimit: 10;
       position: absolute;
-      -webkit-transition: -webkit-transform 0.2s ease-in-out;
-      transition: -webkit-transform 0.2s ease-in-out;
-      transition: transform 0.2s ease-in-out;
-      transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+      -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       a.button-green .button-green__text-block__circle .button-fill-arrow.blue {
         -webkit-transform: translatex(-40px);
         -ms-transform: translatex(-40px);
@@ -636,12 +636,12 @@ a.button-green {
       stroke-linecap: round;
       stroke-linejoin: round;
       stroke-miterlimit: 10;
-      -webkit-transition: stroke 0.1s ease-in-out;
-      transition: stroke 0.1s ease-in-out; }
+      -webkit-transition: stroke 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: stroke 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
     .search .search-icon .search-stick {
       fill: #484F42;
-      -webkit-transition: fill 0.1s ease-in-out;
-      transition: fill 0.1s ease-in-out; }
+      -webkit-transition: fill 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: fill 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
 
 main {
   width: 100%;
@@ -725,6 +725,7 @@ main {
           height: 2.3125rem;
           padding-left: 1rem;
           padding-right: 1rem;
+          margin-right: 0.4375rem;
           border-radius: 5px;
           position: relative;
           z-index: 2; }
@@ -741,10 +742,10 @@ main {
             -webkit-transform: scale(1.05);
             -ms-transform: scale(1.05);
             transform: scale(1.05);
-            -webkit-transition: opacity 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
-            transition: opacity 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
-            transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
-            transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+            -webkit-transition: opacity 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: opacity 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: transform 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: transform 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
             border-radius: 5px;
             z-index: -1; }
           #header-mainwrap .boxed .header-menu nav .nav-href:hover:after, #header-mainwrap .boxed .header-menu nav .nav-href:focus:after {
@@ -943,6 +944,17 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     height: 26.25rem; }
+    #main-screen-wrapper.advancedPage #main-first-screen-fading-wrapper .firstScreenFading {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      min-width: 100%;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      -webkit-transform: translate(-50%, -50%) scale(1.4);
+      -ms-transform: translate(-50%, -50%) scale(1.4);
+      transform: translate(-50%, -50%) scale(1.4); }
     #main-screen-wrapper.advancedPage #main-screen {
       margin: auto;
       max-width: 90rem;
@@ -978,19 +990,19 @@ main {
           #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper .bread a:hover {
             color: #0056b8;
             opacity: 1; }
-  #main-screen-wrapper #main-video-wrapper {
+  #main-screen-wrapper #main-first-screen-fading-wrapper {
     position: fixed;
     width: 100%;
     will-change: transform;
     height: 100vh;
     z-index: -1; }
-    #main-screen-wrapper #main-video-wrapper .filter {
+    #main-screen-wrapper #main-first-screen-fading-wrapper .filter {
       position: absolute;
       width: 100%;
       height: 100vh;
       background-color: #2e6113;
       opacity: 0.3; }
-    #main-screen-wrapper #main-video-wrapper video {
+    #main-screen-wrapper #main-first-screen-fading-wrapper video {
       min-width: 100%;
       min-height: 100vh;
       position: absolute;
@@ -1005,7 +1017,7 @@ main {
       transform: translate(-50%, -50%) scale(1.4);
       opacity: 1;
       will-change: transform; }
-    #main-screen-wrapper #main-video-wrapper img {
+    #main-screen-wrapper #main-first-screen-fading-wrapper .video-poster {
       min-width: 100%;
       min-height: 100vh;
       position: absolute;
@@ -1026,7 +1038,8 @@ main {
       width: 1px;
       background-color: #fff;
       top: 0;
-      right: 0; }
+      right: 0;
+      opacity: 0.2; }
     #main-screen-wrapper #main-screen .main-screen-title {
       position: absolute;
       top: 0;
@@ -1037,11 +1050,7 @@ main {
       #main-screen-wrapper #main-screen .main-screen-title #title-wrapper {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
-        transform: scale(1);
-        -webkit-transition: -webkit-transform 0.6s ease-in-out;
-        transition: -webkit-transform 0.6s ease-in-out;
-        transition: transform 0.6s ease-in-out;
-        transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out; }
+        transform: scale(1); }
         #main-screen-wrapper #main-screen .main-screen-title #title-wrapper.active {
           -webkit-transform: scale(0.7);
           -ms-transform: scale(0.7);
@@ -1188,10 +1197,10 @@ main {
         border-radius: 50%;
         overflow: hidden;
         z-index: 1;
-        -webkit-transition: opacity .4s, -webkit-transform .4s ease-in-out;
-        transition: opacity .4s, -webkit-transform .4s ease-in-out;
-        transition: transform .4s ease-in-out, opacity .4s;
-        transition: transform .4s ease-in-out, opacity .4s, -webkit-transform .4s ease-in-out; }
+        -webkit-transition: opacity 0.4s, -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: opacity 0.4s, -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 0.4s;
+        transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 0.4s, -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
         .scheme-wrapper .scheme-slider-wrapper #scheme-slider .scheme-slider__slide-inner {
           position: relative;
           width: 100%;
@@ -1258,18 +1267,18 @@ main {
       margin: auto;
       z-index: 2;
       border-radius: 50%;
-      -webkit-transition: -webkit-transform 0.2s ease-in-out;
-      transition: -webkit-transform 0.2s ease-in-out;
-      transition: transform 0.2s ease-in-out;
-      transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+      -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       .scheme-wrapper .scheme-slider-wrapper .scheme-slider__update svg .scheme-circle {
         fill: #FFFFFF;
-        -webkit-transition: fill 0.2s ease-in-out;
-        transition: fill 0.2s ease-in-out; }
+        -webkit-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       .scheme-wrapper .scheme-slider-wrapper .scheme-slider__update svg .scheme-refresh-arrow {
         fill: #0C0C0C;
-        -webkit-transition: fill 0.2s ease-in-out;
-        transition: fill 0.2s ease-in-out; }
+        -webkit-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       .scheme-wrapper .scheme-slider-wrapper .scheme-slider__update:hover {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
@@ -1287,26 +1296,26 @@ main {
     -webkit-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    transition: -webkit-transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
     #scheme .scheme-menu g.icon {
       -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
-      -webkit-transition: -webkit-transform 0.5s ease-in-out;
-      transition: -webkit-transform 0.5s ease-in-out;
-      transition: transform 0.5s ease-in-out;
-      transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+      -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   #scheme .scheme-part {
     fill: #fff;
-    -webkit-transition: fill 0.2s ease-in-out;
-    transition: fill 0.2s ease-in-out; }
+    -webkit-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   #scheme .scheme-part-green {
     fill: #56b622;
-    -webkit-transition: fill 0.1s ease-in-out;
-    transition: fill 0.1s ease-in-out; }
+    -webkit-transition: fill 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: fill 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   #scheme .scheme-part-icon {
     fill: #bac0b7; }
     #scheme .scheme-part-icon.two {
@@ -1395,8 +1404,8 @@ main {
       cursor: pointer;
       border: 1px solid transparent;
       margin-left: -1px;
-      -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-      transition: border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out; }
+      -webkit-transition: border 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: border 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       .carousel-buttons .carousel-buttons-wrap .button p {
         color: #131313;
         font-weight: 400;
@@ -1460,8 +1469,8 @@ main {
         height: 100%;
         background-color: #56b622;
         z-index: -1;
-        -webkit-transition: background-color 0.15s ease-in-out;
-        transition: background-color 0.15s ease-in-out; }
+        -webkit-transition: background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       #index-chart .chart-wrapper .chart-bar p {
         position: absolute;
         top: 1.625rem;
@@ -1517,8 +1526,8 @@ main {
         line-height: 1.875rem;
         font-weight: 600;
         color: #56b622;
-        -webkit-transition: color 0.15s ease-in-out;
-        transition: color 0.15s ease-in-out;
+        -webkit-transition: color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -1588,8 +1597,8 @@ main {
   font-size: 1rem;
   padding-top: 0.1875rem;
   color: #fff;
-  -webkit-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out; }
+  -webkit-transition: background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   .callback-button:focus, .callback-button:hover {
     background-color: #0056b8; }
 
@@ -1608,7 +1617,8 @@ main {
 
 #footer {
   background-color: #fff;
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #ccc;
+  padding-top: 30px; }
   #footer .callback-wrap {
     margin-top: 0; }
   #footer p.caption {
@@ -1643,7 +1653,7 @@ main {
     #footer .footer-office-wrapper p.office-title {
       font-size: 1.125rem;
       line-height: 1.875rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.625rem;
       font-weight: 700;
       color: #484f42; }
     #footer .footer-office-wrapper a.darker {
@@ -1763,13 +1773,133 @@ main {
   #company-chart .mg-area1-color {
     fill: #56b622; }
 
+#gallery {
+  background-color: #f5f5f5; }
+  #gallery .gallery-block {
+    margin-top: 75px;
+    position: relative; }
+    #gallery .gallery-block:after {
+      position: relative;
+      display: block;
+      clear: both;
+      content: ''; }
+    #gallery .gallery-block .gallery-item {
+      height: 36.875rem;
+      padding: 0.3125rem;
+      display: inline-block;
+      position: relative;
+      overflow: hidden; }
+      #gallery .gallery-block .gallery-item-inner {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        width: 100%;
+        height: 100%; }
+      #gallery .gallery-block .gallery-item.gallery-big {
+        width: 50%; }
+        #gallery .gallery-block .gallery-item.gallery-big .gallery-item-inner .gallery-item-text-wrapper .gallery-item-title {
+          font-size: 1.625rem;
+          margin-bottom: 0.3125rem; }
+      #gallery .gallery-block .gallery-item.gallery-medium {
+        height: 18.4375rem;
+        width: 50%; }
+      #gallery .gallery-block .gallery-item.gallery-small {
+        height: 18.4375rem;
+        width: 25%; }
+      #gallery .gallery-block .gallery-item.gallery-left {
+        float: left; }
+      #gallery .gallery-block .gallery-item.gallery-right {
+        float: right; }
+      #gallery .gallery-block .gallery-item .gallery-item-inner {
+        position: relative; }
+        #gallery .gallery-block .gallery-item .gallery-item-inner .gallery-item-img {
+          height: 100%;
+          width: 100%;
+          overflow: hidden; }
+          #gallery .gallery-block .gallery-item .gallery-item-inner .gallery-item-img .gallery-item-img-inner {
+            background-position: 50% 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+        #gallery .gallery-block .gallery-item .gallery-item-inner .gallery-item-text-wrapper {
+          position: absolute;
+          bottom: 1.875rem;
+          left: 1.875rem;
+          z-index: 2;
+          -webkit-transition: bottom 0.2s;
+          transition: bottom 0.2s; }
+          #gallery .gallery-block .gallery-item .gallery-item-inner .gallery-item-text-wrapper .gallery-item-title {
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+            color: #fff;
+            font-weight: 600; }
+          #gallery .gallery-block .gallery-item .gallery-item-inner .gallery-item-text-wrapper .gallery-item-subtitle {
+            font-size: 1rem;
+            line-height: 1.625rem;
+            color: #fff;
+            font-weight: 400; }
+        #gallery .gallery-block .gallery-item .gallery-item-inner:after {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 100%;
+          height: 9.375rem;
+          background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(transparent));
+          background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.3), transparent);
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+          bottom: 0;
+          -webkit-transition: height 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          transition: height 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          z-index: 0; }
+        #gallery .gallery-block .gallery-item .gallery-item-inner:hover .gallery-item-img .gallery-item-img-inner {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1); }
+        #gallery .gallery-block .gallery-item .gallery-item-inner:hover .gallery-item-text-wrapper {
+          bottom: 3.125rem; }
+        #gallery .gallery-block .gallery-item .gallery-item-inner:hover:after {
+          height: 18.75rem; }
+
+#company-map {
+  position: relative; }
+  #company-map .block > .flex-block .one-half:first-of-type {
+    padding-right: 50px; }
+  #company-map .map-advantage-wrapper {
+    margin-top: 0.625rem; }
+    #company-map .map-advantage-wrapper .map-advantage {
+      padding-right: 3.125rem;
+      margin-top: 0.9375rem; }
+      #company-map .map-advantage-wrapper .map-advantage .map-advantage-count .map-green-count {
+        font-family: "GothamPro";
+        font-weight: 500;
+        font-size: 1.875rem;
+        font-style: normal;
+        line-height: 2rem;
+        color: #56b622;
+        margin-bottom: 0; }
+  #company-map #map {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
   animation: fadeInDown 1s ease-out 0.2s both; }
 
 .animated#header-mainwrap {
-  -webkit-animation: fadeInDownMenu 1s ease-out 0.4s;
-  animation: fadeInDownMenu 1s ease-out 0.4s; }
+  -webkit-animation: fadeInDownMenu 1s ease-out 0.4s both;
+  animation: fadeInDownMenu 1s ease-out 0.4s both; }
 
 .animated.title-wrapper {
   -webkit-animation-delay: 0;
@@ -2541,10 +2671,6 @@ tspan.mg-points-mono {
     height: auto;
     min-height: 31.25rem; }
 
-  #main-screen-wrapper #main-screen {
-    height: auto;
-    min-height: 31.25rem; }
-
   .scheme-wrapper .scheme-slider-wrapper {
     width: 23.125rem;
     height: 23.125rem; }
@@ -2641,6 +2767,10 @@ tspan.mg-points-mono {
 
   #header-mainwrap .boxed .header-menu .header-menu-modal .menu-modal-wrap .menu-modal-middle .menu-columns .column .column-sub-hrefs {
     display: none; }
+
+  #main-screen-wrapper #main-screen {
+    height: auto;
+    min-height: 31.25rem; }
 
   #main-screen-wrapper #main-screen .main-screen-title #title-wrapper {
     max-width: 100%;
