@@ -118,6 +118,11 @@ a
 h1
 	+ff('GothamPro', 800, 70px)
 	color: $text-h
+
+.h1
+	+ff('GothamPro', 500, 70px)
+	color: $text-h
+
 h2, .h2
 	+ff('GothamPro', 400, 38px)
 	color: $text-h
@@ -831,7 +836,7 @@ main
 				+rem(max-width, 1440px)
 				margin: auto
 				position: relative
-				#title-wrapper.animated.fadeInDownMenu
+				#title-wrapper
 					p.title-main
 						text-align: left
 						+rem(font-size, 70px)
@@ -1267,14 +1272,17 @@ $slSize: 440px
 	background-color: transparent
 	position: relative
 	overflow: hidden
-	img
-		min-height: 100vh
+	background-color: #092222
+	.parallax-img
+		position: absolute
 		width: 100%
-		z-index: 0
+		height: 100%
 		top: -50%
 		left: 0
-		position: absolute
-		display: block
+		opacity: .3
+	img
+		min-height: 200%
+		width: 100%
 		+r(992)
 			top: 0
 			height: 100%
@@ -1295,12 +1303,13 @@ $slSize: 440px
 			+rem(padding-right, 20px)
 			cursor: pointer
 			border: 1px solid transparent
+			margin-left: -1px
 			transition: border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out
 			p
 				color: $text-darker
 				font-weight: 400
 				+rem(font-size, 16px)
-			&.active
+			&:not(.active)
 				border: 1px solid $green
 				background-color: #FFF
 				p
@@ -1619,12 +1628,13 @@ $slSize: 440px
 
 .advantages
 	justify-content: center
-	align-items: center
+	align-items: flex-start
+	margin-top: 30px
 	.one-four
 		position: relative
 	.advantage-wrapper
 		+rem(padding-right, 70px)
-		+rem(margin-top, 50px)
+		+rem(margin-top, 0px)
 		width: 100%
 		+r(992)
 			margin: auto
@@ -1635,8 +1645,80 @@ $slSize: 440px
 			+rem(padding-right, 0px)
 			+rem(padding-left, 0px)
 		.advantage-img
-			+rem(margin-bottom, 20px)
+			+rem(margin-bottom, 12px)
 			img
-				+rem(max-height, 70px)
+				+rem(max-height, 50px)
 		.advantage-text
 			max-width: 100%
+
+#dates
+	.dates-slider-wrapper
+		position: relative
+		max-width: 100%
+		#dates-slider
+			+rem(padding-bottom, 100px)
+			+rem(padding-top, 100px)
+			.slick-arrow
+				position: absolute
+				right: 0
+				+rem(width, 30px)
+				+rem(height, 30px)
+				background: url(/img/1-0/arrow.svg) 50% 50% no-repeat
+				background-size: cover
+				+rem(top, 100px)
+				font-size: 0
+				+rem(right, 25px)
+				z-index: 2
+				&.slick-disabled
+					opacity: 0.5
+				&.slick-prev
+					+rem(top, 140px)
+					transform: rotate(-180deg)
+			.dates-slide-column
+				+rem(padding-top, 12px)
+				+rem(padding-right, 40px)
+				+rem(padding-left, 0px)
+				+rem(min-height, 600px)
+				position: relative
+				transition: opacity 0.3s
+				z-index: 0
+				pointer-events: none
+				&:before
+					position: absolute
+					content: ''
+					display: block
+					width: 1px
+					height: 100%
+					background-color: #FFF
+					right: 24px
+					top: 0
+				&.slick-slide
+					&.slick-active
+						opacity: 1
+						pointer-events: auto
+				.h1
+					+rem(margin-bottom, 40px)
+				.dates-event
+					+rem(margin-top, 10px)
+					+rem(padding-top, 30px)
+					margin-bottom: 0
+					position: relative
+					&:before
+						content: ''
+						+rem(width, 28px)
+						height: 3px
+						background-color: #FFF
+						display: block
+						position: absolute
+						+rem(top, 20px)
+					.sub
+						margin-bottom: 0
+						font-weight: 400
+
+
+#company-chart
+	height: 600px
+	.mg-line1-color
+		stroke: $green
+	.mg-area1-color
+		fill: $green

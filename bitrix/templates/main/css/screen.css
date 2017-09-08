@@ -65,7 +65,6 @@ table {
 
 .slick-list {
   position: relative;
-  overflow: hidden;
   display: block;
   margin: 0;
   padding: 0; }
@@ -98,6 +97,7 @@ table {
   float: left;
   height: 100%;
   min-height: 1px;
+  opacity: 0.05;
   display: none; }
   [dir="rtl"] .slick-slide {
     float: right; }
@@ -273,6 +273,13 @@ a {
 h1 {
   font-family: "GothamPro";
   font-weight: 800;
+  font-size: 4.375rem;
+  font-style: normal;
+  color: #484f42; }
+
+.h1 {
+  font-family: "GothamPro";
+  font-weight: 500;
   font-size: 4.375rem;
   font-style: normal;
   color: #484f42; }
@@ -946,12 +953,12 @@ main {
         max-width: 90rem;
         margin: auto;
         position: relative; }
-        #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper.animated.fadeInDownMenu p.title-main {
+        #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper p.title-main {
           text-align: left;
           font-size: 4.375rem;
           line-height: 3.4375rem;
           letter-spacing: 1px; }
-        #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper.animated.fadeInDownMenu .bread a {
+        #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper .bread a {
           font-size: 1rem;
           color: #fff;
           opacity: 0.5;
@@ -962,13 +969,13 @@ main {
           transition: opacity .2s, color .2s;
           font-weight: 400;
           margin-bottom: 20px; }
-          #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper.animated.fadeInDownMenu .bread a:after {
+          #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper .bread a:after {
             content: '/';
             display: block;
             position: absolute;
             right: 0;
             top: 0; }
-          #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper.animated.fadeInDownMenu .bread a:hover {
+          #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper .bread a:hover {
             color: #0056b8;
             opacity: 1; }
   #main-screen-wrapper #main-video-wrapper {
@@ -1356,15 +1363,18 @@ main {
 #parallax {
   background-color: transparent;
   position: relative;
-  overflow: hidden; }
-  #parallax img {
-    min-height: 100vh;
+  overflow: hidden;
+  background-color: #092222; }
+  #parallax .parallax-img {
+    position: absolute;
     width: 100%;
-    z-index: 0;
+    height: 100%;
     top: -50%;
     left: 0;
-    position: absolute;
-    display: block; }
+    opacity: .3; }
+  #parallax img {
+    min-height: 200%;
+    width: 100%; }
 
 .carousel-buttons {
   background-color: #f5f6f6;
@@ -1384,20 +1394,21 @@ main {
       padding-right: 1.25rem;
       cursor: pointer;
       border: 1px solid transparent;
+      margin-left: -1px;
       -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
       transition: border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out; }
       .carousel-buttons .carousel-buttons-wrap .button p {
         color: #131313;
         font-weight: 400;
         font-size: 1rem; }
-      .carousel-buttons .carousel-buttons-wrap .button.active {
+      .carousel-buttons .carousel-buttons-wrap .button:not(.active) {
         border: 1px solid #56b622;
         background-color: #FFF; }
-        .carousel-buttons .carousel-buttons-wrap .button.active p {
+        .carousel-buttons .carousel-buttons-wrap .button:not(.active) p {
           color: #56b622; }
-        .carousel-buttons .carousel-buttons-wrap .button.active:first-of-type {
+        .carousel-buttons .carousel-buttons-wrap .button:not(.active):first-of-type {
           border-radius: 100px 0 0 100px; }
-        .carousel-buttons .carousel-buttons-wrap .button.active:last-of-type {
+        .carousel-buttons .carousel-buttons-wrap .button:not(.active):last-of-type {
           border-radius: 0 100px 100px 0; }
       .carousel-buttons .carousel-buttons-wrap .button:hover {
         background-color: #0056b8;
@@ -1662,30 +1673,103 @@ main {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-top: 30px; }
   .advantages .one-four {
     position: relative; }
   .advantages .advantage-wrapper {
     padding-right: 4.375rem;
-    margin-top: 3.125rem;
+    margin-top: 0;
     width: 100%; }
     .advantages .advantage-wrapper .advantage-img {
-      margin-bottom: 1.25rem; }
+      margin-bottom: 0.75rem; }
       .advantages .advantage-wrapper .advantage-img img {
-        max-height: 4.375rem; }
+        max-height: 3.125rem; }
     .advantages .advantage-wrapper .advantage-text {
       max-width: 100%; }
+
+#dates .dates-slider-wrapper {
+  position: relative;
+  max-width: 100%; }
+  #dates .dates-slider-wrapper #dates-slider {
+    padding-bottom: 6.25rem;
+    padding-top: 6.25rem; }
+    #dates .dates-slider-wrapper #dates-slider .slick-arrow {
+      position: absolute;
+      right: 0;
+      width: 1.875rem;
+      height: 1.875rem;
+      background: url(/img/1-0/arrow.svg) 50% 50% no-repeat;
+      background-size: cover;
+      top: 6.25rem;
+      font-size: 0;
+      right: 1.5625rem;
+      z-index: 2; }
+      #dates .dates-slider-wrapper #dates-slider .slick-arrow.slick-disabled {
+        opacity: 0.5; }
+      #dates .dates-slider-wrapper #dates-slider .slick-arrow.slick-prev {
+        top: 8.75rem;
+        -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        transform: rotate(-180deg); }
+    #dates .dates-slider-wrapper #dates-slider .dates-slide-column {
+      padding-top: 0.75rem;
+      padding-right: 2.5rem;
+      padding-left: 0;
+      min-height: 37.5rem;
+      position: relative;
+      -webkit-transition: opacity 0.3s;
+      transition: opacity 0.3s;
+      z-index: 0;
+      pointer-events: none; }
+      #dates .dates-slider-wrapper #dates-slider .dates-slide-column:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: #FFF;
+        right: 24px;
+        top: 0; }
+      #dates .dates-slider-wrapper #dates-slider .dates-slide-column.slick-slide.slick-active {
+        opacity: 1;
+        pointer-events: auto; }
+      #dates .dates-slider-wrapper #dates-slider .dates-slide-column .h1 {
+        margin-bottom: 2.5rem; }
+      #dates .dates-slider-wrapper #dates-slider .dates-slide-column .dates-event {
+        margin-top: 0.625rem;
+        padding-top: 1.875rem;
+        margin-bottom: 0;
+        position: relative; }
+        #dates .dates-slider-wrapper #dates-slider .dates-slide-column .dates-event:before {
+          content: '';
+          width: 1.75rem;
+          height: 3px;
+          background-color: #FFF;
+          display: block;
+          position: absolute;
+          top: 1.25rem; }
+        #dates .dates-slider-wrapper #dates-slider .dates-slide-column .dates-event .sub {
+          margin-bottom: 0;
+          font-weight: 400; }
+
+#company-chart {
+  height: 600px; }
+  #company-chart .mg-line1-color {
+    stroke: #56b622; }
+  #company-chart .mg-area1-color {
+    fill: #56b622; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
   animation: fadeInDown 1s ease-out 0.2s both; }
 
 .animated#header-mainwrap {
-  -webkit-animation: fadeInDownMenu 1s ease-out 0.4s both;
-  animation: fadeInDownMenu 1s ease-out 0.4s both; }
+  -webkit-animation: fadeInDownMenu 1s ease-out 0.4s;
+  animation: fadeInDownMenu 1s ease-out 0.4s; }
 
 .animated.title-wrapper {
   -webkit-animation-delay: 0;
@@ -2105,6 +2189,327 @@ main {
     -webkit-transform: none;
     transform: none;
     opacity: 1; } }
+
+.mg-active-datapoint {
+  fill: black;
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.8; }
+
+.mg-area1-color {
+  fill: #0000ff; }
+
+.mg-area2-color {
+  fill: #05b378; }
+
+.mg-area3-color {
+  fill: #db4437; }
+
+.mg-area4-color {
+  fill: #f8b128; }
+
+.mg-area5-color {
+  fill: #5c5c5c; }
+
+text.mg-barplot-group-label {
+  font-weight: 900; }
+
+.mg-barplot rect.mg-bar {
+  shape-rendering: auto; }
+
+.mg-barplot rect.mg-bar.default-bar {
+  fill: #b6b6fc; }
+
+.mg-barplot rect.mg-bar.default-active {
+  fill: #9e9efc; }
+
+.mg-barplot .mg-bar-prediction {
+  fill: #5b5b5b; }
+
+.mg-barplot .mg-bar-baseline {
+  stroke: #5b5b5b;
+  stroke-width: 2; }
+
+.mg-bar-target-element {
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 300; }
+
+.mg-baselines line {
+  opacity: 1;
+  shape-rendering: auto;
+  stroke: #b3b2b2;
+  stroke-width: 1px; }
+
+.mg-baselines text {
+  fill: black;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  stroke: none; }
+
+.mg-baselines-small text {
+  font-size: 0.6rem; }
+
+.mg-category-guides line {
+  stroke: #b3b2b2; }
+
+.mg-header {
+  cursor: default;
+  font-size: 1.2rem; }
+
+.mg-header .mg-chart-description {
+  fill: #ccc;
+  font-family: FontAwesome;
+  font-size: 1.2rem; }
+
+.mg-header .mg-warning {
+  fill: #ccc;
+  font-family: FontAwesome;
+  font-size: 1.2rem; }
+
+.mg-points circle {
+  opacity: 0.65; }
+
+.mg-popover {
+  font-size: 0.95rem; }
+
+.mg-popover-content {
+  cursor: auto;
+  line-height: 17px; }
+
+.mg-data-table {
+  margin-top: 30px; }
+
+.mg-data-table thead tr th {
+  border-bottom: 1px solid darkgray;
+  cursor: default;
+  font-size: 1.1rem;
+  font-weight: normal;
+  padding: 5px 5px 8px 5px;
+  text-align: right; }
+
+.mg-data-table thead tr th .fa {
+  color: #ccc;
+  padding-left: 4px; }
+
+.mg-data-table thead tr th .popover {
+  font-size: 1rem;
+  font-weight: normal; }
+
+.mg-data-table .secondary-title {
+  color: darkgray; }
+
+.mg-data-table tbody tr td {
+  margin: 2px;
+  padding: 5px;
+  vertical-align: top; }
+
+.mg-data-table tbody tr td.table-text {
+  opacity: 0.8;
+  padding-left: 30px; }
+
+.mg-y-axis line.mg-extended-yax-ticks {
+  opacity: 0.4; }
+
+.mg-x-axis line.mg-extended-xax-ticks {
+  opacity: 0.4; }
+
+.mg-histogram .axis path,
+.mg-histogram .axis line {
+  fill: none;
+  opacity: 0.7;
+  shape-rendering: auto;
+  stroke: #ccc; }
+
+tspan.hist-symbol {
+  fill: #9e9efc; }
+
+.mg-histogram .mg-bar rect {
+  fill: #b6b6fc;
+  shape-rendering: auto; }
+
+.mg-histogram .mg-bar rect.active {
+  fill: #9e9efc; }
+
+.mg-least-squares-line {
+  stroke: red;
+  stroke-width: 1px; }
+
+.mg-lowess-line {
+  fill: none;
+  stroke: red; }
+
+.mg-line1-color {
+  stroke: #4040e8; }
+
+.mg-hover-line1-color {
+  fill: #4040e8; }
+
+.mg-line2-color {
+  stroke: #05b378; }
+
+.mg-hover-line2-color {
+  fill: #05b378; }
+
+.mg-line3-color {
+  stroke: #db4437; }
+
+.mg-hover-line3-color {
+  fill: #db4437; }
+
+.mg-line4-color {
+  stroke: #f8b128; }
+
+.mg-hover-line4-color {
+  fill: #f8b128; }
+
+.mg-line5-color {
+  stroke: #5c5c5c; }
+
+.mg-hover-line5-color {
+  fill: #5c5c5c; }
+
+.mg-line-legend text {
+  font-size: 0.9rem;
+  font-weight: 300;
+  stroke: none; }
+
+.mg-line1-legend-color {
+  color: #4040e8;
+  fill: #4040e8; }
+
+.mg-line2-legend-color {
+  color: #05b378;
+  fill: #05b378; }
+
+.mg-line3-legend-color {
+  color: #db4437;
+  fill: #db4437; }
+
+.mg-line4-legend-color {
+  color: #f8b128;
+  fill: #f8b128; }
+
+.mg-line5-legend-color {
+  color: #5c5c5c;
+  fill: #5c5c5c; }
+
+.mg-main-area-solid svg .mg-main-area {
+  fill: #ccccff;
+  opacity: 1; }
+
+.mg-markers line {
+  opacity: 1;
+  shape-rendering: auto;
+  stroke: #b3b2b2;
+  stroke-width: 1px; }
+
+.mg-markers text {
+  fill: black;
+  font-size: 0.8rem;
+  opacity: 0.6; }
+
+.mg-missing-text {
+  opacity: 0.9; }
+
+.mg-missing-background {
+  stroke: blue;
+  fill: none;
+  stroke-dasharray: 10,5;
+  stroke-opacity: 0.05;
+  stroke-width: 2; }
+
+.mg-missing .mg-main-line {
+  opacity: 0.1; }
+
+.mg-missing .mg-main-area {
+  opacity: 0.03; }
+
+path.mg-main-area {
+  opacity: 0.2;
+  stroke: none; }
+
+path.mg-confidence-band {
+  fill: #ccc;
+  opacity: 0.4;
+  stroke: none; }
+
+path.mg-main-line {
+  fill: none;
+  opacity: 0.8;
+  stroke-width: 1.1px; }
+
+.mg-points circle {
+  fill-opacity: 0.4;
+  stroke-opacity: 1; }
+
+circle.mg-points-mono {
+  fill: #0000ff;
+  stroke: #0000ff; }
+
+tspan.mg-points-mono {
+  fill: #0000ff;
+  stroke: #0000ff; }
+
+/* a selected point in a scatterplot */
+.mg-points circle.selected {
+  fill-opacity: 1;
+  stroke-opacity: 1; }
+
+.mg-voronoi path {
+  fill: none;
+  pointer-events: all;
+  stroke: none;
+  stroke-opacity: 0.1; }
+
+.mg-x-rug-mono,
+.mg-y-rug-mono {
+  stroke: black; }
+
+.mg-x-axis line,
+.mg-y-axis line {
+  opacity: 1;
+  shape-rendering: auto;
+  stroke: #b3b2b2;
+  stroke-width: 1px; }
+
+.mg-x-axis text,
+.mg-y-axis text,
+.mg-histogram .axis text {
+  fill: black;
+  font-size: 0.9rem;
+  opacity: 0.6; }
+
+.mg-x-axis .label,
+.mg-y-axis .label,
+.mg-axis .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 400; }
+
+.mg-x-axis-small text,
+.mg-y-axis-small text,
+.mg-active-datapoint-small {
+  font-size: 0.6rem; }
+
+.mg-x-axis-small .label,
+.mg-y-axis-small .label {
+  font-size: 0.65rem; }
+
+.mg-year-marker text {
+  fill: black;
+  font-size: 0.7rem;
+  opacity: 0.6; }
+
+.mg-year-marker line {
+  opacity: 1;
+  shape-rendering: auto;
+  stroke: #b3b2b2;
+  stroke-width: 1px; }
+
+.mg-year-marker-small text {
+  font-size: 0.6rem; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 
