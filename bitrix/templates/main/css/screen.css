@@ -379,7 +379,7 @@ p.caption {
 
 .brands-wrapper {
   margin-top: 60px; }
-  .brands-wrapper #brands {
+  .brands-wrapper #brands, .brands-wrapper #company-brands-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -390,8 +390,12 @@ p.caption {
     justify-content: center;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    .brands-wrapper #brands .brand {
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
       outline: 1px solid #ccc;
       max-width: 12.5rem;
       min-width: 11.25rem;
@@ -406,7 +410,7 @@ p.caption {
       padding: 5px;
       margin-top: 1px;
       margin-left: 1px; }
-      .brands-wrapper #brands .brand:before {
+      .brands-wrapper #brands .brand:before, .brands-wrapper #company-brands-wrapper .brand:before {
         display: block;
         position: absolute;
         content: '';
@@ -420,11 +424,11 @@ p.caption {
         border-bottom: 1px solid transparent;
         -webkit-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.15s;
         transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.15s; }
-      .brands-wrapper #brands .brand .brand-anim-block {
+      .brands-wrapper #brands .brand .brand-anim-block, .brands-wrapper #company-brands-wrapper .brand .brand-anim-block {
         position: relative;
         width: 100%;
         bottom: 0; }
-      .brands-wrapper #brands .brand a {
+      .brands-wrapper #brands .brand a, .brands-wrapper #company-brands-wrapper .brand a {
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -445,20 +449,20 @@ p.caption {
         align-items: center;
         height: 13.125rem;
         padding: 1.25rem; }
-        .brands-wrapper #brands .brand a img {
+        .brands-wrapper #brands .brand a img, .brands-wrapper #company-brands-wrapper .brand a img {
           max-width: 9.375rem;
           max-height: 5.9375rem;
           display: inline-block;
           vertical-align: middle; }
-      .brands-wrapper #brands .brand:hover {
+      .brands-wrapper #brands .brand:hover, .brands-wrapper #company-brands-wrapper .brand:hover {
         z-index: 2; }
-        .brands-wrapper #brands .brand:hover:before {
+        .brands-wrapper #brands .brand:hover:before, .brands-wrapper #company-brands-wrapper .brand:hover:before {
           height: 100%;
           border-top: 1px solid #0056b8;
           border-bottom: 1px solid #0056b8;
           -webkit-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0.15s, border-bottom 0s 0s;
           transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0.15s, border-bottom 0s 0s; }
-      .brands-wrapper #brands .brand:nth-of-type(odd) {
+      .brands-wrapper #brands .brand:nth-of-type(odd), .brands-wrapper #company-brands-wrapper .brand:nth-of-type(odd) {
         -webkit-animation-delay: 0.15s;
         animation-delay: 0.15s; }
 
@@ -1892,6 +1896,15 @@ main {
     position: absolute;
     right: 0;
     top: 0; }
+    #company-map #map .labels {
+      opacity: 0;
+      -webkit-transform: translate(-140%, -150%);
+      -ms-transform: translate(-140%, -150%);
+      transform: translate(-140%, -150%);
+      -webkit-transition: opacity 0.2s;
+      transition: opacity 0.2s; }
+      #company-map #map .labels.place_open {
+        opacity: 1; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
@@ -2663,7 +2676,7 @@ tspan.mg-points-mono {
     padding-left: 1.25rem;
     padding-right: 1.25rem; }
 
-  .brands-wrapper #brands .brand {
+  .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
     max-width: 12.5rem;
     min-width: 9.375rem; }
 
@@ -2735,7 +2748,7 @@ tspan.mg-points-mono {
     margin-top: 1.875rem;
     padding: 0.625rem; }
 
-  .brands-wrapper #brands .brand {
+  .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
     max-width: 16.25rem;
     min-width: 13.75rem; }
 
@@ -2931,7 +2944,7 @@ tspan.mg-points-mono {
     padding-left: 0.75rem;
     padding-right: 0.75rem; }
 
-  .brands-wrapper #brands .brand {
+  .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
     max-width: 20rem;
     min-width: 15.625rem; }
 

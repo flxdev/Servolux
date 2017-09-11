@@ -1,8 +1,8 @@
 {
-  "name": "Sweelemk-Project",
+  "name": "Servolux",
   "version": "0.0.1",
   "description": "Gulp template",
-  "author": "Sweelemk",
+  "author": "Servolux",
   "repository": {
     "type": "git",
     "url": "https://github.com/sweelemk/gulp-pug"

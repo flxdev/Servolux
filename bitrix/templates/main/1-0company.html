@@ -586,7 +586,68 @@
                       </div>
                     </div>
                   </div>
-                  <div id="map" data-lat="43" data-lon="33" data-icon="/img/1-0/pin.svg"></div>
+                  <script>
+                    var arrayOfPins = [
+                    	{
+                    	  'lat': 53.90,
+                    	  'lng': 27.55,
+                    	  'name': 'Беларусь'
+                    	},
+                    	{
+                    	  'lat': 50.45,
+                    	  'lng': 30.524,
+                    	  'name': 'Украина'
+                    	},
+                    	{
+                    	  'lat': 55.75,
+                    	  'lng': 37.63,
+                    	  'name': 'Россия'
+                    	}]
+                  </script>
+                  <div class="map-elem-near" id="map" data-lat="23" data-lon="55" data-icon="/img/1-0/pin.png"></div>
+                </div>
+              </div>
+              <div class="box gray" id="company-brands">
+                <div class="block">
+                  <div class="flex-block">
+                    <div class="one-half animateThis" data-anim="fadeInLeft">
+                      <p class="h2">Наши бренды</p>
+                    </div>
+                    <div class="one-half animateThis" data-anim="fadeInRight">
+                      <p class="annotation">Продукция группы компаний «Серволюкс» пользуется высоким спросом не только у белорусских потребителей — до 50% реализуется на экспротных рынках.</p>
+                    </div>
+                  </div>
+                  <div class="brands-wrapper">
+                    <div id="company-brands-wrapper">
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.2s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (1).png" alt="brand"></a></div>
+                                            </div>
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.30000000000000004s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (2).png" alt="brand"></a></div>
+                                            </div>
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.4s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (3).png" alt="brand"></a></div>
+                                            </div>
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.5s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (4).png" alt="brand"></a></div>
+                                            </div>
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.6s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (5).png" alt="brand"></a></div>
+                                            </div>
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.7s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (6).png" alt="brand"></a></div>
+                                            </div>
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.7999999999999999s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (7).png" alt="brand"></a></div>
+                                            </div>
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.8999999999999999s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (8).png" alt="brand"></a></div>
+                                            </div>
+                                            <div class="brand animateThis" data-anim="fadeInUp" style="animation-delay: 0.9999999999999999s;">
+                                              <div class="brand-anim-block"><a href="#"><img src="img/brands/brand (9).png" alt="brand"></a></div>
+                                            </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -672,7 +733,8 @@
     <script src="js/lib.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://rawgit.com/mozilla/metrics-graphics/7b2f88189da8fcba055a4e9af75fe19b837144eb/dist/metricsgraphics.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFkgUmSnM7fy40cDnRn8BB_xu1cp7Ros&amp;callback="></script>
+    <script src="js/marker.js"></script>
     <script src="js/common.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFkgUmSnM7fy40cDnRn8BB_xu1cp7Ros&amp;callback=initMap"></script>
   </body>
 </html>

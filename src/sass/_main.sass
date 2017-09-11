@@ -235,10 +235,11 @@ p.caption
 			+rem(padding-right, 5px)
 .brands-wrapper
 	margin-top: 60px
-	#brands
+	#brands, #company-brands-wrapper
 		display: flex
 		justify-content: center
 		flex-wrap: wrap
+		justify-content: flex-start
 		.brand
 			outline: 1px solid $lineColor
 			+rem(max-width, 200px)
@@ -1854,5 +1855,11 @@ $galleryBigHeight: 590px
 		position: absolute
 		right: 0
 		top: 0
+		.labels
+			opacity: 0
+			transform: translate(-140%, -150%)
+			transition: opacity 0.2s
+			&.place_open
+				opacity: 1
 
 

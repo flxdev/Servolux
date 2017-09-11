@@ -293,4 +293,48 @@ block content
 										p.map-green-count 20%
 									.map-advantage-text
 										p.sub Экспорт комбикормов и премиксов
-				#map(data-lat='43', data-lon='33', data-icon='/img/1-0/pin.svg')
+				script.
+					var arrayOfPins = [
+						{
+						  'lat': 53.90,
+						  'lng': 27.55,
+						  'name': 'Беларусь'
+						},
+						{
+						  'lat': 50.45,
+						  'lng': 30.524,
+						  'name': 'Украина'
+						},
+						{
+						  'lat': 55.75,
+						  'lng': 37.63,
+						  'name': 'Россия'
+						}]
+				#map.map-elem-near(data-lat="23", data-lon="55", data-icon='/img/1-0/pin.png')
+		.box#company-brands.gray
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInLeft")
+						p.h2 Наши бренды
+					.one-half.animateThis(data-anim="fadeInRight")
+						p.annotation Продукция группы компаний «Серволюкс» пользуется высоким спросом не только у белорусских потребителей — до 50% реализуется на экспротных рынках.
+				.brands-wrapper
+					#company-brands-wrapper
+						- var brandcounter = 0.2
+						- var imgcounter = 1
+						mixin brand()
+							.brand.animateThis(data-anim="fadeInUp" style="animation-delay: " + brandcounter + "s")
+								.brand-anim-block
+									a(href="#")
+										img(src="img/brands/brand ("+ imgcounter +").png" alt="brand")
+							- brandcounter += 0.1
+							- imgcounter++
+						+brand
+						+brand
+						+brand
+						+brand
+						+brand
+						+brand
+						+brand
+						+brand
+						+brand
