@@ -46,14 +46,14 @@ function initMap() {
 			loncord = parseFloat(_.getAttribute('data-lon')),
 			imgpath = _.getAttribute('data-icon'),
 			centercords = new google.maps.LatLng(latcord, loncord),
-			arrayOfPins = [[43, 33], [38, 37], [43, 55]]
+			arrayOfPins = [[43, 33], [38, 37], [45, 48]];
 		mapvar = new google.maps.Map(_,mapopts);
 		var img = {
 			url: imgpath,
-			size: new google.maps.Size(76, 114),
+			size: new google.maps.Size(70, 102),
 			origin: new google.maps.Point(0, 0),
-			anchor: new google.maps.Point(38, 114),
-			scaledSize: new google.maps.Size(38, 57)
+			anchor: new google.maps.Point(35, 56),
+			scaledSize: new google.maps.Size(35, 56)
 		};
 		// var marker = new google.maps.Marker({
 		// 	position: centercords,
