@@ -1,7 +1,7 @@
 extends _layout
 
 block title
-	title Index
+	title Главная Серволюкс
 block config
 	- var main = true
 	- var chart = false
@@ -29,10 +29,11 @@ block content
 						a(href="#").screen-link-title Лидерство
 						p Мы производим 33% всего мяса птицы в стране
 					img(src="/img/index/screen-link.jpg", alt="Лидерство")
-			.main-screen-title
+			#main-screen-title
 				#title-wrapper.animated.fadeInDownMenu
-					p.title-sup Группа компаний
-					p.title-main Серволюкс
+					#title-wrapper-inner
+						p.title-sup Группа компаний
+						p.title-main Серволюкс
 	#main-content
 		.box
 			.block

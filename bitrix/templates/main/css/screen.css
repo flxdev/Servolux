@@ -376,7 +376,27 @@ p.caption {
     padding-right: 7.5rem;
     margin: auto;
     padding-top: 4.0625rem;
-    padding-bottom: 6.875rem; }
+    padding-bottom: 6.875rem;
+    position: relative; }
+    .box .block #brand-logo {
+      position: absolute; }
+      .box .block #brand-logo .brand-logo-wrapper .brand-logo-img img {
+        max-width: 160px; }
+      .box .block #brand-logo .brand-logo-wrapper .brand-logo-button .brand-button {
+        display: block;
+        padding: 0.6875rem;
+        font-size: 1rem;
+        border: 1px solid #56b622;
+        border-radius: 6.25rem;
+        padding-left: 1.25rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.4375rem;
+        margin-top: 1.875rem;
+        font-weight: 400;
+        -webkit-transition: border .2s, color .2s;
+        transition: border .2s, color .2s; }
+        .box .block #brand-logo .brand-logo-wrapper .brand-logo-button .brand-button:hover {
+          border: 1px solid #0056b8; }
 
 .brands-wrapper {
   margin-top: 60px; }
@@ -958,45 +978,48 @@ main {
       right: 0;
       bottom: 0;
       margin: auto;
-      -webkit-transform: translate(-50%, -50%) scale(1.4);
-      -ms-transform: translate(-50%, -50%) scale(1.4);
-      transform: translate(-50%, -50%) scale(1.4); }
+      -webkit-transform: translate(-50%, -50%) scale(1.2);
+      -ms-transform: translate(-50%, -50%) scale(1.2);
+      transform: translate(-50%, -50%) scale(1.2); }
     #main-screen-wrapper.advancedPage #main-screen {
       margin: auto;
       max-width: 90rem;
       padding-left: 7.5rem;
       padding-right: 7.5rem; }
-      #main-screen-wrapper.advancedPage #main-screen .main-screen-title {
+      #main-screen-wrapper.advancedPage #main-screen #main-screen-title {
         top: 11.5625rem;
         max-width: 90rem;
         margin: auto;
         position: relative; }
-        #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper p.title-main {
-          text-align: left;
-          font-size: 4.375rem;
-          line-height: 3.4375rem;
-          letter-spacing: 1px; }
-        #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper .bread a {
-          font-size: 1rem;
-          color: #fff;
-          opacity: 0.5;
-          display: inline-block;
-          position: relative;
-          padding-right: 1rem;
-          -webkit-transition: opacity .2s, color .2s;
-          transition: opacity .2s, color .2s;
-          font-weight: 400;
-          margin-bottom: 1.25rem;
-          margin-right: 0.625rem; }
-          #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper .bread a:after {
-            content: '/';
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0; }
-          #main-screen-wrapper.advancedPage #main-screen .main-screen-title #title-wrapper .bread a:hover {
-            color: #0056b8;
-            opacity: 1; }
+        #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper {
+          -webkit-transition: none;
+          transition: none; }
+          #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper p.title-main {
+            text-align: left;
+            font-size: 4.375rem;
+            line-height: 3.4375rem;
+            letter-spacing: 1px; }
+          #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .bread a {
+            font-size: 1rem;
+            color: #fff;
+            opacity: 0.5;
+            display: inline-block;
+            position: relative;
+            padding-right: 1rem;
+            -webkit-transition: opacity .2s, color .2s;
+            transition: opacity .2s, color .2s;
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+            margin-right: 0.625rem; }
+            #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .bread a:after {
+              content: '/';
+              display: block;
+              position: absolute;
+              right: 0;
+              top: 0; }
+            #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .bread a:hover {
+              color: #0056b8;
+              opacity: 1; }
   #main-screen-wrapper #main-first-screen-fading-wrapper {
     position: fixed;
     width: 100%;
@@ -1047,22 +1070,26 @@ main {
       top: 0;
       right: 0;
       opacity: 0.2; }
-    #main-screen-wrapper #main-screen .main-screen-title {
+    #main-screen-wrapper #main-screen #main-screen-title {
       position: absolute;
       top: 0;
       bottom: 0;
       margin: auto;
       width: 100%;
       height: 12.5rem; }
-      #main-screen-wrapper #main-screen .main-screen-title #title-wrapper {
+      #main-screen-wrapper #main-screen #main-screen-title #title-wrapper #title-wrapper-inner {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
-        transform: scale(1); }
-        #main-screen-wrapper #main-screen .main-screen-title #title-wrapper.active {
+        transform: scale(1);
+        -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: -webkit-transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+        #main-screen-wrapper #main-screen #main-screen-title #title-wrapper #title-wrapper-inner.active {
           -webkit-transform: scale(0.7);
           -ms-transform: scale(0.7);
           transform: scale(0.7); }
-      #main-screen-wrapper #main-screen .main-screen-title .title-sup {
+      #main-screen-wrapper #main-screen #main-screen-title .title-sup {
         font-family: "GothamPro";
         font-weight: 800;
         font-size: 3.125rem;
@@ -1072,7 +1099,7 @@ main {
         text-align: center;
         margin-bottom: 6.25rem;
         line-height: 0; }
-      #main-screen-wrapper #main-screen .main-screen-title .title-main {
+      #main-screen-wrapper #main-screen #main-screen-title .title-main {
         font-family: "GothamPro";
         font-weight: 800;
         font-size: 8.75rem;
@@ -1964,6 +1991,12 @@ main {
         white-space: nowrap;
         color: #fff; }
 
+.small-block {
+  max-width: 45rem;
+  margin: auto; }
+  .small-block .annotation {
+    margin-bottom: 2.5rem; }
+
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
   animation: fadeInDown 1s ease-out 0.2s both; }
@@ -2843,7 +2876,7 @@ tspan.mg-points-mono {
     height: auto;
     min-height: 31.25rem; }
 
-  #main-screen-wrapper #main-screen .main-screen-title #title-wrapper {
+  #main-screen-wrapper #main-screen #main-screen-title #title-wrapper {
     max-width: 100%;
     position: absolute;
     left: 0;
@@ -2853,11 +2886,11 @@ tspan.mg-points-mono {
     margin: auto;
     margin-top: 3.125rem; }
 
-  #main-screen-wrapper #main-screen .main-screen-title .title-sup {
+  #main-screen-wrapper #main-screen #main-screen-title .title-sup {
     font-size: 1.5625rem;
     margin-bottom: 3.4375rem; }
 
-  #main-screen-wrapper #main-screen .main-screen-title .title-main {
+  #main-screen-wrapper #main-screen #main-screen-title .title-main {
     font-size: 4.375rem; }
 
   #main-screen-wrapper #main-screen .screen-links-wrapper {
@@ -3050,14 +3083,14 @@ tspan.mg-points-mono {
   #header-mainwrap .boxed .header-menu .header-menu-modal .menu-modal-wrap .menu-modal-top {
     top: 6.625rem; }
 
-  #main-screen-wrapper #main-screen .main-screen-title #title-wrapper {
+  #main-screen-wrapper #main-screen #main-screen-title #title-wrapper {
     margin-top: 5rem; }
 
-  #main-screen-wrapper #main-screen .main-screen-title .title-sup {
+  #main-screen-wrapper #main-screen #main-screen-title .title-sup {
     font-size: 1.5rem;
     margin-bottom: 3.125rem; }
 
-  #main-screen-wrapper #main-screen .main-screen-title .title-main {
+  #main-screen-wrapper #main-screen #main-screen-title .title-main {
     font-size: 3.25rem; } }
 
 @media only screen and (max-width: 400px) {

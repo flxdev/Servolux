@@ -225,6 +225,28 @@ p.caption
 		margin: auto
 		+rem(padding-top, 65px)
 		+rem(padding-bottom, 110px)
+		position: relative
+		#brand-logo
+			position: absolute
+			.brand-logo-wrapper
+				.brand-logo-img
+					img
+						max-width: 160px
+				.brand-logo-button
+					.brand-button
+						display: block
+						+rem(padding, 11px)
+						+rem(font-size, 16px)
+						border: 1px solid $green
+						+rem(border-radius, 100px)
+						+rem(padding-left, 20px)
+						+rem(padding-top, 8px)
+						+rem(padding-bottom, 7px)
+						+rem(margin-top, 30px)
+						font-weight: 400
+						transition: border .2s, color .2s
+						&:hover
+							border: 1px solid $active
 		+r(1440)
 			+rem(padding-left, 60px)
 			+rem(padding-right, 60px)
@@ -406,77 +428,6 @@ a.button-green
 			&.blue
 				transform: translatex(-40px)
 				stroke: $active
-
-// .button-green-wrapper
-// 	display: inline-block
-// a.button-green
-// 	display: -webkit-flex
-// 	display: -moz-flex
-// 	display: -ms-flex
-// 	display: -o-flex
-// 	display: flex
-// 	position: relative
-// 	justify-content: flex-start
-// 	margin-top: 45px
-// 	color: $green
-// 	background-color: transparent
-// 	border: 1px solid $text-light-gray
-// 	+rem(border-radius, 1000px)
-// 	transition: border 0.2s ease-in, background-color 0.2s cubic-bezier(.445,.05,.55,.95)
-// 	width: 50%
-// 	overflow: hidden
-// 	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
-
-// 	&:hover
-// 		border: 1px solid transparent
-// 		background-color: $active
-// 		.button-green__text-block
-// 			transform: translatex(0%)
-// 	.button-green__text-block
-// 		position: relative
-// 		+rem(padding-right, 50px)
-// 		+rem(padding-top, 12px)
-// 		+rem(padding-left, 20px)
-// 		+rem(border-radius, 50px)
-// 		+rem(padding-bottom, 11px)
-// 		transform: translatex(-100%)
-// 		transition: transform 0.3s cubic-bezier(.445,.05,.55,.95)
-// 		&:first-of-type
-// 			p
-// 				color: $white
-// 			.button-green__text-block__circle
-// 				background-color: $white
-// 				&:before
-// 					border-right: 1px solid $active
-// 					border-top: 1px solid $active
-// 	p
-// 		+rem(line-height, 16px)
-// 		+rem(font-size, 16px)
-// 		word-wrap: normal
-// 		word-break: keep-all
-// 		white-space: nowrap
-// 		color: $green
-// 	.button-green__text-block__circle
-// 		display: block
-// 		position: absolute
-// 		+rem(width, 30px)
-// 		+rem(height, 30px)
-// 		background-color: $green
-// 		+rem(border-radius, 50px)
-// 		+rem(right, 5px)
-// 		+rem(top, 5px)
-// 		&:before
-// 			position: absolute
-// 			display: block
-// 			content: ''
-// 			+rem(width, 8px)
-// 			+rem(height, 8px)
-// 			border-right: 1px solid $white
-// 			border-top: 1px solid $white
-// 			+rem(top, 11px)
-// 			transform: rotate(45deg)
-// 			+rem(right, 12px)
-
 
 .search
 	margin: auto
@@ -839,18 +790,19 @@ main
 				right: 0
 				bottom: 0
 				margin: auto
-				transform: translate(-50%, -50%) scale(1.4)
+				transform: translate(-50%, -50%) scale(1.2)
 		#main-screen
 			margin: auto
 			+rem(max-width, 1440px)
 			+rem(padding-left, 120px)
 			+rem(padding-right, 120px)
-			.main-screen-title
+			#main-screen-title
 				+rem(top, 185px)
 				+rem(max-width, 1440px)
 				margin: auto
 				position: relative
 				#title-wrapper
+					transition: none
 					p.title-main
 						text-align: left
 						+rem(font-size, 70px)
@@ -925,7 +877,7 @@ main
 			top: 0
 			right: 0
 			opacity: 0.2
-		.main-screen-title
+		#main-screen-title
 			position: absolute
 			top: 0
 			bottom: 0
@@ -933,10 +885,11 @@ main
 			width: 100%
 			+rem(height, 200px)
 			#title-wrapper
-				transform: scale(1)
-				//transition: transform 0.6s cubic-bezier(.445,.05,.55,.95)
-				&.active
-					transform: scale(0.7)
+				#title-wrapper-inner
+					transform: scale(1)
+					transition: transform 0.6s cubic-bezier(.445,.05,.55,.95)
+					&.active
+						transform: scale(0.7)
 				+r(992)
 					max-width: 100%
 					position: absolute
@@ -1747,7 +1700,6 @@ $galleryBigHeight: 590px
 
 #gallery
 	background-color: #f5f5f5
-	.block
 	.gallery-block
 		margin-top: 75px
 		position: relative
@@ -1917,3 +1869,8 @@ $galleryBigHeight: 590px
 				white-space: nowrap
 				color: $white
 
+.small-block
+	+rem(max-width, 720px)
+	margin: auto
+	.annotation
+		+rem(margin-bottom, 40px)

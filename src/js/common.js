@@ -2,11 +2,6 @@ window.onload = function() {
 	if($('#main-video').length){
 		$('#main-video').get(0).play();
 	};
-	
-	setTimeout(function(){
-		$('#title-wrapper').removeClass('animated fadeInDownMenu')
-	}, 500);
-
 };
 
 function isMobile()	{
@@ -168,6 +163,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		burger = $('#main-burger'),
 		screenLinks = $('#main-screen .screen-links-wrapper'),
 		mainTitle = $('#title-wrapper'),
+		mainTitleWrapperInner = $('#title-wrapper-inner'),
+		mainScreenTitle = $('#main-screen-title'),
 		mobile = isMobile(),
 		asideMenu = $('#aside-menu').length ? true : false,
 		hasParallax = $('#parallax').length ? true : false;
@@ -192,17 +189,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Main screen "three list" events
 	if( $('#main-screen .screen-link-text').length ){
 		$('#main-screen .screen-link-text').on('mouseenter', function(){
-			mainTitle.addClass('active')
+      mainTitleWrapperInner.addClass('active')
 		});
 		$('#main-screen .screen-link-text').on('mouseleave', function(){
-			mainTitle.removeClass('active')
+      mainTitleWrapperInner.removeClass('active')
 		});
 	}
 
 	// Main screen fade out and video zoom out on scroll
 	function scrollMainScreen(scrollPos){
 
-		var i = (120-((scrollPos/screenWrapperHeight)*50))/100;
+		var i = (120-((scrollPos/screenWrapperHeight)*30))/100;
 		videoWrapper.css('opacity', (vHeight/scrollPos)/3).find('.firstScreenFading').css('transform', 'translate(-50%, -50%) scale('+ (i<=1 ? 1 : i) +')');
 		if(scrollPos>150 && !screenLinks.hasClass('hiddened')){
 			screenLinks.fadeOut().addClass('hiddened')
@@ -214,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Main title fade out on scroll
 	function scrollMainTitle(scrollPos){
-		mainTitle.css('transform', 'translatey('+ Math.round(-(scrollPos)/2) + 'px)')
+		mainScreenTitle.css('transform', 'translatey('+ Math.round(-(scrollPos)/2) + 'px)')
 	}
 
 	// PARALLAX event on scroll trigger
