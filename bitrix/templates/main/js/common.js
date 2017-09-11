@@ -1,8 +1,8 @@
 window.onload = function() {
 	if($('#main-video').length){
 		$('#main-video').get(0).play();
-	}
-
+	};
+	
 	setTimeout(function(){
 		$('#title-wrapper').removeClass('animated fadeInDownMenu')
 	}, 500);
@@ -13,202 +13,147 @@ function isMobile()	{
 	return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent) );
 }
 
-//Map init
-// function initMap() {
-// 	var trel = document.getElementById('map'),
-//     originalMapCenter = new google.maps.LatLng(23, 55),
-//     mapopts = {
-// 		zoom: 3,
-// 		fullscreenControl: false,
-// 		scrollwheel: false,
-// 		scaleControl: false,
-// 		mapTypeControl: false,
-// 		center: originalMapCenter,
-// 		streetViewControl: false,
-// 		gestureHandling: "greedy",
-// 		zoomControlOptions: {
-// 			position: google.maps.ControlPosition.RIGHT_CENTER
-// 		},
-// 		styles: [{"featureType":"all","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#000000"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"saturation":"-14"},{"weight":"1"},{"lightness":"67"},{"gamma":"1.41"},{"color":"#c7d7c7"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"hue":"#ff0000"},{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":"-39"},{"lightness":"35"},{"gamma":"1.08"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"saturation":"0"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"10"}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-14"}]},{"featureType":"landscape.man_made","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural.landcover","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"10"},{"gamma":"2.26"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"saturation":"-100"},{"lightness":"-3"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"54"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-7"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.local","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"-2"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"saturation":"-100"},{"lightness":"100"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-100"}]}]
-// 	};
-//
-//
-//
-//   initialize(trel,mapopts);
-//
-// 	function initialize(elem, mapopts){
-// 		var _ = elem,
-// 			imgpath = _.getAttribute('data-icon'),
-// 			arrayOfPins = [
-// 				{'lat': 53.90, 'lng': 27.55, 'title': 'some text', 'name': 'Minsk', 'id': 1, 'mob1': 'mob1', 'mob2': 'mob2', 'gor1': 'gor1', 'gor2': 'gor2'},
-// 				{'lat': 50.45, 'lng': 30.524, 'title': 'some text', 'name': 'Minsk', 'id': 1, 'mob1': 'mob1', 'mob2': 'mob2', 'gor1': 'gor1', 'gor2': 'gor2'},
-// 				{'lat': 55.75, 'lng': 37.63, 'title': 'some text', 'name': 'Minsk', 'id': 1, 'mob1': 'mob1', 'mob2': 'mob2', 'gor1': 'gor1', 'gor2': 'gor2'}
-// 			];
-// 		mapvar = new google.maps.Map(_,mapopts);
-// 		var img = {
-// 			url: imgpath,
-// 			size: new google.maps.Size(35, 56),
-// 			origin: new google.maps.Point(0, 0),
-// 			anchor: new google.maps.Point(8.8, 28),
-// 			scaledSize: new google.maps.Size(17.5, 28)
-// 		};
-//
-// 		// function createMarker(array){
-// 		// 	array.filter(function(index){
-// 		// 		new google.maps.Marker({
-// 		// 			position: new google.maps.LatLng(index[0], index[1]),
-// 		// 			map: mapvar,
-// 		// 			icon: img,
-// 		// 			zIndex: 99999
-// 		// 		});
-// 		// 	})
-// 		// } createMarker(arrayOfPins);
-// 		elem.classList.add('inited');
-// 	}
-// }
-
-
 function initMap() {
-	var trel = $('#map');
-	var map;
-	if(trel.length){
-		var element = document.getElementById('map');
-		var latcord = parseFloat(element.getAttribute('data-lat'));
-		var loncord = parseFloat(element.getAttribute('data-lon'));
-		var imgpath = element.getAttribute('data-icon');
-		var centercords = {lat: latcord, lng: loncord};
-		map = new google.maps.Map(element, {
-			zoom: 3,
-			center: centercords,
-			fullscreenControl: true,
-			scrollwheel: false,
-			mapTypeControl: false,
-			scaleControl: false,
-			streetViewControl: false,
-			gestureHandling: "greedy",
-			zoomControlOptions: {
-				position: google.maps.ControlPosition.RIGHT_CENTER
-			},
-			styles:[{"featureType":"all","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#000000"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"saturation":"-14"},{"weight":"1"},{"lightness":"67"},{"gamma":"1.41"},{"color":"#c7d7c7"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"hue":"#ff0000"},{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":"-39"},{"lightness":"35"},{"gamma":"1.08"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"saturation":"0"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"10"}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-14"}]},{"featureType":"landscape.man_made","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural.landcover","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"10"},{"gamma":"2.26"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"saturation":"-100"},{"lightness":"-3"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"54"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-7"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.local","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"-2"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"saturation":"-100"},{"lightness":"100"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-100"}]}]
-		});
-		var img = {
-			url: imgpath,
+  var trel = $('#map');
+  var map;
+  if(trel.length){
+    var element = document.getElementById('map');
+    var latcord = parseFloat(element.getAttribute('data-lat'));
+    var loncord = parseFloat(element.getAttribute('data-lon'));
+    var imgpath = element.getAttribute('data-icon');
+    var centercords = {lat: latcord, lng: loncord};
+    map = new google.maps.Map(element, {
+      zoom: 3,
+      center: centercords,
+      fullscreenControl: true,
+      scrollwheel: false,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      gestureHandling: "greedy",
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_CENTER
+      },
+      styles:[{"featureType":"all","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#000000"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"saturation":"-14"},{"weight":"1"},{"lightness":"67"},{"gamma":"1.41"},{"color":"#c7d7c7"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"hue":"#ff0000"},{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":"-39"},{"lightness":"35"},{"gamma":"1.08"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"saturation":"0"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"10"}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-14"}]},{"featureType":"landscape.man_made","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural.landcover","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"10"},{"gamma":"2.26"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"saturation":"-100"},{"lightness":"-3"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"54"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-7"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.local","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"-2"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"saturation":"-100"},{"lightness":"100"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"saturation":"-100"},{"lightness":"-100"}]}]
+    });
+    var img = {
+      url: imgpath,
       // This marker is 20 pixels wide by 32 pixels high.
-			size: new google.maps.Size(35, 56),
+      size: new google.maps.Size(35, 56),
 	 		origin: new google.maps.Point(0, 0),
 	 		anchor: new google.maps.Point(8.8, 28),
 	 		scaledSize: new google.maps.Size(17.5, 28)
-		};
-		var mainmarkermarker = new google.maps.Marker({
-			position: centercords,
-			map: map,
-			icon: img,
-			zIndex: 99999
-		});
+    };
+    var mainmarkermarker = new google.maps.Marker({
+      position: centercords,
+      map: map,
+      icon: img,
+      zIndex: 99999
+    });
 
 
-		if(trel.hasClass('map-elem-near')){
-			var markers = [];
-			onMarkerLoad(arrayOfPins);
-			map.set('zoom', 3);
-			var triggers = $(trel).closest('.contact-section').find('.js-map-trigger');
-			var panPath = [];   // путь
-			var panQueue = [];  // очередь
-			var STEPS = 10;     // шаг
-			triggers.each(function(){
-				var _ = $(this),
-					ind = _.index();
-				_.on('click',function(){
-					console.log()
-					_.addClass('active').siblings().removeClass('active');
-					var lat = markers[ind].position.lat(),
-						lng = markers[ind].position.lng();
-					panTo(lat,lng);
-				});
-			});
-			function onMarkerLoad (json) {
-				var markerarr = [];
-				mainmarkermarker.setMap(null)
+    if(trel.hasClass('map-elem-near')){
+      var markers = [];
+      onMarkerLoad(arrayOfPins);
+      map.set('zoom', 3);
+      var triggers = $(trel).closest('.contact-section').find('.js-map-trigger');
+      var panPath = [];   // путь
+      var panQueue = [];  // очередь
+      var STEPS = 10;     // шаг
+      triggers.each(function(){
+        var _ = $(this),
+          ind = _.index();
+        _.on('click',function(){
+          console.log()
+          _.addClass('active').siblings().removeClass('active');
+          var lat = markers[ind].position.lat(),
+            lng = markers[ind].position.lng();
+          panTo(lat,lng);
+        });
+      });
+      function onMarkerLoad (json) {
+        var markerarr = [];
+        mainmarkermarker.setMap(null)
 
-				for(var i = 0; i < json.length; i++) {
+        for(var i = 0; i < json.length; i++) {
           // Current object
-					var obj = json[i];
-					var imgType = {
-						url: imgpath,
+          var obj = json[i];
+          var imgType = {
+            url: imgpath,
             // This marker is 20 pixels wide by 32 pixels high.
-						size: new google.maps.Size(17.5, 28),
-						origin: new google.maps.Point(0, 0),
-						anchor: new google.maps.Point(8.8, 28),
-						scaledSize: new google.maps.Size(17.5, 28)
-					};
+            size: new google.maps.Size(17.5, 28),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(8.8, 28),
+            scaledSize: new google.maps.Size(17.5, 28)
+          };
           // Adding a new marker for the object
-					var pos = new google.maps.LatLng(obj.lat,obj.lng);
-					markerarr.push(pos)
-					var marker = new MarkerWithLabel({
-						position: new google.maps.LatLng(obj.lat,obj.lng),
-						title: obj.title,
-						map: map,
-						icon: imgType,
-						zIndex: 999999,
-						labelContent: '<div id="content"><div class="siteNotice"><div class="u-text lt">' +obj.name+ '</div></div></div>',
-						labelAnchor: new google.maps.Point(0, 0),
-						labelClass: "labels",
-					});
-					markers.push(marker);
+          var pos = new google.maps.LatLng(obj.lat,obj.lng);
+          markerarr.push(pos)
+          var marker = new MarkerWithLabel({
+            position: new google.maps.LatLng(obj.lat,obj.lng),
+            title: obj.title,
+            map: map,
+            icon: imgType,
+            zIndex: 999999,
+            labelContent: '<div id="content"><div class="siteNotice"><div class="u-text lt">' +obj.name+ '</div></div></div>',
+            labelAnchor: new google.maps.Point(0, 0),
+            labelClass: "labels",
+          });
+          markers.push(marker);
 
-					google.maps.event.addListener(marker, "click", function(e) {
-						hidemarkers(markers)
-						this.set("labelClass", "labels place_open")
-					});
+          google.maps.event.addListener(marker, "click", function(e) {
+            hidemarkers(markers)
+            this.set("labelClass", "labels place_open")
+          });
 
-				} // end loop
+        } // end loop
 
-				google.maps.event.addListener(map, "click", function(e) {
-					if (!$(e.target).hasClass('labels')){
-						hidemarkers(markers)
-					}
-				});
-			}
-			function hidemarkers(array){
-				for(var i = 0; i< array.length;i++){
-					var cur = array[i];
-					cur.set("labelClass", "labels")
-				}
-			}
-			function panTo(newLat, newLng) {
-				if (panPath.length > 0) {
-					panQueue.push([newLat, newLng]);
-				} else {
+        google.maps.event.addListener(map, "click", function(e) {
+          if (!$(e.target).hasClass('labels')){
+            hidemarkers(markers)
+          }
+        });
+      }
+      function hidemarkers(array){
+        for(var i = 0; i< array.length;i++){
+          var cur  = array[i];
+          cur.set("labelClass", "labels")
+        }
+      }
+      function panTo(newLat, newLng) {
+        if (panPath.length > 0) {
+          panQueue.push([newLat, newLng]);
+        } else {
           // Lets compute the points we'll use
-					panPath.push("LAZY SYNCRONIZED LOCK");
-					var curLat = map.getCenter().lat();
-					var curLng = map.getCenter().lng();
-					var dLat = (newLat - curLat)/STEPS;
-					var dLng = (newLng - curLng)/STEPS;
+          panPath.push("LAZY SYNCRONIZED LOCK");
+          var curLat = map.getCenter().lat();
+          var curLng = map.getCenter().lng();
+          var dLat = (newLat - curLat)/STEPS;
+          var dLng = (newLng - curLng)/STEPS;
 
-					for (var i=0; i < STEPS; i++) {
-						panPath.push([curLat + dLat * i, curLng + dLng * i]);
-					}
-					panPath.push([newLat, newLng]);
-					panPath.shift();
-					setTimeout(doPan, 10);
-				}
-			}
+          for (var i=0; i < STEPS; i++) {
+            panPath.push([curLat + dLat * i, curLng + dLng * i]);
+          }
+          panPath.push([newLat, newLng]);
+          panPath.shift();
+          setTimeout(doPan, 10);
+        }
+      }
 
-			function doPan() {
-				var next = panPath.shift();
-				if (next != null) {
-					map.panTo( new google.maps.LatLng(next[0], next[1]));
-					setTimeout(doPan, 10 );
-				} else {
-					var queued = panQueue.shift();
-					if (queued != null) {
-						panTo(queued[0], queued[1]);
-					}
-				}
-			}
-		}
-	}
+      function doPan() {
+        var next = panPath.shift();
+        if (next != null) {
+          map.panTo( new google.maps.LatLng(next[0], next[1]));
+          setTimeout(doPan, 10 );
+        } else {
+          var queued = panQueue.shift();
+          if (queued != null) {
+            panTo(queued[0], queued[1]);
+          }
+        }
+      }
+    }
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -223,7 +168,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		burger = $('#main-burger'),
 		screenLinks = $('#main-screen .screen-links-wrapper'),
 		mainTitle = $('#title-wrapper'),
-		mobile = isMobile();
+		mobile = isMobile(),
+		asideMenu = $('#aside-menu').length ? true : false,
+		hasParallax = $('#parallax').length ? true : false;
 
 	// Video append if not mobile
 	if(!isMobile() && videoWrapper.data('src')){
@@ -255,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Main screen fade out and video zoom out on scroll
 	function scrollMainScreen(scrollPos){
 
-		var i = (140-((scrollPos/screenWrapperHeight)*50))/100;
+		var i = (120-((scrollPos/screenWrapperHeight)*50))/100;
 		videoWrapper.css('opacity', (vHeight/scrollPos)/3).find('.firstScreenFading').css('transform', 'translate(-50%, -50%) scale('+ (i<=1 ? 1 : i) +')');
 		if(scrollPos>150 && !screenLinks.hasClass('hiddened')){
 			screenLinks.fadeOut().addClass('hiddened')
@@ -274,13 +221,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	if($('#parallax').length){
 		var $parallax = $('#parallax'),
 			$parallaxImg = $('#parallax .parallax-img img'),
+			parallaxImgHeight = $parallaxImg.height()
 			parallaxFieldViewTop = $parallax.offset().top - vHeight,
-			parallaxFieldViewBottom = $parallax.offset().top + $parallax.height(),
+			parallaxFieldViewBottom =  $parallax.offset().top + $parallax.height() + $(window).height(),
 			parallaxFieldView = parallaxFieldViewBottom - parallaxFieldViewTop;
 
 		function scrollParallax(scrollPos){
 			if( scrollPos >= parallaxFieldViewTop && scrollPos <= parallaxFieldViewBottom){
-				$parallaxImg.css('transform', 'translate( 0, ' + (-((scrollPos - parallaxFieldViewTop)-(parallaxFieldView/2))/6) + 'px)')
+				$parallaxImg.css('transform', 'translate( 0, ' + ( - ((scrollPos - parallaxFieldViewTop) / (parallaxFieldView / 100))) * (parallaxImgHeight / 150)  + 'px)')
+				console.log($parallaxImg.css('transform'))
 			}
 		}
 	}
@@ -331,10 +280,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Scroll triggers
 	docWindow.scroll(function (event) {
 		var scrollPos = docWindow.scrollTop();
-		if(scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
+		if (scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
 			headerMenu.addClass('sticked animated fadeInDownFast').css('animation-delay', '0')
 			if(!mobile){
-				scrollParallax(scrollPos);
+				if (hasParallax) {
+          scrollParallax(scrollPos);
+        }
+				if(asideMenu){
+						changeAsideMenu();
+				}
 			}
 			return;
 		}
@@ -395,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function() {
 						// Random while elem exist
 						while(elemsInView[elem]){
 							elem = Math.floor(Math.random() * brandElems.brands.length);
-						}
+						};
 						// Append new brand
 						_this.append('<a href="' + brandElems.brands[elem].href + '"><img src="' + brandElems.brands[elem].src + '" alt="brand"></a>');
 						// Animating new appended brand
@@ -410,8 +364,8 @@ document.addEventListener("DOMContentLoaded", function() {
 							for(var key in brandElems.brands){
 								if(brandElems.brands[key].src == _this.children('a:first-of-type').children('img').attr('src')){
 									elemsInView[key] = false;
-								}
-							}
+								};
+							};
 							// Remove animation from new brand
 							_this.children('a').removeClass('animated slideBrand');
 							// Destroy old brand
@@ -487,12 +441,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	        	}
 			};
 
-		chartButton.on('click', function(){
-			var _thisChartButton = $(this)
-			if(!_thisChartButton.hasClass('active')){
-				console.log(_thisChartButton.data('chart'))
-				chartCurrent = _thisChartButton.data('chart')
-			}
+			chartButton.on('click', function(){
+				var _thisChartButton = $(this)
+				if(!_thisChartButton.hasClass('active')){
+					console.log(_thisChartButton.data('chart'))
+					chartCurrent = _thisChartButton.data('chart')
+				}
     			chartParams.data = chartData[chartCurrent].values;
     			chartParams.y_label = chartData[chartCurrent].title;
 			    // change button state
@@ -500,9 +454,51 @@ document.addEventListener("DOMContentLoaded", function() {
 			    // update data
 			    delete chartParams.xax_format;
 			    MG.data_graphic(chartParams);
-		})
+			})
 		MG.data_graphic(chartParams);
 	}
+
+	if ($('#aside-menu').length) {
+    var asideMenu = true;
+    $('.aside-menu-item').filter(function () {
+      var _asideItem = $(this),
+        itemId = _asideItem.attr('id');
+      $('#aside-menu .aside-menu-wrapper').append('<a href="#' + itemId + '"><div class="aside-item-inner"><p>' + _asideItem.data("aside") + '</p></div></a>')
+    })
+
+    var topMenu = $("#aside-menu .aside-menu-wrapper"),
+      menuItems = topMenu.find("a"),
+      scrollItems = menuItems.map(function () {
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+      });
+    	$('#aside-menu').stick_in_parent()
+    animateAsideMenu()
+  	}
+
+  	function animateAsideMenu(){
+      $('#aside-menu').find('a').on('click', function(el){
+      	el.preventDefault();
+      	var _asideHref = $(this).attr('href')
+        $('html, body').animate({
+          scrollTop: $(_asideHref).offset().top-80
+        }, 1000);
+
+			})
+		}
+
+    function changeAsideMenu() {
+      var fromTop = $(this).scrollTop() + 120;
+      var cur = scrollItems.map(function(){
+        if ($(this).offset().top < fromTop)
+          return this;
+      });
+      cur = cur[cur.length-1];
+      var id = cur && cur.length ? cur[0].id : "";
+      menuItems
+				.siblings().removeClass("active")
+				.filter("[href='#"+id+"']").addClass("active");
+    };​
 
 })
 

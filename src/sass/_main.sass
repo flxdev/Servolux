@@ -209,6 +209,7 @@ p.caption
 
 #main-content
 	background-color: $white
+	position: relative
 
 .box
 	width: 100%
@@ -242,11 +243,12 @@ p.caption
 		justify-content: flex-start
 		.brand
 			outline: 1px solid $lineColor
-			+rem(max-width, 200px)
+			+rem(max-width, 199px)
 			+rem(min-width, 180px)
 			+rem(height, 220px)
 			margin-left: -1px
 			z-index: 0
+			display: inline-block
 			flex-grow: 1
 			position: relative
 			padding: 5px
@@ -861,10 +863,11 @@ main
 							opacity: 0.5
 							display: inline-block
 							position: relative
-							padding-right: 16px
+							+rem(padding-right, 16px)
 							transition: opacity .2s, color .2s
 							font-weight: 400
-							margin-bottom: 20px
+							+rem(margin-bottom, 20px)
+							+rem(margin-right, 10px)
 							&:after
 								content: '/'
 								display: block
@@ -896,7 +899,7 @@ main
 			margin: auto
 			top: 50%
 			left: 50%
-			transform: translate(-50%, -50%) scale(1.4)
+			transform: translate(-50%, -50%) scale(1.2)
 			opacity: 1
 			will-change: transform
 		.video-poster
@@ -1290,7 +1293,7 @@ $slSize: 440px
 		position: absolute
 		width: 100%
 		height: 100%
-		top: -50%
+		top: 0%
 		left: 0
 		opacity: .3
 	img
@@ -1307,6 +1310,7 @@ $slSize: 440px
 	+rem(border-radius, 100px)
 	overflow: hidden
 	+rem(margin-bottom, 40px)
+	padding-left: 1px
 	.carousel-buttons-wrap
 		display: flex
 		+rem(height, 43px)
@@ -1862,4 +1866,54 @@ $galleryBigHeight: 590px
 			&.place_open
 				opacity: 1
 
+#aside-menu
+	position: absolute
+	top: 0
+	left: 0
+	height: 100vh
+	z-index: 99
+	.aside-menu-wrapper
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translate(0, -70%)
+		a
+			display: block
+			+rem( width, 50px)
+			+rem(height, 50px)
+			background-color: transparent
+			position: relative
+			transition: width 0.3s cubic-bezier(.445,.05,.55,.95), background-color 0.2s
+			+rem(padding-left, 25px)
+			+rem(padding-right, 25px)
+			overflow: hidden
+			.aside-item-inner
+				+rem(padding-top, 12px)
+				+rem(padding-left, 40px)
+			&:after
+				display: block
+				position: absolute
+				content: ''
+				border-radius: 50%
+				background-color: transparent
+				border: 1px solid #d0d0d0
+				+rem(width, 9px)
+				+rem(height, 9px)
+				+rem(top, 20.5px)
+				+rem(left, 35px)
+				right: 0
+				bottom: 0
+				transition: background-color 0.2s cubic-bezier(.445,.05,.55,.95) border 0.2s cubic-bezier(.445,.05,.55,.95)
+			&.active
+				&:after
+					background-color: $green
+					border: 1px solid transparent
+			&:hover
+				width: 100%
+				background-color: $green
+				&:after
+					background-color: $white
+			p
+				white-space: nowrap
+				color: $white
 

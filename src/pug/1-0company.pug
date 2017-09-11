@@ -1,7 +1,7 @@
 extends _layout
 
 block title
-	title Index
+	title Группа компаний Серволюкс
 block config
 	- var main = false
 	- var chart = true
@@ -17,7 +17,9 @@ block content
 						a(href="#") Главная
 					p.title-main Группа компаний
 	#main-content
-		.box
+		aside#aside-menu.animated.fadeInLeft
+			.aside-menu-wrapper
+		.box#top.aside-menu-item(data-aside="О компании")
 			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInUp")
@@ -46,7 +48,7 @@ block content
 					+one-four-advantage('/img/1-0/icon_6.png', 'Входит в десятку крупнейших производителей мяса птицы в РФ')
 					+one-four-advantage('/img/1-0/icon_7.png', 'Экспортер года 2015/2016 в категории мясная промышленность')
 					+one-four-advantage('/img/1-0/icon_8.png', 'Собственная логистическия база')
-		.box#parallax
+		.box#parallax.aside-menu-item(data-aside="История")
 			.parallax-img
 				img(src="/img/1-0/parallax-bg_1-0.jpg", alt="")
 			#dates
@@ -124,7 +126,7 @@ block content
 							p.h1 2017
 							.dates-event
 								p.sub Запуск в эксплуатацию инновационной 3-й площадки по выращиванию цыплят бройлеров в ОАО «Смолевичи бройлер»
-		.box#graphics
+		.box#graphics.aside-menu-item(data-aside="Результаты деятельности")
 			.block
 				p.h2 Результаты деятельности
 				.carousel-buttons.animateThis(data-anim="fadeInRight")
@@ -197,7 +199,7 @@ block content
 								}
 							]
 						#company-chart
-		.box#gallery
+		.box#gallery.aside-menu-item(data-aside="Активы")
 			.block
 				.flex-block
 					.one-half
@@ -262,7 +264,7 @@ block content
 								.gallery-item-text-wrapper
 									p.gallery-item-title Компания «Юнимит»
 									p.gallery-item-subtitle Смолевичский район, Беларусь
-		.box#company-map
+		.box#company-map.aside-menu-item(data-aside="География")
 			.block
 				.flex-block
 					.one-half
@@ -311,7 +313,7 @@ block content
 						  'name': 'Россия'
 						}]
 				#map.map-elem-near(data-lat="23", data-lon="55", data-icon='/img/1-0/pin.png')
-		.box#company-brands.gray
+		.box#company-brands.gray.aside-menu-item(data-aside="Бренды")
 			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInLeft")

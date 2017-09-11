@@ -1,0 +1,30 @@
+extends _layout
+
+block title
+	title Брэнд
+block config
+	- var main = false
+	- var chart = false
+	- var map = true
+block content
+	#main-screen-wrapper.advancedPage
+		#main-first-screen-fading-wrapper
+			img(src="/img/1-1/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			.main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					.bread
+						a(href="#") Главная
+						a(href="#") Группа компаний
+					p.title-main Кувшинка
+	#main-content
+		.box#top
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						.text-wrap
+							p.h2 Крупнейший оператор и производитель на агропромышленном рынке Беларуси
+					.one-half.animateThis(data-anim="fadeInUp")
+						.text-wrap
+							p.h3 Мы лидеры в сегменте птицеводства и стремительно наращиваем мощности по производству продукции. 
+							p.sub Стратегия компании предусматривает ориентацию на инновационный подход в области производства, логистики, продаж и IT, что позволяет гарантировать высокое качество и безопасность продукции.
