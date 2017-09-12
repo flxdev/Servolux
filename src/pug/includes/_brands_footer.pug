@@ -1,0 +1,20 @@
+.brands-wrapper
+	#company-brands-wrapper
+		- var brandcounter = 0.2
+		- var imgcounter = 1
+		mixin brand()
+			.brand.animateThis(data-anim="fadeInUp" style="animation-delay: " + brandcounter + "s")
+				.brand-anim-block
+					a(href="1-1brand.html")
+						img(src="img/brands/brand ("+ imgcounter +").png" alt="brand")
+			- brandcounter += 0.1
+			- imgcounter++
+		+brand
+		+brand
+		+brand
+		+brand
+		+brand
+		+brand
+		+brand
+		+brand
+		+brand

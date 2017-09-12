@@ -142,7 +142,7 @@ h4
 p
 	+ff('Roboto', 300, 18px)
 	color: $text-gray
-	+rem(line-height, 30px)
+	+rem(line-height, 28px)
 	a
 		font-weight: inherit
 p.annotation
@@ -165,6 +165,14 @@ p.caption
 	color: $text-light-gray
 	+rem(line-height, 24px)
 
+p.brand-subtitle
+	+rem(font-size, 26px)
+	font-family: 'Roboto'
+	font-weight: 600
+	color: #484f42
+	margin-top: 10px
+	+rem(margin-bottom, 45px)
+
 // --- End Base Fonts Settings
 
 
@@ -175,6 +183,8 @@ p.caption
 		position: relative
 	&:nth-of-type(2)
 		margin-top: 50px
+	&.column
+		flex-direction: column
 	+r(992)
 		&:not(.row)
 			flex-direction: column
@@ -206,10 +216,15 @@ p.caption
 .animateThis
 	opacity: 0
 
+.line-top
+	border-top: 1px solid $lineColor
 
 #main-content
 	background-color: $white
 	position: relative
+
+.block-inner
+	padding-bottom: 50px
 
 .box
 	width: 100%
@@ -226,27 +241,9 @@ p.caption
 		+rem(padding-top, 65px)
 		+rem(padding-bottom, 110px)
 		position: relative
-		#brand-logo
-			position: absolute
-			.brand-logo-wrapper
-				.brand-logo-img
-					img
-						max-width: 160px
-				.brand-logo-button
-					.brand-button
-						display: block
-						+rem(padding, 11px)
-						+rem(font-size, 16px)
-						border: 1px solid $green
-						+rem(border-radius, 100px)
-						+rem(padding-left, 20px)
-						+rem(padding-top, 8px)
-						+rem(padding-bottom, 7px)
-						+rem(margin-top, 30px)
-						font-weight: 400
-						transition: border .2s, color .2s
-						&:hover
-							border: 1px solid $active
+		&.medium-size
+			+rem(max-width, 1140px)
+			margin: auto
 		+r(1440)
 			+rem(padding-left, 60px)
 			+rem(padding-right, 60px)
@@ -319,7 +316,6 @@ p.caption
 					+rem(max-height, 95px)
 					display: inline-block
 					vertical-align: middle
-
 			&:hover
 				z-index: 2
 				&:before
@@ -327,8 +323,6 @@ p.caption
 					border-top: 1px solid $active
 					border-bottom: 1px solid $active
 					transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0.15s, border-bottom 0s 0s
-			&:nth-of-type(odd)
-				animation-delay: 0.15s
 
 .text-wrap
 	+rem(max-width, 520px)
@@ -695,7 +689,7 @@ main
 				box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1)
 				nav
 					+rem(top, $topstep - 26px)
-					a
+					a:not(.active)
 						color: $text-h
 						&:hover
 							color: $white
@@ -1531,7 +1525,7 @@ $slSize: 440px
 			position: relative
 			margin-bottom: 50px
 			margin-top: 50px
-		a
+		.footern-href-link
 			display: block
 			color: $text-h
 			&:not(:last-of-type)
@@ -1653,6 +1647,7 @@ $slSize: 440px
 				position: relative
 				transition: opacity 0.3s
 				z-index: 0
+				opacity: .1
 				pointer-events: none
 				&:before
 					position: absolute
@@ -1869,8 +1864,207 @@ $galleryBigHeight: 590px
 				white-space: nowrap
 				color: $white
 
+
+
 .small-block
 	+rem(max-width, 720px)
 	margin: auto
 	.annotation
 		+rem(margin-bottom, 40px)
+
+#brand-logo
+	position: absolute
+	+rem(left, -33px)
+	+rem(top, 70px)
+	.brand-logo-wrapper
+		.brand-logo-img
+			+rem(max-width, 100px)
+			+rem(max-height, 100px)
+			margin: auto
+			img
+				max-width: 100%
+				margin: auto
+		.brand-logo-button
+			.brand-button
+				display: block
+				+rem(font-size, 16px)
+				border: 1px solid $green
+				+rem(border-radius, 100px)
+				+rem(padding-left, 20px)
+				+rem(padding-right, 20px)
+				+rem(padding-top, 8px)
+				+rem(padding-bottom, 7px)
+				+rem(margin-top, 50px)
+				font-weight: 400
+				transition: border .2s, color .2s
+				&:hover
+					border: 1px solid $active
+
+#brand-roducts
+	+rem(padding-top, 50px)
+
+#brand-products-slider
+	overflow: hidden
+	padding-right: 2px
+	padding-left: 2px
+	+rem(padding-bottom, 60px)
+	padding-top: 2px
+	position: relative
+	.products-slide
+		outline: 1px solid $lineColor
+		margin-left: 1px
+		position: relative
+		.slide-img
+			height: 242px
+			display: flex
+			img
+				max-width: 200px
+				max-height: 150px
+				display: block
+				margin: auto
+		&:before
+			display: block
+			position: absolute
+			content: ''
+			bottom: -1px
+			left: -1px
+			width: 100%
+			height: 0
+			border-left: 1px solid $active
+			border-right: 1px solid $active
+			border-top: 1px solid transparent
+			border-bottom: 1px solid transparent
+			transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0s, border-bottom 0s 0.15s
+		&:hover
+			z-index: 2
+			&:before
+				height: 100%
+				border-top: 1px solid $active
+				border-bottom: 1px solid $active
+				transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0.15s, border-bottom 0s 0s
+	.slick-arrow
+		position: absolute
+		bottom: 0
+		right: 0
+		left: 0
+		margin: auto
+		+rem(width, 30px)
+		+rem(height, 30px)
+		transform: translate(-50px, 0) rotate(180deg)
+		background: url("../img/1-1/arrow.svg") 50% 50% no-repeat
+		background-size: cover
+		font-size: 0
+		&.slick-next
+			transform: translate(60px, 0)
+		&.slick-disabled
+			opacity: .5
+	.slick-dots
+		position: absolute
+		+rem(bottom, -7px)
+		left: 0
+		right: 0
+		margin: auto
+		+rem(width, 20px)
+		transform: translate(-12px, 0)
+		li
+			display: inline-block
+			display: none
+			button
+				+rem(font-size, 38px)
+				color: #484f42
+				font-weight: 300
+				font-family: "Gotham Pro"
+			&.slick-active
+				display: block
+	.slick-sum-slides
+		position: absolute
+		+rem(font-size, 18px)
+		bottom: 0
+		color: #484f42
+		font-weight: 300
+		font-family: "Gotham Pro"
+		left: 0
+		right: 0
+		margin: auto
+		+rem(width, 30px)
+		transform: translate(20px, 0)
+
+
+#brand-production-vertical-slider
+	padding-top: 40px
+	.flex-item
+		+rem(padding-top, 20px)
+		+rem(padding-bottom, 30px)
+		position: relative
+		&:before
+			display: block
+			position: absolute
+			background-color: $green
+			content: ''
+			+rem(width, 27px)
+			+rem(height, 2px)
+			top: 0
+			left: 0
+
+#brand-vertical-slider
+	overflow: hidden
+	+rem(max-height, 550px)
+	position: relative
+	.slick-arrow
+		position: absolute
+		+rem(right, 20px)
+		top: 50%
+		margin: auto
+		+rem(width, 30px)
+		+rem(height, 30px)
+		transform: translate(0, -25px) rotate(-90deg)
+		background: url("../img/1-0/arrow.svg") 50% 50% no-repeat
+		background-size: cover
+		font-size: 0
+		z-index: 2
+		&.slick-next
+			transform: translate(0, 25px) rotate(90deg)
+		&.slick-disabled
+			opacity: .5
+	.slick-dots
+		position: absolute
+		+rem(bottom, 16px)
+		left: 0
+		right: 0
+		margin: auto
+		+rem(width, 20px)
+		transform: translate(-16px, 0)
+		li
+			display: inline-block
+			display: none
+			button
+				+rem(font-size, 38px)
+				color: #484f42
+				font-weight: 300
+				font-family: "Gotham Pro"
+			&.slick-active
+				display: block
+	.slick-sum-slides
+		position: absolute
+		+rem(font-size, 18px)
+		+rem(bottom, 22px)
+		color: #484f42
+		font-weight: 300
+		font-family: "Gotham Pro"
+		left: 0
+		right: 0
+		margin: auto
+		+rem(width, 30px)
+		transform: translate(16px, 0)
+
+#brand-contacts
+	.darker
+		font-weight: 400
+	.flex-block
+		+rem(margin-top, 30px)
+		.brand-telephone
+			display: block
+			color: $text-h
+	#map
+		width: 100%
+		+rem(height, 513px)

@@ -3,7 +3,7 @@ include _mixins.pug
 	.boxed
 		.header-menu
 			nav
-				span.nav-href.active Группа компаний
+				a(href="1-0company.html").nav-href.active Группа компаний
 				a(href="#").nav-href Деятельность
 				a(href="#").nav-href Партнерство
 				a(href="#").nav-href Карьера
@@ -25,21 +25,21 @@ include _mixins.pug
 					.menu-modal-middle
 						.menu-columns
 							.column
-								a(href="#").column-href Главная
-								a(href="#").column-href Группа компаний
+								a(href="index.html").column-href Главная
+								a(href="1-0company.html").column-href Группа компаний
 								ul.column-sub-hrefs
 									li
-										a(href="#") О Компании
+										a(href="1-0company.html#top") О Компании
 									li
-										a(href="#") История
+										a(href="1-0company.html#parallax") История
 									li
-										a(href="#") Результаты деятельности
+										a(href="1-0company.html#graphics") Результаты деятельности
 									li
-										a(href="#") Активы
+										a(href="1-0company.html#gallery") Активы
 									li
-										a(href="#") География
+										a(href="1-0company.html#map") География
 									li
-										a(href="#") Бренды
+										a(href="1-0company.html#company-brands") Бренды
 							.column
 								a(href="#").column-href Деятельность
 								ul.column-sub-hrefs
@@ -97,7 +97,7 @@ include _mixins.pug
 											use(xlink:href="#jobs" xmlns:xlink="http://www.w3.org/1999/xlink")
 								button.callback-button Обратная связь
 		.logo-wrapper
-			a(href="#")
+			a(href="index.html")
 				.logo
 					svg(id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 15.8")
 						path(class="svg-green" d="M2.6 11.5c1.6.2 2.7-.1 3.6-1 .7-.8 1.1-1.7 1.6-2.7.4-.9.8-1.9 1.6-2.7.5-.6 1.3-1.1 2.3-1.6 1.6-.7 2.9-.7 4.1-.5V.9c0-.5-.4-.9-.9-.9H.9C.4 0 0 .4 0 .9v9.2c.6.7 1.3 1.2 2.6 1.4")
