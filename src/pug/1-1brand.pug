@@ -39,7 +39,7 @@ block content
 						#brand-products-slider.slick-slider
 							- var product = 1
 							mixin products-slide
-								a(href="#").products-slide.slick-slide
+								a(href='#modal').products-slide.slick-slide
 									.slide-img
 										img(src="/img/1-1/slider/product(" + product + ").png")
 								- product++
@@ -95,29 +95,34 @@ block content
 								a(href="Tel:+375177625371").brand-subtitle.brand-telephone +375 177 62 53 71
 								a(href="Tel:+375297898121").brand-subtitle.brand-telephone +375 29 789 81 21
 							.one-four
-								p Сайт
-								p E-mail
+								p.brand-email-title Сайт
+								p.brand-email-title E-mail
 							.one-four
 								a(href="#").brand-email kuvshinka.by
 								a(href="#").brand-email sb.milk@servolux.by
 					script.
 						var arrayOfPins = [
 							{
-								'lat': 53.90,
-								'lng': 27.55,
-								'name': 'Беларусь'
-							},
-							{
-								'lat': 50.45,
-								'lng': 30.524,
-								'name': 'Украина'
-							},
-							{
-								'lat': 55.75,
-								'lng': 37.63,
-								'name': 'Россия'
+								'lat': 54.028572,
+								'lng': 28.088151,
+								'name': 'Филиал «Смолевичи Молоко»'
 							}]
-					#map.map-elem-near(data-lat="23", data-lon="55", data-icon='/img/1-0/pin.png')
+					#map.map-elem-near(data-lat="54.028572", data-lon="28.088151", data-icon='/img/1-0/pin.png', data-zoom="16")
+				#back-button-wrapper.block-inner
+					.small-block
+						a(href="#") Назад
+							svg(x="0px" y="0px"	viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve")
+								path(class="back-arrow-green-svg" d="M11.7,8.5l6.6,6.5l-6.6,6.5")
+								path(class="back-arrow-green-svg-circle" d="M15,1.2c7.6,0,13.8,6.2,13.8,13.8c0,7.6-6.2,13.8-13.8,13.8C7.4,28.8,1.2,22.6,1.2,15C1.2,7.4,7.4,1.2,15,1.2 M15,0C6.7,0,0,6.7,0,15c0,8.3,6.7,15,15,15c8.3,0,15-6.7,15-15C30,6.7,23.3,0,15,0L15,0z")
+		#modal.remoda(data-remodal-id="modal")
+			button(data-remodal-action="close").remodal-close
+			.block
+				#modal-products-slider
+					.modal-wrapper
+						.modal-content-wrapper
+							.modal-img-wrapper
+								img(src="")
+							#modal-content.slick-slider
 		.box#company-brands
 			.block.line-top
 				.flex-block

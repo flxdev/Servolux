@@ -9,15 +9,16 @@ function isMobile()	{
 }
 
 function initMap(map, arrayOfPins) {
-  var trel = $(map);
-  var map;
-   var element = document.getElementById('map');
-   var latcord = parseFloat(element.getAttribute('data-lat'));
-   var loncord = parseFloat(element.getAttribute('data-lon'));
-   var imgpath = element.getAttribute('data-icon');
-   var centercords = {lat: latcord, lng: loncord};
-   map = new google.maps.Map(element, {
-     zoom: 3,
+  var trel = $(map),
+		 element = document.getElementById('map'),
+		 zoomIn = parseFloat(element.getAttribute('data-zoom')),
+		 latcord = parseFloat(element.getAttribute('data-lat')),
+		 loncord = parseFloat(element.getAttribute('data-lon')),
+		 imgpath = element.getAttribute('data-icon'),
+		 centercords = {lat: latcord, lng: loncord},
+	   map = new google.maps.Map(element, {
+     zoom: zoomIn,
+		 minZoom: zoomIn,
      center: centercords,
      fullscreenControl: true,
      scrollwheel: false,
@@ -175,16 +176,72 @@ document.addEventListener("DOMContentLoaded", function() {
 		videoWrapper.find('.video-poster').remove()
 	}
 
+  function toggleBody(activeItem){
+		return function(){
+			activeItem.toggleClass('active')
+			if(mobile){
+				$('body').toggleClass('menu-mobile')
+			}
+			else{
+				$('body').toggleClass('menu-stuck')
+			}
+		}
+  }
+
 	//burger-menu
-	burger.on('click', function(){
-		headerMenu.toggleClass('active')
-		if(mobile){
-			$('body').toggleClass('menu-mobile')
-		}
-		else{
-			$('body').toggleClass('menu-stuck')
-		}
-	});
+	burger.on('click', toggleBody(headerMenu));
+
+  if($('#modal').length){
+  	var	$modalContent = $('#modal-content'),
+      $brandProductsBlock = $('#brand-products-slider .products-slide');
+
+  	$brandProductsBlock.filter(function(){
+    	var clo = $(this).clone();
+      $modalContent.append(clo);
+		})
+
+    var inst = $('#modal').remodal(),
+			$modal = $('#modal');
+
+    $(document).on('opened', '.remodal', function () {
+      if (inst.getState() == 'opened') {
+      	if(!$modal.hasClass('activated')) {
+          $modal.addClass('activated')
+          $modalContent.slick({
+            arrows: true,
+            dots: false,
+            slidesToShow: 8,
+            slidesToScroll: 2,
+            infinite: false,
+            focusOnSelect: false,
+            accessibility: false,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 6
+                }
+              },
+              {
+                breakpoint: 750,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 540,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+        }
+			}
+    });
+	}
 
 	// Main screen "three list" events
 	if( $('#main-screen .screen-link-text').length ){

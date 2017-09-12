@@ -165,14 +165,14 @@
                       <p class="brand-subtitle">Продукция</p>
                     </div>
                     <div class="animateThis" id="brand-products-block" data-anim="fadeInUp">
-                      <div class="slick-slider" id="brand-products-slider"><a class="products-slide slick-slide" href="#">
-                                                  <div class="slide-img"><img src="/img/1-1/slider/product(1).png"></div></a><a class="products-slide slick-slide" href="#">
-                                                  <div class="slide-img"><img src="/img/1-1/slider/product(2).png"></div></a><a class="products-slide slick-slide" href="#">
-                                                  <div class="slide-img"><img src="/img/1-1/slider/product(3).png"></div></a><a class="products-slide slick-slide" href="#">
-                                                  <div class="slide-img"><img src="/img/1-1/slider/product(4).png"></div></a><a class="products-slide slick-slide" href="#">
-                                                  <div class="slide-img"><img src="/img/1-1/slider/product(5).png"></div></a><a class="products-slide slick-slide" href="#">
-                                                  <div class="slide-img"><img src="/img/1-1/slider/product(6).png"></div></a><a class="products-slide slick-slide" href="#">
-                                                  <div class="slide-img"><img src="/img/1-1/slider/product(7).png"></div></a><a class="products-slide slick-slide" href="#">
+                      <div class="slick-slider" id="brand-products-slider"><a class="products-slide slick-slide" href="#modal">
+                                                  <div class="slide-img"><img src="/img/1-1/slider/product(1).png"></div></a><a class="products-slide slick-slide" href="#modal">
+                                                  <div class="slide-img"><img src="/img/1-1/slider/product(2).png"></div></a><a class="products-slide slick-slide" href="#modal">
+                                                  <div class="slide-img"><img src="/img/1-1/slider/product(3).png"></div></a><a class="products-slide slick-slide" href="#modal">
+                                                  <div class="slide-img"><img src="/img/1-1/slider/product(4).png"></div></a><a class="products-slide slick-slide" href="#modal">
+                                                  <div class="slide-img"><img src="/img/1-1/slider/product(5).png"></div></a><a class="products-slide slick-slide" href="#modal">
+                                                  <div class="slide-img"><img src="/img/1-1/slider/product(6).png"></div></a><a class="products-slide slick-slide" href="#modal">
+                                                  <div class="slide-img"><img src="/img/1-1/slider/product(7).png"></div></a><a class="products-slide slick-slide" href="#modal">
                                                   <div class="slide-img"><img src="/img/1-1/slider/product(8).png"></div></a>
                       </div>
                     </div>
@@ -230,8 +230,8 @@
                         </div>
                         <div class="one-four"><a class="brand-subtitle brand-telephone" href="Tel:+375177625374">+375 177 62 53 74</a><a class="brand-subtitle brand-telephone" href="Tel:+375177655795">+375 177 65 57 95</a><a class="brand-subtitle brand-telephone" href="Tel:+375177625371">+375 177 62 53 71</a><a class="brand-subtitle brand-telephone" href="Tel:+375297898121">+375 29 789 81 21</a></div>
                         <div class="one-four">
-                          <p>Сайт</p>
-                          <p>E-mail</p>
+                          <p class="brand-email-title">Сайт</p>
+                          <p class="brand-email-title">E-mail</p>
                         </div>
                         <div class="one-four"><a class="brand-email" href="#">kuvshinka.by</a><a class="brand-email" href="#">sb.milk@servolux.by</a></div>
                       </div>
@@ -239,22 +239,32 @@
                     <script>
                       var arrayOfPins = [
                       	{
-                      		'lat': 53.90,
-                      		'lng': 27.55,
-                      		'name': 'Беларусь'
-                      	},
-                      	{
-                      		'lat': 50.45,
-                      		'lng': 30.524,
-                      		'name': 'Украина'
-                      	},
-                      	{
-                      		'lat': 55.75,
-                      		'lng': 37.63,
-                      		'name': 'Россия'
+                      		'lat': 54.028572,
+                      		'lng': 28.088151,
+                      		'name': 'Филиал «Смолевичи Молоко»'
                       	}]
                     </script>
-                    <div class="map-elem-near" id="map" data-lat="23" data-lon="55" data-icon="/img/1-0/pin.png"></div>
+                    <div class="map-elem-near" id="map" data-lat="54.028572" data-lon="28.088151" data-icon="/img/1-0/pin.png" data-zoom="16"></div>
+                  </div>
+                  <div class="block-inner" id="back-button-wrapper">
+                    <div class="small-block"><a href="#">Назад
+                        <svg x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+                          <path class="back-arrow-green-svg" d="M11.7,8.5l6.6,6.5l-6.6,6.5"></path>
+                          <path class="back-arrow-green-svg-circle" d="M15,1.2c7.6,0,13.8,6.2,13.8,13.8c0,7.6-6.2,13.8-13.8,13.8C7.4,28.8,1.2,22.6,1.2,15C1.2,7.4,7.4,1.2,15,1.2 M15,0C6.7,0,0,6.7,0,15c0,8.3,6.7,15,15,15c8.3,0,15-6.7,15-15C30,6.7,23.3,0,15,0L15,0z"></path>
+                        </svg></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="remoda" id="modal" data-remodal-id="modal">
+                <button class="remodal-close" data-remodal-action="close"></button>
+                <div class="block">
+                  <div id="modal-products-slider">
+                    <div class="modal-wrapper">
+                      <div class="modal-content-wrapper">
+                        <div class="modal-img-wrapper"><img src=""></div>
+                        <div class="slick-slider" id="modal-content"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

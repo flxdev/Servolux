@@ -46,7 +46,6 @@ ul
 html
 	font-size: 16px
 	line-height: 1
-	// overflow-x: hidden
 	+r(1150)
 		font-size: 15px
 	+r(992)
@@ -1511,7 +1510,9 @@ $slSize: 440px
 #footer
 	background-color: $white
 	border-top: 1px solid $lineColor
-	padding-top: 30px
+	.block
+		+rem(padding-top, 70px)
+		+rem(padding-bottom, 80px)
 	+r(992)
 		width: 100%
 		.one-four
@@ -1589,7 +1590,9 @@ $slSize: 440px
 		+r(992)
 			position: relative
 			margin-top: 50px
-
+	.footer-block-wrapper
+		.callback-button
+			margin-top: 40px
 
 .advantages
 	justify-content: center
@@ -1903,7 +1906,7 @@ $galleryBigHeight: 590px
 #brand-roducts
 	+rem(padding-top, 50px)
 
-#brand-products-slider
+#brand-products-slider, #modal-content
 	overflow: hidden
 	padding-right: 2px
 	padding-left: 2px
@@ -1914,6 +1917,7 @@ $galleryBigHeight: 590px
 		outline: 1px solid $lineColor
 		margin-left: 1px
 		position: relative
+		cursor: pointer
 		.slide-img
 			height: 242px
 			display: flex
@@ -2065,6 +2069,70 @@ $galleryBigHeight: 590px
 		.brand-telephone
 			display: block
 			color: $text-h
+			&:not(:first-of-type)
+				+rem(margin-top, 8px)
+		.brand-email-title
+			+rem(padding-left, 80px)
+		.brand-email
+			display: block
+			+rem(line-height, 28px)
+		.brand-email, .brand-email-title
+			&:not(:first-of-type)
+				+rem(margin-top, 8px)
 	#map
 		width: 100%
 		+rem(height, 513px)
+		+rem(margin-top, 30px)
+
+#back-button-wrapper
+	a
+		position: relative
+		+rem(font-size, 16px)
+		font-weight: 400
+		+rem(line-height, 34px)
+		+rem(padding-left, 40px)
+		display: block
+		svg
+			position: absolute
+			+rem(left, 0px)
+			transform: rotate(180deg)
+			+rem(height, 30px)
+			+rem(width, 30px)
+			transition: transform 0.2s cubic-bezier(.445,.05,.55,.95)
+			.back-arrow-green-svg
+				fill-rule: evenodd
+				clip-rule: evenodd
+				fill: none
+				stroke: $green
+				stroke-width: 2
+				stroke-miterlimit: 10
+				transition: stroke 0.2s cubic-bezier(.445,.05,.55,.95)
+			.back-arrow-green-svg-circle
+				fill: $green
+				transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
+		&:hover
+			svg
+				transform: rotate(180deg) translate(5px, 0)
+				.back-arrow-green-svg
+					stroke: $active
+				.back-arrow-green-svg-circle
+					fill: $active
+
+#modal
+	.modal-wrapper
+		position: relative
+		#modal-close-button
+			position: absolute
+			right: 0
+			top: 0
+		#modal-content
+			margin: auto
+			padding: 5px
+			.products-slide
+				+rem(height, 92.5px)
+				.slide-img
+					height: inherit
+					width: auto
+				img
+					max-width: 90%
+					max-height: 60%
