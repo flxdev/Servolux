@@ -1,0 +1,97 @@
+extends _layout
+
+block title
+    title Группа компаний Серволюкс
+block config
+    - var main = false
+    - var chart = true
+    - var map = true
+block content
+    #main-screen-wrapper.advancedPage
+        #main-first-screen-fading-wrapper
+            img(src="/img/2-0/header-img.jpg", alt="").firstScreenFading
+        #main-screen
+            #main-screen-title
+                #title-wrapper.animated.fadeInDownMenu
+                    .bread
+                        a(href="index.html") Главная
+                    p.title-main Деятельность
+    #main-content
+        aside#aside-menu.animated.fadeInLeft
+            .aside-menu-wrapper
+        .box#top.aside-menu-item(data-aside="Виды деятельности")
+            .block
+                .flex-block
+                    .one-half.animateThis(data-anim="fadeInUp")
+                        .text-wrap
+                            p.h2 15 предприятий-лидеров агропромышленного комплекса Беларуси
+                    .one-half.animateThis(data-anim="fadeInUp")
+                        .text-wrap
+                            p.h3 Вертикальная интеграция — наше главное конкурентное преимущество. Мы горды единством наших подразделений и высоким уровнем организации взаимодействий между ними.
+                .flex-block.advantages.row
+                    - var adv = 0.2
+                    mixin one-four-advantage(img, text)
+                        .one-four
+                            .advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
+                                .advantage-img
+                                    img(src=img)
+                                .advantage-text
+                                    p.sub= text
+                        - adv=adv+0.08
+                    +one-four-advantage('/img/2-0/icon_1.png', 'Лидеры рынка в сегменте птицеводства ')
+                    +one-four-advantage('/img/2-0/icon_2.png', 'Инновационный подход в области производства')
+                    +one-four-advantage('/img/2-0/icon_3.png', 'Растущий ассортимент и рынки сбыта продукции')
+                    +one-four-advantage('/img/2-0/icon_4.png', 'Высокое качество и безопасность продукции')
+        .box#production-food.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Производство комбикормов")
+            .block
+                .flex-block.left-side
+                    .one-half
+                        .text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+                            p.h2 Производство кормов и премиксов
+                            p.annotation Направление представлено компанией «Экомол», имеющей две крупнейших производственных площадки в Беларуси. Мы создаем передовые кормые программы с учетом сырьевой базы наших клиентов.
+                            .flex-block.space-between
+                                .one-half
+                                    .production-side-block-inner
+                                        .production-side-block-inner-count
+                                            p.green-text-count 2000 <span>тонн в сутки</span>
+                                        .production-side-block-inner-text
+                                            p.sub Производительность оборудования для комбикормов
+                                .one-half
+                                    .production-side-block-inner
+                                        .production-side-block-inner-count
+                                            p.green-text-count 26000 <span>тонн в год</span>
+                                        .production-side-block-inner-text
+                                            p.sub Объём производства престартерных комбикормов
+            .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+                .side-block-img(style="background: url('img/2-0/side-img(1).jpg')")
+        .box#production-bird.side-blocks.gray.right-side-block.aside-menu-item(data-aside="Племенное птицеводство")
+            .block
+                .flex-block.right-side
+                    .one-half
+                        .text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+                            p.h2 Племенное птицеводство
+                            p.annotation Этот вид деятельности представляет СЗАО «Агролинк», которое занимается выращиванием кур родительского стада для производства инкубационного яйца и суточных цыплят мясных кроссов.
+                            .flex-block.space-between
+                                .one-half
+                                    .production-side-block-inner
+                                        .production-side-block-inner-count
+                                            p.green-text-count 17000 <span>голов птицы в час</span>
+                                        .production-side-block-inner-text
+                                            p.sub Самая производительная линия в стране по убою и разделке птицы
+                                .one-half
+                                    .production-side-block-inner
+                                        .production-side-block-inner-count
+                                            p.green-text-count 90000 <span>тонн в год</span>
+                                        .production-side-block-inner-text
+                                            p.sub Птицы в живом весе в 2015 году
+            .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+                .side-block-img(style="background: url('img/2-0/side-img(2).jpg')")
+        .box#production-milk.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Производство продуктов питания")
+            .block
+                .flex-block.left-side
+                    .one-half
+                        .text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+                            p.h2 Производство продуктов питания
+                            p.annotation Наши предприятия производят широкую линейку молочных и мясных продуктов питания. Мы используем только своё сырьё и профессиональное европейское оборудование. Наши продукты не содержат сою и ГМО.
+            .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+                .side-block-img(style="background: url('img/2-0/side-img(3).jpg')")

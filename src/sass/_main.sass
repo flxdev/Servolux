@@ -46,6 +46,21 @@ ul
 html
 	font-size: 16px
 	line-height: 1
+	position: relative
+	+box
+	width: 100%
+	height: auto
+	overflow: auto
+	&.remodal-is-locked
+		&:after
+			position: fixed
+			display: block
+			width: 20px
+			height: 100vh
+			top: 0
+			right: 0
+			background-color: #fff
+			content: ''
 	+r(1150)
 		font-size: 15px
 	+r(992)
@@ -100,7 +115,7 @@ body
 	color: $green
 
 .gray
-	background-color: #f5f6f6
+	background-color: $gray
 
 
 // --- Base Fonts Settings
@@ -184,6 +199,11 @@ p.brand-subtitle
 		margin-top: 50px
 	&.column
 		flex-direction: column
+	&.space-between
+		justify-content: space-between
+		.one-half
+			width: auto
+			max-width: 50%
 	+r(992)
 		&:not(.row)
 			flex-direction: column
@@ -548,7 +568,7 @@ main
 		.header-menu
 			z-index: 100
 			overflow: hidden
-			pointer-events: none
+			+rem(max-height, 120px)
 			nav
 				position: absolute
 				pointer-events: auto
@@ -597,8 +617,8 @@ main
 				width: 100%
 				position: relative
 				z-index: 2
-				transition: transform 0.3s ease-out, opacity 0.3s ease-in
-				transform: translate(0px, -50%)
+				transition: transform 0.3s ease-out 0.05s, opacity 0.1s ease-in 0s
+				transform: translate(0px, -100%)
 				padding-top: 80px
 				min-height: 700px
 				padding-bottom: 50px
@@ -715,6 +735,7 @@ main
 			height: 100vh
 			overflow-y: auto
 			max-height: 100vh
+			background-color: #fff
 			.logo-wrapper
 				.logo
 					+rem(left, $sidestep - 20px)
@@ -741,9 +762,11 @@ main
 			.header-menu
 				position: relative
 				height: auto
+				max-height: none
 				pointer-events: auto
 				.header-menu-modal
 					transform: translate(0px, 0px)
+					transition: transform 0.3s ease-out 0s, opacity 0.2s ease-in 0.1s
 					visibility: visible
 					opacity: 1
 					min-height: 100vh
@@ -1934,18 +1957,20 @@ $galleryBigHeight: 590px
 			left: -1px
 			width: 100%
 			height: 0
-			border-left: 1px solid $active
-			border-right: 1px solid $active
+			border-left: 1px solid transparent
+			border-right: 1px solid transparent
 			border-top: 1px solid transparent
 			border-bottom: 1px solid transparent
-			transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0s, border-bottom 0s 0.15s
+			transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0s, border-bottom 0s 0.15s,  border-left 0s 0.15s, border-right 0s 0.15s,
 		&:hover
 			z-index: 2
 			&:before
 				height: 100%
+				border-left: 1px solid $active
+				border-right: 1px solid $active
 				border-top: 1px solid $active
 				border-bottom: 1px solid $active
-				transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0.15s, border-bottom 0s 0s
+				transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0.15s, border-left 0s 0s, border-right 0s 0s, border-bottom 0s 0s
 	.slick-arrow
 		position: absolute
 		bottom: 0
@@ -2118,21 +2143,150 @@ $galleryBigHeight: 590px
 				.back-arrow-green-svg-circle
 					fill: $active
 
+
+
 #modal
-	.modal-wrapper
-		position: relative
-		#modal-close-button
-			position: absolute
-			right: 0
-			top: 0
+	max-width: 100%
+	height: 100%
+	margin: auto
+	overflow: hidden
+	#modal-block-wrapper
+		+vcenter
+		.block
+			+rem(max-width, 800px)
+			height: 100%
+			margin: auto
+			position: relative
+		#modal-content-images
+			.modal-img-slide
+				img
+					margin: auto
+					max-height: 100%
+		.h2
+			+rem(margin-bottom, 50px)
+		.modal-img-slide
+			position: relative
+			.modal-img-slide-inner
+				+rem(height, 300px)
+				img
+					height: 100%
+			.h2
+				+rem(margin-top, 20px)
 		#modal-content
 			margin: auto
-			padding: 5px
+			padding: 2px
+			+rem(padding-left, 40px)
+			+rem(padding-right, 40px)
+			position: relative
+			&:before, &:after
+				content: ''
+				position: absolute
+				display: block
+				height: 100%
+				+rem(width, 46px)
+				background: #fff
+				left: 0
+				top: 0
+				right: auto
+				z-index: 20
+			&:after
+				background: #fff
+				right: 0
+				left: auto
+			.slick-arrow
+				top: 0
+				bottom: 0
+				margin: auto
+				z-index: 30
+				&.slick-next
+					left: 100%
+					transform: translate(-100%, 0)
+				&.slick-prev
+					right: 100%
+					transform: translate(0, 0) rotate(180deg)
+			.slick-track
+				display: flex
+				justify-content: flex-start
 			.products-slide
 				+rem(height, 92.5px)
+				margin-left: 0
+				min-width: 100px
+				&:after
+					width: 100%
+					height: 100%
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					background-color: $green
+					content: ''
+					opacity: 0
+					transition: opacity 0.2s
+				&:not(:last-child)
+					margin-right: 1px
+				&.slick-current
+					&:after
+						opacity: .4
 				.slide-img
-					height: inherit
+					height: 100%
 					width: auto
 				img
 					max-width: 90%
 					max-height: 60%
+
+.side-blocks
+	position: relative
+	+rem(min-height, 600px)
+	.left-side
+		justify-content: flex-start
+	.right-side
+		&>.one-half
+			+rem(padding-left, 50px)
+		justify-content: flex-end
+	&.right-side-block
+		.side-block-img-wrapper
+			left: 0
+			right: auto
+			&:after
+				+rem(right, -15px)
+				left: auto
+	.annotation
+		+rem(margin-bottom, 30px)
+	.production-side-block-inner
+		&-text
+			+rem(max-width, 220px)
+	.side-block-img-wrapper
+		width: 50%
+		height: 100%
+		position: absolute
+		right: 0
+		top: 0
+		&:after
+			content: ''
+			position: absolute
+			display: block
+			+rem(height, 30px)
+			+rem(width, 30px)
+			background-color: $gray
+			+rem(left, -15px)
+			bottom: 0
+			top: 0
+			margin: auto
+			transform: rotate(45deg)
+		.side-block-img
+			background-size: cover
+			background-origin: 100% 50%
+			background-repeat: no-repeat
+			width: 100%
+			height: 100%
+			position: relative
+
+.green-text-count
+	color: $green
+	+rem(font-size, 30px)
+	+rem(line-height, 48px)
+	font-family: 'Gotham Pro'
+	font-weight: 500
+	span
+		+rem(font-size, 16px)
+

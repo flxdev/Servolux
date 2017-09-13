@@ -14,8 +14,8 @@ block content
 			#main-screen-title
 				#title-wrapper.animated.fadeInDownMenu
 					.bread
-						a(href="#") Главная
-						a(href="#") Группа компаний
+						a(href="index.html") Главная
+						a(href="1-0company.html") Группа компаний
 					p.title-main Кувшинка
 	#main-content
 		.box#top
@@ -36,13 +36,17 @@ block content
 					.small-block.animateThis(data-anim="fadeInLeft")
 						p.brand-subtitle Продукция
 					#brand-products-block.animateThis(data-anim="fadeInUp")
-						#brand-products-slider.slick-slider
+						#brand-products-slider.slick-slider(data-title="Молочная продукция компании «Кувшинка»")
 							- var product = 1
 							mixin products-slide
 								a(href='#modal').products-slide.slick-slide
 									.slide-img
-										img(src="/img/1-1/slider/product(" + product + ").png")
+										img(src="/img/1-1/slider/product(" + product + ").png" data-img="/img/1-1/slider-images/product(" + product + ").png" data-text="Молочная продукция компании «Кувшинка» N" + product +  "" )
 								- product++
+							+products-slide
+							+products-slide
+							+products-slide
+							+products-slide
 							+products-slide
 							+products-slide
 							+products-slide
@@ -83,21 +87,21 @@ block content
 											img(src="/img/1-1/vertSlider/slide(1).jpg" alt="picture")
 				#brand-contacts.block-inner
 					.small-block
-						p.brand-subtitle Контакты
-						p.darker Филиал «Смолевичи Молоко»
-						p Республика Беларусь, г. Смолевичи, ул. Социалистическая, 54б., 222201
+						p.brand-subtitle.animateThis(data-anim="fadeInUp") Контакты
+						p.darker.animateThis(data-anim="fadeInUp") Филиал «Смолевичи Молоко»
+						p.animateThis(data-anim="fadeInUp") Республика Беларусь, г. Смолевичи, ул. Социалистическая, 54б., 222201
 						.flex-block
-							.one-four
+							.one-four.animateThis(data-anim="fadeInUp")
 								p Телефоны
-							.one-four
+							.one-four.animateThis(data-anim="fadeInUp")
 								a(href="Tel:+375177625374").brand-subtitle.brand-telephone +375 177 62 53 74
 								a(href="Tel:+375177655795").brand-subtitle.brand-telephone +375 177 65 57 95
 								a(href="Tel:+375177625371").brand-subtitle.brand-telephone +375 177 62 53 71
 								a(href="Tel:+375297898121").brand-subtitle.brand-telephone +375 29 789 81 21
-							.one-four
+							.one-four.animateThis(data-anim="fadeInUp")
 								p.brand-email-title Сайт
 								p.brand-email-title E-mail
-							.one-four
+							.one-four.animateThis(data-anim="fadeInUp")
 								a(href="#").brand-email kuvshinka.by
 								a(href="#").brand-email sb.milk@servolux.by
 					script.
@@ -107,8 +111,8 @@ block content
 								'lng': 28.088151,
 								'name': 'Филиал «Смолевичи Молоко»'
 							}]
-					#map.map-elem-near(data-lat="54.028572", data-lon="28.088151", data-icon='/img/1-0/pin.png', data-zoom="16")
-				#back-button-wrapper.block-inner
+					#map.map-elem-near(data-lat="54.028572", data-lon="28.088151", data-icon='/img/1-0/pin.png', data-zoom="16" data-anim="fadeInUp").animateThis
+				#back-button-wrapper.block-inner.animateThis(data-anim="fadeInLeft")
 					.small-block
 						a(href="#") Назад
 							svg(x="0px" y="0px"	viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve")
@@ -116,16 +120,14 @@ block content
 								path(class="back-arrow-green-svg-circle" d="M15,1.2c7.6,0,13.8,6.2,13.8,13.8c0,7.6-6.2,13.8-13.8,13.8C7.4,28.8,1.2,22.6,1.2,15C1.2,7.4,7.4,1.2,15,1.2 M15,0C6.7,0,0,6.7,0,15c0,8.3,6.7,15,15,15c8.3,0,15-6.7,15-15C30,6.7,23.3,0,15,0L15,0z")
 		#modal.remoda(data-remodal-id="modal")
 			button(data-remodal-action="close").remodal-close
-			.block
-				#modal-products-slider
-					.modal-wrapper
-						.modal-content-wrapper
-							.modal-img-wrapper
-								img(src="")
-							#modal-content.slick-slider
+			#modal-block-wrapper
+				.block
+					.modal-content-wrapper.animateThis(data-anim="fadeInUp")
+						#modal-content-images.slick-slider
+						#modal-content.slick-slider
 		.box#company-brands
 			.block.line-top
 				.flex-block
-					.one-half.animateThis(data-anim="fadeInLeft")
+					.one-half.animateThis(data-anim="fadeInUp")
 						p.h2 Другие бренды
 				include includes/_brands_footer.pug

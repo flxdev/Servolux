@@ -180,10 +180,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		return function(){
 			activeItem.toggleClass('active')
 			if(mobile){
-				$('body').toggleClass('menu-mobile')
+				$('html').toggleClass('remodal-is-locked')
 			}
 			else{
-				$('body').toggleClass('menu-stuck')
+				$('html').toggleClass('remodal-is-locked')
 			}
 		}
   }
@@ -193,51 +193,76 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if($('#modal').length){
   	var	$modalContent = $('#modal-content'),
-      $brandProductsBlock = $('#brand-products-slider .products-slide');
+      $brandProductsSlider = $('#brand-products-slider'),
+      $brandProductsBlock = $('#brand-products-slider .products-slide'),
+    	$modalContentImages = $('#modal-content-images');
+
+    $brandProductsBlock.on('click', function(){
+      var slideno = $(this).data('slick-index');
+      $('#modal-content-images').slick('slickGoTo', slideno);
+		})
 
   	$brandProductsBlock.filter(function(){
-    	var clo = $(this).clone();
-      $modalContent.append(clo);
+    	var clo = $(this).find('img');
+      $modalContent.append('<div class="slick-slide products-slide"><div class="slide-img"><img src="' + clo.attr('src') + '"></div></div>');
+      $modalContentImages.append('<div class="slick-slide modal-img-slide"><div class="modal-img-slide-inner"><img src="' + clo.data('img') + '" alt=""></div><p class="h2">' + clo.data('text') + '</p></div>')
 		})
+
 
     var inst = $('#modal').remodal(),
 			$modal = $('#modal');
 
-    $(document).on('opened', '.remodal', function () {
+    $(document).on('opened', '.remodal', function (e) {
       if (inst.getState() == 'opened') {
+
       	if(!$modal.hasClass('activated')) {
+
           $modal.addClass('activated')
+
+          $modalContentImages.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: $modalContent
+          });
+
           $modalContent.slick({
             arrows: true,
             dots: false,
             slidesToShow: 8,
-            slidesToScroll: 2,
-            infinite: false,
-            focusOnSelect: false,
-            accessibility: false,
+            slidesToScroll: 8,
+            infinite: true,
+            asNavFor: $modalContentImages,
+            focusOnSelect: true,
+            centerMode: true,
+            centerPadding: '60px',
+            variableWidth: true,
             responsive: [
               {
                 breakpoint: 1024,
                 settings: {
-                  slidesToShow: 6
+                  slidesToShow: 6,
+                  slidesToScroll: 6
                 }
               },
               {
                 breakpoint: 750,
                 settings: {
                   slidesToShow: 4,
-                  slidesToScroll: 1
+                  slidesToScroll: 4
                 }
               },
               {
                 breakpoint: 540,
                 settings: {
                   slidesToShow: 3,
-                  slidesToScroll: 1
+                  slidesToScroll: 3
                 }
               }
             ]
           });
+
         }
 			}
     });
