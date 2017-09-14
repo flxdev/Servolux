@@ -6,6 +6,7 @@ block config
 	- var main = false
 	- var chart = false
 	- var map = true
+	- var chartjs = true
 block content
 	#main-screen-wrapper.advancedPage
 		#main-first-screen-fading-wrapper
@@ -32,29 +33,29 @@ block content
 		.box#delivers.aside-menu-item(data-aside="Поставщикам").gray
 			.block
 				.flex-block
-					.one-half.animateThis(data-anim="fadeInUp")
-						.text-wrap
+					.one-half
+						.text-wrap.animateThis(data-anim="fadeInUp")
 							p.h2 Поставщикам
-						.text-wrap
+						.text-wrap.animateThis(data-anim="fadeInUp")
 							p.h3 «Серволюкс» работает более чем 500 поставщиками, в число которых входят производители, дистрибьюторы и импортёры. Мы предлагаем:
 						.flex-block
-							.one-half
+							.one-half.animateThis(data-anim="fadeInUp")
 								.green-stick-top
 									p Дилерство около 20 лучших европейских и американских производителей оборудования  для животноводства
-							.one-half
+							.one-half.animateThis(data-anim="fadeInUp")
 								.green-stick-top
 									p Импорт зерновых, масличных культур, составляющих для производства кормов
-							.one-half
+							.one-half.animateThis(data-anim="fadeInUp")
 								.green-stick-top
 									p Доставку необходимых товаров и оборудования в срок в любую точку мира
-							.one-half
+							.one-half.animateThis(data-anim="fadeInUp")
 								.green-stick-top
 									p Выгодные условия по аренде помещений в вашей местности
-						a(href="#").callback-button Стать партнёром
+						a.animateThis(data-anim="fadeInUp" href="#").callback-button Стать партнёром
 					.one-half
 						.flex-img-wrapper
 							.flex-img(style='background-image: url("img/3-0/delivers-img.jpg")')
-				#partners-slider
+				#partners-slider.animateThis(data-anim="fadeInUp")
 					#partners-slider-wrapper.slick-slider
 						- var partner = 0
 						mixin partners-slide
@@ -79,9 +80,9 @@ block content
 				img(src="/img/3-0/parallax.jpg", alt="")
 			#clients.block
 				.flex-block
-					.one-half
+					.one-half.animateThis(data-anim="fadeInUp")
 						p.h2 Клиентам
-					.one-half
+					.one-half.animateThis(data-anim="fadeInUp")
 						p.annotation Наша продукция представлена практически во всех крупных сетях, гипермаркетах, магазинах у дома и специализированных мясных лавках.
 						a(href="#").callback-button Стать клиентом
 				.flex-block.advantages.row
@@ -103,3 +104,77 @@ block content
 					+one-four-advantage('/img/3-0/icon_6.png', 'Высокий спрос на наши продукты гарантирует высокий оборот и увеличение среднего чека')
 					+one-four-advantage('/img/3-0/icon_7.png', 'Мы предлагаем выгодную систему оплаты и предоставляем отсрочку платежей')
 					+one-four-advantage('/img/3-0/icon_8.png', 'Обеспечиваем рекламное продвижение наших продуктов на рынке')
+		.box#Investments.aside-menu-item(data-aside="Инвесторам")
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.h2 Результаты деятельности
+						p.h3 Отчеты о деятельности компании
+						p Мы обеспечиваем планомерное и гармоничное развитие при работе с поставщиками. Основой отношений является взаимовыгодное сотрудничество с партнерами, внедрение передовых технологий и мировой опыт организации розничной торговли.
+						+download_pdf('Отчет по экспорту')
+						+download_pdf('Годовой отчет 2016')
+						+download_pdf('сследование отрасли 2016')
+						a.animateThis(data-anim="fadeInUp" href="#").callback-button Стать инвестором
+					.one-half.animateThis(data-anim="fadeInLeft")
+						.carousel-buttons.animateThis(data-anim="fadeInRight")
+							#chart-control.carousel-buttons-wrap
+								.button(data-chart="0").active
+									p Выручка
+								.button(data-chart="1")
+									p Реализация
+								.button(data-chart="2")
+									p Наши цели на 2017 - 2020 г.
+						script.
+							var barChartData = {
+								labels: ["2011", "2012", "2013", "2014", "2015"],
+								datasets: [{
+								label: 'Мясо птицы',
+								backgroundColor: '#56b622',
+								data: [11,35,60,85,110]
+								}, {
+								label: 'Комбикорма',
+								backgroundColor: '#f2bc18',
+								data: [15,40,65,90,115]
+								}, {
+								label: 'Ритейл',
+								backgroundColor: '#f8df0f',
+								data: [20,45,70,95,120]
+								}, {
+								label: 'Мясопереработка',
+								backgroundColor: '#00b88f',
+								data: [25,50,75,100,125]
+								}, {
+								label: 'Молочные продукты',
+								backgroundColor: '#0056b8',
+								data: [30,55,80,105,130]
+								}]
+								};
+						canvas#canvas
+		.box#whywe
+			.block.line-top
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.h2 Почему нас выбирают
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.annotation «Серволюкс» является крупнейшим инвестором в Беларуси. У нас более 2000 клиентов по всему миру.
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Порядочность
+						.green-stick-top
+							p Полный цикл производства «от поля до прилавка» гарантирует безопасность и стабильные вкусовые свойства продукции в каждой поставке.
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Ориентированность на клиентов
+						.green-stick-top
+							p В нашем арсенале собственная логистическая компания и разветвленная сеть дистрибьюторских центров. Мы поставляем товар в срок и в любом объеме.
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Ответственность
+						.green-stick-top
+							p Мы соблюдаем жесткие требования по перевозке и хранению продукции благодаря развитой низкотемпературной логистике.
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Программа лояльности
+						.green-stick-top
+							p Мы предлагаем программы лояльности для вас и ваших сотрудников
+				.flex-block.animateThis(data-anim="fadeInUp")
+					.one-half
+					.one-half
+						+button('Связаться с нами')

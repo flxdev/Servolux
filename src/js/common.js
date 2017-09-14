@@ -1,6 +1,37 @@
 window.onload = function () {
+
 	if ($('#main-video').length) {
 		$('#main-video').get(0).play()
+	}
+
+	if($('canvas#canvas').length) {
+		let ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(ctx, {
+			type: 'bar',
+			data: barChartData,
+			options: {
+				title: {
+					display: false,
+					text: "Chart.js Bar Chart - Stacked"
+				},
+				legend: {
+					display: false
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false
+				},
+				responsive: true,
+				scales: {
+					xAxes: [{
+						stacked: true,
+					}],
+					yAxes: [{
+						stacked: true
+					}]
+				}
+			}
+		});
 	}
 }
 
@@ -826,85 +857,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })
 
-
-var barChartData = {
-	labels: ["January", "February", "March", "April", "May", "June", "July"],
-	datasets: [{
-		label: 'Dataset 1',
-		backgroundColor: window.chartColors.red,
-		stack: 'Stack 0',
-		data: [
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor()
-		]
-	}, {
-		label: 'Dataset 2',
-		backgroundColor: window.chartColors.blue,
-		stack: 'Stack 0',
-		data: [
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor()
-		]
-	}, {
-		label: 'Dataset 3',
-		backgroundColor: window.chartColors.green,
-		stack: 'Stack 1',
-		data: [
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor(),
-			randomScalingFactor()
-		]
-	}]
-
-};
-
-
-window.onload = function() {
-	var ctx = document.getElementById("canvas").getContext("2d");
-	window.myBar = new Chart(ctx, {
-		type: 'bar',
-		data: barChartData,
-		options: {
-			title:{
-				display:true,
-				text:"Chart.js Bar Chart - Stacked"
-			},
-			tooltips: {
-				mode: 'index',
-				intersect: false
-			},
-			responsive: true,
-			scales: {
-				xAxes: [{
-					stacked: true,
-				}],
-				yAxes: [{
-					stacked: true
-				}]
-			}
-		}
-	});
-};
-
-document.getElementById('randomizeData').addEventListener('click', function() {
-	barChartData.datasets.forEach(function(dataset, i) {
-		dataset.data = dataset.data.map(function() {
-			return randomScalingFactor();
-		});
-	});
-	window.myBar.update();
-});

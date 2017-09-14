@@ -1905,7 +1905,7 @@ main {
           font-weight: 400; }
 
 #company-chart {
-  height: 600px; }
+  height: 520px; }
   #company-chart .mg-line1-color {
     stroke: #55b521; }
   #company-chart .mg-area1-color {
@@ -2568,6 +2568,15 @@ main {
 
 #clients .row {
   margin-top: 3.125rem; }
+
+#whywe .darker {
+  font-weight: 600;
+  margin-bottom: 1.125rem; }
+
+#whywe .block {
+  background: url("../img/3-0/earth.jpg") 50% 50% no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
