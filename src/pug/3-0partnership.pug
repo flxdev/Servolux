@@ -4,7 +4,7 @@ block title
 	title Партнёрство
 block config
 	- var main = false
-	- var chart = true
+	- var chart = false
 	- var map = true
 block content
 	#main-screen-wrapper.advancedPage
@@ -55,12 +55,12 @@ block content
 						.flex-img-wrapper
 							.flex-img(style='background-image: url("img/3-0/delivers-img.jpg")')
 				#partners-slider
-					.partners-slider-wrapper.slick-slider
+					#partners-slider-wrapper.slick-slider
 						- var partner = 0
 						mixin partners-slide
-							a(href='#modal').partners-slide.slick-slide
+							.partners-slide.slick-slide
 								.slide-img
-									img(src="/img/3-0/partners/partner(" + partner + ").png" data-img="/img/1-1/slider-images/product(" + product + ").png" data-text="Молочная продукция компании «Кувшинка» N" + product + "" )
+									img(src="/img/3-0/partners/partner(" + partner + ").png")
 							- partner++
 						+partners-slide
 						+partners-slide
@@ -68,3 +68,38 @@ block content
 						+partners-slide
 						+partners-slide
 						+partners-slide
+						+partners-slide
+						+partners-slide
+						+partners-slide
+						+partners-slide
+						+partners-slide
+						+partners-slide
+		.box#parallax.aside-menu-item(data-aside="Покупателям")
+			.parallax-img
+				img(src="/img/3-0/parallax.jpg", alt="")
+			#clients.block
+				.flex-block
+					.one-half
+						p.h2 Клиентам
+					.one-half
+						p.annotation Наша продукция представлена практически во всех крупных сетях, гипермаркетах, магазинах у дома и специализированных мясных лавках.
+						a(href="#").callback-button Стать клиентом
+				.flex-block.advantages.row
+					- var adv = 0.2
+					mixin one-four-advantage(img, text)
+						.one-four
+							.advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
+								.advantage-img
+									img(src=img)
+								.advantage-text
+									p.sub= text
+						- adv=adv+0.08
+					+one-four-advantage('/img/3-0/icon_1.png', 'Наличие собственной логистической базы позволяет доставлять необходимые товары в срок')
+					+one-four-advantage('/img/3-0/icon_2.png', 'Наши клиенты – крупнейшие игроки рынка сетевой розницы и производители продуктов питания РБ')
+					+one-four-advantage('/img/3-0/icon_3.png', 'Предлагаем специальные программы лояльности, акции и скидки нашим клиентам')
+					+one-four-advantage('/img/3-0/icon_4.png', 'Собственная сырьевая база гарантирет высокое качество нашей продукции')
+				.flex-block.advantages.row
+					+one-four-advantage('/img/3-0/icon_5.png', 'Наши бренды узнаваемы,  покупатели доверяют и любят нашу продукцию ')
+					+one-four-advantage('/img/3-0/icon_6.png', 'Высокий спрос на наши продукты гарантирует высокий оборот и увеличение среднего чека')
+					+one-four-advantage('/img/3-0/icon_7.png', 'Мы предлагаем выгодную систему оплаты и предоставляем отсрочку платежей')
+					+one-four-advantage('/img/3-0/icon_8.png', 'Обеспечиваем рекламное продвижение наших продуктов на рынке')

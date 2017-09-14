@@ -381,8 +381,8 @@ document.addEventListener('DOMContentLoaded', function () {
 					$modalContent.slick({
 						arrows: true,
 						dots: false,
-						slidesToShow: 8,
-						slidesToScroll: 8,
+						slidesToShow: 6,
+						slidesToScroll: 6,
 						infinite: true,
 						asNavFor: $modalContentImages,
 						focusOnSelect: true,
@@ -784,4 +784,127 @@ document.addEventListener('DOMContentLoaded', function () {
 		.siblings().removeClass('active')
 		.filter('[href=\'#' + id + '\']').addClass('active')
 	}
+
+	if ($('#partners-slider-wrapper').length) {
+		let $partnersSliderWrapper = $('#partners-slider-wrapper')
+		$partnersSliderWrapper.slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 6,
+			slidesToScroll: 6,
+			infinite: false,
+			focusOnSelect: false,
+			accessibility: false,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 4
+					}
+				},
+				{
+					breakpoint: 750,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3
+					}
+				},
+				{
+					breakpoint: 540,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		})
+
+		let partnersSlidesLength = $partnersSliderWrapper.find('.slick-dots li').length
+		$partnersSliderWrapper.append('<div class="slick-sum-slides">/ ' + partnersSlidesLength + '</div>')
+	}
+
 })
+
+
+var barChartData = {
+	labels: ["January", "February", "March", "April", "May", "June", "July"],
+	datasets: [{
+		label: 'Dataset 1',
+		backgroundColor: window.chartColors.red,
+		stack: 'Stack 0',
+		data: [
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor()
+		]
+	}, {
+		label: 'Dataset 2',
+		backgroundColor: window.chartColors.blue,
+		stack: 'Stack 0',
+		data: [
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor()
+		]
+	}, {
+		label: 'Dataset 3',
+		backgroundColor: window.chartColors.green,
+		stack: 'Stack 1',
+		data: [
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor(),
+			randomScalingFactor()
+		]
+	}]
+
+};
+
+
+window.onload = function() {
+	var ctx = document.getElementById("canvas").getContext("2d");
+	window.myBar = new Chart(ctx, {
+		type: 'bar',
+		data: barChartData,
+		options: {
+			title:{
+				display:true,
+				text:"Chart.js Bar Chart - Stacked"
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false
+			},
+			responsive: true,
+			scales: {
+				xAxes: [{
+					stacked: true,
+				}],
+				yAxes: [{
+					stacked: true
+				}]
+			}
+		}
+	});
+};
+
+document.getElementById('randomizeData').addEventListener('click', function() {
+	barChartData.datasets.forEach(function(dataset, i) {
+		dataset.data = dataset.data.map(function() {
+			return randomScalingFactor();
+		});
+	});
+	window.myBar.update();
+});

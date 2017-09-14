@@ -1,7 +1,6 @@
-var gulp = require('gulp');
-var config = require('../config');
-var imgIcons = config.src.img+'icons/*.*';
-var imgSvg = config.src.img+'svg/*.*';
+import gulp from 'gulp'
+import config from '../config'
+let  imgSvg = config.src.img+'svg/*.*';
 // copy static files
 gulp.task('copy', function() {
    gulp.src([config.src.img+'**/*.*', '!'+imgSvg])

@@ -8,6 +8,7 @@
     "browser-sync": "latest",
     "babel-core": "latest",
     "babel-preset-env": "latest",
+    "babel-register": "latest",
     "critical": "latest",
     "css-mqpacker": "latest",
     "cssnano": "latest",

@@ -1,6 +1,7 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var config = require('../config');
+import gulp from 'gulp'
+import browserSync from 'browser-sync'
+import config from '../config'
+
 //webserver
 gulp.task('server', function() {
     browserSync({
@@ -12,6 +13,7 @@ gulp.task('server', function() {
         notify: false,
         ghostMode: false,
         online: true,
-        open: true
+        open: "local",
+        logLevel: "info"
     });
 });

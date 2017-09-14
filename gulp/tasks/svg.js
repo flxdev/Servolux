@@ -1,13 +1,13 @@
-var gulp = require('gulp');
-var svgstore = require('gulp-svgstore');
-var config = require('../config');
-var inject = require('gulp-inject');
-var svgmin = require('gulp-svgmin');
-var rename = require('gulp-rename');
+import gulp from 'gulp'
+import svgstore from 'gulp-svgstore'
+import config from '../config'
+import inject from 'gulp-inject'
+import svgmin from 'gulp-svgmin'
+import rename from 'gulp-rename'
 
 gulp.task('svg', function() {
-    var target = gulp.src(config.src.pug + "/includes/_svg-template.pug");
-    var source = gulp.src(config.src.svg + '*.svg')
+    let target = gulp.src(config.src.pug + "/includes/_svg-template.pug"),
+        source = gulp.src(config.src.svg + '*.svg')
         .pipe(svgmin())
         .pipe(svgstore({ inlineSvg: true }));
 

@@ -1,12 +1,13 @@
-var gulp = require('gulp');
-var notify = require('gulp-notify');
-var iconfont = require("gulp-iconfont");
-var consolidate = require("gulp-consolidate");
-var config = require('../config');
-var browserSync = require('browser-sync');
-reload = browserSync.reload;
+import gulp from 'gulp';
+import notify from 'gulp-notify';
+import iconfont from "gulp-iconfont";
+import consolidate from "gulp-consolidate";
+import config from '../config';
+import browserSync from 'browser-sync';
 
-var fontname = 'svgfont';
+let reload = browserSync.reload;
+
+let fontname = 'svgfont';
 gulp.task('font', function(){
   return gulp.src(config.src.img+'svg/*.svg')
     // .pipe(svgmin())

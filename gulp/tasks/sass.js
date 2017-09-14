@@ -1,14 +1,14 @@
-var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('autoprefixer');
-var notify = require('gulp-notify');
-var mqpacker = require("css-mqpacker");
-var config = require('../config');
-var cssnano = require('cssnano');
-var rename = require('gulp-rename');
-var cssvariables = require('postcss-css-variables');
+import gulp from 'gulp'
+import postcss from 'gulp-postcss'
+import sass from 'gulp-sass'
+import autoprefixer from 'autoprefixer'
+import notify from 'gulp-notify'
+import mqpacker from "css-mqpacker"
+import config from '../config'
+import cssnano from 'cssnano'
+import rename from 'gulp-rename'
+import cssvariables from 'postcss-css-variables'
+import cache from 'gulp-cached'
 
 
 gulp.task('sass', function() {
@@ -44,13 +44,12 @@ gulp.task('sass', function() {
     ];
 
     return gulp.src(config.src.sass+'*.sass')
-    //.pipe(sourcemaps.init())
     .pipe(sass().on('error', notify.onError({
             title: 'Sass Error!',
             message: '<%= error.message %>'
         })))
     .pipe(postcss(processors))
-    //.pipe(sourcemaps.write('./'))
+    .pipe(cache('sassing'))
     .pipe(gulp.dest(config.dest.css))
     .pipe(postcss(processorsNano))
     .pipe(rename({

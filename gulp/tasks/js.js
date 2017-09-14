@@ -1,18 +1,18 @@
-var gulp = require('gulp')
-var include = require('gulp-include')
-var uglify = require('gulp-uglify')
-var eslint = require('gulp-eslint')
-var config = require('../config')
-var browserSync = require('browser-sync')
-var babel = require('gulp-babel')
-var cache = require('gulp-cached')
+import gulp from 'gulp'
+import include from 'gulp-include'
+import uglify from 'gulp-uglify'
+import eslint from 'gulp-eslint'
+import config from '../config'
+import browserSync from 'browser-sync'
+import babel from 'gulp-babel'
+import cache from 'gulp-cached'
+import error from './error'
 
-reload = browserSync.reload
-var rename = require('gulp-rename')
+let reload = browserSync.reload,
+  rename = require('gulp-rename')
 
 gulp.task('js', function () {
   gulp.src(config.src.js + '**/*.js')
-    .pipe(cache('linting'))
     .pipe(babel({
       presets: ['env']
     }))
@@ -23,8 +23,8 @@ gulp.task('js', function () {
     }))
     .pipe(eslint.format())
     .pipe(include())
-    .on('error', function () {notify('Javascript include error')})
-
+    .on('error', error)
+    .pipe(cache('jsing'))
     .pipe(gulp.dest(config.dest.js))
     .pipe(uglify())
     .pipe(rename({

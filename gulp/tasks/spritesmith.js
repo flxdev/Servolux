@@ -1,11 +1,10 @@
-var gulp = require('gulp');
-var notify = require('gulp-notify');
-var spritesmith = require('gulp.spritesmith');
-var config = require('../config');
-
+import gulp from 'gulp'
+import notify from 'gulp-notify'
+import spritesmith from 'gulp.spritesmith'
+import config from '../config'
 
 gulp.task('sprite', function() {
-    var spriteData = gulp.src(config.src.img + '/icons/*.png')
+    let spriteData = gulp.src(config.src.img + '/icons/*.png')
     .pipe(spritesmith({
         imgName: 'icons.png',
         cssName: '_sprite.sass',

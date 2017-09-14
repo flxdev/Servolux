@@ -1,7 +1,7 @@
-var gulp = require('gulp');
-var rimraf = require('rimraf');
-var config = require('../config');
-var gulpsync = require('gulp-sync')(gulp);
+import gulp from 'gulp'
+import rimraf from 'rimraf'
+import config from '../config'
+let gulpsync = require('gulp-sync')(gulp);
 
 gulp.task('watch', [
     'sprite:watch',
@@ -12,13 +12,6 @@ gulp.task('watch', [
     'svg:watch',
     'svgmin:watch'
 ]);
-
-gulp.task('sync', function (cb) {
-	// setTimeout может быть асинхронной задачей
-	setTimeout(function () {
-		cb();
-	}, 10000);
-});
 
 gulp.task('delete', function (cb) {
     rimraf('./'+config.dest.root, cb);
