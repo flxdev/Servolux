@@ -27,6 +27,7 @@
     "gulp-pug": "latest",
     "gulp-rename": "latest",
     "gulp-sourcemaps": "latest",
+    "gulp-sync": "latest",
     "gulp-svgmin": "latest",
     "gulp-svgstore": "latest",
     "gulp-uglify": "latest",

@@ -24,6 +24,7 @@ gulp.task('pug-all', function() {
         config.src.pug + '/*.pug', 
         '!' + config.src.pug + '/_*.pug', 
         '!' + config.src.pug + '/includes/*.pug'])
+        .pipe(cache('linting'))
         .pipe(plumber({errorHandler: notify.onError(function(error){return error.message;})}))
         .pipe(pug({pretty: true}))
         .pipe(gulp.dest(config.dest.html));
