@@ -13,13 +13,13 @@ function isMobile() {
 
 function initMap(mapArg, arrayOfPins) {
 	var $trel = $(mapArg),
-		element = document.getElementById('map'),
-		zoomIn = parseFloat(element.getAttribute('data-zoom')),
-		latcord = parseFloat(element.getAttribute('data-lat')),
-		loncord = parseFloat(element.getAttribute('data-lon')),
-		imgpath = element.getAttribute('data-icon'),
-		centercords = { lat: latcord, lng: loncord },
-		map = new google.maps.Map(element, {
+	    element = document.getElementById('map'),
+	    zoomIn = parseFloat(element.getAttribute('data-zoom')),
+	    latcord = parseFloat(element.getAttribute('data-lat')),
+	    loncord = parseFloat(element.getAttribute('data-lon')),
+	    imgpath = element.getAttribute('data-icon'),
+	    centercords = { lat: latcord, lng: loncord },
+	    map = new google.maps.Map(element, {
 			zoom: zoomIn,
 			minZoom: zoomIn,
 			center: centercords,
@@ -276,11 +276,11 @@ function initMap(mapArg, arrayOfPins) {
 		var STEPS = 10; // шаг
 		triggers.each(function () {
 			var _ = $(this),
-				ind = _.index();
+			    ind = _.index();
 			_.on('click', function () {
 				_.addClass('active').siblings().removeClass('active');
 				var lat = markers[ind].position.lat(),
-					lng = markers[ind].position.lng();
+				    lng = markers[ind].position.lng();
 				panTo(lat, lng);
 			});
 		});
@@ -303,27 +303,27 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	var docWindow = $(window),
-		vHeight = docWindow.height(),
-		headerMenu = $('#header-mainwrap'),
-		videoWrapper = $('#main-first-screen-fading-wrapper'),
-		screenWrapperHeight = $('#main-screen-wrapper').height(),
-		burger = $('#main-burger'),
-		screenLinks = $('#main-screen .screen-links-wrapper'),
-		mainTitleWrapperInner = $('#title-wrapper-inner'),
-		mainScreenTitle = $('#main-screen-title'),
-		mobile = isMobile(),
-		asideMenu = $('#aside-menu').length ? true : false,
-		hasParallax = $('#parallax').length ? true : false,
-		$parallax = void 0,
-		$parallaxImg = void 0,
-		parallaxImgHeight = void 0,
-		parallaxFieldViewTop = void 0,
-		parallaxFieldViewBottom = void 0,
-		parallaxFieldView = void 0,
-		scrollParallax = void 0,
-		topMenu = void 0,
-		menuItems = void 0,
-		scrollItems = void 0;
+	    vHeight = docWindow.height(),
+	    headerMenu = $('#header-mainwrap'),
+	    videoWrapper = $('#main-first-screen-fading-wrapper'),
+	    screenWrapperHeight = $('#main-screen-wrapper').height(),
+	    burger = $('#main-burger'),
+	    screenLinks = $('#main-screen .screen-links-wrapper'),
+	    mainTitleWrapperInner = $('#title-wrapper-inner'),
+	    mainScreenTitle = $('#main-screen-title'),
+	    mobile = isMobile(),
+	    asideMenu = $('#aside-menu').length ? true : false,
+	    hasParallax = $('#parallax').length ? true : false,
+	    $parallax = void 0,
+	    $parallaxImg = void 0,
+	    parallaxImgHeight = void 0,
+	    parallaxFieldViewTop = void 0,
+	    parallaxFieldViewBottom = void 0,
+	    parallaxFieldView = void 0,
+	    scrollParallax = void 0,
+	    topMenu = void 0,
+	    menuItems = void 0,
+	    scrollItems = void 0;
 
 	// Video append if not mobile
 	if (!isMobile() && videoWrapper.data('src')) {
@@ -347,8 +347,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if ($('#modal').length) {
 		var $modalContent = $('#modal-content'),
-			$brandProductsBlock = $('#brand-products-slider .products-slide'),
-			$modalContentImages = $('#modal-content-images');
+		    $brandProductsBlock = $('#brand-products-slider .products-slide'),
+		    $modalContentImages = $('#modal-content-images');
 
 		$brandProductsBlock.on('click', function () {
 			var slideno = $(this).data('slick-index');
@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 
 		var inst = $('#modal').remodal(),
-			$modal = $('#modal');
+		    $modal = $('#modal');
 
 		$(document).on('opened', '.remodal', function (e) {
 			if (inst.getState() == 'opened') {
@@ -587,15 +587,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Brands appender and changer
 	if ($('#brands').length) {
 		var elemsInView = [],
-			isPaused = false,
-			$brands = $('#brands'),
-			$brandsBlocks = $('#brands .brand-anim-block');
+		    isPaused = false,
+		    $brands = $('#brands'),
+		    $brandsBlocks = $('#brands .brand-anim-block');
 
 		$brandsBlocks.filter(function () {
 			var _this = $(this),
-				rand = Math.floor(Math.random() * (15000 - 8000)) + 8000,
-				brandCounter = 0,
-				elem = void 0;
+			    rand = Math.floor(Math.random() * (15000 - 8000)) + 8000,
+			    brandCounter = 0,
+			    elem = void 0;
 			// Brand appender
 			if (brandCounter < $brandsBlocks.length + 1) {
 				// Random element
@@ -658,8 +658,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Scheme rotator and activator
 	if ($('#scheme').length) {
 		var ell = 1,
-			$schemeButton = $('#scheme .scheme-button'),
-			$schemeSlides = $('#scheme-slider .scheme-slider__slide');
+		    $schemeButton = $('#scheme .scheme-button'),
+		    $schemeSlides = $('#scheme-slider .scheme-slider__slide');
 
 		$schemeButton.on('click', function () {
 			var _self = $(this);
@@ -687,8 +687,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if ($('#graphics').length) {
 		var chartButton = $('#chart-control .button'),
-			chartCurrent = 0,
-			chartParams = {
+		    chartCurrent = 0,
+		    chartParams = {
 				data: chartData[chartCurrent].values,
 				animate_on_load: true,
 				width: 600,
@@ -729,7 +729,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (asideMenu) {
 		$('.aside-menu-item').filter(function () {
 			var _asideItem = $(this),
-				itemId = _asideItem.attr('id');
+			    itemId = _asideItem.attr('id');
 			$('#aside-menu .aside-menu-wrapper').append('<a href="#' + itemId + '"><div class="aside-item-inner"><p>' + _asideItem.data('aside') + '</p></div></a>');
 		});
 
@@ -759,7 +759,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	function changeAsideMenu() {
 		var fromTop = docWindow.scrollTop() + 120,
-			cur = scrollItems.map(function (el) {
+		    cur = scrollItems.map(function (el) {
 				if (scrollItems[el].offset().top < fromTop) return scrollItems[el];
 			});
 		cur = cur[cur.length - 1];

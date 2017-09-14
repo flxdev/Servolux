@@ -54,3 +54,17 @@ block content
 					.one-half
 						.flex-img-wrapper
 							.flex-img(style='background-image: url("img/3-0/delivers-img.jpg")')
+				#partners-slider
+					.partners-slider-wrapper.slick-slider
+						- var partner = 0
+						mixin partners-slide
+							a(href='#modal').partners-slide.slick-slide
+								.slide-img
+									img(src="/img/3-0/partners/partner(" + partner + ").png" data-img="/img/1-1/slider-images/product(" + product + ").png" data-text="Молочная продукция компании «Кувшинка» N" + product + "" )
+							- partner++
+						+partners-slide
+						+partners-slide
+						+partners-slide
+						+partners-slide
+						+partners-slide
+						+partners-slide

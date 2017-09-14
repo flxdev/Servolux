@@ -3,6 +3,7 @@ var notify = require('gulp-notify');
 var plumber = require("gulp-plumber");
 var pug = require("gulp-pug");
 var config = require('../config');
+var cache = require('gulp-cached');
 // var changed = require("gulp-changed");
 
 gulp.task('pug', function() {
@@ -10,6 +11,7 @@ gulp.task('pug', function() {
             config.src.pug + '/*.pug', 
             '!' + config.src.pug + '/_*.pug', 
             '!' + config.src.pug + '/includes/*.pug'])
+        .pipe(cache('linting'))
         .pipe(plumber({errorHandler: notify.onError(function(error){return error.message;})}))
         // .pipe(changed(dest.html, {extension: '.html'}))
         .pipe(pug({pretty: true}))
