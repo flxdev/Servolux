@@ -7,12 +7,9 @@ gulp.task('watch', [
     'sass:watch',
     'copy:watch',
     'pug:watch',
-    // 'html:watch',
-    // 'font:watch',
     'js:watch',
     'svg:watch',
-    'svgmin:watch',
-    // 'critical:watch'
+    'svgmin:watch'
 ]);
 
 
@@ -20,4 +17,4 @@ gulp.task('delete', function (cb) {
     rimraf('./'+config.dest.root, cb);
 });
 gulp.task('default', ['server', 'watch'], function() {});
-gulp.task('build', ['html',/*'font',*/'sprite','copy','js','sass','svg','svgmin'], function() {});
+gulp.task('build', ['delete', 'pug','copy','js','sass','svg','svgmin'], function() {});

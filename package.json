@@ -14,6 +14,7 @@
     "css-mqpacker": "latest",
     "cssnano": "latest",
     "gulp": "latest",
+    "gulp-cached": "latest",
     "gulp-consolidate": "latest",
     "gulp-copy": "latest",
     "gulp-core": "latest",

@@ -1,9 +1,7 @@
 window.onload = function () {
-
   if ($('#main-video').length) {
     $('#main-video').get(0).play()
   }
-
 }
 
 function isMobile () {
