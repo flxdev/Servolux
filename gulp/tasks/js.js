@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var eslint = require('gulp-eslint');
 var config = require('../config');
 var browserSync = require('browser-sync');
+var babel = require('gulp-babel');
 
 reload = browserSync.reload;
 var rename = require('gulp-rename');
@@ -16,6 +17,9 @@ gulp.task('js', function () {
             configFile: 'gulp/tasks/jsconfig.json'
         }))
         .pipe(eslint.format())
+        .pipe(babel({
+          presets: ['es2015', 'es2017']
+        }))
         .pipe(include())
         .on('error', function(){notify("Javascript include error");}) 
 

@@ -1,11 +1,11 @@
 extends _layout
 
 block title
-    title Группа компаний Серволюкс
+    title Деятельность
 block config
     - var main = false
-    - var chart = true
-    - var map = true
+    - var chart = false
+    - var map = false
 block content
     #main-screen-wrapper.advancedPage
         #main-first-screen-fading-wrapper
@@ -63,7 +63,7 @@ block content
                                         .production-side-block-inner-text
                                             p.sub Объём производства престартерных комбикормов
             .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background: url('img/2-0/side-img(1).jpg')")
+                .side-block-img(style="background-image: url('img/2-0/side-img(1).jpg')")
         .box#production-bird.side-blocks.gray.right-side-block.aside-menu-item(data-aside="Племенное птицеводство")
             .block
                 .flex-block.right-side
@@ -85,7 +85,7 @@ block content
                                         .production-side-block-inner-text
                                             p.sub Птицы в живом весе в 2015 году
             .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background: url('img/2-0/side-img(2).jpg')")
+                .side-block-img(style="background-image: url('img/2-0/side-img(2).jpg')")
         .box#production-milk.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Производство продуктов питания")
             .block
                 .flex-block.left-side
@@ -94,4 +94,4 @@ block content
                             p.h2 Производство продуктов питания
                             p.annotation Наши предприятия производят широкую линейку молочных и мясных продуктов питания. Мы используем только своё сырьё и профессиональное европейское оборудование. Наши продукты не содержат сою и ГМО.
             .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background: url('img/2-0/side-img(3).jpg')")
+                .side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')")

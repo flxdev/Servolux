@@ -1,92 +1,97 @@
 input[type='number']
-	-moz-appearance: textfield;
+  -moz-appearance:textfield
+
 input[type='submit']
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none; 
+  -webkit-appearance:none
+  -moz-appearance:none
+  appearance:none
+
 input::-webkit-clear-button,
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button 
-	-webkit-appearance: none;
+input::-webkit-inner-spin-button
+  -webkit-appearance:none
+
 input[type="password"]
-	font: small-caption
-	line-height: 1.65
+  font: small-caption
+  line-height: 1.65
+
 input
-	box-shadow : none
-	font-family: $o
-	color: #000
-	+rem(font-size,16px)
-	+placeholder 
-		font-family: $o
-	&::-ms-clear
-		display: none;
+  box-shadow: none
+  font-family: $o
+  color: #000
+  +rem(font-size, 16px)
+  +placeholder
+    font-family: $o
+  &::-ms-clear
+    display:none
+
 svg
-	display: inline-block
-	max-width: 100%
-	max-height: 100%
+  display: inline-block
+  max-width: 100%
+  max-height: 100%
+
 button
-	background: 0 0
+  background: 0 0
 
 *
-	+box
-	-webkit-tap-highlight-color: transparent
-	+placeholder 
-		font-family: $o
-		+rem(font-size,16px)
+  +box
+  -webkit-tap-highlight-color: transparent
+  +placeholder
+    font-family: $o
+    +rem(font-size, 16px)
 
 textarea
-	resize: none
-	+placeholder 
-		font-family: $o
-		+rem(font-size,14px)
+  resize: none
+  +placeholder
+    font-family: $o
+    +rem(font-size, 14px)
+
 ul
-	li>a 
-		display: inline-block
-		width: 100%
+  li > a
+    display: inline-block
+    width: 100%
+
 html
-	font-size: 16px
-	line-height: 1
-	position: relative
-	+box
-	width: 100%
-	height: auto
-	overflow: auto
-	&.remodal-is-locked
-		&:after
-			position: fixed
-			display: block
-			width: 20px
-			height: 100vh
-			top: 0
-			right: 0
-			background-color: #fff
-			content: ''
-	+r(1150)
-		font-size: 15px
-	+r(992)
-		font-size: 14px
-	+r(480)
-		font-size: 13px
+  font-size: 16px
+  line-height: 1
+  position: relative
+  +box
+  width: 100%
+  height: auto
+  overflow: auto
+  &.remodal-is-locked
+    &:after
+      position: fixed
+      display: block
+      width: 20px
+      height: 100vh
+      top: 0
+      right: 0
+      background-color: #fff
+      content: ''
+  +r(1150)
+    font-size: 15px
+  +r(992)
+    font-size: 14px
+  +r(480)
+    font-size: 13px
+
 body
-	background-attachment: fixed
-	+box
-	+font-smoothing
-	text-rendering: optimizeLegibility
-	font-family: $o
-	min-width: 320px
-	min-height: 100vh
-	-webkit-overflow-scrolling: touch
-	position: relative
-	overflow-x: hidden
-	&.menu-stuck:not(.mobile)
-		overflow: hidden!important
-		padding-right: 18px
-	&.menu-mobile
-		overflow: hidden!important
-
-
-
-
+  background-attachment: fixed
+  +box
+  +font-smoothing
+  text-rendering: optimizeLegibility
+  font-family: $o
+  min-width: 320px
+  min-height: 100vh
+  -webkit-overflow-scrolling: touch
+  position: relative
+  overflow-x: hidden
+  &.menu-stuck:not(.mobile)
+    overflow: hidden !important
+    padding-right: 18px
+  &.menu-mobile
+    overflow: hidden !important
 
 //::-webkit-scrollbar-track
 //	background-color: #fff
@@ -100,679 +105,697 @@ body
 
 
 .hidden
-	display: none !important
+  display: none !important
 
 .href
-	transition: color 0.1s cubic-bezier(.445,.05,.55,.95)
+  transition: color 0.1s cubic-bezier(.445, .05, .55, .95)
 
 .svg-green
-	fill: $white
+  fill: $white
 
 .svg-blue
-	fill: $white
+  fill: $white
 
 .green
-	color: $green
+  color: $green
 
 .gray
-	background-color: $gray
-
+  background-color: $gray
 
 // --- Base Fonts Settings
 
 a
-	+ff('Roboto', 700, 18px)
-	color: $green
-	text-decoration: none
-	transition: color 0.1s cubic-bezier(.445,.05,.55,.95)
-	+rem(line-height, 24px)
-	&:active, &:hover
-		color: $active
+  +ff('Roboto', 700, 18px)
+  color: $green
+  text-decoration: none
+  transition: color 0.1s cubic-bezier(.445, .05, .55, .95)
+  +rem(line-height, 24px)
+  &:active, &:hover
+    color: $active
 
 h1
-	+ff('GothamPro', 800, 70px)
-	color: $text-h
+  +ff('GothamPro', 800, 70px)
+  color: $text-h
 
 .h1
-	+ff('GothamPro', 500, 70px)
-	color: $text-h
+  +ff('GothamPro', 500, 70px)
+  color: $text-h
 
 h2, .h2
-	+ff('GothamPro', 400, 38px)
-	color: $text-h
-	+rem(line-height, 48px)
-	margin-bottom: 20px
-	+r(400)
-		+rem(font-size, 30px)
+  +ff('GothamPro', 400, 38px)
+  color: $text-h
+  +rem(line-height, 48px)
+  margin-bottom: 20px
+  +r(400)
+    +rem(font-size, 30px)
+
 h3, .h3
-	+ff('Roboto', 400, 26px)
-	color: $text-annotation
-	+rem(line-height, 36px)
-	+rem(padding-top, 10px)
-	+rem(padding-bottom, 10px)
+  +ff('Roboto', 400, 26px)
+  color: $text-annotation
+  +rem(line-height, 36px)
+  +rem(padding-top, 10px)
+  +rem(padding-bottom, 10px)
+
 h4
-	+ff('Roboto', 700, 18px)
-	color: $green
+  +ff('Roboto', 700, 18px)
+  color: $green
+
 p
-	+ff('Roboto', 300, 18px)
-	color: $text-gray
-	+rem(line-height, 28px)
-	a
-		font-weight: inherit
+  +ff('Roboto', 300, 18px)
+  color: $text-gray
+  +rem(line-height, 28px)
+  a
+    font-weight: inherit
+
 p.annotation
-	+rem(font-size, 26px)
-	color: $text-annotation
-	+rem(line-height, 36px)
-	+r(992)
-		margin-bottom: 40px
+  +rem(font-size, 26px)
+  color: $text-annotation
+  +rem(line-height, 36px)
+  +r(992)
+    margin-bottom: 40px
+
 p.darker, a.darker
-	color: $text-darker
+  color: $text-darker
+
 p.sub
-	+ff('Roboto', 600, 16px)
-	+rem(line-height, 30px)
-	+rem(padding-top, 10px)
-	+rem(padding-bottom, 10px)
-	+r(992)
-		margin-bottom: 40px
+  +ff('Roboto', 600, 16px)
+  +rem(line-height, 30px)
+  +rem(padding-top, 10px)
+  +rem(padding-bottom, 10px)
+  +r(992)
+    margin-bottom: 40px
+
 p.caption
-	+rem(font-size, 16px)
-	color: $text-light-gray
-	+rem(line-height, 24px)
+  +rem(font-size, 16px)
+  color: $text-light-gray
+  +rem(line-height, 24px)
 
 p.brand-subtitle
-	+rem(font-size, 26px)
-	font-family: 'Roboto'
-	font-weight: 600
-	color: #484f42
-	margin-top: 10px
-	+rem(margin-bottom, 45px)
+  +rem(font-size, 26px)
+  font-family: 'Roboto'
+  font-weight: 600
+  color: #484f42
+  margin-top: 10px
+  +rem(margin-bottom, 45px)
 
 // --- End Base Fonts Settings
 
 
 .flex-block
-	display: flex
-	flex-wrap: wrap
-	&>*
-		position: relative
-	&:nth-of-type(2)
-		margin-top: 50px
-	&.column
-		flex-direction: column
-	&.space-between
-		justify-content: space-between
-		.one-half
-			width: auto
-			max-width: 50%
-	+r(992)
-		&:not(.row)
-			flex-direction: column
-			align-items: center
-	+r(400)
-		&:not(.row)
-			flex-direction: column
-	.one-half
-		width: 50%
-		+r(992)
-			width: 100%
-			margin: 0
-			padding: 0
-			&:nth-of-type(2)
-				margin: auto
-	.one-four
-		width: 25%
-		+r(992)
-			width: 50%
-			margin: 0
-			padding: 0
-			+rem(margin-top, 30px)
-			+rem(padding, 10px)
-		+r(400)
-			width: 50%
-			max-width: 250px
-
+  display: flex
+  flex-wrap: wrap
+  & > *
+    position: relative
+  &:nth-of-type(2)
+    margin-top: 50px
+  &.column
+    flex-direction: column
+  &.space-between
+    justify-content: space-between
+    .one-half
+      width: auto
+      max-width: 50%
+  +r(992)
+    &:not(.row)
+      flex-direction: column
+      align-items: center
+  +r(400)
+    &:not(.row)
+      flex-direction: column
+  .one-half
+    width: 50%
+    +r(992)
+      width: 100%
+      margin: 0
+      padding: 0
+      &:nth-of-type(2)
+        margin: auto
+  .one-four
+    width: 25%
+    +r(992)
+      width: 50%
+      margin: 0
+      padding: 0
+      +rem(margin-top, 30px)
+      +rem(padding, 10px)
+    +r(400)
+      width: 50%
+      max-width: 250px
 
 .animateThis
-	opacity: 0
+  opacity: 0
+
+.green-stick-top
+  position: relative
+  +rem(padding-top, 20px)
+  +rem(padding-bottom, 30px)
+  &:before
+    display: block
+    position: absolute
+    background-color: $green
+    content: ''
+    +rem(width, 27px)
+    +rem(height, 2px)
+    top: 0
+    left: 0
 
 .line-top
-	border-top: 1px solid $lineColor
+  border-top: 1px solid $lineColor
 
 #main-content
-	background-color: $white
-	position: relative
+  background-color: $white
+  position: relative
 
 .block-inner
-	padding-bottom: 50px
+  padding-bottom: 50px
 
 .box
-	width: 100%
-	+rem(padding-left, $sidestep)
-	+rem(padding-right, $sidestep)
-	+r(492)
-		+rem(padding-left, $sidestep - 20px)
-		+rem(padding-right, $sidestep - 20px)
-	.block
-		+rem(max-width, 1440px)
-		+rem(padding-left, 120px)
-		+rem(padding-right, 120px)
-		margin: auto
-		+rem(padding-top, 65px)
-		+rem(padding-bottom, 110px)
-		position: relative
-		&.medium-size
-			+rem(max-width, 1140px)
-			margin: auto
-		+r(1440)
-			+rem(padding-left, 60px)
-			+rem(padding-right, 60px)
-		+r(1024)
-			+rem(padding-left, 20px)
-			+rem(padding-right, 20px)
-		+r(500)
-			+rem(padding-left, 5px)
-			+rem(padding-right, 5px)
+  width: 100%
+  +rem(padding-left, $sidestep)
+  +rem(padding-right, $sidestep)
+  +r(492)
+    +rem(padding-left, $sidestep - 20px)
+    +rem(padding-right, $sidestep - 20px)
+  .block
+    +rem(max-width, 1440px)
+    +rem(padding-left, 120px)
+    +rem(padding-right, 120px)
+    margin: auto
+    +rem(padding-top, 65px)
+    +rem(padding-bottom, 110px)
+    position: relative
+    &.medium-size
+      +rem(max-width, 1140px)
+      margin: auto
+    +r(1440)
+      +rem(padding-left, 60px)
+      +rem(padding-right, 60px)
+    +r(1024)
+      +rem(padding-left, 20px)
+      +rem(padding-right, 20px)
+    +r(500)
+      +rem(padding-left, 5px)
+      +rem(padding-right, 5px)
+
 .brands-wrapper
-	margin-top: 60px
-	#brands, #company-brands-wrapper
-		display: flex
-		justify-content: center
-		flex-wrap: wrap
-		justify-content: flex-start
-		.brand
-			outline: 1px solid $lineColor
-			+rem(max-width, 199px)
-			+rem(min-width, 180px)
-			+rem(height, 220px)
-			margin-left: -1px
-			z-index: 0
-			display: inline-block
-			flex-grow: 1
-			position: relative
-			padding: 5px
-			margin-top: 1px
-			margin-left: 1px
-			+r(1024)
-				+rem(max-width, 200px)
-				+rem(min-width, 150px)
-			+r(992)
-				+rem(max-width, 260px)
-				+rem(min-width, 220px)
-			+r(492)
-				+rem(max-width, 320px)
-				+rem(min-width, 250px)
-			&:before
-				display: block
-				position: absolute
-				content: ''
-				bottom: -1px
-				left: -1px
-				width: 100%
-				height: 0
-				border-left: 1px solid $active
-				border-right: 1px solid $active
-				border-top: 1px solid transparent
-				border-bottom: 1px solid transparent
-				transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0s, border-bottom 0s 0.15s
-			.brand-anim-block
-				position: relative
-				width: 100%
-				bottom: 0
-			a
-				width: 100%
-				position: absolute
-				bottom: 0
-				left: 0
-				top: 0
-				right: 0
-				display: flex
-				justify-content: center
-				align-items: center
-				+rem(height, 210px)
-				+rem(padding, 20px)
-				img
-					+rem(max-width, 150px)
-					+rem(max-height, 95px)
-					display: inline-block
-					vertical-align: middle
-			&:hover
-				z-index: 2
-				&:before
-					height: 100%
-					border-top: 1px solid $active
-					border-bottom: 1px solid $active
-					transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0.15s, border-bottom 0s 0s
+  margin-top: 60px
+  #brands, #company-brands-wrapper
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    justify-content: flex-start
+    .brand
+      outline: 1px solid $lineColor
+      +rem(max-width, 199px)
+      +rem(min-width, 180px)
+      +rem(height, 220px)
+      margin-left: -1px
+      z-index: 0
+      display: inline-block
+      flex-grow: 1
+      position: relative
+      padding: 5px
+      margin-top: 1px
+      margin-left: 1px
+      +r(1024)
+        +rem(max-width, 200px)
+        +rem(min-width, 150px)
+      +r(992)
+        +rem(max-width, 260px)
+        +rem(min-width, 220px)
+      +r(492)
+        +rem(max-width, 320px)
+        +rem(min-width, 250px)
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        bottom: -1px
+        left: -1px
+        width: 100%
+        height: 0
+        border-left: 1px solid $active
+        border-right: 1px solid $active
+        border-top: 1px solid transparent
+        border-bottom: 1px solid transparent
+        transition: height 0.15s cubic-bezier(.445, .05, .55, .95), border-top 0s 0s, border-bottom 0s 0.15s
+      .brand-anim-block
+        position: relative
+        width: 100%
+        bottom: 0
+      a
+        width: 100%
+        position: absolute
+        bottom: 0
+        left: 0
+        top: 0
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        +rem(height, 210px)
+        +rem(padding, 20px)
+        img
+          +rem(max-width, 150px)
+          +rem(max-height, 95px)
+          display: inline-block
+          vertical-align: middle
+      &:hover
+        z-index: 2
+        &:before
+          height: 100%
+          border-top: 1px solid $active
+          border-bottom: 1px solid $active
+          transition: height 0.15s cubic-bezier(.445, .05, .55, .95), border-top 0s 0.15s, border-bottom 0s 0s
 
 .text-wrap
-	+rem(max-width, 520px)
-	+r(992)
-		max-width: 100%
+  +rem(max-width, 520px)
+  +r(992)
+    max-width: 100%
 
 .count
-	+rem(max-width, 200px)
-	color: $white
-	.h2
-		+rem(font-size, 70px)
-		font-weight: 500
-		color: $white
-		+r(400)
-			+rem(font-size, 60px)
-	.count-sub
-		font-weight: 600
-		opacity: 0.5
-		+rem(line-height, 28px)
-		+rem(margin-top, 20px)
-		+r(400)
-			+rem(font-size, 17px)
-
+  +rem(max-width, 200px)
+  color: $white
+  .h2
+    +rem(font-size, 70px)
+    font-weight: 500
+    color: $white
+    +r(400)
+      +rem(font-size, 60px)
+  .count-sub
+    font-weight: 600
+    opacity: 0.5
+    +rem(line-height, 28px)
+    +rem(margin-top, 20px)
+    +r(400)
+      +rem(font-size, 17px)
 
 #parallax
-	h1, h2, h3, h4, p, .h2
-		color: $white
-
+  h1, h2, h3, h4, p, .h2
+    color: $white
 
 .button-green-wrapper
-	display: inline-block
+  display: inline-block
+
 a.button-green
-	display: flex
-	position: relative
-	justify-content: flex-start
-	margin-top: 45px
-	color: $green
-	background-color: transparent
-	border: 1px solid $text-light-gray
-	+rem(border-radius, 1000px)
-	transition: border 0.2s ease-in, background-color 0.2s cubic-bezier(.445,.05,.55,.95)
-	overflow: hidden
-	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
-	+r(992)
-		margin-top: 0
-	&:hover
-		border: 1px solid transparent
-		background-color: $active
-		p
-			color: $white
-		.button-green__text-block__circle
-			.button-fill-round
-				fill: $white
-			.button-fill-arrow
-				transform: translatex(40px)
-				&.blue
-					transform: translatex(0px)
-	.button-green__text-block
-		position: relative
-		+rem(padding-right, 50px)
-		+rem(padding-top, 12px)
-		+rem(padding-left, 20px)
-		+rem(border-radius, 50px)
-		+rem(padding-bottom, 11px)
-		transition: transform 0.3s cubic-bezier(.445,.05,.55,.95)
-	p
-		+rem(line-height, 16px)
-		+rem(font-size, 16px)
-		word-wrap: normal
-		word-break: keep-all
-		white-space: nowrap
-		color: $green
-		transition: color 0.2s cubic-bezier(.445,.05,.55,.95)
-	.button-green__text-block__circle
-		display: block
-		position: absolute
-		+rem(width, 30px)
-		+rem(height, 30px)
-		+rem(right, 5px)
-		+rem(top, 5px)
-		svg
-			position: relative
-		.button-fill-round
-			fill-rule: evenodd
-			clip-rule:e venodd
-			fill: $green
-			transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
-		.button-fill-arrow
-			fill-rule: evenodd
-			clip-rule: evenodd
-			fill: none
-			stroke: $white
-			stroke-width: 1.8
-			stroke-miterlimit: 10
-			position: absolute
-			transition: transform 0.2s cubic-bezier(.445,.05,.55,.95)
-			&.blue
-				transform: translatex(-40px)
-				stroke: $active
+  display: flex
+  position: relative
+  justify-content: flex-start
+  margin-top: 45px
+  color: $green
+  background-color: transparent
+  border: 1px solid $text-light-gray
+  +rem(border-radius, 1000px)
+  transition: border 0.2s ease-in, background-color 0.2s cubic-bezier(.445, .05, .55, .95)
+  overflow: hidden
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)
+  +r(992)
+    margin-top: 0
+  &:hover
+    border: 1px solid transparent
+    background-color: $active
+    p
+      color: $white
+    .button-green__text-block__circle
+      .button-fill-round
+        fill: $white
+      .button-fill-arrow
+        transform: translatex(40px)
+        &.blue
+          transform: translatex(0px)
+  .button-green__text-block
+    position: relative
+    +rem(padding-right, 50px)
+    +rem(padding-top, 12px)
+    +rem(padding-left, 20px)
+    +rem(border-radius, 50px)
+    +rem(padding-bottom, 11px)
+    transition: transform 0.3s cubic-bezier(.445, .05, .55, .95)
+  p
+    +rem(line-height, 16px)
+    +rem(font-size, 16px)
+    word-wrap: normal
+    word-break: keep-all
+    white-space: nowrap
+    color: $green
+    transition: color 0.2s cubic-bezier(.445, .05, .55, .95)
+  .button-green__text-block__circle
+    display: block
+    position: absolute
+    +rem(width, 30px)
+    +rem(height, 30px)
+    +rem(right, 5px)
+    +rem(top, 5px)
+    svg
+      position: relative
+    .button-fill-round
+      fill-rule: evenodd
+      clip-rule:e venodd
+      fill: $green
+      transition: fill 0.2s cubic-bezier(.445, .05, .55, .95)
+    .button-fill-arrow
+      fill-rule: evenodd
+      clip-rule: evenodd
+      fill: none
+      stroke: $white
+      stroke-width: 1.8
+      stroke-miterlimit: 10
+      position: absolute
+      transition: transform 0.2s cubic-bezier(.445, .05, .55, .95)
+      &.blue
+        transform: translatex(-40px)
+        stroke: $active
 
 .search
-	margin: auto
-	+rem(max-width, 480px)
-	position: relative
-	+r(768)
-		width: 250px
-	+r(480)
-		width: 84%
-	form
-		+rem(max-width, 480px)
-		position: relative
-		+rem(height, 43px)
-	input
-		border: none
-		background: none
-		height: 100%
-		width: 100%
-		padding-left: 20px
-		padding-right: 50px
-		position: absolute
-		+rem(height, 43px)
-		z-index: 1
-		+placeholder
-			color: $text-light-gray
-		&:focus
-			& + label
-				border: 1px solid $green
-			& ~ .search-icon
-				opacity: 1
-				cursor: pointer
-				z-index: 10000
-				&:hover
-					.seach-loop
-						stroke: $active
-					.search-stick
-						fill: $active
-	label
-		width: 100%
-		display: block
-		border: 1px solid #d0d0d0
-		border-radius: 50px
-		+rem(height, 43px)
-		position: relative
-		pointer-events: none
-		z-index: 1
-	.search-icon
-		opacity: 0.2
-		+rem(width, 20px)
-		position: absolute
-		+rem(right, 20px)
-		+rem(top, 2px)
-		display: block
-		height: 100%
-		.seach-loop
-			fill-rule: evenodd
-			clip-rule: evenodd
-			fill: none
-			stroke: #484F42
-			stroke-width: 1.5
-			stroke-linecap: round
-			stroke-linejoin: round
-			stroke-miterlimit: 10
-			transition: stroke 0.1s cubic-bezier(.445,.05,.55,.95)
-		.search-stick
-			fill: #484F42
-			transition: fill 0.1s cubic-bezier(.445,.05,.55,.95)
-
+  margin: auto
+  +rem(max-width, 480px)
+  position: relative
+  +r(768)
+    width: 250px
+  +r(480)
+    width: 84%
+  form
+    +rem(max-width, 480px)
+    position: relative
+    +rem(height, 43px)
+  input
+    border: none
+    background: none
+    height: 100%
+    width: 100%
+    padding-left: 20px
+    padding-right: 50px
+    position: absolute
+    +rem(height, 43px)
+    z-index: 1
+    +placeholder
+      color: $text-light-gray
+    &:focus
+      & + label
+        border: 1px solid $green
+      & ~ .search-icon
+        opacity: 1
+        cursor: pointer
+        z-index: 10000
+        &:hover
+          .seach-loop
+            stroke: $active
+          .search-stick
+            fill: $active
+  label
+    width: 100%
+    display: block
+    border: 1px solid #d0d0d0
+    border-radius: 50px
+    +rem(height, 43px)
+    position: relative
+    pointer-events: none
+    z-index: 1
+  .search-icon
+    opacity: 0.2
+    +rem(width, 20px)
+    position: absolute
+    +rem(right, 20px)
+    +rem(top, 2px)
+    display: block
+    height: 100%
+    .seach-loop
+      fill-rule: evenodd
+      clip-rule: evenodd
+      fill: none
+      stroke: #484F42
+      stroke-width: 1.5
+      stroke-linecap: round
+      stroke-linejoin: round
+      stroke-miterlimit: 10
+      transition: stroke 0.1s cubic-bezier(.445, .05, .55, .95)
+    .search-stick
+      fill: #484F42
+      transition: fill 0.1s cubic-bezier(.445, .05, .55, .95)
 
 main
-	width: 100%
-	margin: auto
+  width: 100%
+  margin: auto
 
 // Menu
 
 #header-mainwrap
-	z-index: 999
-	left: 0
-	top: 0
-	width: 100%
-	position: absolute
-	background-color: #FFF
-	.boxed
-		position: relative
-		z-index: 999
-		height: 0px
-		.logo-wrapper
-			+rem(width, 198px)
-			+rem(height, 21px)
-			position: absolute
-			+rem(left, $sidestep)
-			+rem(top, $topstep)
-			z-index: 100
-			.logo
-				height: 100%
-		.burger-menu
-			cursor: pointer
-			position: absolute
-			+rem(right, $sidestep)
-			+rem(top, $topstep - 7px)
-			+rem(height, 36px)
-			+rem(padding-top, 15px)
-			padding-left: 10px
-			padding-right: 10px
-			z-index: 100
-			&:before, &:after
-				display: block
-				content: ''
-				+rem(width, 35px)
-				height: 2px
-				background-color: $white
-				transition: transform 0.2s ease-in
-			&:before
-				transform: translate(0, -5px)
-			&:after
-				transform: translate(0, 5px)
-			&:hover
-				&:before, &:after, .burger-stick
-					background-color: $active
-			.burger-stick
-				+rem(width, 35px)
-				height: 2px
-				background-color: $white
-				transition: transform 0.2s ease-in, opacity 0.2s
-		.header-menu
-			z-index: 100
-			overflow: hidden
-			+rem(max-height, 120px)
-			nav
-				position: absolute
-				pointer-events: auto
-				+rem(right, $sidestep+35px+$sidestep)
-				+rem(top, $topstep - 6px)
-				+r(992)
-					display: none
-				.nav-href
-					color: $white
-					display: inline-block
-					line-height: 36px
-					+ff('Roboto', 600, 18px)
-					+rem(height, 37px)
-					+rem(padding-left, 16px)
-					+rem(padding-right, 16px)
-					+rem(margin-right, 7px)
-					border-radius: 5px
-					position: relative
-					z-index: 2
-					&:after
-						content: ''
-						display: block
-						position: absolute
-						width: 100%
-						height: 100%
-						top: 0
-						left: 0
-						background-color: $active
-						opacity: 0
-						transform: scale(1.05)
-						transition: transform 0.15s cubic-bezier(.445,.05,.55,.95), opacity 0.15s cubic-bezier(.445,.05,.55,.95)
-						border-radius: 5px
-						z-index: -1
-					&:hover, &:focus
-						&:after
-							transform: scale(1)
-							opacity: 1
-					&.active
-						&:after
-							transform: scale(1)
-							opacity: 1
-							background-color: $green
-			.header-menu-modal
-				background-color: $white
-				opacity: 0
-				width: 100%
-				position: relative
-				z-index: 2
-				transition: transform 0.3s ease-out 0.05s, opacity 0.1s ease-in 0s
-				transform: translate(0px, -100%)
-				padding-top: 80px
-				min-height: 700px
-				padding-bottom: 50px
-				.menu-modal-wrap
-					width: 100%
-					height: 100%
-					.menu-modal-top
-						position: absolute
-						width: 100%
-						+rem(top, $topstep - 11px)
-						+r(480)
-							+rem(top, $topstep + 60px)
-					.menu-modal-middle
-						display: flex
-						position: relative
-						align-items: center
-						min-height: 500px
-						+r(992)
-							background-color: $white
-							padding-bottom: 50px
-							height: auto
-						.menu-columns
-							display: flex
-							+rem(max-width, 1400px)
-							margin: auto
-							justify-content: space-between
-							background-color: $white
-							+r(992)
-								display: block
-								+rem(margin-top, 80px)
-								width: 100%
-							.column
-								+rem(max-width, 290px)
-								display: inline-block
-								+rem(padding-top, 20px)
-								+rem(padding-left, $sidestep+10px)
-								+rem(padding-right, $sidestep+10px)
-								+r(992)
-									display: block
-									padding-top: 0
-								.column-href
-									+ff('Roboto', 400, 26px)
-									color: $text-h
-									display: block
-									margin-top: 2vh
-									margin-bottom: 2vh
-									+rem(line-height, 36px)
-									+r(992)
-										+rem(margin-top, 34px)
-									&:hover, &:active
-										color: $active
-								.column-sub-hrefs
-									+r(992)
-										display: none
-									li
-										display: block
-									a
-										+ff('Roboto', 400, 18px)
-										display: block
-										padding-top: 0.9vh
-										padding-bottom: 0.9vh
-										+rem(line-height, 28px)
-										color: $text-annotation
-										&:hover, &:active
-											color: $active
-	&.sticked
-		position: fixed
-		top: 0
-		will-change: transform
-		.logo-wrapper
-			+rem(top, $topstep - 17px)
-		.svg-green
-			fill: $svg-green
-		.svg-blue
-			fill: $svg-blue
-		.search
-			+rem(top, $topstep - 60px)
-		.header-menu-modal
-			.menu-modal-wrap
-				.menu-modal-top
-					.change-lang
-						+rem(top, $topstep - 50px)
-		.boxed
-			.header-menu
-				+rem(height, 75px)
-				background-color: $white
-				box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1)
-				nav
-					+rem(top, $topstep - 26px)
-					a:not(.active)
-						color: $text-h
-						&:hover
-							color: $white
-			#main-burger
-				+rem(top, $topstep - 25px)
-				&:before, &:after, .burger-stick
-					background-color: $text-h
-	&.active
-		&:before
-			position: fixed
-			content: ''
-			display: block
-			bottom: 0
-			left: 0
-			width: 100%
-			height: 100vh
-			background-color: #333
-			z-index: 999
-			opacity: .5
-			will-change: transform
-		nav
-			padding-right: 18px
-		.boxed
-			height: 100vh
-			overflow-y: auto
-			max-height: 100vh
-			background-color: #fff
-			.logo-wrapper
-				.logo
-					+rem(left, $sidestep - 20px)
-					+r(492)
-						+rem(left, $sidestep - 20px)
-					.svg-green
-						fill: $svg-green
-					.svg-blue
-						fill: $svg-blue
-			.burger-menu
-				+rem(right, $sidestep+20px)
-				+r(492)
-					+rem(right, $sidestep - 20px)
-				&:before
-					transform: translate(0, 2px) rotate(45deg)
-					background-color: $text-h
-				&:after
-					transform: translate(0, -2px) rotate(-45deg)
-					background-color: $text-h
-				.burger-stick
-					transform: translate(-20px, 0)
-					opacity: 0
-					background-color: $text-h
-			.header-menu
-				position: relative
-				height: auto
-				max-height: none
-				pointer-events: auto
-				.header-menu-modal
-					transform: translate(0px, 0px)
-					transition: transform 0.3s ease-out 0s, opacity 0.2s ease-in 0.1s
-					visibility: visible
-					opacity: 1
-					min-height: 100vh
-					display: flex
-					justify-content: center
-					align-items: center
+  z-index: 999
+  left: 0
+  top: 0
+  width: 100%
+  position: absolute
+  background-color: #FFF
+  .boxed
+    position: relative
+    z-index: 999
+    height: 0px
+    .logo-wrapper
+      +rem(width, 198px)
+      +rem(height, 21px)
+      position: absolute
+      +rem(left, $sidestep)
+      +rem(top, $topstep)
+      z-index: 100
+      .logo
+        height: 100%
+    .burger-menu
+      cursor: pointer
+      position: absolute
+      +rem(right, $sidestep)
+      +rem(top, $topstep - 7px)
+      +rem(height, 36px)
+      +rem(padding-top, 15px)
+      padding-left: 10px
+      padding-right: 10px
+      z-index: 100
+      &:before, &:after
+        display: block
+        content: ''
+        +rem(width, 35px)
+        height: 2px
+        background-color: $white
+        transition: transform 0.2s ease-in
+      &:before
+        transform: translate(0, -5px)
+      &:after
+        transform: translate(0, 5px)
+      &:hover
+        &:before, &:after, .burger-stick
+          background-color: $active
+      .burger-stick
+        +rem(width, 35px)
+        height: 2px
+        background-color: $white
+        transition: transform 0.2s ease-in, opacity 0.2s
+    .header-menu
+      z-index: 100
+      overflow: hidden
+      +rem(max-height, 120px)
+      nav
+        position: absolute
+        pointer-events: auto
+        +rem(right, $sidestep+35px+$sidestep)
+        +rem(top, $topstep - 6px)
+        +r(992)
+          display: none
+        .nav-href
+          color: $white
+          display: inline-block
+          line-height: 36px
+          +ff('Roboto', 600, 18px)
+          +rem(height, 37px)
+          +rem(padding-left, 16px)
+          +rem(padding-right, 16px)
+          +rem(margin-right, 7px)
+          border-radius: 5px
+          position: relative
+          z-index: 2
+          &:after
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background-color: $active
+            opacity: 0
+            transform: scale(1.05)
+            transition: transform 0.15s cubic-bezier(.445, .05, .55, .95), opacity 0.15s cubic-bezier(.445, .05, .55, .95)
+            border-radius: 5px
+            z-index: -1
+          &:hover, &:focus
+            &:after
+              transform: scale(1)
+              opacity: 1
+          &.active
+            &:after
+              transform: scale(1)
+              opacity: 1
+              background-color: $green
+      .header-menu-modal
+        background-color: $white
+        opacity: 0
+        width: 100%
+        position: relative
+        z-index: 2
+        transition: transform 0.3s ease-out 0.05s, opacity 0.1s ease-in 0s
+        transform: translate(0px, -100%)
+        padding-top: 80px
+        min-height: 700px
+        padding-bottom: 50px
+        .menu-modal-wrap
+          width: 100%
+          height: 100%
+          .menu-modal-top
+            position: absolute
+            width: 100%
+            +rem(top, $topstep - 11px)
+            +r(480)
+              +rem(top, $topstep + 60px)
+          .menu-modal-middle
+            display: flex
+            position: relative
+            align-items: center
+            min-height: 500px
+            +r(992)
+              background-color: $white
+              padding-bottom: 50px
+              height: auto
+            .menu-columns
+              display: flex
+              +rem(max-width, 1400px)
+              margin: auto
+              justify-content: space-between
+              background-color: $white
+              +r(992)
+                display: block
+                +rem(margin-top, 80px)
+                width: 100%
+              .column
+                +rem(max-width, 290px)
+                display: inline-block
+                +rem(padding-top, 20px)
+                +rem(padding-left, $sidestep+10px)
+                +rem(padding-right, $sidestep+10px)
+                +r(992)
+                  display: block
+                  padding-top: 0
+                .column-href
+                  +ff('Roboto', 400, 26px)
+                  color: $text-h
+                  display: block
+                  margin-top: 2vh
+                  margin-bottom: 2vh
+                  +rem(line-height, 36px)
+                  +r(992)
+                    +rem(margin-top, 34px)
+                  &:hover, &:active
+                    color: $active
+                .column-sub-hrefs
+                  +r(992)
+                    display: none
+                  li
+                    display: block
+                  a
+                    +ff('Roboto', 400, 18px)
+                    display: block
+                    padding-top: 0.9vh
+                    padding-bottom: 0.9vh
+                    +rem(line-height, 28px)
+                    color: $text-annotation
+                    &:hover, &:active
+                      color: $active
+  &.sticked
+    position: fixed
+    top: 0
+    will-change: transform
+    .logo-wrapper
+      +rem(top, $topstep - 17px)
+    .svg-green
+      fill: $svg-green
+    .svg-blue
+      fill: $svg-blue
+    .search
+      +rem(top, $topstep - 60px)
+    .header-menu-modal
+      .menu-modal-wrap
+        .menu-modal-top
+          .change-lang
+            +rem(top, $topstep - 50px)
+    .boxed
+      .header-menu
+        +rem(height, 75px)
+        background-color: $white
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1)
+        nav
+          +rem(top, $topstep - 26px)
+          a:not(.active)
+            color: $text-h
+            &:hover
+              color: $white
+      #main-burger
+        +rem(top, $topstep - 25px)
+        &:before, &:after, .burger-stick
+          background-color: $text-h
+  &.active
+    &:before
+      position: fixed
+      content: ''
+      display: block
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100vh
+      background-color: #333
+      z-index: 999
+      opacity: .5
+      will-change: transform
+    nav
+      padding-right: 18px
+    .boxed
+      height: 100vh
+      overflow-y: auto
+      max-height: 100vh
+      background-color: #fff
+      .logo-wrapper
+        .logo
+          +rem(left, $sidestep - 20px)
+          +r(492)
+            +rem(left, $sidestep - 20px)
+          .svg-green
+            fill: $svg-green
+          .svg-blue
+            fill: $svg-blue
+      .burger-menu
+        +rem(right, $sidestep+20px)
+        +r(492)
+          +rem(right, $sidestep - 20px)
+        &:before
+          transform: translate(0, 2px) rotate(45deg)
+          background-color: $text-h
+        &:after
+          transform: translate(0, -2px) rotate(-45deg)
+          background-color: $text-h
+        .burger-stick
+          transform: translate(-20px, 0)
+          opacity: 0
+          background-color: $text-h
+      .header-menu
+        position: relative
+        height: auto
+        max-height: none
+        pointer-events: auto
+        .header-menu-modal
+          transform: translate(0px, 0px)
+          transition: transform 0.3s ease-out 0s, opacity 0.2s ease-in 0.1s
+          visibility: visible
+          opacity: 1
+          min-height: 100vh
+          display: flex
+          justify-content: center
+          align-items: center
 
 // Menu end
 
@@ -781,470 +804,463 @@ main
 
 
 #main-screen-wrapper
-	height: 100vh
-	width: 100%
-	margin: 0
-	padding: 0
-	position: relative
-	overflow: hidden
-	+r(1024)
-		height: auto
-		+rem(min-height, 500px)
-	+r(492)
-		+rem(min-height, 380px)
-	&.advancedPage
-		background-position: 50% 50%
-		background-size: cover
-		background-repeat: no-repeat
-		+rem(height, 420px)
-		#main-first-screen-fading-wrapper
-			.firstScreenFading
-				position: absolute
-				top: 0
-				left: 50%
-				min-width: 100%
-				right: 0
-				bottom: 0
-				margin: auto
-				transform: translate(-50%, -50%) scale(1.2)
-		#main-screen
-			margin: auto
-			+rem(max-width, 1440px)
-			+rem(padding-left, 120px)
-			+rem(padding-right, 120px)
-			#main-screen-title
-				+rem(top, 185px)
-				+rem(max-width, 1440px)
-				margin: auto
-				position: relative
-				#title-wrapper
-					transition: none
-					p.title-main
-						text-align: left
-						+rem(font-size, 70px)
-						+rem(line-height, 55px)
-						letter-spacing: 1px
-					.bread
-						a
-							+rem(font-size, 16px)
-							color: #fff
-							opacity: 0.5
-							display: inline-block
-							position: relative
-							+rem(padding-right, 16px)
-							transition: opacity .2s, color .2s
-							font-weight: 400
-							+rem(margin-bottom, 20px)
-							+rem(margin-right, 10px)
-							&:after
-								content: '/'
-								display: block
-								position: absolute
-								right: 0
-								top: 0
-							&:hover
-								color: $active
-								opacity: 1
-	#main-first-screen-fading-wrapper
-		position: fixed
-		width: 100%
-		will-change: transform
-		height: 100vh
-		z-index: -1
-		.filter
-			position: absolute
-			width: 100%
-			height: 100vh
-			background-color: $green-place
-			opacity: 0.3
-		video
-			min-width: 100%
-			min-height: 100vh
-			position: absolute
-			z-index: -200
-			left: 0
-			right: 0
-			margin: auto
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%) scale(1.2)
-			opacity: 1
-			will-change: transform
-		.video-poster
-			min-width: 100%
-			min-height: 100vh
-			position: absolute
-			+vcenter
-	#main-screen
-		width: 100%
-		height: 100%
-		overflow: hidden
-		position: relative
-		+r(992)
-			height: auto
-			+rem(min-height, 500px)
-		+r(492)
-			+rem(min-height, 380px)
-		.line
-			position: absolute
-			height: 100%
-			width: 1px
-			background-color: #fff
-			top: 0
-			right: 0
-			opacity: 0.2
-		#main-screen-title
-			position: absolute
-			top: 0
-			bottom: 0
-			margin: auto
-			width: 100%
-			+rem(height, 200px)
-			#title-wrapper
-				#title-wrapper-inner
-					transform: scale(1)
-					transition: transform 0.6s cubic-bezier(.445,.05,.55,.95)
-					&.active
-						transform: scale(0.7)
-				+r(992)
-					max-width: 100%
-					position: absolute
-					left: 0
-					right: 0
-					top: 0
-					bottom: 0
-					margin: auto
-					+rem(margin-top, 50px)
-				+r(480)
-					+rem(margin-top, 80px)
-			.title-sup
-				+ff('GothamPro', 800, 50px)
-				text-transform: uppercase
-				color: #e7e8d6
-				text-align: center
-				+rem(margin-bottom, 100px)
-				+rem(line-height, 0px)
-				+r(992)
-					+rem(font-size, 25px)
-					+rem(margin-bottom, 55px)
-				+r(480)
-					+rem(font-size, 24px)
-					+rem(margin-bottom, 50px)
-			.title-main
-				+ff('GothamPro', 800, 140px)
-				text-transform: uppercase
-				color: $white
-				text-align: center
-				+rem(line-height, 0px)
-				+r(992)
-					+rem(font-size, 70px)
-				+r(480)
-					+rem(font-size, 52px)
-		.screen-links-wrapper
-			display: flex
-			position: relative
-			+r(992)
-				display: none!important
-			.screen-link
-				width: 33%
-				flex-grow: 1
-				height: 100vh
-				position: relative
-				overflow: hidden
-				img
-					transform: translate(0px, 200px) scale(0.2)
-					position: absolute
-					opacity: 0
-					transition: transform 0.4s ease-out, opacity 0.6s ease-out
-					width: 100%
-					min-height: 100%
-				&:nth-of-type(2)
-					.screen-link-text
-						animation-delay: 0.3s
-				&:nth-of-type(3)
-					.screen-link-text
-						animation-delay: 0.4s
-				.screen-link-text
-					position: absolute
-					z-index: 2
-					+rem(height, 200px)
-					+rem(width, 240px)
-					margin: auto
-					left: 0
-					right: 0
-					text-align: center
-					bottom: 0
-					animation-delay: 0.2s
-					.screen-link-title
-						position: absolute
-						left: 0
-						right: 0
-						margin: auto
-						color: $white
-						+ff('GothamPro', 400, 26px)
-						transform: translate(0, 80px)
-						transition: transform 0.4s ease-out
-					p
-						position: absolute
-						left: 0
-						right: 0
-						margin: auto
-						opacity: 0
-						transform: translate(0, 120px)
-						transition: transform 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.1s
-						color: $white
-						+rem(font-size, 16px)
-						font-weight: 600
-						+rem(line-height, 30px)
-					&:hover
-						&+img
-							transform: translate(0,0) scale(1)
-							opacity: 1
-						.screen-link-title
-							transform: translate(0, 40px)
-						p
-							transform: translate(0, 80px)
-							opacity: 1
-
-
-
+  height: 100vh
+  width: 100%
+  margin: 0
+  padding: 0
+  position: relative
+  overflow: hidden
+  +r(1024)
+    height: auto
+    +rem(min-height, 500px)
+  +r(492)
+    +rem(min-height, 380px)
+  &.advancedPage
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+    +rem(height, 420px)
+    #main-first-screen-fading-wrapper
+      .firstScreenFading
+        position: absolute
+        top: 0
+        left: 50%
+        min-width: 100%
+        right: 0
+        bottom: 0
+        margin: auto
+        transform: translate(-50%, -50%) scale(1.2)
+    #main-screen
+      margin: auto
+      +rem(max-width, 1440px)
+      +rem(padding-left, 120px)
+      +rem(padding-right, 120px)
+      #main-screen-title
+        +rem(top, 185px)
+        +rem(max-width, 1440px)
+        margin: auto
+        position: relative
+        #title-wrapper
+          transition: none
+          p.title-main
+            text-align: left
+            +rem(font-size, 70px)
+            +rem(line-height, 55px)
+            letter-spacing: 1px
+          .bread
+            a
+              +rem(font-size, 16px)
+              color: #fff
+              opacity: 0.5
+              display: inline-block
+              position: relative
+              +rem(padding-right, 16px)
+              transition: opacity .2s, color .2s
+              font-weight: 400
+              +rem(margin-bottom, 20px)
+              +rem(margin-right, 10px)
+              &:after
+                content: '/'
+                display: block
+                position: absolute
+                right: 0
+                top: 0
+              &:hover
+                color: $active
+                opacity: 1
+  #main-first-screen-fading-wrapper
+    position: fixed
+    width: 100%
+    will-change: transform
+    height: 100vh
+    z-index: -1
+    .filter
+      position: absolute
+      width: 100%
+      height: 100vh
+      background-color: $green-place
+      opacity: 0.3
+    video
+      min-width: 100%
+      min-height: 100vh
+      position: absolute
+      z-index: -200
+      left: 0
+      right: 0
+      margin: auto
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) scale(1.2)
+      opacity: 1
+      will-change: transform
+    .video-poster
+      min-width: 100%
+      min-height: 100vh
+      position: absolute
+      +vcenter
+  #main-screen
+    width: 100%
+    height: 100%
+    overflow: hidden
+    position: relative
+    +r(992)
+      height: auto
+      +rem(min-height, 500px)
+    +r(492)
+      +rem(min-height, 380px)
+    .line
+      position: absolute
+      height: 100%
+      width: 1px
+      background-color: #fff
+      top: 0
+      right: 0
+      opacity: 0.2
+    #main-screen-title
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 100%
+      +rem(height, 200px)
+      #title-wrapper
+        #title-wrapper-inner
+          transform: scale(1)
+          transition: transform 0.6s cubic-bezier(.445, .05, .55, .95)
+          &.active
+            transform: scale(0.7)
+        +r(992)
+          max-width: 100%
+          position: absolute
+          left: 0
+          right: 0
+          top: 0
+          bottom: 0
+          margin: auto
+          +rem(margin-top, 50px)
+        +r(480)
+          +rem(margin-top, 80px)
+      .title-sup
+        +ff('GothamPro', 800, 50px)
+        text-transform: uppercase
+        color: #e7e8d6
+        text-align: center
+        +rem(margin-bottom, 100px)
+        +rem(line-height, 0px)
+        +r(992)
+          +rem(font-size, 25px)
+          +rem(margin-bottom, 55px)
+        +r(480)
+          +rem(font-size, 24px)
+          +rem(margin-bottom, 50px)
+      .title-main
+        +ff('GothamPro', 800, 140px)
+        text-transform: uppercase
+        color: $white
+        text-align: center
+        +rem(line-height, 0px)
+        +r(992)
+          +rem(font-size, 70px)
+        +r(480)
+          +rem(font-size, 52px)
+    .screen-links-wrapper
+      display: flex
+      position: relative
+      +r(992)
+        display: none !important
+      .screen-link
+        width: 33%
+        flex-grow: 1
+        height: 100vh
+        position: relative
+        overflow: hidden
+        img
+          transform: translate(0px, 200px) scale(0.2)
+          position: absolute
+          opacity: 0
+          transition: transform 0.4s ease-out, opacity 0.6s ease-out
+          width: 100%
+          min-height: 100%
+        &:nth-of-type(2)
+          .screen-link-text
+            animation-delay: 0.3s
+        &:nth-of-type(3)
+          .screen-link-text
+            animation-delay: 0.4s
+        .screen-link-text
+          position: absolute
+          z-index: 2
+          +rem(height, 200px)
+          +rem(width, 240px)
+          margin: auto
+          left: 0
+          right: 0
+          text-align: center
+          bottom: 0
+          animation-delay: 0.2s
+          .screen-link-title
+            position: absolute
+            left: 0
+            right: 0
+            margin: auto
+            color: $white
+            +ff('GothamPro', 400, 26px)
+            transform: translate(0, 80px)
+            transition: transform 0.4s ease-out
+          p
+            position: absolute
+            left: 0
+            right: 0
+            margin: auto
+            opacity: 0
+            transform: translate(0, 120px)
+            transition: transform 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.1s
+            color: $white
+            +rem(font-size, 16px)
+            font-weight: 600
+            +rem(line-height, 30px)
+          &:hover
+            & + img
+              transform: translate(0, 0) scale(1)
+              opacity: 1
+            .screen-link-title
+              transform: translate(0, 40px)
+            p
+              transform: translate(0, 80px)
+              opacity: 1
 
 $slSize: 440px
 
 .scheme-wrapper
-	position: relative
-	+rem(max-height, 600px)
-	+rem(max-width, 600px)
-	width: 100%
-	+r(992)
-		margin: auto
-		+rem(margin-top, 140px)
-	+r(550)
-		+rem(margin-top, 90px)
-	+r(492)
-		+rem(margin-top, 60px)
-	+r(400)
-		+rem(margin-top, 20px)
-	.scheme-slider-wrapper
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		+rem(width, $slSize)
-		+rem(height, $slSize)
-		margin: auto
-		border-radius: 50%
-		overflow: hidden
-		+r(1024)
-			+rem(width, $slSize - 70px)
-			+rem(height, $slSize - 70px)
-		+r(992)
-			+rem(width, $slSize + 10px)
-			+rem(height, $slSize + 10px)
-		+r(768)
-			+rem(width, $slSize)
-			+rem(height, $slSize)
-		+r(555)
-			+rem(width, $slSize - 85px)
-			+rem(height, $slSize - 85px)
-		+r(492)
-			+rem(width, $slSize - 120px)
-			+rem(height, $slSize - 120px)
-		+r(380)
-			+rem(width, $slSize - 160px)
-			+rem(height, $slSize - 160px)
-		#scheme-slider
-			width: 100%
-			height: 100%
-			border-radius: 50%
-			overflow: hidden
-			position: relative
-			.scheme-slider__slide
-				+rem(width, $slSize)
-				+rem(height, $slSize)
-				position: absolute
-				border-radius: 50%
-				overflow: hidden
-				z-index: 1
-				transition: transform .4s cubic-bezier(.445,.05,.55,.95), opacity .4s
-				+r(1024)
-					+rem(width, $slSize - 70px)
-					+rem(height, $slSize - 70px)
-				+r(992)
-					+rem(width, $slSize + 10px)
-					+rem(height, $slSize + 10px)
-				+r(768)
-					+rem(width, $slSize)
-					+rem(height, $slSize)
-				+r(555)
-					+rem(width, $slSize - 85px)
-					+rem(height, $slSize - 85px)
-				+r(492)
-					+rem(width, $slSize - 120px)
-					+rem(height, $slSize - 120px)
-					h3
-						+rem(font-size, 18px)
-						margin-bottom: 0
-					p
-						+rem(font-size, 12px)
-				+r(380)
-					+rem(width, $slSize - 160px)
-					+rem(height, $slSize - 160px)
-				&-inner
-					position: relative
-					width: 100%
-					height: 100%
-					z-index: 0
-					border-radius: 50%
-					overflow: hidden
-				&-image 
-					+coverdiv
-					+cover 
-					z-index: -1
-					border-radius: 50%
-					overflow: hidden
-				&-text 
-					position: absolute
-					+rem(top, 100px)
-					+rem(max-width, 350px)
-					left: 0
-					right: 0
-					margin: auto
-					h3
-						color: $text-h
-						+rem(font-size, 26px)
-						+rem(line-height, 32px)
-						font-weight: 400
-						+rem(margin-bottom, 20px)
-						text-align: center
-					p
-						+rem(line-height, 28px)
-						color: $text-h
-						text-align: center
-				&.active
-					z-index: 2
-					opacity: 1
-					transform: none
-					transition-delay: .3s
-				&:not(.active)
-					opacity: 0
-					transform: scale(0.6)
-					transition-delay: .1s
-				img
-					position: absolute
-					width: 100%
-					z-index: 0
-		.scheme-slider__update
-			position: absolute
-			+rem(width, 40px)
-			+rem(height, 40px)
-			+rem(bottom, 50px)
-			left: 0
-			right: 0
-			margin: auto
-			z-index: 2
-			border-radius: 50%
-			transition: transform 0.2s cubic-bezier(.445,.05,.55,.95)
-			svg
-				.scheme-circle
-					fill-rule:evenodd
-					clip-rule:evenodd
-					fill:#FFFFFF
-					transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
-				.scheme-refresh-arrow
-					fill:#0C0C0C
-					transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
-			&:hover
-				transform: rotate(360deg)
-				svg
-					.scheme-circle
-						fill: $active
-					.scheme-refresh-arrow
-						fill: $white
-
-
+  position: relative
+  +rem(max-height, 600px)
+  +rem(max-width, 600px)
+  width: 100%
+  +r(992)
+    margin: auto
+    +rem(margin-top, 140px)
+  +r(550)
+    +rem(margin-top, 90px)
+  +r(492)
+    +rem(margin-top, 60px)
+  +r(400)
+    +rem(margin-top, 20px)
+  .scheme-slider-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    +rem(width, $slSize)
+    +rem(height, $slSize)
+    margin: auto
+    border-radius: 50%
+    overflow: hidden
+    +r(1024)
+      +rem(width, $slSize - 70px)
+      +rem(height, $slSize - 70px)
+    +r(992)
+      +rem(width, $slSize + 10px)
+      +rem(height, $slSize + 10px)
+    +r(768)
+      +rem(width, $slSize)
+      +rem(height, $slSize)
+    +r(555)
+      +rem(width, $slSize - 85px)
+      +rem(height, $slSize - 85px)
+    +r(492)
+      +rem(width, $slSize - 120px)
+      +rem(height, $slSize - 120px)
+    +r(380)
+      +rem(width, $slSize - 160px)
+      +rem(height, $slSize - 160px)
+    #scheme-slider
+      width: 100%
+      height: 100%
+      border-radius: 50%
+      overflow: hidden
+      position: relative
+      .scheme-slider__slide
+        +rem(width, $slSize)
+        +rem(height, $slSize)
+        position: absolute
+        border-radius: 50%
+        overflow: hidden
+        z-index: 1
+        transition: transform .4s cubic-bezier(.445, .05, .55, .95), opacity .4s
+        +r(1024)
+          +rem(width, $slSize - 70px)
+          +rem(height, $slSize - 70px)
+        +r(992)
+          +rem(width, $slSize + 10px)
+          +rem(height, $slSize + 10px)
+        +r(768)
+          +rem(width, $slSize)
+          +rem(height, $slSize)
+        +r(555)
+          +rem(width, $slSize - 85px)
+          +rem(height, $slSize - 85px)
+        +r(492)
+          +rem(width, $slSize - 120px)
+          +rem(height, $slSize - 120px)
+          h3
+            +rem(font-size, 18px)
+            margin-bottom: 0
+          p
+            +rem(font-size, 12px)
+        +r(380)
+          +rem(width, $slSize - 160px)
+          +rem(height, $slSize - 160px)
+        &-inner
+          position: relative
+          width: 100%
+          height: 100%
+          z-index: 0
+          border-radius: 50%
+          overflow: hidden
+        &-image
+          +coverdiv
+          +cover
+          z-index: -1
+          border-radius: 50%
+          overflow: hidden
+        &-text
+          position: absolute
+          +rem(top, 100px)
+          +rem(max-width, 350px)
+          left: 0
+          right: 0
+          margin: auto
+          h3
+            color: $text-h
+            +rem(font-size, 26px)
+            +rem(line-height, 32px)
+            font-weight: 400
+            +rem(margin-bottom, 20px)
+            text-align: center
+          p
+            +rem(line-height, 28px)
+            color: $text-h
+            text-align: center
+        &.active
+          z-index: 2
+          opacity: 1
+          transform: none
+          transition-delay: .3s
+        &:not(.active)
+          opacity: 0
+          transform: scale(0.6)
+          transition-delay: .1s
+        img
+          position: absolute
+          width: 100%
+          z-index: 0
+    .scheme-slider__update
+      position: absolute
+      +rem(width, 40px)
+      +rem(height, 40px)
+      +rem(bottom, 50px)
+      left: 0
+      right: 0
+      margin: auto
+      z-index: 2
+      border-radius: 50%
+      transition: transform 0.2s cubic-bezier(.445, .05, .55, .95)
+      svg
+        .scheme-circle
+          fill-rule:evenodd
+          clip-rule:evenodd
+          fill:#FFFFFF
+          transition: fill 0.2s cubic-bezier(.445, .05, .55, .95)
+        .scheme-refresh-arrow
+          fill:#0C0C0C
+          transition: fill 0.2s cubic-bezier(.445, .05, .55, .95)
+      &:hover
+        transform: rotate(360deg)
+        svg
+          .scheme-circle
+            fill: $active
+          .scheme-refresh-arrow
+            fill: $white
 
 #scheme
-	width: 100%
-	+rem(max-height, 600px)
-	height: 100vh
-	+r(1024)
-		+rem(height, $slSize + 280px)
-	+r(768)
-		+rem(height, $slSize + 160px)
-	+r(555)
-		+rem(height, $slSize + 40px)
-	+r(492)
-		+rem(height, $slSize + 20px)
-	.scheme-menu
-		transform-origin: 50% 50%
-		transition: transform 0.5s cubic-bezier(.445,.05,.55,.95)
-		g.icon
-			transform-origin: 50% 50%
-			transition: transform 0.5s cubic-bezier(.445,.05,.55,.95)
-	.scheme-part
-		fill: $white
-		transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
-	.scheme-part-green
-		fill: $green
-		transition: fill 0.1s cubic-bezier(.445,.05,.55,.95)
-	.scheme-part-icon
-		fill: $text-light-gray
-		&.two
-			fill: none
-			stroke: $text-light-gray
-			stroke-linecap: round
-			stroke-linejoin: round
-			stroke-miterlimit: 10
-	.scheme-part-circle
-		fill: #EFEFEF
-	.scheme-button
-		cursor: pointer
-		&.active
-			cursor: pointer
-			.scheme-part, .scheme-part-green
-				fill: $green
-			.scheme-part-icon
-				fill: $white
-				&.two
-					fill: none
-					stroke: $white
-		&:hover
-			.scheme-part, .scheme-part-green
-				fill: $active
-			.scheme-part-icon
-				fill: $white
-				&.two
-					fill: none
-					stroke: $white
+  width: 100%
+  +rem(max-height, 600px)
+  height: 100vh
+  +r(1024)
+    +rem(height, $slSize + 280px)
+  +r(768)
+    +rem(height, $slSize + 160px)
+  +r(555)
+    +rem(height, $slSize + 40px)
+  +r(492)
+    +rem(height, $slSize + 20px)
+  .scheme-menu
+    transform-origin: 50% 50%
+    transition: transform 0.5s cubic-bezier(.445, .05, .55, .95)
+    g.icon
+      transform-origin: 50% 50%
+      transition: transform 0.5s cubic-bezier(.445, .05, .55, .95)
+  .scheme-part
+    fill: $white
+    transition: fill 0.2s cubic-bezier(.445, .05, .55, .95)
+  .scheme-part-green
+    fill: $green
+    transition: fill 0.1s cubic-bezier(.445, .05, .55, .95)
+  .scheme-part-icon
+    fill: $text-light-gray
+    &.two
+      fill: none
+      stroke: $text-light-gray
+      stroke-linecap: round
+      stroke-linejoin: round
+      stroke-miterlimit: 10
+  .scheme-part-circle
+    fill: #EFEFEF
+  .scheme-button
+    cursor: pointer
+    &.active
+      cursor: pointer
+      .scheme-part, .scheme-part-green
+        fill: $green
+      .scheme-part-icon
+        fill: $white
+        &.two
+          fill: none
+          stroke: $white
+    &:hover
+      .scheme-part, .scheme-part-green
+        fill: $active
+      .scheme-part-icon
+        fill: $white
+        &.two
+          fill: none
+          stroke: $white
 
 .download
-	+rem(margin-top, 30px)
-	+rem(margin-bottom, 45px)
-	display: block
-	svg
-		+rem(width, 30px)
-		+rem(height, 30px)
-		display: inline-block
-		vertical-align: top
-		+rem(margin-top, 5px)
-	.download-text
-		display: inline-block
-		+rem(margin-left, 15px)
-		vertical-align: top
-		.href
-			color: $green
-			font-weight: 600
-		.download-size
-			color: $text-light-gray
-			+rem(margin-top, 0px)
-			+rem(font-size, 16px)
-		&:hover
-			.href
-				color: $active
-
-
+  +rem(margin-top, 30px)
+  +rem(margin-bottom, 45px)
+  display: block
+  svg
+    +rem(width, 30px)
+    +rem(height, 30px)
+    display: inline-block
+    vertical-align: top
+    +rem(margin-top, 5px)
+  .download-text
+    display: inline-block
+    +rem(margin-left, 15px)
+    vertical-align: top
+    .href
+      color: $green
+      font-weight: 600
+    .download-size
+      color: $text-light-gray
+      +rem(margin-top, 0px)
+      +rem(font-size, 16px)
+    &:hover
+      .href
+        color: $active
 
 // .counts-wrapper
 // 	background-image: url("../img/index/paralax-bg.jpg")
@@ -1254,1039 +1270,1039 @@ $slSize: 440px
 // 	background-size: cover
 
 #parallax
-	background-color: transparent
-	position: relative
-	overflow: hidden
-	background-color: #092222
-	.parallax-img
-		position: absolute
-		width: 100%
-		height: 100%
-		top: 0%
-		left: 0
-		opacity: .3
-	img
-		min-height: 200%
-		width: 100%
-		+r(992)
-			top: 0
-			height: 100%
-			width: auto
+  background-color: transparent
+  position: relative
+  overflow: hidden
+  background-color: #092222
+  .parallax-img
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0%
+    left: 0
+    opacity: .3
+  img
+    min-height: 200%
+    width: 100%
+    +r(992)
+      top: 0
+      height: 100%
+      width: auto
 
 .carousel-buttons
-	background-color: #f5f6f6
-	display: inline-block
-	+rem(border-radius, 100px)
-	overflow: hidden
-	+rem(margin-bottom, 40px)
-	padding-left: 1px
-	.carousel-buttons-wrap
-		display: flex
-		+rem(height, 43px)
-		.button
-			+rem(padding, 7px)
-			+rem(padding-left, 20px)
-			+rem(padding-right, 20px)
-			cursor: pointer
-			border: 1px solid transparent
-			margin-left: -1px
-			transition: border 0.15s cubic-bezier(.445,.05,.55,.95), color 0.15s cubic-bezier(.445,.05,.55,.95), background-color 0.15s cubic-bezier(.445,.05,.55,.95)
-			p
-				color: $text-darker
-				font-weight: 400
-				+rem(font-size, 16px)
-			&:not(.active)
-				border: 1px solid $green
-				background-color: #FFF
-				p
-					color: $green
-				&:first-of-type
-					border-radius: 100px 0 0 100px
-				&:last-of-type
-					border-radius: 0 100px 100px 0
-			&:hover
-				background-color: $active
-				border: 1px solid transparent
-				p
-					color: #fff
+  background-color: #f5f6f6
+  display: inline-block
+  +rem(border-radius, 100px)
+  overflow: hidden
+  +rem(margin-bottom, 40px)
+  padding-left: 1px
+  .carousel-buttons-wrap
+    display: flex
+    +rem(height, 43px)
+    .button
+      +rem(padding, 7px)
+      +rem(padding-left, 20px)
+      +rem(padding-right, 20px)
+      cursor: pointer
+      border: 1px solid transparent
+      margin-left: -1px
+      transition: border 0.15s cubic-bezier(.445, .05, .55, .95), color 0.15s cubic-bezier(.445, .05, .55, .95), background-color 0.15s cubic-bezier(.445, .05, .55, .95)
+      p
+        color: $text-darker
+        font-weight: 400
+        +rem(font-size, 16px)
+      &:not(.active)
+        border: 1px solid $green
+        background-color: #FFF
+        p
+          color: $green
+        &:first-of-type
+          border-radius: 100px 0 0 100px
+        &:last-of-type
+          border-radius: 0 100px 100px 0
+      &:hover
+        background-color: $active
+        border: 1px solid transparent
+        p
+          color: #fff
 
 #chart
-	+rem(padding-top, 30px)
-	.flex-block
-		.one-half
-			+r(992)
-				+rem(padding-top, 50px)
-			&:first-of-type
-				+r(992)
-					+rem(padding-top, 0px)
-
+  +rem(padding-top, 30px)
+  .flex-block
+    .one-half
+      +r(992)
+        +rem(padding-top, 50px)
+      &:first-of-type
+        +r(992)
+          +rem(padding-top, 0px)
 
 #index-chart
-	width: 100%
-	.chart-wrapper
-		display: flex
-		flex-direction: column
-		overflow: hidden
-		.chart-bar
-			+rem(height, 66px)
-			position: relative
-			opacity: 0.99
-			width: 0
-			cursor: pointer
-			+r(675)
-				+rem(height, 100px)
-			&:nth-of-type(2)
-				opacity: 0.9
-			&:nth-of-type(3)
-				opacity: 0.8
-			&:nth-of-type(4)
-				opacity: 0.7
-			&:nth-of-type(5)
-				opacity: 0.6
-			&:nth-of-type(6)
-				opacity: 0.5
-			&:nth-of-type(7)
-				opacity: 0.4
-			&:after
-				content: ''
-				display: block
-				position: absolute
-				top: 0
-				left: 0
-				width: 0
-				height: 100%
-				background-color: $green
-				z-index: -1
-				transition: background-color 0.15s cubic-bezier(.445,.05,.55,.95)
-				+r(992)
-					width: 100%
-			p
-				position: absolute
-				+rem(top, 26px)
-				+rem(left, 25px)
-				color: $white
-				+rem(font-size, 16px)
-				&.annotation
-					+rem(right, 25px)
-					left: auto
-					+rem(top, 15px)
-					+rem(font-size, 26px)
-					+r(675)
-						position: relative
-						+rem(margin-left, 50px)
-						+rem(margin-top, 30px)
-			&:hover
-				opacity: 0.99
-				&:after
-					background-color: $active
+  width: 100%
+  .chart-wrapper
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    .chart-bar
+      +rem(height, 66px)
+      position: relative
+      opacity: 0.99
+      width: 0
+      cursor: pointer
+      +r(675)
+        +rem(height, 100px)
+      &:nth-of-type(2)
+        opacity: 0.9
+      &:nth-of-type(3)
+        opacity: 0.8
+      &:nth-of-type(4)
+        opacity: 0.7
+      &:nth-of-type(5)
+        opacity: 0.6
+      &:nth-of-type(6)
+        opacity: 0.5
+      &:nth-of-type(7)
+        opacity: 0.4
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 0
+        height: 100%
+        background-color: $green
+        z-index: -1
+        transition: background-color 0.15s cubic-bezier(.445, .05, .55, .95)
+        +r(992)
+          width: 100%
+      p
+        position: absolute
+        +rem(top, 26px)
+        +rem(left, 25px)
+        color: $white
+        +rem(font-size, 16px)
+        &.annotation
+          +rem(right, 25px)
+          left: auto
+          +rem(top, 15px)
+          +rem(font-size, 26px)
+          +r(675)
+            position: relative
+            +rem(margin-left, 50px)
+            +rem(margin-top, 30px)
+      &:hover
+        opacity: 0.99
+        &:after
+          background-color: $active
 
 #news
-	border-top: 1px solid $lineColor
-	.h2
-		+rem(margin-bottom, 60px)
-	.button-green-wrapper
-		float: left
-		display: block
-		margin-top: 30px
-	.news
-		width: 100%
-		display: block
-		position: relative
-		.news-item
-			width: 50%
-			float: right
-			+r(992)
-				float: clear
-				width: 100%
-				border-top: 1px solid $lineColor
-				padding: 0
-			&:hover
-				.text-news-wrapper
-					.href
-						color: $active
-			.img-news-wrapper
-				display: none
-				position: relative
-				height: 400px
-				width: 100%
-				overflow: hidden
-				img
-					position: absolute
-					min-width: 100%
-					height: 100%
-					top: 0
-					right: 0
-					bottom: 0
-					left: 0
-					margin: auto
-			.text-news-wrapper
-				.href
-					+rem(margin-top, 20px)
-					+rem(margin-bottom, 20px)
-					+rem(font-size, 18px)
-					+rem(line-height, 30px)
-					font-weight: 600
-					color: $green
-					transition: color 0.15s cubic-bezier(.445,.05,.55,.95)
-					overflow: hidden
-					text-overflow: ellipsis
-					display: flex
-					box-orient: vertical
-					line-clamp: 3
-					+rem(max-height, 90px)
-				.text-news
-					overflow: hidden
-					text-overflow: ellipsis
-					display: flex
-					box-orient: vertical
-					line-clamp: 2
-					+rem(line-height, 26px)
-					+rem(max-height, 52px)
-				.caption
-					+rem(margin-top, 20px)
-			&:not(.big-news):nth-of-type(2)
-				padding-top: 0
-				+rem(padding-bottom, 40px)
-				+r(992)
-					+rem(padding-top, 30px)
-			&:not(.big-news):nth-of-type(3)
-				border-top: 1px solid $lineColor
-				+rem(padding-top, 40px)
-			&:first-of-type
-				float: left
-				+rem(padding-right, 40px)
-				+r(992)
-					float: clear
-					border-top: 0
-					+rem(padding-bottom, 40px)
-					padding-right: 0
-			&.big-news
-				.img-news-wrapper
-					display: block
-				.text-news-wrapper
-					.href
-						+rem(font-size, 26px)
-						+rem(line-height, 36px)
-						line-clamp: 3
-						+rem(max-height, 108px)
-
+  border-top: 1px solid $lineColor
+  .h2
+    +rem(margin-bottom, 60px)
+  .button-green-wrapper
+    float: left
+    display: block
+    margin-top: 30px
+  .news
+    width: 100%
+    display: block
+    position: relative
+    .news-item
+      width: 50%
+      float: right
+      +r(992)
+        float: clear
+        width: 100%
+        border-top: 1px solid $lineColor
+        padding: 0
+      &:hover
+        .text-news-wrapper
+          .href
+            color: $active
+      .img-news-wrapper
+        display: none
+        position: relative
+        height: 400px
+        width: 100%
+        overflow: hidden
+        img
+          position: absolute
+          min-width: 100%
+          height: 100%
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          margin: auto
+      .text-news-wrapper
+        .href
+          +rem(margin-top, 20px)
+          +rem(margin-bottom, 20px)
+          +rem(font-size, 18px)
+          +rem(line-height, 30px)
+          font-weight: 600
+          color: $green
+          transition: color 0.15s cubic-bezier(.445, .05, .55, .95)
+          overflow: hidden
+          text-overflow: ellipsis
+          display: flex
+          box-orient: vertical
+          line-clamp: 3
+          +rem(max-height, 90px)
+        .text-news
+          overflow: hidden
+          text-overflow: ellipsis
+          display: flex
+          box-orient: vertical
+          line-clamp: 2
+          +rem(line-height, 26px)
+          +rem(max-height, 52px)
+        .caption
+          +rem(margin-top, 20px)
+      &:not(.big-news):nth-of-type(2)
+        padding-top: 0
+        +rem(padding-bottom, 40px)
+        +r(992)
+          +rem(padding-top, 30px)
+      &:not(.big-news):nth-of-type(3)
+        border-top: 1px solid $lineColor
+        +rem(padding-top, 40px)
+      &:first-of-type
+        float: left
+        +rem(padding-right, 40px)
+        +r(992)
+          float: clear
+          border-top: 0
+          +rem(padding-bottom, 40px)
+          padding-right: 0
+      &.big-news
+        .img-news-wrapper
+          display: block
+        .text-news-wrapper
+          .href
+            +rem(font-size, 26px)
+            +rem(line-height, 36px)
+            line-clamp: 3
+            +rem(max-height, 108px)
 
 .callback-wrap
-	margin-top: 7vh
-	margin-bottom: 7vh
-	&.callback
-		+r(768)
-			border-top: 1px solid $lineColor
-			padding-top: 5vh
-			margin-bottom: 7vh
-	&.vacancy
-		+r(768)
-			border-bottom: 1px solid $lineColor
-			padding-bottom: 5vh
-			margin-top: 0
-	p.sub
-		margin-bottom: 3vh
-		+rem(font-size, 16px)
-		font-weight: 400
-	.tell
-		color: $text-h
-		font-weight: 700
-		+rem(margin-bottom, 12px)
-		+rem(font-size, 26px)
-		display: block
-		+rem(min-width, 230px)
-	.mail
-		font-weight: 600
-	.icon
-		+rem(height, 35px)
-		+rem(margin-right, 10px)
-	svg
-		+rem(width, 35px)
+  margin-top: 7vh
+  margin-bottom: 7vh
+  &.callback
+    +r(768)
+      border-top: 1px solid $lineColor
+      padding-top: 5vh
+      margin-bottom: 7vh
+  &.vacancy
+    +r(768)
+      border-bottom: 1px solid $lineColor
+      padding-bottom: 5vh
+      margin-top: 0
+  p.sub
+    margin-bottom: 3vh
+    +rem(font-size, 16px)
+    font-weight: 400
+  .tell
+    color: $text-h
+    font-weight: 700
+    +rem(margin-bottom, 12px)
+    +rem(font-size, 26px)
+    display: block
+    +rem(min-width, 230px)
+  .mail
+    font-weight: 600
+  .icon
+    +rem(height, 35px)
+    +rem(margin-right, 10px)
+  svg
+    +rem(width, 35px)
 
 .callback-button
-	background-color: $green
-	+rem(width, 183px)
-	+rem(height, 43px)
-	+rem(border-radius, 50px)
-	+rem(font-size, 16px)
-	+rem(padding-top, 3px)
-	color: $white
-	transition: background-color 0.15s cubic-bezier(.445,.05,.55,.95)
-	&:focus, &:hover
-		background-color: $active
+  background-color: $green
+  display: inline-block
+  +rem(width, 183px)
+  +rem(height, 43px)
+  +rem(border-radius, 50px)
+  +rem(padding-top, 8px)
+  +rem(font-size, 16px)
+  +rem(line-height, 28px)
+  position: relative
+  text-align: center
+  font-weight: 500
+  color: $white
+  transition: background-color 0.15s cubic-bezier(.445, .05, .55, .95)
+  &:focus, &:hover
+    background-color: $active
+    color: $white
 
 .change-lang
-	position: absolute
-	+rem(right, $sidestep+55px+$sidestep)
-	+rem(top, 14px)
-	+r(768)
-		display: none
-	a
-		color: $text-gray
-		&:not(:first-of-type)
-			+rem(margin-left, 10px)
-		&.active
-			color: $text-h
-		&:focus, &:hover
-			color: $active
+  position: absolute
+  +rem(right, $sidestep+55px+$sidestep)
+  +rem(top, 14px)
+  +r(768)
+    display: none
+  a
+    color: $text-gray
+    &:not(:first-of-type)
+      +rem(margin-left, 10px)
+    &.active
+      color: $text-h
+    &:focus, &:hover
+      color: $active
 
 #footer
-	background-color: $white
-	border-top: 1px solid $lineColor
-	.block
-		+rem(padding-top, 70px)
-		+rem(padding-bottom, 80px)
-	+r(992)
-		width: 100%
-		.one-four
-			width: 100%
-	.callback-wrap
-		margin-top: 0
-	p.caption
-		font-weight: 600
-	.footer-hrefs
-		+r(992)
-			position: relative
-			margin-bottom: 50px
-			margin-top: 50px
-		.footern-href-link
-			display: block
-			color: $text-h
-			&:not(:last-of-type)
-				+rem(margin-bottom, 28px)
-			&.active
-				color: $text-light-gray
-				border-bottom: 1px solid $text-light-gray
-				display: inline-block
-				+rem(padding-bottom, 3px)
-			&:hover
-				color: $active
-	.footer-lang-caption
-		position: absolute
-		bottom: 0
-		.change-lang
-			+rem(margin-bottom, 40px)
-			position: relative
-			right: auto
-			top: auto
-		+r(992)
-			position: relative
-	.footer-contacts
-		.tell
-			+rem(font-size, 26px)
-			+rem(margin-bottom, 10px)
-			+rem(margin-top, 20px)
-	.footer-office-wrapper
-		position: absolute
-		bottom: 0
-		p.office-title
-			+rem(font-size, 18px)
-			+rem(line-height, 30px)
-			+rem(margin-bottom, 10px)
-			font-weight: 700
-			color: $text-h
-		a.darker
-			+rem(font-size, 16px)
-			+rem(margin-top, 5px)
-			+rem(margin-bottom, 5px)
-			font-weight: 600
-		a
-			+rem(margin-top, 20px)
-			display: block
-			+rem(font-size, 16px)
-		+r(992)
-			position: relative
-			margin-bottom: 50px
-	.footer-makers
-		position: absolute
-		bottom: 0
-		display: block
-		left: 0
-		.caption
-			+rem(margin-bottom, 3px)
-		.href
-			font-weight: 600
-			color: $green
-		&:hover
-			.href
-				color: $active
-		+r(992)
-			position: relative
-			margin-top: 50px
-	.footer-block-wrapper
-		.callback-button
-			margin-top: 40px
+  background-color: $white
+  border-top: 1px solid $lineColor
+  .block
+    +rem(padding-top, 70px)
+    +rem(padding-bottom, 80px)
+  +r(992)
+    width: 100%
+    .one-four
+      width: 100%
+  .callback-wrap
+    margin-top: 0
+  p.caption
+    font-weight: 600
+  .footer-hrefs
+    +r(992)
+      position: relative
+      margin-bottom: 50px
+      margin-top: 50px
+    .footern-href-link
+      display: block
+      color: $text-h
+      &:not(:last-of-type)
+        +rem(margin-bottom, 28px)
+      &.active
+        color: $text-light-gray
+        border-bottom: 1px solid $text-light-gray
+        display: inline-block
+        +rem(padding-bottom, 3px)
+      &:hover
+        color: $active
+  .footer-lang-caption
+    position: absolute
+    bottom: 0
+    .change-lang
+      +rem(margin-bottom, 40px)
+      position: relative
+      right: auto
+      top: auto
+    +r(992)
+      position: relative
+  .footer-contacts
+    .tell
+      +rem(font-size, 26px)
+      +rem(margin-bottom, 10px)
+      +rem(margin-top, 20px)
+  .footer-office-wrapper
+    position: absolute
+    bottom: 0
+    p.office-title
+      +rem(font-size, 18px)
+      +rem(line-height, 30px)
+      +rem(margin-bottom, 10px)
+      font-weight: 700
+      color: $text-h
+    a.darker
+      +rem(font-size, 16px)
+      +rem(margin-top, 5px)
+      +rem(margin-bottom, 5px)
+      font-weight: 600
+    a
+      +rem(margin-top, 20px)
+      display: block
+      +rem(font-size, 16px)
+    +r(992)
+      position: relative
+      margin-bottom: 50px
+  .footer-makers
+    position: absolute
+    bottom: 0
+    display: block
+    left: 0
+    .caption
+      +rem(margin-bottom, 3px)
+    .href
+      font-weight: 600
+      color: $green
+    &:hover
+      .href
+        color: $active
+    +r(992)
+      position: relative
+      margin-top: 50px
+  .footer-block-wrapper
+    .callback-button
+      margin-top: 40px
 
 .advantages
-	justify-content: center
-	align-items: flex-start
-	margin-top: 30px
-	.one-four
-		position: relative
-	.advantage-wrapper
-		+rem(padding-right, 70px)
-		+rem(margin-top, 0px)
-		width: 100%
-		+r(992)
-			margin: auto
-		+r(550)
-			+rem(padding-right, 20px)
-			+rem(padding-left, 20px)
-		+r(400)
-			+rem(padding-right, 0px)
-			+rem(padding-left, 0px)
-		.advantage-img
-			+rem(margin-bottom, 12px)
-			img
-				+rem(max-height, 50px)
-		.advantage-text
-			max-width: 100%
+  justify-content: center
+  align-items: flex-start
+  margin-top: 30px
+  .one-four
+    position: relative
+  .advantage-wrapper
+    +rem(padding-right, 70px)
+    +rem(margin-top, 0px)
+    width: 100%
+    +r(992)
+      margin: auto
+    +r(550)
+      +rem(padding-right, 20px)
+      +rem(padding-left, 20px)
+    +r(400)
+      +rem(padding-right, 0px)
+      +rem(padding-left, 0px)
+    .advantage-img
+      +rem(margin-bottom, 12px)
+      img
+        +rem(max-height, 50px)
+    .advantage-text
+      max-width: 100%
 
 #dates
-	.dates-slider-wrapper
-		position: relative
-		max-width: 100%
-		#dates-slider
-			+rem(padding-bottom, 100px)
-			+rem(padding-top, 100px)
-			.slick-arrow
-				position: absolute
-				right: 0
-				+rem(width, 30px)
-				+rem(height, 30px)
-				background: url(/img/1-0/arrow.svg) 50% 50% no-repeat
-				background-size: cover
-				+rem(top, 100px)
-				font-size: 0
-				+rem(right, 25px)
-				z-index: 2
-				&.slick-disabled
-					opacity: 0.5
-				&.slick-prev
-					+rem(top, 140px)
-					transform: rotate(-180deg)
-			.dates-slide-column
-				+rem(padding-top, 12px)
-				+rem(padding-right, 40px)
-				+rem(padding-left, 0px)
-				+rem(min-height, 600px)
-				position: relative
-				transition: opacity 0.3s
-				z-index: 0
-				opacity: .1
-				pointer-events: none
-				&:before
-					position: absolute
-					content: ''
-					display: block
-					width: 1px
-					height: 100%
-					background-color: #FFF
-					right: 24px
-					top: 0
-				&.slick-slide
-					&.slick-active
-						opacity: 1
-						pointer-events: auto
-				.h1
-					+rem(margin-bottom, 40px)
-				.dates-event
-					+rem(margin-top, 10px)
-					+rem(padding-top, 30px)
-					margin-bottom: 0
-					position: relative
-					&:before
-						content: ''
-						+rem(width, 28px)
-						height: 3px
-						background-color: #FFF
-						display: block
-						position: absolute
-						+rem(top, 20px)
-					.sub
-						margin-bottom: 0
-						font-weight: 400
-
+  .dates-slider-wrapper
+    position: relative
+    max-width: 100%
+    #dates-slider
+      +rem(padding-bottom, 100px)
+      +rem(padding-top, 100px)
+      .slick-arrow
+        position: absolute
+        right: 0
+        +rem(width, 30px)
+        +rem(height, 30px)
+        background: url(/img/1-0/arrow.svg) 50% 50% no-repeat
+        background-size: cover
+        +rem(top, 100px)
+        font-size: 0
+        +rem(right, 25px)
+        z-index: 2
+        &.slick-disabled
+          opacity: 0.5
+        &.slick-prev
+          +rem(top, 140px)
+          transform: rotate(-180deg)
+      .dates-slide-column
+        +rem(padding-top, 12px)
+        +rem(padding-right, 40px)
+        +rem(padding-left, 0px)
+        +rem(min-height, 600px)
+        position: relative
+        transition: opacity 0.3s
+        z-index: 0
+        opacity: .1
+        pointer-events: none
+        &:before
+          position: absolute
+          content: ''
+          display: block
+          width: 1px
+          height: 100%
+          background-color: #FFF
+          right: 24px
+          top: 0
+        &.slick-slide
+          &.slick-active
+            opacity: 1
+            pointer-events: auto
+        .h1
+          +rem(margin-bottom, 40px)
+        .dates-event
+          +rem(margin-top, 10px)
+          +rem(padding-top, 30px)
+          margin-bottom: 0
+          position: relative
+          &:before
+            content: ''
+            +rem(width, 28px)
+            height: 3px
+            background-color: #FFF
+            display: block
+            position: absolute
+            +rem(top, 20px)
+          .sub
+            margin-bottom: 0
+            font-weight: 400
 
 #company-chart
-	height: 600px
-	.mg-line1-color
-		stroke: $green
-	.mg-area1-color
-		fill: $green
-
-
+  height: 600px
+  .mg-line1-color
+    stroke: $green
+  .mg-area1-color
+    fill: $green
 
 $galleryBigHeight: 590px
 
 #gallery
-	background-color: #f5f5f5
-	.gallery-block
-		margin-top: 75px
-		position: relative
-		&:after
-			position: relative
-			display: block
-			clear: both
-			content: ''
-		.gallery-item
-			+rem(height, $galleryBigHeight)
-			+rem(padding, 5px)
-			display: inline-block
-			position: relative
-			overflow: hidden
-			&-inner
-				background-position: 50% 50%
-				background-size: cover
-				background-repeat: no-repeat
-				display: block
-				width: 100%
-				height: 100%
-			&.gallery-big
-				width: 50%
-				.gallery-item-inner
-					.gallery-item-text-wrapper
-						.gallery-item-title
-							+rem(font-size, 26px)
-							+rem(margin-bottom, 5px)
-			&.gallery-medium
-				+rem(height, $galleryBigHeight/2)
-				width: 50%
-			&.gallery-small
-				+rem(height, $galleryBigHeight/2)
-				width: 25%
-			&.gallery-left
-				float: left
-			&.gallery-right
-				float: right
-			.gallery-item-inner
-				position: relative
-				.gallery-item-img
-					height: 100%
-					width: 100%
-					overflow: hidden
-					.gallery-item-img-inner
-						background-position: 50% 50%
-						background-size: cover
-						background-repeat: no-repeat
-						width: 100%
-						height: 100%
-						transform: scale(1)
-						transition: transform 1s cubic-bezier(.445,.05,.55,.95)
-				.gallery-item-text-wrapper
-					position: absolute
-					+rem(bottom, 30px)
-					+rem(left, 30px)
-					z-index: 2
-					transition: bottom 0.2s
-					.gallery-item-title
-						+rem(font-size, 18px)
-						+rem(line-height, 26px)
-						color: #fff
-						font-weight: 600
-					.gallery-item-subtitle
-						+rem(font-size, 16px)
-						+rem(line-height, 26px)
-						color: #fff
-						font-weight: 400
-				&:after
-					position: absolute
-					display: block
-					content: ''
-					width: 100%
-					+rem(height, 150px)
-					background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0))
-					bottom: 0
-					transition: height 0.5s cubic-bezier(.445,.05,.55,.95)
-					z-index: 0
-				&:hover
-					.gallery-item-img
-						.gallery-item-img-inner
-							transform: scale(1.1)
-					.gallery-item-text-wrapper
-						+rem(bottom, 50px)
-					&:after
-						+rem(height, 300px)
-
+  background-color: #f5f5f5
+  .gallery-block
+    margin-top: 75px
+    position: relative
+    &:after
+      position: relative
+      display: block
+      clear: both
+      content: ''
+    .gallery-item
+      +rem(height, $galleryBigHeight)
+      +rem(padding, 5px)
+      display: inline-block
+      position: relative
+      overflow: hidden
+      &-inner
+        background-position: 50% 50%
+        background-size: cover
+        background-repeat: no-repeat
+        display: block
+        width: 100%
+        height: 100%
+      &.gallery-big
+        width: 50%
+        .gallery-item-inner
+          .gallery-item-text-wrapper
+            .gallery-item-title
+              +rem(font-size, 26px)
+              +rem(margin-bottom, 5px)
+      &.gallery-medium
+        +rem(height, $galleryBigHeight/2)
+        width: 50%
+      &.gallery-small
+        +rem(height, $galleryBigHeight/2)
+        width: 25%
+      &.gallery-left
+        float: left
+      &.gallery-right
+        float: right
+      .gallery-item-inner
+        position: relative
+        .gallery-item-img
+          height: 100%
+          width: 100%
+          overflow: hidden
+          .gallery-item-img-inner
+            background-position: 50% 50%
+            background-size: cover
+            background-repeat: no-repeat
+            width: 100%
+            height: 100%
+            transform: scale(1)
+            transition: transform 1s cubic-bezier(.445, .05, .55, .95)
+        .gallery-item-text-wrapper
+          position: absolute
+          +rem(bottom, 30px)
+          +rem(left, 30px)
+          z-index: 2
+          transition: bottom 0.2s
+          .gallery-item-title
+            +rem(font-size, 18px)
+            +rem(line-height, 26px)
+            color: #fff
+            font-weight: 600
+          .gallery-item-subtitle
+            +rem(font-size, 16px)
+            +rem(line-height, 26px)
+            color: #fff
+            font-weight: 400
+        &:after
+          position: absolute
+          display: block
+          content: ''
+          width: 100%
+          +rem(height, 150px)
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
+          bottom: 0
+          transition: height 0.5s cubic-bezier(.445, .05, .55, .95)
+          z-index: 0
+        &:hover
+          .gallery-item-img
+            .gallery-item-img-inner
+              transform: scale(1.1)
+          .gallery-item-text-wrapper
+            +rem(bottom, 50px)
+          &:after
+            +rem(height, 300px)
 
 #company-map
-	position: relative
-	.block
-		&>.flex-block
-			.one-half:first-of-type
-				padding-right: 50px
-	.map-advantage-wrapper
-		+rem(margin-top, 10px)
-		.map-advantage
-			+rem(padding-right, 50px)
-			+rem(margin-top, 15px)
-			.map-advantage-count
-				.map-green-count
-					+ff('GothamPro', 500, 30px)
-					+rem(line-height, 32px)
-					color: $green
-					margin-bottom: 0
-	#map
-		width: 50%
-		height: 100%
-		position: absolute
-		right: 0
-		top: 0
-		.labels
-			opacity: 0
-			transform: translate(-140%, -150%)
-			transition: opacity 0.2s
-			&.place_open
-				opacity: 1
+  position: relative
+  .block
+    & > .flex-block
+      .one-half:first-of-type
+        padding-right: 50px
+  .map-advantage-wrapper
+    +rem(margin-top, 10px)
+    .map-advantage
+      +rem(padding-right, 50px)
+      +rem(margin-top, 15px)
+      .map-advantage-count
+        .map-green-count
+          +ff('GothamPro', 500, 30px)
+          +rem(line-height, 32px)
+          color: $green
+          margin-bottom: 0
+  #map
+    width: 50%
+    height: 100%
+    position: absolute
+    right: 0
+    top: 0
+    .labels
+      opacity: 0
+      transform: translate(-140%, -150%)
+      transition: opacity 0.2s
+      &.place_open
+        opacity: 1
 
 #aside-menu
-	position: absolute
-	top: 0
-	left: 0
-	height: 100vh
-	z-index: 99
-	.aside-menu-wrapper
-		position: absolute
-		top: 50%
-		left: 0
-		transform: translate(0, -70%)
-		a
-			display: block
-			+rem( width, 50px)
-			+rem(height, 50px)
-			background-color: transparent
-			position: relative
-			transition: width 0.3s cubic-bezier(.445,.05,.55,.95), background-color 0.2s
-			+rem(padding-left, 25px)
-			+rem(padding-right, 25px)
-			overflow: hidden
-			.aside-item-inner
-				+rem(padding-top, 12px)
-				+rem(padding-left, 40px)
-			&:after
-				display: block
-				position: absolute
-				content: ''
-				border-radius: 50%
-				background-color: transparent
-				border: 1px solid #d0d0d0
-				+rem(width, 9px)
-				+rem(height, 9px)
-				+rem(top, 20.5px)
-				+rem(left, 35px)
-				right: 0
-				bottom: 0
-				transition: background-color 0.2s cubic-bezier(.445,.05,.55,.95) border 0.2s cubic-bezier(.445,.05,.55,.95)
-			&.active
-				&:after
-					background-color: $green
-					border: 1px solid transparent
-			&:hover
-				width: 100%
-				background-color: $green
-				&:after
-					background-color: $white
-			p
-				white-space: nowrap
-				color: $white
-
-
+  position: absolute
+  top: 0
+  left: 0
+  height: 100vh
+  z-index: 99
+  .aside-menu-wrapper
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(0, -70%)
+    a
+      display: block
+      +rem(width, 50px)
+      +rem(height, 50px)
+      background-color: transparent
+      position: relative
+      transition: width 0.3s cubic-bezier(.445, .05, .55, .95), background-color 0.2s
+      +rem(padding-left, 25px)
+      +rem(padding-right, 25px)
+      overflow: hidden
+      .aside-item-inner
+        +rem(padding-top, 12px)
+        +rem(padding-left, 40px)
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        border-radius: 50%
+        background-color: transparent
+        border: 1px solid #d0d0d0
+        +rem(width, 9px)
+        +rem(height, 9px)
+        +rem(top, 20.5px)
+        +rem(left, 35px)
+        right: 0
+        bottom: 0
+        transition: background-color 0.2s cubic-bezier(.445, .05, .55, .95) border 0.2s cubic-bezier(.445, .05, .55, .95)
+      &.active
+        &:after
+          background-color: $green
+          border: 1px solid transparent
+      &:hover
+        width: 100%
+        background-color: $green
+        &:after
+          background-color: $white
+      p
+        white-space: nowrap
+        color: $white
 
 .small-block
-	+rem(max-width, 720px)
-	margin: auto
-	.annotation
-		+rem(margin-bottom, 40px)
+  +rem(max-width, 720px)
+  margin: auto
+  .annotation
+    +rem(margin-bottom, 40px)
 
 #brand-logo
-	position: absolute
-	+rem(left, -33px)
-	+rem(top, 70px)
-	.brand-logo-wrapper
-		.brand-logo-img
-			+rem(max-width, 100px)
-			+rem(max-height, 100px)
-			margin: auto
-			img
-				max-width: 100%
-				margin: auto
-		.brand-logo-button
-			.brand-button
-				display: block
-				+rem(font-size, 16px)
-				border: 1px solid $green
-				+rem(border-radius, 100px)
-				+rem(padding-left, 20px)
-				+rem(padding-right, 20px)
-				+rem(padding-top, 8px)
-				+rem(padding-bottom, 7px)
-				+rem(margin-top, 50px)
-				font-weight: 400
-				transition: border .2s, color .2s
-				&:hover
-					border: 1px solid $active
+  position: absolute
+  +rem(left, -33px)
+  +rem(top, 70px)
+  .brand-logo-wrapper
+    .brand-logo-img
+      +rem(max-width, 100px)
+      +rem(max-height, 100px)
+      margin: auto
+      img
+        max-width: 100%
+        margin: auto
+    .brand-logo-button
+      .brand-button
+        display: block
+        +rem(font-size, 16px)
+        border: 1px solid $green
+        +rem(border-radius, 100px)
+        +rem(padding-left, 20px)
+        +rem(padding-right, 20px)
+        +rem(padding-top, 8px)
+        +rem(padding-bottom, 7px)
+        +rem(margin-top, 50px)
+        font-weight: 400
+        transition: border .2s, color .2s
+        &:hover
+          border: 1px solid $active
 
 #brand-roducts
-	+rem(padding-top, 50px)
+  +rem(padding-top, 50px)
 
 #brand-products-slider, #modal-content
-	overflow: hidden
-	padding-right: 2px
-	padding-left: 2px
-	+rem(padding-bottom, 60px)
-	padding-top: 2px
-	position: relative
-	.products-slide
-		outline: 1px solid $lineColor
-		margin-left: 1px
-		position: relative
-		cursor: pointer
-		.slide-img
-			height: 242px
-			display: flex
-			img
-				max-width: 200px
-				max-height: 150px
-				display: block
-				margin: auto
-		&:before
-			display: block
-			position: absolute
-			content: ''
-			bottom: -1px
-			left: -1px
-			width: 100%
-			height: 0
-			border-left: 1px solid transparent
-			border-right: 1px solid transparent
-			border-top: 1px solid transparent
-			border-bottom: 1px solid transparent
-			transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0s, border-bottom 0s 0.15s,  border-left 0s 0.15s, border-right 0s 0.15s,
-		&:hover
-			z-index: 2
-			&:before
-				height: 100%
-				border-left: 1px solid $active
-				border-right: 1px solid $active
-				border-top: 1px solid $active
-				border-bottom: 1px solid $active
-				transition: height 0.15s cubic-bezier(.445,.05,.55,.95), border-top 0s 0.15s, border-left 0s 0s, border-right 0s 0s, border-bottom 0s 0s
-	.slick-arrow
-		position: absolute
-		bottom: 0
-		right: 0
-		left: 0
-		margin: auto
-		+rem(width, 30px)
-		+rem(height, 30px)
-		transform: translate(-50px, 0) rotate(180deg)
-		background: url("../img/1-1/arrow.svg") 50% 50% no-repeat
-		background-size: cover
-		font-size: 0
-		&.slick-next
-			transform: translate(60px, 0)
-		&.slick-disabled
-			opacity: .5
-	.slick-dots
-		position: absolute
-		+rem(bottom, -7px)
-		left: 0
-		right: 0
-		margin: auto
-		+rem(width, 20px)
-		transform: translate(-12px, 0)
-		li
-			display: inline-block
-			display: none
-			button
-				+rem(font-size, 38px)
-				color: #484f42
-				font-weight: 300
-				font-family: "Gotham Pro"
-			&.slick-active
-				display: block
-	.slick-sum-slides
-		position: absolute
-		+rem(font-size, 18px)
-		bottom: 0
-		color: #484f42
-		font-weight: 300
-		font-family: "Gotham Pro"
-		left: 0
-		right: 0
-		margin: auto
-		+rem(width, 30px)
-		transform: translate(20px, 0)
-
+  overflow: hidden
+  padding-right: 2px
+  padding-left: 2px
+  +rem(padding-bottom, 60px)
+  padding-top: 2px
+  position: relative
+  .products-slide
+    outline: 1px solid $lineColor
+    margin-left: 1px
+    position: relative
+    cursor: pointer
+    .slide-img
+      height: 242px
+      display: flex
+      img
+        max-width: 200px
+        max-height: 150px
+        display: block
+        margin: auto
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      bottom: -1px
+      left: -1px
+      width: 100%
+      height: 0
+      border-left: 1px solid transparent
+      border-right: 1px solid transparent
+      border-top: 1px solid transparent
+      border-bottom: 1px solid transparent
+      transition: height 0.15s cubic-bezier(.445, .05, .55, .95), border-top 0s 0s, border-bottom 0s 0.15s, border-left 0s 0.15s, border-right 0s 0.15s,
+    &:hover
+      z-index: 2
+      &:before
+        height: 100%
+        border-left: 1px solid $active
+        border-right: 1px solid $active
+        border-top: 1px solid $active
+        border-bottom: 1px solid $active
+        transition: height 0.15s cubic-bezier(.445, .05, .55, .95), border-top 0s 0.15s, border-left 0s 0s, border-right 0s 0s, border-bottom 0s 0s
+  .slick-arrow
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    +rem(width, 30px)
+    +rem(height, 30px)
+    transform: translate(-50px, 0) rotate(180deg)
+    background: url("../img/1-1/arrow.svg") 50% 50% no-repeat
+    background-size: cover
+    font-size: 0
+    &.slick-next
+      transform: translate(60px, 0)
+    &.slick-disabled
+      opacity: .5
+  .slick-dots
+    position: absolute
+    +rem(bottom, -7px)
+    left: 0
+    right: 0
+    margin: auto
+    +rem(width, 20px)
+    transform: translate(-12px, 0)
+    li
+      display: inline-block
+      display: none
+      button
+        +rem(font-size, 38px)
+        color: #484f42
+        font-weight: 300
+        font-family: "Gotham Pro"
+      &.slick-active
+        display: block
+  .slick-sum-slides
+    position: absolute
+    +rem(font-size, 18px)
+    bottom: 0
+    color: #484f42
+    font-weight: 300
+    font-family: "Gotham Pro"
+    left: 0
+    right: 0
+    margin: auto
+    +rem(width, 30px)
+    transform: translate(20px, 0)
 
 #brand-production-vertical-slider
-	padding-top: 40px
-	.flex-item
-		+rem(padding-top, 20px)
-		+rem(padding-bottom, 30px)
-		position: relative
-		&:before
-			display: block
-			position: absolute
-			background-color: $green
-			content: ''
-			+rem(width, 27px)
-			+rem(height, 2px)
-			top: 0
-			left: 0
+  padding-top: 40px
 
 #brand-vertical-slider
-	overflow: hidden
-	+rem(max-height, 550px)
-	position: relative
-	.slick-arrow
-		position: absolute
-		+rem(right, 20px)
-		top: 50%
-		margin: auto
-		+rem(width, 30px)
-		+rem(height, 30px)
-		transform: translate(0, -25px) rotate(-90deg)
-		background: url("../img/1-0/arrow.svg") 50% 50% no-repeat
-		background-size: cover
-		font-size: 0
-		z-index: 2
-		&.slick-next
-			transform: translate(0, 25px) rotate(90deg)
-		&.slick-disabled
-			opacity: .5
-	.slick-dots
-		position: absolute
-		+rem(bottom, 16px)
-		left: 0
-		right: 0
-		margin: auto
-		+rem(width, 20px)
-		transform: translate(-16px, 0)
-		li
-			display: inline-block
-			display: none
-			button
-				+rem(font-size, 38px)
-				color: #484f42
-				font-weight: 300
-				font-family: "Gotham Pro"
-			&.slick-active
-				display: block
-	.slick-sum-slides
-		position: absolute
-		+rem(font-size, 18px)
-		+rem(bottom, 22px)
-		color: #484f42
-		font-weight: 300
-		font-family: "Gotham Pro"
-		left: 0
-		right: 0
-		margin: auto
-		+rem(width, 30px)
-		transform: translate(16px, 0)
+  overflow: hidden
+  +rem(max-height, 550px)
+  position: relative
+  .slick-arrow
+    position: absolute
+    +rem(right, 20px)
+    top: 50%
+    margin: auto
+    +rem(width, 30px)
+    +rem(height, 30px)
+    transform: translate(0, -25px) rotate(-90deg)
+    background: url("../img/1-0/arrow.svg") 50% 50% no-repeat
+    background-size: cover
+    font-size: 0
+    z-index: 2
+    &.slick-next
+      transform: translate(0, 25px) rotate(90deg)
+    &.slick-disabled
+      opacity: .5
+  .slick-dots
+    position: absolute
+    +rem(bottom, 16px)
+    left: 0
+    right: 0
+    margin: auto
+    +rem(width, 20px)
+    transform: translate(-16px, 0)
+    li
+      display: inline-block
+      display: none
+      button
+        +rem(font-size, 38px)
+        color: #484f42
+        font-weight: 300
+        font-family: "Gotham Pro"
+      &.slick-active
+        display: block
+  .slick-sum-slides
+    position: absolute
+    +rem(font-size, 18px)
+    +rem(bottom, 22px)
+    color: #484f42
+    font-weight: 300
+    font-family: "Gotham Pro"
+    left: 0
+    right: 0
+    margin: auto
+    +rem(width, 30px)
+    transform: translate(16px, 0)
 
 #brand-contacts
-	.darker
-		font-weight: 400
-	.flex-block
-		+rem(margin-top, 30px)
-		.brand-telephone
-			display: block
-			color: $text-h
-			&:not(:first-of-type)
-				+rem(margin-top, 8px)
-		.brand-email-title
-			+rem(padding-left, 80px)
-		.brand-email
-			display: block
-			+rem(line-height, 28px)
-		.brand-email, .brand-email-title
-			&:not(:first-of-type)
-				+rem(margin-top, 8px)
-	#map
-		width: 100%
-		+rem(height, 513px)
-		+rem(margin-top, 30px)
+  .darker
+    font-weight: 400
+  .flex-block
+    +rem(margin-top, 30px)
+    .brand-telephone
+      display: block
+      color: $text-h
+      &:not(:first-of-type)
+        +rem(margin-top, 8px)
+    .brand-email-title
+      +rem(padding-left, 80px)
+    .brand-email
+      display: block
+      +rem(line-height, 28px)
+    .brand-email, .brand-email-title
+      &:not(:first-of-type)
+        +rem(margin-top, 8px)
+  #map
+    width: 100%
+    +rem(height, 513px)
+    +rem(margin-top, 30px)
 
 #back-button-wrapper
-	a
-		position: relative
-		+rem(font-size, 16px)
-		font-weight: 400
-		+rem(line-height, 34px)
-		+rem(padding-left, 40px)
-		display: block
-		svg
-			position: absolute
-			+rem(left, 0px)
-			transform: rotate(180deg)
-			+rem(height, 30px)
-			+rem(width, 30px)
-			transition: transform 0.2s cubic-bezier(.445,.05,.55,.95)
-			.back-arrow-green-svg
-				fill-rule: evenodd
-				clip-rule: evenodd
-				fill: none
-				stroke: $green
-				stroke-width: 2
-				stroke-miterlimit: 10
-				transition: stroke 0.2s cubic-bezier(.445,.05,.55,.95)
-			.back-arrow-green-svg-circle
-				fill: $green
-				transition: fill 0.2s cubic-bezier(.445,.05,.55,.95)
-		&:hover
-			svg
-				transform: rotate(180deg) translate(5px, 0)
-				.back-arrow-green-svg
-					stroke: $active
-				.back-arrow-green-svg-circle
-					fill: $active
-
-
+  a
+    position: relative
+    +rem(font-size, 16px)
+    font-weight: 400
+    +rem(line-height, 34px)
+    +rem(padding-left, 40px)
+    display: block
+    svg
+      position: absolute
+      +rem(left, 0px)
+      transform: rotate(180deg)
+      +rem(height, 30px)
+      +rem(width, 30px)
+      transition: transform 0.2s cubic-bezier(.445, .05, .55, .95)
+      .back-arrow-green-svg
+        fill-rule: evenodd
+        clip-rule: evenodd
+        fill: none
+        stroke: $green
+        stroke-width: 2
+        stroke-miterlimit: 10
+        transition: stroke 0.2s cubic-bezier(.445, .05, .55, .95)
+      .back-arrow-green-svg-circle
+        fill: $green
+        transition: fill 0.2s cubic-bezier(.445, .05, .55, .95)
+    &:hover
+      svg
+        transform: rotate(180deg) translate(5px, 0)
+        .back-arrow-green-svg
+          stroke: $active
+        .back-arrow-green-svg-circle
+          fill: $active
 
 #modal
-	max-width: 100%
-	height: 100%
-	margin: auto
-	overflow: hidden
-	#modal-block-wrapper
-		+vcenter
-		.block
-			+rem(max-width, 800px)
-			height: 100%
-			margin: auto
-			position: relative
-		#modal-content-images
-			.modal-img-slide
-				img
-					margin: auto
-					max-height: 100%
-		.h2
-			+rem(margin-bottom, 50px)
-		.modal-img-slide
-			position: relative
-			.modal-img-slide-inner
-				+rem(height, 300px)
-				img
-					height: 100%
-			.h2
-				+rem(margin-top, 20px)
-		#modal-content
-			margin: auto
-			padding: 2px
-			+rem(padding-left, 40px)
-			+rem(padding-right, 40px)
-			position: relative
-			&:before, &:after
-				content: ''
-				position: absolute
-				display: block
-				height: 100%
-				+rem(width, 46px)
-				background: #fff
-				left: 0
-				top: 0
-				right: auto
-				z-index: 20
-			&:after
-				background: #fff
-				right: 0
-				left: auto
-			.slick-arrow
-				top: 0
-				bottom: 0
-				margin: auto
-				z-index: 30
-				&.slick-next
-					left: 100%
-					transform: translate(-100%, 0)
-				&.slick-prev
-					right: 100%
-					transform: translate(0, 0) rotate(180deg)
-			.slick-track
-				display: flex
-				justify-content: flex-start
-			.products-slide
-				+rem(height, 92.5px)
-				margin-left: 0
-				min-width: 100px
-				&:after
-					width: 100%
-					height: 100%
-					display: block
-					position: absolute
-					top: 0
-					left: 0
-					background-color: $green
-					content: ''
-					opacity: 0
-					transition: opacity 0.2s
-				&:not(:last-child)
-					margin-right: 1px
-				&.slick-current
-					&:after
-						opacity: .4
-				.slide-img
-					height: 100%
-					width: auto
-				img
-					max-width: 90%
-					max-height: 60%
+  max-width: 100%
+  height: 100%
+  margin: auto
+  overflow: hidden
+  #modal-block-wrapper
+    +vcenter
+    .block
+      +rem(max-width, 800px)
+      height: 100%
+      margin: auto
+      position: relative
+    #modal-content-images
+      .modal-img-slide
+        img
+          margin: auto
+          max-height: 100%
+    .h2
+      +rem(margin-bottom, 50px)
+    .modal-img-slide
+      position: relative
+      .modal-img-slide-inner
+        +rem(height, 300px)
+        img
+          height: 100%
+      .h2
+        +rem(margin-top, 20px)
+    #modal-content
+      margin: auto
+      padding: 2px
+      +rem(padding-left, 40px)
+      +rem(padding-right, 40px)
+      position: relative
+      &:before, &:after
+        content: ''
+        position: absolute
+        display: block
+        height: 100%
+        +rem(width, 46px)
+        background: #fff
+        left: 0
+        top: 0
+        right: auto
+        z-index: 20
+      &:after
+        background: #fff
+        right: 0
+        left: auto
+      .slick-arrow
+        top: 0
+        bottom: 0
+        margin: auto
+        z-index: 30
+        &.slick-next
+          left: 100%
+          transform: translate(-100%, 0)
+        &.slick-prev
+          right: 100%
+          transform: translate(0, 0) rotate(180deg)
+      .slick-track
+        display: flex
+        justify-content: flex-start
+      .products-slide
+        +rem(height, 92.5px)
+        margin-left: 0
+        min-width: 100px
+        &:after
+          width: 100%
+          height: 100%
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          background-color: $green
+          content: ''
+          opacity: 0
+          transition: opacity 0.2s
+        &:not(:last-child)
+          margin-right: 1px
+        &.slick-current
+          &:after
+            opacity: .4
+        .slide-img
+          height: 100%
+          width: auto
+        img
+          max-width: 90%
+          max-height: 60%
 
 .side-blocks
-	position: relative
-	+rem(min-height, 600px)
-	.left-side
-		justify-content: flex-start
-	.right-side
-		&>.one-half
-			+rem(padding-left, 50px)
-		justify-content: flex-end
-	&.right-side-block
-		.side-block-img-wrapper
-			left: 0
-			right: auto
-			&:after
-				+rem(right, -15px)
-				left: auto
-	.annotation
-		+rem(margin-bottom, 30px)
-	.production-side-block-inner
-		&-text
-			+rem(max-width, 220px)
-	.side-block-img-wrapper
-		width: 50%
-		height: 100%
-		position: absolute
-		right: 0
-		top: 0
-		&:after
-			content: ''
-			position: absolute
-			display: block
-			+rem(height, 30px)
-			+rem(width, 30px)
-			background-color: $gray
-			+rem(left, -15px)
-			bottom: 0
-			top: 0
-			margin: auto
-			transform: rotate(45deg)
-		.side-block-img
-			background-size: cover
-			background-origin: 100% 50%
-			background-repeat: no-repeat
-			width: 100%
-			height: 100%
-			position: relative
+  position: relative
+  +rem(min-height, 600px)
+  .left-side
+    justify-content: flex-start
+  .right-side
+    & > .one-half
+      +rem(padding-left, 50px)
+    justify-content: flex-end
+  &.right-side-block
+    .side-block-img-wrapper
+      left: 0
+      right: auto
+      &:after
+        +rem(right, -15px)
+        left: auto
+  .annotation
+    +rem(margin-bottom, 30px)
+  .production-side-block-inner
+    &-text
+      +rem(max-width, 220px)
+  .side-block-img-wrapper
+    width: 50%
+    height: 100%
+    position: absolute
+    right: 0
+    top: 0
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      +rem(height, 30px)
+      +rem(width, 30px)
+      background-color: $gray
+      +rem(left, -15px)
+      bottom: 0
+      top: 0
+      margin: auto
+      transform: rotate(45deg)
+    .side-block-img
+      background-size: cover
+      background-origin: 100% 50%
+      background-repeat: no-repeat
+      width: 100%
+      height: 100%
+      position: relative
 
 .green-text-count
-	color: $green
-	+rem(font-size, 30px)
-	+rem(line-height, 48px)
-	font-family: 'Gotham Pro'
-	font-weight: 500
-	span
-		+rem(font-size, 16px)
+  color: $green
+  +rem(font-size, 30px)
+  +rem(line-height, 48px)
+  font-family: 'Gotham Pro'
+  font-weight: 500
+  span
+    +rem(font-size, 16px)
 
+#delivers
+  .h3
+    +rem(padding-bottom, 50px)
+  .green-stick-top
+    +rem(padding-right, 40px)
+  .callback-button
+    +rem(margin-top, 20px)
+
+.flex-img-wrapper
+  width: 100%
+  height: 100%
+  position: relative
+  .flex-img
+    height: 100%
+    width: 100%
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat

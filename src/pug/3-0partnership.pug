@@ -1,7 +1,7 @@
 extends _layout
 
 block title
-	title Группа компаний Серволюкс
+	title Партнёрство
 block config
 	- var main = false
 	- var chart = true
@@ -15,309 +15,42 @@ block content
 				#title-wrapper.animated.fadeInDownMenu
 					.bread
 						a(href="index.html") Главная
-					p.title-main Группа компаний
+					p.title-main Партнёрство
 	#main-content
 		aside#aside-menu.animated.fadeInLeft
 			.aside-menu-wrapper
-		.box#top.aside-menu-item(data-aside="О компании")
+		.box#top.aside-menu-item(data-aside="Работа с нами")
 			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInUp")
 						.text-wrap
-							p.h2 Крупнейший оператор и производитель на агропромышленном рынке Беларуси
+							p.h2 Динамично развивающийся игрок аграрного сектора
 					.one-half.animateThis(data-anim="fadeInUp")
 						.text-wrap
-							p.h3 Мы лидеры в сегменте птицеводства и стремительно наращиваем мощности по производству продукции. 
+							p.h3 Мы лидеры в сегменте птицеводства и стремительно наращиваем мощности по производству продукции.
 							p.sub Стратегия компании предусматривает ориентацию на инновационный подход в области производства, логистики, продаж и IT, что позволяет гарантировать высокое качество и безопасность продукции.
-				.flex-block.advantages.row
-					- var adv = 0.2
-					mixin one-four-advantage(img, text)
-						.one-four
-							.advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
-								.advantage-img
-									img(src=img)
-								.advantage-text
-									p.sub= text
-						- adv=adv+0.08
-					+one-four-advantage('/img/1-0/icon_1.png', 'По экспорту комбикормов и премиксов, мяса птицы')
-					+one-four-advantage('/img/1-0/icon_2.png', 'Cамая современная лаборатория контроля качества')
-					+one-four-advantage('/img/1-0/icon_3.png', 'Более 10 рынков сбыта продукции в разные страны')
-					+one-four-advantage('/img/1-0/icon_4.png', 'Крупнейший региональный ритейлер')
-				.flex-block.advantages.row
-					+one-four-advantage('/img/1-0/icon_5.png', 'Доля рынка мяса птицы в Республике Беларусь')
-					+one-four-advantage('/img/1-0/icon_6.png', 'Входит в десятку крупнейших производителей мяса птицы в РФ')
-					+one-four-advantage('/img/1-0/icon_7.png', 'Экспортер года 2015/2016 в категории мясная промышленность')
-					+one-four-advantage('/img/1-0/icon_8.png', 'Собственная логистическия база')
-		.box#parallax.aside-menu-item(data-aside="История")
-			.parallax-img
-				img(src="/img/1-0/parallax-bg_1-0.jpg", alt="")
-			#dates
-				.dates-slider-wrapper
-					#dates-slider.block.slick-slider
-						.dates-slide-column.slick-slide
-							p.h1 2006
-							.dates-event
-								p.sub Строительство комбикормового завода в Минской области
-							.dates-event
-								p.sub Строительство головного офиса в Могилеве
-							.dates-event
-								p.sub Строительство очистных сооружений в г. Смолевичи
-							.dates-event
-								p.sub Строительство молочно- товарной фермы
-						.dates-slide-column.slick-slide
-							p.h1 2007
-							.dates-event
-								p.sub Проект Greenfield — мясоперерабатывающий завод (готовая продукции)
-						.dates-slide-column.slick-slide
-							p.h1 2008
-							.dates-event
-								p.sub Запуск молочно-товарной фермы и нового участка производства творога и творожно-сливочных сыров на «Смолевичи Молоко»
-							.dates-event
-								p.sub Завершение строительства головного офиса компании в Могилеве
-						.dates-slide-column.slick-slide
-							p.h1 2009
-							.dates-event
-								p.sub Запуск в эксплуатацию инновационной 3-й площадки по выращиванию цыплят бройлеров в ОАО «Смолевичи бройлер»
-						.dates-slide-column.slick-slide
-							p.h1 2010
-							.dates-event
-								p.sub Строительство комбикормового завода в Минской области
-							.dates-event
-								p.sub Строительство головного офиса в Могилеве
-							.dates-event
-								p.sub Строительство очистных сооружений в г. Смолевичи
-							.dates-event
-								p.sub Строительство молочно- товарной фермы
-						.dates-slide-column.slick-slide
-							p.h1 2011
-							.dates-event
-								p.sub Проект Greenfield — мясоперерабатывающий завод (готовая продукции)
-						.dates-slide-column.slick-slide
-							p.h1 2012
-							.dates-event
-								p.sub Запуск молочно-товарной фермы и нового участка производства творога и творожно-сливочных сыров на «Смолевичи Молоко»
-							.dates-event
-								p.sub Завершение строительства головного офиса компании в Могилеве
-						.dates-slide-column.slick-slide
-							p.h1 2013
-							.dates-event
-								p.sub Запуск в эксплуатацию инновационной 3-й площадки по выращиванию цыплят бройлеров в ОАО «Смолевичи бройлер»
-						.dates-slide-column.slick-slide.slick-active
-							p.h1 2014
-							.dates-event
-								p.sub Строительство комбикормового завода в Минской области
-							.dates-event
-								p.sub Строительство головного офиса в Могилеве
-							.dates-event
-								p.sub Строительство очистных сооружений в г. Смолевичи
-							.dates-event
-								p.sub Строительство молочно- товарной фермы
-						.dates-slide-column.slick-slide.slick-active
-							p.h1 2015
-							.dates-event
-								p.sub Проект Greenfield — мясоперерабатывающий завод (готовая продукции)
-						.dates-slide-column.slick-slide.slick-active
-							p.h1 2016
-							.dates-event
-								p.sub Запуск молочно-товарной фермы и нового участка производства творога и творожно-сливочных сыров на «Смолевичи Молоко»
-							.dates-event
-								p.sub Завершение строительства головного офиса компании в Могилеве
-						.dates-slide-column.slick-slide.slick-active
-							p.h1 2017
-							.dates-event
-								p.sub Запуск в эксплуатацию инновационной 3-й площадки по выращиванию цыплят бройлеров в ОАО «Смолевичи бройлер»
-		.box#graphics.aside-menu-item(data-aside="Результаты деятельности")
-			.block
-				p.h2 Результаты деятельности
-				.carousel-buttons.animateThis(data-anim="fadeInRight")
-							#chart-control.carousel-buttons-wrap
-								.button(data-chart="0").active
-									p Мясо птицы
-								.button(data-chart="1")
-									p Корма и компоненты
-								.button(data-chart="2")
-									p Мясо-колбасные изделия
-								.button(data-chart="3")
-									p Молоко
-				.flex-block
-					.one-half.animateThis(data-anim="fadeInRight")
-						p.h3 Отчеты о деятельности компании
-						p Мы обеспечиваем планомерное и гармоничное развитие при работе с поставщиками. Основой отношений является взаимовыгодное сотрудничество с партнерами, внедрение передовых технологий и мировой опыт организации розничной торговли.
-						+download_pdf('Отчет по экспорту')
-						+download_pdf('Годовой отчет 2016')
-						+download_pdf('сследование отрасли 2016')
-					.one-half.animateThis(data-anim="fadeInLeft")
-						script.
-							var chartData = [
-								{
-									"title": "Производство мяса птицы, тыс. тонн",
-									"values": [
-										{"date": "2011", "value": 20},
-										{"date": "2012", "value": 30},
-										{"date": "2013", "value": 43},
-										{"date": "2014", "value": 56},
-										{"date": "2015", "value": 88.9},
-										{"date": "2016", "value": 100},
-										{"date": "2017", "value": 120}
-									]
-								},
-								{
-									"title": "Производство кормов и компонентов, тыс. тонн",
-									"values": [
-										{"date": "2011", "value": 250},
-										{"date": "2012", "value": 350},
-										{"date": "2013", "value": 430},
-										{"date": "2014", "value": 560},
-										{"date": "2015", "value": 880.9},
-										{"date": "2016", "value": 1000},
-										{"date": "2017", "value": 1200}
-									]
-								},
-								{
-									"title": "Производство мяса-колбасных изделий, тыс. тонн",
-									"values": [
-										{"date": "2011", "value": 150},
-										{"date": "2012", "value": 280},
-										{"date": "2013", "value": 340},
-										{"date": "2014", "value": 500},
-										{"date": "2015", "value": 900},
-										{"date": "2016", "value": 1400},
-										{"date": "2017", "value": 2000}
-									]
-								},
-								{
-									"title": "Производство молока, тыс. тонн",
-									"values": [
-										{"date": "2011", "value": 290},
-										{"date": "2012", "value": 500},
-										{"date": "2013", "value": 830},
-										{"date": "2014", "value": 1200},
-										{"date": "2015", "value": 1800},
-										{"date": "2016", "value": 2350},
-										{"date": "2017", "value": 3000}
-									]
-								}
-							]
-						#company-chart
-		.box#gallery.aside-menu-item(data-aside="Активы")
+		.box#delivers.aside-menu-item(data-aside="Поставщикам").gray
 			.block
 				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						.text-wrap
+							p.h2 Поставщикам
+						.text-wrap
+							p.h3 «Серволюкс» работает более чем 500 поставщиками, в число которых входят производители, дистрибьюторы и импортёры. Мы предлагаем:
+						.flex-block
+							.one-half
+								.green-stick-top
+									p Дилерство около 20 лучших европейских и американских производителей оборудования  для животноводства
+							.one-half
+								.green-stick-top
+									p Импорт зерновых, масличных культур, составляющих для производства кормов
+							.one-half
+								.green-stick-top
+									p Доставку необходимых товаров и оборудования в срок в любую точку мира
+							.one-half
+								.green-stick-top
+									p Выгодные условия по аренде помещений в вашей местности
+						a(href="#").callback-button Стать партнёром
 					.one-half
-						p.h2 Активы «Серволюкс»
-					.one-half
-						p.annotation В состав компании входит более 10 крупных активов в Беларуси и странах СНГ, представительства в Москве, Смоленске, Киеве, Минске и Гродно.
-				.gallery-block-wrapper
-					.gallery-block
-						.gallery-item.gallery-big.gallery-left.animateThis(data-anim="fadeInUp")
-							a(href="#").gallery-item-inner
-								.gallery-item-img
-									.gallery-item-img-inner(style="background-image: url('../img/1-0/gallery/picture0.jpg')")
-								.gallery-item-text-wrapper
-									p.gallery-item-title Завод «Экомол»
-									p.gallery-item-subtitle Смолевичский район, Беларусь
-						.gallery-item.gallery-medium.gallery-right.animateThis(data-anim="fadeInUp")
-							a(href="#").gallery-item-inner
-								.gallery-item-img
-									.gallery-item-img-inner(style="background-image: url('../img/1-0/gallery/picture1.jpg')")
-								.gallery-item-text-wrapper
-									p.gallery-item-title Завод «Серволюкс Агро»
-									p.gallery-item-subtitle д.Лежневка, Беларусь
-						.gallery-item.gallery-small.gallery-right.animateThis(data-anim="fadeInUp")
-							a(href="#").gallery-item-inner
-								.gallery-item-img
-									.gallery-item-img-inner(style="background-image: url('../img/1-0/gallery/picture2.jpg')")
-								.gallery-item-text-wrapper
-									p.gallery-item-title Завод «Серволюкс Агро»
-									p.gallery-item-subtitle д.Межисетки, Беларусь
-						.gallery-item.gallery-small.gallery-right.animateThis(data-anim="fadeInUp")
-							a(href="#").gallery-item-inner
-								.gallery-item-img
-									.gallery-item-img-inner(style="background-image: url('../img/1-0/gallery/picture3.jpg')")
-								.gallery-item-text-wrapper
-									p.gallery-item-title Компания «Юнимит»
-									p.gallery-item-subtitle Смолевичский район, Беларусь
-						.gallery-item.gallery-big.gallery-right.animateThis(data-anim="fadeInUp")
-							a(href="#").gallery-item-inner
-								.gallery-item-img
-									.gallery-item-img-inner(style="background-image: url('../img/1-0/gallery/picture4.jpg')")
-								.gallery-item-text-wrapper
-									p.gallery-item-title Головной офис «Серволюкс»
-									p.gallery-item-subtitle Могилёв, Беларусь
-						.gallery-item.gallery-medium.gallery-right.animateThis(data-anim="fadeInUp")
-							a(href="#").gallery-item-inner
-								.gallery-item-img
-									.gallery-item-img-inner(style="background-image: url('../img/1-0/gallery/picture5.jpg')")
-								.gallery-item-text-wrapper
-									p.gallery-item-title Офис «Серволюкс»
-									p.gallery-item-subtitle Минск, Беларусь
-						.gallery-item.gallery-small.gallery-right.animateThis(data-anim="fadeInUp")
-							a(href="#").gallery-item-inner
-								.gallery-item-img
-									.gallery-item-img-inner(style="background-image: url('../img/1-0/gallery/picture6.jpg')")
-								.gallery-item-text-wrapper
-									p.gallery-item-title Завод «Серволюкс Агро»
-									p.gallery-item-subtitle д.Межисетки, Беларусь
-						.gallery-item.gallery-small.gallery-right.animateThis(data-anim="fadeInUp")
-							a(href="#").gallery-item-inner
-								.gallery-item-img
-									.gallery-item-img-inner(style="background-image: url('../img/1-0/gallery/picture7.jpg')")
-								.gallery-item-text-wrapper
-									p.gallery-item-title Компания «Юнимит»
-									p.gallery-item-subtitle Смолевичский район, Беларусь
-		.box#company-map.aside-menu-item(data-aside="География")
-			.block
-				.flex-block
-					.one-half
-						p.h2 География рынков сбыта «Серволюкс»
-						p.annotation «Серволюкс» активно развивает рынки продаж. Наша продукция поставляется в Россию, Грузию, Китай, Казахстан и другие страны.
-						.flex-block.map-advantage-wrapper
-							.one-half
-								.map-advantage.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
-									.map-advantage-count
-										p.map-green-count 61%
-									.map-advantage-text
-										p.sub Экспорт продуктов из мяса птицы
-							.one-half
-								.map-advantage.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
-									.map-advantage-count
-										p.map-green-count 65%
-									.map-advantage-text
-										p.sub Экспорт мясо перерабо- танных продуктов
-							.one-half
-								.map-advantage.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
-									.map-advantage-count
-										p.map-green-count 50%
-									.map-advantage-text
-										p.sub Экспорт молочных продуктов
-							.one-half
-								.map-advantage.animateThis(data-anim="fadeInUp" style="animation-delay: 0.2s")
-									.map-advantage-count
-										p.map-green-count 20%
-									.map-advantage-text
-										p.sub Экспорт комбикормов и премиксов
-			script.
-				var arrayOfPins = [
-					{
-					  'lat': 53.90,
-					  'lng': 27.55,
-					  'name': 'Беларусь'
-					},
-					{
-					  'lat': 50.45,
-					  'lng': 30.524,
-					  'name': 'Украина'
-					},
-					{
-					  'lat': 55.75,
-					  'lng': 37.63,
-					  'name': 'Россия'
-					}]
-			#map.map-elem-near(data-lat="23", data-lon="55", data-icon='/img/1-0/pin.png', data-zoom="3")
-		.box#company-brands.gray.aside-menu-item(data-aside="Бренды")
-			.block
-				.flex-block
-					.one-half.animateThis(data-anim="fadeInLeft")
-						p.h2 Наши бренды
-					.one-half.animateThis(data-anim="fadeInRight")
-						p.annotation Продукция группы компаний «Серволюкс» пользуется высоким спросом не только у белорусских потребителей — до 50% реализуется на экспротных рынках.
-				include includes/_brands_footer.pug
+						.flex-img-wrapper
+							.flex-img(style='background-image: url("img/3-0/delivers-img.jpg")')
