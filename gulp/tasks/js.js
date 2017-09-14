@@ -14,7 +14,7 @@ gulp.task('js', function () {
   gulp.src(config.src.js + '**/*.js')
     .pipe(cache('linting'))
     .pipe(babel({
-      presets: ['env', 'es2017']
+      presets: ['env']
     }))
     .pipe(eslint({
       // конфиг в папке

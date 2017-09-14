@@ -7,8 +7,6 @@
     "autoprefixer": "latest",
     "browser-sync": "latest",
     "babel-core": "latest",
-    "babel-preset-es2017": "latest",
-    "babel-preset-es2015": "latest",
     "babel-preset-env": "latest",
     "critical": "latest",
     "css-mqpacker": "latest",
