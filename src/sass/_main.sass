@@ -63,7 +63,7 @@ html
 		&:after
 			position: fixed
 			display: block
-			width: 20px
+			+rem(width, 20px)
 			height: 100vh
 			top: 0
 			right: 0
@@ -123,6 +123,16 @@ body
 .gray
 	background-color: $gray
 
+.img-bg
+	width: 50%
+	position: absolute
+	right: 0
+	top: 0
+	height: 100%
+	background-position: 50% 50%
+	background-size: cover
+	background-repeat: no-repeat
+
 // --- Base Fonts Settings
 
 a
@@ -146,7 +156,7 @@ h2, .h2
 	+ff('GothamPro', 400, 38px)
 	color: $text-h
 	+rem(line-height, 48px)
-	margin-bottom: 20px
+	+rem(margin-bottom, 20px)
 	+r(400)
 		+rem(font-size, 30px)
 
@@ -154,8 +164,7 @@ h3, .h3
 	+ff('Roboto', 400, 26px)
 	color: $text-annotation
 	+rem(line-height, 36px)
-	+rem(padding-top, 10px)
-	+rem(padding-bottom, 10px)
+	+rem(margin-bottom, 20px)
 
 h4
 	+ff('Roboto', 700, 18px)
@@ -168,35 +177,38 @@ p
 	a
 		font-weight: inherit
 
-p.annotation
+.annotation
 	+rem(font-size, 26px)
 	color: $text-annotation
 	+rem(line-height, 36px)
+	+rem(margin-bottom, 20px)
+	+rem(margin-top, 20px)
 	+r(992)
-		margin-bottom: 40px
+		+rem(margin-bottom, 40px)
 
-p.darker, a.darker
+.darker, a.darker
 	color: $text-darker
+	font-weight: 600
 
-p.sub
+.sub
 	+ff('Roboto', 600, 16px)
 	+rem(line-height, 30px)
 	+rem(padding-top, 10px)
 	+rem(padding-bottom, 10px)
 	+r(992)
-		margin-bottom: 40px
+		+rem(margin-bottom, 40px)
 
-p.caption
+.caption
 	+rem(font-size, 16px)
 	color: $text-light-gray
 	+rem(line-height, 24px)
 
-p.brand-subtitle
+.brand-subtitle
 	+rem(font-size, 26px)
 	font-family: 'Roboto'
 	font-weight: 600
 	color: #484f42
-	margin-top: 10px
+	+rem(margin-top, 10px)
 	+rem(margin-bottom, 45px)
 
 // --- End Base Fonts Settings
@@ -207,8 +219,6 @@ p.brand-subtitle
 	flex-wrap: wrap
 	& > *
 		position: relative
-	&:nth-of-type(2)
-		margin-top: 50px
 	&.column
 		flex-direction: column
 	&.space-between
@@ -241,7 +251,7 @@ p.brand-subtitle
 			+rem(padding, 10px)
 		+r(400)
 			width: 50%
-			max-width: 250px
+			+rem(max-width, 250px)
 
 .animateThis
 	opacity: 0
@@ -249,7 +259,9 @@ p.brand-subtitle
 .green-stick-top
 	position: relative
 	+rem(padding-top, 20px)
+	+rem(margin-top, 15px)
 	+rem(padding-bottom, 30px)
+	+rem(padding-right, 40px)
 	&:before
 		display: block
 		position: absolute
@@ -261,29 +273,41 @@ p.brand-subtitle
 		left: 0
 
 .line-top
-	border-top: 1px solid $lineColor
+	position: relative
+	&:before
+		display: block
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+		height: 1px
+		max-width: 1200px
+		background-color: $lineColor
 
 #main-content
 	background-color: $white
 	position: relative
 
 .block-inner
-	padding-bottom: 50px
+	+rem(padding-bottom, 50px)
 
 .box
 	width: 100%
-	+rem(padding-left, $sidestep)
-	+rem(padding-right, $sidestep)
+	position: relative
+	+rem(padding, $sidestep)
+	+rem(padding-top, $sidestep + 30px)
+	+rem(padding-bottom, $sidestep + 30px)
 	+r(492)
-		+rem(padding-left, $sidestep - 20px)
-		+rem(padding-right, $sidestep - 20px)
+		+rem(padding, $sidestep - 20px)
 	.block
 		+rem(max-width, 1440px)
 		+rem(padding-left, 120px)
 		+rem(padding-right, 120px)
+		+rem(padding-top, 30px)
+		+rem(padding-bottom, 40px)
 		margin: auto
-		+rem(padding-top, 65px)
-		+rem(padding-bottom, 110px)
 		position: relative
 		&.medium-size
 			+rem(max-width, 1140px)
@@ -315,7 +339,7 @@ p.brand-subtitle
 			display: inline-block
 			flex-grow: 1
 			position: relative
-			padding: 5px
+			+rem(padding, 5px)
 			margin-top: 1px
 			margin-left: 1px
 			+r(1024)
@@ -391,18 +415,15 @@ p.brand-subtitle
 		+r(400)
 			+rem(font-size, 17px)
 
-#parallax
-	h1, h2, h3, h4, p, .h2
-		color: $white
-
 .button-green-wrapper
 	display: inline-block
+	+rem(margin-top, 30px)
+	+rem(margin-bottom, 30px)
 
-a.button-green
+.button-green
 	display: flex
 	position: relative
 	justify-content: flex-start
-	margin-top: 45px
 	color: $green
 	background-color: transparent
 	border: 1px solid $text-light-gray
@@ -472,7 +493,7 @@ a.button-green
 	+rem(max-width, 480px)
 	position: relative
 	+r(768)
-		width: 250px
+		+rem(width, 250px)
 	+r(480)
 		width: 84%
 	form
@@ -484,8 +505,8 @@ a.button-green
 		background: none
 		height: 100%
 		width: 100%
-		padding-left: 20px
-		padding-right: 50px
+		+rem(padding-left, 20px)
+		+rem(padding-right, 50px)
 		position: absolute
 		+rem(height, 43px)
 		z-index: 1
@@ -507,7 +528,7 @@ a.button-green
 		width: 100%
 		display: block
 		border: 1px solid #d0d0d0
-		border-radius: 50px
+		+rem(border-radius, 50px)
 		+rem(height, 43px)
 		position: relative
 		pointer-events: none
@@ -567,8 +588,8 @@ main
 			+rem(top, $topstep - 7px)
 			+rem(height, 36px)
 			+rem(padding-top, 15px)
-			padding-left: 10px
-			padding-right: 10px
+			+rem(padding-left, 10px)
+			+rem(padding-right, 10px)
 			z-index: 100
 			&:before, &:after
 				display: block
@@ -603,13 +624,13 @@ main
 				.nav-href
 					color: $white
 					display: inline-block
-					line-height: 36px
+					+rem(line-height, 36px)
 					+ff('Roboto', 600, 18px)
 					+rem(height, 37px)
 					+rem(padding-left, 16px)
 					+rem(padding-right, 16px)
 					+rem(margin-right, 7px)
-					border-radius: 5px
+					+rem(border-radius, 5px)
 					position: relative
 					z-index: 2
 					&:after
@@ -643,9 +664,9 @@ main
 				z-index: 2
 				transition: transform 0.3s ease-out 0.05s, opacity 0.1s ease-in 0s
 				transform: translate(0px, -100%)
-				padding-top: 80px
-				min-height: 700px
-				padding-bottom: 50px
+				+rem(padding-top, 80px)
+				+rem(min-height, 700px)
+				+rem(padding-bottom, 50px)
 				.menu-modal-wrap
 					width: 100%
 					height: 100%
@@ -659,10 +680,10 @@ main
 						display: flex
 						position: relative
 						align-items: center
-						min-height: 500px
+						+rem(min-height, 500px)
 						+r(992)
 							background-color: $white
-							padding-bottom: 50px
+							+rem(padding-bottom, 50px)
 							height: auto
 						.menu-columns
 							display: flex
@@ -754,7 +775,7 @@ main
 			opacity: .5
 			will-change: transform
 		nav
-			padding-right: 18px
+			+rem(padding-right, 18px)
 		.boxed
 			height: 100vh
 			overflow-y: auto
@@ -1137,7 +1158,6 @@ $slSize: 440px
 						+rem(font-size, 26px)
 						+rem(line-height, 32px)
 						font-weight: 400
-						+rem(margin-bottom, 20px)
 						text-align: center
 					p
 						+rem(line-height, 28px)
@@ -1239,9 +1259,9 @@ $slSize: 440px
 					stroke: $white
 
 .download
-	+rem(margin-top, 30px)
-	+rem(margin-bottom, 45px)
-	display: block
+	+rem(margin-top, 20px)
+	+rem(margin-bottom, 20px)
+	display: inline-block
 	svg
 		+rem(width, 30px)
 		+rem(height, 30px)
@@ -1275,6 +1295,18 @@ $slSize: 440px
 	position: relative
 	overflow: hidden
 	background-color: #092222
+	&.work
+		.block
+			+rem(padding-top, 100px)
+			+rem(padding-bottom, 100px)
+		.one-four
+			+rem(padding-right, 30px)
+	h1, h2, h3, h4, p, .h2
+		color: $white
+	.h1
+		+rem(line-height, 60px)
+	.sub
+		opacity: .5
 	.parallax-img
 		position: absolute
 		width: 100%
@@ -1378,8 +1410,12 @@ $slSize: 440px
 					width: 100%
 			p
 				position: absolute
-				+rem(top, 26px)
-				+rem(left, 25px)
+				top: 0
+				bottom: 0
+				+rem(left, 20px)
+				+rem(top, 20px)
+				display: inline-block
+				margin: auto
 				color: $white
 				+rem(font-size, 16px)
 				&.annotation
@@ -1397,13 +1433,10 @@ $slSize: 440px
 					background-color: $active
 
 #news
-	border-top: 1px solid $lineColor
-	.h2
-		+rem(margin-bottom, 60px)
 	.button-green-wrapper
 		float: left
 		display: block
-		margin-top: 30px
+		+rem(margin-top, 30px)
 	.news
 		width: 100%
 		display: block
@@ -1411,6 +1444,7 @@ $slSize: 440px
 		.news-item
 			width: 50%
 			float: right
+			+rem(padding-bottom, 30px)
 			+r(992)
 				float: clear
 				width: 100%
@@ -1423,7 +1457,8 @@ $slSize: 440px
 			.img-news-wrapper
 				display: none
 				position: relative
-				height: 400px
+				+rem(height, 400px)
+				+rem(margin-bottom, 20px)
 				width: 100%
 				overflow: hidden
 				img
@@ -1437,7 +1472,6 @@ $slSize: 440px
 					margin: auto
 			.text-news-wrapper
 				.href
-					+rem(margin-top, 20px)
 					+rem(margin-bottom, 20px)
 					+rem(font-size, 18px)
 					+rem(line-height, 30px)
@@ -1527,6 +1561,8 @@ $slSize: 440px
 	+rem(padding-top, 8px)
 	+rem(font-size, 16px)
 	+rem(line-height, 28px)
+	+rem(margin-top, 20px)
+	+rem(margin-bottom, 20px)
 	position: relative
 	text-align: center
 	font-weight: 500
@@ -1568,8 +1604,8 @@ $slSize: 440px
 	.footer-hrefs
 		+r(992)
 			position: relative
-			margin-bottom: 50px
-			margin-top: 50px
+			+rem(margin-bottom, 50px)
+			+rem(margin-top, 50px)
 		.footern-href-link
 			display: block
 			color: $text-h
@@ -1617,7 +1653,7 @@ $slSize: 440px
 			+rem(font-size, 16px)
 		+r(992)
 			position: relative
-			margin-bottom: 50px
+			+rem(margin-bottom, 50px)
 	.footer-makers
 		position: absolute
 		bottom: 0
@@ -1633,20 +1669,20 @@ $slSize: 440px
 				color: $active
 		+r(992)
 			position: relative
-			margin-top: 50px
+			+rem(margin-top, 50px)
 	.footer-block-wrapper
 		.callback-button
-			margin-top: 40px
+			+rem(margin-top, 40px)
 
 .advantages
 	justify-content: center
 	align-items: flex-start
-	margin-top: 30px
 	.one-four
 		position: relative
 	.advantage-wrapper
 		+rem(padding-right, 70px)
-		+rem(margin-top, 0px)
+		+rem(padding-top, 15px)
+		+rem(padding-bottom, 15px)
 		width: 100%
 		+r(992)
 			margin: auto
@@ -1659,7 +1695,7 @@ $slSize: 440px
 		.advantage-img
 			+rem(margin-bottom, 12px)
 			img
-				+rem(max-height, 50px)
+				+rem(max-height, 60px)
 				width: auto !important
 		.advantage-text
 			max-width: 100%
@@ -1708,7 +1744,7 @@ $slSize: 440px
 					width: 1px
 					height: 100%
 					background-color: #FFF
-					right: 24px
+					+rem(right, 24px)
 					top: 0
 				&.slick-slide
 					&.slick-active
@@ -1745,7 +1781,6 @@ $galleryBigHeight: 590px
 #gallery
 	background-color: #f5f5f5
 	.gallery-block
-		margin-top: 75px
 		position: relative
 		&:after
 			position: relative
@@ -1836,7 +1871,7 @@ $galleryBigHeight: 590px
 	.block
 		& > .flex-block
 			.one-half:first-of-type
-				padding-right: 50px
+				+rem(padding-right, 50px)
 	.map-advantage-wrapper
 		+rem(margin-top, 10px)
 		.map-advantage
@@ -1959,11 +1994,11 @@ $galleryBigHeight: 590px
 		position: relative
 		cursor: pointer
 		.slide-img
-			height: 242px
+			+rem(height, 242px)
 			display: flex
 			img
-				max-width: 200px
-				max-height: 150px
+				+rem(max-width, 200px)
+				+rem(max-height, 150px)
 				display: block
 				margin: auto
 		&:before
@@ -2043,7 +2078,7 @@ $galleryBigHeight: 590px
 	+rem(margin-top, 70px)
 
 #brand-production-vertical-slider
-	padding-top: 40px
+	+rem(padding-top, 40px)
 
 #brand-vertical-slider
 	overflow: hidden
@@ -2103,6 +2138,9 @@ $galleryBigHeight: 590px
 		+rem(margin-top, 30px)
 		.brand-telephone
 			display: block
+			+rem(font-size, 18px)
+			+rem(line-height, 28px)
+			margin: 0
 			color: $text-h
 			&:not(:first-of-type)
 				+rem(margin-top, 8px)
@@ -2250,6 +2288,7 @@ $galleryBigHeight: 590px
 			&:after
 				+rem(right, -15px)
 				left: auto
+
 	.annotation
 		+rem(margin-bottom, 30px)
 	.production-side-block-inner
@@ -2290,13 +2329,6 @@ $galleryBigHeight: 590px
 	span
 		+rem(font-size, 16px)
 
-#delivers
-	.h3
-		+rem(padding-bottom, 50px)
-	.green-stick-top
-		+rem(padding-right, 40px)
-	.callback-button
-		+rem(margin-top, 20px)
 
 .flex-img-wrapper
 	width: 100%
@@ -2310,18 +2342,57 @@ $galleryBigHeight: 590px
 		background-repeat: no-repeat
 
 #clients
-	.callback-button
-		+rem(margin-top, 50px)
-		+rem(margin-bottom, 50px)
-	.sub
-		opacity: .5
 	.row
 		+rem(margin-top, 50px)
+
 
 #whywe
 	.darker
 		font-weight: 600
-		+rem(margin-bottom, 18px)
 	.block
 		background: url('../img/3-0/earth.jpg') 50% 50% no-repeat
 		background-size: contain
+
+#canvas
+	+rem(height, 550px)
+
+
+#vacancy-block
+	.vacancy-block-green
+		width: 100%
+		background: url('../img/4-0/pattern.jpg') 0 0 repeat-x
+		position: relative
+		+rem(padding, 50px)
+		&>*
+			display: inline-block
+		.vacancy-text, .vacancy-href
+			color: #fff
+			+rem(font-size, 32px)
+			+rem(line-height, 42px)
+			display: inline-block
+			font-weight: 400
+		.vacancy-href
+			+rem(margin-left, 10px)
+			border-bottom: 1px solid $white
+			transition: color 0.1s, border-bottom 0.1s
+			&:hover
+				color: $active
+				border-bottom: 1px solid $active
+		.vacancy-button
+			position: absolute
+			+rem(right, 50px)
+			top: 50%
+			bottom: 0
+			display: block
+			height: 86px
+			transform: translate(0, -50%)
+			.callback-button
+				background-color: transparent
+				border: 1px solid $white
+				&:hover
+					background-color: $active
+					border-color: $active
+#offices
+	.map
+		height: 100%
+		width: 100%

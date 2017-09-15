@@ -6,33 +6,56 @@ window.onload = function () {
 		$('#main-video').get(0).play();
 	}
 
-	if ($('canvas#canvas').length) {
-		var ctx = document.getElementById("canvas").getContext("2d");
-		window.myBar = new Chart(ctx, {
-			type: 'bar',
-			data: barChartData,
-			options: {
-				title: {
-					display: false,
-					text: "Chart.js Bar Chart - Stacked"
-				},
-				legend: {
-					display: false
-				},
-				tooltips: {
-					mode: 'index',
-					intersect: false
-				},
-				responsive: true,
-				scales: {
-					xAxes: [{
-						stacked: true
-					}],
-					yAxes: [{
-						stacked: true
-					}]
+	if ($('#canvas').length) {
+
+		var barNumber = 0,
+		    chartOptions = {
+				type: 'bar',
+				data: barChartData[barNumber],
+				options: {
+					title: {
+						display: true,
+						text: barChartData[barNumber].title
+					},
+					legend: {
+						display: true,
+						position: 'bottom'
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: false
+					},
+					responsive: true,
+					scales: {
+						xAxes: [{
+							stacked: true
+						}],
+						yAxes: [{
+							stacked: true,
+							ticks: {
+							// Include a dollar sign in the ticks
+								callback: function callback(value) {
+									return value + " " + barChartData[barNumber].value;
+								}
+							}
+						}]
+					}
 				}
-			}
+			};
+
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(ctx, chartOptions);
+
+		$('#chart-control .button').on('click', function () {
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			barNumber = $(this).data('chart');
+			chartOptions.data = barChartData[barNumber];
+			chartOptions.options.title.text = barChartData[barNumber].title;
+			chartOptions.options.scales.yAxes[0].ticks.callback = function (value) {
+				return value + " " + barChartData[barNumber].value;
+			};
+			myBar.update();
 		});
 	}
 };
@@ -43,168 +66,173 @@ function isMobile() {
 }
 
 function initMap(mapArg, arrayOfPins) {
-	var $trel = $(mapArg),
-	    element = document.getElementById('map'),
+	var manyMaps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+	var element = mapArg,
 	    zoomIn = parseFloat(element.getAttribute('data-zoom')),
 	    latcord = parseFloat(element.getAttribute('data-lat')),
 	    loncord = parseFloat(element.getAttribute('data-lon')),
 	    imgpath = element.getAttribute('data-icon'),
-	    centercords = { lat: latcord, lng: loncord },
-	    map = new google.maps.Map(element, {
-			zoom: zoomIn,
-			minZoom: zoomIn,
-			center: centercords,
-			fullscreenControl: true,
-			scrollwheel: false,
-			mapTypeControl: false,
-			scaleControl: false,
-			streetViewControl: false,
-			gestureHandling: 'greedy',
-			zoomControlOptions: {
-				position: google.maps.ControlPosition.RIGHT_CENTER
-			},
-			styles: [{
-				'featureType': 'all',
-				'elementType': 'geometry',
-				'stylers': [{ 'visibility': 'on' }]
-			}, {
-				'featureType': 'all',
-				'elementType': 'geometry.fill',
-				'stylers': [{ 'visibility': 'on' }]
-			}, {
-				'featureType': 'all',
-				'elementType': 'geometry.stroke',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'all',
-				'elementType': 'labels.text',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'all',
-				'elementType': 'labels.text.fill',
-				'stylers': [{ 'color': '#000000' }]
-			}, {
-				'featureType': 'all',
-				'elementType': 'labels.text.stroke',
-				'stylers': [{ 'color': '#ffffff' }]
-			}, {
-				'featureType': 'administrative',
-				'elementType': 'geometry.stroke',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative',
-				'elementType': 'labels',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative',
-				'elementType': 'labels.text',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative.country',
-				'elementType': 'geometry.fill',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative.country',
-				'elementType': 'geometry.stroke',
-				'stylers': [{ 'visibility': 'on' }, { 'saturation': '-14' }, { 'weight': '1' }, { 'lightness': '67' }, { 'gamma': '1.41' }, { 'color': '#c7d7c7' }]
-			}, {
-				'featureType': 'administrative.country',
-				'elementType': 'labels.text',
-				'stylers': [{ 'hue': '#ff0000' }, { 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative.province',
-				'elementType': 'all',
-				'stylers': [{ 'visibility': 'on' }]
-			}, {
-				'featureType': 'administrative.province',
-				'elementType': 'geometry.stroke',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative.province',
-				'elementType': 'labels.text',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative.locality',
-				'elementType': 'labels.text',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative.neighborhood',
-				'elementType': 'labels.text',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'administrative.land_parcel',
-				'elementType': 'labels.text',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'landscape',
-				'elementType': 'all',
-				'stylers': [{ 'saturation': '-39' }, { 'lightness': '35' }, { 'gamma': '1.08' }]
-			}, {
-				'featureType': 'landscape',
-				'elementType': 'geometry',
-				'stylers': [{ 'saturation': '0' }]
-			}, {
-				'featureType': 'landscape',
-				'elementType': 'labels',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'landscape.man_made',
-				'elementType': 'all',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '10' }]
-			}, {
-				'featureType': 'landscape.man_made',
-				'elementType': 'geometry.stroke',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '-14' }]
-			}, {
-				'featureType': 'landscape.man_made',
-				'elementType': 'labels.text',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'landscape.natural.landcover',
-				'elementType': 'labels.text',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'poi',
-				'elementType': 'all',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '10' }, { 'gamma': '2.26' }]
-			}, {
-				'featureType': 'poi',
-				'elementType': 'labels',
-				'stylers': [{ 'visibility': 'off' }]
-			}, {
-				'featureType': 'poi',
-				'elementType': 'labels.text',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '-3' }]
-			}, {
-				'featureType': 'road',
-				'elementType': 'all',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '54' }]
-			}, {
-				'featureType': 'road',
-				'elementType': 'geometry.stroke',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '-7' }]
-			}, {
-				'featureType': 'road.arterial',
-				'elementType': 'all',
-				'stylers': [{ 'saturation': '-100' }]
-			}, {
-				'featureType': 'road.local',
-				'elementType': 'all',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '-2' }]
-			}, {
-				'featureType': 'transit',
-				'elementType': 'all',
-				'stylers': [{ 'saturation': '-100' }]
-			}, {
-				'featureType': 'water',
-				'elementType': 'geometry.fill',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '100' }]
-			}, {
-				'featureType': 'water',
-				'elementType': 'geometry.stroke',
-				'stylers': [{ 'saturation': '-100' }, { 'lightness': '-100' }]
-			}]
-		});
+	    centercords = { lat: latcord, lng: loncord };
+	if (manyMaps) {
+		latcord = arrayOfPins.lat;
+		loncord = arrayOfPins.lng;
+		centercords = { lat: latcord, lng: loncord };
+	}
+	var map = new google.maps.Map(element, {
+		zoom: zoomIn,
+		center: centercords,
+		fullscreenControl: true,
+		scrollwheel: false,
+		mapTypeControl: false,
+		scaleControl: false,
+		streetViewControl: false,
+		gestureHandling: 'greedy',
+		zoomControlOptions: {
+			position: google.maps.ControlPosition.RIGHT_CENTER
+		},
+		styles: [{
+			'featureType': 'all',
+			'elementType': 'geometry',
+			'stylers': [{ 'visibility': 'on' }]
+		}, {
+			'featureType': 'all',
+			'elementType': 'geometry.fill',
+			'stylers': [{ 'visibility': 'on' }]
+		}, {
+			'featureType': 'all',
+			'elementType': 'geometry.stroke',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'all',
+			'elementType': 'labels.text',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'all',
+			'elementType': 'labels.text.fill',
+			'stylers': [{ 'color': '#000000' }]
+		}, {
+			'featureType': 'all',
+			'elementType': 'labels.text.stroke',
+			'stylers': [{ 'color': '#ffffff' }]
+		}, {
+			'featureType': 'administrative',
+			'elementType': 'geometry.stroke',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative',
+			'elementType': 'labels',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative',
+			'elementType': 'labels.text',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative.country',
+			'elementType': 'geometry.fill',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative.country',
+			'elementType': 'geometry.stroke',
+			'stylers': [{ 'visibility': 'on' }, { 'saturation': '-14' }, { 'weight': '1' }, { 'lightness': '67' }, { 'gamma': '1.41' }, { 'color': '#c7d7c7' }]
+		}, {
+			'featureType': 'administrative.country',
+			'elementType': 'labels.text',
+			'stylers': [{ 'hue': '#ff0000' }, { 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative.province',
+			'elementType': 'all',
+			'stylers': [{ 'visibility': 'on' }]
+		}, {
+			'featureType': 'administrative.province',
+			'elementType': 'geometry.stroke',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative.province',
+			'elementType': 'labels.text',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative.locality',
+			'elementType': 'labels.text',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative.neighborhood',
+			'elementType': 'labels.text',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'administrative.land_parcel',
+			'elementType': 'labels.text',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'landscape',
+			'elementType': 'all',
+			'stylers': [{ 'saturation': '-39' }, { 'lightness': '35' }, { 'gamma': '1.08' }]
+		}, {
+			'featureType': 'landscape',
+			'elementType': 'geometry',
+			'stylers': [{ 'saturation': '0' }]
+		}, {
+			'featureType': 'landscape',
+			'elementType': 'labels',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'landscape.man_made',
+			'elementType': 'all',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '10' }]
+		}, {
+			'featureType': 'landscape.man_made',
+			'elementType': 'geometry.stroke',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '-14' }]
+		}, {
+			'featureType': 'landscape.man_made',
+			'elementType': 'labels.text',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'landscape.natural.landcover',
+			'elementType': 'labels.text',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'poi',
+			'elementType': 'all',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '10' }, { 'gamma': '2.26' }]
+		}, {
+			'featureType': 'poi',
+			'elementType': 'labels',
+			'stylers': [{ 'visibility': 'off' }]
+		}, {
+			'featureType': 'poi',
+			'elementType': 'labels.text',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '-3' }]
+		}, {
+			'featureType': 'road',
+			'elementType': 'all',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '54' }]
+		}, {
+			'featureType': 'road',
+			'elementType': 'geometry.stroke',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '-7' }]
+		}, {
+			'featureType': 'road.arterial',
+			'elementType': 'all',
+			'stylers': [{ 'saturation': '-100' }]
+		}, {
+			'featureType': 'road.local',
+			'elementType': 'all',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '-2' }]
+		}, {
+			'featureType': 'transit',
+			'elementType': 'all',
+			'stylers': [{ 'saturation': '-100' }]
+		}, {
+			'featureType': 'water',
+			'elementType': 'geometry.fill',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '100' }]
+		}, {
+			'featureType': 'water',
+			'elementType': 'geometry.stroke',
+			'stylers': [{ 'saturation': '-100' }, { 'lightness': '-100' }]
+		}]
+	});
 	var img = {
 		url: imgpath,
 		// This marker is 20 pixels wide by 32 pixels high.
@@ -219,7 +247,7 @@ function initMap(mapArg, arrayOfPins) {
 		icon: img,
 		zIndex: 99999
 	});
-	if ($trel.hasClass('map-elem-near')) {
+	if ($(element).hasClass('map-elem-near')) {
 		var onMarkerLoad = function onMarkerLoad(json) {
 			var markerarr = [];
 			mainmarkermarker.setMap(null);
@@ -300,8 +328,7 @@ function initMap(mapArg, arrayOfPins) {
 
 		var markers = [];
 		onMarkerLoad(arrayOfPins);
-		map.set('zoom', 3);
-		var triggers = $trel.closest('.contact-section').find('.js-map-trigger');
+		var triggers = $(element).closest('.contact-section').find('.js-map-trigger');
 		var panPath = []; // путь
 		var panQueue = []; // очередь
 		var STEPS = 10; // шаг
@@ -321,15 +348,12 @@ function initMap(mapArg, arrayOfPins) {
 document.addEventListener('DOMContentLoaded', function () {
 
 	if ($('#map').length) {
-		initMap('#map', arrayOfPins);
+		initMap(document.getElementById('map'), arrayOfPins);
 	}
 
 	if ($('.map').length) {
-		var maps = $('.map');
-		maps.filter(function (index) {
-			var thisMap = $(this);
-			initMap(thisMap, arrayOfPinsMaps[index]);
-			console.log(index);
+		$('.map').filter(function (index) {
+			initMap(this, arrayOfPins[index], true);
 		});
 	}
 
@@ -831,5 +855,93 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		var partnersSlidesLength = $partnersSliderWrapper.find('.slick-dots li').length;
 		$partnersSliderWrapper.append('<div class="slick-sum-slides">/ ' + partnersSlidesLength + '</div>');
+	}
+
+	if (!window.Promise) {
+		window.Promise = Promise;
+	}
+
+	function lazyImage() {
+		console.log('lazyImage init');
+		var arr = document.querySelectorAll('.js-image');
+		var images = [];
+		for (var i = 0; i < arr.length; i++) {
+			images.push(arr[i]);
+		}
+		var config = {
+			rootMargin: '0px 0px',
+			threshold: 0.01
+		};
+
+		var imageCount = images.length;
+		var observer = void 0;
+		if (!('IntersectionObserver' in window)) {
+			for (var i = 0; i < imageCount; i++) {
+				preloadImage(images[i]);
+			}
+		} else {
+			observer = new IntersectionObserver(onIntersection, config);
+			for (var i = 0; i < imageCount; i++) {
+				if (images[i].classList.contains('js-image-handled')) {
+					return;
+				}
+				observer.observe(images[i]);
+			}
+		}
+
+		function fetchImage(url) {
+			return new Promise(function (resolve, reject) {
+				var image = new Image();
+				image.src = url;
+				image.onload = resolve;
+				image.onerror = reject;
+			});
+		}
+
+		function preloadImage(image) {
+			var src = image.dataset.src;
+			if (!src) {
+				return;
+			}
+			return fetchImage(src).then(function () {
+				applyImage(image, src);
+			});
+		}
+
+		function loadImagesImmediately(images) {
+			for (var i = 0; i < images.length; i++) {
+				return preloadImage(images[i]);
+			}
+		}
+
+		function disconnect() {
+			if (!observer) {
+				return;
+			}
+			observer.disconnect();
+		}
+
+		function onIntersection(entries) {
+			if (imageCount === 0) {
+				observer.disconnect();
+			}
+			entries.forEach(function (entry) {
+				if (entry.intersectionRatio > 0) {
+					imageCount--;
+					observer.unobserve(entry.target);
+					preloadImage(entry.target);
+				}
+			});
+		}
+
+		function applyImage(img, src) {
+			img.classList.add('js-image-handled');
+			if (img.classList.contains('bg')) {
+				img.style.backgroundImage = "url(" + src + ")";
+			} else {
+				img.src = src;
+			}
+			img.classList.add('fade-in');
+		}
 	}
 });

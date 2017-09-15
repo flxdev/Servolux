@@ -29,13 +29,14 @@ block content
                     .one-half.animateThis(data-anim="fadeInUp")
                         .text-wrap
                             p.h3 Вертикальная интеграция — наше главное конкурентное преимущество. Мы горды единством наших подразделений и высоким уровнем организации взаимодействий между ними.
+            .block
                 .flex-block.advantages.row
                     - var adv = 0.2
                     mixin one-four-advantage(img, text)
                         .one-four
                             .advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
                                 .advantage-img
-                                    img(src=img)
+                                    img(src=img).js-image
                                 .advantage-text
                                     p.sub= text
                         - adv=adv+0.08
@@ -64,7 +65,7 @@ block content
                                         .production-side-block-inner-text
                                             p.sub Объём производства престартерных комбикормов
             .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background-image: url('img/2-0/side-img(1).jpg')")
+                .side-block-img(style="background-image: url('img/2-0/side-img(1).jpg')").js-image.bg
         .box#production-bird.side-blocks.gray.right-side-block.aside-menu-item(data-aside="Племенное птицеводство")
             .block
                 .flex-block.right-side
@@ -86,7 +87,7 @@ block content
                                         .production-side-block-inner-text
                                             p.sub Птицы в живом весе в 2015 году
             .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background-image: url('img/2-0/side-img(2).jpg')")
+                .side-block-img(style="background-image: url('img/2-0/side-img(2).jpg')").js-image.bg
         .box#production-milk.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Производство продуктов питания")
             .block
                 .flex-block.left-side
@@ -95,4 +96,4 @@ block content
                             p.h2 Производство продуктов питания
                             p.annotation Наши предприятия производят широкую линейку молочных и мясных продуктов питания. Мы используем только своё сырьё и профессиональное европейское оборудование. Наши продукты не содержат сою и ГМО.
             .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')")
+                .side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')").js-image.bg

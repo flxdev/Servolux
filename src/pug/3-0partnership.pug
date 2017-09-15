@@ -10,7 +10,7 @@ block config
 block content
 	#main-screen-wrapper.advancedPage
 		#main-first-screen-fading-wrapper
-			img(src="/img/1-0/header-img.jpg", alt="").firstScreenFading
+			img(src="/img/3-0/header-img.jpg", alt="").firstScreenFading
 		#main-screen
 			#main-screen-title
 				#title-wrapper.animated.fadeInDownMenu
@@ -54,14 +54,14 @@ block content
 						a.animateThis(data-anim="fadeInUp" href="#").callback-button Стать партнёром
 					.one-half
 						.flex-img-wrapper
-							.flex-img(style='background-image: url("img/3-0/delivers-img.jpg")')
+							.flex-img(style='background-image: url("img/3-0/delivers-img.jpg")').js-image.bg
 				#partners-slider.animateThis(data-anim="fadeInUp")
 					#partners-slider-wrapper.slick-slider
 						- var partner = 0
 						mixin partners-slide
 							.partners-slide.slick-slide
 								.slide-img
-									img(src="/img/3-0/partners/partner(" + partner + ").png")
+									img(src="/img/3-0/partners/partner(" + partner + ").png").js-image
 							- partner++
 						+partners-slide
 						+partners-slide
@@ -85,13 +85,14 @@ block content
 					.one-half.animateThis(data-anim="fadeInUp")
 						p.annotation Наша продукция представлена практически во всех крупных сетях, гипермаркетах, магазинах у дома и специализированных мясных лавках.
 						a(href="#").callback-button Стать клиентом
+			.block
 				.flex-block.advantages.row
 					- var adv = 0.2
 					mixin one-four-advantage(img, text)
 						.one-four
 							.advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
 								.advantage-img
-									img(src=img)
+									img(src=img).js-image
 								.advantage-text
 									p.sub= text
 						- adv=adv+0.08
@@ -125,7 +126,62 @@ block content
 								.button(data-chart="2")
 									p Наши цели на 2017 - 2020 г.
 						script.
-							var barChartData = {
+							var barChartData = [
+								{
+								value: "$млн",
+								title: "Результаты деятельности",
+								labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017"],
+								datasets: [{
+								label: 'Мясо птицы',
+								backgroundColor: '#56b622',
+								data: [11,35,60,85,110, 210, 250]
+								}, {
+								label: 'Комбикорма',
+								backgroundColor: '#f2bc18',
+								data: [15,40,65,90,115, 210, 250]
+								}, {
+								label: 'Ритейл',
+								backgroundColor: '#f8df0f',
+								data: [20,45,70,95,120, 210, 250]
+								}, {
+								label: 'Мясопереработка',
+								backgroundColor: '#00b88f',
+								data: [25,50,75,100,125, 210, 250]
+								}, {
+								label: 'Молочные продукты',
+								backgroundColor: '#0056b8',
+								data: [30,55,80,105,130, 210, 250]
+								}]
+								},
+								{
+								value: "тонн",
+								title: "Реализация",
+								labels: ["2011", "2012", "2013", "2014", "2015"],
+								datasets: [{
+								label: 'Мясо птицы',
+								backgroundColor: '#56b622',
+								data: [22,35,60,85,110]
+								}, {
+								label: 'Комбикорма',
+								backgroundColor: '#f2bc18',
+								data: [25,40,65,90,205]
+								}, {
+								label: 'Ритейл',
+								backgroundColor: '#f8df0f',
+								data: [60,45,70,95,120]
+								}, {
+								label: 'Мясопереработка',
+								backgroundColor: '#00b88f',
+								data: [25,80,75,100,125]
+								}, {
+								label: 'Молочные продукты',
+								backgroundColor: '#0056b8',
+								data: [30,88,80,105,50]
+								}]
+								},
+								{
+								value: "тыс.тонн",
+								title: "Цели",
 								labels: ["2011", "2012", "2013", "2014", "2015"],
 								datasets: [{
 								label: 'Мясо птицы',
@@ -148,15 +204,17 @@ block content
 								backgroundColor: '#0056b8',
 								data: [30,55,80,105,130]
 								}]
-								};
-						canvas#canvas
-		.box#whywe
-			.block.line-top
+								}
+								];
+						canvas#canvas(height="275px" style="height: 275px")
+		.box#whywe.line-top
+			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInUp")
 						p.h2 Почему нас выбирают
 					.one-half.animateThis(data-anim="fadeInUp")
 						p.annotation «Серволюкс» является крупнейшим инвестором в Беларуси. У нас более 2000 клиентов по всему миру.
+			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInUp")
 						p.darker Порядочность

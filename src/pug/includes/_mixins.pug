@@ -11,13 +11,14 @@ mixin button(text, hr='#')
 
 
 mixin download_pdf(text)
-	a(href="#").download
-		svg(class="icon search-icon")
-			use(xlink:href="#pdf" xmlns:xlink="http://www.w3.org/1999/xlink")
-		.download-text
-			p.href= text
-			.download-size
-				p.download-size .PDF ~24 Мб
+	.download-wrapper
+		a(href="#").download
+			svg(class="icon search-icon")
+				use(xlink:href="#pdf" xmlns:xlink="http://www.w3.org/1999/xlink")
+			.download-text
+				p.href= text
+				.download-size
+					p.download-size .PDF ~24 Мб
 
 //- mixin button(text, hr="#")
 //- 	.button-green-wrapper

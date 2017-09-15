@@ -30,13 +30,14 @@ block content
 						.text-wrap
 							p.h3 Мы лидеры в сегменте птицеводства и стремительно наращиваем мощности по производству продукции. 
 							p.sub Стратегия компании предусматривает ориентацию на инновационный подход в области производства, логистики, продаж и IT, что позволяет гарантировать высокое качество и безопасность продукции.
+			.block
 				.flex-block.advantages.row
 					- var adv = 0.2
 					mixin one-four-advantage(img, text)
 						.one-four
 							.advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
 								.advantage-img
-									img(src=img)
+									img(src=img).js-image
 								.advantage-text
 									p.sub= text
 						- adv=adv+0.08
@@ -51,7 +52,8 @@ block content
 					+one-four-advantage('/img/1-0/icon_8.png', 'Собственная логистическия база')
 		.box#parallax.aside-menu-item(data-aside="История")
 			.parallax-img
-				img(src="/img/1-0/parallax-bg_1-0.jpg", alt="")
+				img(src="/img/1-0/parallax-bg_1-0.jpg", alt="").js-image
+				img(src="/img/1-0/parallax-bg_1-0.jpg", alt="").js-image
 			#dates
 				.dates-slider-wrapper
 					#dates-slider.block.slick-slider
@@ -131,15 +133,15 @@ block content
 			.block
 				p.h2 Результаты деятельности
 				.carousel-buttons.animateThis(data-anim="fadeInRight")
-							#chart-control.carousel-buttons-wrap
-								.button(data-chart="0").active
-									p Мясо птицы
-								.button(data-chart="1")
-									p Корма и компоненты
-								.button(data-chart="2")
-									p Мясо-колбасные изделия
-								.button(data-chart="3")
-									p Молоко
+					#chart-control.carousel-buttons-wrap
+						.button(data-chart="0").active
+							p Мясо птицы
+						.button(data-chart="1")
+							p Корма и компоненты
+						.button(data-chart="2")
+							p Мясо-колбасные изделия
+						.button(data-chart="3")
+							p Молоко
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInRight")
 						p.h3 Отчеты о деятельности компании
@@ -207,6 +209,7 @@ block content
 						p.h2 Активы «Серволюкс»
 					.one-half
 						p.annotation В состав компании входит более 10 крупных активов в Беларуси и странах СНГ, представительства в Москве, Смоленске, Киеве, Минске и Гродно.
+			.block
 				.gallery-block-wrapper
 					.gallery-block
 						.gallery-item.gallery-big.gallery-left.animateThis(data-anim="fadeInUp")

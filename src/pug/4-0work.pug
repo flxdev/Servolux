@@ -1,0 +1,115 @@
+extends _layout
+
+block title
+	title Карьера
+block config
+	- var main = false
+	- var chart = false
+	- var map = false
+	- var chartjs = false
+block content
+	#main-screen-wrapper.advancedPage
+		#main-first-screen-fading-wrapper
+			img(src="/img/4-0/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			#main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					.bread
+						a(href="index.html") Главная
+					p.title-main Карьера
+	#main-content
+		aside#aside-menu.animated.fadeInLeft
+			.aside-menu-wrapper
+		.box#excellence.aside-menu-item(data-aside="Преимущества")
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						.text-wrap
+							p.h2 Преимущества работы в группе компаний «Серволюкс»
+					.one-half.animateThis(data-anim="fadeInUp")
+						.text-wrap
+							p.h3 Мы уделяем большое внимание персоналу — самому важному ресурсу нашего бизнеса. Профессиональный поиск, удержание и развитие сотрудников являются основными приоритетами в работе службы персонала.
+							+button('посмотреть открытые вакансии')
+			.block
+				.flex-block.advantages.row
+					- var adv = 0.2
+					mixin one-four-advantage(img, text)
+						.one-four
+							.advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
+								.advantage-img
+									img(src=img).js-image
+								.advantage-text
+									p.sub= text
+						- adv=adv+0.08
+					+one-four-advantage('/img/4-0/icon_1.png', 'Мы тесно сотрудничаем с различными учебными заведениями, ежегодно приглашая на работу десятки молодых специалистов.')
+					+one-four-advantage('/img/4-0/icon_2.png', 'Вкладываем финансовые ресурсы в обучение персонала, как в открытом формате, так и создавая собственные обучающие программы и курсы.')
+					+one-four-advantage('/img/4-0/icon_3.png', 'Предоставляем широкие возможности карьерного роста не только в рамках одного предприятия, а так же в рамках предприятий группы.')
+					+one-four-advantage('/img/4-0/icon_4.png', 'Мы создаем комфортные условия для работы в наших компаниях. Предлагаем полный соц. пакет и компенсацию проезда до места работы.')
+		.box#parallax.work.aside-menu-item(data-aside="Цифры")
+			.parallax-img
+				img(src="/img/4-0/parallax_bg.jpg", alt="")
+			.block
+				.flex-block
+					.one-four
+						p.h1 150
+						p.sub Разработанных программ обучения
+					.one-four
+						p.h1 15
+						p.sub Компаний в ГК Серволюкс
+					.one-four
+						p.h1 5
+						p.sub Офисов в разных странах
+					.one-four
+						p.h1 8000
+						p.sub Квалифицированных сотрудников
+		.box#corporateCulture.aside-menu-item(data-aside="Корпоративная культура")
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.h2 Корпоративная культура
+					.one-half
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Порядочность
+						.green-stick-top
+							p Полный цикл производства «от поля до прилавка» гарантирует безопасность и стабильные вкусовые свойства продукции в каждой поставке.
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Ориентированность на клиентов
+						.green-stick-top
+							p В нашем арсенале собственная логистическая компания и разветвленная сеть дистрибьюторских центров. Мы поставляем товар в срок и в любом объеме.
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Ответственность
+						.green-stick-top
+							p Мы соблюдаем жесткие требования по перевозке и хранению продукции благодаря развитой низкотемпературной логистике.
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Программа лояльности
+						.green-stick-top
+							p Мы предлагаем программы лояльности для вас и ваших сотрудников
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Ответственность
+						.green-stick-top
+							p Мы соблюдаем жесткие требования по перевозке и хранению продукции благодаря развитой низкотемпературной логистике.
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.darker Программа лояльности
+						.green-stick-top
+							p Мы предлагаем программы лояльности для вас и ваших сотрудников
+		.box#opportunities.aside-menu-item(data-aside="Карьерные возможности").gray
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						p.h2 Карьерные возможности
+						p.annotation Нашим сотрудникам предоставляются возможности самореализации в рамках предприятий группы.
+						p Мы уделяем большое внимание привлечению в нашу команду профессионалов, путем открытого внешнего поиска. Наша компания заинтересована в сотрудниках, желающих работать в современной, динамично развивающейся компании.
+						+button('Посмотреть открытые вакансии')
+			.img-bg(style="background-image: url('/img/4-0/opport.jpg')")
+		.box#vacancy-block
+			.block
+				.vacancy-block-green
+					.vacancy-text-wrapper
+						p.vacancy-text Все открытые вакансии на портале
+						a(href="#").vacancy-href jobs.servolux.by
+					.vacancy-button
+						a(href="#").callback-button Перейти

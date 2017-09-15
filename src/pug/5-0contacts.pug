@@ -1,0 +1,112 @@
+extends _layout
+
+block title
+	title Контакты
+block config
+	- var main = false
+	- var chart = false
+	- var map = true
+	- var chartjs = false
+block content
+	#main-screen-wrapper.advancedPage
+		#main-first-screen-fading-wrapper
+			img(src="/img/5-0/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			#main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					.bread
+						a(href="index.html") Главная
+					p.title-main Контакты
+	#main-content
+		.box#contacts
+			.block#contacts-control
+				.carousel-buttons.animateThis(data-anim="fadeInRight")
+					#chart-control.carousel-buttons-wrap
+						.button(data-chart="0").active
+							p Офисы компании
+						.button(data-chart="1")
+							p Контакты служб по странам
+						.button(data-chart="2")
+							p Общие контакты служб для РБ/РФ
+				.callback-wrapper
+					a(href="#").callback-button Обратная связь
+			#blocks-wrapper
+				#offices
+					script.
+						var arrayOfPins = [
+							{
+								'lat': 53.90,
+								'lng': 27.55,
+								'name': 'Беларусь'
+							},
+							{
+								'lat': 50.45,
+								'lng': 30.524,
+								'name': 'Украина'
+							},
+							{
+								'lat': 55.75,
+								'lng': 37.63,
+								'name': 'Россия'
+							},
+							{
+								'lat': 55.75,
+								'lng': 37.63,
+								'name': 'Россия'
+							},
+							{
+								'lat': 55.75,
+								'lng': 37.63,
+								'name': 'Россия'
+							}]
+					.block
+						h2 Наши офисы
+					.block.line-top
+						.flex-block
+							.one-half
+								.office-header-wrapper
+									p.annotation Головной офис
+									p Республика Беларусь, г. Могилев, ул. Миронова, 4, 212030
+								.office-contacts-wrapper
+									.flex-block
+										.one-half.animateThis(data-anim="fadeInUp")
+											p Телефоны
+										.one-half.animateThis(data-anim="fadeInUp")
+											a(href="Tel:+375177625374").brand-subtitle.brand-telephone +375 177 62 53 74
+											a(href="Tel:+375177655795").brand-subtitle.brand-telephone +375 177 65 57 95
+											a(href="Tel:+375177625371").brand-subtitle.brand-telephone +375 177 62 53 71
+											a(href="Tel:+375297898121").brand-subtitle.brand-telephone +375 29 789 81 21
+									.flex-block
+										.one-half.animateThis(data-anim="fadeInUp")
+											p.brand-email-title Сайт
+											p.brand-email-title E-mail
+										.one-half.animateThis(data-anim="fadeInUp")
+											a(href="#").brand-email kuvshinka.by
+											a(href="#").brand-email sb.milk@servolux.by
+							.one-half
+								.map(data-icon='/img/1-0/pin.png', data-zoom="12")
+					.block.line-top
+						.flex-block
+							.one-half
+								.office-header-wrapper
+									p.annotation Головной офис
+									p Республика Беларусь, г. Могилев, ул. Миронова, 4, 212030
+								.office-contacts-wrapper
+									.flex-block
+										.one-half.animateThis(data-anim="fadeInUp")
+											p Телефоны
+										.one-half.animateThis(data-anim="fadeInUp")
+											a(href="Tel:+375177625374").brand-subtitle.brand-telephone +375 177 62 53 74
+											a(href="Tel:+375177655795").brand-subtitle.brand-telephone +375 177 65 57 95
+											a(href="Tel:+375177625371").brand-subtitle.brand-telephone +375 177 62 53 71
+											a(href="Tel:+375297898121").brand-subtitle.brand-telephone +375 29 789 81 21
+									.flex-block
+										.one-half.animateThis(data-anim="fadeInUp")
+											p.brand-email-title Сайт
+											p.brand-email-title E-mail
+										.one-half.animateThis(data-anim="fadeInUp")
+											a(href="#").brand-email kuvshinka.by
+											a(href="#").brand-email sb.milk@servolux.by
+							.one-half
+								.map(data-icon='/img/1-0/pin.png', data-zoom="12")
+

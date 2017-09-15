@@ -4,22 +4,25 @@ window.onload = function () {
 		$('#main-video').get(0).play()
 	}
 
-	if($('canvas#canvas').length) {
-		let ctx = document.getElementById("canvas").getContext("2d");
-		window.myBar = new Chart(ctx, {
+
+	if($('#canvas').length) {
+
+		let barNumber = 0,
+			chartOptions = {
 			type: 'bar',
-			data: barChartData,
+			data: barChartData[barNumber],
 			options: {
 				title: {
-					display: false,
-					text: "Chart.js Bar Chart - Stacked"
+					display: true,
+						text: barChartData[barNumber].title
 				},
 				legend: {
-					display: false
+					display: true,
+						position: 'bottom'
 				},
 				tooltips: {
 					mode: 'index',
-					intersect: false
+						intersect: false
 				},
 				responsive: true,
 				scales: {
@@ -27,11 +30,30 @@ window.onload = function () {
 						stacked: true,
 					}],
 					yAxes: [{
-						stacked: true
+						stacked: true,
+						ticks: {
+							// Include a dollar sign in the ticks
+							callback: function(value) {
+								return value + " " + barChartData[barNumber].value;
+							}
+						}
 					}]
 				}
 			}
-		});
+		}
+
+		let ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(ctx, chartOptions);
+
+		$('#chart-control .button').on('click', function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			barNumber = $(this).data('chart')
+			chartOptions.data = barChartData[barNumber]
+			chartOptions.options.title.text = barChartData[barNumber].title
+			chartOptions.options.scales.yAxes[0].ticks.callback = function(value){return value + " " + barChartData[barNumber].value;}
+			myBar.update()
+		})
 	}
 }
 
@@ -39,17 +61,20 @@ function isMobile () {
 	return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent) )
 }
 
-function initMap (mapArg, arrayOfPins) {
-	let $trel = $(mapArg),
-		element = document.getElementById('map'),
+function initMap (mapArg, arrayOfPins, manyMaps=false) {
+	let	element = mapArg,
 		zoomIn = parseFloat(element.getAttribute('data-zoom')),
 		latcord = parseFloat(element.getAttribute('data-lat')),
 		loncord = parseFloat(element.getAttribute('data-lon')),
 		imgpath = element.getAttribute('data-icon'),
-		centercords = {lat: latcord, lng: loncord},
-		map = new google.maps.Map(element, {
+		centercords = {lat: latcord, lng: loncord};
+		if(manyMaps){
+			latcord = arrayOfPins.lat
+			loncord = arrayOfPins.lng
+			centercords = {lat: latcord, lng: loncord}
+		}
+		let map = new google.maps.Map(element, {
 			zoom: zoomIn,
-			minZoom: zoomIn,
 			center: centercords,
 			fullscreenControl: true,
 			scrollwheel: false,
@@ -216,11 +241,10 @@ function initMap (mapArg, arrayOfPins) {
 		icon: img,
 		zIndex: 99999
 	})
-	if ($trel.hasClass('map-elem-near')) {
+	if ($(element).hasClass('map-elem-near')) {
 		let markers = []
 		onMarkerLoad(arrayOfPins)
-		map.set('zoom', 3)
-		let triggers = $trel.closest('.contact-section').find('.js-map-trigger')
+		let triggers = $(element).closest('.contact-section').find('.js-map-trigger')
 		let panPath = []   // путь
 		let panQueue = []  // очередь
 		let STEPS = 10     // шаг
@@ -319,15 +343,12 @@ function initMap (mapArg, arrayOfPins) {
 document.addEventListener('DOMContentLoaded', function () {
 
 	if ($('#map').length) {
-		initMap('#map', arrayOfPins)
+		initMap(document.getElementById('map'), arrayOfPins)
 	}
 
 	if ($('.map').length) {
-		let maps = $('.map')
-		maps.filter(function (index) {
-			let thisMap = $(this)
-			initMap(thisMap, arrayOfPinsMaps[index])
-			console.log(index)
+		$('.map').filter(function (index) {
+			initMap(this, arrayOfPins[index], true)
 		})
 	}
 
@@ -624,6 +645,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
+
 	// Chart bar width maker
 	$('#index-chart .chart-bar').filter(function () {
 		$(this).css('width', $(this).data('scale') + '%')
@@ -855,5 +877,92 @@ document.addEventListener('DOMContentLoaded', function () {
 		$partnersSliderWrapper.append('<div class="slick-sum-slides">/ ' + partnersSlidesLength + '</div>')
 	}
 
-})
 
+	if (!window.Promise) {
+		window.Promise = Promise;
+	}
+
+	function lazyImage(){
+		console.log('lazyImage init')
+		var arr = document.querySelectorAll('.js-image');
+		var images = [];
+		for(var i = 0; i < arr.length; i++){
+			images.push(arr[i]);
+		}
+		var config = {
+			rootMargin: '0px 0px',
+			threshold: 0.01
+		};
+
+		var imageCount = images.length;
+		var observer = void 0;
+		if (!('IntersectionObserver' in window)) {
+			for(var i = 0; i < imageCount; i++){
+				preloadImage(images[i]);
+			}
+		} else {
+			observer = new IntersectionObserver(onIntersection, config);
+			for(var i = 0; i< imageCount; i++){
+				if (images[i].classList.contains('js-image-handled')) {
+					return;
+				}
+				observer.observe(images[i]);
+			}
+		}
+
+		function fetchImage(url) {
+			return new Promise(function (resolve, reject) {
+				var image = new Image();
+				image.src = url;
+				image.onload = resolve;
+				image.onerror = reject;
+			});
+		}
+
+		function preloadImage(image) {
+			var src = image.dataset.src;
+			if (!src) {
+				return;
+			}
+			return fetchImage(src).then(function () {
+				applyImage(image, src);
+			});
+		}
+
+		function loadImagesImmediately(images) {
+			for(var i = 0; i< images.length; i++){
+				return preloadImage(images[i]);
+			}
+		}
+
+		function disconnect() {
+			if (!observer) {
+				return;
+			}
+			observer.disconnect();
+		}
+
+		function onIntersection(entries) {
+			if (imageCount === 0) {
+				observer.disconnect();
+			}
+			entries.forEach(function (entry) {
+				if (entry.intersectionRatio > 0) {
+					imageCount--;
+					observer.unobserve(entry.target);
+					preloadImage(entry.target);
+				}
+			});
+		}
+
+		function applyImage(img, src) {
+			img.classList.add('js-image-handled');
+			if(img.classList.contains('bg')){
+				img.style.backgroundImage = "url("+src+")";
+			}else{
+				img.src = src;
+			}
+			img.classList.add('fade-in');
+		}
+	}
+})
