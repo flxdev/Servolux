@@ -22,16 +22,16 @@ block content
 			.block#contacts-control
 				.carousel-buttons.animateThis(data-anim="fadeInRight")
 					#chart-control.carousel-buttons-wrap
-						.button(data-chart="0").active
+						.button(data-block="0").active
 							p Офисы компании
-						.button(data-chart="1")
+						.button(data-block="1")
 							p Контакты служб по странам
-						.button(data-chart="2")
+						.button(data-block="2")
 							p Общие контакты служб для РБ/РФ
 				.callback-wrapper
 					a(href="#").callback-button Обратная связь
 			#blocks-wrapper
-				#offices
+				#offices.contacts-toggle-blocks.active
 					script.
 						var arrayOfPins = [
 							{
@@ -59,7 +59,7 @@ block content
 								'lng': 37.63,
 								'name': 'Россия'
 							}]
-					.block
+					.block.animateThis(data-anim="fadeInUp")
 						h2 Наши офисы
 					.block.line-top
 						.flex-block
@@ -68,16 +68,16 @@ block content
 									p.annotation Головной офис
 									p Республика Беларусь, г. Могилев, ул. Миронова, 4, 212030
 								.office-contacts-wrapper
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-tel-title Телефоны
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="Tel:+375222327334").brand-subtitle.brand-telephone +375 222 327 334
 											a(href="Tel:+375222327399").brand-subtitle.brand-telephone +375 222 327 399
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-email-title E-mail
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="mailto:mail@servolux.com").brand-email mail@servilux.com
 							.one-half.animateThis(data-anim="fadeInUp")
 								.map(data-icon='/img/1-0/pin.png', data-zoom="12")
@@ -88,16 +88,16 @@ block content
 									p.annotation Минский офис
 									p Республика Беларусь, г. Минск, пр-т Независимости 177, под. 3, комн 63, 220125
 								.office-contacts-wrapper
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-tel-title Телефоны
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="Tel:+375173941367").brand-subtitle.brand-telephone +375 173 941 367
 											a(href="Tel:+375173941369").brand-subtitle.brand-telephone +375 173 941 369
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-email-title E-mail
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="mailto:elizaveta.korbut@servolux.by").brand-email elizaveta.korbut@servolux.by
 							.one-half.animateThis(data-anim="fadeInUp")
 								.map(data-icon='/img/1-0/pin.png', data-zoom="12")
@@ -108,15 +108,15 @@ block content
 									p.annotation Московский офис
 									p Россия, г. Москва, ул. Саляма Адиля, д. 2, к. 1, 123423
 								.office-contacts-wrapper
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-tel-title Телефоны
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="Tel:+74956516106").brand-subtitle.brand-telephone +7 495 651 61 06
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-email-title E-mail
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="mailto:dmitry.dorozhkin@servolux.com").brand-email dmitry.dorozhkin@servolux.com
 							.one-half.animateThis(data-anim="fadeInUp")
 								.map(data-icon='/img/1-0/pin.png', data-zoom="12")
@@ -127,16 +127,16 @@ block content
 									p.annotation Смоленский офис
 									p Россия, г. Смоленск, ул. Октября, 46, 214010
 								.office-contacts-wrapper
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-tel-title Телефоны
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="Tel:+79203201185").brand-subtitle.brand-telephone +7 920 320 11 85
 											a(href="Tel:+79203201214").brand-subtitle.brand-telephone +7 920 320 12 14
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-email-title E-mail
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="mailto:sergey.rachkovskiy@servolux.by").brand-email sergey.rachkovskiy@servolux.by
 							.one-half.animateThis(data-anim="fadeInUp")
 								.map(data-icon='/img/1-0/pin.png', data-zoom="12")
@@ -145,12 +145,232 @@ block content
 							.one-half
 								.office-header-wrapper.animateThis(data-anim="fadeInUp")
 									p.annotation Киевский офис
-									p Украина, г. Киев, Регус Бизнес Центр, 2-й этаж, ул. Шовковична, 42-44, 01004
-									.flex-block
-										.one-four.animateThis(data-anim="fadeInUp")
+									p Украина, г. Киев, Регус Бизнес Центр, 2-й этаж, ул. Шовковична, 42-44, 01004
+									.flex-block.animateThis(data-anim="fadeInUp")
+										.one-four
 											p.brand-email-title E-mail
-										.three-four.animateThis(data-anim="fadeInUp")
+										.three-four
 											a(href="mailto:igor.bibikov@servolux.com").brand-email igor.bibikov@servolux.com
 							.one-half.animateThis(data-anim="fadeInUp")
 								.map(data-icon='/img/1-0/pin.png', data-zoom="12")
+				#countries.contacts-toggle-blocks
+					.country-wrapper
+						.block.animateThis(data-anim="fadeInUp")
+							h2 Беларусь
+						.block.line-top
+							.flex-block
+								.one-four
+									.country-aside-menu.animateThis(data-anim="fadeInUp")
+										p.href(data-countries="1" data-block='0').active Продажи
+										p.href(data-countries="2" data-block='0') ПКС
+										p.href(data-countries="3" data-block='0') Розничная торговля
+										p.href(data-countries="4" data-block='0') Аренда офисов
+								.three-four
+									.country-blocks-wrapper#countryBlock0
+										.country-block.active
+											.country-block-inner.animateThis(data-anim="fadeInUp")
+												p.annotation Петруха
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375222210984").brand-subtitle.brand-telephone +375 22 221 09 84
+														a(href="Tel:+375297474828").brand-subtitle.brand-telephone +375 29 747 48 28
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+											.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+												p.annotation Братья Гриль / Лакомый край
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375297473778").brand-subtitle.brand-telephone +375 29 747 37 78
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+											.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+												p.annotation Кувшинка / Landers / Cream Nuvo
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375177625371").brand-subtitle.brand-telephone +375 17 762 53 71
+														a(href="Tel:+375177655795").brand-subtitle.brand-telephone +375 17 765 57 95
+														a(href="Tel:+375297898121").brand-subtitle.brand-telephone +375 29 789 81 21
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:sb.milk@servolux.by").brand-email sb.milk@servolux.by
+											.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+												p.annotation Петруха
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375222210984").brand-subtitle.brand-telephone +375 22 221 09 84
+														a(href="Tel:+375297474828").brand-subtitle.brand-telephone +375 29 747 48 28
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+										.country-block
+											.country-block-inner.animateThis(data-anim="fadeInUp")
+												p.annotation Кувшинка / Landers / Cream Nuvo
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375177625371").brand-subtitle.brand-telephone +375 17 762 53 71
+														a(href="Tel:+375177655795").brand-subtitle.brand-telephone +375 17 765 57 95
+														a(href="Tel:+375297898121").brand-subtitle.brand-telephone +375 29 789 81 21
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:sb.milk@servolux.by").brand-email sb.milk@servolux.by
+											.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+												p.annotation Петруха
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375222210984").brand-subtitle.brand-telephone +375 22 221 09 84
+														a(href="Tel:+375297474828").brand-subtitle.brand-telephone +375 29 747 48 28
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+										.country-block
+											.country-block-inner.animateThis(data-anim="fadeInUp")
+												p.annotation Братья Гриль / Лакомый край
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375297473778").brand-subtitle.brand-telephone +375 29 747 37 78
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+											.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+												p.annotation Кувшинка / Landers / Cream Nuvo
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375177625371").brand-subtitle.brand-telephone +375 17 762 53 71
+														a(href="Tel:+375177655795").brand-subtitle.brand-telephone +375 17 765 57 95
+														a(href="Tel:+375297898121").brand-subtitle.brand-telephone +375 29 789 81 21
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:sb.milk@servolux.by").brand-email sb.milk@servolux.by
+										.country-block
+											.country-block-inner.animateThis(data-anim="fadeInUp")
+												p.annotation Петруха
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375222210984").brand-subtitle.brand-telephone +375 22 221 09 84
+														a(href="Tel:+375297474828").brand-subtitle.brand-telephone +375 29 747 48 28
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+											.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+												p.annotation Петруха
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375222210984").brand-subtitle.brand-telephone +375 22 221 09 84
+														a(href="Tel:+375297474828").brand-subtitle.brand-telephone +375 29 747 48 28
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+					.country-wrapper
+						.block.animateThis(data-anim="fadeInUp")
+							h2 Россия
+						.block.line-top
+							.flex-block
+								.one-four
+									.country-aside-menu.animateThis(data-anim="fadeInUp")
+										p.href(data-countries="1" data-block="1").active Продажи
+								.three-four
+									.country-blocks-wrapper#countryBlock1
+										.country-block.active
+											.country-block-inner.animateThis(data-anim="fadeInUp")
+												p.annotation Петруха
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375222210984").brand-subtitle.brand-telephone +375 22 221 09 84
+														a(href="Tel:+375297474828").brand-subtitle.brand-telephone +375 29 747 48 28
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+											.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+												p.annotation Петруха
+												.flex-block
+													.one-four
+														p.brand-tel-title Телефоны
+													.one-four
+														a(href="Tel:+375222210984").brand-subtitle.brand-telephone +375 22 221 09 84
+														a(href="Tel:+375297474828").brand-subtitle.brand-telephone +375 29 747 48 28
+													.one-four
+														p.brand-email-title E-mail
+													.one-four
+														a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+				#contactsForServices.contacts-toggle-blocks
+					.block.animateThis(data-anim="fadeInUp")
+						h2 Общие контакты
+					.block.line-top
+						.flex-block
+							.one-four.animateThis(data-anim="fadeInUp")
+								p Беларусь / Россия
+							.three-four
+								.country-blocks-wrapper
+									.country-block.active
+										.country-block-inner.animateThis(data-anim="fadeInUp")
+											p.annotation Маркетинг
+											.flex-block
+												.one-four
+													p.brand-tel-title Телефоны
+												.one-four
+													a(href="Tel:+375222210984").brand-subtitle.brand-telephone +375 22 221 09 84
+													a(href="Tel:+375297474828").brand-subtitle.brand-telephone +375 29 747 48 28
+												.one-four
+													p.brand-email-title E-mail
+												.one-four
+													a(href="mailto:dmitriy.bogomazov@servolux.by").brand-email dmitriy.bogomazov@servolux.by
+										.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+											p.annotation Логистика
+											.flex-block
+												.one-four
+													p.brand-tel-title Телефоны
+												.one-four
+													a(href="Tel:+375297473778").brand-subtitle.brand-telephone +375 29 747 37 78
+												.one-four
+													p.brand-email-title E-mail
+												.one-four
+													a(href="mailto:vadim.mitkevich@servolux.by").brand-email vadim.mitkevich@servolux.by
+										.country-block-inner.animateThis(data-anim="fadeInUp").line-top
+											p.annotation Закупки
+											.flex-block
+												.one-four
+													p.brand-tel-title Телефоны
+												.one-four
+													a(href="Tel:+375297471011").brand-subtitle.brand-telephone +375 29 747 10 11
+													a(href="Tel:+375222294999").brand-subtitle.brand-telephone +375222 29 49 99
+												.one-four
+													p.brand-email-title E-mail
+												.one-four
+													a(href="mailto:konstantin.silukov@servolux.com").brand-email konstantin.silukov@servolux.com
+
 

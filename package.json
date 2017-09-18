@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "Gulp project",
   "author": "Servolux",
+  "scripts": {
+    "start": "gulp",
+    "copy": "copy",
+    "publish": "build"
+  },
   "devDependencies": {
     "autoprefixer": "latest",
     "babel-core": "latest",

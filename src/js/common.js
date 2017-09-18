@@ -354,10 +354,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let docWindow = $(window),
 		vHeight = docWindow.height(),
-		headerMenu = $('#header-mainwrap'),
+		$headerMenuWrapper = $('#header-menu-wrapper'),
+		$headerModalWrapper = $('#header-modal-wrapper'),
 		videoWrapper = $('#main-first-screen-fading-wrapper'),
 		screenWrapperHeight = $('#main-screen-wrapper').height(),
-		burger = $('#main-burger'),
+		burger = $('#header-burger'),
 		screenLinks = $('#main-screen .screen-links-wrapper'),
 		mainTitleWrapperInner = $('#title-wrapper-inner'),
 		mainScreenTitle = $('#main-screen-title'),
@@ -378,23 +379,32 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Video append if not mobile
 	if (!isMobile() && videoWrapper.data('src')) {
 		videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video class="firstScreenFading" id="main-video" muted loop><source src="' + videoWrapper.data('src') + '" type="video/mp4"></video></div></div>')
-		videoWrapper.find('.video-poster').remove()
+		//videoWrapper.find('.video-poster').remove()
 	}
 
-	function toggleBody (activeItem) {
-		return function () {
-			activeItem.toggleClass('active')
-			if (mobile) {
-				$('html').toggleClass('remodal-is-locked')
-			}
-			else {
-				$('html').toggleClass('remodal-is-locked')
-			}
-		}
-	}
+	// function toggleBody (activeItem) {
+	// 	return function () {
+	// 		activeItem.toggleClass('active')
+	// 		if (mobile) {
+	// 			$('html').toggleClass('remodal-is-locked')
+	// 		}
+	// 		else {
+	// 			$('html').toggleClass('remodal-is-locked')
+	// 		}
+	// 	}
+	// }
 
 	//burger-menu
-	burger.on('click', toggleBody(headerMenu))
+	burger.on('click', function () {
+		$headerMenuWrapper.toggleClass('active')
+		$headerModalWrapper.toggleClass('active')
+		if (mobile) {
+			$('html').toggleClass('remodal-is-locked')
+		}
+		else {
+			$('html').toggleClass('remodal-is-locked')
+		}
+	})
 
 	if ($('#modal').length) {
 		let $modalContent = $('#modal-content'),
@@ -616,7 +626,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	docWindow.scroll(function (event) {
 		let scrollPos = docWindow.scrollTop()
 		if (scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
-			headerMenu.addClass('sticked animated fadeInDownFast').css('animation-delay', '0')
+			$headerMenuWrapper.addClass('sticked animated fadeInDownFast').css('animation-delay', '0')
 			if (!mobile) {
 				if (hasParallax) {
 					scrollParallax(scrollPos)
@@ -634,7 +644,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			scrollMainScreen(scrollPos)
 			scrollMainTitle(scrollPos)
 		}
-		headerMenu.removeClass('sticked animated fadeInDownFast')
+		$headerMenuWrapper.removeClass('sticked animated fadeInDownFast')
 	})
 
 	// InView checker
@@ -965,4 +975,26 @@ document.addEventListener('DOMContentLoaded', function () {
 			img.classList.add('fade-in');
 		}
 	}
+
+	if ($('#contacts').length) {
+		const controllButtons = $('#chart-control .button'),
+			contactBlocks = $('#blocks-wrapper .contacts-toggle-blocks'),
+			$countryAsideMenyHrefs = $('.country-aside-menu .href');
+
+		controllButtons.on('click', function () {
+			const contBlock = $(this).data('block');
+			$(this).addClass('active').siblings().removeClass('active')
+			$(contactBlocks[contBlock]).addClass('active').siblings().removeClass('active')
+		})
+
+		$countryAsideMenyHrefs.on('click', function() {
+			const contCountries = $(this).data('countries'),
+				contBlock = $(this).data('block')
+			;
+			$(this).addClass('active').siblings().removeClass('active')
+			$('#countryBlock' + contBlock + ' .country-block:nth-of-type(' + contCountries + ')').addClass('active').siblings().removeClass('active')
+		})
+
+	}
+
 })

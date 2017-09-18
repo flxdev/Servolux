@@ -1,0 +1,22 @@
+extends _layout
+
+block title
+	title Новости
+block config
+	- var main = false
+	- var chart = false
+	- var map = false
+	- var chartjs = false
+block content
+	#main-screen-wrapper.advancedPage
+		#main-first-screen-fading-wrapper
+			img(src="/img/6-0/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			#main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					.bread
+						a(href="index.html") Главная
+					p.title-main Новости
+	#main-content
+		.box#news-page
+			.block
