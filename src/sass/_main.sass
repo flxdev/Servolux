@@ -803,176 +803,6 @@ main
 		background-color: $white
 		transition: transform 0.2s ease-in, opacity 0.2s
 
-//#header-menu-wrapper
-//	position: relative
-//	.header-menu
-//		z-index: 100
-//		overflow: hidden
-//		+rem(max-height, 120px)
-//
-//		.header-menu-modal
-//			background-color: $white
-//			opacity: 0
-//			width: 100%
-//			position: relative
-//			z-index: 2
-//			transition: transform 0.3s ease-out 0.05s, opacity 0.1s ease-in 0s
-//			transform: translate(0px, -100%)
-//			+rem(padding-top, 80px)
-//			+rem(min-height, 700px)
-//			+rem(padding-bottom, 50px)
-//			.menu-modal-wrap
-//				width: 100%
-//				height: 100%
-//				.menu-modal-top
-//					position: absolute
-//					width: 100%
-//					+rem(top, $topstep - 11px)
-//					+r(480)
-//						+rem(top, $topstep + 60px)
-//				.menu-modal-middle
-//					display: flex
-//					position: relative
-//					align-items: center
-//					+rem(min-height, 500px)
-//					+r(992)
-//						background-color: $white
-//						+rem(padding-bottom, 50px)
-//						height: auto
-//					.menu-columns
-//						display: flex
-//						+rem(max-width, 1400px)
-//						margin: auto
-//						justify-content: space-between
-//						background-color: $white
-//						+r(992)
-//							display: block
-//							+rem(margin-top, 80px)
-//							width: 100%
-//						.column
-//							+rem(max-width, 290px)
-//							display: inline-block
-//							+rem(padding-top, 20px)
-//							+rem(padding-left, $sidestep+10px)
-//							+rem(padding-right, $sidestep+10px)
-//							+r(992)
-//								display: block
-//								padding-top: 0
-//							.column-href
-//								+ff('Roboto', 400, 26px)
-//								color: $text-h
-//								display: block
-//								margin-top: 2vh
-//								margin-bottom: 2vh
-//								+rem(line-height, 36px)
-//								+r(992)
-//									+rem(margin-top, 34px)
-//								&:hover, &:active
-//									color: $active
-//							.column-sub-hrefs
-//								+r(992)
-//									display: none
-//								li
-//									display: block
-//								a
-//									+ff('Roboto', 400, 18px)
-//									display: block
-//									padding-top: 0.9vh
-//									padding-bottom: 0.9vh
-//									+rem(line-height, 28px)
-//									color: $text-annotation
-//									&:hover, &:active
-//										color: $active
-//	&.sticked
-//		position: fixed
-//		top: 0
-//		will-change: transform
-//		.logo-wrapper
-//			+rem(top, $topstep - 17px)
-//		.svg-green
-//			fill: $svg-green
-//		.svg-blue
-//			fill: $svg-blue
-//		.search
-//			+rem(top, $topstep - 60px)
-//		.header-menu-modal
-//			.menu-modal-wrap
-//				.menu-modal-top
-//					.change-lang
-//						+rem(top, $topstep - 50px)
-//		.boxed
-//			.header-menu
-//				+rem(height, 75px)
-//				background-color: $white
-//				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1)
-//				nav
-//					+rem(top, $topstep - 26px)
-//					a:not(.active)
-//						color: $text-h
-//						&:hover
-//							color: $white
-//			#header-burger
-//				+rem(top, $topstep - 25px)
-//				&:before, &:after, .burger-stick
-//					background-color: $text-h
-//	&.active
-//		&:before
-//			position: fixed
-//			content: ''
-//			display: block
-//			bottom: 0
-//			left: 0
-//			width: 100%
-//			height: 100vh
-//			background-color: #333
-//			z-index: 999
-//			opacity: .5
-//			will-change: transform
-//		nav
-//			+rem(padding-right, 18px)
-//		.boxed
-//			height: 100vh
-//			overflow-y: auto
-//			max-height: 100vh
-//			background-color: #fff
-//			.logo-wrapper
-//				.logo
-//					+rem(left, $sidestep - 20px)
-//					+r(492)
-//						+rem(left, $sidestep - 20px)
-//					.svg-green
-//						fill: $svg-green
-//					.svg-blue
-//						fill: $svg-blue
-//			.burger-menu
-//				+rem(right, $sidestep+20px)
-//				+r(492)
-//					+rem(right, $sidestep - 20px)
-//				&:before
-//					transform: translate(0, 2px) rotate(45deg)
-//					background-color: $text-h
-//				&:after
-//					transform: translate(0, -2px) rotate(-45deg)
-//					background-color: $text-h
-//				.burger-stick
-//					transform: translate(-20px, 0)
-//					opacity: 0
-//					background-color: $text-h
-//			.header-menu
-//				position: relative
-//				height: auto
-//				max-height: none
-//				pointer-events: auto
-//				.header-menu-modal
-//					transform: translate(0px, 0px)
-//					transition: transform 0.3s ease-out 0s, opacity 0.2s ease-in 0.1s
-//					visibility: visible
-//					opacity: 1
-//					min-height: 100vh
-//					display: flex
-//					justify-content: center
-//					align-items: center
-
 // Menu end
 
 
@@ -1006,7 +836,7 @@ main
 				bottom: 0
 				margin: auto
 				transform: translate(-50%, -50%) scale(1.2)
-				background: $gray
+				background: linear-gradient(to top, #aaa, #ccc)
 		#main-screen
 			margin: auto
 			+rem(max-width, 1440px)
@@ -1595,6 +1425,10 @@ $slSize: 440px
 		width: 100%
 		display: block
 		position: relative
+		&:after
+			display: block
+			content: ''
+			clear: both
 		.news-item
 			width: 50%
 			float: right
@@ -2609,3 +2443,69 @@ $galleryBigHeight: 590px
 		&.active
 			color: $text-h
 			cursor: auto
+
+#news-page
+	#news-right-downloads
+		position: absolute
+		right: 120px
+		margin-right: 3.3%
+		top: 50px
+		width: 24%
+		max-height: 600px
+		overflow-y: scroll
+		z-index: 3
+		background-color: #f5f5f5
+		padding-left: 30px
+		padding-right: 30px
+		padding-top: 30px
+		&::-webkit-scrollbar-track
+			background-color: #e9e9e9
+		&::-webkit-scrollbar
+			width: 5px
+			background-color: transparent
+		&::-webkit-scrollbar-thumb
+			background-color: #bababa
+			border-radius: 5px
+		.href
+			color: $green
+		.news-download-block
+			padding-left: 40px
+			padding-bottom: 15px
+			padding-top: 15px
+			display: block
+			padding-right: 0
+			position: relative
+			&:not(:last-of-type)
+				border-bottom: 1px solid $lineColor
+			&:before
+				position: absolute
+				display: block
+				content: ''
+				width: 15px
+				height: 15px
+				background: url('../img/6-0/download_file.svg') 50% 50% no-repeat
+				background-size: contain
+				left: 10px
+				top: 24px
+			&:hover
+				.href
+					color: $active
+	#news
+		position: relative
+		.news
+			display: block
+			padding: 0
+			.news-item
+				width: 30%
+				border: none
+				padding: 0
+				margin-left: 0
+				margin-right: 3.3%
+				+rem(margin-bottom, 25px)
+				+rem(margin-top, 25px)
+				float: left
+				.img-news-wrapper
+					display: block
+			.big-news
+				width: 63.5%
+				margin-right: 33%
