@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pug/6-0news.pug" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(0) — копия.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(1) — копия.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(2) — копия.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(3) — копия.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(4) — копия.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(5) — копия.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(0).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(10).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(11).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(12).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(13).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(14).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(15).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(16).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(17).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(7).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(8).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partners(9).png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/css/font.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/font.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/index.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/tasks/critical.js" afterPath="$PROJECT_DIR$/gulp/tasks/critical.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common.js" afterPath="$PROJECT_DIR$/src/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/1-0company.pug" afterPath="$PROJECT_DIR$/src/pug/1-0company.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/2-0activity.pug" afterPath="$PROJECT_DIR$/src/pug/2-0activity.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/3-0partnership.pug" afterPath="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/4-0work.pug" afterPath="$PROJECT_DIR$/src/pug/4-0work.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/5-0contacts.pug" afterPath="$PROJECT_DIR$/src/pug/5-0contacts.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_footer.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_footer.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_header.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_header.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/_main.sass" afterPath="$PROJECT_DIR$/src/sass/_main.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/font.sass" afterPath="$PROJECT_DIR$/src/sass/font.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/lib/_animations.sass" afterPath="$PROJECT_DIR$/src/sass/lib/_animations.sass" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -650,7 +598,7 @@
       <workItem from="1505370821662" duration="62216000" />
       <workItem from="1505492929900" duration="18112000" />
       <workItem from="1505737828922" duration="56000" />
-      <workItem from="1505737917593" duration="9465000" />
+      <workItem from="1505737917593" duration="9495000" />
     </task>
     <task id="LOCAL-00001" summary="Something change from webstorm">
       <created>1505114233192</created>
@@ -757,11 +705,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505495358455</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="many fixes. new header and footer">
+      <created>1505747412079</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1505747412079</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188872000" />
+    <option name="totallyTimeSpent" value="188902000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -774,14 +729,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11795682" sideWeight="0.9356288" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11795682" sideWeight="0.06437126" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11795682" sideWeight="0.9323899" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11795682" sideWeight="0.06761006" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29461458" sideWeight="0.50605583" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29461458" sideWeight="0.49394417" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3284055" sideWeight="0.5018431" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3284055" sideWeight="0.49815693" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29461458" sideWeight="0.49394417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26293558" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.09057399" sideWeight="0.2079327" order="3" side_tool="true" content_ui="tabs" />
@@ -841,7 +795,8 @@
     <MESSAGE value="Gulp ES2017 build" />
     <MESSAGE value="3-0 ready" />
     <MESSAGE value="4-0 ready&#10;contacts to go" />
-    <option name="LAST_COMMIT_MESSAGE" value="4-0 ready&#10;contacts to go" />
+    <MESSAGE value="many fixes. new header and footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="many fixes. new header and footer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
