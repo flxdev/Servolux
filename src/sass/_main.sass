@@ -2136,22 +2136,24 @@ $galleryBigHeight: 590px
 		font-weight: 400
 	.flex-block
 		+rem(margin-top, 30px)
-		.brand-telephone
-			display: block
-			+rem(font-size, 18px)
-			+rem(line-height, 28px)
-			margin: 0
-			color: $text-h
-			&:not(:first-of-type)
-				+rem(margin-top, 8px)
-		.brand-email-title
-			+rem(padding-left, 80px)
-		.brand-email
-			display: block
-			+rem(line-height, 28px)
-		.brand-email, .brand-email-title
-			&:not(:first-of-type)
-				+rem(margin-top, 8px)
+
+.brand-telephone
+	display: block
+	+rem(font-size, 18px)
+	+rem(line-height, 28px)
+	margin: 0
+	color: $text-h
+	&:not(:first-of-type)
+		+rem(margin-top, 8px)
+.brand-email-title
+	+rem(padding-left, 80px)
+.brand-email
+	display: block
+	+rem(line-height, 28px)
+.brand-email, .brand-email-title
+	&:not(:first-of-type)
+		+rem(margin-top, 8px)
+
 	#map
 		width: 100%
 		+rem(height, 513px)
@@ -2396,3 +2398,26 @@ $galleryBigHeight: 590px
 	.map
 		height: 100%
 		width: 100%
+	.brand-tel-title, .brand-email-title
+		padding: 0
+	.block
+		&>.flex-block
+			+rem(padding-bottom, 10px)
+			+rem(padding-top, 20px)
+	p
+		+rem(margin-bottom, 40px)
+		+rem(max-width, 500px)
+	a
+		margin: 0
+	.office-contacts-wrapper
+		.flex-block
+			+rem(margin-bottom, 20px)
+
+#contacts-control
+	position: relative
+	.callback-wrapper
+		position: absolute
+		+rem(right,120px)
+		top: 0
+	.carousel-buttons
+		margin: 0

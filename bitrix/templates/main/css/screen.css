@@ -2355,23 +2355,27 @@ main {
 
 #brand-contacts .flex-block {
   margin-top: 1.875rem; }
-  #brand-contacts .flex-block .brand-telephone {
-    display: block;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    margin: 0;
-    color: #474e41; }
-    #brand-contacts .flex-block .brand-telephone:not(:first-of-type) {
-      margin-top: 0.5rem; }
-  #brand-contacts .flex-block .brand-email-title {
-    padding-left: 5rem; }
-  #brand-contacts .flex-block .brand-email {
-    display: block;
-    line-height: 1.75rem; }
-  #brand-contacts .flex-block .brand-email:not(:first-of-type), #brand-contacts .flex-block .brand-email-title:not(:first-of-type) {
+
+.brand-telephone {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin: 0;
+  color: #474e41; }
+  .brand-telephone:not(:first-of-type) {
     margin-top: 0.5rem; }
 
-#brand-contacts #map {
+.brand-email-title {
+  padding-left: 5rem; }
+
+.brand-email {
+  display: block;
+  line-height: 1.75rem; }
+
+.brand-email:not(:first-of-type), .brand-email-title:not(:first-of-type) {
+  margin-top: 0.5rem; }
+
+.brand-email #map, .brand-email-title #map {
   width: 100%;
   height: 32.0625rem;
   margin-top: 1.875rem; }
@@ -2646,6 +2650,32 @@ main {
 #offices .map {
   height: 100%;
   width: 100%; }
+
+#offices .brand-tel-title, #offices .brand-email-title {
+  padding: 0; }
+
+#offices .block > .flex-block {
+  padding-bottom: 0.625rem;
+  padding-top: 1.25rem; }
+
+#offices p {
+  margin-bottom: 2.5rem;
+  max-width: 31.25rem; }
+
+#offices a {
+  margin: 0; }
+
+#offices .office-contacts-wrapper .flex-block {
+  margin-bottom: 1.25rem; }
+
+#contacts-control {
+  position: relative; }
+  #contacts-control .callback-wrapper {
+    position: absolute;
+    right: 7.5rem;
+    top: 0; }
+  #contacts-control .carousel-buttons {
+    margin: 0; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
