@@ -1,0 +1,76 @@
+extends _layout
+
+block title
+	title Новость
+block config
+	- var main = false
+	- var chart = false
+	- var map = false
+	- var chartjs = false
+block content
+	#main-screen-wrapper.advancedPage
+		#main-first-screen-fading-wrapper
+			img(src="/img/6-0/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			#main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					.bread
+						a(href="index.html") Главная
+						a(href="6-0news.html") Новости
+					p.title-main Новость
+	#main-content
+		.box#top
+			.block.medium-size
+				#brand-logo.animateThis(data-anim="fadeInUp")
+					.brand-logo-wrapper
+						p.caption 15 мая 2017
+				#brand-info.block-inner
+					.small-block.animateThis(data-anim="fadeInUp")
+						p.h2 «Серволюкс» получает престижную награду «Лучший экспортер 2016 года»
+						p.h3 В Минске подведены итоги конкурса для предприятий различных форм собственности «Лучший экспортер 2016 года», который ежегодно проводится Белорусской торгово-промышленной палатой совместно с республиканскими органами госуправления и представителями бизнес-сообществ.
+				#news-inner-slider-wrapper.block-inner.animateThis(data-anim="fadeInUp")
+					#news-inner-slider.slick-slider
+						.slick-slide
+							.slide-img
+								img(src="/img/index/news.jpg")
+						.slick-slide
+							.slide-img
+								img(src="/img/index/news.jpg")
+						.slick-slide
+							.slide-img
+								img(src="/img/index/news.jpg")
+						.slick-slide
+							.slide-img
+								img(src="/img/index/news.jpg")
+						.slick-slide
+							.slide-img
+								img(src="/img/index/news.jpg")
+						.slick-slide
+							.slide-img
+								img(src="/img/index/news.jpg")
+				.block-inner
+					.small-block
+						p.margins.animateThis(data-anim="fadeInUp") Победители конкурса — ведущие предприятия страны с наиболее высокими показателями по экспорту в своей отрасли. Деятельность этих предприятий способствует развитию экспортного производства в целом и укрепляет престиж белорусских товаропроизводителей на общемировом рынке.
+						p.margins.animateThis(data-anim="fadeInUp") Лучшим экспортером 2016 года в номинации «Мясная промышленность» стала компания <a href="#">СЗАО «Серволюкс»</a>, объединяющая 15 крупнейших предприятий агропромышленного комплекса Беларуси.
+						p.margins.animateThis(data-anim="fadeInUp") Оценка предприятий, участвующих в конкурсе, базировалась на основании данных официальной статистики за 2016 год по нескольким основным критериям.
+						p.margins.animateThis(data-anim="fadeInUp") Для определения победителей был проведен анализ общего объема экспорта в фактических ценах (эквивалент долларов США), оценка изменения объемов экспорта (эквивалент долларов США) за 2016 год по отношению к предыдущему году (%), сальдо внешнеторговой деятельности (эквивалент долларов США), а также объем экспорта в фактических ценах на одного сотрудника (эквивалент долларов США).
+				.block-inner
+					img(src="/img/index/paralax-bg_1.jpg")
+				.block-inner
+					.small-block
+						blockquote
+							.blockquote-author
+								svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+									use(xlink:href='#quote', overflow='visible')
+								p.darker Олеся Сидоренко
+								p.caption Заместитель генерального директора по маркетингу
+							p.italic Наша победа на конкурсе подтверждает верность выбранного нашей компанией вектора развития. Продукция СЗАО «Серволюкс»  уже давно известна потребителю и высоко ценится не только в России, но и на рынках Средней Азии и Африки. За последние годы мы серьезно укрепили технологи- ческое лидерство в отрасли. Мне приятно, что успехи компании позитивно отражаются на ее внешнеэкономической деятельности.
+				.block-inner
+					.small-block
+						.flex-block
+							.one-half
+								+backButonWrapper('Ко всем новостям', '6-0news.html')
+							.one-half
+								script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+								script(src="//yastatic.net/share2/share.js" async="async")
+								.ya-share2(data-services="vkontakte,facebook,twitter,linkedin" data-counter="")

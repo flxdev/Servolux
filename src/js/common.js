@@ -586,9 +586,25 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			]
 		})
-
 		let productsSliesLength = $productsSlider.find('.slick-dots li').length
 		$productsSlider.append('<div class="slick-sum-slides">/ ' + productsSliesLength + '</div>')
+	}
+
+
+	if ($('#news-inner-slider').length) {
+		let $newsInnerSlider = $('#news-inner-slider')
+		$newsInnerSlider.slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: false,
+			focusOnSelect: false,
+			accessibility: false
+		})
+
+		let productsSliesLength = $newsInnerSlider.find('.slick-dots li').length
+		$newsInnerSlider.append('<div class="slick-sum-slides">/ ' + productsSliesLength + '</div>')
 	}
 
 	if ($('#brand-vertical-slider').length) {
@@ -996,5 +1012,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 
 	}
-
+	if($('#jobs-content-wrapper').length){
+		$('.jobs-tags-title-wrapper').on('click', function(){
+			$(this).toggleClass('deactive')
+			$(this).next().toggleClass('deactive')
+		})
+	}
 })

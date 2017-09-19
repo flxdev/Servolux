@@ -576,9 +576,24 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			}]
 		});
-
 		var productsSliesLength = $productsSlider.find('.slick-dots li').length;
 		$productsSlider.append('<div class="slick-sum-slides">/ ' + productsSliesLength + '</div>');
+	}
+
+	if ($('#news-inner-slider').length) {
+		var $newsInnerSlider = $('#news-inner-slider');
+		$newsInnerSlider.slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: false,
+			focusOnSelect: false,
+			accessibility: false
+		});
+
+		var _productsSliesLength = $newsInnerSlider.find('.slick-dots li').length;
+		$newsInnerSlider.append('<div class="slick-sum-slides">/ ' + _productsSliesLength + '</div>');
 	}
 
 	if ($('#brand-vertical-slider').length) {
@@ -971,6 +986,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			    contBlock = $(this).data('block');
 			$(this).addClass('active').siblings().removeClass('active');
 			$('#countryBlock' + contBlock + ' .country-block:nth-of-type(' + contCountries + ')').addClass('active').siblings().removeClass('active');
+		});
+	}
+	if ($('#jobs-content-wrapper').length) {
+		$('.jobs-tags-title-wrapper').on('click', function () {
+			$(this).toggleClass('deactive');
+			$(this).next().toggleClass('deactive');
 		});
 	}
 });

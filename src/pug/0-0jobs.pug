@@ -1,0 +1,154 @@
+extends _layout2
+
+block title
+	title Группа компаний Серволюкс
+block config
+	- var main = false
+block content
+	#main-screen-wrapper.advancedPage.page2
+		#main-first-screen-fading-wrapper
+			img(src="/img/6-1/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			#main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					p.title-main.title2 Найдите работу вашей мечты
+					p.sub-title Более 50 открытых вакансий в группе компаний «Серволюкс».
+	#main-content
+		.box
+			.block
+				#jobs-hrefs-box
+					.job-href
+						span.job-href-title(data-country="0") Беларусь
+						p.job-counter 76
+					.job-href
+						a.job-href-title(href="#" data-country="1") Россия
+						p.job-counter 76
+					.job-href
+						a.job-href-title(href="#" data-country="2") Другие страны
+						p.job-counter 76
+			.block#jobs-content-wrapper
+				.flex-block
+					.one-four
+						.jobs-tags-item-wrapper
+							.jobs-tags-item#jobs-profobjects
+								.jobs-tags-title-wrapper.deactive
+									p.jobs-tags-title Профобласти
+									svg(class="icon icon-vacancy")
+										use(xlink:href="#arrow_filter" xmlns:xlink="http://www.w3.org/1999/xlink")
+								.jobs-tags-content-wrapper.deactive
+									.jobs-tags
+										- var jtCount = 12
+										- var jtVal = 0
+										mixin jobs-tag(text, counter = jtCount, value = jtVal)
+											input(type='checkbox' id="'tag_"+ jtVal +"'" value="'" + jtVal + "'")
+											label(for="'tag_"+ jtVal +"'").jobs-tag
+												p.jobs-tags-inner__text= text
+												p.jobs-tags-inner__counter.caption= counter
+												input(type='checkbox' value="'" + jtVal + "'")
+											- jtCount++
+											- jtVal++
+										+jobs-tag('Автомобильный бизнес')
+										+jobs-tag('Административный персонал')
+										+jobs-tag('Банки, инвестиции, лизинг')
+										+jobs-tag('Бухгалтерия,  учёт, финансы предприятия')
+										+jobs-tag('Инсталляция и сервис')
+										+jobs-tag('Маркетинг, реклама, PR')
+										+jobs-tag('Медицина, фармацевтика')
+										+jobs-tag('Начало карьеры, студенты')
+										+jobs-tag('Продажи')
+										+jobs-tag('Производство')
+										+jobs-tag('Рабочий персонал')
+										+jobs-tag('Спортивные клубы, фитнес, салоны красоты')
+										+jobs-tag('Строительство, недвижимость')
+										+jobs-tag('Транспорт, логистика')
+										+jobs-tag('Туризм, гостиницы, рестораны')
+										+jobs-tag('Юристы')
+							.jobs-tags-item#jobs-regions
+								.jobs-tags-title-wrapper
+									p.jobs-tags-title Регионы
+									svg(class="icon icon-vacancy")
+										use(xlink:href="#arrow_filter" xmlns:xlink="http://www.w3.org/1999/xlink")
+								.jobs-tags-content-wrapper
+									.jobs-tags
+										+jobs-tag('Борисов')
+										+jobs-tag('Осиповичи')
+										+jobs-tag('Смолевичи')
+										+jobs-tag('Минск')
+										+jobs-tag('Могилёв')
+										+jobs-tag('Вилейка')
+										+jobs-tag('Дзержинск')
+										+jobs-tag('Марьина Горка')
+										+jobs-tag('Смолевичи 1')
+										+jobs-tag('Фаниполь')
+							.jobs-tags-item#jobs-companies
+								.jobs-tags-title-wrapper
+									p.jobs-tags-title Регионы
+									svg(class="icon icon-vacancy")
+										use(xlink:href="#arrow_filter" xmlns:xlink="http://www.w3.org/1999/xlink")
+								.jobs-tags-content-wrapper
+									.jobs-tags
+										+jobs-tag('Борисов')
+										+jobs-tag('Осиповичи')
+										+jobs-tag('Смолевичи')
+										+jobs-tag('Минск')
+										+jobs-tag('Могилёв')
+										+jobs-tag('Вилейка')
+										+jobs-tag('Дзержинск')
+										+jobs-tag('Марьина Горка')
+										+jobs-tag('Смолевичи 1')
+										+jobs-tag('Фаниполь')
+					.three-four
+						#jobs-content-inner-wrapper
+							#jobs-content-inner-sorting
+								.jobs-content-sorting-finded
+									p.jobs-content-sorting__text.caption По вашему запросу найдено
+									p.jobs-content-sorting__bold-text.darker 16 вакансий
+								.jobs-content-sorting-sort
+									p.jobs-content-sorting__text.caption Сортировать по:
+									select.jobs-content-sorting__select
+										option
+											p.jobs-content-sorting__bold-text.darker Дате
+										option
+											p.jobs-content-sorting__bold-text.darker Названию
+										option
+											p.jobs-content-sorting__bold-text.darker З/П
+									.jobs-content-sorting-arrow
+							#jobs-content-inner-tags
+								.jobs-content-inner-tags-wrapper
+									.jobs-content-inner-tag
+										p.jobs-content-inner-tag__text Автомобильный бизнес
+										.jobs-content-inner-tag__close-button
+									.jobs-content-inner-tag
+										p.jobs-content-inner-tag__text Административный персонал
+										.jobs-content-inner-tag__close-button
+							#jobs-content-inner-content
+								.jobs-content-inner-content-wrapper
+									mixin jobs-item(title='Заголовка нет', subtitle='Серволюкс, 20 июля', price='з/п не указана', city='Беларусь, Смолевичи')
+										.jobs-content-inner__item
+											a(href='#').jobs-content-inner__title-wrapper
+												p.jobs-content-inner__title= title
+												p.jobs-content-inner__subtitle.caption= subtitle
+											.jobs-content-inner__price-wrapper
+												p.jobs-content-inner__price= price
+											.jobs-content-inner__city-wrapper
+												p.jobs-content-inner__city= city
+									+jobs-item('Ветеринарный врач', 'Смолевичи Бройлер, 20 июля', 'от 550 руб.')
+									+jobs-item('Бухгалтер в распределительный центр')
+									+jobs-item('Финансовый менеджер', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.')
+									+jobs-item('Экономист по производству', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.', 'Беларусь, Борисов')
+									+jobs-item('Бренд - менеджер')
+									+jobs-item('Ветеринарный врач', 'Смолевичи Бройлер, 20 июля', 'от 550 руб.')
+									+jobs-item('Бухгалтер в распределительный центр')
+									+jobs-item('Финансовый менеджер', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.')
+									+jobs-item('Экономист по производству', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.', 'Беларусь, Борисов')
+									+jobs-item('Бренд - менеджер')
+		.box#parallax.aside-menu-item(data-aside="История")
+			.parallax-img
+				img(src="/img/1-0/parallax-bg_1-0.jpg", alt="").js-image
+		.box#company-brands
+			.block.line-top
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInLeft")
+						p.h2 Наши компании
+					.one-half
+				include includes/_brands_footer.pug

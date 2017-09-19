@@ -1,15 +1,15 @@
 input[type='number']
-	-moz-appearance:textfield
+	-moz-appearance: textfield
 
 input[type='submit']
-	-webkit-appearance:none
-	-moz-appearance:none
-	appearance:none
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
 
 input::-webkit-clear-button,
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button
-	-webkit-appearance:none
+	-webkit-appearance: none
 
 input[type="password"]
 	font: small-caption
@@ -23,7 +23,7 @@ input
 	+placeholder
 		font-family: $o
 	&::-ms-clear
-		display:none
+		display: none
 
 svg
 	display: inline-block
@@ -93,6 +93,8 @@ body
 //::-webkit-scrollbar-thumb
 //	background-color: $green
 
+img
+	max-width: 100%
 
 .hidden
 	display: none !important
@@ -163,8 +165,31 @@ p
 	+ff('Roboto', 600, 16px)
 	color: $text-gray
 	+rem(line-height, 28px)
+	&.margins
+		+rem(margin-top, 20px)
+		+rem(margin-bottom, 20px)
+	&.italic
+		font-style: italic
+		font-weight: 500
 	a
 		font-weight: inherit
+		font-size: inherit
+		font-family: inherit
+		line-height: inherit
+
+blockquote
+	background-color: #eef8e8
+	+rem(padding, 60px)
+	.blockquote-author
+		+rem(margin-bottom, 20px)
+		+rem(padding-left, 50px)
+		position: relative
+		svg
+			position: absolute
+			left: 0
+			+rem(top, -5px)
+			+rem(width, 40px)
+			+rem(height, 23px)
 
 .annotation
 	+rem(font-size, 26px)
@@ -228,8 +253,6 @@ p
 			width: 100%
 			margin: 0
 			padding: 0
-			&:nth-of-type(2)
-				margin: auto
 	.one-four
 		width: 25%
 		+r(992)
@@ -569,16 +592,17 @@ main
 		+rem(height, 21px)
 		position: absolute
 		+rem(left, $sidestep)
-		+rem(top, 30px)
+		+rem(top, 50px)
 		z-index: 100
 		pointer-events: auto
+		transition: top 0.2s
 		.logo
 			height: 100%
 	&-nav
 		position: absolute
 		pointer-events: auto
 		+rem(right, $sidestep+35px+$sidestep)
-		+rem(top, 20px)
+		+rem(top, 40px)
 		opacity: 1
 		transition: opacity 0.2s
 		+r(992)
@@ -618,6 +642,8 @@ main
 					transform: scale(1)
 					opacity: 1
 					background-color: $green
+		&.menu2
+			+rem(right, $sidestep)
 	&-modal-wrapper
 		background-color: $white
 		opacity: 0
@@ -744,6 +770,7 @@ main
 	&-menu-wrapper.active
 		#header-burger
 			+rem(right, $sidestep+20px)
+			+rem(top, 25px)
 			+r(492)
 				+rem(right, $sidestep - 20px)
 			&:before
@@ -760,6 +787,7 @@ main
 			opacity: 0
 			pointer-events: none
 		#header-logo
+			+rem(top, 30px)
 			.logo
 				+rem(left, $sidestep - 20px)
 				+r(492)
@@ -776,13 +804,14 @@ main
 	cursor: pointer
 	position: absolute
 	+rem(right, $sidestep)
-	+rem(top, 20px)
+	+rem(top, 40px)
 	+rem(height, 36px)
 	+rem(padding-top, 15px)
 	+rem(padding-left, 10px)
 	+rem(padding-right, 10px)
 	z-index: 100
 	pointer-events: auto
+	transition: top 0.2s
 	&:before, &:after
 		display: block
 		content: ''
@@ -826,6 +855,8 @@ main
 		background-size: cover
 		background-repeat: no-repeat
 		+rem(height, 420px)
+		&.page2
+			+rem(height, 500px)
 		#main-first-screen-fading-wrapper
 			.firstScreenFading
 				position: absolute
@@ -854,18 +885,32 @@ main
 						+rem(font-size, 70px)
 						+rem(line-height, 55px)
 						letter-spacing: 1px
+						&.title2
+							+rem(font-size, 50px)
+							+rem(line-height, 60px)
+							+rem(max-width, 600px)
+					p.sub-title
+						+rem(font-size, 26px)
+						+rem(line-height, 35px)
+						+rem(max-width, 500px)
+						+rem(margin-top, 30px)
+						font-weight: 400
+						opacity: 1
+						color: $white
 					.bread
 						a
 							+rem(font-size, 16px)
+							font-weight: 600
 							color: #fff
 							opacity: 0.5
 							display: inline-block
 							position: relative
 							+rem(padding-right, 16px)
 							transition: opacity .2s
-							font-weight: 400
 							+rem(margin-bottom, 20px)
 							+rem(margin-right, 10px)
+							&:first-child
+								font-weight: 700
 							&:after
 								content: '/'
 								display: block
@@ -1979,7 +2024,7 @@ $galleryBigHeight: 590px
 #brand-roducts
 	+rem(padding-top, 50px)
 
-#brand-products-slider, #modal-content, #partners-slider-wrapper
+#brand-products-slider, #modal-content, #partners-slider-wrapper, #news-inner-slider
 	overflow: hidden
 	+rem(padding-bottom, 60px)
 	position: relative
@@ -2068,6 +2113,9 @@ $galleryBigHeight: 590px
 		margin: auto
 		+rem(width, 30px)
 		transform: translate(20px, 0)
+.slick-vertical
+	.slick-slide
+		border: 0
 
 #partners-slider-wrapper
 	+rem(margin-top, 70px)
@@ -2126,6 +2174,13 @@ $galleryBigHeight: 590px
 		+rem(width, 30px)
 		transform: translate(16px, 0)
 
+#news-inner-slider
+	.slick-slide
+		.slide-img
+			img
+				max-height: auto
+				width: 100%
+
 #brand-contacts
 	.darker
 		font-weight: 400
@@ -2158,13 +2213,14 @@ $galleryBigHeight: 590px
 	a
 		position: relative
 		+rem(font-size, 16px)
-		font-weight: 400
+		font-weight: 600
 		+rem(line-height, 34px)
 		+rem(padding-left, 40px)
-		display: block
+		display: inline-block
 		svg
 			position: absolute
 			+rem(left, 0px)
+			top: 0
 			transform: rotate(180deg)
 			+rem(height, 30px)
 			+rem(width, 30px)
@@ -2412,7 +2468,7 @@ $galleryBigHeight: 590px
 	.callback-wrapper
 		position: absolute
 		+rem(right,120px)
-		top: 0
+		+rem(top, 10px)
 	.carousel-buttons
 		margin: 0
 
@@ -2447,25 +2503,37 @@ $galleryBigHeight: 590px
 #news-page
 	#news-right-downloads
 		position: absolute
-		right: 120px
+		+rem(right, 120px)
 		margin-right: 3.3%
-		top: 50px
+		+rem(top, 50px)
 		width: 24%
-		max-height: 600px
+		+rem(max-height, 600px)
 		overflow-y: scroll
 		z-index: 3
 		background-color: #f5f5f5
-		padding-left: 30px
-		padding-right: 30px
-		padding-top: 30px
+		+rem(padding-left, 30px)
+		+rem(padding-right, 30px)
+		+rem(padding-top, 30px)
 		&::-webkit-scrollbar-track
 			background-color: #e9e9e9
 		&::-webkit-scrollbar
-			width: 5px
+			+rem(width, 5px)
 			background-color: transparent
 		&::-webkit-scrollbar-thumb
 			background-color: #bababa
-			border-radius: 5px
+			+rem(border-radius, 5px)
+		+r(1440)
+			+rem(right, 100px)
+			margin-right: 0
+			width: 27.5%
+		+r(1200)
+			width: 41%
+		+r(1024)
+			position: relative
+			display: block
+			width: 100%
+			+rem(margin-bottom, 100px)
+			right: auto
 		.href
 			color: $green
 		.news-download-block
@@ -2506,6 +2574,135 @@ $galleryBigHeight: 590px
 				float: left
 				.img-news-wrapper
 					display: block
+				+r(1200)
+					width: 46.5%
+					position: relative
+					display: inline-block
+					float: none
+					clear: both
+					vertical-align: top
+				+r(1024)
+					display: block
+					width: 100%
+					+rem(padding-bottom, 50px)
+					+rem(margin-bottom, 50px)
+					border-bottom: 1px solid $lineColor
 			.big-news
 				width: 63.5%
 				margin-right: 33%
+
+.ya-share2
+	text-align: right
+
+#jobs-hrefs-box
+	.job-href
+		display: inline-block
+		position: relative
+		.job-href-title
+			+rem(font-size, 38px)
+			+rem(line-height, 48px)
+			font-weight: 400
+			font-family: 'GothamPro', sans-serif
+			+rem(margin-right, 60px)
+		.job-counter
+			+rem(font-size, 16px)
+			font-weight: 600
+			position: absolute
+			top: 0
+			+rem(right, 35px)
+
+.jobs-tags-item-wrapper
+	.jobs-tags-title-wrapper
+		background-color: $green
+		cursor: pointer
+		position: relative
+		.jobs-tags-title
+			color: $white
+			+rem(padding, 20px)
+			+rem(font-size, 18px)
+			position: relative
+		svg
+			position: absolute
+			+rem(width, 19px)
+			+rem(height, 11px)
+			+rem(right, 20px)
+			+rem(top, 28px)
+			transition: transform 0.2s
+		&.deactive
+			svg
+				transform: rotate(180deg)
+
+.jobs-tags-content-wrapper
+	+rem(height, 357px)
+	overflow-y: auto
+	+rem(padding, 20px)
+	+rem(padding-top, 10px)
+	+rem(padding-bottom, 10px)
+	+rem(margin-bottom, 20px)
+	border: 1px solid $lineColor
+	border-top: 0
+	transition: height 0.3s cubic-bezier(.445, .05, .55, .95), padding-top 0.3s cubic-bezier(.445, .05, .55, .95), padding-bottom 0.3s cubic-bezier(.445, .05, .55, .95)
+	&::-webkit-scrollbar-track
+		background-color: transparent
+	&::-webkit-scrollbar
+		+rem(width, 3px)
+		background-color: transparent
+	&::-webkit-scrollbar-thumb
+		background-color: #8a8a8a
+		+rem(border-radius, 5px)
+	&.deactive
+		height: 0
+		padding-top: 0
+		padding-bottom: 0
+	input
+		display: none
+		&:checked
+			&+.jobs-tag
+				&:after
+					opacity: 1
+	.jobs-tag
+		position: relative
+		padding-left: 30px
+		display: block
+		+rem(padding-top, 5px)
+		+rem(padding-bottom, 5px)
+		+rem(margin-top, 5px)
+		+rem(margin-bottom, 5px)
+		cursor: pointer
+		&:before, &:after
+			display: block
+			content: ''
+			position: absolute
+			border: 1px solid $lineColor
+			border-radius: 5px
+			+rem(width, 17px)
+			+rem(height, 17px)
+			left: 0
+			+rem(top, 9px)
+			transition: border-color 0.18s
+		&:after
+			border: 0
+			transition: opacity 0.2s
+			opacity: 0
+			+rem(width, 20px)
+			+rem(height, 20px)
+			+rem(top, 5px)
+			+rem(left, 3px)
+			background: url('../img/6-1/check.svg') 50% 50% no-repeat
+			background-size: contain
+		&:hover
+			.jobs-tags-inner
+				&__text
+					color: $active
+			&:after
+				border-color: $active
+	.jobs-tags-inner
+		&__text
+			font-weight: 400
+			display: block
+			+rem(padding-right, 30px)
+		&__counter
+			position: absolute
+			+rem(right, 0px)
+			+rem(top, 9px)
+			+rem(font-size, 14px)
