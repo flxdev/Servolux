@@ -163,7 +163,7 @@ h4
 
 p
 	+ff('Roboto', 600, 16px)
-	color: $text-gray
+	color: $text-annotation
 	+rem(line-height, 28px)
 	&.margins
 		+rem(margin-top, 20px)
@@ -598,6 +598,17 @@ main
 		transition: top 0.2s
 		.logo
 			height: 100%
+		.jobs-logo-add
+			display: inline-block
+			+rem(padding, 10px)
+			+rem(line-height, 13px)
+			background-color: #648d64
+			color: #fff
+			text-transform: uppercase
+			+rem(font-size, 14px)
+			position: absolute
+			+rem(right, -86px)
+			+rem(top, -5px)
 	&-nav
 		position: absolute
 		pointer-events: auto
@@ -2594,6 +2605,9 @@ $galleryBigHeight: 590px
 .ya-share2
 	text-align: right
 
+#jobs-content-wrapper
+	justify-content: space-between
+
 #jobs-hrefs-box
 	.job-href
 		display: inline-block
@@ -2706,3 +2720,68 @@ $galleryBigHeight: 590px
 			+rem(right, 0px)
 			+rem(top, 9px)
 			+rem(font-size, 14px)
+
+#jobs-content-inner-wrapper
+	+rem(padding-left, 50px)
+
+#jobs-content-inner-sorting
+	border-bottom: 1px solid $lineColor
+	+rem(padding-bottom, 15px)
+	+rem(padding-top, 10px)
+	+rem(margin-bottom, 20px)
+	.jobs-content-sorting
+		position: relative
+		&:after
+			display: block
+			position: relative
+			content: ''
+			clear: both
+		&-finded
+			display: inline-block
+			&>*
+				display: inline-block
+		&-sort
+			display: inline-block
+			float: right
+			&>*
+				display: inline-block
+		&__text
+			+rem(margin-right, 7px)
+
+.close-filter-svg
+	fill-rule: evenodd
+	clip-rule: evenodd
+	fill: none
+	stroke: #484F42
+	stroke-miterlimit: 10
+
+#jobs-content-inner-tags
+	+rem(margin-bottom, 20px)
+
+.jobs-content-inner-tag
+	display: inline-block
+	+rem(padding, 5px)
+	+rem(padding-left, 15px)
+	+rem(padding-right, 40px)
+	+rem(border-radius, 50px)
+	+rem(margin-top, 10px)
+	+rem(margin-right, 10px)
+	+rem(margin-bottom, 10px)
+	background-color: #eef8e8
+	cursor: pointer
+	position: relative
+	&:hover
+		background-color: $active
+		.jobs-content-inner-tag__text
+			color: #fff
+		.close-filter-svg
+			stroke: $white
+	&__text
+		color: #484f42
+		font-weight: 400
+	&__close-button
+		+rem(width, 10px)
+		+rem(height, 10px)
+		position: absolute
+		+rem(top, 11px)
+		+rem(right, 16px)
