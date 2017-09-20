@@ -1,0 +1,97 @@
+extends _layout2
+
+block title
+	title Вакансии Серволюкс
+block config
+	- var main = false
+block content
+	#main-screen-wrapper.advancedPage
+		#main-first-screen-fading-wrapper
+			img(src="/img/6-2/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			#main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					.bread
+						a(href="index.html") Главная
+					p.title-main Вакансия
+	#main-content
+		.box
+			.block.job-block
+				.flex-block
+					.three-four
+						.job-title-wrapper
+							.h2 Ветеринарный врач
+							.caption 20 июля
+						.job-content-wrapper
+							.job-content-inner
+								.annotation Обязанности
+								p.line-left Контроль за соблюдением ветеринарно-санитарных требований при производстве, хранении и транспортировки готовой продукции.
+								p.line-left Осуществление входного контроля сырья, контроля качества готовой продукции.
+								p.line-left Ведение ветеринарной документации.
+								p.line-left Работа с возвращенной из торговой сети продукцией.
+								p.line-left Учет и контроль расходования моющих и дезинфицирующих средств.
+							.job-content-inner
+								.annotation Требования
+								p.line-left Высшее образование.
+								p.line-left Опыт работы в должности от 2-х лет.
+								p.line-left Навыки по проведению ветеринарно-санитарной экспертизы мяса и готовых продуктов.
+							.job-content-inner
+								.annotation Условия
+								p.line-left Работа в крупной и стабильной компании.
+								p.line-left Официальное оформление и полный социальный пакет в соответствии с законодательством Республики Беларусь.
+								p.line-left График работы по 12 часов: день с 08.00 до 20.00, ночь с 20.00 до 08.00, 2 выходных.
+								p.line-left Место работы пос. Октябрьский.
+						+backButonWrapper('Ко всем вакансиям')
+					.one-four
+						.job-sticky-block.sticky-block
+							.job-sticky-box
+								.job-sticky-circle
+									.job-sticky-circle-inner
+										.job-sticky-logo(style="background-image: url('/img/brands/brand(1).png')")
+								.job-sticky-content
+									.flex-block
+										.one-half
+											.caption Компания
+										.one-half
+											p «Смолевичи Бройлер»
+									.flex-block
+										.one-half
+											.caption Место работы
+										.one-half
+											p Беларусь
+									.flex-block
+										.one-half
+											.caption Зарплата
+										.one-half
+											p от 500 руб
+									.flex-block
+										.one-half
+											.caption Опыт работы
+										.one-half
+											p от 1 года
+								.job-sticky-buttons
+									a(href="#").callback-button Откликнуться на вакансию
+									a(href="#").href Скачать шаблон резюме
+
+		.box.gray
+			.block
+				.flex-block
+					.one-half
+						.h2 Заполните форму для отклика на вакансию
+						p Все поля обязательны для заполнения. Если у вас нет резюме, скачайте и заполните, пожалуйста, шаблон прикрепленный ниже.
+						+download_pdf('Скачать шаблон резюме')
+					.one-half
+						.job-form-wrapper
+							form#job-form
+								label
+									p ФИО
+									input(type='text' name='userName')
+								label
+									p Телефон
+									input(type='text' name='userTel')
+								label
+									p E-mail
+									input(type='text' name='userMail')
+								label
+									p Сопроводительное письмо
+									textarea(name='userText')

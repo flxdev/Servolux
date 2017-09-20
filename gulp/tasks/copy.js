@@ -1,9 +1,18 @@
 import gulp from 'gulp'
 import config from '../config'
+import imagemin from 'gulp-imagemin'
+import cache from 'gulp-cached'
 let  imgSvg = config.src.img+'svg/*.*';
+
 // copy static files
 gulp.task('copy', function() {
    gulp.src([config.src.img+'**/*.*', '!'+imgSvg])
+   .pipe(cache('coping'))
+   .pipe(imagemin([
+	   imagemin.gifsicle({interlaced: true}),
+	   imagemin.jpegtran({progressive: true}),
+	   imagemin.optipng({optimizationLevel: 7})
+   ]))
    .pipe(gulp.dest(config.dest.img));
    gulp.src(config.src.root+'fonts/*.*')
    .pipe(gulp.dest(config.dest.root+'fonts/'));

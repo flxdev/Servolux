@@ -839,6 +839,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		animateAsideMenu()
 	}
 
+	if($('.sticky-block').length) {
+		$('.sticky-block').stick_in_parent({offset_top: 200})
+	}
+
 	function animateAsideMenu () {
 
 		$('#aside-menu').find('a').on('click', function (el) {

@@ -1,8 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="jobs in progress">
+    <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (1).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (10).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (11).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (12).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (13).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (14).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (15).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (16).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (17).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (18).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (19).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (2).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (20).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (21).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (22).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (23).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (24).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (3).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (4).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (5).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (6).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (7).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (8).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (9).png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture0.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture0.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture1.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture2.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture3.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture4.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture5.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture6.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture7.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/header-img.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_1.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_2.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_3.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_4.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_5.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_6.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_7.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_8.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/parallax-bg_1-0.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/parallax-bg_1-0.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/pin.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/pin.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/header-img.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(1).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(1).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(10).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(10).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(11).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(11).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(12).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(12).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(2).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(2).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(3).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(3).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(4).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(4).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(5).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(5).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(6).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(6).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(7).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(7).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(8).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(8).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(9).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(9).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(1).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(1).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(10).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(10).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(11).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(11).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(12).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(12).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(2).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(2).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(3).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(3).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(4).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(4).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(5).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(5).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(6).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(6).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(7).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(7).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(8).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(8).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(9).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(9).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/vertSlider/slide(1).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/vertSlider/slide(1).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/header-img.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_1.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_2.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_3.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_4.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(1).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(1).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(2).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(2).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(3).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(3).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/delivers-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/delivers-img.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/earth.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/earth.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/header-img.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_1.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_2.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_3.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_4.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_5.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_6.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_7.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_8.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/parallax.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/parallax.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(0).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(0).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(1).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(1).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(10).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(10).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(11).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(11).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(2).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(2).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(3).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(3).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(4).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(4).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(5).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(5).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(6).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(6).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(7).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(7).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(8).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(8).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(9).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(9).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/header-img.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_1.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_2.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_3.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_4.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/opport.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/opport.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/parallax_bg.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/parallax_bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/pattern.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/pattern.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/5-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/5-0/header-img.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (1).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (1).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (10).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (10).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (11).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (11).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (12).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (12).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (13).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (13).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (14).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (14).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (15).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (15).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (16).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (16).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (17).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (17).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (18).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (18).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (19).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (19).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (2).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (2).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (20).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (20).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (21).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (21).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (22).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (22).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (23).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (23).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (24).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (24).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (3).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (3).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (4).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (4).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (5).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (5).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (6).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (6).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (7).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (7).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (8).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (8).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (9).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (9).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/news.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/news.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/paralax-bg.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/paralax-bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/paralax-bg_1.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/paralax-bg_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/screen-link.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/screen-link.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/video-poster.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/video-poster.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/indexSlider/slide(1).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/indexSlider/slide(1).jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/index.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/tasks/copy.js" afterPath="$PROJECT_DIR$/gulp/tasks/copy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common.js" afterPath="$PROJECT_DIR$/src/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/0-0jobs.pug" afterPath="$PROJECT_DIR$/src/pug/0-0jobs.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/6-0news.pug" afterPath="$PROJECT_DIR$/src/pug/6-0news.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_brands.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_brands.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_brands_footer.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_brands_footer.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_footer2.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_footer2.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_header.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_header.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_mixins.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_mixins.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_svg-template.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_svg-template.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/index.pug" afterPath="$PROJECT_DIR$/src/pug/index.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/_main.sass" afterPath="$PROJECT_DIR$/src/sass/_main.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/lib/_animations.sass" afterPath="$PROJECT_DIR$/src/sass/lib/_animations.sass" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,44 +197,74 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.64656717">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="_layout2.pug" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pug/_layout2.pug">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_header2.pug" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pug/includes/_header2.pug">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
-                  <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="_footer2.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer2.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="12" selection-end-column="102" />
+                <state relative-caret-position="420">
+                  <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="0-0jobs.pug" pinned="false" current-in-tab="true">
+          <file leaf-file-name="0-0jobs.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/0-0jobs.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="591">
-                  <caret line="134" column="82" lean-forward="true" selection-start-line="134" selection-start-column="82" selection-end-line="134" selection-end-column="82" />
+                <state relative-caret-position="3200">
+                  <caret line="160" column="25" lean-forward="false" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="0-1jobs.pug" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/pug/0-1jobs.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="532">
+                  <caret line="95" column="61" lean-forward="true" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="1-2brands.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/1-2brands.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="160">
+                  <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_brands_footer.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/includes/_brands_footer.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_mixins.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/includes/_mixins.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="660">
+                  <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4540">
+                  <caret line="227" column="97" lean-forward="false" selection-start-line="227" selection-start-column="97" selection-end-line="227" selection-end-column="97" />
                   <folding />
                 </state>
               </provider>
@@ -75,25 +273,15 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="_main.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="2761" column="23" lean-forward="true" selection-start-line="2761" selection-start-column="23" selection-end-line="2761" selection-end-column="23" />
+                <state relative-caret-position="20">
+                  <caret line="2902" column="26" lean-forward="false" selection-start-line="2902" selection-start-column="26" selection-end-line="2902" selection-end-column="26" />
                   <folding>
-                    <element signature="e#7931#8102#2" expanded="true" />
+                    <element signature="e#8248#8419#2" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="delete_choosen_filter.svg" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/img/6-1/delete_choosen_filter.svg">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="40">
-                  <caret line="2" column="105" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="105" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -111,22 +299,12 @@
           <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/js/common.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="489">
-                  <caret line="1016" column="37" lean-forward="false" selection-start-line="1016" selection-start-column="37" selection-end-line="1016" selection-end-column="37" />
+                <state relative-caret-position="15820">
+                  <caret line="842" column="20" lean-forward="false" selection-start-line="842" selection-start-column="20" selection-end-line="842" selection-end-column="20" />
                   <folding>
                     <element signature="e#126#1305#0" expanded="false" />
                     <element signature="n#!!block;n#isMobile#0" expanded="false" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_animations.sass" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/sass/lib/_animations.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -137,15 +315,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.dar</find>
-      <find>.advantage-wrapper</find>
-      <find>brand-telephone</find>
-      <find>annotation</find>
-      <find>zoom</find>
-      <find>Gotham Pro</find>
-      <find>main-head</find>
-      <find>header</find>
-      <find>logo-wrapper</find>
       <find>search</find>
       <find>change-lang</find>
       <find>.callback-wrap</find>
@@ -154,7 +323,6 @@
       <find>img-news-wrapper</find>
       <find>sticked</find>
       <find>aside-menu-wrapper</find>
-      <find>news</find>
       <find>Promise</find>
       <find>news-</find>
       <find>back-button-</find>
@@ -165,8 +333,18 @@
       <find>use</find>
       <find>bread</find>
       <find>img</find>
-      <find>title-wrapper</find>
       <find>nth</find>
+      <find>button</find>
+      <find>.tell</find>
+      <find>footer</find>
+      <find>footer-c</find>
+      <find>p.</find>
+      <find>moveTo</find>
+      <find>fadeInDownMenu</find>
+      <find>nav</find>
+      <find>news</find>
+      <find>stick</find>
+      <find>title-wrapper</find>
     </findStrings>
     <replaceStrings>
       <replace>latest</replace>
@@ -184,10 +362,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pug/includes/_brands.pug" />
-        <option value="$PROJECT_DIR$/src/sass/screen.sass" />
-        <option value="$PROJECT_DIR$/src/js/lib/remodal.min.js" />
-        <option value="$PROJECT_DIR$/src/sass/lib/_remodal.scss" />
         <option value="$PROJECT_DIR$/src/pug/includes/_modals.pug" />
         <option value="$PROJECT_DIR$/src/sass/lib/_remodal-default-theme.scss" />
         <option value="$PROJECT_DIR$/src/sass/lib/_variables.sass" />
@@ -197,14 +371,12 @@
         <option value="$PROJECT_DIR$/gulp/tasks/error.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/iconfont.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/js.js" />
-        <option value="$PROJECT_DIR$/gulp/tasks/copy.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/pug.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/server.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/spritesmith.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/svg.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/watch.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/sass.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/pug/_layout.pug" />
         <option value="$PROJECT_DIR$/src/pug/1-2brands.pug" />
         <option value="$PROJECT_DIR$/src/pug/5-0contacts.pug" />
@@ -216,25 +388,31 @@
         <option value="$PROJECT_DIR$/src/pug/includes/_footer.pug" />
         <option value="$PROJECT_DIR$/src/pug/2-0activity.pug" />
         <option value="$PROJECT_DIR$/src/js/lib.js" />
-        <option value="$PROJECT_DIR$/src/pug/index.pug" />
-        <option value="$PROJECT_DIR$/src/pug/6-0news.pug" />
-        <option value="$PROJECT_DIR$/src/pug/includes/_mixins.pug" />
         <option value="$PROJECT_DIR$/src/pug/1-1brand.pug" />
         <option value="$PROJECT_DIR$/src/img/svg/quote.svg" />
         <option value="$PROJECT_DIR$/src/img/svg/download_file.svg" />
         <option value="$PROJECT_DIR$/src/pug/6-1news.pug" />
         <option value="$PROJECT_DIR$/src/pug/_layout2.pug" />
-        <option value="$PROJECT_DIR$/src/pug/includes/_footer2.pug" />
         <option value="$PROJECT_DIR$/src/pug/1-0company.pug" />
-        <option value="$PROJECT_DIR$/src/sass/lib/_animations.sass" />
-        <option value="$PROJECT_DIR$/src/pug/includes/_header.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_header2.pug" />
         <option value="$PROJECT_DIR$/src/img/svg/arrow_filter.svg" />
-        <option value="$PROJECT_DIR$/src/js/common.js" />
         <option value="$PROJECT_DIR$/src/img/6-1/check.svg" />
         <option value="$PROJECT_DIR$/src/img/6-1/delete_choosen_filter.svg" />
+        <option value="$PROJECT_DIR$/src/img/svg/pdf-white.svg" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_footer2.pug" />
         <option value="$PROJECT_DIR$/src/pug/0-0jobs.pug" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/sass/lib/_animations.sass" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_header.pug" />
+        <option value="$PROJECT_DIR$/src/pug/6-0news.pug" />
+        <option value="$PROJECT_DIR$/src/pug/index.pug" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_brands_footer.pug" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_brands.pug" />
+        <option value="$PROJECT_DIR$/gulp/tasks/copy.js" />
+        <option value="$PROJECT_DIR$/src/js/common.js" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_mixins.pug" />
         <option value="$PROJECT_DIR$/src/sass/_main.sass" />
+        <option value="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
       </list>
     </option>
   </component>
@@ -440,6 +618,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -455,39 +634,18 @@
             <path>
               <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
               <item name="Servolux" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gulp" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
               <item name="Servolux" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pug" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -507,6 +665,7 @@
     <property name="ToolWindowFavorites.ShowToolbar" value="false" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -526,7 +685,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gulp.js.default (1)">
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -594,8 +753,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.copy (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.copy (1)" />
         <item index="2" class="java.lang.String" itemvalue="Gulp.js.build (1)" />
         <item index="3" class="java.lang.String" itemvalue="Gulp.js.critical" />
         <item index="4" class="java.lang.String" itemvalue="Gulp.js.default" />
@@ -620,7 +779,9 @@
       <workItem from="1505370821662" duration="62216000" />
       <workItem from="1505492929900" duration="18112000" />
       <workItem from="1505737828922" duration="56000" />
-      <workItem from="1505737917593" duration="46615000" />
+      <workItem from="1505737917593" duration="58158000" />
+      <workItem from="1505902057967" duration="11543000" />
+      <workItem from="1505920443624" duration="144000" />
     </task>
     <task id="LOCAL-00001" summary="Something change from webstorm">
       <created>1505114233192</created>
@@ -762,11 +923,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505837133176</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="jobs in progress">
+      <created>1505837184511</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1505837184511</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226022000" />
+    <option name="totallyTimeSpent" value="249252000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -781,22 +949,22 @@
     <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11795682" sideWeight="0.9356288" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11795682" sideWeight="0.06437126" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29461458" sideWeight="0.5081622" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.49815693" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29461458" sideWeight="0.4918378" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11795682" sideWeight="0.9380403" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11927582" sideWeight="0.061959654" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29461458" sideWeight="0.5081622" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.49815693" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2665964" sideWeight="0.5037274" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26293558" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.09057399" sideWeight="0.2079327" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40793827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2665964" sideWeight="0.49627262" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.09057399" sideWeight="0.2079327" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40793827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -859,125 +1027,288 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gulp/tasks/copy.js">
+    <entry file="file://$PROJECT_DIR$/src/pug/3-0partnership.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/tasks/svg.js">
+    <entry file="file://$PROJECT_DIR$/src/pug/4-0work.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="8" column="74" lean-forward="false" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+        <state relative-caret-position="198">
+          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/tasks/spritesmith.js">
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/1-0otdel.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/2-2usl.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/2-0usl.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-709">
+          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/3-1vrach.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/3-0vrach.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-909">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/5-0ob.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/diplom1.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/includes/_mixins.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/includes/_svg-template.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/1-1otdel.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/svg/quote.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/svg/download_file.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/diplom.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="103" column="36" lean-forward="false" selection-start-line="103" selection-start-column="36" selection-end-line="107" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/2-0activity.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="97" column="14" lean-forward="false" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/lib.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_brands.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+        <state relative-caret-position="1058">
+          <caret line="54" column="72" lean-forward="false" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_brands_footer.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/5-0contacts.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="6580">
+          <caret line="329" column="59" lean-forward="true" selection-start-line="329" selection-start-column="59" selection-end-line="329" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/font.sass">
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_header2.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="200">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_transfonter.org-20170918-100037.zip/stylesheet.css">
+    <entry file="file://$PROJECT_DIR$/src/pug/_layout2.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/svg/arrow_filter.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/6-1/check.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/6-1/delete_choosen_filter.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="23" />
+          <caret line="2" column="105" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/orchestrator/lib/runTask.js">
+    <entry file="file://$PROJECT_DIR$/src/img/svg/pdf-white.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="140">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/orchestrator/index.js">
+    <entry file="file://$USER_HOME$/Downloads/hh.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2660">
-          <caret line="133" column="9" lean-forward="false" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/gulp/bin/gulp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2560">
-          <caret line="128" column="19" lean-forward="false" selection-start-line="128" selection-start-column="19" selection-end-line="128" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/tasks/critical.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_mixins.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="79" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="578" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/1-1brand.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="115" column="53" lean-forward="false" selection-start-line="115" selection-start-column="53" selection-end-line="115" selection-end-column="53" />
+        <state relative-caret-position="320">
+          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="18" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/0-0jobs.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3200">
+          <caret line="160" column="25" lean-forward="false" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.babel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/marker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp/tasks/sass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-478">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/font.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/lib/_variables.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/lib/_animations.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_header.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer2.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -990,245 +1321,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/3-0partnership.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_brands_footer.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+        <state relative-caret-position="140">
+          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/4-0work.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_brands.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="420">
+          <caret line="4" column="67" lean-forward="false" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+          <caret line="5" column="67" lean-forward="false" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+          <caret line="6" column="67" lean-forward="false" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+          <caret line="7" column="67" lean-forward="false" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+          <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+          <caret line="9" column="67" lean-forward="false" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+          <caret line="10" column="67" lean-forward="false" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <caret line="12" column="67" lean-forward="false" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+          <caret line="13" column="67" lean-forward="false" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+          <caret line="14" column="67" lean-forward="false" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+          <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+          <caret line="20" column="67" lean-forward="false" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+          <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <caret line="22" column="67" lean-forward="false" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+          <caret line="23" column="67" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+          <caret line="24" column="67" lean-forward="false" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+          <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
+          <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+          <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/1-0otdel.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/2-2usl.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/2-0usl.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-709">
-          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/3-1vrach.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/3-0vrach.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-909">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/5-0ob.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/diplom1.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/includes/_mixins.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/includes/_svg-template.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/1-1otdel.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/svg/quote.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/svg/download_file.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/diplom.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="103" column="36" lean-forward="false" selection-start-line="103" selection-start-column="36" selection-end-line="107" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/2-0activity.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="97" column="14" lean-forward="false" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/lib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1058">
-          <caret line="54" column="72" lean-forward="false" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_header.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        <state relative-caret-position="4540">
+          <caret line="227" column="97" lean-forward="false" selection-start-line="227" selection-start-column="97" selection-end-line="227" selection-end-column="97" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/6-1news.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1371">
+        <state relative-caret-position="1480">
           <caret line="74" column="89" lean-forward="false" selection-start-line="74" selection-start-column="89" selection-end-line="74" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/6-0news.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2060">
-          <caret line="61" column="71" lean-forward="false" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
-          <caret line="68" column="62" lean-forward="false" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
-          <caret line="75" column="62" lean-forward="false" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="62" />
-          <caret line="82" column="62" lean-forward="false" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="62" />
-          <caret line="89" column="62" lean-forward="false" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="62" />
-          <caret line="96" column="62" lean-forward="false" selection-start-line="96" selection-start-column="62" selection-end-line="96" selection-end-column="62" />
-          <caret line="103" column="62" lean-forward="false" selection-start-line="103" selection-start-column="62" selection-end-line="103" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="258">
+          <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/5-0contacts.pug">
+    <entry file="file://$PROJECT_DIR$/gulp/tasks/js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6580">
-          <caret line="329" column="59" lean-forward="true" selection-start-line="329" selection-start-column="59" selection-end-line="329" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="140">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/lib/_animations.sass">
+    <entry file="file://$PROJECT_DIR$/gulp/tasks/copy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_header2.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/_layout2.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer2.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="12" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/svg/arrow_filter.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-          <folding />
+        <state relative-caret-position="60">
+          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="1016" column="37" lean-forward="false" selection-start-line="1016" selection-start-column="37" selection-end-line="1016" selection-end-column="37" />
+        <state relative-caret-position="15820">
+          <caret line="842" column="20" lean-forward="false" selection-start-line="842" selection-start-column="20" selection-end-line="842" selection-end-column="20" />
           <folding>
             <element signature="e#126#1305#0" expanded="false" />
             <element signature="n#!!block;n#isMobile#0" expanded="false" />
@@ -1236,45 +1406,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/6-1/check.svg">
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_mixins.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/lib/_variables.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/6-1/delete_choosen_filter.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="105" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="105" />
+        <state relative-caret-position="660">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="2761" column="23" lean-forward="true" selection-start-line="2761" selection-start-column="23" selection-end-line="2761" selection-end-column="23" />
+        <state relative-caret-position="20">
+          <caret line="2902" column="26" lean-forward="false" selection-start-line="2902" selection-start-column="26" selection-end-line="2902" selection-end-column="26" />
           <folding>
-            <element signature="e#7931#8102#2" expanded="true" />
+            <element signature="e#8248#8419#2" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/0-0jobs.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/0-1jobs.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="134" column="82" lean-forward="true" selection-start-line="134" selection-start-column="82" selection-end-line="134" selection-end-column="82" />
+        <state relative-caret-position="532">
+          <caret line="95" column="61" lean-forward="true" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
           <folding />
         </state>
       </provider>

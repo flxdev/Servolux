@@ -11,31 +11,31 @@ block content
 		#main-screen
 			#main-screen-title
 				#title-wrapper.animated.fadeInDownMenu
-					p.title-main.title2 Найдите работу вашей мечты
-					p.sub-title Более 50 открытых вакансий в группе компаний «Серволюкс».
+					.title-main.title2 Найдите работу вашей мечты
+					.sub-title Более 50 открытых вакансий в группе компаний «Серволюкс».
 	#main-content
 		.box
 			.block
 				#jobs-hrefs-box
 					.job-href
 						span.job-href-title(data-country="0") Беларусь
-						p.job-counter 76
+						.job-counter 76
 					.job-href
 						a.job-href-title(href="#" data-country="1") Россия
-						p.job-counter 76
+						.job-counter 76
 					.job-href
 						a.job-href-title(href="#" data-country="2") Другие страны
-						p.job-counter 76
+						.job-counter 76
 			.block#jobs-content-wrapper
 				.flex-block
 					.one-four
 						.jobs-tags-item-wrapper
-							.jobs-tags-item#jobs-profobjects
-								.jobs-tags-title-wrapper.deactive
+							.jobs-tags-item#jobs-profobjects.animateThis(data-anim="fadeInUp")
+								.jobs-tags-title-wrapper
 									p.jobs-tags-title Профобласти
 									svg(class="icon icon-vacancy")
 										use(xlink:href="#arrow_filter" xmlns:xlink="http://www.w3.org/1999/xlink")
-								.jobs-tags-content-wrapper.deactive
+								.jobs-tags-content-wrapper
 									.jobs-tags
 										- var jtCount = 12
 										- var jtVal = 0
@@ -63,7 +63,7 @@ block content
 										+jobs-tag('Транспорт, логистика')
 										+jobs-tag('Туризм, гостиницы, рестораны')
 										+jobs-tag('Юристы')
-							.jobs-tags-item#jobs-regions
+							.jobs-tags-item#jobs-regions.animateThis(data-anim="fadeInUp")
 								.jobs-tags-title-wrapper
 									p.jobs-tags-title Регионы
 									svg(class="icon icon-vacancy")
@@ -80,7 +80,7 @@ block content
 										+jobs-tag('Марьина Горка')
 										+jobs-tag('Смолевичи 1')
 										+jobs-tag('Фаниполь')
-							.jobs-tags-item#jobs-companies
+							.jobs-tags-item#jobs-companies.animateThis(data-anim="fadeInUp")
 								.jobs-tags-title-wrapper
 									p.jobs-tags-title Регионы
 									svg(class="icon icon-vacancy")
@@ -99,21 +99,21 @@ block content
 										+jobs-tag('Фаниполь')
 					.three-four
 						#jobs-content-inner-wrapper
-							#jobs-content-inner-sorting
+							#jobs-content-inner-sorting.animateThis(data-anim="fadeInUp")
 								.jobs-content-sorting-finded
-									p.jobs-content-sorting__text.caption По вашему запросу найдено
-									p.jobs-content-sorting__bold-text.darker 16 вакансий
+									.jobs-content-sorting__text.caption По вашему запросу найдено
+									.jobs-content-sorting__bold-text.darker 16 вакансий
 								.jobs-content-sorting-sort
-									p.jobs-content-sorting__text.caption Сортировать по:
+									.jobs-content-sorting__text.caption Сортировать по:
 									select.jobs-content-sorting__select
 										option
-											p.jobs-content-sorting__bold-text.darker Дате
+											.jobs-content-sorting__bold-text.darker Дате
 										option
-											p.jobs-content-sorting__bold-text.darker Названию
+											.jobs-content-sorting__bold-text.darker Названию
 										option
-											p.jobs-content-sorting__bold-text.darker З/П
+											.jobs-content-sorting__bold-text.darker З/П
 									.jobs-content-sorting-arrow
-							#jobs-content-inner-tags
+							#jobs-content-inner-tags.animateThis(data-anim="fadeInUp")
 								.jobs-content-inner-tags-wrapper
 									.jobs-content-inner-tag
 										p.jobs-content-inner-tag__text Автомобильный бизнес
@@ -130,14 +130,14 @@ block content
 							#jobs-content-inner-content
 								.jobs-content-inner-content-wrapper
 									mixin jobs-item(title='Заголовка нет', subtitle='Серволюкс, 20 июля', price='з/п не указана', city='Беларусь, Смолевичи')
-										.jobs-content-inner__item
-											a(href='#').jobs-content-inner__title-wrapper
-												p.jobs-content-inner__title= title
-												p.jobs-content-inner__subtitle.caption= subtitle
+										.jobs-content-inner__item.animateThis(data-anim="fadeInUp")
+											a(href='0-1jobs.html').jobs-content-inner__title-wrapper
+												.jobs-content-inner__title= title
+												.jobs-content-inner__subtitle.caption= subtitle
 											.jobs-content-inner__price-wrapper
-												p.jobs-content-inner__price= price
+												.jobs-content-inner__price= price
 											.jobs-content-inner__city-wrapper
-												p.jobs-content-inner__city= city
+												.jobs-content-inner__city= city
 									+jobs-item('Ветеринарный врач', 'Смолевичи Бройлер, 20 июля', 'от 550 руб.')
 									+jobs-item('Бухгалтер в распределительный центр')
 									+jobs-item('Финансовый менеджер', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.')
@@ -148,11 +148,21 @@ block content
 									+jobs-item('Финансовый менеджер', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.')
 									+jobs-item('Экономист по производству', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.', 'Беларусь, Борисов')
 									+jobs-item('Бренд - менеджер')
-		.box#parallax.aside-menu-item(data-aside="История")
+		.box#parallax.jobs-parallax
 			.parallax-img
-				img(src="/img/1-0/parallax-bg_1-0.jpg", alt="").js-image
+				img(src="/img/6-1/parallax-img.jpg", alt="").js-image
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						.h2 Не нашли нужную вакансию?
+						+download_pdf-white("Скачать шаблон резюме")
+					.one-half.animateThis(data-anim="fadeInUp")
+						.h3 Не расстраивайтесь, если не нашли подходящей вакансии в актуальном списке. Возможно, мы просто не подозреваем о необходимости в вашем таланте.
+						p.margins В таком случае, пожалуйста, скачайте шаблон резюме и отправьте его на наш e-mail: <a href="mailto:hr@servolux.by">hr@servolux.by</a>
+						p.margins Связаться с отделом по подбору персонала можно по телефону: <br> <a class="tell" href="tel:+375297474866"> +375 29 747 48 66 </a>
+						p.margins Ждём ваши отклики!
 		.box#company-brands
-			.block.line-top
+			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInLeft")
 						p.h2 Наши компании
