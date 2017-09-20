@@ -316,7 +316,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-family: "Roboto";
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.625rem;
   font-style: normal;
   color: #707868;
@@ -376,12 +376,13 @@ blockquote {
 
 .sub {
   font-family: "Roboto";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.125rem;
   font-style: normal;
-  line-height: 1.875rem;
+  line-height: 1.75rem;
   padding-top: 0.625rem;
-  padding-bottom: 0.625rem; }
+  padding-bottom: 0.625rem;
+  color: #999b98; }
 
 .caption {
   font-size: 1rem;
@@ -421,7 +422,8 @@ blockquote {
       width: auto;
       max-width: 50%; }
   .flex-block .one-half {
-    width: 50%; }
+    width: 50%;
+    padding-right: 2.5rem; }
   .flex-block .one-four {
     width: 25%; }
   .flex-block .three-four {
@@ -3227,6 +3229,92 @@ main {
     font-size: 1rem;
     font-weight: 600;
     display: inline-block; }
+
+form .flex-block .one-half {
+  padding: 0; }
+
+form label {
+  border: 1px solid #cccccc;
+  padding: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  position: relative;
+  display: block;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0.3125rem;
+  margin-bottom: 1.25rem;
+  height: 4rem;
+  -webkit-transition: height 0.2s ease-out, border .2s, padding 0.2s;
+  -o-transition: height 0.2s ease-out, border .2s, padding 0.2s;
+  transition: height 0.2s ease-out, border .2s, padding 0.2s;
+  cursor: text; }
+  form label p {
+    color: #474e41;
+    -webkit-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s; }
+  form label.focusing {
+    border: 1px solid #55b521; }
+  form label.active {
+    height: 4.5rem;
+    padding: 0.625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; }
+    form label.active p {
+      color: #bbc1b8; }
+  form label.form-tel {
+    margin-right: 1.25rem; }
+  form label.form-text {
+    height: 8.75rem;
+    margin-bottom: 0.625rem; }
+    form label.form-text .form-input-wrapper {
+      top: 2.5rem; }
+      form label.form-text .form-input-wrapper textarea {
+        height: 100%; }
+  form label.form-file {
+    display: inline-block;
+    position: relative;
+    border: 0;
+    padding: 0.9375rem;
+    padding-left: 1.875rem;
+    height: 3.75rem;
+    cursor: pointer;
+    margin-bottom: 0; }
+    form label.form-file svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      bottom: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      -webkit-transform: translatey(-50%);
+      -ms-transform: translatey(-50%);
+      transform: translatey(-50%); }
+    form label.form-file p {
+      color: #55b521; }
+    form label.form-file:hover p {
+      color: #0056b8; }
+    form label.form-file input {
+      display: none; }
+  form label .form-input-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0.625rem;
+    left: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; }
+  form label input, form label textarea {
+    background-color: transparent;
+    border: 0;
+    width: 100%; }
+
+form .callback-button {
+  font-weight: 400;
+  padding-top: 0;
+  float: right;
+  margin-top: 0.625rem;
+  margin-bottom: 0; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;

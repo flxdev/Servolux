@@ -1022,4 +1022,35 @@ document.addEventListener('DOMContentLoaded', function () {
 			$(this).next().toggleClass('deactive')
 		})
 	}
+
+	if ($('.formFocus').length) {
+		$('.formFocus').filter(function(){
+			 $(this).find('label').filter(function(){
+			 	  $(this).on('focusout', function(){
+				    $(this).removeClass('focusing')
+			 	  	if(!$(this).find('input').val() && !$(this).find('textarea').val()){
+			 	  		$(this).removeClass('active')
+				    }
+			    })
+			 	  $(this).on('focusin', function(){
+				    $(this).addClass('focusing')
+			 	  	if(!$(this).hasClass('active')){
+			 	  		$(this).addClass('active')
+				    }
+			    })
+			 })
+		})
+	}
+
+	if ($('form').length) {
+		$.validate({
+			form: '#job-form',
+			modules : 'html5',
+			lang : 'ru',
+			addValidClassOnAll : true,
+			validateOnBlur : true, // disable validation when input looses focus
+			errorMessagePosition : 'bottom'
+		});
+	}
+
 })

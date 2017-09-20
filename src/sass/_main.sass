@@ -152,7 +152,7 @@ h2, .h2
 		+rem(font-size, 30px)
 
 h3, .h3
-	+ff('Roboto', 400, 26px)
+	+ff('Roboto', 300, 26px)
 	color: $text-annotation
 	+rem(line-height, 36px)
 	+rem(margin-bottom, 30px)
@@ -205,10 +205,11 @@ blockquote
 	font-weight: 600
 
 .sub
-	+ff('Roboto', 600, 18px)
-	+rem(line-height, 30px)
+	+ff('Roboto', 400, 18px)
+	+rem(line-height, 28px)
 	+rem(padding-top, 10px)
 	+rem(padding-bottom, 10px)
+	color: #999b98
 	+r(992)
 		+rem(margin-bottom, 40px)
 
@@ -249,6 +250,7 @@ blockquote
 			flex-direction: column
 	.one-half
 		width: 50%
+		+rem(padding-right, 40px)
 		+r(992)
 			width: 100%
 			margin: 0
@@ -2944,3 +2946,85 @@ $galleryBigHeight: 590px
 		+rem(font-size, 16px)
 		font-weight: 600
 		display: inline-block
+
+form
+	.flex-block
+		.one-half
+			padding: 0
+	label
+		border: 1px solid $lineColor
+		+rem(padding, 20px)
+		+rem(padding-left, 20px)
+		+rem(padding-right, 20px)
+		position: relative
+		display: block
+		border-radius: 3px
+		+rem(margin, 5px)
+		+rem(margin-bottom, 20px)
+		+rem(height, 64px)
+		transition: height 0.2s ease-out, border .2s, padding 0.2s
+		cursor: text
+		p
+			color: $text-h
+			transition: color .2s
+		&.focusing
+			border: 1px solid $green
+		&.active
+			+rem(height, 72px)
+			+rem(padding, 10px)
+			+rem(padding-left, 20px)
+			+rem(padding-right, 20px)
+			p
+				color: $text-light-gray
+		&.form-tel
+			+rem(margin-right, 20px)
+		&.form-text
+			+rem(height, 140px)
+			+rem(margin-bottom, 10px)
+			.form-input-wrapper
+				+rem(top, 40px)
+				textarea
+					height: 100%
+		&.form-file
+			display: inline-block
+			position: relative
+			border: 0
+			+rem(padding, 15px)
+			+rem(padding-left, 30px)
+			+rem(height, 60px)
+			cursor: pointer
+			+rem(margin-bottom, 0)
+			svg
+				position: absolute
+				left: 0
+				top: 50%
+				bottom: 0
+				+rem(width, 20px)
+				+rem(height, 20px)
+				transform: translatey(-50%)
+			p
+				color: $green
+			&:hover
+				p
+					color: $active
+			input
+				display: none
+		.form-input-wrapper
+			position: absolute
+			width: 100%
+			+rem(bottom, 10px)
+			left: 0
+			+rem(padding-left, 20px)
+			+rem(padding-right, 20px)
+		input, textarea
+			background-color: transparent
+			border: 0
+			width: 100%
+
+form
+	.callback-button
+		font-weight: 400
+		padding-top: 0
+		float: right
+		+rem(margin-top, 10px)
+		+rem(margin-bottom, 0px)

@@ -82,16 +82,29 @@ block content
 						+download_pdf('Скачать шаблон резюме')
 					.one-half
 						.job-form-wrapper
-							form#job-form
-								label
+							form#job-form.formFocus
+								label.form-name
 									p ФИО
-									input(type='text' name='userName')
-								label
-									p Телефон
-									input(type='text' name='userTel')
-								label
-									p E-mail
-									input(type='text' name='userMail')
-								label
+									.form-input-wrapper
+										input(type='text' name='userName' data-validation="number required")
+								.flex-block
+									.one-half
+										label.form-tel
+											p Телефон
+											.form-input-wrapper
+												input(type='text' name='userTel' data-validation="number required")
+									.one-half
+										label.form-mail
+											p E-mail
+											.form-input-wrapper
+												input(type='text' name='userMail' data-validation="email required")
+								label.form-text
 									p Сопроводительное письмо
-									textarea(name='userText')
+									.form-input-wrapper
+										textarea(name='userText')
+								label.form-file
+									svg(class="icon icon-vacancy")
+										use(xlink:href="#attach" xmlns:xlink="http://www.w3.org/1999/xlink")
+									p.href Прикрепить резюме
+									input(type='file')
+								button(type="submit").callback-button Отправить

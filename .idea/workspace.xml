@@ -2,147 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (10).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (11).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (12).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (13).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (14).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (15).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (16).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (17).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (18).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (19).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (20).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (21).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (22).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (23).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (24).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (7).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (8).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/brands/brand (9).png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture0.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture1.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture2.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture3.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture4.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture5.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture6.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture7.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/gallery/picture7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/header-img.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_1.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_2.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_3.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_4.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_5.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_6.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_7.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_8.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/icon_8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/parallax-bg_1-0.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/parallax-bg_1-0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/pin.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/pin.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/header-img.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(1).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(1).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(10).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(10).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(11).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(11).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(12).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(12).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(2).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(2).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(3).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(3).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(4).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(4).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(5).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(5).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(6).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(6).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(7).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(7).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(8).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(8).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(9).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider-images/product(9).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(1).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(1).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(10).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(10).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(11).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(11).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(12).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(12).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(2).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(2).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(3).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(3).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(4).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(4).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(5).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(5).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(6).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(6).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(7).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(7).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(8).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(8).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(9).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/slider/product(9).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/vertSlider/slide(1).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-1/vertSlider/slide(1).jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/header-img.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_1.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_2.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_3.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_4.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/icon_4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(1).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(1).jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(2).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(2).jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(3).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/2-0/side-img(3).jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/delivers-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/delivers-img.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/earth.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/earth.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/header-img.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_1.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_2.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_3.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_4.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_5.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_6.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_7.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_8.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/icon_8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/parallax.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/parallax.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(0).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(0).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(1).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(1).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(10).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(10).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(11).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(11).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(2).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(2).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(3).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(3).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(4).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(4).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(5).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(5).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(6).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(6).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(7).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(7).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(8).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(8).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(9).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/3-0/partners/partner(9).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/header-img.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_1.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_2.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_3.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_4.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/icon_4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/opport.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/opport.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/parallax_bg.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/parallax_bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/pattern.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/4-0/pattern.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/5-0/header-img.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/5-0/header-img.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (1).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (1).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (10).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (10).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (11).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (11).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (12).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (12).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (13).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (13).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (14).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (14).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (15).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (15).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (16).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (16).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (17).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (17).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (18).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (18).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (19).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (19).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (2).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (2).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (20).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (20).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (21).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (21).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (22).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (22).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (23).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (23).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (24).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (24).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (3).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (3).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (4).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (4).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (5).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (5).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (6).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (6).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (7).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (7).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (8).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (8).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (9).png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/brands/brand (9).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/news.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/news.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/paralax-bg.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/paralax-bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/paralax-bg_1.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/paralax-bg_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/screen-link.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/screen-link.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/index/video-poster.jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/index/video-poster.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/img/indexSlider/slide(1).jpg" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/indexSlider/slide(1).jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" />
@@ -156,21 +15,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/index.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/tasks/copy.js" afterPath="$PROJECT_DIR$/gulp/tasks/copy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/lib.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/lib.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/lib.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/lib.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common.js" afterPath="$PROJECT_DIR$/src/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/0-0jobs.pug" afterPath="$PROJECT_DIR$/src/pug/0-0jobs.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/6-0news.pug" afterPath="$PROJECT_DIR$/src/pug/6-0news.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_brands.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_brands.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_brands_footer.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_brands_footer.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_footer2.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_footer2.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_header.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_header.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_mixins.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_mixins.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/lib.js" afterPath="$PROJECT_DIR$/src/js/lib.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/0-1jobs.pug" afterPath="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/1-0company.pug" afterPath="$PROJECT_DIR$/src/pug/1-0company.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/4-0work.pug" afterPath="$PROJECT_DIR$/src/pug/4-0work.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_svg-template.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_svg-template.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/index.pug" afterPath="$PROJECT_DIR$/src/pug/index.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/_main.sass" afterPath="$PROJECT_DIR$/src/sass/_main.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/lib/_animations.sass" afterPath="$PROJECT_DIR$/src/sass/lib/_animations.sass" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -203,8 +56,8 @@
           <file leaf-file-name="_footer2.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer2.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+                <state relative-caret-position="220">
+                  <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="12" selection-end-column="100" />
                   <folding />
                 </state>
               </provider>
@@ -223,8 +76,8 @@
           <file leaf-file-name="0-1jobs.pug" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pug/0-1jobs.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="532">
-                  <caret line="95" column="61" lean-forward="true" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
+                <state relative-caret-position="280">
+                  <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -270,18 +123,70 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="1-0company.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="411">
+                  <caret line="321" column="47" lean-forward="false" selection-start-line="321" selection-start-column="47" selection-end-line="321" selection-end-column="47" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="1-1brand.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/1-1brand.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="380">
+                  <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="4-0work.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/4-0work.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="311">
+                  <caret line="99" column="18" lean-forward="false" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="_main.sass" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_main.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="20">
-                  <caret line="2902" column="26" lean-forward="false" selection-start-line="2902" selection-start-column="26" selection-end-line="2902" selection-end-column="26" />
+                <state relative-caret-position="543">
+                  <caret line="3029" column="24" lean-forward="false" selection-start-line="3029" selection-start-column="24" selection-end-line="3029" selection-end-column="24" />
                   <folding>
-                    <element signature="e#8248#8419#2" expanded="true" />
+                    <element signature="e#8292#8463#2" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="lib.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/js/lib.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="100">
+                  <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="attach.svg" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/img/svg/attach.svg">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -296,11 +201,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/js/common.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15820">
-                  <caret line="842" column="20" lean-forward="false" selection-start-line="842" selection-start-column="20" selection-end-line="842" selection-end-column="20" />
+                <state relative-caret-position="492">
+                  <caret line="1047" column="24" lean-forward="true" selection-start-line="1047" selection-start-column="24" selection-end-line="1047" selection-end-column="24" />
                   <folding>
                     <element signature="e#126#1305#0" expanded="false" />
                     <element signature="n#!!block;n#isMobile#0" expanded="false" />
@@ -315,12 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>search</find>
-      <find>change-lang</find>
-      <find>.callback-wrap</find>
-      <find>p</find>
-      <find>.sub</find>
-      <find>img-news-wrapper</find>
       <find>sticked</find>
       <find>aside-menu-wrapper</find>
       <find>Promise</find>
@@ -345,6 +244,12 @@
       <find>news</find>
       <find>stick</find>
       <find>title-wrapper</find>
+      <find>.one-ha</find>
+      <find>.h3</find>
+      <find>.annotatio</find>
+      <find>annotation</find>
+      <find>sub</find>
+      <find>form-file</find>
     </findStrings>
     <replaceStrings>
       <replace>latest</replace>
@@ -383,17 +288,14 @@
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_transfonter.org-20170918-100037.zip/stylesheet.css" />
         <option value="$PROJECT_DIR$/src/sass/font.sass" />
         <option value="$PROJECT_DIR$/gulp/tasks/critical.js" />
-        <option value="$PROJECT_DIR$/src/pug/4-0work.pug" />
         <option value="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_footer.pug" />
         <option value="$PROJECT_DIR$/src/pug/2-0activity.pug" />
-        <option value="$PROJECT_DIR$/src/js/lib.js" />
         <option value="$PROJECT_DIR$/src/pug/1-1brand.pug" />
         <option value="$PROJECT_DIR$/src/img/svg/quote.svg" />
         <option value="$PROJECT_DIR$/src/img/svg/download_file.svg" />
         <option value="$PROJECT_DIR$/src/pug/6-1news.pug" />
         <option value="$PROJECT_DIR$/src/pug/_layout2.pug" />
-        <option value="$PROJECT_DIR$/src/pug/1-0company.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_header2.pug" />
         <option value="$PROJECT_DIR$/src/img/svg/arrow_filter.svg" />
         <option value="$PROJECT_DIR$/src/img/6-1/check.svg" />
@@ -409,10 +311,13 @@
         <option value="$PROJECT_DIR$/src/pug/includes/_brands_footer.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_brands.pug" />
         <option value="$PROJECT_DIR$/gulp/tasks/copy.js" />
-        <option value="$PROJECT_DIR$/src/js/common.js" />
         <option value="$PROJECT_DIR$/src/pug/includes/_mixins.pug" />
+        <option value="$PROJECT_DIR$/src/pug/1-0company.pug" />
+        <option value="$PROJECT_DIR$/src/pug/4-0work.pug" />
         <option value="$PROJECT_DIR$/src/sass/_main.sass" />
+        <option value="$PROJECT_DIR$/src/js/lib.js" />
         <option value="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
+        <option value="$PROJECT_DIR$/src/js/common.js" />
       </list>
     </option>
   </component>
@@ -629,18 +534,13 @@
             <path>
               <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
               <item name="Servolux" type="462c0819:PsiDirectoryNode" />
-              <item name="gulp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
-              <item name="gulp" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
               <item name="Servolux" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -781,7 +681,7 @@
       <workItem from="1505737828922" duration="56000" />
       <workItem from="1505737917593" duration="58158000" />
       <workItem from="1505902057967" duration="11543000" />
-      <workItem from="1505920443624" duration="144000" />
+      <workItem from="1505920443624" duration="8873000" />
     </task>
     <task id="LOCAL-00001" summary="Something change from webstorm">
       <created>1505114233192</created>
@@ -930,11 +830,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505837184511</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="job inner page in progress">
+      <created>1505920607255</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1505920607255</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249252000" />
+    <option name="totallyTimeSpent" value="257981000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -952,11 +859,11 @@
       <window_info id="Gulp" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11795682" sideWeight="0.9380403" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11927582" sideWeight="0.061959654" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29461458" sideWeight="0.5081622" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655427" sideWeight="0.5037274" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.49815693" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2665964" sideWeight="0.5037274" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2655427" sideWeight="0.5037274" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2665964" sideWeight="0.49627262" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2655427" sideWeight="0.49627262" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.09057399" sideWeight="0.2079327" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40793827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1018,7 +925,8 @@
     <MESSAGE value="news ready +-" />
     <MESSAGE value="jobs in progress&#10;header fixes" />
     <MESSAGE value="jobs in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="jobs in progress" />
+    <MESSAGE value="job inner page in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="job inner page in progress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1027,20 +935,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pug/3-0partnership.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/4-0work.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../mosmet/src/pug/1-0otdel.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1149,20 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/lib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1058">
-          <caret line="54" column="72" lean-forward="false" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/5-0contacts.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6580">
@@ -1222,13 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="79" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="578" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/1-1brand.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="18" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1295,6 +1168,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,21 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
           <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer2.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/1-2brands.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1356,6 +1215,7 @@
           <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
           <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
           <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,6 +1238,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="97" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1392,16 +1253,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15820">
-          <caret line="842" column="20" lean-forward="false" selection-start-line="842" selection-start-column="20" selection-end-line="842" selection-end-column="20" />
           <folding>
-            <element signature="e#126#1305#0" expanded="false" />
-            <element signature="n#!!block;n#isMobile#0" expanded="false" />
+            <element signature="e#0#23#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1414,20 +1267,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/1-2brands.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/svg/attach.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="321" column="47" lean-forward="false" selection-start-line="321" selection-start-column="47" selection-end-line="321" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/1-1brand.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/4-0work.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="99" column="18" lean-forward="false" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer2.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="12" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="2902" column="26" lean-forward="false" selection-start-line="2902" selection-start-column="26" selection-end-line="2902" selection-end-column="26" />
+        <state relative-caret-position="543">
+          <caret line="3029" column="24" lean-forward="false" selection-start-line="3029" selection-start-column="24" selection-end-line="3029" selection-end-column="24" />
           <folding>
-            <element signature="e#8248#8419#2" expanded="true" />
+            <element signature="e#8292#8463#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/lib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="1047" column="24" lean-forward="true" selection-start-line="1047" selection-start-column="24" selection-end-line="1047" selection-end-column="24" />
+          <folding>
+            <element signature="e#126#1305#0" expanded="false" />
+            <element signature="n#!!block;n#isMobile#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/0-1jobs.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="95" column="61" lean-forward="true" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
+        <state relative-caret-position="280">
+          <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
           <folding />
         </state>
       </provider>
