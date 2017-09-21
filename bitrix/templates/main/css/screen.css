@@ -336,10 +336,9 @@ p {
   font-size: 1rem;
   font-style: normal;
   color: #707868;
-  line-height: 1.75rem; }
-  p.margins {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem; }
+  line-height: 1.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem; }
   p.italic {
     font-style: italic;
     font-weight: 500; }
@@ -382,7 +381,8 @@ blockquote {
   line-height: 1.75rem;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  color: #999b98; }
+  color: #999b98;
+  margin: 0; }
 
 .caption {
   font-size: 1rem;
@@ -438,6 +438,8 @@ blockquote {
   margin-top: 0.9375rem;
   padding-bottom: 1.875rem;
   padding-right: 2.5rem; }
+  .green-stick-top p {
+    margin: 0; }
   .green-stick-top:before {
     display: block;
     position: absolute;
@@ -634,6 +636,8 @@ blockquote {
   transition: border 0.2s ease-in, background-color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   overflow: hidden;
   -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); }
+  .button-green p {
+    margin: 0; }
   .button-green:hover {
     border: 1px solid transparent;
     background-color: #0056b8; }
@@ -812,6 +816,7 @@ main {
   #header-logo .jobs-logo-add {
     display: inline-block;
     padding: 0.625rem;
+    margin: 0;
     line-height: 0.8125rem;
     background-color: #648d64;
     color: #fff;
@@ -1271,7 +1276,8 @@ main {
         text-transform: uppercase;
         color: white;
         text-align: center;
-        line-height: 0; }
+        line-height: 0;
+        margin: 0; }
     #main-screen-wrapper #main-screen .screen-links-wrapper {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1576,6 +1582,8 @@ main {
     display: inline-block;
     margin-left: 0.9375rem;
     vertical-align: top; }
+    .download .download-text p {
+      margin: 0; }
     .download .download-text .href {
       color: #55b521;
       font-weight: 600;
@@ -1655,7 +1663,8 @@ main {
       .carousel-buttons .carousel-buttons-wrap .button p {
         color: #121212;
         font-weight: 300;
-        font-size: 1rem; }
+        font-size: 1rem;
+        margin: 0; }
       .carousel-buttons .carousel-buttons-wrap .button:not(.active) {
         border: 1px solid #55b521;
         background-color: #FFF; }
@@ -1738,9 +1747,7 @@ main {
           background-color: #0056b8; }
 
 #news .button-green-wrapper {
-  float: left;
-  display: block;
-  margin-top: 1.875rem; }
+  margin-top: 0; }
 
 #news .news {
   width: 100%;
@@ -1763,7 +1770,7 @@ main {
     #news .news .news-item .img-news-wrapper {
       display: none;
       position: relative;
-      height: 25rem;
+      height: 14.5rem;
       margin-bottom: 1.25rem;
       width: 100%;
       overflow: hidden;
@@ -1771,6 +1778,8 @@ main {
       -webkit-background-size: cover;
       background-size: cover;
       background-repeat: no-repeat; }
+    #news .news .news-item .text-news-wrapper p {
+      margin-top: 0; }
     #news .news .news-item .text-news-wrapper .href {
       margin-bottom: 1.25rem;
       font-size: 1.125rem;
@@ -1788,8 +1797,8 @@ main {
       display: -ms-flexbox;
       display: flex;
       box-orient: vertical;
-      line-clamp: 3;
-      max-height: 5.625rem; }
+      line-clamp: 2;
+      max-height: 3.75rem; }
     #news .news .news-item .text-news-wrapper .text-news {
       overflow: hidden;
       -o-text-overflow: ellipsis;
@@ -1806,7 +1815,7 @@ main {
       margin-top: 1.25rem; }
     #news .news .news-item:not(.big-news):nth-of-type(2) {
       padding-top: 0;
-      padding-bottom: 2.5rem; }
+      padding-bottom: 1.25rem; }
     #news .news .news-item:not(.big-news):nth-of-type(3) {
       border-top: 1px solid #cccccc;
       padding-top: 2.5rem; }
@@ -1820,8 +1829,8 @@ main {
       #news .news .news-item.big-news .text-news-wrapper .href {
         font-size: 1.625rem;
         line-height: 2.25rem;
-        line-clamp: 3;
-        max-height: 6.75rem; }
+        line-clamp: 2;
+        max-height: 4.5rem; }
 
 .callback-wrap {
   margin-top: 3.75rem;
@@ -1951,7 +1960,7 @@ main {
     #footer .footer-makers:hover .href {
       color: #0056b8; }
   #footer .footer-block-wrapper .callback-button {
-    margin-top: 2.5rem; }
+    margin-top: 3.125rem; }
   #footer.footer2 .box {
     padding: 40px; }
   #footer.footer2 .callback-wrap {
@@ -2193,6 +2202,8 @@ main {
     #company-map .map-advantage-wrapper .map-advantage {
       padding-right: 3.125rem;
       margin-top: 0.9375rem; }
+      #company-map .map-advantage-wrapper .map-advantage-text p {
+        margin-top: 0; }
       #company-map .map-advantage-wrapper .map-advantage .map-advantage-count .map-green-count {
         font-family: "GothamPro";
         font-weight: 500;
@@ -2427,11 +2438,23 @@ main {
 #brand-production-vertical-slider {
   padding-top: 2.5rem; }
 
-#brand-vertical-slider {
+#vertical-wrapper {
+  position: relative;
+  height: auto; }
+  #vertical-wrapper .vertical-absolute {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+
+.img-bg #vertical-wrapper {
+  height: 100%;
+  width: 100%; }
+
+#vertical-slider {
   overflow: hidden;
-  max-height: 34.375rem;
-  position: relative; }
-  #brand-vertical-slider .slick-arrow {
+  position: relative;
+  height: 100%; }
+  #vertical-slider .slick-arrow {
     position: absolute;
     right: 1.25rem;
     top: 50%;
@@ -2446,13 +2469,13 @@ main {
     background-size: cover;
     font-size: 0;
     z-index: 2; }
-    #brand-vertical-slider .slick-arrow.slick-next {
+    #vertical-slider .slick-arrow.slick-next {
       -webkit-transform: translate(0, 25px) rotate(90deg);
       -ms-transform: translate(0, 25px) rotate(90deg);
       transform: translate(0, 25px) rotate(90deg); }
-    #brand-vertical-slider .slick-arrow.slick-disabled {
+    #vertical-slider .slick-arrow.slick-disabled {
       opacity: .5; }
-  #brand-vertical-slider .slick-dots {
+  #vertical-slider .slick-dots {
     position: absolute;
     bottom: 1rem;
     left: 0;
@@ -2462,17 +2485,17 @@ main {
     -webkit-transform: translate(-16px, 0);
     -ms-transform: translate(-16px, 0);
     transform: translate(-16px, 0); }
-    #brand-vertical-slider .slick-dots li {
+    #vertical-slider .slick-dots li {
       display: inline-block;
       display: none; }
-      #brand-vertical-slider .slick-dots li button {
+      #vertical-slider .slick-dots li button {
         font-size: 2.375rem;
         color: #484f42;
         font-weight: 300;
         font-family: "GothamPro"; }
-      #brand-vertical-slider .slick-dots li.slick-active {
+      #vertical-slider .slick-dots li.slick-active {
         display: block; }
-  #brand-vertical-slider .slick-sum-slides {
+  #vertical-slider .slick-sum-slides {
     position: absolute;
     font-size: 1.125rem;
     bottom: 1.375rem;
@@ -2486,10 +2509,23 @@ main {
     -webkit-transform: translate(16px, 0);
     -ms-transform: translate(16px, 0);
     transform: translate(16px, 0); }
+  #vertical-slider .slick-slide .img-wrapper {
+    height: 100%;
+    width: 100%;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 #news-inner-slider .slick-slide .slide-img img {
   max-height: auto;
   width: 100%; }
+
+#brand-contacts p {
+  margin: 0; }
+
+#brand-contacts .brand-subtitle {
+  margin-bottom: 1.25rem; }
 
 #brand-contacts .darker {
   font-weight: 400; }
@@ -2513,10 +2549,7 @@ main {
   display: block;
   line-height: 1.75rem; }
 
-.brand-email:not(:first-of-type), .brand-email-title:not(:first-of-type) {
-  margin-top: 0.5rem; }
-
-.brand-email #map, .brand-email-title #map {
+#map {
   width: 100%;
   height: 32.0625rem;
   margin-top: 1.875rem; }
@@ -2720,7 +2753,8 @@ main {
   font-size: 1.875rem;
   line-height: 3rem;
   font-family: 'GothamPro';
-  font-weight: 500; }
+  font-weight: 500;
+  margin-bottom: 0; }
   .green-text-count span {
     font-size: 1rem; }
 
@@ -2761,7 +2795,8 @@ main {
     font-size: 2rem;
     line-height: 2.625rem;
     display: inline-block;
-    font-weight: 400; }
+    font-weight: 400;
+    margin: 0; }
   #vacancy-block .vacancy-block-green .vacancy-href {
     margin-left: 0.625rem;
     border-bottom: 1px solid white;
@@ -3235,7 +3270,7 @@ form .flex-block .one-half {
 
 form label {
   border: 1px solid #cccccc;
-  padding: 1.25rem;
+  padding: 1.375rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   position: relative;
@@ -3244,11 +3279,25 @@ form label {
   border-radius: 3px;
   margin: 0.3125rem;
   margin-bottom: 1.25rem;
-  height: 4rem;
-  -webkit-transition: height 0.2s ease-out, border .2s, padding 0.2s;
-  -o-transition: height 0.2s ease-out, border .2s, padding 0.2s;
-  transition: height 0.2s ease-out, border .2s, padding 0.2s;
+  height: 4.375rem;
+  -webkit-transition: margin 0.2s ease-out, border .2s, padding 0.2s;
+  -o-transition: margin 0.2s ease-out, border .2s, padding 0.2s;
+  transition: margin 0.2s ease-out, border .2s, padding 0.2s;
   cursor: text; }
+  form label .form-error {
+    position: absolute;
+    top: 100%;
+    -webkit-transform: translatey(12px);
+    -ms-transform: translatey(12px);
+    transform: translatey(12px);
+    font-size: 0.875rem;
+    left: 0px;
+    color: red; }
+  form label.has-error {
+    border-color: red;
+    margin-bottom: 1.875rem; }
+  form label.has-success {
+    border-color: #55b521; }
   form label p {
     color: #474e41;
     -webkit-transition: color .2s;
@@ -3257,7 +3306,6 @@ form label {
   form label.focusing {
     border: 1px solid #55b521; }
   form label.active {
-    height: 4.5rem;
     padding: 0.625rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem; }
@@ -3272,6 +3320,8 @@ form label {
       top: 2.5rem; }
       form label.form-text .form-input-wrapper textarea {
         height: 100%; }
+  form label.form-text {
+    padding-top: 0.75rem; }
   form label.form-file {
     display: inline-block;
     position: relative;
@@ -3308,6 +3358,9 @@ form label {
     background-color: transparent;
     border: 0;
     width: 100%; }
+
+form p {
+  margin: 0; }
 
 form .callback-button {
   font-weight: 400;

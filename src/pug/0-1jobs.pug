@@ -4,6 +4,7 @@ block title
 	title Вакансии Серволюкс
 block config
 	- var main = false
+	- var form = true
 block content
 	#main-screen-wrapper.advancedPage
 		#main-first-screen-fading-wrapper
@@ -83,25 +84,25 @@ block content
 					.one-half
 						.job-form-wrapper
 							form#job-form.formFocus
-								label.form-name
+								label.form-name.form-group
 									p ФИО
-									.form-input-wrapper
-										input(type='text' name='userName' data-validation="number required")
+									.form-input-wrapper.control-label
+										input(type='text' name='userName' data-validation="required").form-control
 								.flex-block
 									.one-half
-										label.form-tel
+										label.form-tel.form-group
 											p Телефон
-											.form-input-wrapper
-												input(type='text' name='userTel' data-validation="number required")
+											.form-input-wrapper.control-label
+												input(type='text' name='userTel' data-validation="number required").form-control
 									.one-half
-										label.form-mail
+										label.form-mail.form-group
 											p E-mail
-											.form-input-wrapper
-												input(type='text' name='userMail' data-validation="email required")
-								label.form-text
+											.form-input-wrapper.control-label
+												input(type='text' name='userMail' data-validation="email required").form-control
+								label.form-text.form-group
 									p Сопроводительное письмо
-									.form-input-wrapper
-										textarea(name='userText')
+									.form-input-wrapper.control-label
+										textarea(name='userText').form-control
 								label.form-file
 									svg(class="icon icon-vacancy")
 										use(xlink:href="#attach" xmlns:xlink="http://www.w3.org/1999/xlink")

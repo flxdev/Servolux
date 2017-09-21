@@ -31,7 +31,6 @@ block content
 					.small-block.animateThis(data-anim="fadeInUp")
 						p.annotation История предприятия начинается в 1958 году со строительства Смолевичского молочного завода, специализирующегося на производстве цельномолочной продукции.
 						p В июле 1987 года завод стал самостоятельной производственной единицей, а в 2010 г. был присоединен к ОАО «Смолевичская бройлерная птицефабрика». С 1 июля 2014 г. предприятие функционирует в составе филиала «Смолевичи Молоко» ОАО «Смолевичи Бройлер».
-						br
 						p Филиал «Смолевичи Молоко» занимается развитием направлений по производству и переработки молока. За 2014 год объем переработки молока составил 28,8 тыс. тонн. Для производства продукции используется высококачественное молоко от собственного стада коров с поголовьем  более 8 тыс. Предприятие также использует молоко-сырье сторонних хозяйств. В настоящее время ведется строительство инновационной молочной фермы, что позволит полностью перейти на использование собственного сырья. Производство продукции на «Смолевичи Молоко» начинается с тщательного контроля молока-сырья.
 				#brand-products.block-inner
 					.small-block.animateThis(data-anim="fadeInUp")
@@ -72,20 +71,17 @@ block content
 										p Была запущена автоматизированная пастеризационная установка и высокопроизводительный автоматн
 									.flex-item.green-stick-top
 										p Значительно повысилась экологичность производства за счет перехода от транспортировки продукции в полиэтиленовой таре к гофроящикам
-							.one-half.animateThis(data-anim="fadeInRight")
-								#brand-vertical-slider.slick-slider
-									.slick-slide
-										.img-wrapper
-											img(src="/img/1-1/vertSlider/slide(1).jpg" alt="picture")
-									.slick-slide
-										.img-wrapper
-											img(src="/img/1-1/vertSlider/slide(1).jpg" alt="picture")
-									.slick-slide
-										.img-wrapper
-											img(src="/img/1-1/vertSlider/slide(1).jpg" alt="picture")
-									.slick-slide
-										.img-wrapper
-											img(src="/img/1-1/vertSlider/slide(1).jpg" alt="picture")
+							.one-half.animateThis(data-anim="fadeInRight")#vertical-wrapper
+								.vertical-absolute
+									#vertical-slider.slick-slider.vertical-slider
+										.slick-slide
+											.img-wrapper(style="background-image: url('/img/1-1/vertSlider/slide(1).jpg')")
+										.slick-slide
+											.img-wrapper(style="background-image: url('/img/1-1/vertSlider/slide(1).jpg')")
+										.slick-slide
+											.img-wrapper(style="background-image: url('/img/1-1/vertSlider/slide(1).jpg')")
+										.slick-slide
+											.img-wrapper(style="background-image: url('/img/1-1/vertSlider/slide(1).jpg')")
 				#brand-contacts.block-inner
 					.small-block
 						p.brand-subtitle.animateThis(data-anim="fadeInUp") Контакты
@@ -93,15 +89,15 @@ block content
 						p.animateThis(data-anim="fadeInUp") Республика Беларусь, г. Смолевичи, ул. Социалистическая, 54б., 222201
 						.flex-block
 							.one-four.animateThis(data-anim="fadeInUp")
-								p Телефоны
+								p.caption Телефоны
 							.one-four.animateThis(data-anim="fadeInUp")
-								a(href="Tel:+375177625374").brand-subtitle.brand-telephone +375 177 62 53 74
-								a(href="Tel:+375177655795").brand-subtitle.brand-telephone +375 177 65 57 95
-								a(href="Tel:+375177625371").brand-subtitle.brand-telephone +375 177 62 53 71
-								a(href="Tel:+375297898121").brand-subtitle.brand-telephone +375 29 789 81 21
+								a(href="Tel:+375177625374").brand-telephone +375 177 62 53 74
+								a(href="Tel:+375177655795").brand-telephone +375 177 65 57 95
+								a(href="Tel:+375177625371").brand-telephone +375 177 62 53 71
+								a(href="Tel:+375297898121").brand-telephone +375 29 789 81 21
 							.one-four.animateThis(data-anim="fadeInUp")
-								p.brand-email-title Сайт
-								p.brand-email-title E-mail
+								p.caption.brand-email-title Сайт
+								p.caption.brand-email-title E-mail
 							.one-four.animateThis(data-anim="fadeInUp")
 								a(href="#").brand-email kuvshinka.by
 								a(href="#").brand-email sb.milk@servolux.by
@@ -112,7 +108,7 @@ block content
 								'lng': 28.088151,
 								'name': 'Филиал «Смолевичи Молоко»'
 							}]
-					#map.map-elem-near(data-lat="54.028572", data-lon="28.088151", data-icon='/img/1-0/pin.png', data-zoom="16" data-anim="fadeInUp").animateThis
+					#map.map-elem-near(data-lat="54.028572", data-lon="28.088151", data-icon='/img/1-0/pin.png', data-zoom="3")
 				+backButonWrapper('Назад', '1-2brands.html')
 		#modal.remoda(data-remodal-id="modal")
 			button(data-remodal-action="close").remodal-close

@@ -3,6 +3,5 @@
 //=include lib/sticky-kit.min.js
 //=include lib/in-view.min.js
 //=include lib/remodal.min.js
-//=include lib/jquery.form-validator.min.js
 
 

@@ -607,8 +607,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		$newsInnerSlider.append('<div class="slick-sum-slides">/ ' + productsSliesLength + '</div>')
 	}
 
-	if ($('#brand-vertical-slider').length) {
-		let $verticalSlider = $('#brand-vertical-slider')
+	if ($('.vertical-slider').length) {
+		let $verticalSlider = $('.vertical-slider')
 		$verticalSlider.slick({
 			arrows: true,
 			dots: false,
@@ -616,10 +616,15 @@ document.addEventListener('DOMContentLoaded', function () {
 			slidesToScroll: 1,
 			infinite: true,
 			focusOnSelect: false,
-			accessibility: false,
+			accessibility: true,
 			vertical: true,
-			verticalSwiping: true
+			verticalSwiping: true,
+			responsive: true
 		})
+    $(window).on('load', function(){
+      var maxHeight = $verticalSlider.height();
+	    $verticalSlider.find('.img-wrapper').height(maxHeight);
+    });
 	}
 
 	// PARALLAX event on scroll trigger
@@ -1042,10 +1047,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-	if ($('form').length) {
+	if ($('.formFocus').length) {
 		$.validate({
 			form: '#job-form',
-			modules : 'html5',
+			modules : 'html5, security',
 			lang : 'ru',
 			addValidClassOnAll : true,
 			validateOnBlur : true, // disable validation when input looses focus
