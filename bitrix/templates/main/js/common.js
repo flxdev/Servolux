@@ -617,19 +617,23 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// PARALLAX event on scroll trigger
-	if (hasParallax) {
-		$parallax = $('#parallax');
-		$parallaxImg = $('#parallax .parallax-img img');
-		parallaxImgHeight = $parallaxImg.height();
-		parallaxFieldViewTop = $parallax.offset().top - vHeight;
-		parallaxFieldViewBottom = $parallax.offset().top + $parallax.height() + $(window).height();
-		parallaxFieldView = parallaxFieldViewBottom - parallaxFieldViewTop;
+	// if (hasParallax) {
+	// 	$parallax = $('#parallax')
+	// 	$parallaxImg = $('#parallax .parallax-img img')
+	// 	parallaxImgHeight = $parallaxImg.height()
+	// 	parallaxFieldViewTop = $parallax.offset().top - vHeight
+	// 	parallaxFieldViewBottom = $parallax.offset().top + $parallax.height() + $(window).height()
+	// 	parallaxFieldView = parallaxFieldViewBottom - parallaxFieldViewTop
+	//
+	// 	scrollParallax = (scrollPos) => {
+	// 		if (scrollPos >= parallaxFieldViewTop && scrollPos <= parallaxFieldViewBottom) {
+	// 			$parallaxImg.css('transform', 'translate( 0, ' + ( -((scrollPos - parallaxFieldViewTop) / (parallaxFieldView / 100))) * (parallaxImgHeight / 150) + 'px)')
+	// 		}
+	// 	}
+	// }
 
-		scrollParallax = function scrollParallax(scrollPos) {
-			if (scrollPos >= parallaxFieldViewTop && scrollPos <= parallaxFieldViewBottom) {
-				$parallaxImg.css('transform', 'translate( 0, ' + -((scrollPos - parallaxFieldViewTop) / (parallaxFieldView / 100)) * (parallaxImgHeight / 150) + 'px)');
-			}
-		};
+	if (hasParallax) {
+		var rellax = new Rellax('.rellax');
 	}
 
 	// Scroll triggers
@@ -638,9 +642,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
 			$headerMenuWrapper.addClass('sticked animated fadeInDownFast').css('animation-delay', '0');
 			if (!mobile) {
-				if (hasParallax) {
-					scrollParallax(scrollPos);
-				}
+				// if (hasParallax) {
+				// 	scrollParallax(scrollPos)
+				// }
 				if (asideMenu) {
 					changeAsideMenu();
 				}
@@ -658,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// InView checker
 	if ($(window).width() >= 1024) {
-		inView.offset(100);
+		inView.offset(50);
 		inView('.animateThis').on('enter', function (el) {
 			$(el).addClass('animated ' + $(el).data('anim'));
 		});
@@ -744,22 +748,41 @@ document.addEventListener('DOMContentLoaded', function () {
 	if ($('#scheme').length) {
 		var ell = 1,
 		    $schemeButton = $('#scheme .scheme-button'),
-		    $schemeSlides = $('#scheme-slider .scheme-slider__slide');
+		    $schemeSlides = $('#scheme-slider .scheme-slider__slide'),
+		    currentSlide = 1,
+		    currentDeg = 0,
+		    slideDeg = 45;
 
 		$schemeButton.on('click', function () {
 			var _self = $(this);
+
 			if (!_self.hasClass('active')) {
+
 				// Removing all active classes on buttons
 				$schemeButton.filter(function () {
 					$(this).removeClass('active');
 				});
+
 				// Add active class to pressed button
 				_self.addClass('active').siblings().removeClass('active');
-				var slide = $schemeSlides.eq(_self.data('slide') - 1);
-				slide.addClass('active').siblings().removeClass('active');
+
+				// Get pressed slide number
 				ell = _self.data('slide');
-				$('#scheme .scheme-menu').css('transform', 'rotate(' + (360 / 8 * -_self.data('slide') + 45) + 'deg)');
-				$('#scheme .scheme-menu g.icon').css('transform', 'rotate(' + (360 / 8 * _self.data('slide') - 45) + 'deg)');
+
+				if (ell > currentSlide) {
+					currentDeg += slideDeg * (ell - currentSlide);
+					$('#scheme-menu').css('transform', 'rotate(-' + currentDeg + 'deg)');
+					$('#scheme-menu g.icon').css('transform', 'rotate(' + currentDeg + 'deg)');
+					currentSlide = ell;
+				} else if (ell < currentSlide) {
+					currentDeg += slideDeg * (8 + ell - currentSlide);
+					$('#scheme-menu').css('transform', 'rotate(-' + currentDeg + 'deg)');
+					$('#scheme-menu g.icon').css('transform', 'rotate(' + currentDeg + 'deg)');
+					currentSlide = ell;
+				}
+
+				var slide = $schemeSlides.eq(ell - 1);
+				slide.addClass('active').siblings().removeClass('active');
 			}
 		});
 
@@ -832,7 +855,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	if ($('.sticky-block').length) {
-		$('.sticky-block').stick_in_parent({ offset_top: 200 });
+
+		var $stickyBlock = $('.sticky-block');
+
+		$stickyBlock.filter(function () {
+
+			var stickyBlockOffsetTop = $(this).data('offsettop');
+			$(this).stick_in_parent({ offset_top: stickyBlockOffsetTop });
+		});
 	}
 
 	function animateAsideMenu() {
@@ -977,6 +1007,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 			img.classList.add('fade-in');
 		}
+	}
+
+	if ($('#standard-toggle').length) {
+		$('#standard-toggle').find('.button').each(function () {
+			$(this).on('click', function () {
+				$(this).addClass('active').siblings().removeClass('active');
+				var toggleItem = $(this).data('item');
+				$('#toggleItems').find('.toggle-item').eq(toggleItem).addClass('active').siblings().removeClass('active');
+			});
+		});
 	}
 
 	if ($('#contacts').length) {

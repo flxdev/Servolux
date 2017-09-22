@@ -176,6 +176,13 @@ p
 		font-family: inherit
 		line-height: inherit
 
+.green-big-letters
+	+rem(font-size, 250px)
+	color: $green
+	font-family: 'GothamPro'
+	font-weight: 500
+	+rem(line-height, 250px)
+
 blockquote
 	background-color: #eef8e8
 	+rem(padding, 60px)
@@ -183,6 +190,8 @@ blockquote
 		+rem(margin-bottom, 20px)
 		+rem(padding-left, 50px)
 		position: relative
+		p
+			margin: 0
 		svg
 			position: absolute
 			left: 0
@@ -241,6 +250,9 @@ blockquote
 		.one-half
 			width: auto
 			max-width: 50%
+	.flex-content
+		+rem(max-width, 600px)
+		text-align: center
 	+r(992)
 		&:not(.row)
 			flex-direction: column
@@ -327,6 +339,8 @@ blockquote
 
 .block-inner
 	+rem(padding-bottom, 50px)
+	&:last-of-type
+		padding-bottom: 0
 
 .box
 	width: 100%
@@ -545,8 +559,9 @@ blockquote
 		background: none
 		height: 100%
 		width: 100%
-		+rem(padding-left, 20px)
+		+rem(padding-left, 25px)
 		+rem(padding-right, 50px)
+		+rem(padding-top, 5px)
 		position: absolute
 		+rem(height, 43px)
 		z-index: 1
@@ -577,7 +592,7 @@ blockquote
 		opacity: 0.2
 		+rem(width, 20px)
 		position: absolute
-		+rem(right, 20px)
+		+rem(right, 15px)
 		+rem(top, 2px)
 		display: block
 		height: 100%
@@ -870,7 +885,16 @@ main
 // Menu end
 
 
+#title-svg-main
+	+rem(max-width, 1400px)
+	width: 100%
+	margin: auto
 
+.title-svg-main
+	fill: $white
+.title-svg-main2
+	opacity: .8
+	fill: $white
 
 
 #main-screen-wrapper
@@ -1009,11 +1033,13 @@ main
 			bottom: 0
 			margin: auto
 			width: 100%
-			+rem(height, 200px)
+			+rem(height, 320px)
 			#title-wrapper
 				#title-wrapper-inner
 					transform: scale(1)
 					transition: transform 0.6s cubic-bezier(.445, .05, .55, .95)
+					margin: auto
+					text-align: center
 					&.active
 						transform: scale(0.7)
 				+r(992)
@@ -1117,7 +1143,7 @@ main
 							transform: translate(0, 80px)
 							opacity: 1
 
-$slSize: 440px
+$slSize: 410px
 
 .scheme-wrapper
 	position: relative
@@ -1396,12 +1422,15 @@ $slSize: 440px
 		position: absolute
 		width: 100%
 		height: 100%
-		top: 0%
+		top: 0
 		left: 0
 		opacity: .3
-	img
-		min-height: 200%
+	.parallax-img-relative
+		position: relative
 		width: 100%
+		height: 100%
+	.rellax
+		min-height: 130%
 		+r(992)
 			top: 0
 			height: 100%
@@ -1813,11 +1842,13 @@ $slSize: 440px
 		+r(400)
 			+rem(padding-right, 0px)
 			+rem(padding-left, 0px)
-		.advantage-img
+		.advantage-img-item
 			+rem(margin-bottom, 12px)
-			img
-				+rem(max-height, 60px)
-				width: auto !important
+			+rem(height, 60px)
+			position: relative
+			.advantage-img
+				width: auto
+				height: 100%
 		.advantage-text
 			max-width: 100%
 
@@ -2016,6 +2047,35 @@ $galleryBigHeight: 590px
 			&.place_open
 				opacity: 1
 
+.toggle-item
+	opacity: 0
+	visibility: hidden
+	pointer-events: none
+	position: absolute
+	+rem(top, -20px)
+	+rem(left, 0)
+	width: 100%
+	height: 100%
+	transform: translate(0, -30px)
+	transition: transform .2s ease-out, opacity .2s
+	&#index-chart-wrapper
+		+rem(top, 100px)
+	&.active
+		opacity: 1
+		visibility: visible
+		pointer-events: auto
+		transform: translate(0,0)
+
+#map-wrapper
+	position: relative
+	width: 100%
+	height: 400px
+	#map
+		position: relative
+		min-width: 320px
+		width: 100%
+		height: 100%
+
 #aside-menu
 	position: absolute
 	top: 0
@@ -2040,6 +2100,8 @@ $galleryBigHeight: 590px
 			.aside-item-inner
 				+rem(padding-top, 12px)
 				+rem(padding-left, 40px)
+				p
+					margin: 0
 			&:after
 				display: block
 				position: absolute
@@ -2278,10 +2340,16 @@ $galleryBigHeight: 590px
 	.slick-slide
 		.slide-img
 			img
+				+rem(min-height, 500px)
 				max-height: auto
-				width: 100%
+				min-width: 100%
 
 #brand-contacts
+	#map
+		width: 100%
+		+rem(height, 513px)
+		+rem(margin-top, 30px)
+		+rem(margin-bottom, 50px)
 	p
 		margin: 0
 	.brand-subtitle
@@ -2306,10 +2374,6 @@ $galleryBigHeight: 590px
 	+rem(line-height, 28px)
 .brand-email, .brand-email-title
 
-#map
-	width: 100%
-	+rem(height, 513px)
-	+rem(margin-top, 30px)
 
 
 #back-button-wrapper
@@ -2496,6 +2560,9 @@ $galleryBigHeight: 590px
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
+		position: absolute
+		top: 0
+		left: 0
 
 #clients
 	.row
@@ -2515,7 +2582,7 @@ $galleryBigHeight: 590px
 #vacancy-block
 	.vacancy-block-green
 		width: 100%
-		background: url('../img/4-0/pattern.jpg') 0 0 repeat-x
+		background: url('../img/4-0/pattern.jpg') 0 0 repeat
 		position: relative
 		+rem(padding, 50px)
 		&>*
@@ -2593,7 +2660,7 @@ $galleryBigHeight: 590px
 
 .country-aside-menu
 	+rem(margin-top, 50px)
-	p
+	.href
 		cursor: pointer
 		display: table
 		+rem(padding-bottom, 5px)
@@ -2611,7 +2678,7 @@ $galleryBigHeight: 590px
 		margin-right: 3.3%
 		+rem(top, 50px)
 		width: 24%
-		+rem(max-height, 600px)
+		+rem(max-height, 500px)
 		overflow-y: scroll
 		z-index: 3
 		background-color: #f5f5f5
@@ -2638,12 +2705,19 @@ $galleryBigHeight: 590px
 			width: 100%
 			+rem(margin-bottom, 100px)
 			right: auto
+		.h3
+			margin: 0
 		.href
 			color: $green
+			margin: 0
+			+rem(line-height, 26px)
+		.caption
+			margin: 0
+			+rem(margin-top, 7px)
 		.news-download-block
-			padding-left: 40px
-			padding-bottom: 15px
-			padding-top: 15px
+			+rem(padding-left, 40px)
+			+rem(padding-bottom, 20px)
+			+rem(padding-top, 20px)
 			display: block
 			padding-right: 0
 			position: relative
@@ -2653,12 +2727,12 @@ $galleryBigHeight: 590px
 				position: absolute
 				display: block
 				content: ''
-				width: 15px
-				height: 15px
+				+rem(width, 15px)
+				+rem(height, 15px)
 				background: url('../img/6-0/download_file.svg') 50% 50% no-repeat
 				background-size: contain
-				left: 10px
-				top: 24px
+				+rem(left, 10px)
+				+rem(top, 24px)
 			&:hover
 				.href
 					color: $active
@@ -2694,9 +2768,17 @@ $galleryBigHeight: 590px
 			.big-news
 				width: 63.5%
 				margin-right: 33%
+				.img-news-wrapper
+					height: 300px
 
 .ya-share2
 	text-align: right
+	.ya-share2__badge
+		border-radius: 50px
+		padding-left: 5px
+		padding-right: 5px
+		padding-top: 2px
+		padding-bottom: 2px
 
 #jobs-content-wrapper
 	justify-content: space-between
@@ -3079,3 +3161,12 @@ form
 		float: right
 		+rem(margin-top, 10px)
 		+rem(margin-bottom, 0px)
+
+#non
+	+rem(padding-bottom, 200px)
+	.flex-block
+		justify-content: center
+		align-items: center
+		.search
+			+rem(margin-top, 50px)
+			text-align: left

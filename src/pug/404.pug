@@ -1,0 +1,34 @@
+extends _layout
+
+block title
+    title 404
+block config
+    - var main = false
+    - var chart = false
+    - var map = false
+    - var chartjs = false
+block content
+    #main-screen-wrapper.advancedPage
+        #main-first-screen-fading-wrapper
+            img(src="/img/404/header-img.jpg", alt="").firstScreenFading
+        #main-screen
+            #main-screen-title
+                #title-wrapper.animated.fadeInDownMenu
+                    .bread
+                        a(href="index.html") Главная
+                    p.title-main 404
+    #main-content
+       .box#non
+           .block
+               .flex-block
+                   .flex-content
+                       p.green-big-letters 404
+                       p.h3 К сожалению, запрашиваемая вами страница не найдена. Воспользуйтесь поиском или <a href="index.html">перейдите</a> на главную страницу
+                       .search
+                           form(action="#")
+                               input#search-input(type="text" name='search-input' placeholder="Я ищу...")
+                               label(for="search-input")
+                               button(type="submit").search-icon
+                                   svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.2 22")
+                                       path.seach-loop(d="M15.3 15l6.2 6.2")
+                                       path.search-stick(d="M9.1 1.5c4.2 0 7.6 3.4 7.6 7.6 0 4.2-3.4 7.6-7.6 7.6-4.2 0-7.6-3.4-7.6-7.6 0-4.2 3.4-7.6 7.6-7.6m0-1.5C4.1 0 0 4.1 0 9.1c0 5.1 4.1 9.1 9.1 9.1s9.1-4.1 9.1-9.1S14.1 0 9.1 0z")

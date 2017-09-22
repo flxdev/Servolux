@@ -332,7 +332,7 @@
                       <div class="block line-top">
                         <div class="flex-block">
                           <div class="one-four">
-                            <div class="country-aside-menu animateThis sticky-block" data-anim="fadeInUp">
+                            <div class="country-aside-menu animateThis sticky-block" data-anim="fadeInUp" data-offsettop="50">
                               <p class="href active" data-countries="1" data-block="0">Продажи</p>
                               <p class="href" data-countries="2" data-block="0">ПКС</p>
                               <p class="href" data-countries="3" data-block="0">Розничная торговля</p>
@@ -491,7 +491,7 @@
                       <div class="block line-top">
                         <div class="flex-block">
                           <div class="one-four">
-                            <div class="country-aside-menu animateThis sticky-block" data-anim="fadeInUp">
+                            <div class="country-aside-menu animateThis sticky-block" data-anim="fadeInUp" data-offsettop="50">
                               <p class="href active" data-countries="1" data-block="1">Продажи</p>
                             </div>
                           </div>
@@ -538,9 +538,12 @@
                     <div class="block line-top">
                       <div class="flex-block">
                         <div class="one-four animateThis" data-anim="fadeInUp">
-                          <p>Беларусь / Россия</p>
+                          <div class="country-aside-menu sticky-block" data-offsettop="50">
+                            <p>Беларусь / Россия</p>
+                          </div>
                         </div>
                         <div class="three-four">
+                          <!--TODO need settings for validation-->
                           <div class="country-blocks-wrapper">
                             <div class="country-block active">
                               <div class="country-block-inner animateThis" data-anim="fadeInUp">
@@ -644,7 +647,9 @@
         </div>
       </div>
     </div>
-    <div class="modals"></div>
+    <div class="modals">
+      <!--TODO need modals!!!-->
+    </div>
     <!--END out-->
     <script src="js/lib.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFkgUmSnM7fy40cDnRn8BB_xu1cp7Ros&amp;callback="></script>

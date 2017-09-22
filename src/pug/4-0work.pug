@@ -36,8 +36,8 @@ block content
 					mixin one-four-advantage(img, text)
 						.one-four
 							.advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
-								.advantage-img
-									img(src=img).js-image
+								.advantage-img-item
+									img(src=img).js-image.advantage-img
 								.advantage-text
 									p= text
 						- adv=adv+0.08
@@ -47,7 +47,8 @@ block content
 					+one-four-advantage('/img/4-0/icon_4.png', 'Мы создаем комфортные условия для работы в наших компаниях. Предлагаем полный соц. пакет и компенсацию проезда до места работы.')
 		.box#parallax.work.aside-menu-item(data-aside="Цифры")
 			.parallax-img
-				img(src="/img/4-0/parallax_bg.jpg", alt="")
+				.parallax-img-relative
+					img(src="/img/4-0/parallax_bg.jpg", alt="" data-rellax-speed="2").rellax
 			.block
 				.flex-block
 					.one-four
@@ -118,7 +119,7 @@ block content
 								.img-wrapper(style="background-image: url('/img/4-0/opport.jpg')")
 		.box#vacancy-block
 			.block
-				.vacancy-block-green
+				.vacancy-block-green.bgMoveUp
 					.vacancy-text-wrapper
 						p.vacancy-text Все открытые вакансии на портале
 						a(href="#").vacancy-href jobs.servolux.by
