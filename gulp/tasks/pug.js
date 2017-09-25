@@ -4,6 +4,7 @@ import plumber from "gulp-plumber"
 import pug from "gulp-pug"
 import config from '../config'
 import cache from 'gulp-cached'
+import pugbem from 'gulp-pugbem'
 // var changed = require("gulp-changed");
 
 gulp.task('pug', function() {
@@ -13,7 +14,10 @@ gulp.task('pug', function() {
             '!' + config.src.pug + '/includes/*.pug'])
         .pipe(plumber({errorHandler: notify.onError(function(error){return error.message;})}))
         // .pipe(changed(dest.html, {extension: '.html'}))
-        .pipe(pug({pretty: true}))
+        .pipe(pug({
+          pretty: true,
+          plugins: [pugbem]
+        }))
         .pipe(cache('pugging'))
         .pipe(gulp.dest(config.dest.html));
 });
@@ -25,7 +29,10 @@ gulp.task('pug-all', function() {
         '!' + config.src.pug + '/_*.pug', 
         '!' + config.src.pug + '/includes/*.pug'])
         .pipe(plumber({errorHandler: notify.onError(function(error){return error.message;})}))
-        .pipe(pug({pretty: true}))
+        .pipe(pug({
+          pretty: true,
+	        plugins: [pugbem]
+        }))
         .pipe(cache('puggingall'))
         .pipe(gulp.dest(config.dest.html));
 });

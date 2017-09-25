@@ -42,6 +42,8 @@ button
 
 textarea
 	resize: none
+	font-family: 'Roboto'
+	+rem(font-size, 16px)
 	+placeholder
 		font-family: $o
 		+rem(font-size, 14px)
@@ -1706,6 +1708,8 @@ $slSize: 410px
 #footer
 	background-color: $white
 	border-top: 1px solid $lineColor
+	.caption
+		margin: 0
 	.block
 		+rem(padding-top, 22px)
 		+rem(padding-bottom, 22px)
@@ -1758,6 +1762,8 @@ $slSize: 410px
 	.footer-office-wrapper
 		position: absolute
 		bottom: 0
+		.caption
+			margin: 0
 		.office-title
 			+rem(font-size, 18px)
 			+rem(line-height, 30px)
@@ -1782,9 +1788,11 @@ $slSize: 410px
 		left: 0
 		.caption
 			+rem(margin-bottom, 3px)
+			margin: 0
 		.href
 			font-weight: 700
 			color: $green
+			margin: 0
 		&:hover
 			.href
 				color: $active
@@ -1793,7 +1801,7 @@ $slSize: 410px
 			+rem(margin-top, 50px)
 	.footer-block-wrapper
 		.callback-button
-			+rem(margin-top, 50px)
+			+rem(margin-top, 35px)
 	&.footer2
 		.box
 			padding: 40px
@@ -2548,7 +2556,10 @@ $galleryBigHeight: 590px
 	margin-bottom: 0
 	span
 		+rem(font-size, 16px)
-
+		display: block
+		margin: 0
+		+rem(line-height, 10px)
+		+rem(margin-bottom, 10px)
 
 .flex-img-wrapper
 	width: 100%
@@ -2584,7 +2595,14 @@ $galleryBigHeight: 590px
 		width: 100%
 		background: url('../img/4-0/pattern.jpg') 0 0 repeat
 		position: relative
+		display: block
 		+rem(padding, 50px)
+		&:hover
+			animation-duration: 50s
+			.vacancy-button
+				.callback-button
+					background-color: $active
+					border-color: $active
 		&>*
 			display: inline-block
 		.vacancy-text, .vacancy-href
@@ -2812,6 +2830,7 @@ $galleryBigHeight: 590px
 			+rem(padding, 20px)
 			+rem(font-size, 18px)
 			position: relative
+			margin: 0
 		svg
 			position: absolute
 			+rem(width, 19px)
@@ -2894,8 +2913,10 @@ $galleryBigHeight: 590px
 			font-weight: 400
 			display: block
 			+rem(padding-right, 30px)
+			margin: 0
 		&__counter
 			position: absolute
+			margin: 0
 			+rem(right, 0px)
 			+rem(top, 9px)
 			+rem(font-size, 14px)
@@ -2903,26 +2924,37 @@ $galleryBigHeight: 590px
 #jobs-content-inner-wrapper
 	+rem(padding-left, 50px)
 
+.clearfix
+	clear: both
+
 #jobs-content-inner-sorting
 	border-bottom: 1px solid $lineColor
 	+rem(padding-bottom, 15px)
 	+rem(padding-top, 10px)
 	+rem(margin-bottom, 20px)
+	z-index: 2
+	position: relative
 	.jobs-content-sorting
+		z-index: 10
 		position: relative
-		&:after
-			display: block
-			position: relative
-			content: ''
-			clear: both
+		&__arrow
+			+rem(width, 20px)
+			+rem(height, 20px)
+			transition: transform .2s
+			cursor: pointer
+			vertical-align: top
+			+rem(margin-top, 3px)
+			&.upside
+				transform: rotate(180deg)
 		&-finded
 			display: inline-block
 			&>*
 				display: inline-block
 				font-weight: 400
-		&-sort
+		&--sort
 			display: inline-block
 			float: right
+			vertical-align: top
 			&>*
 				display: inline-block
 				font-weight: 400
@@ -2930,9 +2962,45 @@ $galleryBigHeight: 590px
 			+rem(margin-right, 7px)
 		&__bold-text
 			font-weight: 600
+			padding: 5px
+			cursor: pointer
+			margin: 0
+			+rem(margin-right, 5px)
+		&__select-wrapper
+			&:hover
+				.jobs-content-sorting__select
+					height: auto
+					border: 1px solid #eee
+					transition: transform .2s, opacity .1s
+					opacity: 1
+					transform: translatey(0)
+		&__select-inner-wrapper
+			position: absolute
+			margin-left: -5px
+			right: 0
 		&__select
 			font-weight: 600
-			border: 0
+			height: 0px
+			position: relative
+			overflow: hidden
+			background-color: #fff
+			border: 0px solid #eee
+			opacity: 0
+			transform: translatey(20px)
+			width: auto
+			&-item
+				+rem(padding, 5px)
+				+rem(padding-top, 1px)
+				+rem(padding-bottom,1px)
+				position: relative
+				font-weight: 400
+				color: $text-gray
+				&.active
+					.jobs-content-sorting__bold-text
+						color: $green
+				&:hover
+					.jobs-content-sorting__bold-text
+						color: $active
 
 #jobs-content-inner-tags
 	+rem(margin-bottom, 20px)
@@ -2960,6 +3028,7 @@ $galleryBigHeight: 590px
 		&__text
 			color: #484f42
 			font-weight: 400
+			margin: 0
 		&__close-button
 			+rem(width, 18px)
 			+rem(height, 18px)
@@ -3056,6 +3125,8 @@ $galleryBigHeight: 590px
 		+rem(top, -48px)
 		.flex-block
 			+rem(margin-bottom, 20px)
+			p
+				margin: 0
 	.job-sticky-buttons
 		text-align: center
 		position: relative

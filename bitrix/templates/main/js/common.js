@@ -6,6 +6,111 @@ window.onload = function () {
 		$('#main-video').get(0).play();
 	}
 
+	if ($('#dates').length) {
+		$('#dates-slider').slick({
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			infinite: false,
+			focusOnSelect: false,
+			accessibility: false,
+			responsive: [{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					arrows: false,
+					infinite: false
+				}
+			}, {
+				breakpoint: 750,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					arrows: false,
+					infinite: false
+				}
+			}, {
+				breakpoint: 540,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					infinite: false
+				}
+			}]
+		});
+	}
+
+	if ($('#brand-products').length) {
+		var $productsSlider = $('#brand-products-slider');
+		$productsSlider.slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			infinite: false,
+			focusOnSelect: false,
+			accessibility: false,
+			responsive: [{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			}, {
+				breakpoint: 750,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			}, {
+				breakpoint: 540,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}]
+		});
+		var productsSliesLength = $productsSlider.find('.slick-dots li').length;
+		$productsSlider.append('<div class="slick-sum-slides">/ ' + productsSliesLength + '</div>');
+	}
+
+	if ($('#news-inner-slider').length) {
+		var $newsInnerSlider = $('#news-inner-slider');
+		$newsInnerSlider.slick({
+			arrows: true,
+			dots: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: false,
+			focusOnSelect: false,
+			accessibility: false
+		});
+
+		var _productsSliesLength = $newsInnerSlider.find('.slick-dots li').length;
+		$newsInnerSlider.append('<div class="slick-sum-slides">/ ' + _productsSliesLength + '</div>');
+	}
+
+	if ($('.vertical-slider').length) {
+
+		var $verticalSlider = $('.vertical-slider'),
+		    maxHeight = $verticalSlider.height();
+		$verticalSlider.find('.img-wrapper').height(maxHeight);
+
+		$verticalSlider.slick({
+			arrows: true,
+			dots: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: true,
+			focusOnSelect: false,
+			accessibility: false,
+			vertical: true,
+			verticalSwiping: true,
+			responsive: true
+		});
+	}
+
 	if ($('#canvas').length) {
 
 		var barNumber = 0,
@@ -511,110 +616,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 	console.log('Height '+docFunctions.findHeight())
 	// });
 
-	if ($('#dates').length) {
-		$('#dates-slider').slick({
-			slidesToShow: 4,
-			slidesToScroll: 4,
-			infinite: false,
-			focusOnSelect: false,
-			accessibility: false,
-			responsive: [{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					arrows: false,
-					infinite: false
-				}
-			}, {
-				breakpoint: 750,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-					arrows: false,
-					infinite: false
-				}
-			}, {
-				breakpoint: 540,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: false,
-					infinite: false
-				}
-			}]
-		});
-	}
-
-	if ($('#brand-products').length) {
-		var $productsSlider = $('#brand-products-slider');
-		$productsSlider.slick({
-			arrows: true,
-			dots: true,
-			slidesToShow: 4,
-			slidesToScroll: 4,
-			infinite: false,
-			focusOnSelect: false,
-			accessibility: false,
-			responsive: [{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3
-				}
-			}, {
-				breakpoint: 750,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			}, {
-				breakpoint: 540,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}]
-		});
-		var productsSliesLength = $productsSlider.find('.slick-dots li').length;
-		$productsSlider.append('<div class="slick-sum-slides">/ ' + productsSliesLength + '</div>');
-	}
-
-	if ($('#news-inner-slider').length) {
-		var $newsInnerSlider = $('#news-inner-slider');
-		$newsInnerSlider.slick({
-			arrows: true,
-			dots: true,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			infinite: false,
-			focusOnSelect: false,
-			accessibility: false
-		});
-
-		var _productsSliesLength = $newsInnerSlider.find('.slick-dots li').length;
-		$newsInnerSlider.append('<div class="slick-sum-slides">/ ' + _productsSliesLength + '</div>');
-	}
-
-	if ($('.vertical-slider').length) {
-		var $verticalSlider = $('.vertical-slider');
-		$verticalSlider.slick({
-			arrows: true,
-			dots: false,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			infinite: true,
-			focusOnSelect: false,
-			accessibility: true,
-			vertical: true,
-			verticalSwiping: true,
-			responsive: true
-		});
-		$(window).on('load', function () {
-			var maxHeight = $verticalSlider.height();
-			$verticalSlider.find('.img-wrapper').height(maxHeight);
-		});
-	}
 
 	// PARALLAX event on scroll trigger
 	// if (hasParallax) {
@@ -1066,11 +1067,30 @@ document.addEventListener('DOMContentLoaded', function () {
 	if ($('.formFocus').length) {
 		$.validate({
 			form: '#job-form',
-			modules: 'html5, security',
+			modules: 'html5, security, file',
 			lang: 'ru',
 			addValidClassOnAll: true,
 			validateOnBlur: true, // disable validation when input looses focus
 			errorMessagePosition: 'bottom'
 		});
+
+		$("#attachment").dropzone({ url: "/img/" });
+
+		// $('#attachment').change(function(){
+		// 	$(this).parent().parent().removeClass('has-error').find('.error-text').text('');
+		//
+		// 	let files = $('#attachment').prop("files")
+		//
+		// 	console.log($('#attachment').prop("files"))
+		//
+		// 	// files.map(function(val){
+		// 	// 	$('#attachment').parent().parent().parent().append( '<div class="file-item" data-file="0"><p>' + $(this).val().split('\\').pop() + '</p><p class="caption">~' + this.files[0].size + '</p></div>');
+		// 	// });
+		//
+		// 	if (this.files[0].size > 51000000) {
+		// 		$(this).parent().parent().addClass('has-error')
+		// 		$(this).parent().find('.error-text').text('Вы превысили допустимый лимит в 50 Мб')
+		// 	}
+		// })
 	}
 });

@@ -44,7 +44,7 @@ block content
 								p.line-left Место работы пос. Октябрьский.
 						+backButonWrapper('Ко всем вакансиям')
 					.one-four
-						.job-sticky-block.sticky-block
+						.job-sticky-block.sticky-block(data-offsettop="200")
 							.job-sticky-box
 								.job-sticky-circle
 									.job-sticky-circle-inner
@@ -83,7 +83,7 @@ block content
 						+download_pdf('Скачать шаблон резюме')
 					.one-half
 						.job-form-wrapper
-							form#job-form.formFocus
+							form#job-form.formFocus(enctype="multipart/form-data")
 								label.form-name.form-group
 									p ФИО
 									.form-input-wrapper.control-label
@@ -103,9 +103,13 @@ block content
 									p Сопроводительное письмо
 									.form-input-wrapper.control-label
 										textarea(name='userText').form-control
-								label.form-file
-									svg(class="icon icon-vacancy")
-										use(xlink:href="#attach" xmlns:xlink="http://www.w3.org/1999/xlink")
-									p.href Прикрепить резюме
-									input(type='file')
+								.input-file-wrapper
+									label.form-file.form-group
+										svg(class="icon icon-vacancy")
+											use(xlink:href="#attach" xmlns:xlink="http://www.w3.org/1999/xlink")
+										p.href Прикрепить резюме
+										.control-label
+											.error-text
+											#files-input
+											input(type='file', name="file", data-validation='size', data-validation-max-size="100kb", required multiple)#attachment
 								button(type="submit").callback-button Отправить

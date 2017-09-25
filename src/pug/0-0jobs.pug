@@ -103,27 +103,41 @@ block content
 								.jobs-content-sorting-finded
 									.jobs-content-sorting__text.caption По вашему запросу найдено
 									.jobs-content-sorting__bold-text.darker 16 вакансий
-								.jobs-content-sorting-sort
-									.jobs-content-sorting__text.caption Сортировать по:
-									select.jobs-content-sorting__select
-										option
-											.jobs-content-sorting__bold-text.darker Дате
-										option
-											.jobs-content-sorting__bold-text.darker Названию
-										option
-											.jobs-content-sorting__bold-text.darker З/П
-									.jobs-content-sorting-arrow
+								.jobs-content-sorting.-sort
+									._text.caption Сортировать по:
+									._select-wrapper
+										._bold-text.darker.current Датe
+										._select-inner-wrapper
+											._select
+												._select-item.active
+													p._bold-text Дате
+												._select-item
+													p._bold-text Названию от А до Я
+												._select-item
+													p._bold-text Названию от Я до А
+												._select-item
+													p._bold-text Возрастанию зарплаты
+												._select-item
+													p._bold-text Убыванию зарплаты
+												._select-item
+													p._bold-text Региону от А до Я
+												._select-item
+													p._bold-text Региону от Я до А
+									._arrow.upside
+										svg(class="icon icon-vacancy")
+											use(xlink:href="#arrow_sort" xmlns:xlink="http://www.w3.org/1999/xlink")
+							.clearfix
 							#jobs-content-inner-tags.animateThis(data-anim="fadeInUp")
 								.jobs-content-inner-tags-wrapper
 									.jobs-content-inner-tag
-										p.jobs-content-inner-tag__text Автомобильный бизнес
-										.jobs-content-inner-tag__close-button
+										p._text Автомобильный бизнес
+										._close-button
 											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.1 10.2")
 												path(d="M9.8.4L5 5.1l4.7 4.7").close-filter-svg
 												path(d="M.4.4L5 5.1.4 9.8").close-filter-svg
 									.jobs-content-inner-tag
-										p.jobs-content-inner-tag__text Административный персонал
-										.jobs-content-inner-tag__close-button
+										p._text Административный персонал
+										._close-button
 											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.1 10.2")
 												path(d="M9.8.4L5 5.1l4.7 4.7").close-filter-svg
 												path(d="M.4.4L5 5.1.4 9.8").close-filter-svg
@@ -150,7 +164,8 @@ block content
 									+jobs-item('Бренд - менеджер')
 		.box#parallax.jobs-parallax
 			.parallax-img
-				img(src="/img/6-1/parallax-img.jpg", alt="").js-image
+				.parallax-img-relative
+					img(src="/img/6-1/parallax-img.jpg", alt="", data-rellax-speed='2').js-image.rellax
 			.block
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInUp")
