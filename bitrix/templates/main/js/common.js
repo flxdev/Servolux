@@ -165,6 +165,8 @@ window.onload = function () {
 	}
 };
 
+Dropzone.autoDiscover = false;
+
 function isMobile() {
 	return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent)
 	);
@@ -1074,7 +1076,27 @@ document.addEventListener('DOMContentLoaded', function () {
 			errorMessagePosition: 'bottom'
 		});
 
-		$("#attachment").dropzone({ url: "/img/" });
+		$('#job-form').dropzone({
+			url: "/post",
+			paramName: "file",
+			maxFilesize: 50,
+			uploadMultiple: true,
+			previewsContainer: '#files-input',
+			createImageThumbnails: false,
+			addRemoveLinks: true,
+			dictDefaultMessage: 'Прикрепить резюме'
+		});
+
+		// var myDropZone = new Dropzone("#job-form", {
+		// 	paramName: 'file',
+		// 	url: "/post",
+		// 	uploadMultiple: true,
+		// 	previewsContainer: '#files-input',
+		// 	createImageThumbnails: false,
+		// 	// accept: function(file, done){
+		// 	// 		$('#files-input').append(file.previewElement)
+		// 	// }
+		// });
 
 		// $('#attachment').change(function(){
 		// 	$(this).parent().parent().removeClass('has-error').find('.error-text').text('');

@@ -2938,12 +2938,12 @@ $galleryBigHeight: 590px
 		z-index: 10
 		position: relative
 		&__arrow
-			+rem(width, 20px)
-			+rem(height, 20px)
+			+rem(width, 16px)
+			+rem(height, 16px)
 			transition: transform .2s
 			cursor: pointer
-			vertical-align: top
-			+rem(margin-top, 3px)
+			vertical-align: middle
+			+rem(margin-top, 0px)
 			&.upside
 				transform: rotate(180deg)
 		&-finded
@@ -3224,6 +3224,8 @@ form
 			width: 100%
 
 form
+	.input-file-wrapper
+		display: inline-block
 	p
 		margin: 0
 	.callback-button
@@ -3232,6 +3234,51 @@ form
 		float: right
 		+rem(margin-top, 10px)
 		+rem(margin-bottom, 0px)
+	.dz-default
+		margin-top: 30px
+		padding-left: 30px
+		font-weight: 600
+		color: $green
+		cursor: pointer
+		display: inline-block
+		position: absolute
+		left: 0
+		&:hover
+			color: $active
+		&:before
+			position: absolute
+			display: block
+			content: ''
+			width: 20px
+			height: 20px
+			background: url('../img/6-2/attach.svg') 50% 50% no-repeat
+			background-size: contain
+			left: 0
+	#files-input
+		.dz-preview
+			float: left
+			position: relative
+			top: 60px
+			width: auto
+		.dz-error-mark
+			display: none
+		.dz-progress
+			display: none
+		.dz-size
+			float: right
+			margin-left: 20px
+		.dz-filename
+			float: left
+		.dz-error-message
+			float: left
+		.dz-remove
+			position: absolute
+			top: 0
+			right: 0
+			font-size: 0
+			width: 10px
+			height: 10px
+			background-color: #333
 
 #non
 	+rem(padding-bottom, 200px)

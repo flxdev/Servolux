@@ -3216,16 +3216,16 @@ main {
     z-index: 10;
     position: relative; }
     #jobs-content-inner-sorting .jobs-content-sorting__arrow {
-      width: 1.25rem;
-      height: 1.25rem;
+      width: 1rem;
+      height: 1rem;
       -webkit-transition: -webkit-transform .2s;
       transition: -webkit-transform .2s;
       -o-transition: transform .2s;
       transition: transform .2s;
       transition: transform .2s, -webkit-transform .2s;
       cursor: pointer;
-      vertical-align: top;
-      margin-top: 0.1875rem; }
+      vertical-align: middle;
+      margin-top: 0; }
       #jobs-content-inner-sorting .jobs-content-sorting__arrow.upside {
         -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
@@ -3535,6 +3535,9 @@ form label {
     border: 0;
     width: 100%; }
 
+form .input-file-wrapper {
+  display: inline-block; }
+
 form p {
   margin: 0; }
 
@@ -3544,6 +3547,59 @@ form .callback-button {
   float: right;
   margin-top: 0.625rem;
   margin-bottom: 0; }
+
+form .dz-default {
+  margin-top: 30px;
+  padding-left: 30px;
+  font-weight: 600;
+  color: #55b521;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  left: 0; }
+  form .dz-default:hover {
+    color: #0056b8; }
+  form .dz-default:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url("../img/6-2/attach.svg") 50% 50% no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    left: 0; }
+
+form #files-input .dz-preview {
+  float: left;
+  position: relative;
+  top: 60px;
+  width: auto; }
+
+form #files-input .dz-error-mark {
+  display: none; }
+
+form #files-input .dz-progress {
+  display: none; }
+
+form #files-input .dz-size {
+  float: right;
+  margin-left: 20px; }
+
+form #files-input .dz-filename {
+  float: left; }
+
+form #files-input .dz-error-message {
+  float: left; }
+
+form #files-input .dz-remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #333; }
 
 #non {
   padding-bottom: 12.5rem; }
@@ -4327,6 +4383,50 @@ tspan.mg-points-mono {
 
 .mg-year-marker-small text {
   font-size: 0.6rem; }
+
+.dropzone, .dropzone * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.dropzone {
+  position: relative; }
+
+.dropzone .dz-preview {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  margin: 0.5em; }
+
+.dropzone .dz-preview .dz-progress {
+  display: block;
+  height: 15px;
+  border: 1px solid #aaa; }
+
+.dropzone .dz-preview .dz-progress .dz-upload {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: green; }
+
+.dropzone .dz-preview .dz-error-message {
+  color: red;
+  display: none; }
+
+.dropzone .dz-preview.dz-error .dz-error-message, .dropzone .dz-preview.dz-error .dz-error-mark {
+  display: block; }
+
+.dropzone .dz-preview.dz-success .dz-success-mark {
+  display: block; }
+
+.dropzone .dz-preview .dz-error-mark, .dropzone .dz-preview .dz-success-mark {
+  position: absolute;
+  display: none;
+  left: 30px;
+  top: 30px;
+  width: 54px;
+  height: 58px;
+  left: 50%;
+  margin-left: -27px; }
 
 html.remodal-is-locked {
   overflow-y: hidden;
