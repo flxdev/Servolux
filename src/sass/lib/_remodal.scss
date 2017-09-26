@@ -1,8 +1,25 @@
 html.remodal-is-locked {
   overflow-y: hidden;
+  position: relative;
 
   -ms-touch-action: none;
   touch-action: none;
+  body{
+    overflow-y: hidden;
+    touch-action: none;
+  }
+}
+
+html.menu-is-locked {
+  overflow-y: hidden;
+  position: relative;
+
+  -ms-touch-action: none;
+  touch-action: none;
+  body{
+    overflow-y: hidden;
+    touch-action: none;
+  }
 }
 
 /* Anti FOUC */

@@ -475,14 +475,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	    mobile = isMobile(),
 	    asideMenu = $('#aside-menu').length ? true : false,
 	    hasParallax = $('#parallax').length ? true : false,
-	    $parallax = void 0,
-	    $parallaxImg = void 0,
-	    parallaxImgHeight = void 0,
-	    parallaxFieldViewTop = void 0,
-	    parallaxFieldViewBottom = void 0,
-	    parallaxFieldView = void 0,
-	    scrollParallax = void 0,
-	    topMenu = void 0,
+
+		// $parallax,
+		// $parallaxImg,
+		// parallaxImgHeight,
+		// parallaxFieldViewTop,
+		// parallaxFieldViewBottom,
+		// parallaxFieldView,
+		// scrollParallax,
+		topMenu = void 0,
 	    menuItems = void 0,
 	    scrollItems = void 0;
 
@@ -504,15 +505,16 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 	}
 	// }
 
+	$('.callback-button').on('click', function () {
+		var buttonText = $(this).text();
+		$('#modal-title').text(buttonText);
+	});
+
 	//burger-menu
 	burger.on('click', function () {
 		$headerMenuWrapper.toggleClass('active');
 		$headerModalWrapper.toggleClass('active');
-		if (mobile) {
-			$('html').toggleClass('remodal-is-locked');
-		} else {
-			$('html').toggleClass('remodal-is-locked');
-		}
+		$('html').toggleClass('menu-is-locked');
 	});
 
 	if ($('#modal').length) {
@@ -535,6 +537,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		    $modal = $('#modal');
 
 		$(document).on('opened', '.remodal', function (e) {
+
 			if (inst.getState() == 'opened') {
 
 				if (!$modal.hasClass('activated')) {
@@ -773,12 +776,12 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (ell > currentSlide) {
 					currentDeg += slideDeg * (ell - currentSlide);
 					$('#scheme-menu').css('transform', 'rotate(-' + currentDeg + 'deg)');
-					$('#scheme-menu g.icon').css('transform', 'rotate(' + currentDeg + 'deg)');
+					$('#scheme-menu .icon').css('transform', 'rotate(' + currentDeg + 'deg)');
 					currentSlide = ell;
 				} else if (ell < currentSlide) {
 					currentDeg += slideDeg * (8 + ell - currentSlide);
 					$('#scheme-menu').css('transform', 'rotate(-' + currentDeg + 'deg)');
-					$('#scheme-menu g.icon').css('transform', 'rotate(' + currentDeg + 'deg)');
+					$('#scheme-menu .icon').css('transform', 'rotate(' + currentDeg + 'deg)');
 					currentSlide = ell;
 				}
 
@@ -1066,19 +1069,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if ($('.formFocus').length) {
 		$.validate({
-			form: '#job-form',
+			form: '.formFocus',
 			modules: 'html5, security, file',
 			lang: 'ru',
 			addValidClassOnAll: true,
 			validateOnBlur: true, // disable validation when input looses focus
 			errorMessagePosition: 'bottom',
 			onSuccess: function onSuccess($form) {
-				alert('The form ' + $form.attr('id') + ' is valid!');
+				var modalSuccess = $('#callbackSuccess').remodal();
+				modalSuccess.open();
 				return false; // Will stop the submission of the form
 			}
 		});
 
-		$('#job-form').dropzone({
+		$('.formFocus').dropzone({
 			url: "/post",
 			paramName: "file",
 			maxFilesize: 50,

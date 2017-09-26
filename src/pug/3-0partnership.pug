@@ -51,9 +51,9 @@ block content
 							.one-half.animateThis(data-anim="fadeInUp")
 								.green-stick-top
 									p Выгодные условия по аренде помещений в вашей местности
-						a.animateThis(data-anim="fadeInUp" href="#").callback-button Стать партнёром
+						a.animateThis(data-anim="fadeInUp" href="#callbackModalWindow").callback-button Стать партнёром
 					.one-half
-						.flex-img-wrapper
+						.flex-img-wrapper.animateThis(data-anim="fadeInUp")
 							.flex-img(style='background-image: url("img/3-0/delivers-img.jpg")').js-image.bg
 				#partners-slider.animateThis(data-anim="fadeInUp")
 					#partners-slider-wrapper.slick-slider
@@ -85,7 +85,7 @@ block content
 						p.h2 Клиентам
 					.one-half.animateThis(data-anim="fadeInUp")
 						p.annotation Наша продукция представлена практически во всех крупных сетях, гипермаркетах, магазинах у дома и специализированных мясных лавках.
-						a(href="#").callback-button Стать клиентом
+						a(href="#callbackModalWindow").callback-button Стать клиентом
 			.block
 				.flex-block.advantages.row
 					- var adv = 0.2
@@ -116,7 +116,7 @@ block content
 						+download_pdf('Отчет по экспорту')
 						+download_pdf('Годовой отчет 2016')
 						+download_pdf('сследование отрасли 2016')
-						a.animateThis(data-anim="fadeInUp" href="#").callback-button Стать инвестором
+						a.animateThis(data-anim="fadeInUp" href="#callbackModalWindow").callback-button Стать инвестором
 					.one-half.animateThis(data-anim="fadeInLeft")
 						.carousel-buttons.animateThis(data-anim="fadeInRight")
 							#chart-control.carousel-buttons-wrap

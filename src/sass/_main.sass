@@ -371,8 +371,23 @@ blockquote
 			+rem(padding-left, 5px)
 			+rem(padding-right, 5px)
 
+#index-brand
+	+r(992)
+		position: relative
+		+rem(padding-bottom, 180px)
+		.block-absolute
+			position: absolute
+			bottom: 0
+			+rem(margin-bottom, -100px)
+	+r(492)
+		+rem(padding-bottom, 100px)
+		.block-absolute
+			+rem(margin-bottom, -60px)
+
 .brands-wrapper
-	margin-top: 60px
+	+rem(margin-top, 60px)
+	+r(492)
+		+rem(margin-top, 10px)
 	#brands, #company-brands-wrapper
 		display: flex
 		justify-content: center
@@ -395,10 +410,13 @@ blockquote
 				+rem(max-width, 200px)
 				+rem(min-width, 150px)
 			+r(992)
-				+rem(max-width, 260px)
-				+rem(min-width, 220px)
+				+rem(max-width, 350px)
+				+rem(min-width, 280px)
 			+r(492)
 				+rem(max-width, 320px)
+				+rem(min-width, 250px)
+			+r(400)
+				+rem(max-width, 400px)
 				+rem(min-width, 250px)
 			&:before
 				display: block
@@ -525,7 +543,7 @@ blockquote
 			fill-rule: evenodd
 			clip-rule:e venodd
 			fill: $green
-			transition: fill 0.2s cubic-bezier(.445, .05, .55, .95)
+			transition: fill 0.2s cubic-bezier(.445, .05, .55, .95) 0.1s
 		.button-fill-arrow
 			fill-rule: evenodd
 			clip-rule: evenodd
@@ -534,7 +552,7 @@ blockquote
 			stroke-width: 1.8
 			stroke-miterlimit: 10
 			position: absolute
-			transition: transform 0.2s cubic-bezier(.445, .05, .55, .95)
+			transition: transform 0.2s cubic-bezier(.445, .05, .55, .95) 0.1s
 			&.blue
 				transform: translatex(-40px)
 				stroke: $active
@@ -704,16 +722,16 @@ main
 		transition: transform 0.3s ease-out 0.05s, opacity 0.1s ease-in 0s
 		transform: translate(0px, -30%)
 		height: 100vh
-		+rem(min-height, 700px)
 		.menu-modal
 			&-wrap
 				width: 100%
 				height: 100%
 				display: flex
-				justify-content: center
+				justify-content: flex-start
+				flex-direction: column
 				align-items: center
 			&-top
-				position: absolute
+				position: relative
 				width: 100%
 				+rem(top, 20px)
 				+r(480)
@@ -722,7 +740,10 @@ main
 				display: flex
 				position: relative
 				align-items: center
+				justify-content: center
 				+rem(min-height, 500px)
+				height: 100%
+				padding-bottom: 20px
 				+r(992)
 					+rem(padding-bottom, 50px)
 					height: auto
@@ -750,6 +771,8 @@ main
 						+rem(max-width, 300px)
 						display: inline-block
 						+rem(padding-right, 100px)
+						+rem(padding-bottom, 50px)
+						+rem(padding-top, 30px)
 						+r(992)
 							display: block
 							padding-top: 0
@@ -795,7 +818,7 @@ main
 			+r(992)
 				.menu-modal
 					&-wrap
-							display: block
+						display: block
 					&-top
 						position: relative
 	&-menu-wrapper.sticked
@@ -900,6 +923,10 @@ main
 	margin: auto
 	+r(1366)
 		max-width: 1200px
+	+r(992)
+		max-width: 80%
+	+r(400)
+		+rem(height, 160px)
 
 .title-svg-main
 	fill: $white
@@ -1000,7 +1027,7 @@ main
 			width: 100%
 			height: 100vh
 			background-color: $green-place
-			opacity: 0.3
+			opacity: 0.6
 		video
 			min-width: 100%
 			min-height: 100vh
@@ -1154,6 +1181,10 @@ main
 							transform: translate(0, 80px)
 							opacity: 1
 
+#index-chart-wrapper
+	+r(992)
+		+rem(margin-top, 20px)
+
 $slSize: 410px
 
 .scheme-wrapper
@@ -1163,7 +1194,8 @@ $slSize: 410px
 	width: 100%
 	+r(992)
 		margin: auto
-		+rem(margin-top, 140px)
+		+rem(margin-top, 30px)
+		+rem(margin-bottom, 50px)
 	+r(550)
 		+rem(margin-top, 90px)
 	+r(492)
@@ -1249,6 +1281,18 @@ $slSize: 410px
 					z-index: -1
 					border-radius: 50%
 					overflow: hidden
+					position: relative
+					&.white-layer
+						&:after
+							position: absolute
+							display: block
+							top: 0
+							left: 0
+							content: ''
+							width: 100%
+							height: 100%
+							background-color: #fff
+							opacity: .7
 				&-text
 					position: absolute
 					+rem(top, 100px)
@@ -1273,7 +1317,7 @@ $slSize: 410px
 					transition-delay: .3s
 				&:not(.active)
 					opacity: 0
-					transform: scale(0.6)
+					transform: scale(0.8) rotate(5deg)
 					transition-delay: .1s
 				img
 					position: absolute
@@ -1289,7 +1333,7 @@ $slSize: 410px
 			margin: auto
 			z-index: 2
 			border-radius: 50%
-			transition: transform 0.2s cubic-bezier(.445, .05, .55, .95)
+			transition: transform .5s cubic-bezier(.445, .05, .55, .95)
 			svg
 				.scheme-circle
 					fill-rule:evenodd
@@ -1322,7 +1366,10 @@ $slSize: 410px
 	.scheme-menu
 		transform-origin: 50% 50%
 		transition: transform 0.5s cubic-bezier(.445, .05, .55, .95)
+		position: relative
 		g.icon
+			position: relative
+			opacity: 0.99
 			transform-origin: 50% 50%
 			transition: transform 0.5s cubic-bezier(.445, .05, .55, .95), fill 0s 0.05s
 	.scheme-part
@@ -1343,6 +1390,7 @@ $slSize: 410px
 		fill: #EFEFEF
 	.scheme-button
 		cursor: pointer
+		position: relative
 		&.active
 			cursor: pointer
 			.scheme-part, .scheme-part-green
@@ -1442,6 +1490,7 @@ $slSize: 410px
 		height: 100%
 	.rellax
 		min-height: 130%
+		min-width: 100%
 		+r(992)
 			top: 0
 			height: 100%
@@ -1560,6 +1609,8 @@ $slSize: 410px
 #news
 	.button-green-wrapper
 		margin-top: 0
+		+r(992)
+			+rem(margin-top, 50px)
 	.news
 		width: 100%
 		display: block
@@ -1738,7 +1789,13 @@ $slSize: 410px
 			width: 32%
 	+r(992)
 		width: 100%
-		.one-four
+		.footer-first
+			width: 100%
+		.footer-second
+			width: 100%
+		.footer-third
+			width: 100%
+		.footer-fourth
 			width: 100%
 	.footer-first
 		+rem(width, 240px)
@@ -1827,7 +1884,7 @@ $slSize: 410px
 			+rem(margin-top, 35px)
 	&.footer2
 		.box
-			padding: 40px
+			+rem(padding, 40px)
 		.callback-wrap
 			margin-bottom: 0
 		.flex-block
@@ -2009,7 +2066,7 @@ $galleryBigHeight: 590px
 						width: 100%
 						height: 100%
 						transform: scale(1)
-						transition: transform 1s cubic-bezier(.445, .05, .55, .95)
+						transition: transform 0.4s cubic-bezier(.445, .05, .55, .95)
 				.gallery-item-text-wrapper
 					position: absolute
 					+rem(bottom, 30px)
@@ -2624,9 +2681,9 @@ $galleryBigHeight: 590px
 		position: relative
 		display: block
 		+rem(padding, 50px)
+		animation-duration: 0s
 		&:hover
-			animation-duration: 60s
-			background-image: linear-gradient(rgba(0, 86, 184, 0.45),rgba(0, 86, 184, 0.45)), url('../img/4-0/pattern2.jpg')
+			animation-duration: 120s
 		&>*
 			display: inline-block
 		.vacancy-text, .vacancy-href
@@ -2657,7 +2714,7 @@ $galleryBigHeight: 590px
 				&:hover
 					background-color: $white
 					border-color: $white
-					color: $active
+					color: $green
 #offices
 	.map
 		height: 100%
@@ -2710,6 +2767,10 @@ $galleryBigHeight: 590px
 
 .country-aside-menu
 	+rem(margin-top, 50px)
+	width: 100%!important
+	top: 0
+	bottom: auto!important
+	transition: opacity 0s
 	.href
 		cursor: pointer
 		display: table
@@ -3343,3 +3404,47 @@ form
 		.search
 			+rem(margin-top, 50px)
 			text-align: left
+
+#callbackModalWindow
+	max-width: 700px
+	text-align: left
+	padding-bottom: 80px
+	.h2
+		margin-bottom: 0
+		margin-left: 20px
+	form
+		position: relative
+		&:after
+			display: block
+			position: relative
+			content: ''
+			clear: both
+		.form-modal-label-wrapper
+			padding-left: 15px
+			padding-right: 15px
+		label
+			border: 0
+			border-bottom: 1px solid $lineColor
+			padding-top: 36px
+			border-radius: 0
+			text-align: left
+			padding-left: 0
+			width: 100%
+			.form-input-wrapper
+				padding: 0
+			&.has-error
+				border-color: red
+			&.has-success
+				border-color: $green
+			&.active
+				padding-top: 10px
+		.dz-filename
+			max-width: 200px
+		.dz-message
+			margin-left: 20px
+		#files-input
+			margin-left: 20px
+
+#callbackSuccess
+	max-width: 400px
+	text-align: left

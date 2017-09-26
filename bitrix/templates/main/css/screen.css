@@ -520,7 +520,7 @@ blockquote {
       margin: auto; }
 
 .brands-wrapper {
-  margin-top: 60px; }
+  margin-top: 3.75rem; }
   .brands-wrapper #brands, .brands-wrapper #company-brands-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -701,9 +701,9 @@ blockquote {
     .button-green .button-green__text-block__circle .button-fill-round {
       fill-rule: evenodd;
       fill: #55b521;
-      -webkit-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      -o-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+      -webkit-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s;
+      -o-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s;
+      transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s; }
     .button-green .button-green__text-block__circle .button-fill-arrow {
       fill-rule: evenodd;
       clip-rule: evenodd;
@@ -712,11 +712,11 @@ blockquote {
       stroke-width: 1.8;
       stroke-miterlimit: 10;
       position: absolute;
-      -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      -o-transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+      -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s;
+      transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s;
+      -o-transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s;
+      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s;
+      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s, -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s; }
       .button-green .button-green__text-block__circle .button-fill-arrow.blue {
         -webkit-transform: translatex(-40px);
         -ms-transform: translatex(-40px);
@@ -915,8 +915,7 @@ main {
   -webkit-transform: translate(0px, -30%);
   -ms-transform: translate(0px, -30%);
   transform: translate(0px, -30%);
-  height: 100vh;
-  min-height: 43.75rem; }
+  height: 100vh; }
   #header-modal-wrapper .menu-modal-wrap {
     width: 100%;
     height: 100%;
@@ -924,16 +923,21 @@ main {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
   #header-modal-wrapper .menu-modal-top {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 1.25rem; }
   #header-modal-wrapper .menu-modal-middle {
@@ -946,7 +950,13 @@ main {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 31.25rem; }
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 31.25rem;
+    height: 100%;
+    padding-bottom: 20px; }
     #header-modal-wrapper .menu-modal-middle .menu-columns {
       display: -webkit-box;
       display: -webkit-flex;
@@ -964,7 +974,9 @@ main {
       #header-modal-wrapper .menu-modal-middle .menu-columns .column {
         max-width: 18.75rem;
         display: inline-block;
-        padding-right: 6.25rem; }
+        padding-right: 6.25rem;
+        padding-bottom: 3.125rem;
+        padding-top: 1.875rem; }
         #header-modal-wrapper .menu-modal-middle .menu-columns .column .callback-wrap .tell {
           font-size: 1.125rem; }
         #header-modal-wrapper .menu-modal-middle .menu-columns .column .callback-wrap .sub {
@@ -1225,7 +1237,7 @@ main {
       width: 100%;
       height: 100vh;
       background-color: #2f6213;
-      opacity: 0.3; }
+      opacity: 0.6; }
     #main-screen-wrapper #main-first-screen-fading-wrapper video {
       min-width: 100%;
       min-height: 100vh;
@@ -1462,7 +1474,18 @@ main {
           z-index: -1;
           -webkit-border-radius: 50%;
           border-radius: 50%;
-          overflow: hidden; }
+          overflow: hidden;
+          position: relative; }
+          .scheme-wrapper .scheme-slider-wrapper #scheme-slider .scheme-slider__slide-image.white-layer:after {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            opacity: .7; }
         .scheme-wrapper .scheme-slider-wrapper #scheme-slider .scheme-slider__slide-text {
           position: absolute;
           top: 6.25rem;
@@ -1491,9 +1514,9 @@ main {
           transition-delay: .3s; }
         .scheme-wrapper .scheme-slider-wrapper #scheme-slider .scheme-slider__slide:not(.active) {
           opacity: 0;
-          -webkit-transform: scale(0.6);
-          -ms-transform: scale(0.6);
-          transform: scale(0.6);
+          -webkit-transform: scale(0.8) rotate(5deg);
+          -ms-transform: scale(0.8) rotate(5deg);
+          transform: scale(0.8) rotate(5deg);
           -webkit-transition-delay: .1s;
           -o-transition-delay: .1s;
           transition-delay: .1s; }
@@ -1512,11 +1535,11 @@ main {
       z-index: 2;
       -webkit-border-radius: 50%;
       border-radius: 50%;
-      -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      -o-transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+      -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      -o-transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       .scheme-wrapper .scheme-slider-wrapper .scheme-slider__update svg .scheme-circle {
         fill: #FFFFFF;
         -webkit-transition: fill 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -1548,8 +1571,11 @@ main {
     transition: -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     -o-transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    position: relative; }
     #scheme .scheme-menu g.icon {
+      position: relative;
+      opacity: 0.99;
       -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
@@ -1579,7 +1605,8 @@ main {
   #scheme .scheme-part-circle {
     fill: #EFEFEF; }
   #scheme .scheme-button {
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative; }
     #scheme .scheme-button.active {
       cursor: pointer; }
       #scheme .scheme-button.active .scheme-part, #scheme .scheme-button.active .scheme-part-green {
@@ -1666,7 +1693,8 @@ main {
     width: 100%;
     height: 100%; }
   #parallax .rellax {
-    min-height: 130%; }
+    min-height: 130%;
+    min-width: 100%; }
 
 .carousel-buttons {
   background-color: #f5f6f6;
@@ -2000,7 +2028,7 @@ main {
   #footer .footer-block-wrapper .callback-button {
     margin-top: 2.1875rem; }
   #footer.footer2 .box {
-    padding: 40px; }
+    padding: 2.5rem; }
   #footer.footer2 .callback-wrap {
     margin-bottom: 0; }
   #footer.footer2 .flex-block {
@@ -2186,11 +2214,11 @@ main {
             -webkit-transform: scale(1);
             -ms-transform: scale(1);
             transform: scale(1);
-            -webkit-transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-            transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-            -o-transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-            transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-            transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+            -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            -o-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
         #gallery .gallery-block .gallery-item .gallery-item-inner .gallery-item-text-wrapper {
           position: absolute;
           bottom: 1.875rem;
@@ -2878,14 +2906,12 @@ main {
   background-repeat: repeat;
   position: relative;
   display: block;
-  padding: 3.125rem; }
+  padding: 3.125rem;
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s; }
   #vacancy-block .vacancy-block-green:hover {
-    -webkit-animation-duration: 60s;
-    animation-duration: 60s;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 86, 184, 0.45)), to(rgba(0, 86, 184, 0.45))), url("../img/4-0/pattern2.jpg");
-    background-image: -webkit-linear-gradient(rgba(0, 86, 184, 0.45), rgba(0, 86, 184, 0.45)), url("../img/4-0/pattern2.jpg");
-    background-image: -o-linear-gradient(rgba(0, 86, 184, 0.45), rgba(0, 86, 184, 0.45)), url("../img/4-0/pattern2.jpg");
-    background-image: linear-gradient(rgba(0, 86, 184, 0.45), rgba(0, 86, 184, 0.45)), url("../img/4-0/pattern2.jpg"); }
+    -webkit-animation-duration: 120s;
+    animation-duration: 120s; }
   #vacancy-block .vacancy-block-green > * {
     display: inline-block; }
   #vacancy-block .vacancy-block-green .vacancy-text, #vacancy-block .vacancy-block-green .vacancy-href {
@@ -2920,7 +2946,7 @@ main {
       #vacancy-block .vacancy-block-green .vacancy-button .callback-button:hover {
         background-color: white;
         border-color: white;
-        color: #0056b8; }
+        color: #55b521; }
 
 #offices .map {
   height: 100%;
@@ -2974,7 +3000,13 @@ main {
   max-width: 100%; }
 
 .country-aside-menu {
-  margin-top: 3.125rem; }
+  margin-top: 3.125rem;
+  width: 100% !important;
+  top: 0;
+  bottom: auto !important;
+  -webkit-transition: opacity 0s;
+  -o-transition: opacity 0s;
+  transition: opacity 0s; }
   .country-aside-menu .href {
     cursor: pointer;
     display: table;
@@ -3643,6 +3675,51 @@ form #files-input {
     #non .flex-block .search {
       margin-top: 3.125rem;
       text-align: left; }
+
+#callbackModalWindow {
+  max-width: 700px;
+  text-align: left;
+  padding-bottom: 80px; }
+  #callbackModalWindow .h2 {
+    margin-bottom: 0;
+    margin-left: 20px; }
+  #callbackModalWindow form {
+    position: relative; }
+    #callbackModalWindow form:after {
+      display: block;
+      position: relative;
+      content: '';
+      clear: both; }
+    #callbackModalWindow form .form-modal-label-wrapper {
+      padding-left: 15px;
+      padding-right: 15px; }
+    #callbackModalWindow form label {
+      border: 0;
+      border-bottom: 1px solid #cccccc;
+      padding-top: 36px;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      text-align: left;
+      padding-left: 0;
+      width: 100%; }
+      #callbackModalWindow form label .form-input-wrapper {
+        padding: 0; }
+      #callbackModalWindow form label.has-error {
+        border-color: red; }
+      #callbackModalWindow form label.has-success {
+        border-color: #55b521; }
+      #callbackModalWindow form label.active {
+        padding-top: 10px; }
+    #callbackModalWindow form .dz-filename {
+      max-width: 200px; }
+    #callbackModalWindow form .dz-message {
+      margin-left: 20px; }
+    #callbackModalWindow form #files-input {
+      margin-left: 20px; }
+
+#callbackSuccess {
+  max-width: 400px;
+  text-align: left; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
@@ -4458,8 +4535,23 @@ tspan.mg-points-mono {
 
 html.remodal-is-locked {
   overflow-y: hidden;
+  position: relative;
   -ms-touch-action: none;
   touch-action: none; }
+  html.remodal-is-locked body {
+    overflow-y: hidden;
+    -ms-touch-action: none;
+    touch-action: none; }
+
+html.menu-is-locked {
+  overflow-y: hidden;
+  position: relative;
+  -ms-touch-action: none;
+  touch-action: none; }
+  html.menu-is-locked body {
+    overflow-y: hidden;
+    -ms-touch-action: none;
+    touch-action: none; }
 
 /* Anti FOUC */
 .remodal,
@@ -4847,9 +4939,16 @@ html.remodal-is-locked {
         padding: 0;
         margin-top: 1.875rem;
         padding: 0.625rem; }
+  #index-brand {
+    position: relative;
+    padding-bottom: 11.25rem; }
+    #index-brand .block-absolute {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: -6.25rem; }
         .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
-          max-width: 16.25rem;
-          min-width: 13.75rem; }
+          max-width: 21.875rem;
+          min-width: 17.5rem; }
     .text-wrap {
       max-width: 100%; }
     .button-green {
@@ -4880,6 +4979,8 @@ html.remodal-is-locked {
         display: block; }
       #header-modal-wrapper.active .menu-modal-top {
         position: relative; }
+    #title-svg-main {
+      max-width: 80%; }
       #main-screen-wrapper #main-screen {
         height: auto;
         min-height: 31.25rem; }
@@ -4899,9 +5000,12 @@ html.remodal-is-locked {
             font-size: 4.375rem; }
         #main-screen-wrapper #main-screen .screen-links-wrapper {
           display: none !important; }
+  #index-chart-wrapper {
+    margin-top: 1.25rem; }
     .scheme-wrapper {
       margin: auto;
-      margin-top: 8.75rem; }
+      margin-top: 1.875rem;
+      margin-bottom: 3.125rem; }
       .scheme-wrapper .scheme-slider-wrapper {
         width: 26.25rem;
         height: 26.25rem; }
@@ -4918,6 +5022,8 @@ html.remodal-is-locked {
     padding-top: 0; }
           #index-chart .chart-wrapper .chart-bar:after {
             width: 100%; }
+    #news .button-green-wrapper {
+      margin-top: 3.125rem; }
       #news .news .news-item {
         float: clear;
         width: 100%;
@@ -4932,7 +5038,13 @@ html.remodal-is-locked {
           padding-right: 0; }
     #footer {
       width: 100%; }
-      #footer .one-four {
+      #footer .footer-first {
+        width: 100%; }
+      #footer .footer-second {
+        width: 100%; }
+      #footer .footer-third {
+        width: 100%; }
+      #footer .footer-fourth {
         width: 100%; }
     #footer .footer-hrefs {
       position: relative;
@@ -5024,6 +5136,12 @@ html.remodal-is-locked {
 @media only screen and (max-width: 492px) {
     .box {
       padding: 0.75rem; }
+  #index-brand {
+    padding-bottom: 6.25rem; }
+    #index-brand .block-absolute {
+      margin-bottom: -3.75rem; }
+    .brands-wrapper {
+      margin-top: 0.625rem; }
         .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
           max-width: 20rem;
           min-width: 15.625rem; }
@@ -5078,10 +5196,15 @@ html.remodal-is-locked {
       .flex-block .one-four {
         width: 50%;
         max-width: 15.625rem; }
+        .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
+          max-width: 25rem;
+          min-width: 15.625rem; }
       .count .h2 {
         font-size: 3.75rem; }
       .count .count-sub {
         font-size: 1.0625rem; }
+    #title-svg-main {
+      height: 10rem; }
     .scheme-wrapper {
       margin-top: 1.25rem; }
       .advantages .advantage-wrapper {

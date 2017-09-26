@@ -1,0 +1,42 @@
+#callbackModalWindow.remodal(data-remodal-id="callbackModalWindow")
+	button(data-remodal-action="close").remodal-close
+	p#modal-title.h2 Обратная связь
+	form#modal-form.formFocus.dropzone(action="" method="post" enctype="multipart/form-data")
+		.flex-block
+			.one-half
+				.form-modal-label-wrapper
+					label.form-name.form-group
+						p Имя
+						.form-input-wrapper.control-label
+							input(type='text' name='userName' data-validation="required").form-control
+			.one-half
+				.form-modal-label-wrapper
+					label.form-company.form-group
+						p Компания
+						.form-input-wrapper.control-label
+							input(type='text' name='userName' data-validation="required").form-control
+		.flex-block
+			.one-half
+				.form-modal-label-wrapper
+					label.form-tel.form-group
+						p Телефон
+						.form-input-wrapper.control-label
+							input(type='text' name='userTel' data-validation="number required").form-control
+			.one-half
+				.form-modal-label-wrapper
+					label.form-mail.form-group
+						p E-mail
+						.form-input-wrapper.control-label
+							input(type='text' name='userMail' data-validation="email required").form-control
+		.form-modal-label-wrapper
+			label.form-msg.form-group
+				p Ваш вопрос
+				.form-input-wrapper.control-label
+					input(type='text' name='userMsg' data-validation="required").form-control
+		.form-bottom-items
+			#files-input
+			button(type="submit").callback-button Отправить
+#callbackSuccess.remodal(data-remodal-id="callbackSuccess")
+	button(data-remodal-action="close").remodal-close
+	p.h2 Спасибо!
+	p Благодарим вас, что уделили внимание нашей компании. Наш менеджер свяжется с вами в течении рабочего дня.

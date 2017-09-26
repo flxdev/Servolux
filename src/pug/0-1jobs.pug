@@ -71,10 +71,10 @@ block content
 										.one-half
 											p от 1 года
 								.job-sticky-buttons
-									a(href="#").callback-button Откликнуться на вакансию
+									a(href="#callback-job-box").callback-button Откликнуться на вакансию
 									a(href="#").href Скачать шаблон резюме
 
-		.box.gray
+		.box.gray#callback-job-box
 			.block
 				.flex-block
 					.one-half
@@ -103,10 +103,5 @@ block content
 									p Сопроводительное письмо
 									.form-input-wrapper.control-label
 										textarea(name='userText').form-control
-								//.input-file-wrapper#files-input
-								//	label.form-file
-								//		svg(class="icon icon-vacancy")
-								//			use(xlink:href="#attach" xmlns:xlink="http://www.w3.org/1999/xlink")
-								//		p.href Прикрепить резюме
 								#files-input
 								button(type="submit").callback-button Отправить

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" />
@@ -17,12 +16,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common.js" afterPath="$PROJECT_DIR$/src/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/0-1jobs.pug" afterPath="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/3-0partnership.pug" afterPath="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/5-0contacts.pug" afterPath="$PROJECT_DIR$/src/pug/5-0contacts.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/_layout2.pug" afterPath="$PROJECT_DIR$/src/pug/_layout2.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/_layout.pug" afterPath="$PROJECT_DIR$/src/pug/_layout.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_footer.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_footer.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_header.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_header.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_modals.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_modals.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/index.pug" afterPath="$PROJECT_DIR$/src/pug/index.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/_main.sass" afterPath="$PROJECT_DIR$/src/sass/_main.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/lib/_animations.sass" afterPath="$PROJECT_DIR$/src/sass/lib/_animations.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/lib/_remodal.scss" afterPath="$PROJECT_DIR$/src/sass/lib/_remodal.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,51 +56,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.4350728">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="0-0jobs.pug" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pug/0-0jobs.pug">
+          <file leaf-file-name="1-1brand.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/1-1brand.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-498">
-                  <caret line="133" column="34" lean-forward="false" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="0-1jobs.pug" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pug/0-1jobs.pug">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="503">
-                  <caret line="110" column="28" lean-forward="false" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_layout2.pug" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pug/_layout2.pug">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="622">
-                  <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_layout.pug" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-304">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="1-0company.pug" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+                <state relative-caret-position="294">
+                  <caret line="112" column="10" lean-forward="false" selection-start-line="112" selection-start-column="10" selection-end-line="113" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
@@ -106,8 +69,58 @@
           <file leaf-file-name="_modals.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="700">
+                  <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="0-1jobs.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/0-1jobs.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="338">
+                  <caret line="73" column="46" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_footer.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_header.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/includes/_header.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="220">
+                  <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="64" column="19" lean-forward="true" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="scheme (1) (3).svg" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Downloads/scheme (1) (3).svg">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="440">
+                  <caret line="32" column="2013" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="2013" />
                   <folding />
                 </state>
               </provider>
@@ -116,18 +129,8 @@
           <file leaf-file-name="5-0contacts.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/5-0contacts.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="337" column="25" lean-forward="false" selection-start-line="337" selection-start-column="25" selection-end-line="337" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="298">
-                  <caret line="176" column="12" lean-forward="false" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
+                <state relative-caret-position="620">
+                  <caret line="300" column="76" lean-forward="false" selection-start-line="300" selection-start-column="76" selection-end-line="300" selection-end-column="76" />
                   <folding />
                 </state>
               </provider>
@@ -140,11 +143,21 @@
           <file leaf-file-name="_main.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="401">
-                  <caret line="2648" column="14" lean-forward="true" selection-start-line="2648" selection-start-column="14" selection-end-line="2648" selection-end-column="14" />
+                <state relative-caret-position="241">
+                  <caret line="375" column="22" lean-forward="true" selection-start-line="375" selection-start-column="22" selection-end-line="375" selection-end-column="22" />
                   <folding>
-                    <element signature="e#8573#8744#2" expanded="true" />
+                    <element signature="e#8923#9094#2" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_remodal.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sass/lib/_remodal.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -152,12 +165,10 @@
           <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/js/common.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="81">
-                  <caret line="668" column="32" lean-forward="false" selection-start-line="668" selection-start-column="32" selection-end-line="668" selection-end-column="32" />
+                <state relative-caret-position="123">
+                  <caret line="512" column="0" lean-forward="false" selection-start-line="512" selection-start-column="0" selection-end-line="512" selection-end-column="0" />
                   <folding>
-                    <element signature="e#28#3597#0" expanded="false" />
                     <element signature="e#61#98#0" expanded="false" />
-                    <element signature="e#125#747#0" expanded="false" />
                     <element signature="e#783#1522#0" expanded="false" />
                     <element signature="e#1561#1960#0" expanded="false" />
                     <element signature="e#1997#2389#0" expanded="false" />
@@ -191,8 +202,18 @@
           <file leaf-file-name="_animations.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sass/lib/_animations.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
+                <state relative-caret-position="4880">
                   <caret line="244" column="25" lean-forward="false" selection-start-line="244" selection-start-column="25" selection-end-line="244" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_layout2.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/_layout2.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="434">
+                  <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="38" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -211,24 +232,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>news-right-downloads</find>
-      <find>.flex</find>
-      <find>news-inner-slider</find>
-      <find>block-inner</find>
-      <find>ya</find>
-      <find>#chart</find>
-      <find>sche</find>
-      <find>.scheme-men</find>
-      <find>.scheme-slider-wrapper</find>
-      <find>#map</find>
-      <find>inv</find>
-      <find>parallax-img</find>
-      <find>parallax</find>
-      <find>flex-img-wrapper</find>
-      <find>.vacancy-block-green</find>
-      <find>.flex-img</find>
-      <find>jobs-content-inner-tag</find>
-      <find>textarea</find>
       <find>.job-sticky-content</find>
       <find>jobs-content-sorting</find>
       <find>.jobs-content-sorting</find>
@@ -239,8 +242,26 @@
       <find>#main-screen-title</find>
       <find>modal-wrapper</find>
       <find>+r(1024)</find>
-      <find>+r</find>
       <find>1024</find>
+      <find>.scheme-slider__slide</find>
+      <find>scheme-slider</find>
+      <find>index-chart-wrapper</find>
+      <find>modal</find>
+      <find>callback-button</find>
+      <find>remodal</find>
+      <find>screen</find>
+      <find>scheme</find>
+      <find>.icon</find>
+      <find>button-green-wrapper</find>
+      <find>callback-</find>
+      <find>country-aside-menu</find>
+      <find>stick</find>
+      <find>news</find>
+      <find>gallery</find>
+      <find>+r</find>
+      <find>remoda</find>
+      <find>body</find>
+      <find>menu</find>
     </findStrings>
     <replaceStrings>
       <replace>latest</replace>
@@ -250,6 +271,7 @@
     <dirStrings>
       <dir>C:\Users\Sergey\Documents\Servolux\node_modules</dir>
       <dir>C:\Users\Sergey\Documents\Servolux\gulp\tasks</dir>
+      <dir>C:\Users\Sergey\Documents\Servolux\src\pug</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -258,9 +280,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/img/svg/quote.svg" />
-        <option value="$PROJECT_DIR$/src/img/svg/download_file.svg" />
-        <option value="$PROJECT_DIR$/src/img/svg/arrow_filter.svg" />
         <option value="$PROJECT_DIR$/src/img/6-1/check.svg" />
         <option value="$PROJECT_DIR$/src/img/6-1/delete_choosen_filter.svg" />
         <option value="$PROJECT_DIR$/src/img/svg/pdf-white.svg" />
@@ -275,7 +294,6 @@
         <option value="$PROJECT_DIR$/src/sass/titleSvg.svg" />
         <option value="$USER_HOME$/Downloads/scheme (1).svg" />
         <option value="$PROJECT_DIR$/src/pug/1-2brands.pug" />
-        <option value="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
         <option value="$PROJECT_DIR$/bitrix/templates/main/js/lib/jQueryRotate.js" />
         <option value="$PROJECT_DIR$/src/pug/2-0activity.pug" />
         <option value="$PROJECT_DIR$/src/pug/4-0work.pug" />
@@ -287,7 +305,6 @@
         <option value="$PROJECT_DIR$/src/pug/bem/bemto.pug" />
         <option value="$PROJECT_DIR$/gulp/tasks/pug.js" />
         <option value="$PROJECT_DIR$/src/pug/0-0jobs.pug" />
-        <option value="$PROJECT_DIR$/src/pug/includes/_header.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_header2.pug" />
         <option value="$PROJECT_DIR$/../Gulp-pug-sass-es2017-bem/src/pug/index.pug" />
         <option value="$PROJECT_DIR$/../Gulp-pug-sass-es2017-bem/src/pug/_layout.pug" />
@@ -295,20 +312,25 @@
         <option value="$PROJECT_DIR$/../Gulp-pug-sass-es2017-bem/src/js/lib.js" />
         <option value="$PROJECT_DIR$/src/sass/lib/dropzone.scss" />
         <option value="$PROJECT_DIR$/src/sass/screen.sass" />
-        <option value="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/../Gulp-pug-sass-es2017-bem/README.md" />
         <option value="$USER_HOME$/Downloads/delete_choosen_filter.svg" />
         <option value="$PROJECT_DIR$/src/pug/_layout2.pug" />
-        <option value="$PROJECT_DIR$/src/pug/includes/_modals.pug" />
         <option value="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" />
         <option value="$PROJECT_DIR$/bitrix/templates/main/index.html" />
-        <option value="$PROJECT_DIR$/src/pug/5-0contacts.pug" />
         <option value="$PROJECT_DIR$/src/sass/lib/_animations.sass" />
-        <option value="$PROJECT_DIR$/src/js/common.js" />
-        <option value="$PROJECT_DIR$/src/sass/_main.sass" />
-        <option value="$PROJECT_DIR$/src/pug/index.pug" />
         <option value="$PROJECT_DIR$/src/pug/1-0company.pug" />
+        <option value="$PROJECT_DIR$/src/pug/_layout.pug" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_header.pug" />
+        <option value="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_footer.pug" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_modals.pug" />
+        <option value="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
+        <option value="$PROJECT_DIR$/src/pug/5-0contacts.pug" />
+        <option value="$PROJECT_DIR$/src/sass/lib/_remodal.scss" />
+        <option value="$PROJECT_DIR$/src/js/common.js" />
+        <option value="$PROJECT_DIR$/src/pug/index.pug" />
+        <option value="$PROJECT_DIR$/src/sass/_main.sass" />
       </list>
     </option>
   </component>
@@ -533,14 +555,14 @@
               <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
               <item name="Servolux" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="pug" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
               <item name="Servolux" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="pug" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -591,7 +613,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gulp.js.build (1)">
+  <component name="RunManager" selected="Gulp.js.default (1)">
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -659,8 +681,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.build (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.build (1)" />
         <item index="2" class="java.lang.String" itemvalue="Gulp.js.copy (1)" />
         <item index="3" class="java.lang.String" itemvalue="Gulp.js.pug-all" />
         <item index="4" class="java.lang.String" itemvalue="Gulp.js.pug" />
@@ -691,7 +713,7 @@
       <workItem from="1505987408830" duration="7732000" />
       <workItem from="1505998812745" duration="35312000" />
       <workItem from="1506321110803" duration="20996000" />
-      <workItem from="1506347733330" duration="13338000" />
+      <workItem from="1506347733330" duration="32447000" />
     </task>
     <task id="LOCAL-00001" summary="Something change from webstorm">
       <created>1505114233192</created>
@@ -882,11 +904,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506352923337</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Fixes on form and media to 992px width">
+      <created>1506416196971</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1506416196971</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335383000" />
+    <option name="totallyTimeSpent" value="354492000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -933,7 +962,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Something change from webstorm" />
     <MESSAGE value="common.js changes" />
     <MESSAGE value="1-0 page ready (without mobile version)" />
     <MESSAGE value="1-1brand to go" />
@@ -958,7 +986,8 @@
     <MESSAGE value="modals and fixes left" />
     <MESSAGE value="gulp-pugbem plugin install" />
     <MESSAGE value="form dropzone fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="form dropzone fixes" />
+    <MESSAGE value="Fixes on form and media to 992px width" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes on form and media to 992px width" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -967,37 +996,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pug/1-2brands.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/main/js/lib/jQueryRotate.js" />
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/main/0-0jobs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="612" column="10" lean-forward="false" selection-start-line="612" selection-start-column="10" selection-end-line="612" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/4-0work.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="120" column="39" lean-forward="false" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/3-0partnership.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
-          <caret line="80" column="71" lean-forward="false" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/lib.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1020,13 +1018,6 @@
         <state relative-caret-position="760">
           <caret line="38" column="71" lean-forward="false" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/1-1brand.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1114,14 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_header.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/img/svg/attach.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1142,14 +1125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/screen.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1192,58 +1167,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/0-0jobs.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-498">
-          <caret line="133" column="34" lean-forward="false" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/_layout2.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/0-1jobs.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="110" column="28" lean-forward="false" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/lib/_remodal.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitrix/templates/main/1-0company.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="720" column="10" lean-forward="false" selection-start-line="720" selection-start-column="10" selection-end-line="720" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1264,10 +1191,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/0-0jobs.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="133" column="34" lean-forward="false" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/_layout2.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="38" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/1-1brand.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="112" column="10" lean-forward="false" selection-start-line="112" selection-start-column="10" selection-end-line="113" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/0-1jobs.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="73" column="46" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/scheme (1) (1).svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/scheme (1) (2).svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/3-0partnership.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="55" column="63" lean-forward="false" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/scheme (1) (3).svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="32" column="2013" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="2013" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/5-0contacts.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="337" column="25" lean-forward="false" selection-start-line="337" selection-start-column="25" selection-end-line="337" selection-end-column="25" />
+        <state relative-caret-position="620">
+          <caret line="300" column="76" lean-forward="false" selection-start-line="300" selection-start-column="76" selection-end-line="300" selection-end-column="76" />
           <folding />
         </state>
       </provider>
@@ -1282,20 +1305,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/lib/_animations.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="4880">
           <caret line="244" column="25" lean-forward="false" selection-start-line="244" selection-start-column="25" selection-end-line="244" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/screen.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/lib/_remodal.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="668" column="32" lean-forward="false" selection-start-line="668" selection-start-column="32" selection-end-line="668" selection-end-column="32" />
+        <state relative-caret-position="123">
+          <caret line="512" column="0" lean-forward="false" selection-start-line="512" selection-start-column="0" selection-end-line="512" selection-end-column="0" />
           <folding>
-            <element signature="e#28#3597#0" expanded="false" />
             <element signature="e#61#98#0" expanded="false" />
-            <element signature="e#125#747#0" expanded="false" />
             <element signature="e#783#1522#0" expanded="false" />
             <element signature="e#1561#1960#0" expanded="false" />
             <element signature="e#1997#2389#0" expanded="false" />
@@ -1305,28 +1342,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_header.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="176" column="12" lean-forward="false" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
+        <state relative-caret-position="220">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="140">
+          <caret line="64" column="19" lean-forward="true" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="2648" column="14" lean-forward="true" selection-start-line="2648" selection-start-column="14" selection-end-line="2648" selection-end-column="14" />
+        <state relative-caret-position="241">
+          <caret line="375" column="22" lean-forward="true" selection-start-line="375" selection-start-column="22" selection-end-line="375" selection-end-column="22" />
           <folding>
-            <element signature="e#8573#8744#2" expanded="true" />
+            <element signature="e#8923#9094#2" expanded="true" />
           </folding>
         </state>
       </provider>
