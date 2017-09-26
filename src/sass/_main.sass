@@ -95,8 +95,6 @@ body
 //::-webkit-scrollbar-thumb
 //	background-color: $green
 
-img
-	max-width: 100%
 
 .hidden
 	display: none !important
@@ -736,6 +734,14 @@ main
 					justify-content: space-between
 					background-color: $white
 					transform: translate(80px, -20px)
+					+r(1366)
+						transform: translate(80px, 20px)
+						.callback-wrap
+							margin-top: 20px
+							margin-bottom: 20px
+						.column
+							.column-href
+								margin-top: 10px
 					+r(992)
 						display: block
 						+rem(margin-top, 80px)
@@ -782,7 +788,8 @@ main
 			opacity: 1
 			transform: none
 			pointer-events: auto
-			overflow: auto
+			overflow-y: auto
+			overflow-x: hidden
 			position: fixed
 			z-index: 0
 			+r(992)
@@ -891,6 +898,8 @@ main
 	+rem(max-width, 1400px)
 	width: 100%
 	margin: auto
+	+r(1366)
+		max-width: 1200px
 
 .title-svg-main
 	fill: $white
@@ -1713,6 +1722,20 @@ $slSize: 410px
 	.block
 		+rem(padding-top, 22px)
 		+rem(padding-bottom, 22px)
+	+r(1366)
+		.footer-first
+			+rem(width, 260px)
+		.footer-second
+			+rem(width, 320px)
+		.footer-third
+			+rem(width, 350px)
+	+r(1024)
+		.footer-first
+			width: 20%
+		.footer-second
+			width: 23%
+		.footer-third
+			width: 32%
 	+r(992)
 		width: 100%
 		.one-four
@@ -2077,12 +2100,14 @@ $galleryBigHeight: 590px
 #map-wrapper
 	position: relative
 	width: 100%
-	height: 400px
+	+rem(height, 400px)
 	#map
 		position: relative
 		min-width: 320px
 		width: 100%
 		height: 100%
+	+r(1024)
+		+rem(height, 300px)
 
 #aside-menu
 	position: absolute
@@ -2593,16 +2618,15 @@ $galleryBigHeight: 590px
 #vacancy-block
 	.vacancy-block-green
 		width: 100%
-		background: url('../img/4-0/pattern.jpg') 0 0 repeat
+		background-image: url('../img/4-0/pattern.jpg')
+		background-position: 0 0
+		background-repeat: repeat
 		position: relative
 		display: block
 		+rem(padding, 50px)
 		&:hover
-			animation-duration: 50s
-			.vacancy-button
-				.callback-button
-					background-color: $active
-					border-color: $active
+			animation-duration: 60s
+			background-image: linear-gradient(rgba(0, 86, 184, 0.45),rgba(0, 86, 184, 0.45)), url('../img/4-0/pattern2.jpg')
 		&>*
 			display: inline-block
 		.vacancy-text, .vacancy-href
@@ -2617,7 +2641,7 @@ $galleryBigHeight: 590px
 			border-bottom: 1px solid $white
 			transition: color 0.1s, border-bottom 0.1s
 			&:hover
-				color: $active
+				color: $white
 				border-bottom: 1px solid $active
 		.vacancy-button
 			position: absolute
@@ -2631,14 +2655,16 @@ $galleryBigHeight: 590px
 				background-color: transparent
 				border: 1px solid $white
 				&:hover
-					background-color: $active
-					border-color: $active
+					background-color: $white
+					border-color: $white
+					color: $active
 #offices
 	.map
 		height: 100%
 		width: 100%
 	.brand-tel-title, .brand-email-title
 		padding: 0
+		margin: 0
 	.block
 		&>.flex-block
 			+rem(padding-bottom, 10px)
@@ -2675,6 +2701,12 @@ $galleryBigHeight: 590px
 	display: none
 	&.active
 		display: block
+	.brand-tel-title, .brand-email-title
+		margin: 0
+
+.block-inner
+	img
+		max-width: 100%
 
 .country-aside-menu
 	+rem(margin-top, 50px)
@@ -3255,30 +3287,53 @@ form
 			background-size: contain
 			left: 0
 	#files-input
+		float: left
+		position: relative
+		top: 60px
+		margin-top: 0
+		max-width: 300px
 		.dz-preview
-			float: left
-			position: relative
-			top: 60px
 			width: auto
+			display: inline-block
+			vertical-align: top
+			margin: 0
 		.dz-error-mark
 			display: none
 		.dz-progress
 			display: none
 		.dz-size
 			float: right
-			margin-left: 20px
+			margin-left: 25px
+			position: relative
+			color: $text-gray
+			&:before
+				position: absolute
+				display: block
+				content: '~'
+				width: 10px
+				height: 10px
+				left: -14px
 		.dz-filename
 			float: left
+			font-weight: 600
+			max-width: 220px
+			overflow: hidden
+			word-wrap: none
+			text-overflow: ellipsis
+			white-space: nowrap
 		.dz-error-message
 			float: left
 		.dz-remove
 			position: absolute
-			top: 0
-			right: 0
+			top: 15px
+			right: -26px
 			font-size: 0
-			width: 10px
-			height: 10px
-			background-color: #333
+			width: 16px
+			height: 16px
+			padding: 5px
+			background: url('../img/6-2/delete_choosen_filter.svg') 50% 50% no-repeat
+			background-size: 70%
+			opacity: .6
 
 #non
 	+rem(padding-bottom, 200px)

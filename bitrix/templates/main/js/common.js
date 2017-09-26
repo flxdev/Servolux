@@ -165,8 +165,6 @@ window.onload = function () {
 	}
 };
 
-Dropzone.autoDiscover = false;
-
 function isMobile() {
 	return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent)
 	);
@@ -664,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	// InView checker
-	if ($(window).width() >= 1024) {
+	if ($(window).width() >= 992) {
 		inView.offset(50);
 		inView('.animateThis').on('enter', function (el) {
 			$(el).addClass('animated ' + $(el).data('anim'));
@@ -1073,7 +1071,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			lang: 'ru',
 			addValidClassOnAll: true,
 			validateOnBlur: true, // disable validation when input looses focus
-			errorMessagePosition: 'bottom'
+			errorMessagePosition: 'bottom',
+			onSuccess: function onSuccess($form) {
+				alert('The form ' + $form.attr('id') + ' is valid!');
+				return false; // Will stop the submission of the form
+			}
 		});
 
 		$('#job-form').dropzone({
@@ -1086,33 +1088,5 @@ document.addEventListener('DOMContentLoaded', function () {
 			addRemoveLinks: true,
 			dictDefaultMessage: 'Прикрепить резюме'
 		});
-
-		// var myDropZone = new Dropzone("#job-form", {
-		// 	paramName: 'file',
-		// 	url: "/post",
-		// 	uploadMultiple: true,
-		// 	previewsContainer: '#files-input',
-		// 	createImageThumbnails: false,
-		// 	// accept: function(file, done){
-		// 	// 		$('#files-input').append(file.previewElement)
-		// 	// }
-		// });
-
-		// $('#attachment').change(function(){
-		// 	$(this).parent().parent().removeClass('has-error').find('.error-text').text('');
-		//
-		// 	let files = $('#attachment').prop("files")
-		//
-		// 	console.log($('#attachment').prop("files"))
-		//
-		// 	// files.map(function(val){
-		// 	// 	$('#attachment').parent().parent().parent().append( '<div class="file-item" data-file="0"><p>' + $(this).val().split('\\').pop() + '</p><p class="caption">~' + this.files[0].size + '</p></div>');
-		// 	// });
-		//
-		// 	if (this.files[0].size > 51000000) {
-		// 		$(this).parent().parent().addClass('has-error')
-		// 		$(this).parent().find('.error-text').text('Вы превысили допустимый лимит в 50 Мб')
-		// 	}
-		// })
 	}
 });
