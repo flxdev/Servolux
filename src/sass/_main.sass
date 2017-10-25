@@ -277,7 +277,9 @@ blockquote
 			+rem(padding, 10px)
 		+r(400)
 			width: 50%
+			+rem(padding, 0px)
 			+rem(max-width, 250px)
+			+rem(margin-top, 10px)
 	.three-four
 		width: 75%
 
@@ -416,8 +418,8 @@ blockquote
 				+rem(max-width, 320px)
 				+rem(min-width, 250px)
 			+r(400)
-				+rem(max-width, 400px)
-				+rem(min-width, 250px)
+				+rem(max-width, 420px)
+				+rem(min-width, 320px)
 			&:before
 				display: block
 				position: absolute
@@ -568,6 +570,11 @@ blockquote
 	+r(630)
 		width: 100%
 		transform: translate(0, 180%)
+	+r(481)
+		width: 90%
+		margin-left: 10px
+		margin-right: 10px
+		transform: translate(0, 0%)
 	form
 		+rem(max-width, 480px)
 		position: relative
@@ -747,6 +754,8 @@ main
 				+r(992)
 					+rem(padding-bottom, 50px)
 					height: auto
+					max-width: 600px
+					margin: auto
 				+r(630)
 					+rem(padding-top, 50px)
 				.menu-columns
@@ -764,9 +773,18 @@ main
 							.column-href
 								margin-top: 10px
 					+r(992)
-						display: block
+						margin: 0
+						padding: 0
+						transform: none
 						+rem(margin-top, 80px)
 						width: 100%
+						flex-direction: column
+						max-height: 500px
+						flex-wrap: wrap
+						align-items: center
+						justify-content: center
+					+r(600)
+						display: block
 					.column
 						+rem(max-width, 300px)
 						display: inline-block
@@ -775,7 +793,17 @@ main
 						+rem(padding-top, 30px)
 						+r(992)
 							display: block
-							padding-top: 0
+							padding: 0
+							padding-right: 25px
+							width: 50%
+							&:last-child
+								padding-right: 0
+								padding-left: 25px
+						+r(600)
+							padding-left: 50px
+							&:last-child
+								padding-left: 50px
+								padding-bottom: 50px
 						.callback-wrap
 							.tell
 								+rem(font-size, 18px)
@@ -819,6 +847,7 @@ main
 				.menu-modal
 					&-wrap
 						display: block
+						margin-top: -4px
 					&-top
 						position: relative
 	&-menu-wrapper.sticked
@@ -830,17 +859,17 @@ main
 		width: 100%
 		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1)
 		#header-burger
-			+rem(top, 20px)
+			+rem(top, 24px)
 			.burger-stick
 				background-color: $active
 			&::before, &::after
 				background-color: $active
 		#header-nav
-			+rem(top, 20px)
+			+rem(top, 24px)
 			.nav-href:not(.active):not(:hover)
 				color: $text-h
 		#header-logo
-			+rem(top, 30px)
+			+rem(top, 32px)
 			.logo
 				+rem(left, $sidestep - 20px)
 				+r(492)
@@ -852,7 +881,7 @@ main
 	&-menu-wrapper.active
 		#header-burger
 			+rem(right, $sidestep+20px)
-			+rem(top, 25px)
+			+rem(top, 26px)
 			+r(492)
 				+rem(right, $sidestep - 20px)
 			&:before
@@ -869,7 +898,7 @@ main
 			opacity: 0
 			pointer-events: none
 		#header-logo
-			+rem(top, 30px)
+			+rem(top, 36px)
 			.logo
 				+rem(left, $sidestep - 20px)
 				+r(492)
@@ -970,11 +999,21 @@ main
 			+rem(max-width, 1440px)
 			+rem(padding-left, 120px)
 			+rem(padding-right, 120px)
+			+r(992)
+				+rem(padding-left, 50px)
+				+rem(padding-right, 50px)
+			+r(492)
+				+rem(padding-left, 20px)
+				+rem(padding-right, 20px)
+				height: 100%
 			#main-screen-title
 				+rem(top, 185px)
 				+rem(max-width, 1440px)
 				margin: auto
 				position: relative
+				+r(492)
+					top: 50%
+					transform: translatey(-50%)
 				#title-wrapper
 					transition: none
 					.title-main
@@ -986,6 +1025,8 @@ main
 							+rem(font-size, 50px)
 							+rem(line-height, 60px)
 							+rem(max-width, 600px)
+						+r(492)
+							+rem(font-size, 52px)
 					.sub-title
 						+rem(font-size, 26px)
 						+rem(line-height, 35px)
@@ -1085,12 +1126,15 @@ main
 					position: absolute
 					left: 0
 					right: 0
-					top: 0
-					bottom: 0
+					top: 50%
+					bottom: auto
 					margin: auto
-					+rem(margin-top, 50px)
+					transform: translate(0, -50%)
+					+rem(margin-top, -30px)
 				+r(480)
-					+rem(margin-top, 80px)
+					+rem(margin-top, -15px)
+				+r(375)
+					+rem(margin-top, -50px)
 			.title-sup
 				+ff('GothamPro', 800, 50px)
 				text-transform: uppercase
@@ -1194,14 +1238,8 @@ $slSize: 410px
 	width: 100%
 	+r(992)
 		margin: auto
-		+rem(margin-top, 30px)
-		+rem(margin-bottom, 50px)
-	+r(550)
-		+rem(margin-top, 90px)
-	+r(492)
-		+rem(margin-top, 60px)
-	+r(400)
 		+rem(margin-top, 20px)
+		+rem(margin-bottom, 20px)
 	.scheme-slider-wrapper
 		position: absolute
 		top: 0
@@ -1213,7 +1251,10 @@ $slSize: 410px
 		margin: auto
 		border-radius: 50%
 		overflow: hidden
-		+r(1024)
+		+r(1270)
+			+rem(width, $slSize - 50px)
+			+rem(height, $slSize - 50px)
+		+r(1110)
 			+rem(width, $slSize - 70px)
 			+rem(height, $slSize - 70px)
 		+r(992)
@@ -1226,11 +1267,11 @@ $slSize: 410px
 			+rem(width, $slSize - 85px)
 			+rem(height, $slSize - 85px)
 		+r(492)
-			+rem(width, $slSize - 120px)
-			+rem(height, $slSize - 120px)
-		+r(380)
-			+rem(width, $slSize - 160px)
-			+rem(height, $slSize - 160px)
+			+rem(width, $slSize - 100px)
+			+rem(height, $slSize - 100px)
+		+r(347)
+			+rem(width, $slSize - 130px)
+			+rem(height, $slSize - 130px)
 		#scheme-slider
 			width: 100%
 			height: 100%
@@ -1245,29 +1286,14 @@ $slSize: 410px
 				overflow: hidden
 				z-index: 1
 				transition: transform .4s cubic-bezier(.445, .05, .55, .95), opacity .4s
-				+r(1024)
-					+rem(width, $slSize - 70px)
-					+rem(height, $slSize - 70px)
-				+r(992)
-					+rem(width, $slSize + 10px)
-					+rem(height, $slSize + 10px)
-				+r(768)
-					+rem(width, $slSize)
-					+rem(height, $slSize)
-				+r(555)
-					+rem(width, $slSize - 85px)
-					+rem(height, $slSize - 85px)
+				width: 100%
+				height: 100%
 				+r(492)
-					+rem(width, $slSize - 120px)
-					+rem(height, $slSize - 120px)
 					h3
 						+rem(font-size, 18px)
 						margin-bottom: 0
 					p
 						+rem(font-size, 12px)
-				+r(380)
-					+rem(width, $slSize - 160px)
-					+rem(height, $slSize - 160px)
 				&-inner
 					position: relative
 					width: 100%
@@ -1492,17 +1518,21 @@ $slSize: 410px
 		min-height: 130%
 		min-width: 100%
 		+r(992)
-			top: 0
+			bottom: 0!important
+			right: 0
 			height: 100%
 			width: auto
+			transform: none!important
 
 .carousel-buttons
 	background-color: #f5f6f6
 	display: inline-block
-	+rem(border-radius, 100px)
 	overflow: hidden
+	overflow-x: auto
 	+rem(margin-bottom, 40px)
 	padding-left: 1px
+	max-width: 100%
+	background-color: #fff
 	.carousel-buttons-wrap
 		display: flex
 		+rem(height, 43px)
@@ -1510,24 +1540,30 @@ $slSize: 410px
 			+rem(padding, 7px)
 			+rem(padding-left, 20px)
 			+rem(padding-right, 20px)
+			display: inline-block
+			white-space: nowrap
 			cursor: pointer
 			border: 1px solid transparent
 			margin-left: -1px
+			z-index: 2
 			transition: border 0.15s cubic-bezier(.445, .05, .55, .95), color 0.15s cubic-bezier(.445, .05, .55, .95), background-color 0.15s cubic-bezier(.445, .05, .55, .95)
+			&:first-child
+				border-radius: 100px 0 0 100px
+			&:last-child
+				border-radius: 0 100px 100px 0
 			p
 				color: $text-darker
 				font-weight: 300
 				+rem(font-size, 16px)
 				margin: 0
+			&.active
+				background-color: #eee
+				z-index: 0
 			&:not(.active)
 				border: 1px solid $green
 				background-color: #FFF
 				p
 					color: $green
-				&:first-of-type
-					border-radius: 100px 0 0 100px
-				&:last-of-type
-					border-radius: 0 100px 100px 0
 			&:hover
 				background-color: $active
 				border: 1px solid transparent
@@ -1773,14 +1809,14 @@ $slSize: 410px
 	.block
 		+rem(padding-top, 22px)
 		+rem(padding-bottom, 22px)
-	+r(1366)
+	+r(1378)
 		.footer-first
 			+rem(width, 260px)
 		.footer-second
 			+rem(width, 320px)
 		.footer-third
 			+rem(width, 350px)
-	+r(1024)
+	+r(1300)
 		.footer-first
 			width: 20%
 		.footer-second
@@ -1788,6 +1824,33 @@ $slSize: 410px
 		.footer-third
 			width: 32%
 	+r(992)
+		.flex-block
+			flex-wrap: nowrap
+			flex-direction: row
+			align-items: stretch
+		.footer-first
+			width: 20%
+		.footer-second
+			width: 23%
+		.footer-third
+			width: 32%
+	+r(880)
+		.flex-block
+			flex-wrap: wrap
+			align-items: flex-start
+			justify-content: center
+		.footer-column
+			width: 50%
+			padding-right: 50px
+		.footer-first
+			order: 3
+		.footer-second
+			order: 1
+		.footer-third
+			order: 2
+		.footer-fourth
+			order: 4
+	+r(600)
 		width: 100%
 		.footer-first
 			width: 100%
@@ -1808,10 +1871,9 @@ $slSize: 410px
 	.caption
 		font-weight: 600
 	.footer-hrefs
-		+r(992)
+		+r(880)
 			position: relative
 			+rem(margin-bottom, 50px)
-			+rem(margin-top, 50px)
 		.footern-href-link
 			display: block
 			color: $text-h
@@ -1824,6 +1886,8 @@ $slSize: 410px
 				+rem(padding-bottom, 3px)
 			&:hover
 				color: $active
+		+r(600)
+			+rem(margin-top, 50px)
 	.footer-lang-caption
 		position: absolute
 		bottom: 0
@@ -1832,7 +1896,7 @@ $slSize: 410px
 			position: relative
 			right: auto
 			top: auto
-		+r(992)
+		+r(880)
 			position: relative
 	.footer-contacts
 		.tell
@@ -1858,7 +1922,7 @@ $slSize: 410px
 			+rem(margin-top, 10px)
 			display: block
 			+rem(font-size, 16px)
-		+r(992)
+		+r(880)
 			position: relative
 			+rem(margin-bottom, 50px)
 	.footer-makers
@@ -1876,7 +1940,7 @@ $slSize: 410px
 		&:hover
 			.href
 				color: $active
-		+r(992)
+		+r(880)
 			position: relative
 			+rem(margin-top, 50px)
 	.footer-block-wrapper
@@ -2165,6 +2229,11 @@ $galleryBigHeight: 590px
 		height: 100%
 	+r(1024)
 		+rem(height, 300px)
+	&.toggle-item
+		+r(992)
+			+rem(height, 370px)
+		+r(492)
+			+rem(height, 420px)
 
 #aside-menu
 	position: absolute
@@ -2177,21 +2246,42 @@ $galleryBigHeight: 590px
 		top: 50%
 		left: 0
 		transform: translate(0, -70%)
+		display: flex
+		flex-direction: column
 		a
-			display: block
-			+rem(width, 65px)
+			display: inline-block
+			+rem(max-width, 65px)
 			+rem(height, 50px)
 			background-color: transparent
 			position: relative
-			transition: width 0.3s cubic-bezier(.445, .05, .55, .95), background-color 0.2s
+			transition: max-width .2s ease, width 0.3s cubic-bezier(.445, .05, .55, .95), background-color 0.2s
 			+rem(padding-left, 25px)
 			+rem(padding-right, 25px)
 			overflow: hidden
+			width: 100%
+			+r(992)
+				+rem(max-width, 40px)
+				+rem(padding-left, 20px)
+				+rem(padding-right, 20px)
 			.aside-item-inner
 				+rem(padding-top, 12px)
 				+rem(padding-left, 40px)
+				+r(992)
+					+rem(padding-left, 20px)
 				p
 					margin: 0
+			&:before
+				position: absolute
+				width: 100%
+				height: 100%
+				background-color: $green
+				content: ''
+				display: block
+				top: 0
+				z-index: -1
+				right: 0
+				transform: translatex(-100%)
+				transition: transform .3s ease
 			&:after
 				display: block
 				position: absolute
@@ -2202,22 +2292,29 @@ $galleryBigHeight: 590px
 				+rem(width, 9px)
 				+rem(height, 9px)
 				+rem(top, 20.5px)
-				+rem(left, 35px)
+				+rem(left, 25px)
 				right: 0
 				bottom: 0
 				transition: background-color 0.2s cubic-bezier(.445, .05, .55, .95) border 0.2s cubic-bezier(.445, .05, .55, .95)
+				+r(992)
+					+rem(left, 15px)
 			&.active
 				&:after
 					background-color: $green
 					border: 1px solid transparent
 			&:hover
-				width: 100%
-				background-color: $green
+				max-width: 500px
 				&:after
 					background-color: $white
+				&:before
+					transform: translatex(0%)
+				p
+					opacity: 1
 			p
 				white-space: nowrap
 				color: $white
+				opacity: 0
+				transition: opacity .2s ease .1s
 
 .small-block
 	+rem(max-width, 720px)

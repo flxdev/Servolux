@@ -19,6 +19,7 @@ gulp.task('svg', function() {
         .pipe(inject(source, { transform: fileContents }))
         .pipe(gulp.dest(config.src.pug + "/includes"));
 });
+
 gulp.task('svgmin', function(){
     return gulp
         .src(config.src.svg + "*.svg")
@@ -33,6 +34,3 @@ gulp.task('svgmin', function(){
 gulp.task('svg:watch', function() {
     gulp.watch(config.src.svg + '*', ['svg']);
 });
-gulp.task('svgmin:watch', function() {
-    gulp.watch(config.src.svg + '*', ['svgmin']);
-})

@@ -170,6 +170,7 @@ function isMobile() {
 	);
 }
 
+//TODO map middle lan and lng of pins to see them all
 function initMap(mapArg, arrayOfPins) {
 	var manyMaps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
@@ -356,9 +357,9 @@ function initMap(mapArg, arrayOfPins) {
 		var onMarkerLoad = function onMarkerLoad(json) {
 			var markerarr = [];
 			mainmarkermarker.setMap(null);
-			for (var i = 0; i < json.length; i++) {
+			for (var _i = 0; _i < json.length; _i++) {
 				// Current object
-				var obj = json[i];
+				var obj = json[_i];
 				var imgType = {
 					url: imgpath,
 					// This marker is 20 pixels wide by 32 pixels high.
@@ -393,8 +394,8 @@ function initMap(mapArg, arrayOfPins) {
 		};
 
 		var hidemarkers = function hidemarkers(array) {
-			for (var i = 0; i < array.length; i++) {
-				var cur = array[i];
+			for (var _i2 = 0; _i2 < array.length; _i2++) {
+				var cur = array[_i2];
 				cur.set('labelClass', 'labels');
 			}
 		};
@@ -409,8 +410,8 @@ function initMap(mapArg, arrayOfPins) {
 				var curLng = map.getCenter().lng();
 				var dLat = (newLat - curLat) / STEPS;
 				var dLng = (newLng - curLng) / STEPS;
-				for (var i = 0; i < STEPS; i++) {
-					panPath.push([curLat + dLat * i, curLng + dLng * i]);
+				for (var _i3 = 0; _i3 < STEPS; _i3++) {
+					panPath.push([curLat + dLat * _i3, curLng + dLng * _i3]);
 				}
 				panPath.push([newLat, newLng]);
 				panPath.shift();
@@ -618,7 +619,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	// docWindow.on('resize', function(){
 	// 	console.log('Height '+docFunctions.findHeight())
 	// });
-
 
 	// PARALLAX event on scroll trigger
 	// if (hasParallax) {
@@ -1068,6 +1068,49 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	if ($('.formFocus').length) {
+		var initDropzoneCompany = function initDropzoneCompany() {
+			$('.formFocus').dropzone({
+				url: "/",
+				paramName: "file",
+				maxFilesize: 10,
+				uploadMultiple: true,
+				previewsContainer: '#files-input',
+				createImageThumbnails: false,
+				addRemoveLinks: true,
+				dictDefaultMessage: 'Прикрепить резюме',
+				dictFileTooBig: 'Файл слишком большой',
+				dictResponseError: 'Сервер ответил с ошибкой',
+				dictInvalidFileType: 'Неверный тип файла',
+				acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
+				init: function init() {
+					this.on("removedfile", function (file) {
+						$.ajax({
+							type: "POST",
+							url: "/",
+							data: "del=" + file['name'] + '&action=FILE',
+							dataType: "html"
+						});
+					});
+					this.on('resetFiles', function () {
+						if (this.files.length !== 0) {
+							for (i = 0; i < this.files.length; i++) {
+								this.files[i].previewElement.remove();
+							}
+							this.files.length = 0;
+						}
+					});
+				},
+				sending: function sending(file, xhr, formData) {
+					formData.append('action', 'FILE');
+				}
+			});
+		};
+
+		var clearDropzone = function clearDropzone() {
+			var obj = Dropzone.forElement(".formFocus");
+			obj.emit("resetFiles");
+		};
+
 		$.validate({
 			form: '.formFocus',
 			modules: 'html5, security, file',
@@ -1080,17 +1123,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				modalSuccess.open();
 				return false; // Will stop the submission of the form
 			}
-		});
-
-		$('.formFocus').dropzone({
-			url: "/post",
-			paramName: "file",
-			maxFilesize: 50,
-			uploadMultiple: true,
-			previewsContainer: '#files-input',
-			createImageThumbnails: false,
-			addRemoveLinks: true,
-			dictDefaultMessage: 'Прикрепить резюме'
 		});
 	}
 });

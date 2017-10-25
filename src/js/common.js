@@ -173,6 +173,7 @@ function isMobile () {
 	return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent) )
 }
 
+//TODO map middle lan and lng of pins to see them all
 function initMap (mapArg, arrayOfPins, manyMaps=false) {
 	let	element = mapArg,
 		zoomIn = parseFloat(element.getAttribute('data-zoom')),
@@ -506,7 +507,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 	}
 	// }
 
-	$('.callback-button').on('click', function(){
+	$('.callback-button').on('click', function () {
 		let buttonText = $(this).text();
 		$('#modal-title').text(buttonText)
 	})
@@ -626,7 +627,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 	console.log('Height '+docFunctions.findHeight())
 	// });
 
-
 	// PARALLAX event on scroll trigger
 	// if (hasParallax) {
 	// 	$parallax = $('#parallax')
@@ -679,7 +679,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			$(el).addClass('animated ' + $(el).data('anim'))
 		})
 	}
-
 
 	// Chart bar width maker
 	$('#index-chart .chart-bar').filter(function () {
@@ -783,13 +782,13 @@ document.addEventListener('DOMContentLoaded', function () {
 				// Get pressed slide number
 				ell = _self.data('slide')
 
-				if(ell > currentSlide){
+				if (ell > currentSlide) {
 					currentDeg += slideDeg * (ell - currentSlide)
 					$('#scheme-menu').css('transform', 'rotate(-' + currentDeg + 'deg)')
 					$('#scheme-menu .icon').css('transform', 'rotate(' + currentDeg + 'deg)')
 					currentSlide = ell
 				}
-				else if(ell < currentSlide){
+				else if (ell < currentSlide) {
 					currentDeg += slideDeg * (8 + ell - currentSlide)
 					$('#scheme-menu').css('transform', 'rotate(-' + currentDeg + 'deg)')
 					$('#scheme-menu .icon').css('transform', 'rotate(' + currentDeg + 'deg)')
@@ -868,11 +867,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		animateAsideMenu()
 	}
 
-	if($('.sticky-block').length) {
+	if ($('.sticky-block').length) {
 
 		let $stickyBlock = $('.sticky-block');
 
-		$stickyBlock.filter(function(){
+		$stickyBlock.filter(function () {
 
 			let stickyBlockOffsetTop = $(this).data('offsettop');
 			$(this).stick_in_parent({offset_top: stickyBlockOffsetTop})
@@ -945,16 +944,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		$partnersSliderWrapper.append('<div class="slick-sum-slides">/ ' + partnersSlidesLength + '</div>')
 	}
 
-
 	if (!window.Promise) {
 		window.Promise = Promise;
 	}
 
-	function lazyImage(){
+	function lazyImage () {
 		console.log('lazyImage init')
 		var arr = document.querySelectorAll('.js-image');
 		var images = [];
-		for(var i = 0; i < arr.length; i++){
+		for (var i = 0; i < arr.length; i++) {
 			images.push(arr[i]);
 		}
 		var config = {
@@ -965,12 +963,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		var imageCount = images.length;
 		var observer = void 0;
 		if (!('IntersectionObserver' in window)) {
-			for(var i = 0; i < imageCount; i++){
+			for (var i = 0; i < imageCount; i++) {
 				preloadImage(images[i]);
 			}
 		} else {
 			observer = new IntersectionObserver(onIntersection, config);
-			for(var i = 0; i< imageCount; i++){
+			for (var i = 0; i < imageCount; i++) {
 				if (images[i].classList.contains('js-image-handled')) {
 					return;
 				}
@@ -978,7 +976,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		}
 
-		function fetchImage(url) {
+		function fetchImage (url) {
 			return new Promise(function (resolve, reject) {
 				var image = new Image();
 				image.src = url;
@@ -987,7 +985,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		}
 
-		function preloadImage(image) {
+		function preloadImage (image) {
 			var src = image.dataset.src;
 			if (!src) {
 				return;
@@ -997,20 +995,20 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		}
 
-		function loadImagesImmediately(images) {
-			for(var i = 0; i< images.length; i++){
+		function loadImagesImmediately (images) {
+			for (var i = 0; i < images.length; i++) {
 				return preloadImage(images[i]);
 			}
 		}
 
-		function disconnect() {
+		function disconnect () {
 			if (!observer) {
 				return;
 			}
 			observer.disconnect();
 		}
 
-		function onIntersection(entries) {
+		function onIntersection (entries) {
 			if (imageCount === 0) {
 				observer.disconnect();
 			}
@@ -1023,20 +1021,20 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		}
 
-		function applyImage(img, src) {
+		function applyImage (img, src) {
 			img.classList.add('js-image-handled');
-			if(img.classList.contains('bg')){
-				img.style.backgroundImage = "url("+src+")";
-			}else{
+			if (img.classList.contains('bg')) {
+				img.style.backgroundImage = "url(" + src + ")";
+			} else {
 				img.src = src;
 			}
 			img.classList.add('fade-in');
 		}
 	}
 
-	if($('#standard-toggle').length){
+	if ($('#standard-toggle').length) {
 		$('#standard-toggle').find('.button').each(
-			function() {
+			function () {
 				$(this).on('click', function () {
 					$(this).addClass('active').siblings().removeClass('active')
 					let toggleItem = $(this).data('item')
@@ -1044,7 +1042,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				})
 			})
 	}
-
 
 	if ($('#contacts').length) {
 		const controllButtons = $('#chart-control .button'),
@@ -1057,7 +1054,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			$(contactBlocks[contBlock]).addClass('active').siblings().removeClass('active')
 		})
 
-		$countryAsideMenyHrefs.on('click', function() {
+		$countryAsideMenyHrefs.on('click', function () {
 			const contCountries = $(this).data('countries'),
 				contBlock = $(this).data('block')
 			;
@@ -1066,59 +1063,89 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 
 	}
-	if($('#jobs-content-wrapper').length){
-		$('.jobs-tags-title-wrapper').on('click', function(){
+	if ($('#jobs-content-wrapper').length) {
+		$('.jobs-tags-title-wrapper').on('click', function () {
 			$(this).toggleClass('deactive')
 			$(this).next().toggleClass('deactive')
 		})
 	}
 
 	if ($('.formFocus').length) {
-		$('.formFocus').filter(function(){
-			 $(this).find('label').filter(function(){
-			 	  $(this).on('focusout', function(){
-				    $(this).removeClass('focusing')
-			 	  	if(!$(this).find('input').val() && !$(this).find('textarea').val()){
-			 	  		$(this).removeClass('active')
-				    }
-			    })
-			 	  $(this).on('focusin', function(){
-				    $(this).addClass('focusing')
-			 	  	if(!$(this).hasClass('active')){
-			 	  		$(this).addClass('active')
-				    }
-			    })
-			 })
+		$('.formFocus').filter(function () {
+			$(this).find('label').filter(function () {
+				$(this).on('focusout', function () {
+					$(this).removeClass('focusing')
+					if (!$(this).find('input').val() && !$(this).find('textarea').val()) {
+						$(this).removeClass('active')
+					}
+				})
+				$(this).on('focusin', function () {
+					$(this).addClass('focusing')
+					if (!$(this).hasClass('active')) {
+						$(this).addClass('active')
+					}
+				})
+			})
 		})
 	}
-
-
 
 	if ($('.formFocus').length) {
 		$.validate({
 			form: '.formFocus',
-			modules : 'html5, security, file',
-			lang : 'ru',
-			addValidClassOnAll : true,
-			validateOnBlur : true, // disable validation when input looses focus
-			errorMessagePosition : 'bottom',
-			onSuccess : function($form) {
+			modules: 'html5, security, file',
+			lang: 'ru',
+			addValidClassOnAll: true,
+			validateOnBlur: true, // disable validation when input looses focus
+			errorMessagePosition: 'bottom',
+			onSuccess: function ($form) {
 				let modalSuccess = $('#callbackSuccess').remodal();
 				modalSuccess.open();
 				return false; // Will stop the submission of the form
 			},
 		});
 
-		$('.formFocus').dropzone({
-			url: "/post",
-			paramName: "file",
-			maxFilesize: 50,
-			uploadMultiple: true,
-			previewsContainer: '#files-input',
-			createImageThumbnails: false,
-			addRemoveLinks: true,
-			dictDefaultMessage: 'Прикрепить резюме'
-		});
-	}
+		function initDropzoneCompany () {
+			$('.formFocus').dropzone({
+				url: "/",
+				paramName: "file",
+				maxFilesize: 10,
+				uploadMultiple: true,
+				previewsContainer: '#files-input',
+				createImageThumbnails: false,
+				addRemoveLinks: true,
+				dictDefaultMessage: 'Прикрепить резюме',
+				dictFileTooBig: 'Файл слишком большой',
+				dictResponseError: 'Сервер ответил с ошибкой',
+				dictInvalidFileType: 'Неверный тип файла',
+				acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
+				init: function () {
+					this.on("removedfile", function (file) {
+						$.ajax({
+							type: "POST",
+							url: "/",
+							data: "del=" + file['name'] + '&action=FILE',
+							dataType: "html"
+						});
+					});
+					this.on('resetFiles', function () {
+						if (this.files.length !== 0) {
+							for (i = 0; i < this.files.length; i++) {
+								this.files[i].previewElement.remove();
+							}
+							this.files.length = 0;
+						}
+					});
+				},
+				sending: function (file, xhr, formData) {
+					formData.append('action', 'FILE');
+				}
+			});
+		}
 
-})
+		function clearDropzone () {
+			const obj = Dropzone.forElement(".formFocus");
+			obj.emit("resetFiles");
+		}
+
+	}
+});
