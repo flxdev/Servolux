@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 13.1 7.5">
+  <style>
+    .arrow_sort{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#484F42;stroke-width:1.5;stroke-miterlimit:10;}
+  </style>
+  <path d="M12.5.5l-6 5.9L.5.5" class="arrow_sort"/>
+</svg>

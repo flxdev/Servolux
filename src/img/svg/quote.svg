@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-quote" viewBox="0 0 40 27.5">
+  <style>
+    .svg-quote{fill:#56B622;}
+  </style>
+  <path d="M0 27.5h9.4l3.3-12.2H8.9c1-5.5 4.4-9.4 11.4-11.8l-1-3.5C9.9 2.7 5.6 6.8 2.9 16.9L0 27.5zm19.7 0h9.4l3.3-12.2h-3.9C29.6 9.8 33 5.9 40 3.5L39 0c-9.4 2.7-13.7 6.8-16.5 16.9l-2.8 10.6z" class="svg-quote"/>
+</svg>

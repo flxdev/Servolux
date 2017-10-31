@@ -241,15 +241,11 @@ blockquote
 .flex-block
 	display: flex
 	flex-wrap: wrap
+	flex-direction: row
 	& > *
 		position: relative
 	&.column
 		flex-direction: column
-	&.space-between
-		justify-content: space-between
-		.one-half
-			width: auto
-			max-width: 50%
 	.flex-content
 		+rem(max-width, 600px)
 		text-align: center
@@ -275,13 +271,27 @@ blockquote
 			padding: 0
 			+rem(margin-top, 30px)
 			+rem(padding, 10px)
+			&.flex-lg-width
+				width: 100%
+				max-width: 100%
+			&.order-1
+				order: -1
+				+rem(margin-bottom, 50px)
 		+r(400)
 			width: 50%
 			+rem(padding, 0px)
 			+rem(max-width, 250px)
 			+rem(margin-top, 10px)
+			&.flex-lg-width
+				width: 100%
 	.three-four
 		width: 75%
+		+r(992)
+			width: 100%
+			max-width: 100%
+	&.row
+		.one-half
+			width: 50%
 
 .animateThis
 	opacity: 0
@@ -395,6 +405,8 @@ blockquote
 		justify-content: center
 		flex-wrap: wrap
 		justify-content: flex-start
+		+r(492)
+			justify-content: center
 		.brand
 			outline: 1px solid $lineColor
 			+rem(max-width, 199px)
@@ -414,11 +426,15 @@ blockquote
 			+r(992)
 				+rem(max-width, 350px)
 				+rem(min-width, 280px)
+			+r(600)
+				max-width: 49%
+				width: 50%
+				min-width: 0
 			+r(492)
-				+rem(max-width, 320px)
+				max-width: 100%
 				+rem(min-width, 250px)
 			+r(400)
-				+rem(max-width, 420px)
+				max-width: 100%
 				+rem(min-width, 320px)
 			&:before
 				display: block
@@ -572,8 +588,8 @@ blockquote
 		transform: translate(0, 180%)
 	+r(481)
 		width: 90%
-		margin-left: 10px
-		margin-right: 10px
+		+rem(margin-left, 10px)
+		+rem(margin-right, 10px)
 		transform: translate(0, 0%)
 	form
 		+rem(max-width, 480px)
@@ -706,7 +722,7 @@ main
 				opacity: 0
 				transform: scale(1.05)
 				transition: transform 0.15s cubic-bezier(.445, .05, .55, .95), opacity 0.15s cubic-bezier(.445, .05, .55, .95)
-				border-radius: 5px
+				+rem(border-radius, 5px)
 				z-index: -1
 			&:hover, &:focus
 				&:after
@@ -750,7 +766,7 @@ main
 				justify-content: center
 				+rem(min-height, 500px)
 				height: 100%
-				padding-bottom: 20px
+				+rem(padding-bottom, 20px)
 				+r(992)
 					+rem(padding-bottom, 50px)
 					height: auto
@@ -767,11 +783,11 @@ main
 					+r(1366)
 						transform: translate(80px, 20px)
 						.callback-wrap
-							margin-top: 20px
-							margin-bottom: 20px
+							+rem(margin-top, 20px)
+							+rem(margin-bottom, 20px)
 						.column
 							.column-href
-								margin-top: 10px
+								+rem(margin-top, 10px)
 					+r(992)
 						margin: 0
 						padding: 0
@@ -798,12 +814,12 @@ main
 							width: 50%
 							&:last-child
 								padding-right: 0
-								padding-left: 25px
+								+rem(padding-left, 25px)
 						+r(600)
-							padding-left: 50px
+							+rem(padding-left, 50px)
 							&:last-child
-								padding-left: 50px
-								padding-bottom: 50px
+								+rem(padding-left, 50px)
+								+rem(padding-bottom, 50px)
 						.callback-wrap
 							.tell
 								+rem(font-size, 18px)
@@ -855,7 +871,7 @@ main
 		background-color: $white
 		top: 0
 		left: 0
-		height: 80px
+		+rem(height, 80px)
 		width: 100%
 		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1)
 		#header-burger
@@ -983,6 +999,24 @@ main
 		+rem(height, 420px)
 		&.page2
 			+rem(height, 500px)
+			+r(1024)
+				#main-first-screen-fading-wrapper
+					.firstScreenFading
+						right: -340px
+						left: auto
+						transform: translate(0, -50%)
+			+r(600)
+				#main-first-screen-fading-wrapper
+					.firstScreenFading
+						+rem(right, -450px)
+			+r(492)
+				+rem(padding-top, 60px)
+				+rem(height, 400px)
+			+r(420)
+				+rem(height, 500px)
+			+r(380)
+				+rem(padding-top, 110px)
+				+rem(height, 580px)
 		#main-first-screen-fading-wrapper
 			.firstScreenFading
 				position: absolute
@@ -1129,7 +1163,7 @@ main
 					top: 50%
 					bottom: auto
 					margin: auto
-					transform: translate(0, -50%)
+					transform: translate(0, -50%)!important
 					+rem(margin-top, -30px)
 				+r(480)
 					+rem(margin-top, -15px)
@@ -1187,7 +1221,7 @@ main
 					position: absolute
 					z-index: 2
 					+rem(height, 200px)
-					+rem(width, 240px)
+					+rem(width, 300px)
 					margin: auto
 					left: 0
 					right: 0
@@ -1209,8 +1243,8 @@ main
 						right: 0
 						margin: auto
 						opacity: 0
-						transform: translate(0, 120px)
-						transition: transform 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.1s
+						transform: translate(0, 100px)
+						transition: transform 0.3s ease-out, opacity 0.3s ease-out
 						color: $white
 						+rem(font-size, 16px)
 						font-weight: 600
@@ -1220,9 +1254,10 @@ main
 							transform: translate(0, 0) scale(1)
 							opacity: 1
 						.screen-link-title
-							transform: translate(0, 40px)
+							transform: translate(0, -14px)
 						p
-							transform: translate(0, 80px)
+							transform: translate(0, 30px)
+							transition: transform 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.1s
 							opacity: 1
 
 #index-chart-wrapper
@@ -1251,6 +1286,7 @@ $slSize: 410px
 		margin: auto
 		border-radius: 50%
 		overflow: hidden
+		pointer-events: none
 		+r(1270)
 			+rem(width, $slSize - 50px)
 			+rem(height, $slSize - 50px)
@@ -1278,6 +1314,7 @@ $slSize: 410px
 			border-radius: 50%
 			overflow: hidden
 			position: relative
+			pointer-events: auto
 			.scheme-slider__slide
 				+rem(width, $slSize)
 				+rem(height, $slSize)
@@ -1360,6 +1397,7 @@ $slSize: 410px
 			z-index: 2
 			border-radius: 50%
 			transition: transform .5s cubic-bezier(.445, .05, .55, .95)
+			pointer-events: auto
 			svg
 				.scheme-circle
 					fill-rule:evenodd
@@ -1579,6 +1617,16 @@ $slSize: 410px
 				+r(992)
 					+rem(padding-top, 0px)
 
+.chart-wrapper-absolut
+	position: absolute
+	left: 50%
+	width: 50%
+	+r(992)
+		position: relative
+		width: 100%
+		+rem(left, -40px)
+		+rem(top, -50px)
+
 #index-chart
 	width: 100%
 	.chart-wrapper
@@ -1769,10 +1817,12 @@ $slSize: 410px
 .callback-button
 	background-color: $green
 	display: inline-block
-	+rem(width, 183px)
+
 	+rem(height, 43px)
 	+rem(border-radius, 50px)
 	+rem(padding-top, 8px)
+	+rem(padding-left, 24px)
+	+rem(padding-right, 24px)
 	+rem(font-size, 16px)
 	+rem(line-height, 28px)
 	+rem(margin-top, 20px)
@@ -1841,7 +1891,7 @@ $slSize: 410px
 			justify-content: center
 		.footer-column
 			width: 50%
-			padding-right: 50px
+			+rem(padding-right, 50px)
 		.footer-first
 			order: 3
 		.footer-second
@@ -2070,7 +2120,7 @@ $slSize: 410px
 						font-weight: 400
 
 #company-chart
-	height: 520px
+	+rem(height, 520px)
 	.mg-line1-color
 		stroke: $green
 	.mg-area1-color
@@ -2107,16 +2157,35 @@ $galleryBigHeight: 590px
 						.gallery-item-title
 							+rem(font-size, 26px)
 							+rem(margin-bottom, 5px)
+							+r(992)
+								+rem(font-size, 18px)
+								+rem(margin-bottom, 0px)
+				+r(992)
+					+rem(height, $galleryBigHeight/2)
+				+r(768)
+					width: 100%
 			&.gallery-medium
 				+rem(height, $galleryBigHeight/2)
 				width: 50%
+				+r(768)
+					width: 100%
 			&.gallery-small
 				+rem(height, $galleryBigHeight/2)
 				width: 25%
+				+r(992)
+					width: 50%
+				+r(768)
+					width: 100%
 			&.gallery-left
 				float: left
+				+r(768)
+					float: none
 			&.gallery-right
 				float: right
+				+r(992)
+					float: left
+				+r(768)
+					float: none
 			.gallery-item-inner
 				position: relative
 				.gallery-item-img
@@ -2142,11 +2211,15 @@ $galleryBigHeight: 590px
 						+rem(line-height, 26px)
 						color: #fff
 						font-weight: 600
+						margin-top: 0px
+						margin-bottom: 0px
 					.gallery-item-subtitle
 						+rem(font-size, 16px)
 						+rem(line-height, 26px)
-						color: #fff
-						font-weight: 400
+						color: #ddd
+						font-weight: 300
+						margin-top: 0
+						margin-bottom: 0
 				&:after
 					position: absolute
 					display: block
@@ -2168,15 +2241,30 @@ $galleryBigHeight: 590px
 
 #company-map
 	position: relative
+	+r(768)
+		+rem(padding-bottom, 100px)
 	.block
 		& > .flex-block
 			.one-half:first-of-type
 				+rem(padding-right, 50px)
+				+r(768)
+					padding-right: 0
 	.map-advantage-wrapper
 		+rem(margin-top, 10px)
+		+r(992)
+			display: flex
+			flex-direction: row
+			align-items: flex-start
+			.one-half
+				width: 25%
+		+r(600)
+			.one-half
+				width: 50%
 		.map-advantage
 			+rem(padding-right, 50px)
 			+rem(margin-top, 15px)
+			+r(992)
+				+rem(padding-right, 20px)
 			&-text
 				p
 					margin-top: 0
@@ -2198,6 +2286,10 @@ $galleryBigHeight: 590px
 			transition: opacity 0.2s
 			&.place_open
 				opacity: 1
+		+r(992)
+			position: relative
+			+rem(height, 350px)
+			width: 100%
 
 .toggle-item
 	opacity: 0
@@ -2241,6 +2333,8 @@ $galleryBigHeight: 590px
 	left: 0
 	height: 100vh
 	z-index: 99
+	+r(492)
+		display: none
 	.aside-menu-wrapper
 		position: absolute
 		top: 50%
@@ -2357,9 +2451,9 @@ $galleryBigHeight: 590px
 	overflow: hidden
 	+rem(padding-bottom, 60px)
 	position: relative
+	padding-right: 1px
 	.products-slide, .partners-slide
 		border: 1px solid $lineColor
-		box-sizing: padding-box
 		position: relative
 		cursor: pointer
 		.slide-img
@@ -2469,6 +2563,8 @@ $galleryBigHeight: 590px
 	overflow: hidden
 	position: relative
 	height: 100%
+	+r(992)
+		display: none
 	.slick-arrow
 		position: absolute
 		+rem(right, 20px)
@@ -2681,11 +2777,17 @@ $galleryBigHeight: 590px
 .side-blocks
 	position: relative
 	+rem(min-height, 600px)
+	+r(992)
+		padding-top: 0
+		padding-bottom: 0
+		min-height: auto
 	.left-side
 		justify-content: flex-start
 	.right-side
 		& > .one-half
 			+rem(padding-left, 50px)
+			+r(992)
+				padding-left: 0
 		justify-content: flex-end
 	&.right-side-block
 		.side-block-img-wrapper
@@ -2718,13 +2820,17 @@ $galleryBigHeight: 590px
 			top: 0
 			margin: auto
 			transform: rotate(45deg)
+			+r(992)
+				display: none
 		.side-block-img
 			background-size: cover
-			background-origin: 100% 50%
+			background-position: 50% 50%
 			background-repeat: no-repeat
 			width: 100%
 			height: 100%
 			position: relative
+			+r(992)
+				display: none
 
 .green-text-count
 	color: $green
@@ -2779,6 +2885,8 @@ $galleryBigHeight: 590px
 		display: block
 		+rem(padding, 50px)
 		animation-duration: 0s
+		+r(1230)
+			text-align: center
 		&:hover
 			animation-duration: 120s
 		&>*
@@ -2803,8 +2911,10 @@ $galleryBigHeight: 590px
 			top: 50%
 			bottom: 0
 			display: block
-			height: 86px
+			+rem(height, 86px)
 			transform: translate(0, -50%)
+			+r(1230)
+				display: none
 			.callback-button
 				background-color: transparent
 				border: 1px solid $white
@@ -2838,6 +2948,8 @@ $galleryBigHeight: 590px
 		position: absolute
 		+rem(right,120px)
 		+rem(top, 10px)
+		+r(1100)
+			display: none
 	.carousel-buttons
 		margin: 0
 
@@ -2850,6 +2962,11 @@ $galleryBigHeight: 590px
 .country-block-inner
 	+rem(padding-top, 40px)
 	+rem(padding-bottom, 70px)
+	.flex-block
+		max-width: 100%
+		+r(1024)
+			.one-four
+				width: 50%
 
 .country-block
 	display: none
@@ -2857,6 +2974,9 @@ $galleryBigHeight: 590px
 		display: block
 	.brand-tel-title, .brand-email-title
 		margin: 0
+		+r(1024)
+			text-align: right
+			+rem(padding-right, 20px)
 
 .block-inner
 	img
@@ -2977,16 +3097,16 @@ $galleryBigHeight: 590px
 				width: 63.5%
 				margin-right: 33%
 				.img-news-wrapper
-					height: 300px
+					+rem(height, 300px)
 
 .ya-share2
 	text-align: right
 	.ya-share2__badge
-		border-radius: 50px
-		padding-left: 5px
-		padding-right: 5px
-		padding-top: 2px
-		padding-bottom: 2px
+		+rem(border-radius, 50px)
+		+rem(padding-left, 5px)
+		+rem(padding-right, 5px)
+		+rem(padding-top, 2px)
+		+rem(padding-bottom, 2px)
 
 #jobs-content-wrapper
 	justify-content: space-between
@@ -3010,6 +3130,7 @@ $galleryBigHeight: 590px
 			color: #999b98
 
 .jobs-tags-item-wrapper
+	min-width: 300px
 	.jobs-tags-title-wrapper
 		background-color: $green
 		cursor: pointer
@@ -3113,6 +3234,8 @@ $galleryBigHeight: 590px
 
 #jobs-content-inner-wrapper
 	+rem(padding-left, 50px)
+	+r(992)
+		padding-left: 0
 
 .clearfix
 	clear: both
@@ -3145,6 +3268,8 @@ $galleryBigHeight: 590px
 			display: inline-block
 			float: right
 			vertical-align: top
+			+r(692)
+				float: none
 			&>*
 				display: inline-block
 				font-weight: 400
@@ -3425,8 +3550,8 @@ form
 		+rem(margin-top, 10px)
 		+rem(margin-bottom, 0px)
 	.dz-default
-		margin-top: 30px
-		padding-left: 30px
+		+rem(margin-top, 30px)
+		+rem(padding-left, 30px)
 		font-weight: 600
 		color: $green
 		cursor: pointer
@@ -3439,15 +3564,15 @@ form
 			position: absolute
 			display: block
 			content: ''
-			width: 20px
-			height: 20px
+			+rem(width, 20px)
+			+rem(height, 20px)
 			background: url('../img/6-2/attach.svg') 50% 50% no-repeat
 			background-size: contain
 			left: 0
 	#files-input
 		float: left
 		position: relative
-		top: 60px
+		+rem(top, 60px)
 		margin-top: 0
 		max-width: 300px
 		.dz-preview
@@ -3461,16 +3586,16 @@ form
 			display: none
 		.dz-size
 			float: right
-			margin-left: 25px
+			+rem(margin-left, 25px)
 			position: relative
 			color: $text-gray
 			&:before
 				position: absolute
 				display: block
 				content: '~'
-				width: 10px
-				height: 10px
-				left: -14px
+				+rem(width, 10px)
+				+rem(height, 10px)
+				+rem(left, -14px)
 		.dz-filename
 			float: left
 			font-weight: 600
@@ -3483,12 +3608,12 @@ form
 			float: left
 		.dz-remove
 			position: absolute
-			top: 15px
-			right: -26px
+			+rem(top, 15px)
+			+rem(right, -26px)
 			font-size: 0
-			width: 16px
-			height: 16px
-			padding: 5px
+			+rem(width, 16px)
+			+rem(height, 16px)
+			+rem(padding, 5px)
 			background: url('../img/6-2/delete_choosen_filter.svg') 50% 50% no-repeat
 			background-size: 70%
 			opacity: .6
@@ -3505,10 +3630,10 @@ form
 #callbackModalWindow
 	max-width: 700px
 	text-align: left
-	padding-bottom: 80px
+	+rem(padding-bottom, 80px)
 	.h2
 		margin-bottom: 0
-		margin-left: 20px
+		+rem(margin-left, 20px)
 	form
 		position: relative
 		&:after
@@ -3517,12 +3642,12 @@ form
 			content: ''
 			clear: both
 		.form-modal-label-wrapper
-			padding-left: 15px
-			padding-right: 15px
+			+rem(padding-left, 15px)
+			+rem(padding-right, 15px)
 		label
 			border: 0
 			border-bottom: 1px solid $lineColor
-			padding-top: 36px
+			+rem(padding-top, 36px)
 			border-radius: 0
 			text-align: left
 			padding-left: 0
@@ -3534,14 +3659,25 @@ form
 			&.has-success
 				border-color: $green
 			&.active
-				padding-top: 10px
+				+rem(padding-top, 10px)
 		.dz-filename
 			max-width: 200px
 		.dz-message
-			margin-left: 20px
+			+rem(margin-left, 20px)
 		#files-input
-			margin-left: 20px
+			+rem(margin-left, 20px)
 
 #callbackSuccess
 	max-width: 400px
 	text-align: left
+
+.date-aside
+	position: absolute
+	+rem(left, -20px)
+	+rem(top, 15px)
+	+r(992)
+		position: relative
+		left: 0
+		+rem(top, -30px)
+		margin: auto
+		max-width: 630px

@@ -1,99 +1,175 @@
 extends _layout
 
 block title
-    title Деятельность
+	title Деятельность
 block config
-    - var main = false
-    - var chart = false
-    - var map = false
-    - var chartjs = false
+	- var main = false
+	- var chart = false
+	- var map = false
+	- var chartjs = false
 block content
-    #main-screen-wrapper.advancedPage
-        #main-first-screen-fading-wrapper
-            img(src="/img/2-0/header-img.jpg", alt="").firstScreenFading
-        #main-screen
-            #main-screen-title
-                #title-wrapper.animated.fadeInDownMenu
-                    .bread
-                        a(href="index.html") Главная
-                    p.title-main Деятельность
-    #main-content
-        aside#aside-menu.animated.fadeInLeft
-            .aside-menu-wrapper
-        .box#top.aside-menu-item(data-aside="Виды деятельности")
-            .block
-                .flex-block
-                    .one-half.animateThis(data-anim="fadeInUp")
-                        .text-wrap
-                            p.h2 15 предприятий-лидеров агропромышленного комплекса Беларуси
-                    .one-half.animateThis(data-anim="fadeInUp")
-                        .text-wrap
-                            p.h3 Вертикальная интеграция — наше главное конкурентное преимущество. Мы горды единством наших подразделений и высоким уровнем организации взаимодействий между ними.
-            .block
-                .flex-block.advantages.row
-                    - var adv = 0.2
-                    mixin one-four-advantage(img, text)
-                        .one-four
-                            .advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
-                                .advantage-img-item
-                                    img(src=img).js-image.advantage-img
-                                .advantage-text
-                                    p= text
-                        - adv=adv+0.08
-                    +one-four-advantage('/img/2-0/icon_1.png', 'Лидеры рынка в сегменте птицеводства ')
-                    +one-four-advantage('/img/2-0/icon_2.png', 'Инновационный подход в области производства')
-                    +one-four-advantage('/img/2-0/icon_3.png', 'Растущий ассортимент и рынки сбыта продукции')
-                    +one-four-advantage('/img/2-0/icon_4.png', 'Высокое качество и безопасность продукции')
-        .box#production-food.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Производство комбикормов")
-            .block
-                .flex-block.left-side
-                    .one-half
-                        .text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                            p.h2 Производство кормов и премиксов
-                            p.h3 Направление представлено компанией «Экомол», имеющей две крупнейших производственных площадки в Беларуси. Мы создаем передовые кормые программы с учетом сырьевой базы наших клиентов.
-                            .flex-block.space-between
-                                .one-half
-                                    .production-side-block-inner
-                                        .production-side-block-inner-count
-                                            p.green-text-count 2000 <span>тонн в сутки</span>
-                                        .production-side-block-inner-text
-                                            p.sub Производительность оборудования для комбикормов
-                                .one-half
-                                    .production-side-block-inner
-                                        .production-side-block-inner-count
-                                            p.green-text-count 26000 <span>тонн в год</span>
-                                        .production-side-block-inner-text
-                                            p.sub Объём производства престартерных комбикормов
-            .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background-image: url('img/2-0/side-img(1).jpg')").js-image.bg
-        .box#production-bird.side-blocks.gray.right-side-block.aside-menu-item(data-aside="Племенное птицеводство")
-            .block
-                .flex-block.right-side
-                    .one-half
-                        .text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                            p.h2 Племенное птицеводство
-                            p.h3 Этот вид деятельности представляет СЗАО «Агролинк», которое занимается выращиванием кур родительского стада для производства инкубационного яйца и суточных цыплят мясных кроссов.
-                            .flex-block.space-between
-                                .one-half
-                                    .production-side-block-inner
-                                        .production-side-block-inner-count
-                                            p.green-text-count 17000 <span>голов птицы в час</span>
-                                        .production-side-block-inner-text
-                                            p.sub Самая производительная линия в стране по убою и разделке птицы
-                                .one-half
-                                    .production-side-block-inner
-                                        .production-side-block-inner-count
-                                            p.green-text-count 90000 <span>тонн в год</span>
-                                        .production-side-block-inner-text
-                                            p.sub Птицы в живом весе в 2015 году
-            .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background-image: url('img/2-0/side-img(2).jpg')").js-image.bg
-        .box#production-milk.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Производство продуктов питания")
-            .block
-                .flex-block.left-side
-                    .one-half
-                        .text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                            p.h2 Производство продуктов питания
-                            p.h3 Наши предприятия производят широкую линейку молочных и мясных продуктов питания. Мы используем только своё сырьё и профессиональное европейское оборудование. Наши продукты не содержат сою и ГМО.
-            .side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
-                .side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')").js-image.bg
+	#main-screen-wrapper.advancedPage
+		#main-first-screen-fading-wrapper
+			img(src="/img/2-0/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			#main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					.bread
+						a(href="index.html") Главная
+					h1.title-main Деятельность
+	#main-content
+		aside#aside-menu.animated.fadeInLeft
+			.aside-menu-wrapper
+		.box#top.aside-menu-item(data-aside="Виды деятельности")
+			.block
+				.flex-block
+					.one-half.animateThis(data-anim="fadeInUp")
+						.text-wrap
+							p.h2 15 современных предприятий-лидеров в своих сегментах
+					.one-half.animateThis(data-anim="fadeInUp")
+						.text-wrap
+							p.h3 Вертикальная интеграция — наше главное конкурентное преимущество. Мы горды единством наших подразделений и высоким уровнем организации взаимодействий между ними.
+			.block
+				.flex-block.advantages.row
+					- var adv = 0.2
+					mixin one-four-advantage(img, text)
+						.one-four
+							.advantage-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: " + adv + "s")
+								.advantage-img-item
+									img(src=img).js-image.advantage-img
+								.advantage-text
+									p= text
+						- adv=adv+0.08
+					+one-four-advantage('/img/2-0/icon_1.png', 'Лидеры рынка в сегменте птицеводства ')
+					+one-four-advantage('/img/2-0/icon_2.png', 'Инновационный подход в области производства')
+					+one-four-advantage('/img/2-0/icon_3.png', 'Растущий ассортимент и рынки сбыта продукции')
+					+one-four-advantage('/img/2-0/icon_4.png', 'Высокое качество и безопасность продукции')
+		.box#production-food.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Производство комбикормов")
+			.block
+				.flex-block.left-side
+					.one-half
+						.text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+							p.h2 Производство комбикормов
+							p.h3 Качественные корма и добавки - основа любой вертикальной интегрированной аграрной компании. Направление  производства комбикормовой продукции в Группе компаний Серволюкс представлено компанией "Экомол", имеющей две крупнейших производственных площадки в Беларуси.
+							p.h3 Рецептуры кормов разрабатываются индивидуально, с учетом кормовой базы клиента, тем самым существенно снижая издержки бизнеса. На протяжении последних лет специалисты предприятия вели активную работу над созданием уникальных кормовых программ. На сегодняшний день компания Экомол является признанным экспертом в области комбикормовой продукции на мировом рынке, предлагающем эффективные кормовые программы для роста продуктивности с/х животных, рыб и птиц.
+							.flex-block.row
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count 2000 <span>тонн в сутки</span>
+										.production-side-block-inner-text
+											p.sub Производительность оборудования для комбикормов
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count 26000 <span>тонн в год</span>
+										.production-side-block-inner-text
+											p.sub Объём производства престартерных комбикормов
+			.side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+				.side-block-img(style="background-image: url('img/2-0/side-img(1).jpg')").js-image.bg
+		.box#production-bird.side-blocks.gray.right-side-block.aside-menu-item(data-aside="Племенное птицеводство")
+			.block
+				.flex-block.right-side
+					.one-half
+						.text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+							p.h2 Племенное птицеводство
+							p.h3 Производство качественного мяса птицы невозможно без тщательного контроля за выращиванием и содержанием кур родительского стада. Родительское стадо суточного молодняка — важный ресурс птицефабрики для получения безопасной готовой продукции и роста эффективности деятельности. За весь процесс от закупки суточного молодняка родительских форм до поставки суточных цыплят на птицефабрику в Серволюкс отвечает компания СЗАО "Агролинк". Здоровье родительского стада - базис для выращивания здорового поголовья и производства безопасной продукции.
+							.flex-block.row
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count 50+ <span>млн. яиц</span>
+										.production-side-block-inner-text
+											p.sub Ежегодное производство
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count 2 <span>породы</span>
+										.production-side-block-inner-text
+											p.sub Кобб и Росс - две основные породы используемых Кроссов
+			.side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+				.side-block-img(style="background-image: url('img/2-0/side-img(2).jpg')").js-image.bg
+		.box#production-prod.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Производство продуктов питания")
+			.block
+				.flex-block.left-side
+					.one-half
+						.text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+							p.h2 Производство продуктов питания
+							p.h3 Группа компаний "Серволюкс" производит широкую линейку продуктов из мяса птицы. Полуфабрикаты из мяса птицы под брендом "Петруха" производятся на двух крупных и современных  площадках: "Серволюкс Агро" и  "Смолевичи Бройлер". Мясо-колбасная продукция под брендами “Братья Грилль”, “Лакомый край”, “Landmark” и др. выпускается на производственных площадках предприятий “Юнимит” и “Белатмит”. При производстве мясо-колбасных изделий используется собственное сырье  и профессиональное европейское оборудование. Команда профессиональных технологов постоянно ротирует ассортимент с учетом изменений  предпочтений потребителей.
+							.flex-block.row
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count 100%
+										.production-side-block-inner-text
+											p.sub Использование собственного сырья при производстве
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count Китай, ЮАР
+										.production-side-block-inner-text
+											p.sub продукция поставляется даже в такие экзотические страны
+			.side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+				.side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')").js-image.bg
+		.box#production-milk.side-blocks.gray.right-side-block.aside-menu-item(data-aside="Производство молочных продуктов")
+			.block
+				.flex-block.right-side
+					.one-half
+						.text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+							p.h2 Производство молочных продуктов
+							p.h3 Компания "Смолевичи Молоко" производит молоко, кефир, сметану, творог и сыр под брендами "Кувшинка", "Cream Nuvo", "Landers". Для производства продукции используется высококачественное молоко класса Экстра, которое поступает с собственной фермы.. Это инновационная молочно-товарная  ферма, позволяющая содержать одновременно до 4,5 тыс. коров. Компания уникальна тем, что имеет рекордные для СНГ показатели использования на производстве собственного молока. Наличие современной лаборатории  гарантирует потребителям контроль стабильности  качества выпускаемой продукции.
+							.flex-block.row
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count 4500 <span>голов</span>
+										.production-side-block-inner-text
+											p.sub мощность самой крупной молочной фермы на территории Беларуси
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count <span>Более</span> 60%
+										.production-side-block-inner-text
+											p.sub процент использования собственного молока в производстве, рекордный для Беларуси
+			.side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+				.side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')").js-image.bg
+		.box#markets.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Собственная торговля")
+			.block
+				.flex-block.left-side
+					.one-half
+						.text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+							p.h2 Собственная торговля
+							p.h3 Сеть фирменных гастрономов "Квартал вкуса" — крупнейший региональный представителей розничной торговли Беларуси. Стратегия развития компании — это создание сети магазинов формата "у дома", обеспечивающих постоянное наличие свежих и вкусных продуктов, в том числе и собственного производства. Наличие предложений непосредственно от производителей, предприятий Группы Серволюкс, позволяет выдерживать конкурентные цены и постоянный ассортимент свежих продуктов.
+							.flex-block.row
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count 100+ <span>магазинов</span>
+										.production-side-block-inner-text
+											p.sub суммарное количество розничных торговых точек в Беларуси
+								.one-half
+									.production-side-block-inner
+										.production-side-block-inner-count
+											p.green-text-count 35 <span>магазинов</span>
+										.production-side-block-inner-text
+											p.sub в самом крупном региональном ритейлере Беларуси - собственной сети Квартал Вкуса
+			.side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+				.side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')").js-image.bg
+		.box#development.side-blocks.gray.right-side-block.aside-menu-item(data-aside="Девелопмент")
+			.block
+				.flex-block.right-side
+					.one-half
+						.text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+							p.h2 Девелопмент
+							p.h3 Постоянное расширение масштабов компании вынуждают ее принимать активное участие в девелоперской деятельности. Компания имеет более 10 собственных офисов по всему СНГ. В 2016 годы был сдан в эксплуатацию собственный административный центр "ARENA", самый большой и современный бизнес-центр Могилева. Кроме того,  к девелопменту относится деятельность по поиску, аренде и приобретению торговых объектов для развития собственной розничной сети.
+			.side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+				.side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')").js-image.bg
+		.box#reconstraction.side-blocks.gray.left-side-block.aside-menu-item(data-aside="Проектирование и реконструкция")
+			.block
+				.flex-block.left-side
+					.one-half
+						.text-wrap.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+							p.h2 Проектирование и реконструкция
+							p.h3 Глубокая вертикальная интеграция группы компаний "Серволюкс" охватывает профессиональные услуги по выполнению комплексного проектирования на возведение, реконструкцию, капитальный ремонт и благоустройство объектов агропромышленного комплекса всех классов сложности и назначений. Используе передовые технологии, компания оказывает значительное влияние на становление и развитие в Беларуси птицеводческих предприятий, предприятий мясопереработки. Одним из профилей работы является утилизации отходов птицеводства и животноводства. У нас 40 специалистов, имеющих опыт работы в качестве генеральных проектировщиков более сотни проектов наивысших уровней сложности.
+			.side-block-img-wrapper.animateThis(data-anim="fadeInUp" style="animation-delay: 0.1s")
+				.side-block-img(style="background-image: url('img/2-0/side-img(3).jpg')").js-image.bg
