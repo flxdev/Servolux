@@ -116,57 +116,6 @@ window.onload = function () {
 			responsive: true
 		})
 	}
-
-	if($('#canvas').length) {
-
-		let barNumber = 0,
-			chartOptions = {
-			type: 'bar',
-			data: barChartData[barNumber],
-			options: {
-				title: {
-					display: true,
-						text: barChartData[barNumber].title
-				},
-				legend: {
-					display: true,
-						position: 'bottom'
-				},
-				tooltips: {
-					mode: 'index',
-						intersect: false
-				},
-				responsive: true,
-				scales: {
-					xAxes: [{
-						stacked: true,
-					}],
-					yAxes: [{
-						stacked: true,
-						ticks: {
-							// Include a dollar sign in the ticks
-							callback: function(value) {
-								return value + " " + barChartData[barNumber].value;
-							}
-						}
-					}]
-				}
-			}
-		}
-
-		let ctx = document.getElementById("canvas").getContext("2d");
-		window.myBar = new Chart(ctx, chartOptions);
-
-		$('#chart-control .button').on('click', function(){
-			$(this).siblings().removeClass('active');
-			$(this).addClass('active');
-			barNumber = $(this).data('chart')
-			chartOptions.data = barChartData[barNumber]
-			chartOptions.options.title.text = barChartData[barNumber].title
-			chartOptions.options.scales.yAxes[0].ticks.callback = function(value){return value + " " + barChartData[barNumber].value;}
-			myBar.update()
-		})
-	}
 }
 
 function isMobile () {
@@ -623,26 +572,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		mainScreenTitle.css('transform', 'translatey(' + Math.round(-(scrollPos) / 2) + 'px)')
 	}
 
-	// docWindow.on('resize', function(){
-	// 	console.log('Height '+docFunctions.findHeight())
-	// });
-
-	// PARALLAX event on scroll trigger
-	// if (hasParallax) {
-	// 	$parallax = $('#parallax')
-	// 	$parallaxImg = $('#parallax .parallax-img img')
-	// 	parallaxImgHeight = $parallaxImg.height()
-	// 	parallaxFieldViewTop = $parallax.offset().top - vHeight
-	// 	parallaxFieldViewBottom = $parallax.offset().top + $parallax.height() + $(window).height()
-	// 	parallaxFieldView = parallaxFieldViewBottom - parallaxFieldViewTop
-	//
-	// 	scrollParallax = (scrollPos) => {
-	// 		if (scrollPos >= parallaxFieldViewTop && scrollPos <= parallaxFieldViewBottom) {
-	// 			$parallaxImg.css('transform', 'translate( 0, ' + ( -((scrollPos - parallaxFieldViewTop) / (parallaxFieldView / 100))) * (parallaxImgHeight / 150) + 'px)')
-	// 		}
-	// 	}
-	// }
-
 	if (hasParallax) {
 		const rellax = new Rellax('.rellax')
 	}
@@ -653,9 +582,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
 			$headerMenuWrapper.addClass('sticked animated fadeInDownFast').css('animation-delay', '0')
 			if (!mobile) {
-				// if (hasParallax) {
-				// 	scrollParallax(scrollPos)
-				// }
 				if (asideMenu) {
 					changeAsideMenu()
 				}
@@ -807,47 +733,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-	if ($('#graphics').length) {
-		let chartButton = $('#chart-control .button'),
-			chartCurrent = 0,
-			chartParams = {
-				data: chartData[chartCurrent].values,
-				animate_on_load: true,
-				width: 600,
-				height: 500,
-				full_width: true,
-				full_height: true,
-				left: 100,
-				y_extended_ticks: true,
-				x_extended_ticks: true,
-				point_size: 4,
-				target: '#company-chart',
-				x_accessor: 'date',
-				y_accessor: 'value',
-				y_label: chartData[chartCurrent].title,
-				color_accessor: 'v',
-				color_type: 'category',
-				mouseover: function (d, i) {
-					d3.select('#company-chart svg .mg-active-datapoint')
-					.text('В ' + (i + 2011) + ' году произведено ' + d.value + ' тыс.тонн')
-				}
-			}
-
-		chartButton.on('click', function () {
-			let _thisChartButton = $(this)
-			if (!_thisChartButton.hasClass('active')) {
-				chartCurrent = _thisChartButton.data('chart')
-			}
-			chartParams.data = chartData[chartCurrent].values
-			chartParams.y_label = chartData[chartCurrent].title
-			// change button state
-			_thisChartButton.addClass('active').siblings().removeClass('active')
-			// update data
-			delete chartParams.xax_format
-			MG.data_graphic(chartParams)
-		})
-		MG.data_graphic(chartParams)
-	}
 
 	if (asideMenu) {
 		$('.aside-menu-item').filter(function () {

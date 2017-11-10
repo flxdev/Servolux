@@ -133,7 +133,7 @@ block content
 			.block
 				p.h2 Результаты деятельности
 				.carousel-buttons.animateThis(data-anim="fadeInRight")
-					#chart-control.carousel-buttons-wrap
+					.chart-controls.carousel-buttons-wrap
 						.button(data-chart="0").active
 							p Мясо птицы
 						.button(data-chart="1")
@@ -144,7 +144,7 @@ block content
 							p Молоко
 				.chart-wrapper-absolut.animateThis(data-anim="fadeInUp")
 					script.
-						var chartData = [
+						var chartData = [[
 							{
 								"title": "Производство мяса птицы, тыс. тонн",
 								"values": [
@@ -193,8 +193,8 @@ block content
 									{"date": "2017", "value": 3000}
 								]
 							}
-						]
-					#company-chart
+						]]
+					#company-chart.graphic-line(data-t="0")
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInRight")
 						p.h3 Отчеты о деятельности компании
@@ -202,7 +202,7 @@ block content
 						+download_pdf('Отчет по экспорту')
 						+download_pdf('Годовой отчет 2016')
 						+download_pdf('сследование отрасли 2016')
-					.one-half.animateThis(data-anim="fadeInLeft")
+					.one-half.animateThis(data-anim="fadeInLeft").empty
 		.box#gallery.aside-menu-item(data-aside="Активы")
 			.block
 				.flex-block

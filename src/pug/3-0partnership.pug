@@ -127,7 +127,7 @@ block content
 								.button(data-chart="2")
 									p Наши цели на 2017 - 2020 г.
 						script.
-							var barChartData = [
+							var barChartData = [[
 								{
 								value: "$млн",
 								title: "Результаты деятельности",
@@ -206,8 +206,8 @@ block content
 								data: [30,55,80,105,130]
 								}]
 								}
-								];
-						canvas#canvas(height="275px" style="height: 275px")
+								]];
+						canvas#canvas.graphic-tab(data-t="0" height="275px" style="height: 275px")
 		//.box#whywe.line-top
 		//	.block
 		//		.flex-block

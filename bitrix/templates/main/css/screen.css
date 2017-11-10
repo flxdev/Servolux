@@ -3791,6 +3791,9 @@ form #files-input {
   left: -1.25rem;
   top: 0.9375rem; }
 
+#graphics .empty {
+  pointer-events: none; }
+
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
   animation: fadeInDown 1s ease-out 0.2s both; }

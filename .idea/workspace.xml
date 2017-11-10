@@ -5,29 +5,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/index.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/0-0jobs.pug" afterPath="$PROJECT_DIR$/src/pug/0-0jobs.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/0-1jobs.pug" afterPath="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common.js" afterPath="$PROJECT_DIR$/src/js/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/1-0company.pug" afterPath="$PROJECT_DIR$/src/pug/1-0company.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/1-1brand.pug" afterPath="$PROJECT_DIR$/src/pug/1-1brand.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/1-2brands.pug" afterPath="$PROJECT_DIR$/src/pug/1-2brands.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/2-0activity.pug" afterPath="$PROJECT_DIR$/src/pug/2-0activity.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/3-0partnership.pug" afterPath="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/4-0work.pug" afterPath="$PROJECT_DIR$/src/pug/4-0work.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/404.pug" afterPath="$PROJECT_DIR$/src/pug/404.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/5-0contacts.pug" afterPath="$PROJECT_DIR$/src/pug/5-0contacts.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/6-0news.pug" afterPath="$PROJECT_DIR$/src/pug/6-0news.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/6-1news.pug" afterPath="$PROJECT_DIR$/src/pug/6-1news.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_footer.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_footer.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/includes/_mixins.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_mixins.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/index.pug" afterPath="$PROJECT_DIR$/src/pug/index.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/_layout.pug" afterPath="$PROJECT_DIR$/src/pug/_layout.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/_main.sass" afterPath="$PROJECT_DIR$/src/sass/_main.sass" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -56,7 +44,7 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.65818185">
+    <splitter split-orientation="horizontal" split-proportion="0.5529865">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="2-0activity.pug" pinned="false" current-in-tab="false">
@@ -72,8 +60,18 @@
           <file leaf-file-name="3-0partnership.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/3-0partnership.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2760">
-                  <caret line="138" column="20" lean-forward="false" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+                <state relative-caret-position="588">
+                  <caret line="83" column="27" lean-forward="false" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="1-0company.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="970">
+                  <caret line="204" column="61" lean-forward="false" selection-start-line="204" selection-start-column="61" selection-end-line="204" selection-end-column="61" />
                   <folding />
                 </state>
               </provider>
@@ -119,21 +117,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_layout.pug" pinned="false" current-in-tab="false">
+          <file leaf-file-name="_layout.pug" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="900">
-                  <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+                <state relative-caret-position="930">
+                  <caret line="137" column="53" lean-forward="true" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_head.pug" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_head.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_head.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="500">
-                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                <state relative-caret-position="480">
+                  <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
                   <folding />
                 </state>
               </provider>
@@ -146,8 +144,8 @@
           <file leaf-file-name="_main.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-100">
-                  <caret line="1823" column="26" lean-forward="false" selection-start-line="1823" selection-start-column="26" selection-end-line="1823" selection-end-column="26" />
+                <state relative-caret-position="1246">
+                  <caret line="3685" column="8" lean-forward="false" selection-start-line="3685" selection-start-column="8" selection-end-line="3685" selection-end-column="8" />
                   <folding>
                     <element signature="e#9206#9377#2" expanded="true" />
                   </folding>
@@ -192,18 +190,59 @@
           <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/js/common.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="6260">
-                  <caret line="761" column="16" lean-forward="false" selection-start-line="761" selection-start-column="16" selection-end-line="761" selection-end-column="16" />
+                <state relative-caret-position="663">
+                  <caret line="606" column="3" lean-forward="false" selection-start-line="606" selection-start-column="3" selection-end-line="606" selection-end-column="3" />
                   <folding>
-                    <element signature="e#28#3597#0" expanded="false" />
                     <element signature="e#61#98#0" expanded="false" />
+                    <element signature="e#125#747#0" expanded="false" />
                     <element signature="e#783#1522#0" expanded="false" />
                     <element signature="e#1561#1960#0" expanded="false" />
                     <element signature="e#1997#2389#0" expanded="false" />
-                    <element signature="e#2416#3595#0" expanded="false" />
-                    <element signature="n#!!block;n#isMobile#0" expanded="false" />
-                    <element signature="n#!!block;n#initMap#0" expanded="false" />
+                    <element signature="e#11062#11121#0" expanded="false" />
+                    <element signature="e#11146#11236#0" expanded="false" />
+                    <element signature="e#12865#12998#0" expanded="false" />
+                    <element signature="e#13026#14884#0" expanded="false" />
+                    <element signature="e#14971#15214#0" expanded="false" />
+                    <element signature="e#15309#15767#0" expanded="false" />
+                    <element signature="e#15841#15934#0" expanded="false" />
+                    <element signature="e#15954#15997#0" expanded="false" />
+                    <element signature="e#16054#16550#0" expanded="false" />
+                    <element signature="e#16931#19120#0" expanded="false" />
+                    <element signature="e#19181#20591#0" expanded="false" />
+                    <element signature="e#20610#21148#0" expanded="false" />
+                    <element signature="e#20655#20880#0" expanded="false" />
+                    <element signature="e#21182#21393#0" expanded="false" />
+                    <element signature="e#21425#21645#0" expanded="false" />
+                    <element signature="e#21676#22025#0" expanded="false" />
+                    <element signature="e#22070#22842#0" expanded="false" />
+                    <element signature="e#22866#22898#0" expanded="false" />
+                    <element signature="e#22923#24722#0" expanded="false" />
+                    <element signature="e#24759#25096#0" expanded="false" />
+                    <element signature="e#25126#25907#0" expanded="false" />
+                    <element signature="e#25948#26092#0" expanded="false" />
+                    <element signature="e#26123#26588#0" expanded="false" />
+                    <element signature="e#26619#28192#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_footer.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="160">
+                  <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="9" selection-end-column="88" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_modals.pug" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="51" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -241,12 +280,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>remoda</find>
-      <find>body</find>
-      <find>menu</find>
-      <find>.one-four</find>
-      <find>.table-blue{font-family:&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:14px;color:#000;width:100%;padding:0;margin:0;border:1px solid #e7e8ea;border-spacing:0}.table-blue-wrapper{width:100%;border-spacing:0;border-bottom:1px solid #e7e8ea;margin:0 0 15px 0}.table-blue-wrapper td{vertical-align:top}.table-blue td{vertical-align:inherit}.table-blue-wrapper&gt;tbody&gt;tr&gt;td{padding:0 0 15px 15px}.table-blue-wrapper&gt;tbody&gt;tr&gt;td:first-child{padding:0 0 15px 0}.table-blue-td-title{background:#d6f1fb;font-weight:normal;position:relative;padding:14px 10px!important}.table-blue-td-select{padding:10px 10px}.table-blue-td-select-wrapper{display:block;position:relative}.table-blue-td-title:before{content:'';position:absolute;top:-1px;right:-1px;left:-1px;bottom:0;border:1px solid #d6f1fb;border-bottom:1px solid #e7e8ea}.table-blue-td-name{padding:8px 10px;font-weight:bold}.table-blue-td-param{padding:8px 10px}.table-blue td:first-child{padding-left:20px!important}.table-blue td:last-child{padding:8px 20px 8px 10px}.table-blue tr:nth-child(2) td{padding-top:20px}.table-blue tr:last-child td{padding-bottom:20px}.table-blue-select{display:inline-block;height:30px;padding:0 23px 0 5px;margin:-8px 0;border:1px solid #e7e8ea;font-size:14px;font-weight:bold;cursor:pointer;position:relative;min-width:200px;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDYuODIgMy40MSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIzMDguNTksMTI3NS4wMmg2LjgybC0zLjQxLDMuNDJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjMwOC41OSAtMTI3NS4wMykiIGZpbGw9IiM3MTdhODQiLz48L3N2Zz4=);background-size:15px 5px;background-position:right 5px top 12px;background-repeat:no-repeat;-webkit-box-shadow:0 0 5px rgba(0,0,0,0);-moz-box-shadow:0 0 5px rgba(0,0,0,0);box-shadow:0 0 5px rgba(0,0,0,0);-webkit-transition:.1s;-moz-transition:.1s;-ms-transition:.1s;-o-transition:.1s;transition:.1s;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}.table-blue-select option{font-size:14px;font-weight:bold;color:#666}.table-blue-select::-ms-expand{display:none}.table-blue-select:focus{outline:0;-webkit-box-shadow:0 0 5px rgba(0,0,0,.1);-moz-box-shadow:0 0 5px rgba(0,0,0,.1);box-shadow:0 0 5px rgba(0,0,0,.1)}.table-blue-td-action{width:24px;padding:0 10px 0 0!important;text-align:center;white-space:nowrap}.table-blue tr:nth-child(2) .table-blue-td-action{padding:8px 10px 0 0!important}.table-blue tr:last-child .table-blue-td-action{padding:0 10px 8px 0!important}.table-blue-delete{display:inline-block;width:10px;height:10px;margin:0 2px;vertical-align:middle;cursor:pointer;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB2aWV3Qm94PSIwIDAgNy40MSA3LjQxIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgPHBhdGggaWQ9IlJlY3RhbmdsZV8yX2NvcHlfNCIgZGF0YS1uYW1lPSJSZWN0YW5nbGUgMiBjb3B5IDQiIGNsYXNzPSJjbHMtMSIgZD0iTTI1NDYuNTcsMTMwMS4zMWwxLjEzLDEuMTItNi4yOSw2LjI5LTEuMTMtMS4xMlptLTUuMTYsMCw2LjI5LDYuMjktMS4xMywxLjEyLTYuMjktNi4yOVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNTQwLjI4IC0xMzAxLjMxKSIgZmlsbD0iIzcxN2E4NCIvPjwvc3ZnPg==);background-size:8px 8px;background-position:center center;background-repeat:no-repeat;opacity:.4;-webkit-transition:.1s;-moz-transition:.1s;-ms-transition:.1s;-o-transition:.1s;transition:.1s}.table-blue-delete:hover{opacity:1}.table-blue-edit{display:inline-block;width:10px;height:10px;margin:0 2px;vertical-align:middle;cursor:pointer;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB2aWV3Qm94PSIwIDAgOS40NiA5LjQ3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjUzMi4zNSwxMzAyLjAzbC0wLjU0LjU0LTEuMzUtMS4zNSwwLjU0LS41NGEwLjMsMC4zLDAsMCwxLC40MSwwbDAuOTQsMC45NGEwLjMsMC4zLDAsMCwxLDAsLjQxaDBabS02LjE4LDYuMTktMS4zNi0xLjM2LDUuMTYtNS4xNiwxLjM2LDEuMzUtNS4xNiw1LjE3aDBabTYuNjYtNy4wOC0wLjk0LS45NGEwLjk3MywwLjk3MywwLDAsMC0xLjM3LDBsLTYuNDMsNi40MmEwLjM3NywwLjM3NywwLDAsMC0uMDkuMTVsLTAuMzMsMi4xN2EwLjMzMiwwLjMzMiwwLDAsMCwuMDkuMzMsMC4zOTQsMC4zOTQsMCwwLDAsLjMzLjA5bDIuMTctLjMzYTAuMzc3LDAuMzc3LDAsMCwwLC4xNS0wLjA5bDYuNDItNi40M2EwLjk2NiwwLjk2NiwwLDAsMCwwLTEuMzdoMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNTIzLjY2IC0xMjk5LjkxKSIgZmlsbD0iIzcxN2E4NCIvPjwvc3ZnPg==);background-size:8px 8px;background-position:center center;background-repeat:no-repeat;opacity:.4;-webkit-transition:.1s;-moz-transition:.1s;-ms-transition:.1s;-o-transition:.1s;transition:.1s}.table-blue-edit:hover{opacity:1}.table-blue-link{display:inline-block;padding:20px 0 0 0}</find>
-      <find>scroll</find>
       <find>container-scroll-top</find>
       <find>paralla</find>
       <find>title-wrapper-inner</find>
@@ -271,11 +304,18 @@
       <find>px</find>
       <find>date-aside</find>
       <find>screen-link-text</find>
+      <find>scroll</find>
+      <find>canvas</find>
+      <find>barChartData</find>
+      <find>#graphics</find>
+      <find>thisChart</find>
+      <find>attr</find>
     </findStrings>
     <replaceStrings>
       <replace>latest</replace>
       <replace>$trel</replace>
       <replace>let</replace>
+      <replace>thisChart</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Sergey\Documents\Servolux\node_modules</dir>
@@ -286,7 +326,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <push-targets>
-      <push-target-info target-remote="master" target-branch="master" repo="$PROJECT_DIR$" source="master" />
+      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -312,7 +352,6 @@
         <option value="$PROJECT_DIR$/src/pug/_layout2.pug" />
         <option value="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" />
         <option value="$PROJECT_DIR$/bitrix/templates/main/index.html" />
-        <option value="$PROJECT_DIR$/src/pug/_layout.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_header.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_modals.pug" />
         <option value="$PROJECT_DIR$/src/sass/lib/_remodal.scss" />
@@ -325,7 +364,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/../test/gulp/tasks/copy.js" />
         <option value="$PROJECT_DIR$/gulp/tasks/copy.js" />
-        <option value="$PROJECT_DIR$/src/js/common.js" />
         <option value="$PROJECT_DIR$/src/pug/1-2brands.pug" />
         <option value="$PROJECT_DIR$/src/pug/404.pug" />
         <option value="$PROJECT_DIR$/src/pug/5-0contacts.pug" />
@@ -336,13 +374,15 @@
         <option value="$PROJECT_DIR$/src/pug/0-1jobs.pug" />
         <option value="$PROJECT_DIR$/src/sass/lib/_animations.sass" />
         <option value="$PROJECT_DIR$/src/pug/index.pug" />
-        <option value="$PROJECT_DIR$/src/pug/1-0company.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_footer.pug" />
         <option value="$PROJECT_DIR$/src/pug/2-0activity.pug" />
-        <option value="$PROJECT_DIR$/src/sass/_main.sass" />
-        <option value="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
         <option value="$PROJECT_DIR$/src/pug/4-0work.pug" />
         <option value="$PROJECT_DIR$/src/pug/0-0jobs.pug" />
+        <option value="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
+        <option value="$PROJECT_DIR$/src/js/common.js" />
+        <option value="$PROJECT_DIR$/src/pug/1-0company.pug" />
+        <option value="$PROJECT_DIR$/src/sass/_main.sass" />
+        <option value="$PROJECT_DIR$/src/pug/_layout.pug" />
       </list>
     </option>
   </component>
@@ -489,10 +529,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1088" />
-    <option name="y" value="-609" />
-    <option name="width" value="1096" />
-    <option name="height" value="1936" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -540,7 +580,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -548,6 +587,24 @@
             <path>
               <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
               <item name="Servolux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
+              <item name="bitrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
+              <item name="bitrix" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
+              <item name="bitrix" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
@@ -567,23 +624,11 @@
               <item name="pug" type="462c0819:PsiDirectoryNode" />
               <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Servolux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Servolux" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -666,6 +711,16 @@
       <arguments />
       <envs />
     </configuration>
+    <configuration name="js" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.babel.js</gulpfile>
+      <tasks>
+        <task>js</task>
+      </tasks>
+      <arguments />
+      <envs />
+    </configuration>
     <configuration name="pug-all" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -676,30 +731,20 @@
       <arguments />
       <envs />
     </configuration>
-    <configuration name="pug" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/gulpfile.babel.js</gulpfile>
-      <tasks>
-        <task>pug</task>
-      </tasks>
-      <arguments />
-      <envs />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
       <item index="1" class="java.lang.String" itemvalue="Gulp.js.copy (1)" />
       <item index="2" class="java.lang.String" itemvalue="Gulp.js.build (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Gulp.js.pug" />
-      <item index="4" class="java.lang.String" itemvalue="Gulp.js.pug-all" />
+      <item index="3" class="java.lang.String" itemvalue="Gulp.js.pug-all" />
+      <item index="4" class="java.lang.String" itemvalue="Gulp.js.js" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Gulp.js.build (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Gulp.js.copy (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Gulp.js.pug-all" />
-        <item index="4" class="java.lang.String" itemvalue="Gulp.js.pug" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.js" />
+        <item index="2" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Gulp.js.copy (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Gulp.js.pug-all" />
       </list>
     </recent_temporary>
   </component>
@@ -739,7 +784,12 @@
       <workItem from="1508497747793" duration="8966000" />
       <workItem from="1508928888497" duration="15322000" />
       <workItem from="1509022025795" duration="15663000" />
-      <workItem from="1509362579889" duration="5301000" />
+      <workItem from="1509362579889" duration="6010000" />
+      <workItem from="1509464496224" duration="646000" />
+      <workItem from="1509521040651" duration="310000" />
+      <workItem from="1509536099525" duration="30000" />
+      <workItem from="1510151956659" duration="622000" />
+      <workItem from="1510295541073" duration="7235000" />
     </task>
     <task id="LOCAL-00001" summary="Something change from webstorm">
       <created>1505114233192</created>
@@ -951,11 +1001,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508933765407</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="all pages">
+      <created>1509459356590</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1509459356591</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411805000" />
+    <option name="totallyTimeSpent" value="421357000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -968,15 +1025,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-609" width="1096" height="1936" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11753372" sideWeight="0.9380403" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20520231" sideWeight="0.061959654" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2947977" sideWeight="0.9380403" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21001926" sideWeight="0.061959654" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13470067" sideWeight="0.47976878" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27716187" sideWeight="0.517341" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275573" sideWeight="0.4894027" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771337" sideWeight="0.49627262" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27724987" sideWeight="0.5211946" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17461197" sideWeight="0.5250482" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12870733" sideWeight="0.4788054" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17461197" sideWeight="0.47495183" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.09057399" sideWeight="0.2079327" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40793827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -988,7 +1047,6 @@
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275573" sideWeight="0.4894027" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1025,7 +1083,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="1-1brand to go" />
     <MESSAGE value="1-1brand in progress. 1 map block remain" />
     <MESSAGE value="1-1brand modal in progress" />
     <MESSAGE value="brand, brands, activity ready" />
@@ -1050,7 +1107,8 @@
     <MESSAGE value="Fixes on form and media to 992px width" />
     <MESSAGE value="index media in progress" />
     <MESSAGE value="media fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="media fixes" />
+    <MESSAGE value="all pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="all pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1095,13 +1153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="544" column="48" lean-forward="false" selection-start-line="544" selection-start-column="48" selection-end-line="544" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/main/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="521" column="61" lean-forward="false" selection-start-line="521" selection-start-column="61" selection-end-line="521" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -1216,13 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/screen.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1237,23 +1281,6 @@
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6260">
-          <caret line="761" column="16" lean-forward="false" selection-start-line="761" selection-start-column="16" selection-end-line="761" selection-end-column="16" />
-          <folding>
-            <element signature="e#28#3597#0" expanded="false" />
-            <element signature="e#61#98#0" expanded="false" />
-            <element signature="e#783#1522#0" expanded="false" />
-            <element signature="e#1561#1960#0" expanded="false" />
-            <element signature="e#1997#2389#0" expanded="false" />
-            <element signature="e#2416#3595#0" expanded="false" />
-            <element signature="n#!!block;n#isMobile#0" expanded="false" />
-            <element signature="n#!!block;n#initMap#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1323,20 +1350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4200">
@@ -1349,24 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2940">
           <caret line="147" column="53" lean-forward="false" selection-start-line="147" selection-start-column="53" selection-end-line="147" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="1823" column="26" lean-forward="false" selection-start-line="1823" selection-start-column="26" selection-end-line="1823" selection-end-column="26" />
-          <folding>
-            <element signature="e#9206#9377#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/3-0partnership.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="138" column="20" lean-forward="false" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1387,18 +1382,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_footer.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+        <state relative-caret-position="160">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="9" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/includes/_head.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4920">
+          <caret line="516" column="61" lean-forward="false" selection-start-line="516" selection-start-column="61" selection-end-line="516" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/3-0partnership.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="83" column="27" lean-forward="false" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="606" column="3" lean-forward="false" selection-start-line="606" selection-start-column="3" selection-end-line="606" selection-end-column="3" />
+          <folding>
+            <element signature="e#61#98#0" expanded="false" />
+            <element signature="e#125#747#0" expanded="false" />
+            <element signature="e#783#1522#0" expanded="false" />
+            <element signature="e#1561#1960#0" expanded="false" />
+            <element signature="e#1997#2389#0" expanded="false" />
+            <element signature="e#11062#11121#0" expanded="false" />
+            <element signature="e#11146#11236#0" expanded="false" />
+            <element signature="e#12865#12998#0" expanded="false" />
+            <element signature="e#13026#14884#0" expanded="false" />
+            <element signature="e#14971#15214#0" expanded="false" />
+            <element signature="e#15309#15767#0" expanded="false" />
+            <element signature="e#15841#15934#0" expanded="false" />
+            <element signature="e#15954#15997#0" expanded="false" />
+            <element signature="e#16054#16550#0" expanded="false" />
+            <element signature="e#16931#19120#0" expanded="false" />
+            <element signature="e#19181#20591#0" expanded="false" />
+            <element signature="e#20610#21148#0" expanded="false" />
+            <element signature="e#20655#20880#0" expanded="false" />
+            <element signature="e#21182#21393#0" expanded="false" />
+            <element signature="e#21425#21645#0" expanded="false" />
+            <element signature="e#21676#22025#0" expanded="false" />
+            <element signature="e#22070#22842#0" expanded="false" />
+            <element signature="e#22866#22898#0" expanded="false" />
+            <element signature="e#22923#24722#0" expanded="false" />
+            <element signature="e#24759#25096#0" expanded="false" />
+            <element signature="e#25126#25907#0" expanded="false" />
+            <element signature="e#25948#26092#0" expanded="false" />
+            <element signature="e#26123#26588#0" expanded="false" />
+            <element signature="e#26619#28192#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="970">
+          <caret line="204" column="61" lean-forward="false" selection-start-line="204" selection-start-column="61" selection-end-line="204" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1246">
+          <caret line="3685" column="8" lean-forward="false" selection-start-line="3685" selection-start-column="8" selection-end-line="3685" selection-end-column="8" />
+          <folding>
+            <element signature="e#9206#9377#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="137" column="53" lean-forward="true" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
           <folding />
         </state>
       </provider>
