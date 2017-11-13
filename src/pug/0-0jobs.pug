@@ -141,7 +141,7 @@ block content
 											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.1 10.2")
 												path(d="M9.8.4L5 5.1l4.7 4.7").close-filter-svg
 												path(d="M.4.4L5 5.1.4 9.8").close-filter-svg
-							#jobs-content-inner-content
+							#jobs-content-inner-content.jobs-content-inner-content
 								.jobs-content-inner-content-wrapper
 									mixin jobs-item(title='Заголовка нет', subtitle='Серволюкс, 20 июля', price='з/п не указана', city='Беларусь, Смолевичи')
 										.jobs-content-inner__item.animateThis(data-anim="fadeInUp")
@@ -162,6 +162,8 @@ block content
 									+jobs-item('Финансовый менеджер', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.')
 									+jobs-item('Экономист по производству', 'Смолевичи Бройлер, 20 июля', 'от 600 руб.', 'Беларусь, Борисов')
 									+jobs-item('Бренд - менеджер')
+								a(href="#" data-anim="fadeInUp").more-button.animateThis
+									p Показать еще
 		.box#parallax.jobs-parallax
 			.parallax-img
 				.parallax-img-relative

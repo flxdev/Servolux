@@ -758,7 +758,8 @@ blockquote {
     .search input:focus ~ .search-icon {
       opacity: 1;
       cursor: pointer;
-      z-index: 10000; }
+      z-index: 10000;
+      z-index: 2; }
       .search input:focus ~ .search-icon:hover .seach-loop {
         stroke: #0056b8; }
       .search input:focus ~ .search-icon:hover .search-stick {
@@ -780,7 +781,8 @@ blockquote {
     right: 0.9375rem;
     top: 0.125rem;
     display: block;
-    height: 100%; }
+    height: 100%;
+    z-index: 1; }
     .search .search-icon .seach-loop {
       fill-rule: evenodd;
       clip-rule: evenodd;
@@ -3398,6 +3400,11 @@ main {
 #jobs-content-inner-tags {
   margin-bottom: 1.25rem; }
 
+.jobs-content-inner-content {
+  text-align: center; }
+  .jobs-content-inner-content-wrapper {
+    text-align: left; }
+
 .jobs-content-inner-tag {
   display: inline-block;
   padding: 0.3125rem;
@@ -3741,46 +3748,47 @@ form #files-input {
       margin-top: 3.125rem;
       text-align: left; }
 
-#callbackModalWindow {
+.modal-form {
   max-width: 700px;
   text-align: left;
   padding-bottom: 5rem; }
-  #callbackModalWindow .h2 {
+  .modal-form .h2 {
     margin-bottom: 0;
     margin-left: 1.25rem; }
-  #callbackModalWindow form {
-    position: relative; }
-    #callbackModalWindow form:after {
-      display: block;
-      position: relative;
-      content: '';
-      clear: both; }
-    #callbackModalWindow form .form-modal-label-wrapper {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; }
-    #callbackModalWindow form label {
-      border: 0;
-      border-bottom: 1px solid #cccccc;
-      padding-top: 2.25rem;
-      -webkit-border-radius: 0;
-      border-radius: 0;
-      text-align: left;
-      padding-left: 0;
-      width: 100%; }
-      #callbackModalWindow form label .form-input-wrapper {
-        padding: 0; }
-      #callbackModalWindow form label.has-error {
-        border-color: red; }
-      #callbackModalWindow form label.has-success {
-        border-color: #55b521; }
-      #callbackModalWindow form label.active {
-        padding-top: 0.625rem; }
-    #callbackModalWindow form .dz-filename {
-      max-width: 200px; }
-    #callbackModalWindow form .dz-message {
-      margin-left: 1.25rem; }
-    #callbackModalWindow form #files-input {
-      margin-left: 1.25rem; }
+
+form.formFocus {
+  position: relative; }
+  form.formFocus:after {
+    display: block;
+    position: relative;
+    content: '';
+    clear: both; }
+  form.formFocus .form-modal-label-wrapper {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
+  form.formFocus label {
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    padding-top: 2.25rem;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    text-align: left;
+    padding-left: 0;
+    width: 100%; }
+    form.formFocus label .form-input-wrapper {
+      padding: 0; }
+    form.formFocus label.has-error {
+      border-color: red; }
+    form.formFocus label.has-success {
+      border-color: #55b521; }
+    form.formFocus label.active {
+      padding-top: 0.625rem; }
+  form.formFocus .dz-filename {
+    max-width: 200px; }
+  form.formFocus .dz-message {
+    margin-left: 1.25rem; }
+  form.formFocus #files-input {
+    margin-left: 1.25rem; }
 
 #callbackSuccess {
   max-width: 400px;
@@ -3793,6 +3801,22 @@ form #files-input {
 
 #graphics .empty {
   pointer-events: none; }
+
+.more-button {
+  display: inline-block;
+  background-color: #eef8e8;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  padding: 6px 25px;
+  margin: auto;
+  text-align: center;
+  margin-top: 3.125rem; }
+  .more-button p {
+    margin: 0; }
+  .more-button:hover {
+    background-color: #0056b8; }
+    .more-button:hover p {
+      color: #fff; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;

@@ -427,13 +427,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		mobile = isMobile(),
 		asideMenu = $('#aside-menu').length ? true : false,
 		hasParallax = $('#parallax').length ? true : false,
-		// $parallax,
-		// $parallaxImg,
-		// parallaxImgHeight,
-		// parallaxFieldViewTop,
-		// parallaxFieldViewBottom,
-		// parallaxFieldView,
-		// scrollParallax,
 		topMenu,
 		menuItems,
 		scrollItems
@@ -443,18 +436,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video class="firstScreenFading" id="main-video" muted loop><source src="' + videoWrapper.data('src') + '" type="video/mp4"></video></div></div>')
 		//videoWrapper.find('.video-poster').remove()
 	}
-
-	// function toggleBody (activeItem) {
-	// 	return function () {
-	// 		activeItem.toggleClass('active')
-	// 		if (mobile) {
-	// 			$('html').toggleClass('remodal-is-locked')
-	// 		}
-	// 		else {
-	// 			$('html').toggleClass('remodal-is-locked')
-	// 		}
-	// 	}
-	// }
 
 	$('.callback-button').on('click', function () {
 		let buttonText = $(this).text();

@@ -615,6 +615,7 @@ blockquote
 				opacity: 1
 				cursor: pointer
 				z-index: 10000
+				z-index: 2
 				&:hover
 					.seach-loop
 						stroke: $active
@@ -637,6 +638,7 @@ blockquote
 		+rem(top, 2px)
 		display: block
 		height: 100%
+		z-index: 1
 		.seach-loop
 			fill-rule: evenodd
 			clip-rule: evenodd
@@ -3321,6 +3323,10 @@ $galleryBigHeight: 590px
 	+rem(margin-bottom, 20px)
 
 .jobs-content-inner
+	&-content
+		text-align: center
+		&-wrapper
+			text-align: left
 	&-tag
 		display: inline-block
 		+rem(padding, 5px)
@@ -3627,45 +3633,46 @@ form
 			+rem(margin-top, 50px)
 			text-align: left
 
-#callbackModalWindow
+.modal-form
 	max-width: 700px
 	text-align: left
 	+rem(padding-bottom, 80px)
 	.h2
 		margin-bottom: 0
 		+rem(margin-left, 20px)
-	form
+
+form.formFocus
+	position: relative
+	&:after
+		display: block
 		position: relative
-		&:after
-			display: block
-			position: relative
-			content: ''
-			clear: both
-		.form-modal-label-wrapper
-			+rem(padding-left, 15px)
-			+rem(padding-right, 15px)
-		label
-			border: 0
-			border-bottom: 1px solid $lineColor
-			+rem(padding-top, 36px)
-			border-radius: 0
-			text-align: left
-			padding-left: 0
-			width: 100%
-			.form-input-wrapper
-				padding: 0
-			&.has-error
-				border-color: red
-			&.has-success
-				border-color: $green
-			&.active
-				+rem(padding-top, 10px)
-		.dz-filename
-			max-width: 200px
-		.dz-message
-			+rem(margin-left, 20px)
-		#files-input
-			+rem(margin-left, 20px)
+		content: ''
+		clear: both
+	.form-modal-label-wrapper
+		+rem(padding-left, 15px)
+		+rem(padding-right, 15px)
+	label
+		border: 0
+		border-bottom: 1px solid $lineColor
+		+rem(padding-top, 36px)
+		border-radius: 0
+		text-align: left
+		padding-left: 0
+		width: 100%
+		.form-input-wrapper
+			padding: 0
+		&.has-error
+			border-color: red
+		&.has-success
+			border-color: $green
+		&.active
+			+rem(padding-top, 10px)
+	.dz-filename
+		max-width: 200px
+	.dz-message
+		+rem(margin-left, 20px)
+	#files-input
+		+rem(margin-left, 20px)
 
 #callbackSuccess
 	max-width: 400px
@@ -3685,3 +3692,22 @@ form
 #graphics
 	.empty
 		pointer-events: none
+		
+		
+.more-button
+	display: inline-block
+	background-color: #eef8e8
+	-webkit-border-radius: 100px
+	-moz-border-radius: 100px
+	border-radius: 100px
+	padding: 6px 25px
+	margin: auto
+	text-align: center
+	+rem(margin-top, 50px)
+	p
+		margin: 0
+	&:hover
+		background-color: $active
+		p
+			color: #fff
+
