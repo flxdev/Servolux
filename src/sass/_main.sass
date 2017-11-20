@@ -652,6 +652,11 @@ blockquote
 		.search-stick
 			fill: #484F42
 			transition: fill 0.1s cubic-bezier(.445, .05, .55, .95)
+	&--page
+		max-width: 100%
+
+.search-page-wrapper
+	+rem(min-height, 500px)
 
 main
 	width: 100%
@@ -1816,7 +1821,7 @@ $slSize: 410px
 	svg
 		+rem(width, 35px)
 
-.callback-button
+.callback-button, .callback-button-modal
 	background-color: $green
 	display: inline-block
 
@@ -1861,6 +1866,8 @@ $slSize: 410px
 	.block
 		+rem(padding-top, 22px)
 		+rem(padding-bottom, 22px)
+		.footer-column
+			min-height: 340px
 	+r(1378)
 		.footer-first
 			+rem(width, 260px)
@@ -1999,6 +2006,9 @@ $slSize: 410px
 		.callback-button
 			+rem(margin-top, 35px)
 	&.footer2
+		.block
+			.footer-column
+				min-height: auto
 		.box
 			+rem(padding, 40px)
 		.callback-wrap
@@ -2068,7 +2078,7 @@ $slSize: 410px
 				right: 0
 				+rem(width, 30px)
 				+rem(height, 30px)
-				background: url(/img/1-0/arrow.svg) 50% 50% no-repeat
+				background: url(../img/1-0/arrow.svg) 50% 50% no-repeat
 				background-size: cover
 				+rem(top, 100px)
 				font-size: 0
@@ -3001,105 +3011,105 @@ $galleryBigHeight: 590px
 			color: $text-h
 			cursor: auto
 
-#news-page
-	#news-right-downloads
-		position: absolute
-		+rem(right, 120px)
-		margin-right: 3.3%
-		+rem(top, 50px)
-		width: 24%
-		+rem(max-height, 500px)
-		overflow-y: scroll
-		z-index: 3
-		background-color: #f5f5f5
-		+rem(padding-left, 30px)
-		+rem(padding-right, 30px)
-		+rem(padding-top, 30px)
-		&::-webkit-scrollbar-track
-			background-color: #e9e9e9
-		&::-webkit-scrollbar
-			+rem(width, 5px)
-			background-color: transparent
-		&::-webkit-scrollbar-thumb
-			background-color: #bababa
-			+rem(border-radius, 5px)
-		+r(1440)
-			+rem(right, 100px)
-			margin-right: 0
-			width: 27.5%
-		+r(1200)
-			width: 41%
-		+r(1024)
-			position: relative
-			display: block
-			width: 100%
-			+rem(margin-bottom, 100px)
-			right: auto
-		.h3
-			margin: 0
-		.href
-			color: $green
-			margin: 0
-			+rem(line-height, 26px)
-		.caption
-			margin: 0
-			+rem(margin-top, 7px)
-		.news-download-block
-			+rem(padding-left, 40px)
-			+rem(padding-bottom, 20px)
-			+rem(padding-top, 20px)
-			display: block
-			padding-right: 0
-			position: relative
-			&:not(:last-of-type)
-				border-bottom: 1px solid $lineColor
-			&:before
-				position: absolute
-				display: block
-				content: ''
-				+rem(width, 15px)
-				+rem(height, 15px)
-				background: url('../img/6-0/download_file.svg') 50% 50% no-repeat
-				background-size: contain
-				+rem(left, 10px)
-				+rem(top, 24px)
-			&:hover
-				.href
-					color: $active
-	#news
+
+.right-downloads
+	position: absolute
+	+rem(right, 120px)
+	margin-right: 3.3%
+	+rem(top, 50px)
+	width: 24%
+	+rem(max-height, 500px)
+	overflow-y: scroll
+	z-index: 3
+	background-color: #f5f5f5
+	+rem(padding-left, 30px)
+	+rem(padding-right, 30px)
+	+rem(padding-top, 30px)
+	&::-webkit-scrollbar-track
+		background-color: #e9e9e9
+	&::-webkit-scrollbar
+		+rem(width, 5px)
+		background-color: transparent
+	&::-webkit-scrollbar-thumb
+		background-color: #bababa
+		+rem(border-radius, 5px)
+	+r(1440)
+		+rem(right, 100px)
+		margin-right: 0
+		width: 27.5%
+	+r(1200)
+		width: 41%
+	+r(1024)
 		position: relative
-		.news
+		display: block
+		width: 100%
+		+rem(margin-bottom, 100px)
+		right: auto
+	.h3
+		margin: 0
+	.href
+		color: $green
+		margin: 0
+		+rem(line-height, 26px)
+	.caption
+		margin: 0
+		+rem(margin-top, 7px)
+	.news-download-block
+		+rem(padding-left, 40px)
+		+rem(padding-bottom, 20px)
+		+rem(padding-top, 20px)
+		display: block
+		padding-right: 0
+		position: relative
+		&:not(:last-of-type)
+			border-bottom: 1px solid $lineColor
+		&:before
+			position: absolute
 			display: block
+			content: ''
+			+rem(width, 15px)
+			+rem(height, 15px)
+			background: url('../img/6-0/download_file.svg') 50% 50% no-repeat
+			background-size: contain
+			+rem(left, 10px)
+			+rem(top, 24px)
+		&:hover
+			.href
+				color: $active
+#news-page #news
+	position: relative
+	.news
+		display: block
+		padding: 0
+		.news-item
+			width: 30%
+			border: none
 			padding: 0
-			.news-item
-				width: 30%
-				border: none
-				padding: 0
-				margin-left: 0
-				margin-right: 3.3%
-				+rem(margin-bottom, 25px)
-				+rem(margin-top, 25px)
-				float: left
-				.img-news-wrapper
-					display: block
-				+r(1200)
-					width: 46.5%
-					position: relative
-					display: inline-block
-					float: none
-					clear: both
-					vertical-align: top
-				+r(1024)
-					display: block
-					width: 100%
-					+rem(padding-bottom, 50px)
-					+rem(margin-bottom, 50px)
-					border-bottom: 1px solid $lineColor
-			.big-news
-				width: 63.5%
-				margin-right: 33%
-				.img-news-wrapper
-					+rem(height, 300px)
+			margin-left: 0
+			margin-right: 3.3%
+			+rem(margin-bottom, 25px)
+			+rem(margin-top, 25px)
+			float: left
+			.img-news-wrapper
+				display: block
+			+r(1200)
+				width: 46.5%
+				position: relative
+				display: inline-block
+				float: none
+				clear: both
+				vertical-align: top
+			+r(1024)
+				display: block
+				width: 100%
+				+rem(padding-bottom, 50px)
+				+rem(margin-bottom, 50px)
+				border-bottom: 1px solid $lineColor
+		.big-news
+			width: 63.5%
+			margin-right: 33%
+			.img-news-wrapper
+				+rem(height, 300px)
 
 .ya-share2
 	text-align: right
@@ -3313,9 +3323,11 @@ $galleryBigHeight: 590px
 				font-weight: 400
 				color: $text-gray
 				&.active
+					cursor: default
 					.jobs-content-sorting__bold-text
 						color: $green
-				&:hover
+						cursor: default
+				&:hover:not(.active)
 					.jobs-content-sorting__bold-text
 						color: $active
 
@@ -3410,7 +3422,10 @@ $galleryBigHeight: 590px
 
 .job-block
 	.three-four
-		+rem(padding-right, 100px)
+		+rem(padding-right, 70px)
+		width: 70%
+	.one-four
+		width: 30%
 
 .job-sticky-box
 	filter: drop-shadow(0 0 5px rgba(0,0,0,.2))
@@ -3429,6 +3444,10 @@ $galleryBigHeight: 590px
 		background-color: #fff
 		border-radius: 50%
 		+rem(padding, 10px)
+		&~.job-sticky-content, &~.job-sticky-buttons
+			+rem(top, -48px)
+			padding-top: 0
+			padding-bottom: 0
 	.job-sticky-circle-inner
 		border-radius: 100%
 		width: 100%
@@ -3443,7 +3462,7 @@ $galleryBigHeight: 590px
 		background-repeat: no-repeat
 	.job-sticky-content
 		position: relative
-		+rem(top, -48px)
+		+rem(padding-top, 40px)
 		.flex-block
 			+rem(margin-bottom, 20px)
 			p
@@ -3451,13 +3470,13 @@ $galleryBigHeight: 590px
 	.job-sticky-buttons
 		text-align: center
 		position: relative
-		+rem(top, -40px)
+		+rem(padding-bottom, 40px)
 	.href
 		+rem(font-size, 16px)
 		font-weight: 600
 		display: inline-block
 
-form
+form.formFocus
 	.flex-block
 		.one-half
 			padding: 0
@@ -3474,6 +3493,7 @@ form
 		+rem(height, 70px)
 		transition: margin 0.2s ease-out, border .2s, padding 0.2s
 		cursor: text
+		border: 0
 		.form-error
 			position: absolute
 			top: 100%
@@ -3482,10 +3502,12 @@ form
 			left: 0px
 			color: red
 		&.has-error
-			border-color: red
+			border: 0
+			border-bottom: 1px solid red
 			+rem(margin-bottom, 30px)
 		&.has-success
-			border-color: $green
+			border: 0
+			border-bottom: 1px solid $green
 		p
 			color: $text-h
 			transition: color .2s
@@ -3544,12 +3566,12 @@ form
 			border: 0
 			width: 100%
 
-form
+form.formFocus
 	.input-file-wrapper
 		display: inline-block
 	p
 		margin: 0
-	.callback-button
+	.callback-button-modal
 		font-weight: 400
 		padding-top: 0
 		float: right
@@ -3575,54 +3597,61 @@ form
 			background: url('../img/6-2/attach.svg') 50% 50% no-repeat
 			background-size: contain
 			left: 0
-	#files-input
-		float: left
+	.files-input-wrapper
 		position: relative
-		+rem(top, 60px)
-		margin-top: 0
-		max-width: 300px
-		.dz-preview
-			width: auto
-			display: inline-block
-			vertical-align: top
-			margin: 0
-		.dz-error-mark
-			display: none
-		.dz-progress
-			display: none
-		.dz-size
-			float: right
-			+rem(margin-left, 25px)
+		+rem(padding-left, 20px)
+		.files-input
 			position: relative
-			color: $text-gray
-			&:before
-				position: absolute
+			+rem(top, 70px)
+			margin-top: 0
+			+rem(max-width, 300px)
+			clear: both
+			.dz-file-preview
+				+rem(padding-top, 5px)
+				+rem(padding-bottom, 5px)
 				display: block
-				content: '~'
-				+rem(width, 10px)
-				+rem(height, 10px)
-				+rem(left, -14px)
-		.dz-filename
-			float: left
-			font-weight: 600
-			max-width: 220px
-			overflow: hidden
-			word-wrap: none
-			text-overflow: ellipsis
-			white-space: nowrap
-		.dz-error-message
-			float: left
-		.dz-remove
-			position: absolute
-			+rem(top, 15px)
-			+rem(right, -26px)
-			font-size: 0
-			+rem(width, 16px)
-			+rem(height, 16px)
-			+rem(padding, 5px)
-			background: url('../img/6-2/delete_choosen_filter.svg') 50% 50% no-repeat
-			background-size: 70%
-			opacity: .6
+			.dz-preview
+				width: auto
+				display: inline-block
+				vertical-align: top
+				margin: 0
+			.dz-error-mark
+				display: none!important
+			.dz-progress
+				display: none
+			.dz-size
+				float: right
+				+rem(margin-left, 25px)
+				position: relative
+				color: $text-gray
+				&:before
+					position: absolute
+					display: block
+					content: '~'
+					+rem(width, 10px)
+					+rem(height, 10px)
+					+rem(left, -14px)
+			.dz-filename
+				float: left
+				font-weight: 600
+				max-width: 220px
+				overflow: hidden
+				word-wrap: none
+				text-overflow: ellipsis
+				white-space: nowrap
+			.dz-error-message
+				float: left
+			.dz-remove
+				position: absolute
+				+rem(top, 5px)
+				+rem(right, -26px)
+				font-size: 0
+				+rem(width, 16px)
+				+rem(height, 16px)
+				+rem(padding, 5px)
+				background: url('../img/6-2/delete_choosen_filter.svg') 50% 50% no-repeat
+				background-size: 70%
+				opacity: .6
 
 #non
 	+rem(padding-bottom, 200px)
@@ -3651,6 +3680,8 @@ form.formFocus
 	.form-modal-label-wrapper
 		+rem(padding-left, 15px)
 		+rem(padding-right, 15px)
+	.form-bottom-items
+		height:  0px
 	label
 		border: 0
 		border-bottom: 1px solid $lineColor
@@ -3662,17 +3693,18 @@ form.formFocus
 		.form-input-wrapper
 			padding: 0
 		&.has-error
-			border-color: red
+			border: 0
+			border-bottom: 1px solid red
 		&.has-success
-			border-color: $green
+			border: 0
+			border-bottom: 1px solid $green
 		&.active
 			+rem(padding-top, 10px)
 	.dz-filename
 		max-width: 200px
 	.dz-message
 		+rem(margin-left, 20px)
-	#files-input
-		+rem(margin-left, 20px)
+
 
 #callbackSuccess
 	max-width: 400px
@@ -3711,3 +3743,66 @@ form.formFocus
 		p
 			color: #fff
 
+.search-page
+	&-wrapper
+		max-width: 60%
+		+r(1200)
+			width: 100%
+			max-width: 700px
+			margin: auto
+	.search
+		+rem(margin-bottom, 35px)
+		&--page
+			+r(992)
+				width: 100%
+				max-width: 100%
+				margin: auto
+				transform: none
+		form
+			+rem(max-width, 700px)
+			+r(992)
+				max-width: 100%
+	.right-downloads
+		+rem(top, 30px)
+		+r(1200)
+			position: relative
+			left: auto
+			right: auto
+			top: 0
+			width: auto
+			max-width: auto
+			margin-top: 30px
+	&__sub
+		color: #999b98
+		span
+			color: #333
+
+.search-item
+	display: block
+	display: flex
+	+rem(padding-top, 40px)
+	color: $text-gray
+	&__left
+		p
+			margin: 0
+			font-size: 18px
+	&__right
+		vertical-align: top
+		+rem(padding-left, 10px)
+	&__href
+		margin: 0
+		font-weight: bold
+		font-size: 18px
+		color: #333
+		span
+			color: $green
+			transition: color .1s ease
+	&__sub
+		color: $text-light-gray
+	&:hover
+		.search-item__href
+			span
+				color: $active
+	&:not(:last-child)
+		border-bottom: 1px solid $text-light-gray
+		+rem(padding-bottom, 15px)

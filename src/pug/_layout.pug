@@ -93,7 +93,8 @@ html(lang="ru")
 			//For tabs chart
 			script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js')
 			script.
-				window.onload = function () {
+				document.addEventListener('DOMContentLoaded', function () {
+					console.log(typeof Chart)
 					if ($('.graphic-tab').length && typeof Chart == 'function') {
 						$('.graphic-tab').filter(function () {
 							var thisChart = barChartData[$(this).data('t')]
@@ -146,7 +147,7 @@ html(lang="ru")
 							})
 						})
 					}
-				};
+				});
 			//End for tabs chart
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js")
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/dropzone.min.js')

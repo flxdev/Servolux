@@ -938,7 +938,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if ($('.formFocus').length) {
 		$('.formFocus').filter(function () {
-			$(this).find('label').filter(function () {
+			let _this = $(this)
+			_this.find('label').filter(function () {
 				$(this).on('focusout', function () {
 					$(this).removeClass('focusing')
 					if (!$(this).find('input').val() && !$(this).find('textarea').val()) {
@@ -955,28 +956,103 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-	if ($('.formFocus').length) {
-		$.validate({
-			form: '.formFocus',
-			modules: 'html5, security, file',
-			lang: 'ru',
-			addValidClassOnAll: true,
-			validateOnBlur: true, // disable validation when input looses focus
-			errorMessagePosition: 'bottom',
-			onSuccess: function ($form) {
-				let modalSuccess = $('#callbackSuccess').remodal();
-				modalSuccess.open();
-				return false; // Will stop the submission of the form
-			},
-		});
 
-		function initDropzoneCompany () {
-			$('.formFocus').dropzone({
+	// if ($('.formFocus').length) {
+	//
+	// 	$('.formFocus').filter(function(){
+	//
+	// 		let _this = $(this)
+	//
+	// 		$.validate({
+	// 			form: _this,
+	// 			modules: 'html5, security, file',
+	// 			lang: 'ru',
+	// 			addValidClassOnAll: true,
+	// 			validateOnBlur: true, // disable validation when input looses focus
+	// 			errorMessagePosition: 'bottom',
+	// 			onSuccess: function (e) {
+	// 				e.preventDefault()
+	// 				let modalSuccess = $('#callbackSuccess').remodal();
+	// 				modalSuccess.open();
+	// 				return false; // Will stop the submission of the form
+	// 			},
+	// 		});
+	//
+	// 		_this.dropzone({
+	// 			url: "/",
+	// 			paramName: "file",
+	// 			maxFilesize: 10,
+	// 			uploadMultiple: true,
+	// 			previewsContainer: _this.find('.files-input')[0],
+	// 			createImageThumbnails: false,
+	// 			addRemoveLinks: true,
+	// 			dictDefaultMessage: 'Прикрепить резюме',
+	// 			dictFileTooBig: 'Файл слишком большой',
+	// 			dictResponseError: 'Сервер ответил с ошибкой',
+	// 			dictInvalidFileType: 'Неверный тип файла',
+	// 			acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
+	// 			init: function () {
+	// 				this.on("removedfile", function (file) {
+	// 					$.ajax({
+	// 						type: "POST",
+	// 						url: "/",
+	// 						data: "del=" + file['name'] + '&action=FILE',
+	// 						dataType: "html"
+	// 					});
+	// 				});
+	// 				this.on('resetFiles', function () {
+	// 					if (this.files.length !== 0) {
+	// 						for (i = 0; i < this.files.length; i++) {
+	// 							this.files[i].previewElement.remove();
+	// 						}
+	// 						this.files.length = 0;
+	// 					}
+	// 				});
+	// 			},
+	// 			sending: function (file, xhr, formData) {
+	// 				formData.append('action', 'FILE');
+	// 			}
+	// 		});
+	//
+	// 		function clearDropzone () {
+	// 			const obj = Dropzone.forElement(".formFocus");
+	// 			_this.dropzone.emit("resetFiles");
+	// 		}
+	//
+	// 	})
+	// }
+
+	//TODO new form verify and drop
+	class FormFocus{
+		constructor(elem){
+			this.elem = $(elem);
+			$.validate({
+				form: $(elem),
+				modules: 'html5, security, file',
+				lang: 'ru',
+				addValidClassOnAll: true,
+				validateOnBlur: true, // disable validation when input looses focus
+				errorMessagePosition: 'bottom',
+				onSuccess: function (e) {
+					e.preventDefault()
+					let modalSuccess = $('#callbackSuccess').remodal();
+					modalSuccess.open();
+					return false; // Will stop the submission of the form
+				}
+			})
+
+			this.elem.find('button[type=submit]').on('click', (el) => {
+				el.preventDefault();
+				this.elem.submit();
+				return false;
+			})
+
+			this.elem.dropzone({
 				url: "/",
 				paramName: "file",
 				maxFilesize: 10,
 				uploadMultiple: true,
-				previewsContainer: '#files-input',
+				previewsContainer: this.elem.find('.files-input')[0],
 				createImageThumbnails: false,
 				addRemoveLinks: true,
 				dictDefaultMessage: 'Прикрепить резюме',
@@ -1007,11 +1083,34 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			});
 		}
-
-		function clearDropzone () {
-			const obj = Dropzone.forElement(".formFocus");
-			obj.emit("resetFiles");
+		//remove all files from drop zone
+		clearDropzone(){
+			Dropzone.forElement($(this.elem)[0]).removeAllFiles();
 		}
-
 	}
+
+	if ($('.formFocus').length) {
+		let formsFocusArr = []
+		$('.formFocus').filter(function(){
+			formsFocusArr.push(new FormFocus(this))
+		})
+	}
+	//TODO clear hash om modal close
+	$(document).on('closed', function () {
+		var scrollV, scrollH, loc = window.location;
+		if ("pushState" in history)
+			history.pushState("", document.title, loc.pathname + loc.search);
+		else {
+			// Prevent scrolling by storing the page's current scroll offset
+			scrollV = document.body.scrollTop;
+			scrollH = document.body.scrollLeft;
+
+			loc.hash = "";
+
+			// Restore the scroll offset, should be flicker free
+			document.body.scrollTop = scrollV;
+			document.body.scrollLeft = scrollH;
+		}
+	});
+
 });

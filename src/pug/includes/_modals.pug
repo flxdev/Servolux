@@ -34,8 +34,10 @@
 				.form-input-wrapper.control-label
 					input(type='text' name='userMsg' data-validation="required").form-control
 		.form-bottom-items
-			#files-input
-			button(type="submit").callback-button Отправить
+			//TODO new wrapper
+			.files-input-wrapper
+				.files-input
+			button(type="submit").callback-button-modal Отправить
 #callbackSuccess.remodal(data-remodal-id="callbackSuccess")
 	button(data-remodal-action="close").remodal-close
 	p.h2 Спасибо!

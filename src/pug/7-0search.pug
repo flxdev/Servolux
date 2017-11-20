@@ -1,0 +1,90 @@
+extends _layout
+
+block title
+	title Поиск
+block config
+	- var main = false
+	- var chart = false
+	- var map = false
+	- var chartjs = false
+block content
+	#main-screen-wrapper.advancedPage
+		#main-first-screen-fading-wrapper
+			img(src="/img/7-0/header-img.jpg", alt="").firstScreenFading
+		#main-screen
+			#main-screen-title
+				#title-wrapper.animated.fadeInDownMenu
+					.bread
+						a(href="index.html") Главная
+					h1.title-main Поиск
+	#main-content
+		.box
+			.block.search-page-block
+				.search-page-wrapper
+					.search-page
+						.search.-page
+							form
+								input#search-input(type="text" name='search-input' placeholder="Я ищу...")
+								label(for="search-input")
+								button(type="submit").search-icon
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.2 22")
+										path.seach-loop(d="M15.3 15l6.2 6.2")
+										path.search-stick(d="M9.1 1.5c4.2 0 7.6 3.4 7.6 7.6 0 4.2-3.4 7.6-7.6 7.6-4.2 0-7.6-3.4-7.6-7.6 0-4.2 3.4-7.6 7.6-7.6m0-1.5C4.1 0 0 4.1 0 9.1c0 5.1 4.1 9.1 9.1 9.1s9.1-4.1 9.1-9.1S14.1 0 9.1 0z")
+						._content
+							p._sub.hidden По вашему запросу ничего не найдено, проверьте правильность написания слова или воспользуйтесь меню сайта.
+							p._sub По вашему запросу найдено <span>16 совпадений</span>
+							.right-downloads.animateThis(data-anim="fadeInUp")
+								p.h3 Документация
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт о результатах деятельности «Смолевичи бройлер» за 3 квартал 2016 года
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Уведомление об общественных обсуждениях
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+								a.news-download-block(href="#")
+									p.href Отчёт по оценке воздействия на окружающую среду
+									p.caption 17 мая 2017
+							._items
+								- var d = 1
+								mixin search-item
+									a(href="#").search-item
+										._left
+											p= d +'.'
+										._right
+											p._href Отчет <span>по оценке воздействия на окружающую среду</span>
+											p Строительство санпропускника с участком мойки тары на площадке №3 ОАО «Смолевичи Бройлер»
+											p._sub Новости
+									- d++
+								+search-item
+								+search-item
+								+search-item
+								+search-item
+								+search-item
+								+search-item
