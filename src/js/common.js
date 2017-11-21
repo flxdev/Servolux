@@ -1034,7 +1034,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				validateOnBlur: true, // disable validation when input looses focus
 				errorMessagePosition: 'bottom',
 				onSuccess: function onSuccess($form) {
-					$form.preventDefault()
 					$.ajax({
 						type: 'POST',
 						data: $form.serialize(),
