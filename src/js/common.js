@@ -1033,10 +1033,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				addValidClassOnAll: true,
 				validateOnBlur: true, // disable validation when input looses focus
 				errorMessagePosition: 'bottom',
-				onSuccess: function (e) {
-					e.preventDefault()
-					let modalSuccess = $('#callbackSuccess').remodal();
-					modalSuccess.open();
+				onSuccess: function onSuccess($form) {
+					$form.preventDefault()
+					$.ajax({
+						type: 'POST',
+						data: $form.serialize(),
+						success: function (data) {
+							let modalSuccess = $('#callbackSuccess').remodal();
+							modalSuccess.open();
+						}
+					});
 					return false; // Will stop the submission of the form
 				}
 			})

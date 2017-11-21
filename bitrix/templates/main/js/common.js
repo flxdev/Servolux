@@ -1016,10 +1016,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				addValidClassOnAll: true,
 				validateOnBlur: true, // disable validation when input looses focus
 				errorMessagePosition: 'bottom',
-				onSuccess: function onSuccess(e) {
-					e.preventDefault();
-					var modalSuccess = $('#callbackSuccess').remodal();
-					modalSuccess.open();
+				onSuccess: function onSuccess($form) {
+					$form.preventDefault();
+					$.ajax({
+						type: 'POST',
+						data: $form.serialize(),
+						success: function success(data) {
+							var modalSuccess = $('#callbackSuccess').remodal();
+							modalSuccess.open();
+						}
+					});
 					return false; // Will stop the submission of the form
 				}
 			});
