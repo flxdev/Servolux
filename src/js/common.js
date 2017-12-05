@@ -7,7 +7,7 @@ window.onload = function () {
 	if ($('#dates').length) {
 		$('#dates-slider').slick({
 			slidesToShow: 4,
-			slidesToScroll: 4,
+			slidesToScroll: 1,
 			infinite: false,
 			focusOnSelect: false,
 			accessibility: false,
@@ -16,7 +16,7 @@ window.onload = function () {
 					breakpoint: 1024,
 					settings: {
 						slidesToShow: 3,
-						slidesToScroll: 3,
+						slidesToScroll: 1,
 						arrows: false,
 						infinite: false
 					}
@@ -25,7 +25,7 @@ window.onload = function () {
 					breakpoint: 750,
 					settings: {
 						slidesToShow: 2,
-						slidesToScroll: 2,
+						slidesToScroll: 1,
 						arrows: false,
 						infinite: false
 					}
@@ -49,7 +49,7 @@ window.onload = function () {
 			arrows: true,
 			dots: true,
 			slidesToShow: 4,
-			slidesToScroll: 1,
+			slidesToScroll: 4,
 			infinite: false,
 			focusOnSelect: false,
 			accessibility: false,
@@ -58,14 +58,14 @@ window.onload = function () {
 					breakpoint: 1024,
 					settings: {
 						slidesToShow: 3,
-						slidesToScroll: 1
+						slidesToScroll: 3
 					}
 				},
 				{
 					breakpoint: 750,
 					settings: {
 						slidesToShow: 2,
-						slidesToScroll: 1
+						slidesToScroll: 2
 					}
 				},
 				{
@@ -554,7 +554,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	if (hasParallax) {
-		const rellax = new Rellax('.rellax')
+		const rellax = new Rellax('.rellax', {
+			speed: 7,
+			center: false,
+			round: true,
+			vertical: true,
+			horizontal: false
+		})
 	}
 
 	// Scroll triggers

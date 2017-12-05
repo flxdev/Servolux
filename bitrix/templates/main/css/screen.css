@@ -521,37 +521,36 @@ blockquote {
 .brands-wrapper {
   margin-top: 3.75rem; }
   .brands-wrapper #brands, .brands-wrapper #company-brands-wrapper {
+    -webkit-box-pack: stretch;
+    -webkit-justify-content: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
+    display: flex; }
     .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
-      outline: 1px solid #cccccc;
+      border: 1px solid #cccccc;
       max-width: 12.4375rem;
-      min-width: 11.25rem;
       height: 13.75rem;
-      margin-left: -1px;
       z-index: 0;
-      display: inline-block;
+      position: relative;
+      padding: 0.3125rem;
+      border-collapse: collapse;
       -webkit-box-flex: 1;
       -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
       flex-grow: 1;
-      position: relative;
-      padding: 0.3125rem;
-      margin-top: 1px;
-      margin-left: 1px; }
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      margin-top: -1px;
+      -webkit-transform: translatey(1px);
+      -ms-transform: translatey(1px);
+      transform: translatey(1px); }
       .brands-wrapper #brands .brand:before, .brands-wrapper #company-brands-wrapper .brand:before {
         display: block;
         position: absolute;
@@ -559,14 +558,14 @@ blockquote {
         bottom: -1px;
         left: -1px;
         width: 100%;
-        height: 0;
-        border-left: 1px solid #0056b8;
-        border-right: 1px solid #0056b8;
+        height: 1px;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
-        -webkit-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.15s;
-        -o-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.15s;
-        transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.15s; }
+        -webkit-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.05s;
+        -o-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.05s;
+        transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0s, border-bottom 0s 0.05s; }
       .brands-wrapper #brands .brand .brand-anim-block, .brands-wrapper #company-brands-wrapper .brand .brand-anim-block {
         position: relative;
         width: 100%;
@@ -601,6 +600,8 @@ blockquote {
         z-index: 2; }
         .brands-wrapper #brands .brand:hover:before, .brands-wrapper #company-brands-wrapper .brand:hover:before {
           height: 100%;
+          border-left: 1px solid #0056b8;
+          border-right: 1px solid #0056b8;
           border-top: 1px solid #0056b8;
           border-bottom: 1px solid #0056b8;
           -webkit-transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), border-top 0s 0.15s, border-bottom 0s 0s;
@@ -1161,11 +1162,15 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     height: 26.25rem; }
+    #main-screen-wrapper.advancedPage #main-first-screen-fading-wrapper {
+      background: #55b521; }
+      #main-screen-wrapper.advancedPage #main-first-screen-fading-wrapper .firstScreenFading {
+        opacity: .8; }
     #main-screen-wrapper.advancedPage.page2 {
       height: 31.25rem; }
     #main-screen-wrapper.advancedPage #main-first-screen-fading-wrapper .firstScreenFading {
       position: absolute;
-      top: 0;
+      top: 50%;
       left: 50%;
       min-width: 100%;
       right: 0;
@@ -1668,7 +1673,6 @@ main {
       color: #0056b8; }
 
 #parallax {
-  background-color: transparent;
   position: relative;
   overflow: hidden;
   background-color: #092222; }
@@ -1710,7 +1714,8 @@ main {
     height: 100%; }
   #parallax .rellax {
     min-height: 130%;
-    min-width: 100%; }
+    min-width: 100%;
+    float: right; }
 
 .carousel-buttons {
   background-color: #f5f6f6;
@@ -5061,6 +5066,19 @@ html.menu-is-locked {
       #vacancy-block .vacancy-block-green .vacancy-button {
         display: none; } }
 
+@media only screen and (max-width: 1220px) {
+      .brands-wrapper #brands, .brands-wrapper #company-brands-wrapper {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .brands-wrapper #brands .brand, .brands-wrapper #company-brands-wrapper .brand {
+          max-width: 12.5rem;
+          min-width: 9.375rem; } }
+
 @media only screen and (max-width: 1200px) {
     .right-downloads {
       width: 41%; }
@@ -5108,11 +5126,10 @@ html.menu-is-locked {
       height: auto;
       min-height: 31.25rem; }
         #main-screen-wrapper.advancedPage.page2 #main-first-screen-fading-wrapper .firstScreenFading {
-          right: -340px;
-          left: auto;
-          -webkit-transform: translate(0, -50%);
-          -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%); }
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
     #scheme {
       height: 43.125rem; }
     #map-wrapper {
@@ -5529,8 +5546,6 @@ html.menu-is-locked {
             #header-modal-wrapper .menu-modal-middle .menu-columns .column:last-child {
               padding-left: 3.125rem;
               padding-bottom: 3.125rem; }
-        #main-screen-wrapper.advancedPage.page2 #main-first-screen-fading-wrapper .firstScreenFading {
-          right: -28.125rem; }
     #footer {
       width: 100%; }
       #footer .footer-first {

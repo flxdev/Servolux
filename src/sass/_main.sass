@@ -401,25 +401,31 @@ blockquote
 	+r(492)
 		+rem(margin-top, 10px)
 	#brands, #company-brands-wrapper
+		justify-content: stretch
+		border-collapse: collapse
+		border-spacing: 0
+		width: 100%
 		display: flex
-		justify-content: center
-		flex-wrap: wrap
-		justify-content: flex-start
+		+r(1220)
+			justify-content: center
+			flex-wrap: wrap
 		+r(492)
 			justify-content: center
 		.brand
-			outline: 1px solid $lineColor
+			border: 1px solid $lineColor
 			+rem(max-width, 199px)
-			+rem(min-width, 180px)
 			+rem(height, 220px)
-			margin-left: -1px
 			z-index: 0
-			display: inline-block
-			flex-grow: 1
 			position: relative
 			+rem(padding, 5px)
-			margin-top: 1px
-			margin-left: 1px
+			border-collapse: collapse
+			flex-grow: 1
+			flex-shrink: 0
+			margin-top: -1px
+			transform: translatey(1px)
+			+r(1220)
+				+rem(max-width, 200px)
+				+rem(min-width, 150px)
 			+r(1024)
 				+rem(max-width, 200px)
 				+rem(min-width, 150px)
@@ -443,12 +449,12 @@ blockquote
 				bottom: -1px
 				left: -1px
 				width: 100%
-				height: 0
-				border-left: 1px solid $active
-				border-right: 1px solid $active
+				height: 1px
+				border-left: 1px solid transparent
+				border-right: 1px solid transparent
 				border-top: 1px solid transparent
 				border-bottom: 1px solid transparent
-				transition: height 0.15s cubic-bezier(.445, .05, .55, .95), border-top 0s 0s, border-bottom 0s 0.15s
+				transition: height 0.15s cubic-bezier(.445, .05, .55, .95), border-top 0s 0s, border-bottom 0s 0.05s
 			.brand-anim-block
 				position: relative
 				width: 100%
@@ -474,6 +480,8 @@ blockquote
 				z-index: 2
 				&:before
 					height: 100%
+					border-left: 1px solid $active
+					border-right: 1px solid $active
 					border-top: 1px solid $active
 					border-bottom: 1px solid $active
 					transition: height 0.15s cubic-bezier(.445, .05, .55, .95), border-top 0s 0.15s, border-bottom 0s 0s
@@ -1003,19 +1011,18 @@ main
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
+		#main-first-screen-fading-wrapper
+			background: $green
+			.firstScreenFading
+				opacity: .8
 		+rem(height, 420px)
 		&.page2
 			+rem(height, 500px)
 			+r(1024)
 				#main-first-screen-fading-wrapper
 					.firstScreenFading
-						right: -340px
-						left: auto
-						transform: translate(0, -50%)
-			+r(600)
-				#main-first-screen-fading-wrapper
-					.firstScreenFading
-						+rem(right, -450px)
+						left: 50%
+						transform: translate(-50%, -50%)
 			+r(492)
 				+rem(padding-top, 60px)
 				+rem(height, 400px)
@@ -1027,7 +1034,7 @@ main
 		#main-first-screen-fading-wrapper
 			.firstScreenFading
 				position: absolute
-				top: 0
+				top: 50%
 				left: 50%
 				min-width: 100%
 				right: 0
@@ -1516,7 +1523,6 @@ $slSize: 410px
 // 	background-size: cover
 
 #parallax
-	background-color: transparent
 	position: relative
 	overflow: hidden
 	background-color: #092222
@@ -1562,6 +1568,7 @@ $slSize: 410px
 	.rellax
 		min-height: 130%
 		min-width: 100%
+		float: right
 		+r(992)
 			bottom: 0!important
 			right: 0
