@@ -49,7 +49,7 @@ window.onload = function () {
 			arrows: true,
 			dots: true,
 			slidesToShow: 4,
-			slidesToScroll: 4,
+			slidesToScroll: 1,
 			infinite: false,
 			focusOnSelect: false,
 			accessibility: false,
@@ -58,14 +58,14 @@ window.onload = function () {
 					breakpoint: 1024,
 					settings: {
 						slidesToShow: 3,
-						slidesToScroll: 3
+						slidesToScroll: 1
 					}
 				},
 				{
 					breakpoint: 750,
 					settings: {
 						slidesToShow: 2,
-						slidesToScroll: 2
+						slidesToScroll: 1
 					}
 				},
 				{
@@ -100,8 +100,8 @@ window.onload = function () {
 	if ($('.vertical-slider').length) {
 
 		let $verticalSlider = $('.vertical-slider'),
-			maxHeight = $verticalSlider.height();
-		$verticalSlider.find('.img-wrapper').height(maxHeight);
+			maxHeight = $verticalSlider.height()
+		$verticalSlider.find('.img-wrapper').height(maxHeight)
 
 		$verticalSlider.slick({
 			arrows: true,
@@ -119,176 +119,176 @@ window.onload = function () {
 }
 
 function isMobile () {
-	return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent) )
+	return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent))
 }
 
 //TODO map middle lan and lng of pins to see them all
-function initMap (mapArg, arrayOfPins, manyMaps=false) {
-	let	element = mapArg,
+function initMap (mapArg, arrayOfPins, manyMaps = false) {
+	let element = mapArg,
 		zoomIn = parseFloat(element.getAttribute('data-zoom')),
 		latcord = parseFloat(element.getAttribute('data-lat')),
 		loncord = parseFloat(element.getAttribute('data-lon')),
 		imgpath = element.getAttribute('data-icon'),
-		centercords = {lat: latcord, lng: loncord};
-		if(manyMaps){
-			latcord = arrayOfPins.lat
-			loncord = arrayOfPins.lng
-			centercords = {lat: latcord, lng: loncord}
-		}
-		let map = new google.maps.Map(element, {
-			zoom: zoomIn,
-			center: centercords,
-			fullscreenControl: true,
-			scrollwheel: false,
-			mapTypeControl: false,
-			scaleControl: false,
-			streetViewControl: false,
-			gestureHandling: 'greedy',
-			zoomControlOptions: {
-				position: google.maps.ControlPosition.RIGHT_CENTER
-			},
-			styles: [{
-				'featureType': 'all',
-				'elementType': 'geometry',
-				'stylers': [{'visibility': 'on'}]
-			}, {
-				'featureType': 'all',
-				'elementType': 'geometry.fill',
-				'stylers': [{'visibility': 'on'}]
-			}, {
-				'featureType': 'all',
-				'elementType': 'geometry.stroke',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'all',
-				'elementType': 'labels.text',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'all',
-				'elementType': 'labels.text.fill',
-				'stylers': [{'color': '#000000'}]
-			}, {
-				'featureType': 'all',
-				'elementType': 'labels.text.stroke',
-				'stylers': [{'color': '#ffffff'}]
-			}, {
-				'featureType': 'administrative',
-				'elementType': 'geometry.stroke',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative',
-				'elementType': 'labels',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative',
-				'elementType': 'labels.text',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative.country',
-				'elementType': 'geometry.fill',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative.country',
-				'elementType': 'geometry.stroke',
-				'stylers': [{'visibility': 'on'}, {'saturation': '-14'}, {'weight': '1'}, {'lightness': '67'}, {'gamma': '1.41'}, {'color': '#c7d7c7'}]
-			}, {
-				'featureType': 'administrative.country',
-				'elementType': 'labels.text',
-				'stylers': [{'hue': '#ff0000'}, {'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative.province',
-				'elementType': 'all',
-				'stylers': [{'visibility': 'on'}]
-			}, {
-				'featureType': 'administrative.province',
-				'elementType': 'geometry.stroke',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative.province',
-				'elementType': 'labels.text',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative.locality',
-				'elementType': 'labels.text',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative.neighborhood',
-				'elementType': 'labels.text',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'administrative.land_parcel',
-				'elementType': 'labels.text',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'landscape',
-				'elementType': 'all',
-				'stylers': [{'saturation': '-39'}, {'lightness': '35'}, {'gamma': '1.08'}]
-			}, {
-				'featureType': 'landscape',
-				'elementType': 'geometry',
-				'stylers': [{'saturation': '0'}]
-			}, {
-				'featureType': 'landscape',
-				'elementType': 'labels',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'landscape.man_made',
-				'elementType': 'all',
-				'stylers': [{'saturation': '-100'}, {'lightness': '10'}]
-			}, {
-				'featureType': 'landscape.man_made',
-				'elementType': 'geometry.stroke',
-				'stylers': [{'saturation': '-100'}, {'lightness': '-14'}]
-			}, {
-				'featureType': 'landscape.man_made',
-				'elementType': 'labels.text',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'landscape.natural.landcover',
-				'elementType': 'labels.text',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'poi',
-				'elementType': 'all',
-				'stylers': [{'saturation': '-100'}, {'lightness': '10'}, {'gamma': '2.26'}]
-			}, {
-				'featureType': 'poi',
-				'elementType': 'labels',
-				'stylers': [{'visibility': 'off'}]
-			}, {
-				'featureType': 'poi',
-				'elementType': 'labels.text',
-				'stylers': [{'saturation': '-100'}, {'lightness': '-3'}]
-			}, {
-				'featureType': 'road',
-				'elementType': 'all',
-				'stylers': [{'saturation': '-100'}, {'lightness': '54'}]
-			}, {
-				'featureType': 'road',
-				'elementType': 'geometry.stroke',
-				'stylers': [{'saturation': '-100'}, {'lightness': '-7'}]
-			}, {
-				'featureType': 'road.arterial',
-				'elementType': 'all',
-				'stylers': [{'saturation': '-100'}]
-			}, {
-				'featureType': 'road.local',
-				'elementType': 'all',
-				'stylers': [{'saturation': '-100'}, {'lightness': '-2'}]
-			}, {
-				'featureType': 'transit',
-				'elementType': 'all',
-				'stylers': [{'saturation': '-100'}]
-			}, {
-				'featureType': 'water',
-				'elementType': 'geometry.fill',
-				'stylers': [{'saturation': '-100'}, {'lightness': '100'}]
-			}, {
-				'featureType': 'water',
-				'elementType': 'geometry.stroke',
-				'stylers': [{'saturation': '-100'}, {'lightness': '-100'}]
-			}]
-		})
+		centercords = {lat: latcord, lng: loncord}
+	if (manyMaps) {
+		latcord = arrayOfPins.lat
+		loncord = arrayOfPins.lng
+		centercords = {lat: latcord, lng: loncord}
+	}
+	let map = new google.maps.Map(element, {
+		zoom: zoomIn,
+		center: centercords,
+		fullscreenControl: true,
+		scrollwheel: false,
+		mapTypeControl: false,
+		scaleControl: false,
+		streetViewControl: false,
+		gestureHandling: 'greedy',
+		zoomControlOptions: {
+			position: google.maps.ControlPosition.RIGHT_CENTER
+		},
+		styles: [{
+			'featureType': 'all',
+			'elementType': 'geometry',
+			'stylers': [{'visibility': 'on'}]
+		}, {
+			'featureType': 'all',
+			'elementType': 'geometry.fill',
+			'stylers': [{'visibility': 'on'}]
+		}, {
+			'featureType': 'all',
+			'elementType': 'geometry.stroke',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'all',
+			'elementType': 'labels.text',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'all',
+			'elementType': 'labels.text.fill',
+			'stylers': [{'color': '#000000'}]
+		}, {
+			'featureType': 'all',
+			'elementType': 'labels.text.stroke',
+			'stylers': [{'color': '#ffffff'}]
+		}, {
+			'featureType': 'administrative',
+			'elementType': 'geometry.stroke',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative',
+			'elementType': 'labels',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative',
+			'elementType': 'labels.text',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative.country',
+			'elementType': 'geometry.fill',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative.country',
+			'elementType': 'geometry.stroke',
+			'stylers': [{'visibility': 'on'}, {'saturation': '-14'}, {'weight': '1'}, {'lightness': '67'}, {'gamma': '1.41'}, {'color': '#c7d7c7'}]
+		}, {
+			'featureType': 'administrative.country',
+			'elementType': 'labels.text',
+			'stylers': [{'hue': '#ff0000'}, {'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative.province',
+			'elementType': 'all',
+			'stylers': [{'visibility': 'on'}]
+		}, {
+			'featureType': 'administrative.province',
+			'elementType': 'geometry.stroke',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative.province',
+			'elementType': 'labels.text',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative.locality',
+			'elementType': 'labels.text',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative.neighborhood',
+			'elementType': 'labels.text',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'administrative.land_parcel',
+			'elementType': 'labels.text',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'landscape',
+			'elementType': 'all',
+			'stylers': [{'saturation': '-39'}, {'lightness': '35'}, {'gamma': '1.08'}]
+		}, {
+			'featureType': 'landscape',
+			'elementType': 'geometry',
+			'stylers': [{'saturation': '0'}]
+		}, {
+			'featureType': 'landscape',
+			'elementType': 'labels',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'landscape.man_made',
+			'elementType': 'all',
+			'stylers': [{'saturation': '-100'}, {'lightness': '10'}]
+		}, {
+			'featureType': 'landscape.man_made',
+			'elementType': 'geometry.stroke',
+			'stylers': [{'saturation': '-100'}, {'lightness': '-14'}]
+		}, {
+			'featureType': 'landscape.man_made',
+			'elementType': 'labels.text',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'landscape.natural.landcover',
+			'elementType': 'labels.text',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'poi',
+			'elementType': 'all',
+			'stylers': [{'saturation': '-100'}, {'lightness': '10'}, {'gamma': '2.26'}]
+		}, {
+			'featureType': 'poi',
+			'elementType': 'labels',
+			'stylers': [{'visibility': 'off'}]
+		}, {
+			'featureType': 'poi',
+			'elementType': 'labels.text',
+			'stylers': [{'saturation': '-100'}, {'lightness': '-3'}]
+		}, {
+			'featureType': 'road',
+			'elementType': 'all',
+			'stylers': [{'saturation': '-100'}, {'lightness': '54'}]
+		}, {
+			'featureType': 'road',
+			'elementType': 'geometry.stroke',
+			'stylers': [{'saturation': '-100'}, {'lightness': '-7'}]
+		}, {
+			'featureType': 'road.arterial',
+			'elementType': 'all',
+			'stylers': [{'saturation': '-100'}]
+		}, {
+			'featureType': 'road.local',
+			'elementType': 'all',
+			'stylers': [{'saturation': '-100'}, {'lightness': '-2'}]
+		}, {
+			'featureType': 'transit',
+			'elementType': 'all',
+			'stylers': [{'saturation': '-100'}]
+		}, {
+			'featureType': 'water',
+			'elementType': 'geometry.fill',
+			'stylers': [{'saturation': '-100'}, {'lightness': '100'}]
+		}, {
+			'featureType': 'water',
+			'elementType': 'geometry.stroke',
+			'stylers': [{'saturation': '-100'}, {'lightness': '-100'}]
+		}]
+	})
 	let img = {
 		url: imgpath,
 		// This marker is 20 pixels wide by 32 pixels high.
@@ -438,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	$('.callback-button').on('click', function () {
-		let buttonText = $(this).text();
+		let buttonText = $(this).text()
 		$('#modal-title').text(buttonText)
 	})
 
@@ -671,7 +671,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			$schemeSlides = $('#scheme-slider .scheme-slider__slide'),
 			currentSlide = 1,
 			currentDeg = 0,
-			slideDeg = 45;
+			slideDeg = 45
 
 		$schemeButton.on('click', function () {
 			let _self = $(this)
@@ -714,7 +714,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-
 	if (asideMenu) {
 		$('.aside-menu-item').filter(function () {
 			let _asideItem = $(this),
@@ -735,11 +734,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if ($('.sticky-block').length) {
 
-		let $stickyBlock = $('.sticky-block');
+		let $stickyBlock = $('.sticky-block')
 
 		$stickyBlock.filter(function () {
 
-			let stickyBlockOffsetTop = $(this).data('offsettop');
+			let stickyBlockOffsetTop = $(this).data('offsettop')
 			$(this).stick_in_parent({offset_top: stickyBlockOffsetTop})
 
 		})
@@ -811,90 +810,90 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	if (!window.Promise) {
-		window.Promise = Promise;
+		window.Promise = Promise
 	}
 
 	function lazyImage () {
 		console.log('lazyImage init')
-		var arr = document.querySelectorAll('.js-image');
-		var images = [];
-		for (var i = 0; i < arr.length; i++) {
-			images.push(arr[i]);
+		let arr = document.querySelectorAll('.js-image')
+		let images = []
+		for (let i = 0; i < arr.length; i++) {
+			images.push(arr[i])
 		}
-		var config = {
+		let config = {
 			rootMargin: '0px 0px',
 			threshold: 0.01
-		};
+		}
 
-		var imageCount = images.length;
-		var observer = void 0;
+		let imageCount = images.length
+		let observer = void 0
 		if (!('IntersectionObserver' in window)) {
-			for (var i = 0; i < imageCount; i++) {
-				preloadImage(images[i]);
+			for (let i = 0; i < imageCount; i++) {
+				preloadImage(images[i])
 			}
 		} else {
-			observer = new IntersectionObserver(onIntersection, config);
-			for (var i = 0; i < imageCount; i++) {
+			observer = new IntersectionObserver(onIntersection, config)
+			for (let i = 0; i < imageCount; i++) {
 				if (images[i].classList.contains('js-image-handled')) {
-					return;
+					return
 				}
-				observer.observe(images[i]);
+				observer.observe(images[i])
 			}
 		}
 
 		function fetchImage (url) {
 			return new Promise(function (resolve, reject) {
-				var image = new Image();
-				image.src = url;
-				image.onload = resolve;
-				image.onerror = reject;
-			});
+				let image = new Image()
+				image.src = url
+				image.onload = resolve
+				image.onerror = reject
+			})
 		}
 
 		function preloadImage (image) {
-			var src = image.dataset.src;
+			let src = image.dataset.src
 			if (!src) {
-				return;
+				return
 			}
 			return fetchImage(src).then(function () {
-				applyImage(image, src);
-			});
+				applyImage(image, src)
+			})
 		}
 
 		function loadImagesImmediately (images) {
-			for (var i = 0; i < images.length; i++) {
-				return preloadImage(images[i]);
+			for (let i = 0; i < images.length; i++) {
+				return preloadImage(images[i])
 			}
 		}
 
 		function disconnect () {
 			if (!observer) {
-				return;
+				return
 			}
-			observer.disconnect();
+			observer.disconnect()
 		}
 
 		function onIntersection (entries) {
 			if (imageCount === 0) {
-				observer.disconnect();
+				observer.disconnect()
 			}
 			entries.forEach(function (entry) {
 				if (entry.intersectionRatio > 0) {
-					imageCount--;
-					observer.unobserve(entry.target);
-					preloadImage(entry.target);
+					imageCount--
+					observer.unobserve(entry.target)
+					preloadImage(entry.target)
 				}
-			});
+			})
 		}
 
 		function applyImage (img, src) {
-			img.classList.add('js-image-handled');
+			img.classList.add('js-image-handled')
 			if (img.classList.contains('bg')) {
-				img.style.backgroundImage = "url(" + src + ")";
+				img.style.backgroundImage = 'url(' + src + ')'
 			} else {
-				img.src = src;
+				img.src = src
 			}
-			img.classList.add('fade-in');
+			img.classList.add('fade-in')
 		}
 	}
 
@@ -912,10 +911,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	if ($('#contacts').length) {
 		const controllButtons = $('#chart-control .button'),
 			contactBlocks = $('#blocks-wrapper .contacts-toggle-blocks'),
-			$countryAsideMenyHrefs = $('.country-aside-menu .href');
+			$countryAsideMenyHrefs = $('.country-aside-menu .href')
 
 		controllButtons.on('click', function () {
-			const contBlock = $(this).data('block');
+			const contBlock = $(this).data('block')
 			$(this).addClass('active').siblings().removeClass('active')
 			$(contactBlocks[contBlock]).addClass('active').siblings().removeClass('active')
 		})
@@ -923,7 +922,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$countryAsideMenyHrefs.on('click', function () {
 			const contCountries = $(this).data('countries'),
 				contBlock = $(this).data('block')
-			;
+
 			$(this).addClass('active').siblings().removeClass('active')
 			$('#countryBlock' + contBlock + ' .country-block:nth-of-type(' + contCountries + ')').addClass('active').siblings().removeClass('active')
 		})
@@ -956,76 +955,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-
-	// if ($('.formFocus').length) {
-	//
-	// 	$('.formFocus').filter(function(){
-	//
-	// 		let _this = $(this)
-	//
-	// 		$.validate({
-	// 			form: _this,
-	// 			modules: 'html5, security, file',
-	// 			lang: 'ru',
-	// 			addValidClassOnAll: true,
-	// 			validateOnBlur: true, // disable validation when input looses focus
-	// 			errorMessagePosition: 'bottom',
-	// 			onSuccess: function (e) {
-	// 				e.preventDefault()
-	// 				let modalSuccess = $('#callbackSuccess').remodal();
-	// 				modalSuccess.open();
-	// 				return false; // Will stop the submission of the form
-	// 			},
-	// 		});
-	//
-	// 		_this.dropzone({
-	// 			url: "/",
-	// 			paramName: "file",
-	// 			maxFilesize: 10,
-	// 			uploadMultiple: true,
-	// 			previewsContainer: _this.find('.files-input')[0],
-	// 			createImageThumbnails: false,
-	// 			addRemoveLinks: true,
-	// 			dictDefaultMessage: 'Прикрепить резюме',
-	// 			dictFileTooBig: 'Файл слишком большой',
-	// 			dictResponseError: 'Сервер ответил с ошибкой',
-	// 			dictInvalidFileType: 'Неверный тип файла',
-	// 			acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
-	// 			init: function () {
-	// 				this.on("removedfile", function (file) {
-	// 					$.ajax({
-	// 						type: "POST",
-	// 						url: "/",
-	// 						data: "del=" + file['name'] + '&action=FILE',
-	// 						dataType: "html"
-	// 					});
-	// 				});
-	// 				this.on('resetFiles', function () {
-	// 					if (this.files.length !== 0) {
-	// 						for (i = 0; i < this.files.length; i++) {
-	// 							this.files[i].previewElement.remove();
-	// 						}
-	// 						this.files.length = 0;
-	// 					}
-	// 				});
-	// 			},
-	// 			sending: function (file, xhr, formData) {
-	// 				formData.append('action', 'FILE');
-	// 			}
-	// 		});
-	//
-	// 		function clearDropzone () {
-	// 			const obj = Dropzone.forElement(".formFocus");
-	// 			_this.dropzone.emit("resetFiles");
-	// 		}
-	//
-	// 	})
-	// }
-
 	//TODO new form verify and drop
-	class FormFocus{
-		constructor(elem){
-			this.elem = $(elem);
+	class FormFocus {
+		constructor (elem) {
+			this.elem = $(elem)
 			$.validate({
 				form: $(elem),
 				modules: 'html5, security, file',
@@ -1033,28 +966,28 @@ document.addEventListener('DOMContentLoaded', function () {
 				addValidClassOnAll: true,
 				validateOnBlur: true, // disable validation when input looses focus
 				errorMessagePosition: 'bottom',
-				onSuccess: function onSuccess($form) {
+				onSuccess: function onSuccess ($form) {
 					$.ajax({
 						type: 'POST',
 						data: $form.serialize(),
 						success: function (data) {
-							let modalSuccess = $('#callbackSuccess').remodal();
-							modalSuccess.open();
+							let modalSuccess = $('#callbackSuccess').remodal()
+							modalSuccess.open()
 						}
-					});
-					return false; // Will stop the submission of the form
+					})
+					return false // Will stop the submission of the form
 				}
 			})
 
 			this.elem.find('button[type=submit]').on('click', (el) => {
-				el.preventDefault();
-				this.elem.submit();
-				return false;
+				el.preventDefault()
+				this.elem.submit()
+				return false
 			})
 
 			this.elem.dropzone({
-				url: "/",
-				paramName: "file",
+				url: '/',
+				paramName: 'file',
 				maxFilesize: 10,
 				uploadMultiple: true,
 				previewsContainer: this.elem.find('.files-input')[0],
@@ -1064,58 +997,59 @@ document.addEventListener('DOMContentLoaded', function () {
 				dictFileTooBig: 'Файл слишком большой',
 				dictResponseError: 'Сервер ответил с ошибкой',
 				dictInvalidFileType: 'Неверный тип файла',
-				acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
+				acceptedFiles: '.doc,.docx,.pdf,.txt,image/*',
 				init: function () {
-					this.on("removedfile", function (file) {
+					this.on('removedfile', function (file) {
 						$.ajax({
-							type: "POST",
-							url: "/",
-							data: "del=" + file['name'] + '&action=FILE',
-							dataType: "html"
-						});
-					});
+							type: 'POST',
+							url: '/',
+							data: 'del=' + file['name'] + '&action=FILE',
+							dataType: 'html'
+						})
+					})
 					this.on('resetFiles', function () {
 						if (this.files.length !== 0) {
 							for (i = 0; i < this.files.length; i++) {
-								this.files[i].previewElement.remove();
+								this.files[i].previewElement.remove()
 							}
-							this.files.length = 0;
+							this.files.length = 0
 						}
-					});
+					})
 				},
 				sending: function (file, xhr, formData) {
-					formData.append('action', 'FILE');
+					formData.append('action', 'FILE')
 				}
-			});
+			})
 		}
+
 		//remove all files from drop zone
-		clearDropzone(){
-			Dropzone.forElement($(this.elem)[0]).removeAllFiles();
+		clearDropzone () {
+			Dropzone.forElement($(this.elem)[0]).removeAllFiles()
 		}
 	}
 
 	if ($('.formFocus').length) {
 		let formsFocusArr = []
-		$('.formFocus').filter(function(){
+		$('.formFocus').filter(function () {
 			formsFocusArr.push(new FormFocus(this))
 		})
 	}
 	//TODO clear hash om modal close
 	$(document).on('closed', function () {
-		var scrollV, scrollH, loc = window.location;
-		if ("pushState" in history)
-			history.pushState("", document.title, loc.pathname + loc.search);
+		let scrollV, scrollH, loc = window.location
+		if ('pushState' in history)
+			history.pushState('', document.title, loc.pathname + loc.search)
 		else {
 			// Prevent scrolling by storing the page's current scroll offset
-			scrollV = document.body.scrollTop;
-			scrollH = document.body.scrollLeft;
+			scrollV = document.body.scrollTop
+			scrollH = document.body.scrollLeft
 
-			loc.hash = "";
+			loc.hash = ''
 
 			// Restore the scroll offset, should be flicker free
-			document.body.scrollTop = scrollV;
-			document.body.scrollLeft = scrollH;
+			document.body.scrollTop = scrollV
+			document.body.scrollLeft = scrollH
 		}
-	});
+	})
 
-});
+})

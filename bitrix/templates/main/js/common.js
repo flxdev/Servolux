@@ -51,7 +51,7 @@ window.onload = function () {
 			arrows: true,
 			dots: true,
 			slidesToShow: 4,
-			slidesToScroll: 4,
+			slidesToScroll: 1,
 			infinite: false,
 			focusOnSelect: false,
 			accessibility: false,
@@ -59,13 +59,13 @@ window.onload = function () {
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 3,
-					slidesToScroll: 3
+					slidesToScroll: 1
 				}
 			}, {
 				breakpoint: 750,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 2
+					slidesToScroll: 1
 				}
 			}, {
 				breakpoint: 540,
@@ -800,8 +800,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		console.log('lazyImage init');
 		var arr = document.querySelectorAll('.js-image');
 		var images = [];
-		for (var i = 0; i < arr.length; i++) {
-			images.push(arr[i]);
+		for (var _i4 = 0; _i4 < arr.length; _i4++) {
+			images.push(arr[_i4]);
 		}
 		var config = {
 			rootMargin: '0px 0px',
@@ -811,16 +811,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		var imageCount = images.length;
 		var observer = void 0;
 		if (!('IntersectionObserver' in window)) {
-			for (var i = 0; i < imageCount; i++) {
-				preloadImage(images[i]);
+			for (var _i5 = 0; _i5 < imageCount; _i5++) {
+				preloadImage(images[_i5]);
 			}
 		} else {
 			observer = new IntersectionObserver(onIntersection, config);
-			for (var i = 0; i < imageCount; i++) {
-				if (images[i].classList.contains('js-image-handled')) {
+			for (var _i6 = 0; _i6 < imageCount; _i6++) {
+				if (images[_i6].classList.contains('js-image-handled')) {
 					return;
 				}
-				observer.observe(images[i]);
+				observer.observe(images[_i6]);
 			}
 		}
 
@@ -844,8 +844,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		function loadImagesImmediately(images) {
-			for (var i = 0; i < images.length; i++) {
-				return preloadImage(images[i]);
+			for (var _i7 = 0; _i7 < images.length; _i7++) {
+				return preloadImage(images[_i7]);
 			}
 		}
 
@@ -872,7 +872,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		function applyImage(img, src) {
 			img.classList.add('js-image-handled');
 			if (img.classList.contains('bg')) {
-				img.style.backgroundImage = "url(" + src + ")";
+				img.style.backgroundImage = 'url(' + src + ')';
 			} else {
 				img.src = src;
 			}
@@ -904,6 +904,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$countryAsideMenyHrefs.on('click', function () {
 			var contCountries = $(this).data('countries'),
 			    contBlock = $(this).data('block');
+
 			$(this).addClass('active').siblings().removeClass('active');
 			$('#countryBlock' + contBlock + ' .country-block:nth-of-type(' + contCountries + ')').addClass('active').siblings().removeClass('active');
 		});
@@ -934,71 +935,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		});
 	}
-
-	// if ($('.formFocus').length) {
-	//
-	// 	$('.formFocus').filter(function(){
-	//
-	// 		let _this = $(this)
-	//
-	// 		$.validate({
-	// 			form: _this,
-	// 			modules: 'html5, security, file',
-	// 			lang: 'ru',
-	// 			addValidClassOnAll: true,
-	// 			validateOnBlur: true, // disable validation when input looses focus
-	// 			errorMessagePosition: 'bottom',
-	// 			onSuccess: function (e) {
-	// 				e.preventDefault()
-	// 				let modalSuccess = $('#callbackSuccess').remodal();
-	// 				modalSuccess.open();
-	// 				return false; // Will stop the submission of the form
-	// 			},
-	// 		});
-	//
-	// 		_this.dropzone({
-	// 			url: "/",
-	// 			paramName: "file",
-	// 			maxFilesize: 10,
-	// 			uploadMultiple: true,
-	// 			previewsContainer: _this.find('.files-input')[0],
-	// 			createImageThumbnails: false,
-	// 			addRemoveLinks: true,
-	// 			dictDefaultMessage: 'Прикрепить резюме',
-	// 			dictFileTooBig: 'Файл слишком большой',
-	// 			dictResponseError: 'Сервер ответил с ошибкой',
-	// 			dictInvalidFileType: 'Неверный тип файла',
-	// 			acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
-	// 			init: function () {
-	// 				this.on("removedfile", function (file) {
-	// 					$.ajax({
-	// 						type: "POST",
-	// 						url: "/",
-	// 						data: "del=" + file['name'] + '&action=FILE',
-	// 						dataType: "html"
-	// 					});
-	// 				});
-	// 				this.on('resetFiles', function () {
-	// 					if (this.files.length !== 0) {
-	// 						for (i = 0; i < this.files.length; i++) {
-	// 							this.files[i].previewElement.remove();
-	// 						}
-	// 						this.files.length = 0;
-	// 					}
-	// 				});
-	// 			},
-	// 			sending: function (file, xhr, formData) {
-	// 				formData.append('action', 'FILE');
-	// 			}
-	// 		});
-	//
-	// 		function clearDropzone () {
-	// 			const obj = Dropzone.forElement(".formFocus");
-	// 			_this.dropzone.emit("resetFiles");
-	// 		}
-	//
-	// 	})
-	// }
 
 	//TODO new form verify and drop
 
@@ -1036,8 +972,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 
 			this.elem.dropzone({
-				url: "/",
-				paramName: "file",
+				url: '/',
+				paramName: 'file',
 				maxFilesize: 10,
 				uploadMultiple: true,
 				previewsContainer: this.elem.find('.files-input')[0],
@@ -1047,14 +983,14 @@ document.addEventListener('DOMContentLoaded', function () {
 				dictFileTooBig: 'Файл слишком большой',
 				dictResponseError: 'Сервер ответил с ошибкой',
 				dictInvalidFileType: 'Неверный тип файла',
-				acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
+				acceptedFiles: '.doc,.docx,.pdf,.txt,image/*',
 				init: function init() {
-					this.on("removedfile", function (file) {
+					this.on('removedfile', function (file) {
 						$.ajax({
-							type: "POST",
-							url: "/",
-							data: "del=" + file['name'] + '&action=FILE',
-							dataType: "html"
+							type: 'POST',
+							url: '/',
+							data: 'del=' + file['name'] + '&action=FILE',
+							dataType: 'html'
 						});
 					});
 					this.on('resetFiles', function () {
@@ -1071,6 +1007,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			});
 		}
+
 		//remove all files from drop zone
 
 
@@ -1092,15 +1029,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 	//TODO clear hash om modal close
 	$(document).on('closed', function () {
-		var scrollV,
-		    scrollH,
+		var scrollV = void 0,
+		    scrollH = void 0,
 		    loc = window.location;
-		if ("pushState" in history) history.pushState("", document.title, loc.pathname + loc.search);else {
+		if ('pushState' in history) history.pushState('', document.title, loc.pathname + loc.search);else {
 			// Prevent scrolling by storing the page's current scroll offset
 			scrollV = document.body.scrollTop;
 			scrollH = document.body.scrollLeft;
 
-			loc.hash = "";
+			loc.hash = '';
 
 			// Restore the scroll offset, should be flicker free
 			document.body.scrollTop = scrollV;
