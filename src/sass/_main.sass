@@ -136,15 +136,15 @@ a
 		color: $active
 
 h1
-	+ff('GothamPro', 800, 70px)
+	+ff('GothamPro', 900, 70px)
 	color: $text-h
 
 .h1
-	+ff('GothamPro', 500, 70px)
+	+ff('GothamPro', 900, 70px)
 	color: $text-h
 
 h2, .h2
-	+ff('GothamPro', 400, 38px)
+	+ff('GothamPro', 300, 38px)
 	color: $text-h
 	+rem(line-height, 48px)
 	+rem(margin-bottom, 30px)
@@ -158,11 +158,11 @@ h3, .h3
 	+rem(margin-bottom, 30px)
 
 h4
-	+ff('Roboto', 700, 18px)
+	+ff('Roboto', 500, 18px)
 	color: $green
 
 p
-	+ff('Roboto', 600, 16px)
+	+ff('Roboto', normal, 16px)
 	color: $text-annotation
 	+rem(line-height, 28px)
 	+rem(margin-top, 20px)
@@ -179,7 +179,7 @@ p
 .green-big-letters
 	+rem(font-size, 250px)
 	color: $green
-	font-family: 'GothamPro'
+	font-family: 'GothamPro', 'Roboto', 'Arial'
 	font-weight: 500
 	+rem(line-height, 250px)
 
@@ -210,10 +210,10 @@ blockquote
 
 .darker, a.darker
 	color: $text-darker
-	font-weight: 600
+	font-weight: 500
 
 .sub
-	+ff('Roboto', 400, 18px)
+	+ff('Roboto', 300, 18px)
 	+rem(line-height, 28px)
 	+rem(padding-top, 10px)
 	+rem(padding-bottom, 10px)
@@ -230,7 +230,7 @@ blockquote
 .brand-subtitle
 	+rem(font-size, 26px)
 	font-family: 'Roboto'
-	font-weight: 600
+	font-weight: normal
 	color: #484f42
 	+rem(margin-top, 10px)
 	+rem(margin-bottom, 45px)
@@ -396,52 +396,93 @@ blockquote
 		.block-absolute
 			+rem(margin-bottom, -60px)
 
+=flex-container-wrap-items($flex-basis, $max-expected-width: 2000px)
+	display: flex
+	flex-wrap: wrap
+	> *
+		max-width: 100%
+		flex-grow: 1
+		flex-basis: $flex-basis
+	$multiplier: 1
+	$current-width: 0px
+	@while $current-width < $max-expected-width
+		$current-width: $current-width + $flex-basis
+		$multiplier: $multiplier + 1
+		&[min-width~="#{$flex-basis * $multiplier}"] > *
+			max-width: percentage(1/$multiplier)
+
+=flex-wrap-fix($flex-basis, $max-viewport-width: 2000px)
+	flex-grow: 1
+	flex-basis: $flex-basis
+	max-width: 100%
+
+	$multiplier: 1
+	$current-width: 0px
+
+	@while $current-width < $max-viewport-width
+		$current-width: $current-width + $flex-basis
+		$multiplier: $multiplier + 1
+
+		@media (min-width: $flex-basis * $multiplier)
+			max-width: percentage(1 / $multiplier)
+
 .brands-wrapper
 	+rem(margin-top, 60px)
 	+r(492)
 		+rem(margin-top, 10px)
 	#brands, #company-brands-wrapper
-		justify-content: stretch
-		border-collapse: collapse
-		border-spacing: 0
 		width: 100%
-		display: flex
-		+r(1220)
-			justify-content: center
+		&:after
+			position: relative
+			display: block
+			clear: both
+			content: ''
+		@supports (display: flex) or (display: -webkit-flex) or (display: -moz-flex)
+			justify-content: flex-start
+			display: flex
 			flex-wrap: wrap
-		+r(492)
-			justify-content: center
+		@supports (display: grid)
+			display: grid
+			grid-template-columns: repeat(auto-fit, minmax(190px, 1fr))
+			+rem(grid-auto-rows, 219px)
+			grid-gap: 0px
+		@supports (display: grid) or (display: flex) or (display: -webkit-flex) or (display: -moz-flex)
+			&:after
+				display: none
 		.brand
 			border: 1px solid $lineColor
-			+rem(max-width, 199px)
 			+rem(height, 220px)
+			+rem(max-width, 220px)
+			+rem(min-width, 190px)
+			display: inline-block
+			max-width: 100%
 			z-index: 0
 			position: relative
 			+rem(padding, 5px)
-			border-collapse: collapse
-			flex-grow: 1
-			flex-shrink: 0
 			margin-top: -1px
 			transform: translatey(1px)
-			+r(1220)
-				+rem(max-width, 200px)
-				+rem(min-width, 150px)
-			+r(1024)
-				+rem(max-width, 200px)
-				+rem(min-width, 150px)
-			+r(992)
-				+rem(max-width, 350px)
-				+rem(min-width, 280px)
-			+r(600)
-				max-width: 49%
-				width: 50%
-				min-width: 0
-			+r(492)
-				max-width: 100%
-				+rem(min-width, 250px)
-			+r(400)
-				max-width: 100%
-				+rem(min-width, 320px)
+			float: left
+			@supports (display: grid) or (display: flex) or (display: -webkit-flex) or (display: -moz-flex)
+				float: none
+			//+r(1220)
+			//	+rem(max-width, 200px)
+			//	+rem(min-width, 150px)
+			//+r(1024)
+			//	+rem(max-width, 200px)
+			//	+rem(min-width, 150px)
+			//+r(992)
+			//	+rem(max-width, 350px)
+			//	+rem(min-width, 280px)
+			//+r(600)
+			//	max-width: 49%
+			//	width: 50%
+			//	min-width: 0
+			//+r(492)
+			//	max-width: 100%
+			//	+rem(min-width, 250px)
+			//+r(400)
+			//	max-width: 100%
+			//	+rem(min-width, 320px)
 			&:before
 				display: block
 				position: absolute
@@ -538,8 +579,14 @@ blockquote
 				fill: $white
 			.button-fill-arrow
 				transform: translatex(40px)
+				+ie11
+					stroke: $active
+					transform: none
 				&.blue
 					transform: translatex(0px)
+					+ie11
+						stroke: $active
+						transform: none
 	.button-green__text-block
 		position: relative
 		+rem(padding-right, 50px)
@@ -578,10 +625,12 @@ blockquote
 			stroke-width: 1.8
 			stroke-miterlimit: 10
 			position: absolute
-			transition: transform 0.2s cubic-bezier(.445, .05, .55, .95) 0.1s
+			transition: transform 0.2s cubic-bezier(.445, .05, .55, .95) 0.1s, fill 0.2s cubic-bezier(.445, .05, .55, .95) 0.1s
 			&.blue
 				transform: translatex(-40px)
 				stroke: $active
+				+ie11
+					stroke: $white
 
 .search
 	margin: auto
@@ -717,7 +766,7 @@ main
 			color: $white
 			display: inline-block
 			+rem(line-height, 36px)
-			+ff('Roboto', 600, 18px)
+			+ff('Roboto', normal, 18px)
 			+rem(height, 37px)
 			+rem(padding-left, 16px)
 			+rem(padding-right, 16px)
@@ -842,7 +891,7 @@ main
 								margin: 0
 								font-weight: 300
 						.column-href
-							+ff('Roboto',300, 26px)
+							+ff('Roboto', 300, 26px)
 							color: $text-h
 							display: block
 							+rem(margin-top, 46px)
@@ -1007,40 +1056,51 @@ main
 		+rem(min-height, 500px)
 	+r(492)
 		+rem(min-height, 380px)
-	&.advancedPage
+	&.advancedPage,
+	&.advancedPage.page21
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
-		#main-first-screen-fading-wrapper
-			background: $green
-			.firstScreenFading
-				opacity: .8
 		+rem(height, 420px)
 		&.page2
 			+rem(height, 500px)
+			#title-wrapper
+				margin-top: -110px
 			+r(1024)
 				#main-first-screen-fading-wrapper
 					.firstScreenFading
 						left: 50%
 						transform: translate(-50%, -50%)
 			+r(492)
-				+rem(padding-top, 60px)
 				+rem(height, 400px)
+				#title-wrapper
+					margin-top: 0px
 			+r(420)
 				+rem(height, 500px)
+				#title-wrapper
+					margin-top: 35px!important
 			+r(380)
-				+rem(padding-top, 110px)
-				+rem(height, 580px)
+				+rem(height, 550px)
+				#title-wrapper
+					margin-top: 50px!important
 		#main-first-screen-fading-wrapper
+			background: $green
+			height: inherit
+			+r(1024)
+				+rem(min-height, 500px)
+			+r(492)
+				+rem(min-height, 380px)
 			.firstScreenFading
+				opacity: .8
+				bottom: auto
+				right: auto
 				position: absolute
 				top: 50%
 				left: 50%
 				min-width: 100%
-				right: 0
-				bottom: 0
 				margin: auto
 				transform: translate(-50%, -50%) scale(1.1)
+				transition: transform .1s ease-out
 				background: linear-gradient(to top, #aaa, #ccc)
 		#main-screen
 			margin: auto
@@ -1055,15 +1115,21 @@ main
 				+rem(padding-right, 20px)
 				height: 100%
 			#main-screen-title
-				+rem(top, 185px)
 				+rem(max-width, 1440px)
-				margin: auto
-				position: relative
-				+r(492)
-					top: 50%
-					transform: translatey(-50%)
+				+rem(top, 100px)
+				+r(992)
+					top: auto
+					transform: none
 				#title-wrapper
-					transition: none
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					width: 100%
+					+r(992)
+						transition: none
+						position: relative
+						display: inline-block
+						transform: none
 					.title-main
 						text-align: left
 						+rem(font-size, 70px)
@@ -1080,7 +1146,7 @@ main
 						+rem(line-height, 35px)
 						+rem(max-width, 500px)
 						+rem(margin-top, 30px)
-						font-weight: 400
+						font-weight: 300
 						opacity: 1
 						color: $white
 					.bread
@@ -1161,30 +1227,33 @@ main
 			margin: auto
 			width: 100%
 			+rem(height, 320px)
+			+r(992)
+				+rem(min-height, 500px)
+				position: relative
 			#title-wrapper
+				width: 100%
 				#title-wrapper-inner
 					transform: scale(1)
 					transition: transform 0.6s cubic-bezier(.445, .05, .55, .95)
 					margin: auto
 					text-align: center
+					+rem(height, 320px)
 					&.active
 						transform: scale(0.7)
+					+r(992)
+						position: relative
+						transform: none!important
+						height: auto
+						margin: auto
 				+r(992)
 					max-width: 100%
-					position: absolute
-					left: 0
-					right: 0
-					top: 50%
-					bottom: auto
+					height: auto
 					margin: auto
-					transform: translate(0, -50%)!important
-					+rem(margin-top, -30px)
-				+r(480)
-					+rem(margin-top, -15px)
-				+r(375)
-					+rem(margin-top, -50px)
+					position: absolute
+					top: 50%
+					transform: translate(0, -50%) !important
 			.title-sup
-				+ff('GothamPro', 800, 50px)
+				+ff('GothamPro', 900, 50px)
 				text-transform: uppercase
 				color: #e7e8d6
 				text-align: center
@@ -1197,7 +1266,7 @@ main
 					+rem(font-size, 24px)
 					+rem(margin-bottom, 50px)
 			.title-main
-				+ff('GothamPro', 800, 140px)
+				+ff('GothamPro', 900, 140px)
 				text-transform: uppercase
 				color: $white
 				text-align: center
@@ -1225,6 +1294,7 @@ main
 					transition: transform 0.4s ease-out, opacity 0.6s ease-out
 					width: 100%
 					min-height: 100%
+					background: #000
 				&:nth-of-type(2)
 					.screen-link-text
 						animation-delay: 0.3s
@@ -1248,7 +1318,7 @@ main
 						right: 0
 						margin: auto
 						color: $white
-						+ff('GothamPro', 400, 26px)
+						+ff('GothamPro', 300, 26px)
 						transform: translate(0, 80px)
 						transition: transform 0.4s ease-out
 					p
@@ -1373,15 +1443,16 @@ $slSize: 410px
 				&-text
 					position: absolute
 					+rem(top, 100px)
-					+rem(max-width, 350px)
+					+rem(padding-left, 30px)
+					+rem(padding-right, 30px)
 					left: 0
 					right: 0
-					margin: auto
+					width: 100%
 					h3
 						color: $text-h
 						+rem(font-size, 26px)
 						+rem(line-height, 32px)
-						font-weight: 400
+						font-weight: 300
 						text-align: center
 					p
 						+rem(line-height, 28px)
@@ -1433,6 +1504,8 @@ $slSize: 410px
 	width: 100%
 	+rem(max-height, 600px)
 	height: 100vh
+	transform-origin: center
+	transform-box: fill-box
 	+r(1024)
 		+rem(height, $slSize + 280px)
 	+r(768)
@@ -1445,10 +1518,13 @@ $slSize: 410px
 		transform-origin: 50% 50%
 		transition: transform 0.5s cubic-bezier(.445, .05, .55, .95)
 		position: relative
+		transform-origin: center
+		transform-box: fill-box
 		g.icon
 			position: relative
+			transform-origin: center
+			transform-box: fill-box
 			opacity: 0.99
-			transform-origin: 50% 50%
 			transition: transform 0.5s cubic-bezier(.445, .05, .55, .95), fill 0s 0.05s
 	.scheme-part
 		fill: $white
@@ -1505,7 +1581,7 @@ $slSize: 410px
 			margin: 0
 		.href
 			color: $green
-			font-weight: 600
+			font-weight: normal
 			+rem(font-size, 18px)
 		.download-size
 			color: $text-light-gray
@@ -1539,7 +1615,7 @@ $slSize: 410px
 				color: $white
 	.download-size
 		opacity: .8
-		font-weight: 400
+		font-weight: 300
 	&.work
 		.block
 			+rem(padding-top, 100px)
@@ -1757,7 +1833,7 @@ $slSize: 410px
 					+rem(margin-bottom, 20px)
 					+rem(font-size, 18px)
 					+rem(line-height, 30px)
-					font-weight: 600
+					font-weight: normal
 					color: $green
 					transition: color 0.15s cubic-bezier(.445, .05, .55, .95)
 					overflow: hidden
@@ -1819,16 +1895,16 @@ $slSize: 410px
 	.sub
 		margin-bottom: 3vh
 		+rem(font-size, 16px)
-		font-weight: 400
+		font-weight: 300
 	.tell
 		color: $text-h
-		font-weight: 700
+		font-weight: 500
 		+rem(margin-bottom, 12px)
 		+rem(font-size, 26px)
 		display: block
 		+rem(min-width, 230px)
 	.mail
-		font-weight: 600
+		font-weight: normal
 	.icon
 		+rem(height, 35px)
 		+rem(margin-right, 10px)
@@ -1850,7 +1926,7 @@ $slSize: 410px
 	+rem(margin-bottom, 20px)
 	position: relative
 	text-align: center
-	font-weight: 600
+	font-weight: normal
 	color: $white
 	transition: background-color 0.15s cubic-bezier(.445, .05, .55, .95)
 	&:focus, &:hover
@@ -1877,6 +1953,7 @@ $slSize: 410px
 	border-top: 1px solid $lineColor
 	.caption
 		margin: 0
+		font-weight: normal
 	.block
 		+rem(padding-top, 22px)
 		+rem(padding-bottom, 22px)
@@ -1941,15 +2018,15 @@ $slSize: 410px
 		+rem(width, 410px)
 	.callback-wrap
 		margin-top: 0
-	.caption
-		font-weight: 600
 	.footer-hrefs
+		font-weight: 500
 		+r(880)
 			position: relative
 			+rem(margin-bottom, 50px)
 		.footern-href-link
 			display: block
 			color: $text-h
+			font-weight: 500
 			&:not(:last-of-type)
 				+rem(margin-bottom, 28px)
 			&.active
@@ -1976,6 +2053,7 @@ $slSize: 410px
 			+rem(font-size, 26px)
 			+rem(margin-bottom, 10px)
 			+rem(margin-top, 20px)
+			font-weight: 500
 	.footer-office-wrapper
 		position: absolute
 		bottom: 0
@@ -1985,16 +2063,18 @@ $slSize: 410px
 			+rem(font-size, 18px)
 			+rem(line-height, 30px)
 			+rem(margin-bottom, 10px)
-			font-weight: 700
+			font-weight: 500
 			color: $text-h
 		a.darker
 			+rem(font-size, 16px)
 			margin: 0
-			font-weight: 600
+			font-weight: normal
+			color: #707868
 		a
 			+rem(margin-top, 10px)
 			display: block
 			+rem(font-size, 16px)
+			font-weight: normal
 		+r(880)
 			position: relative
 			+rem(margin-bottom, 50px)
@@ -2007,7 +2087,7 @@ $slSize: 410px
 			+rem(margin-bottom, 3px)
 			margin: 0
 		.href
-			font-weight: 700
+			font-weight: 500
 			color: $green
 			margin: 0
 		&:hover
@@ -2044,6 +2124,7 @@ $slSize: 410px
 			+rem(margin-top, 10px)
 			display: inline-block
 			min-width: auto
+			font-weight: 500
 		.splice
 			display: inline-block
 			+rem(margin, 10px)
@@ -2143,7 +2224,7 @@ $slSize: 410px
 						+rem(top, 20px)
 					.sub
 						margin-bottom: 0
-						font-weight: 400
+						font-weight: 300
 
 #company-chart
 	+rem(height, 520px)
@@ -2296,7 +2377,7 @@ $galleryBigHeight: 590px
 					margin-top: 0
 			.map-advantage-count
 				.map-green-count
-					+ff('GothamPro', 500, 30px)
+					+ff('GothamPro', normal, 30px)
 					+rem(line-height, 32px)
 					color: $green
 					margin-bottom: 0
@@ -2461,7 +2542,7 @@ $galleryBigHeight: 590px
 				+rem(padding-top, 8px)
 				+rem(padding-bottom, 7px)
 				+rem(margin-top, 50px)
-				font-weight: 400
+				font-weight: 300
 				transition: border .2s, color .2s
 				&:hover
 					border: 1px solid $active
@@ -2543,7 +2624,7 @@ $galleryBigHeight: 590px
 				+rem(font-size, 38px)
 				color: #484f42
 				font-weight: 300
-				font-family: "GothamPro"
+				font-family: "GothamPro", 'Roboto', 'Arial'
 			&.slick-active
 				display: block
 	.slick-sum-slides
@@ -2552,7 +2633,7 @@ $galleryBigHeight: 590px
 		bottom: 0
 		color: #484f42
 		font-weight: 300
-		font-family: "GothamPro"
+		font-family: "GothamPro", 'Roboto', 'Arial'
 		left: 0
 		right: 0
 		margin: auto
@@ -2618,7 +2699,7 @@ $galleryBigHeight: 590px
 				+rem(font-size, 38px)
 				color: #484f42
 				font-weight: 300
-				font-family: "GothamPro"
+				font-family: "GothamPro", 'Roboto', 'Arial'
 			&.slick-active
 				display: block
 	.slick-sum-slides
@@ -2627,7 +2708,7 @@ $galleryBigHeight: 590px
 		+rem(bottom, 22px)
 		color: #484f42
 		font-weight: 300
-		font-family: "GothamPro"
+		font-family: "GothamPro", 'Roboto', 'Arial'
 		left: 0
 		right: 0
 		margin: auto
@@ -2660,7 +2741,7 @@ $galleryBigHeight: 590px
 	.brand-subtitle
 		+rem(margin-bottom, 20px)
 	.darker
-		font-weight: 400
+		font-weight: 300
 	.flex-block
 		+rem(margin-top, 30px)
 
@@ -2858,8 +2939,8 @@ $galleryBigHeight: 590px
 	color: $green
 	+rem(font-size, 30px)
 	+rem(line-height, 48px)
-	font-family: 'GothamPro'
-	font-weight: 500
+	font-family: 'GothamPro', 'Roboto', 'Arial'
+	font-weight: normal
 	margin-bottom: 0
 	span
 		+rem(font-size, 16px)
@@ -2891,7 +2972,7 @@ $galleryBigHeight: 590px
 	background: url('../img/3-0/earth.jpg') 50% 50% no-repeat
 	background-size: 70%
 	.darker
-		font-weight: 600
+		font-weight: normal
 
 #canvas
 	+rem(height, 550px)
@@ -2918,7 +2999,7 @@ $galleryBigHeight: 590px
 			+rem(font-size, 32px)
 			+rem(line-height, 42px)
 			display: inline-block
-			font-weight: 400
+			font-weight: 300
 			margin: 0
 		.vacancy-href
 			+rem(margin-left, 10px)
@@ -3140,12 +3221,12 @@ $galleryBigHeight: 590px
 		.job-href-title
 			+rem(font-size, 38px)
 			+rem(line-height, 48px)
-			font-weight: 400
-			font-family: 'GothamPro', sans-serif
+			font-weight: 300
+			font-family: 'GothamPro', 'Roboto', 'Arial'
 			+rem(margin-right, 60px)
 		.job-counter
 			+rem(font-size, 16px)
-			font-weight: 600
+			font-weight: normal
 			position: absolute
 			top: 0
 			+rem(right, 35px)
@@ -3243,7 +3324,7 @@ $galleryBigHeight: 590px
 				border-color: $active
 	.jobs-tags-inner
 		&__text
-			font-weight: 400
+			font-weight: 300
 			display: block
 			+rem(padding-right, 30px)
 			margin: 0
@@ -3285,7 +3366,7 @@ $galleryBigHeight: 590px
 			display: inline-block
 			&>*
 				display: inline-block
-				font-weight: 400
+				font-weight: 300
 		&--sort
 			display: inline-block
 			float: right
@@ -3294,11 +3375,11 @@ $galleryBigHeight: 590px
 				float: none
 			&>*
 				display: inline-block
-				font-weight: 400
+				font-weight: 300
 		&__text
 			+rem(margin-right, 7px)
 		&__bold-text
-			font-weight: 600
+			font-weight: normal
 			padding: 5px
 			cursor: pointer
 			margin: 0
@@ -3330,7 +3411,7 @@ $galleryBigHeight: 590px
 				+rem(padding-top, 1px)
 				+rem(padding-bottom,1px)
 				position: relative
-				font-weight: 400
+				font-weight: 300
 				color: $text-gray
 				&.active
 					cursor: default
@@ -3370,7 +3451,7 @@ $galleryBigHeight: 590px
 				stroke: $white
 		&__text
 			color: #484f42
-			font-weight: 400
+			font-weight: 300
 			margin: 0
 		&__close-button
 			+rem(width, 18px)
@@ -3406,14 +3487,15 @@ $galleryBigHeight: 590px
 		color: $green
 		transition: color 0.1s
 		+rem(padding-right, 50px)
+		font-weight: normal
 	&__price-wrapper
 		width: 25%
-		font-weight: 600
+		font-weight: normal
 	&__city-wrapper
 		width: 25%
-		font-weight: 600
+		font-weight: normal
 	&__subtitle
-		font-weight: 400
+		font-weight: 300
 		+rem(margin-top, 5px)
 
 .job-sticky-block
@@ -3582,7 +3664,7 @@ form.formFocus
 	p
 		margin: 0
 	.callback-button-modal
-		font-weight: 400
+		font-weight: 300
 		padding-top: 0
 		float: right
 		+rem(margin-top, 10px)

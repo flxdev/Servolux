@@ -538,7 +538,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Main screen fade out and video zoom out on scroll
 	function scrollMainScreen (scrollPos) {
 
-		let i = (120 - ((scrollPos / screenWrapperHeight) * 30)) / 100
+		let i = (110 - ((scrollPos / screenWrapperHeight) * 30)) / 100
 		videoWrapper.css('opacity', (vHeight / scrollPos) / 3).find('.firstScreenFading').css('transform', 'translate(-50%, -50%) scale(' + (i <= 1 ? 1 : i) + ')')
 		if (scrollPos > 150 && !screenLinks.hasClass('hiddened')) {
 			screenLinks.fadeOut().addClass('hiddened')
