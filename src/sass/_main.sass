@@ -788,7 +788,8 @@ main
 				transition: transform 0.15s cubic-bezier(.445, .05, .55, .95), opacity 0.15s cubic-bezier(.445, .05, .55, .95)
 				+rem(border-radius, 5px)
 				z-index: -1
-			&:hover, &:focus
+			&:hover, &:focus, &:active
+				color: #fff
 				&:after
 					transform: scale(1)
 					opacity: 1
@@ -1152,7 +1153,7 @@ main
 					.bread
 						a
 							+rem(font-size, 16px)
-							font-weight: 600
+							font-weight: normal
 							color: #fff
 							opacity: 0.5
 							display: inline-block
@@ -1162,7 +1163,7 @@ main
 							+rem(margin-bottom, 20px)
 							+rem(margin-right, 10px)
 							&:first-child
-								font-weight: 700
+								font-weight: 500
 							&:after
 								content: '/'
 								display: block
@@ -1331,7 +1332,7 @@ main
 						transition: transform 0.3s ease-out, opacity 0.3s ease-out
 						color: $white
 						+rem(font-size, 16px)
-						font-weight: 600
+						font-weight: normal
 						+rem(line-height, 30px)
 					&:hover
 						& + img
@@ -2168,6 +2169,8 @@ $slSize: 410px
 		#dates-slider
 			+rem(padding-bottom, 100px)
 			+rem(padding-top, 100px)
+			.slick-track
+				display: table
 			.slick-arrow
 				position: absolute
 				right: 0
@@ -2188,7 +2191,9 @@ $slSize: 410px
 				+rem(padding-top, 12px)
 				+rem(padding-right, 40px)
 				+rem(padding-left, 0px)
-				+rem(min-height, 600px)
+				height: 100%
+				float: none
+				display: table-cell
 				position: relative
 				transition: opacity 0.3s
 				z-index: 0
@@ -2209,6 +2214,7 @@ $slSize: 410px
 						pointer-events: auto
 				.h1
 					+rem(margin-bottom, 40px)
+					font-weight: 500
 				.dates-event
 					+rem(margin-top, 10px)
 					+rem(padding-top, 30px)
@@ -3084,6 +3090,10 @@ $galleryBigHeight: 590px
 .block-inner
 	img
 		max-width: 100%
+.country-wrapper
+	overflow: hidden
+	position: relative
+	background-color: #fff
 
 .country-aside-menu
 	+rem(margin-top, 50px)

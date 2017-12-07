@@ -1040,6 +1040,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			formsFocusArr.push(new FormFocus(this))
 		})
 	}
+
 	//TODO clear hash om modal close
 	$(document).on('closed', function () {
 		let scrollV, scrollH, loc = window.location
@@ -1057,5 +1058,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.body.scrollLeft = scrollH
 		}
 	})
+
+	window.scrollTo = function( x,y ) {
+		return true;
+	}
 
 })
