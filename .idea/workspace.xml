@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="v 0.9.9">
+    <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/0-0jobs.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/0-0jobs.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/0-1jobs.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/0-1jobs.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/404.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/404.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/6-0news.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/6-0news.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/6-1news.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/6-1news.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/7-0search.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/7-0search.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" />
-      <change beforePath="$PROJECT_DIR$/src/sass/_main.sass" afterPath="$PROJECT_DIR$/src/sass/_main.sass" />
+      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/index.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/pug/includes/_scheme.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_scheme.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,7 +39,7 @@
           <file leaf-file-name="_header.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_header.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
+                <state relative-caret-position="0">
                   <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
                   <folding />
                 </state>
@@ -93,7 +79,7 @@
           <file leaf-file-name="_modals.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="560">
+                <state relative-caret-position="0">
                   <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
                   <folding />
                 </state>
@@ -103,8 +89,8 @@
           <file leaf-file-name="_scheme.pug" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_scheme.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="744">
-                  <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                <state relative-caret-position="142">
+                  <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -114,7 +100,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="_main.sass" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_main.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="460">
@@ -146,11 +132,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/js/common.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2560">
-                  <caret line="1063" column="3" lean-forward="false" selection-start-line="1063" selection-start-column="3" selection-end-line="1063" selection-end-column="3" />
+                <state relative-caret-position="460">
+                  <caret line="1054" column="0" lean-forward="true" selection-start-line="1054" selection-start-column="0" selection-end-line="1054" selection-end-column="0" />
                   <folding>
                     <element signature="e#61#98#0" expanded="false" />
                     <element signature="e#125#747#0" expanded="false" />
@@ -257,7 +243,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <push-targets>
-      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="master" />
+      <push-target-info target-remote="master" target-branch="master" repo="$PROJECT_DIR$" source="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -307,13 +293,13 @@
         <option value="$PROJECT_DIR$/src/js/lib/rellax.min.js" />
         <option value="$PROJECT_DIR$/src/sass/lib/_mixins.sass" />
         <option value="$USER_HOME$/Desktop/scheme.svg" />
-        <option value="$PROJECT_DIR$/src/pug/includes/_scheme.pug" />
         <option value="$PROJECT_DIR$/src/pug/index.pug" />
         <option value="$PROJECT_DIR$/src/sass/font.sass" />
         <option value="$PROJECT_DIR$/src/pug/3-0partnership.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_modals.pug" />
         <option value="$PROJECT_DIR$/src/js/common.js" />
         <option value="$PROJECT_DIR$/src/sass/_main.sass" />
+        <option value="$PROJECT_DIR$/src/pug/includes/_scheme.pug" />
       </list>
     </option>
   </component>
@@ -654,8 +640,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Gulp.js.build (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.sass" />
-        <item index="2" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Gulp.js.sass" />
         <item index="3" class="java.lang.String" itemvalue="Gulp.js.js" />
         <item index="4" class="java.lang.String" itemvalue="Gulp.js.pug" />
       </list>
@@ -713,7 +699,7 @@
       <workItem from="1511352053448" duration="33000" />
       <workItem from="1512389610666" duration="50148000" />
       <workItem from="1512571156700" duration="9313000" />
-      <workItem from="1512716627744" duration="941000" />
+      <workItem from="1512716627744" duration="4186000" />
     </task>
     <task id="LOCAL-00001" summary="Something change from webstorm">
       <created>1505114233192</created>
@@ -1002,11 +988,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512657730265</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="v 0.9.95">
+      <created>1512739465203</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1512739465204</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510782000" />
+    <option name="totallyTimeSpent" value="514027000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1021,13 +1014,13 @@
     <frame x="-1080" y="-601" width="1080" height="1920" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15584415" sideWeight="0.2526017" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15584415" sideWeight="0.615894" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15988646" sideWeight="0.061959654" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13435282" sideWeight="0.4758751" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15638529" sideWeight="0.74550617" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15584415" sideWeight="0.7473983" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771337" sideWeight="0.49627262" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15584415" sideWeight="0.38410595" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32738096" sideWeight="0.84578997" order="11" side_tool="false" content_ui="tabs" x="-1060" y="36" width="1058" height="665" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16985254" sideWeight="0.46736047" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40793827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1079,7 +1072,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="3-0 ready" />
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="4-0 ready&#10;contacts to go" />
     <MESSAGE value="many fixes. new header and footer" />
     <MESSAGE value="news ready +-" />
@@ -1104,7 +1097,8 @@
     <MESSAGE value="v 0.8.9" />
     <MESSAGE value="v 0.9.2" />
     <MESSAGE value="v 0.9.9" />
-    <option name="LAST_COMMIT_MESSAGE" value="v 0.9.9" />
+    <MESSAGE value="v 0.9.95" />
+    <option name="LAST_COMMIT_MESSAGE" value="v 0.9.95" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1113,7 +1107,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../fashionbank/package.json" />
     <entry file="file://$PROJECT_DIR$/gulp/tasks/spritesmith.js" />
     <entry file="file://$PROJECT_DIR$/gulp/tasks/svg.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1321,7 +1314,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/includes/_header.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="0">
           <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
           <folding />
         </state>
@@ -1397,10 +1390,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="1108" column="41" lean-forward="false" selection-start-line="1108" selection-start-column="41" selection-end-line="1108" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/svg.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/_scheme.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2560">
-          <caret line="1063" column="3" lean-forward="false" selection-start-line="1063" selection-start-column="3" selection-end-line="1063" selection-end-column="3" />
+        <state relative-caret-position="460">
+          <caret line="1054" column="0" lean-forward="true" selection-start-line="1054" selection-start-column="0" selection-end-line="1054" selection-end-column="0" />
           <folding>
             <element signature="e#61#98#0" expanded="false" />
             <element signature="e#125#747#0" expanded="false" />
@@ -1436,30 +1458,6 @@
             <element signature="e#26109#27985#0" expanded="false" />
             <element signature="e#28016#28132#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="1108" column="41" lean-forward="false" selection-start-line="1108" selection-start-column="41" selection-end-line="1108" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/includes/_scheme.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
