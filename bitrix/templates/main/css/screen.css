@@ -316,10 +316,10 @@ h2, .h2 {
 h3, .h3 {
   font-family: "Roboto", "Roboto", "Arial";
   font-weight: 300;
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   font-style: normal;
   color: #707868;
-  line-height: 2.25rem;
+  line-height: 2.125rem;
   margin-bottom: 1.875rem; }
 
 h4 {
@@ -371,9 +371,9 @@ blockquote {
       height: 1.4375rem; }
 
 .annotation {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   color: #474e41;
-  line-height: 2.25rem;
+  line-height: 2.125rem;
   margin-bottom: 1.25rem;
   margin-top: 1.25rem; }
 
@@ -2961,6 +2961,9 @@ main {
     margin-bottom: 1.875rem; }
   .side-blocks .production-side-block-inner-text {
     max-width: 13.75rem; }
+    .side-blocks .production-side-block-inner-text .sub {
+      font-size: 16px;
+      font-weight: 400; }
   .side-blocks .side-block-img-wrapper {
     width: 50%;
     height: 100%;
@@ -2990,12 +2993,16 @@ main {
       height: 100%;
       position: relative; }
 
+#production-food .h3 {
+  font-weight: normal;
+  font-size: 18px; }
+
 .green-text-count {
   color: #55b521;
   font-size: 1.875rem;
   line-height: 3rem;
   font-family: 'GothamPro', 'Roboto', 'Arial';
-  font-weight: normal;
+  font-weight: 500;
   margin-bottom: 0; }
   .green-text-count span {
     font-size: 1rem;
@@ -5102,7 +5109,13 @@ html.menu-is-locked {
           #header-modal-wrapper .menu-modal-middle .menu-columns .column .column-href {
             margin-top: 0.625rem; }
     #title-svg-main {
-      max-width: 1200px; } }
+      max-width: 1200px; }
+      #main-screen-wrapper.advancedPage, #main-screen-wrapper.advancedPage.page21 {
+        height: 20rem; }
+        #main-screen-wrapper.advancedPage.page2 #main-screen #main-screen-title, #main-screen-wrapper.advancedPage.page21.page2 #main-screen #main-screen-title {
+          top: 6.25rem; }
+          #main-screen-wrapper.advancedPage #main-screen #main-screen-title, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title {
+            top: 0; } }
 
 @media only screen and (max-width: 1300px) {
     #footer .footer-first {

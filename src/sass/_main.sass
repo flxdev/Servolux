@@ -152,9 +152,9 @@ h2, .h2
 		+rem(font-size, 30px)
 
 h3, .h3
-	+ff('Roboto', 300, 26px)
+	+ff('Roboto', 300, 24px)
 	color: $text-annotation
-	+rem(line-height, 36px)
+	+rem(line-height, 34px)
 	+rem(margin-bottom, 30px)
 
 h4
@@ -200,9 +200,9 @@ blockquote
 			+rem(height, 23px)
 
 .annotation
-	+rem(font-size, 26px)
+	+rem(font-size, 24px)
 	color: $text-h
-	+rem(line-height, 36px)
+	+rem(line-height, 34px)
 	+rem(margin-bottom, 20px)
 	+rem(margin-top, 20px)
 	+r(992)
@@ -1063,10 +1063,16 @@ main
 		background-size: cover
 		background-repeat: no-repeat
 		+rem(height, 420px)
+		+r(1366)
+			+rem(height, 320px)
 		&.page2
 			+rem(height, 500px)
 			#title-wrapper
 				margin-top: -110px
+			#main-screen
+				#main-screen-title
+					+r(1366)
+						+rem(top, 100px)
 			+r(1024)
 				#main-first-screen-fading-wrapper
 					.firstScreenFading
@@ -1118,6 +1124,8 @@ main
 			#main-screen-title
 				+rem(max-width, 1440px)
 				+rem(top, 100px)
+				+r(1366)
+					+rem(top, 0px)
 				+r(992)
 					top: auto
 					transform: none
@@ -2906,11 +2914,15 @@ $galleryBigHeight: 590px
 				+rem(right, -15px)
 				left: auto
 
+
 	.annotation
 		+rem(margin-bottom, 30px)
 	.production-side-block-inner
 		&-text
 			+rem(max-width, 220px)
+			.sub
+				font-size: 16px
+				font-weight: 400
 	.side-block-img-wrapper
 		width: 50%
 		height: 100%
@@ -2941,12 +2953,17 @@ $galleryBigHeight: 590px
 			+r(992)
 				display: none
 
+#production-food
+	.h3
+		font-weight: normal
+		font-size: 18px
+
 .green-text-count
 	color: $green
 	+rem(font-size, 30px)
 	+rem(line-height, 48px)
 	font-family: 'GothamPro', 'Roboto', 'Arial'
-	font-weight: normal
+	font-weight: 500
 	margin-bottom: 0
 	span
 		+rem(font-size, 16px)
