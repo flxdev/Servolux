@@ -1061,8 +1061,10 @@ main {
       background-color: #0056b8; }
   #header-menu-wrapper.sticked #header-nav {
     top: 1.5rem; }
-    #header-menu-wrapper.sticked #header-nav .nav-href:not(.active):not(:hover) {
+    #header-menu-wrapper.sticked #header-nav .nav-href {
       color: #474e41; }
+      #header-menu-wrapper.sticked #header-nav .nav-href.active, #header-menu-wrapper.sticked #header-nav .nav-href:hover, #header-menu-wrapper.sticked #header-nav .nav-href:active, #header-menu-wrapper.sticked #header-nav .nav-href:focus {
+        color: #fff; }
   #header-menu-wrapper.sticked #header-logo {
     top: 2rem; }
     #header-menu-wrapper.sticked #header-logo .logo {
@@ -1760,17 +1762,21 @@ main {
 .carousel-buttons {
   background-color: #f5f6f6;
   display: inline-block;
+  vertical-align: middle;
+  padding-top: 30px;
+  padding-left: 1px;
   overflow: hidden;
   overflow-x: auto;
   margin-bottom: 2.5rem;
-  padding-left: 1px;
   max-width: 100%;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
   .carousel-buttons .carousel-buttons-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     height: 2.6875rem; }
     .carousel-buttons .carousel-buttons-wrap .button {
       padding: 0.4375rem;
@@ -3904,6 +3910,11 @@ form.formFocus {
   position: absolute;
   left: -1.25rem;
   top: 0.9375rem; }
+
+#graphics > .block > .h2 {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 30px; }
 
 #graphics .empty {
   pointer-events: none; }

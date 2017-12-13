@@ -194,7 +194,6 @@ block content
 								]
 							}
 						]]
-					#company-chart.graphic-line(data-t="0")
 				.flex-block
 					.one-half.animateThis(data-anim="fadeInRight")
 						p.h3 Отчеты о деятельности компании
@@ -202,7 +201,8 @@ block content
 						+download_pdf('Отчет по экспорту')
 						+download_pdf('Годовой отчет 2016')
 						+download_pdf('сследование отрасли 2016')
-					.one-half.animateThis(data-anim="fadeInLeft").empty
+					.one-half.animateThis(data-anim="fadeInLeft")
+						#company-chart.graphic-line(data-t="0")
 		.box#gallery.aside-menu-item(data-aside="Активы")
 			.block
 				.flex-block

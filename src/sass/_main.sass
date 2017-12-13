@@ -947,8 +947,10 @@ main
 				background-color: $active
 		#header-nav
 			+rem(top, 24px)
-			.nav-href:not(.active):not(:hover)
+			.nav-href
 				color: $text-h
+				&.active, &:hover, &:active, &:focus
+					color: #fff
 		#header-logo
 			+rem(top, 32px)
 			.logo
@@ -1664,14 +1666,18 @@ $slSize: 410px
 .carousel-buttons
 	background-color: #f5f6f6
 	display: inline-block
+	vertical-align: middle
+	padding-top: 30px
+	padding-left: 1px
 	overflow: hidden
 	overflow-x: auto
 	+rem(margin-bottom, 40px)
-	padding-left: 1px
 	max-width: 100%
 	background-color: #fff
+	position: relative
 	.carousel-buttons-wrap
 		display: flex
+		position: relative
 		+rem(height, 43px)
 		.button
 			+rem(padding, 7px)
@@ -3841,6 +3847,11 @@ form.formFocus
 		max-width: 630px
 
 #graphics
+	&>.block
+		&>.h2
+			display: inline-block
+			vertical-align: middle
+			padding-right: 30px
 	.empty
 		pointer-events: none
 		
