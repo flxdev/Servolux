@@ -5109,6 +5109,10 @@ html.menu-is-locked {
     #footer .footer-third {
       width: 21.875rem; } }
 
+@media only screen and (max-width: 1370px) {
+    html {
+      font-size: 14px; } }
+
 @media only screen and (max-width: 1366px) {
         #header-modal-wrapper .menu-modal-middle .menu-columns {
           -webkit-transform: translate(80px, 20px);
@@ -5170,10 +5174,6 @@ html.menu-is-locked {
       max-width: auto;
       margin-top: 30px; } }
 
-@media only screen and (max-width: 1150px) {
-    html {
-      font-size: 15px; } }
-
 @media only screen and (max-width: 1110px) {
       .scheme-wrapper .scheme-slider-wrapper {
         width: 21.25rem;
@@ -5220,8 +5220,6 @@ html.menu-is-locked {
           border-bottom: 1px solid #cccccc; } }
 
 @media only screen and (max-width: 992px) {
-    html {
-      font-size: 14px; }
     .annotation {
       margin-bottom: 2.5rem; }
     .sub {
