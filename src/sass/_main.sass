@@ -1055,6 +1055,7 @@ main
 	+r(1024)
 		height: auto
 		+rem(min-height, 500px)
+		background-color: rgba(85, 181, 33, .2)
 	+r(492)
 		+rem(min-height, 380px)
 	&.advancedPage,
@@ -1062,6 +1063,7 @@ main
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
+		background-color: rgba(85, 181, 33, .2)
 		+rem(height, 420px)
 		+r(1366)
 			+rem(height, 320px)
@@ -1091,14 +1093,13 @@ main
 				#title-wrapper
 					margin-top: 50px!important
 		#main-first-screen-fading-wrapper
-			background: $green
 			height: inherit
 			+r(1024)
 				+rem(min-height, 500px)
 			+r(492)
 				+rem(min-height, 380px)
 			.firstScreenFading
-				opacity: .8
+				opacity: 1
 				bottom: auto
 				right: auto
 				position: absolute
@@ -1629,6 +1630,29 @@ $slSize: 410px
 		.block
 			+rem(padding-top, 100px)
 			+rem(padding-bottom, 100px)
+			.flex-block
+				+r(992)
+					flex-direction: row
+				.one-four
+					+r(992)
+						width: 50%
+						display: inline-block
+						padding-left: 100px
+						padding-right: 100px
+					+r(800)
+						padding-left: 50px
+						padding-right: 50px
+					+r(660)
+						padding-left: 20px
+						padding-right: 20px
+					+r(540)
+						width: 100%
+						margin: 0
+						margin-bottom: 10px
+						max-width: 290px
+						padding: 0
+						.sub
+							margin-bottom: 0px
 	.one-four
 		+rem(padding-right, 30px)
 	.one-half
@@ -1665,8 +1689,8 @@ $slSize: 410px
 	background-color: #f5f6f6
 	display: inline-block
 	vertical-align: middle
-	padding-top: 30px
 	padding-left: 1px
+	padding-top: 0
 	overflow: hidden
 	overflow-x: auto
 	+rem(margin-bottom, 40px)
@@ -1711,14 +1735,7 @@ $slSize: 410px
 				p
 					color: #fff
 
-#chart
-	.flex-block
-		.one-half
-			+r(992)
-				+rem(padding-top, 50px)
-			&:first-of-type
-				+r(992)
-					+rem(padding-top, 0px)
+
 	#map
 		.labels
 			opacity: 0
@@ -2023,6 +2040,9 @@ $slSize: 410px
 			width: 100%
 		.footer-fourth
 			width: 100%
+		.block
+			.footer-column
+				min-height: 0
 	.footer-first
 		+rem(width, 240px)
 	.footer-second
@@ -2158,11 +2178,12 @@ $slSize: 410px
 		width: 100%
 		+r(992)
 			margin: auto
+			text-align: center
 		+r(550)
 			+rem(padding-right, 20px)
 			+rem(padding-left, 20px)
 		+r(400)
-			+rem(padding-right, 0px)
+			+rem(padding-right, 20px)
 			+rem(padding-left, 0px)
 		.advantage-img-item
 			+rem(margin-bottom, 12px)
@@ -3071,6 +3092,10 @@ $galleryBigHeight: 590px
 	.office-contacts-wrapper
 		.flex-block
 			+rem(margin-bottom, 20px)
+			+r(992)
+				align-items: flex-start
+				&>.one-four
+					padding-left: 0
 
 #contacts-control
 	position: relative
@@ -3092,11 +3117,34 @@ $galleryBigHeight: 590px
 .country-block-inner
 	+rem(padding-top, 40px)
 	+rem(padding-bottom, 70px)
+	+r(900)
+		display: inline-block
+		width: 49%
+		border: 0
+		vertical-align: top
+		&:before
+			display: none
+	+r(660)
+		display: block
+		border-bottom: 1px solid $gray
+		width: 100%
 	.flex-block
 		max-width: 100%
 		+r(1024)
+			display: block
+			.one-four
+				width: auto!important
+				vertical-align: top
+				display: inline-block
+				margin-top: 0
+		+r(900)
 			.one-four
 				width: 50%
+				text-align: left
+				display: block
+				p
+					text-align: left
+					padding: 0
 
 .country-block
 	display: none
@@ -3115,6 +3163,22 @@ $galleryBigHeight: 590px
 	overflow: hidden
 	position: relative
 	background-color: #fff
+	.block
+		&>.flex-block
+			.one-four
+				+r(400)
+					max-width: 100%
+					width: 100%
+				.href
+					margin-top: 5px
+					margin-bottom: 5px
+					margin-right: 10px
+	.one-four
+		+r(992)
+			width: 100%
+	.country-aside-menu
+		+r(992)
+			margin-top: 0
 
 .country-aside-menu
 	+rem(margin-top, 50px)
@@ -3132,7 +3196,11 @@ $galleryBigHeight: 590px
 		&.active
 			color: $text-h
 			cursor: auto
-
+	+r(992)
+		text-align: left
+		.href
+			display: inline-block
+			margin-right: 20px
 
 .right-downloads
 	position: absolute
@@ -3934,3 +4002,15 @@ form.formFocus
 	&:not(:last-child)
 		border-bottom: 1px solid $text-light-gray
 		+rem(padding-bottom, 15px)
+
+.contacts-toggle-blocks
+	.flex-block
+		+r(992)
+			align-items: flex-start
+			.one-four
+				padding-left: 0
+
+.maxWidth
+	max-width: 100%
+	&:first-child
+		margin-top: 30px
