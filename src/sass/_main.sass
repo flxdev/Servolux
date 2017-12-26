@@ -540,7 +540,7 @@ blockquote
 		+r(400)
 			+rem(font-size, 60px)
 	.count-sub
-		font-weight: 600
+		font-weight: normal
 		opacity: 0.5
 		+rem(line-height, 28px)
 		+rem(margin-top, 20px)
@@ -2356,7 +2356,7 @@ $galleryBigHeight: 590px
 						+rem(font-size, 18px)
 						+rem(line-height, 26px)
 						color: #fff
-						font-weight: 600
+						font-weight: normal
 						margin-top: 0px
 						margin-bottom: 0px
 					.gallery-item-subtitle
@@ -2804,7 +2804,7 @@ $galleryBigHeight: 590px
 #back-button-wrapper
 	position: relative
 	+rem(font-size, 16px)
-	font-weight: 600
+	font-weight: normal
 	+rem(line-height, 34px)
 	+rem(padding-left, 40px)
 	display: inline-block
@@ -3231,7 +3231,7 @@ $galleryBigHeight: 590px
 		width: 41%
 	+r(1024)
 		position: relative
-		display: block
+		display: none
 		width: 100%
 		+rem(margin-bottom, 100px)
 		right: auto
@@ -3496,7 +3496,7 @@ $galleryBigHeight: 590px
 			margin-left: -5px
 			right: 0
 		&__select
-			font-weight: 600
+			font-weight: normal
 			height: 0px
 			position: relative
 			overflow: hidden
@@ -3587,15 +3587,18 @@ $galleryBigHeight: 590px
 		transition: color 0.1s
 		+rem(padding-right, 50px)
 		font-weight: normal
+		padding-right: 20px
 	&__price-wrapper
 		width: 25%
 		font-weight: normal
+		padding-right: 20px
 	&__city-wrapper
 		width: 25%
 		font-weight: normal
-	&__subtitle
+	&__subtitle, &__company
 		font-weight: 300
 		+rem(margin-top, 5px)
+		padding-right: 20px
 
 .job-sticky-block
 	position: relative
@@ -3664,7 +3667,7 @@ $galleryBigHeight: 590px
 		+rem(padding-bottom, 40px)
 	.href
 		+rem(font-size, 16px)
-		font-weight: 600
+		font-weight: normal
 		display: inline-block
 
 form.formFocus
@@ -3684,7 +3687,6 @@ form.formFocus
 		+rem(height, 70px)
 		transition: margin 0.2s ease-out, border .2s, padding 0.2s
 		cursor: text
-		border: 0
 		.form-error
 			position: absolute
 			top: 100%
@@ -3756,13 +3758,11 @@ form.formFocus
 			background-color: transparent
 			border: 0
 			width: 100%
-
-form.formFocus
 	.input-file-wrapper
 		display: inline-block
 	p
 		margin: 0
-	.callback-button-modal
+	.callback-button-modal, .callback-button
 		font-weight: 300
 		padding-top: 0
 		float: right
@@ -3771,7 +3771,7 @@ form.formFocus
 	.dz-default
 		+rem(margin-top, 30px)
 		+rem(padding-left, 30px)
-		font-weight: 600
+		font-weight: normal
 		color: $green
 		cursor: pointer
 		display: inline-block
@@ -3824,7 +3824,7 @@ form.formFocus
 					+rem(left, -14px)
 			.dz-filename
 				float: left
-				font-weight: 600
+				font-weight: normal
 				max-width: 220px
 				overflow: hidden
 				word-wrap: none
@@ -3861,41 +3861,64 @@ form.formFocus
 		margin-bottom: 0
 		+rem(margin-left, 20px)
 
-form.formFocus
-	position: relative
-	&:after
-		display: block
+.remodal
+	form.formFocus
 		position: relative
-		content: ''
-		clear: both
-	.form-modal-label-wrapper
-		+rem(padding-left, 15px)
-		+rem(padding-right, 15px)
-	.form-bottom-items
-		height:  0px
-	label
-		border: 0
-		border-bottom: 1px solid $lineColor
-		+rem(padding-top, 36px)
-		border-radius: 0
-		text-align: left
-		padding-left: 0
-		width: 100%
-		.form-input-wrapper
-			padding: 0
-		&.has-error
+		&:after
+			display: block
+			position: relative
+			content: ''
+			clear: both
+		.form-modal-label-wrapper
+			+rem(padding-left, 15px)
+			+rem(padding-right, 15px)
+		.form-bottom-items
+			height:  0px
+		label
 			border: 0
-			border-bottom: 1px solid red
-		&.has-success
-			border: 0
-			border-bottom: 1px solid $green
-		&.active
-			+rem(padding-top, 10px)
-	.dz-filename
-		max-width: 200px
-	.dz-message
-		+rem(margin-left, 20px)
+			border-bottom: 1px solid $lineColor
+			+rem(padding-top, 36px)
+			border-radius: 0
+			text-align: left
+			padding-left: 0
+			width: 100%
+			.form-input-wrapper
+				padding: 0
+			&.has-error
+				border: 0
+				border-bottom: 1px solid red
+			&.has-success
+				border: 0
+				border-bottom: 1px solid $green
+			&.active
+				+rem(padding-top, 10px)
+		.dz-filename
+			max-width: 200px
+		.dz-message
+			+rem(margin-left, 20px)
 
+.job-form-wrapper
+	form.formFocus
+		label
+			border: 1px solid $lineColor
+			&.form-error
+				border: 1px solid red
+			&.has-success
+				border: 1px solid green
+		.textarea
+			height: 150px
+		textarea
+			height: 100%
+			min-height: 90px
+		.files-input-wrapper
+			padding: 0
+			float: left
+			&:after
+				display: block
+				position: relative
+				content: ''
+				clear: both
+			
 
 #callbackSuccess
 	max-width: 400px
@@ -4014,3 +4037,7 @@ form.formFocus
 	max-width: 100%
 	&:first-child
 		margin-top: 30px
+
+#company-map
+	.gmnoprint.gm-style-cc, .gmnoprint
+		display: none

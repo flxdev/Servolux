@@ -635,7 +635,7 @@ blockquote {
     font-weight: 500;
     color: white; }
   .count .count-sub {
-    font-weight: 600;
+    font-weight: normal;
     opacity: 0.5;
     line-height: 1.75rem;
     margin-top: 1.25rem; }
@@ -2336,7 +2336,7 @@ main {
             font-size: 1.125rem;
             line-height: 1.625rem;
             color: #fff;
-            font-weight: 600;
+            font-weight: normal;
             margin-top: 0px;
             margin-bottom: 0px; }
           #gallery .gallery-block .gallery-item .gallery-item-inner .gallery-item-text-wrapper .gallery-item-subtitle {
@@ -2805,7 +2805,7 @@ main {
 #back-button-wrapper {
   position: relative;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 2.125rem;
   padding-left: 2.5rem;
   display: inline-block; }
@@ -3465,7 +3465,7 @@ main {
       margin-left: -5px;
       right: 0; }
     #jobs-content-inner-sorting .jobs-content-sorting__select {
-      font-weight: 600;
+      font-weight: normal;
       height: 0px;
       position: relative;
       overflow: hidden;
@@ -3568,19 +3568,22 @@ main {
   -o-transition: color 0.1s;
   transition: color 0.1s;
   padding-right: 3.125rem;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-right: 20px; }
 
 .jobs-content-inner__price-wrapper {
   width: 25%;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-right: 20px; }
 
 .jobs-content-inner__city-wrapper {
   width: 25%;
   font-weight: normal; }
 
-.jobs-content-inner__subtitle {
+.jobs-content-inner__subtitle, .jobs-content-inner__company {
   font-weight: 300;
-  margin-top: 0.3125rem; }
+  margin-top: 0.3125rem;
+  padding-right: 20px; }
 
 .job-sticky-block {
   position: relative; }
@@ -3653,7 +3656,7 @@ main {
     padding-bottom: 2.5rem; }
   .job-sticky-box .href {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: normal;
     display: inline-block; }
 
 form.formFocus .flex-block .one-half {
@@ -3674,8 +3677,7 @@ form.formFocus label {
   -webkit-transition: margin 0.2s ease-out, border .2s, padding 0.2s;
   -o-transition: margin 0.2s ease-out, border .2s, padding 0.2s;
   transition: margin 0.2s ease-out, border .2s, padding 0.2s;
-  cursor: text;
-  border: 0; }
+  cursor: text; }
   form.formFocus label .form-error {
     position: absolute;
     top: 100%;
@@ -3759,7 +3761,7 @@ form.formFocus .input-file-wrapper {
 form.formFocus p {
   margin: 0; }
 
-form.formFocus .callback-button-modal {
+form.formFocus .callback-button-modal, form.formFocus .callback-button {
   font-weight: 300;
   padding-top: 0;
   float: right;
@@ -3769,7 +3771,7 @@ form.formFocus .callback-button-modal {
 form.formFocus .dz-default {
   margin-top: 1.875rem;
   padding-left: 1.875rem;
-  font-weight: 600;
+  font-weight: normal;
   color: #55b521;
   cursor: pointer;
   display: inline-block;
@@ -3824,7 +3826,7 @@ form.formFocus .files-input-wrapper {
         left: -0.875rem; }
     form.formFocus .files-input-wrapper .files-input .dz-filename {
       float: left;
-      font-weight: 600;
+      font-weight: normal;
       max-width: 220px;
       overflow: hidden;
       word-wrap: none;
@@ -3869,19 +3871,19 @@ form.formFocus .files-input-wrapper {
     margin-bottom: 0;
     margin-left: 1.25rem; }
 
-form.formFocus {
+.remodal form.formFocus {
   position: relative; }
-  form.formFocus:after {
+  .remodal form.formFocus:after {
     display: block;
     position: relative;
     content: '';
     clear: both; }
-  form.formFocus .form-modal-label-wrapper {
+  .remodal form.formFocus .form-modal-label-wrapper {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
-  form.formFocus .form-bottom-items {
+  .remodal form.formFocus .form-bottom-items {
     height: 0px; }
-  form.formFocus label {
+  .remodal form.formFocus label {
     border: 0;
     border-bottom: 1px solid #cccccc;
     padding-top: 2.25rem;
@@ -3890,20 +3892,43 @@ form.formFocus {
     text-align: left;
     padding-left: 0;
     width: 100%; }
-    form.formFocus label .form-input-wrapper {
+    .remodal form.formFocus label .form-input-wrapper {
       padding: 0; }
-    form.formFocus label.has-error {
+    .remodal form.formFocus label.has-error {
       border: 0;
       border-bottom: 1px solid red; }
-    form.formFocus label.has-success {
+    .remodal form.formFocus label.has-success {
       border: 0;
       border-bottom: 1px solid #55b521; }
-    form.formFocus label.active {
+    .remodal form.formFocus label.active {
       padding-top: 0.625rem; }
-  form.formFocus .dz-filename {
+  .remodal form.formFocus .dz-filename {
     max-width: 200px; }
-  form.formFocus .dz-message {
+  .remodal form.formFocus .dz-message {
     margin-left: 1.25rem; }
+
+.job-form-wrapper form.formFocus label {
+  border: 1px solid #cccccc; }
+  .job-form-wrapper form.formFocus label.form-error {
+    border: 1px solid red; }
+  .job-form-wrapper form.formFocus label.has-success {
+    border: 1px solid green; }
+
+.job-form-wrapper form.formFocus .textarea {
+  height: 150px; }
+
+.job-form-wrapper form.formFocus textarea {
+  height: 100%;
+  min-height: 90px; }
+
+.job-form-wrapper form.formFocus .files-input-wrapper {
+  padding: 0;
+  float: left; }
+  .job-form-wrapper form.formFocus .files-input-wrapper:after {
+    display: block;
+    position: relative;
+    content: '';
+    clear: both; }
 
 #callbackSuccess {
   max-width: 400px;
@@ -3990,6 +4015,9 @@ form.formFocus {
   max-width: 100%; }
   .maxWidth:first-child {
     margin-top: 30px; }
+
+#company-map .gmnoprint.gm-style-cc, #company-map .gmnoprint {
+  display: none; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;
@@ -5222,7 +5250,7 @@ html.menu-is-locked {
         padding-right: 1.25rem; }
     .right-downloads {
       position: relative;
-      display: block;
+      display: none;
       width: 100%;
       margin-bottom: 6.25rem;
       right: auto; }
