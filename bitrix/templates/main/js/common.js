@@ -722,9 +722,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		_createClass(Parallax, [{
 			key: 'scrollPosition',
 			value: function scrollPosition(scrollBottom, image) {
-				console.log('window: ' + scrollBottom + ', image: ' + this.imageEnd + ', parent: ' + this.parentEnd);
 				image.css('transform', 'translateY(' + this.safeScrollHeight / 100 * (scrollBottom - this.parentStart) / (this.parentHeight / 100) + 'px) translateX(-50%)');
-				console.log(image.css('transform') + ', ' + this.safeScrollHeight / 100 * (scrollBottom - this.parentStart) / (this.parentHeight / 100));
 			}
 		}]);
 
