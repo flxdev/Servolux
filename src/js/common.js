@@ -141,7 +141,7 @@ function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false) {
 		fullscreenControl: true,
 		scrollwheel: false,
 		mapTypeControl: false,
-		scaleControl: false,
+		scaleControl: true,
 		streetViewControl: false,
 		gestureHandling: 'greedy',
 		zoomControlOptions: {
@@ -442,7 +442,7 @@ const styleMapContacts = [
 }, {
 	'featureType': 'administrative',
 	'elementType': 'labels.text',
-	'stylers': [{'visibility': 'off'}]
+	'stylers': [{'visibility': 'on'}]
 }, {
 	'featureType': 'administrative.country',
 	'elementType': 'geometry.fill',
@@ -466,11 +466,11 @@ const styleMapContacts = [
 }, {
 	'featureType': 'administrative.province',
 	'elementType': 'labels.text',
-	'stylers': [{'visibility': 'off'}]
+	'stylers': [{'visibility': 'on'}]
 }, {
 	'featureType': 'administrative.locality',
 	'elementType': 'labels.text',
-	'stylers': [{'visibility': 'off'}]
+	'stylers': [{'visibility': 'on'}]
 }, {
 	'featureType': 'administrative.neighborhood',
 	'elementType': 'labels.text',
@@ -701,14 +701,40 @@ document.addEventListener('DOMContentLoaded', function () {
 		mainScreenTitle.css('transform', 'translatey(' + Math.round(-(scrollPos) / 2) + 'px)')
 	}
 
+	class Parallax {
+		constructor (item){
+			this.image = item
+			this.$image = $(this.image)
+			this.parent = this.$image.parent()
+			this.windowHeight = $(window).height()
+			this.imageHeight = this.$image.height();
+			this.imageStart = this.$image.offset().top;
+			this.imageEnd = this.imageStart + this.$image.height()
+			this.parentHeight = this.parent.height()
+			this.parentStart = this.parent.offset().top
+			this.parentEnd = this.parentStart + this.parentHeight
+			this.safeScrollHeight = this.parentHeight - this.imageHeight
+			this.safePercentage = this.safeScrollHeight / (this.imageHeight / 100)
+			$(window).on('scroll', () => {
+				let scrollBottom = $(window).scrollTop() + this.windowHeight/2
+				if (scrollBottom >= this.parentStart && scrollBottom <= this.parentEnd){
+					setTimeout(() => {
+						this.scrollPosition(scrollBottom, this.$image)
+					}, 1)
+				}
+			})
+		}
+		scrollPosition(scrollBottom, image) {
+			console.log('window: ' + scrollBottom + ', image: ' + this.imageEnd + ', parent: ' + this.parentEnd)
+			image.css('transform', 'translateY(' + ((this.safeScrollHeight/100) * (scrollBottom - this.parentStart)/(this.parentHeight/100)) + 'px) translateX(-50%)')
+			console.log(image.css('transform') + ', ' + ((this.safeScrollHeight/100) * (scrollBottom - this.parentStart)/(this.parentHeight/100)) )
+		}
+	}
+
 	if (hasParallax) {
-		const rellax = new Rellax('.rellax', {
-			speed: 7,
-			center: false,
-			round: true,
-			vertical: true,
-			horizontal: false
-		})
+
+		let p = new Parallax('.rellax')
+
 	}
 
 	// Scroll triggers

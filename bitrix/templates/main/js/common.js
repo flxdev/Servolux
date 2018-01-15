@@ -142,7 +142,7 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 		fullscreenControl: true,
 		scrollwheel: false,
 		mapTypeControl: false,
-		scaleControl: false,
+		scaleControl: true,
 		streetViewControl: false,
 		gestureHandling: 'greedy',
 		zoomControlOptions: {
@@ -439,7 +439,7 @@ var styleMapContacts = [{
 }, {
 	'featureType': 'administrative',
 	'elementType': 'labels.text',
-	'stylers': [{ 'visibility': 'off' }]
+	'stylers': [{ 'visibility': 'on' }]
 }, {
 	'featureType': 'administrative.country',
 	'elementType': 'geometry.fill',
@@ -463,11 +463,11 @@ var styleMapContacts = [{
 }, {
 	'featureType': 'administrative.province',
 	'elementType': 'labels.text',
-	'stylers': [{ 'visibility': 'off' }]
+	'stylers': [{ 'visibility': 'on' }]
 }, {
 	'featureType': 'administrative.locality',
 	'elementType': 'labels.text',
-	'stylers': [{ 'visibility': 'off' }]
+	'stylers': [{ 'visibility': 'on' }]
 }, {
 	'featureType': 'administrative.neighborhood',
 	'elementType': 'labels.text',
@@ -691,14 +691,49 @@ document.addEventListener('DOMContentLoaded', function () {
 		mainScreenTitle.css('transform', 'translatey(' + Math.round(-scrollPos / 2) + 'px)');
 	}
 
+	var Parallax = function () {
+		function Parallax(item) {
+			var _this2 = this;
+
+			_classCallCheck(this, Parallax);
+
+			this.image = item;
+			this.$image = $(this.image);
+			this.parent = this.$image.parent();
+			this.windowHeight = $(window).height();
+			this.imageHeight = this.$image.height();
+			this.imageStart = this.$image.offset().top;
+			this.imageEnd = this.imageStart + this.$image.height();
+			this.parentHeight = this.parent.height();
+			this.parentStart = this.parent.offset().top;
+			this.parentEnd = this.parentStart + this.parentHeight;
+			this.safeScrollHeight = this.parentHeight - this.imageHeight;
+			this.safePercentage = this.safeScrollHeight / (this.imageHeight / 100);
+			$(window).on('scroll', function () {
+				var scrollBottom = $(window).scrollTop() + _this2.windowHeight / 2;
+				if (scrollBottom >= _this2.parentStart && scrollBottom <= _this2.parentEnd) {
+					setTimeout(function () {
+						_this2.scrollPosition(scrollBottom, _this2.$image);
+					}, 1);
+				}
+			});
+		}
+
+		_createClass(Parallax, [{
+			key: 'scrollPosition',
+			value: function scrollPosition(scrollBottom, image) {
+				console.log('window: ' + scrollBottom + ', image: ' + this.imageEnd + ', parent: ' + this.parentEnd);
+				image.css('transform', 'translateY(' + this.safeScrollHeight / 100 * (scrollBottom - this.parentStart) / (this.parentHeight / 100) + 'px) translateX(-50%)');
+				console.log(image.css('transform') + ', ' + this.safeScrollHeight / 100 * (scrollBottom - this.parentStart) / (this.parentHeight / 100));
+			}
+		}]);
+
+		return Parallax;
+	}();
+
 	if (hasParallax) {
-		var rellax = new Rellax('.rellax', {
-			speed: 7,
-			center: false,
-			round: true,
-			vertical: true,
-			horizontal: false
-		});
+
+		var p = new Parallax('.rellax');
 	}
 
 	// Scroll triggers
@@ -1090,7 +1125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	var FormFocus = function () {
 		function FormFocus(elem) {
-			var _this2 = this;
+			var _this3 = this;
 
 			_classCallCheck(this, FormFocus);
 
@@ -1118,7 +1153,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			this.elem.find('button[type=submit]').on('click', function (el) {
 				el.preventDefault();
-				_this2.elem.submit();
+				_this3.elem.submit();
 				return false;
 			});
 
