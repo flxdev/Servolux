@@ -1786,6 +1786,13 @@ main {
     display: -ms-flexbox;
     display: flex;
     position: relative;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    padding-right: 5px;
     height: 2.6875rem; }
     .carousel-buttons .carousel-buttons-wrap .button {
       padding: 0.4375rem;
@@ -1797,9 +1804,10 @@ main {
       border: 1px solid transparent;
       margin-left: -1px;
       z-index: 2;
-      -webkit-transition: border 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      -o-transition: border 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: border 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+      overflow: visible;
+      -webkit-transition: border-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      -o-transition: border-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: border-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       .carousel-buttons .carousel-buttons-wrap .button:first-child {
         -webkit-border-radius: 100px 0 0 100px;
         border-radius: 100px 0 0 100px; }
@@ -4038,6 +4046,11 @@ form.formFocus .files-input-wrapper {
 
 .gmnoprint.gm-style-cc, .gmnoprint, .gm-tilt, .gm-style-cc {
   display: none !important; }
+
+.gm-bundled-control {
+  display: block !important; }
+  .gm-bundled-control .gmnoprint {
+    display: block !important; }
 
 .animated.main-screen-title {
   -webkit-animation: fadeInDown 1s ease-out 0.2s both;

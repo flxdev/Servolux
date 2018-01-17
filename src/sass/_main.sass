@@ -1707,6 +1707,9 @@ $slSize: 410px
 	.carousel-buttons-wrap
 		display: flex
 		position: relative
+		flex-wrap: nowrap
+		width: min-content
+		padding-right: 5px
 		+rem(height, 43px)
 		.button
 			+rem(padding, 7px)
@@ -1718,7 +1721,8 @@ $slSize: 410px
 			border: 1px solid transparent
 			margin-left: -1px
 			z-index: 2
-			transition: border 0.15s cubic-bezier(.445, .05, .55, .95), color 0.15s cubic-bezier(.445, .05, .55, .95), background-color 0.15s cubic-bezier(.445, .05, .55, .95)
+			overflow: visible
+			transition: border-color 0.15s cubic-bezier(.445, .05, .55, .95), color 0.15s cubic-bezier(.445, .05, .55, .95), background-color 0.15s cubic-bezier(.445, .05, .55, .95)
 			&:first-child
 				border-radius: 100px 0 0 100px
 			&:last-child
@@ -3119,6 +3123,7 @@ $galleryBigHeight: 590px
 	.carousel-buttons
 		margin: 0
 
+
 #blocks-wrapper
 	&>*
 		display: none
@@ -4061,3 +4066,7 @@ form.formFocus
 
 .gmnoprint.gm-style-cc, .gmnoprint, .gm-tilt, .gm-style-cc
 	display: none!important
+.gm-bundled-control
+	display: block!important
+	.gmnoprint
+		display: block!important
