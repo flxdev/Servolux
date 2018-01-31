@@ -1177,6 +1177,8 @@ main {
   position: relative;
   overflow: hidden; }
   #main-screen-wrapper.advancedPage, #main-screen-wrapper.advancedPage.page21 {
+    padding-left: 5rem;
+    padding-right: 2.5rem;
     background-position: 50% 50%;
     -webkit-background-size: cover;
     background-size: cover;
@@ -1217,18 +1219,21 @@ main {
       padding-right: 7.5rem; }
       #main-screen-wrapper.advancedPage #main-screen #main-screen-title, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title {
         max-width: 90rem;
-        top: 6.25rem; }
+        top: 6.25rem;
+        left: 0; }
         #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper {
           position: absolute;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          width: 100%; }
+          bottom: 2.5rem;
+          left: 0;
+          width: 100%;
+          max-width: 1200px;
+          right: 0;
+          margin: auto;
+          display: block; }
           #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .title-main, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper .title-main {
             text-align: left;
             font-size: 4.375rem;
-            line-height: 3.4375rem;
+            line-height: 4.6875rem;
             letter-spacing: 1px; }
             #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .title-main.title2, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper .title-main.title2 {
               font-size: 3.125rem;
@@ -1267,6 +1272,8 @@ main {
               opacity: 1; }
   #main-screen-wrapper #main-first-screen-fading-wrapper {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     will-change: transform;
     height: 100vh;
@@ -5269,6 +5276,9 @@ html.menu-is-locked {
       height: auto;
       min-height: 31.25rem;
       background-color: rgba(85, 181, 33, 0.2); }
+      #main-screen-wrapper.advancedPage, #main-screen-wrapper.advancedPage.page21 {
+        padding-left: 3.125rem;
+        padding-right: 1.25rem; }
         #main-screen-wrapper.advancedPage.page2 #main-first-screen-fading-wrapper .firstScreenFading, #main-screen-wrapper.advancedPage.page21.page2 #main-first-screen-fading-wrapper .firstScreenFading {
           left: 50%;
           -webkit-transform: translate(-50%, -50%);
@@ -5408,6 +5418,9 @@ html.menu-is-locked {
         position: relative; }
     #title-svg-main {
       max-width: 80%; }
+      #main-screen-wrapper.advancedPage, #main-screen-wrapper.advancedPage.page21 {
+        padding-left: 0;
+        padding-right: 0; }
         #main-screen-wrapper.advancedPage #main-screen, #main-screen-wrapper.advancedPage.page21 #main-screen {
           padding-left: 3.125rem;
           padding-right: 3.125rem; }
@@ -5425,6 +5438,8 @@ html.menu-is-locked {
               -webkit-transform: none;
               -ms-transform: none;
               transform: none; }
+              #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .title-main, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper .title-main {
+                line-height: 4.375rem; }
       #main-screen-wrapper #main-screen {
         height: auto;
         min-height: 31.25rem; }
@@ -5704,6 +5719,9 @@ html.menu-is-locked {
         padding-right: 50px; } }
 
 @media only screen and (max-width: 768px) {
+            #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper {
+              padding-left: 0.625rem;
+              padding-right: 0.625rem; }
       .scheme-wrapper .scheme-slider-wrapper {
         width: 25.625rem;
         height: 25.625rem; }
@@ -5789,6 +5807,10 @@ html.menu-is-locked {
       #company-map .map-advantage-wrapper .one-half {
         width: 50%; } }
 
+@media only screen and (max-width: 560px) {
+    html {
+      font-size: 13px; } }
+
 @media only screen and (max-width: 555px) {
       .scheme-wrapper .scheme-slider-wrapper {
         width: 20.3125rem;
@@ -5844,6 +5866,8 @@ html.menu-is-locked {
           padding-right: 1.25rem;
           height: 100%; }
               #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .title-main, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper .title-main {
+                line-height: 3.75rem; }
+              #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .title-main, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper .title-main {
                 font-size: 3.25rem; }
       #main-screen-wrapper #main-screen {
         min-height: 23.75rem; }
@@ -5872,10 +5896,11 @@ html.menu-is-locked {
       transform: translate(0, 0%); } }
 
 @media only screen and (max-width: 480px) {
-    html {
-      font-size: 13px; }
       #header-modal-wrapper .menu-modal-top {
         top: 6.625rem; }
+            #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper {
+              padding-left: 0px;
+              padding-right: 0px; }
           #main-screen-wrapper #main-screen #main-screen-title .title-sup {
             font-size: 1.5rem;
             margin-bottom: 3.125rem; }
@@ -5910,6 +5935,9 @@ html.menu-is-locked {
         font-size: 1.0625rem; }
     #title-svg-main {
       height: 10rem; }
+              #main-screen-wrapper.advancedPage #main-screen #main-screen-title #title-wrapper .title-main, #main-screen-wrapper.advancedPage.page21 #main-screen #main-screen-title #title-wrapper .title-main {
+                font-size: 2.5rem;
+                line-height: 3.125rem; }
       .advantages .advantage-wrapper {
         padding-right: 1.25rem;
         padding-left: 0; }

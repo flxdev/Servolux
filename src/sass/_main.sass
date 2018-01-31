@@ -63,7 +63,7 @@ html
 	overflow: auto
 	+r(1370)
 		font-size: 14px
-	+r(480)
+	+r(560)
 		font-size: 13px
 
 		
@@ -1060,6 +1060,8 @@ main
 		+rem(min-height, 380px)
 	&.advancedPage,
 	&.advancedPage.page21
+		+rem(padding-left, 80px)
+		+rem(padding-right, 40px)
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
@@ -1067,6 +1069,12 @@ main
 		+rem(height, 420px)
 		+r(1366)
 			+rem(height, 320px)
+		+r(1024)
+			+rem(padding-left, 50px)
+			+rem(padding-right, 20px)
+		+r(992)
+			+rem(padding-left, 0px)
+			+rem(padding-right, 0px)
 		&.page2
 			+rem(height, 500px)
 			#title-wrapper
@@ -1125,6 +1133,7 @@ main
 			#main-screen-title
 				+rem(max-width, 1440px)
 				+rem(top, 100px)
+				left: 0
 				+r(1366)
 					+rem(top, 0px)
 				+r(992)
@@ -1132,19 +1141,36 @@ main
 					transform: none
 				#title-wrapper
 					position: absolute
-					top: 50%
-					transform: translateY(-50%)
+					+rem(bottom, 40px)
+					left: 0
 					width: 100%
+					max-width: 1200px
+					right: 0
+					margin: auto
+					display: block
 					+r(992)
 						transition: none
 						position: relative
 						display: inline-block
 						transform: none
+					+r(768)
+						+rem(padding-left, 10px)
+						+rem(padding-right, 10px)
+					+r(480)
+						padding-left: 0px
+						padding-right: 0px
 					.title-main
 						text-align: left
 						+rem(font-size, 70px)
-						+rem(line-height, 55px)
+						+rem(line-height, 75px)
 						letter-spacing: 1px
+						+r(992)
+							+rem(line-height, 70px)
+						+r(492)
+							+rem(line-height, 60px)
+						+r(400)
+							+rem(font-size, 40px)
+							+rem(line-height, 50px)
 						&.title2
 							+rem(font-size, 50px)
 							+rem(line-height, 60px)
@@ -1183,6 +1209,8 @@ main
 								opacity: 1
 	#main-first-screen-fading-wrapper
 		position: fixed
+		top: 0
+		left: 0
 		width: 100%
 		will-change: transform
 		height: 100vh

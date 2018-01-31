@@ -553,11 +553,12 @@ const styleMapContacts = [
 document.addEventListener('DOMContentLoaded', function () {
 
 	if ($('#map').length) {
-		initMap(document.getElementById('map'), arrayOfPins, styleMapBig)
+			initMap(document.getElementById('map'), arrayOfPins, $('#brand-contacts').length ? styleMapContacts : styleMapBig)
 	}
 
-	if ($('.map').length) {
-		$('.map').filter(function (index) {
+	else if ($('.map').length) {
+		let $map = $('.map');
+		$map.filter(function (index) {
 			initMap(this, arrayOfPins[index], styleMapContacts, true)
 		})
 	}
