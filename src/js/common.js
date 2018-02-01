@@ -123,7 +123,7 @@ function isMobile () {
 }
 
 //TODO map middle lan and lng of pins to see them all
-function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false) {
+function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false, autoFoundMarkers = false) {
 	let element = mapArg,
 		zoomIn = parseFloat(element.getAttribute('data-zoom')),
 		latcord = parseFloat(element.getAttribute('data-lat')),
@@ -135,6 +135,7 @@ function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false) {
 		loncord = arrayOfPins.lng
 		centercords = {lat: latcord, lng: loncord}
 	}
+	let bounds = new google.maps.LatLngBounds();
 	let map = new google.maps.Map(element, {
 		zoom: zoomIn,
 		center: centercords,
@@ -208,6 +209,7 @@ function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false) {
 					labelAnchor: new google.maps.Point(0, 0),
 					labelClass: 'labels',
 				})
+				bounds.extend(marker.position);
 				markers.push(marker)
 				google.maps.event.addListener(marker, 'click', function (e) {
 					hidemarkers(markers)
@@ -259,6 +261,9 @@ function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false) {
 				}
 			}
 		}
+	}
+	if(autoFoundMarkers){
+		map.fitBounds(bounds);
 	}
 }
 
@@ -552,13 +557,18 @@ const styleMapContacts = [
 
 document.addEventListener('DOMContentLoaded', function () {
 
-	if ($('#map').length) {
-			initMap(document.getElementById('map'), arrayOfPins, $('#brand-contacts').length ? styleMapContacts : styleMapBig)
+	let appObjects = {
+		$maps: $('.map'),
+		$map: $('#map'),
+		$brandContacts: $('#brand-contacts')
 	}
 
-	else if ($('.map').length) {
-		let $map = $('.map');
-		$map.filter(function (index) {
+	if (appObjects.$map.length) {
+			initMap(document.getElementById('map'), arrayOfPins, appObjects.$brandContacts.length ? styleMapContacts : styleMapBig, false, appObjects.$brandContacts.length)
+	}
+
+	else if (appObjects.$maps.length) {
+		appObjects.$maps.filter(function (index) {
 			initMap(this, arrayOfPins[index], styleMapContacts, true)
 		})
 	}

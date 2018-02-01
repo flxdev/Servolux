@@ -2702,6 +2702,9 @@ main {
 .slick-vertical .slick-slide {
   border: 0; }
 
+#modal-content .products-slide:before, #modal-content .products-slide:after {
+  display: none; }
+
 #partners-slider-wrapper {
   margin-top: 4.375rem; }
 

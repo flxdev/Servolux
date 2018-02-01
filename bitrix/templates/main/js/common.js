@@ -124,6 +124,7 @@ function isMobile() {
 //TODO map middle lan and lng of pins to see them all
 function initMap(mapArg, arrayOfPins, styleMap) {
 	var manyMaps = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+	var autoFoundMarkers = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
 
 	var element = mapArg,
 	    zoomIn = parseFloat(element.getAttribute('data-zoom')),
@@ -136,6 +137,7 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 		loncord = arrayOfPins.lng;
 		centercords = { lat: latcord, lng: loncord };
 	}
+	var bounds = new google.maps.LatLngBounds();
 	var map = new google.maps.Map(element, {
 		zoom: zoomIn,
 		center: centercords,
@@ -191,6 +193,7 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 					labelAnchor: new google.maps.Point(0, 0),
 					labelClass: 'labels'
 				});
+				bounds.extend(marker.position);
 				markers.push(marker);
 				google.maps.event.addListener(marker, 'click', function (e) {
 					hidemarkers(markers);
@@ -259,6 +262,9 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 				panTo(lat, lng);
 			});
 		});
+	}
+	if (autoFoundMarkers) {
+		map.fitBounds(bounds);
 	}
 }
 
@@ -548,11 +554,16 @@ var styleMapContacts = [{
 
 document.addEventListener('DOMContentLoaded', function () {
 
-	if ($('#map').length) {
-		initMap(document.getElementById('map'), arrayOfPins, $('#brand-contacts').length ? styleMapContacts : styleMapBig);
-	} else if ($('.map').length) {
-		var $map = $('.map');
-		$map.filter(function (index) {
+	var appObjects = {
+		$maps: $('.map'),
+		$map: $('#map'),
+		$brandContacts: $('#brand-contacts')
+	};
+
+	if (appObjects.$map.length) {
+		initMap(document.getElementById('map'), arrayOfPins, appObjects.$brandContacts.length ? styleMapContacts : styleMapBig, false, appObjects.$brandContacts.length);
+	} else if (appObjects.$maps.length) {
+		appObjects.$maps.filter(function (index) {
 			initMap(this, arrayOfPins[index], styleMapContacts, true);
 		});
 	}
