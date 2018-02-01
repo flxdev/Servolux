@@ -3066,6 +3066,37 @@ main {
 #clients .row {
   margin-top: 3.125rem; }
 
+#chart .labels {
+  display: none !important; }
+
+#chart .labels.place_open {
+  display: block !important; }
+
+.map .labels {
+  position: relative;
+  -webkit-transform: translatex(-50%);
+  -ms-transform: translatex(-50%);
+  transform: translatex(-50%); }
+  .map .labels p {
+    margin: 0;
+    font-size: 12px;
+    color: #000;
+    background-color: #fff;
+    padding: 4px 10px;
+    display: inline-block;
+    line-height: 16px; }
+
+#map .labels {
+  position: relative;
+  -webkit-transform: translatex(-50%);
+  -ms-transform: translatex(-50%);
+  transform: translatex(-50%); }
+  #map .labels p {
+    margin: 0;
+    font-size: 12px;
+    color: #000;
+    line-height: 16px; }
+
 #whywe {
   background: url("../img/3-0/earth.jpg") 50% 50% no-repeat;
   -webkit-background-size: 70% 70%;

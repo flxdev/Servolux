@@ -132,12 +132,15 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 	    loncord = parseFloat(element.getAttribute('data-lon')),
 	    imgpath = element.getAttribute('data-icon'),
 	    centercords = { lat: latcord, lng: loncord };
+
 	if (manyMaps) {
 		latcord = arrayOfPins.lat;
 		loncord = arrayOfPins.lng;
 		centercords = { lat: latcord, lng: loncord };
 	}
+
 	var bounds = new google.maps.LatLngBounds();
+
 	var map = new google.maps.Map(element, {
 		zoom: zoomIn,
 		center: centercords,
@@ -152,116 +155,63 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 		},
 		styles: styleMap
 	});
-	var img = {
-		url: imgpath,
-		// This marker is 20 pixels wide by 32 pixels high.
-		size: new google.maps.Size(35, 56),
-		origin: new google.maps.Point(0, 0),
-		anchor: new google.maps.Point(8.8, 28),
-		scaledSize: new google.maps.Size(17.5, 28)
-	};
-	var mainmarkermarker = new google.maps.Marker({
-		position: centercords,
-		map: map,
-		icon: img,
-		zIndex: 99999
-	});
+
+	if (manyMaps) {
+		var obj = arrayOfPins;
+
+		var marker = new MarkerWithLabel({
+			position: new google.maps.LatLng(obj.lat, obj.lng),
+			title: obj.title,
+			map: map,
+			icon: '..' + imgpath,
+			zIndex: 999999,
+			labelContent: '<p class="goggle-map-text">' + obj.name + '</p>',
+			labelAnchor: new google.maps.Point(0, 0),
+			labelClass: 'labels place_open'
+		});
+	}
+
 	if ($(element).hasClass('map-elem-near')) {
-		var onMarkerLoad = function onMarkerLoad(json) {
-			var markerarr = [];
-			mainmarkermarker.setMap(null);
-			for (var _i = 0; _i < json.length; _i++) {
+		(function () {
+			var hidemarkers = function hidemarkers(array) {
+				for (var _i2 = 0; _i2 < array.length; _i2++) {
+					var cur = array[_i2];
+					cur.set('labelClass', 'labels');
+				}
+			};
+
+			var markers = [];
+			for (var _i = 0; _i < arrayOfPins.length; _i++) {
 				// Current object
-				var obj = json[_i];
-				var imgType = {
-					url: imgpath,
-					// This marker is 20 pixels wide by 32 pixels high.
-					size: new google.maps.Size(17.5, 28),
-					origin: new google.maps.Point(0, 0),
-					anchor: new google.maps.Point(8.8, 28),
-					scaledSize: new google.maps.Size(17.5, 28)
-					// Adding a new marker for the object
-				};var pos = new google.maps.LatLng(obj.lat, obj.lng);
-				markerarr.push(pos);
-				var marker = new MarkerWithLabel({
-					position: new google.maps.LatLng(obj.lat, obj.lng),
-					title: obj.title,
+				var _obj = arrayOfPins[_i];
+
+				var _marker = new MarkerWithLabel({
+					position: new google.maps.LatLng(_obj.lat, _obj.lng),
+					title: _obj.title,
 					map: map,
-					icon: imgType,
+					icon: '..' + imgpath,
 					zIndex: 999999,
-					labelContent: '<div id="content"><div class="siteNotice"><div class="u-text lt">' + obj.name + '</div></div></div>',
+					labelContent: '<p class="goggle-map-text">' + _obj.name + '</p>',
 					labelAnchor: new google.maps.Point(0, 0),
 					labelClass: 'labels'
 				});
-				bounds.extend(marker.position);
-				markers.push(marker);
-				google.maps.event.addListener(marker, 'click', function (e) {
+
+				bounds.extend(_marker.position);
+
+				markers.push(_marker);
+
+				google.maps.event.addListener(_marker, 'click', function (e) {
 					hidemarkers(markers);
 					this.set('labelClass', 'labels place_open');
 				});
 			} // end loop
+
 			google.maps.event.addListener(map, 'click', function (e) {
 				if (!$(e.target).hasClass('labels')) {
 					hidemarkers(markers);
 				}
 			});
-		};
-
-		var hidemarkers = function hidemarkers(array) {
-			for (var _i2 = 0; _i2 < array.length; _i2++) {
-				var cur = array[_i2];
-				cur.set('labelClass', 'labels');
-			}
-		};
-
-		var panTo = function panTo(newLat, newLng) {
-			if (panPath.length > 0) {
-				panQueue.push([newLat, newLng]);
-			} else {
-				// Lets compute the points we'll use
-				panPath.push('LAZY SYNCRONIZED LOCK');
-				var curLat = map.getCenter().lat();
-				var curLng = map.getCenter().lng();
-				var dLat = (newLat - curLat) / STEPS;
-				var dLng = (newLng - curLng) / STEPS;
-				for (var _i3 = 0; _i3 < STEPS; _i3++) {
-					panPath.push([curLat + dLat * _i3, curLng + dLng * _i3]);
-				}
-				panPath.push([newLat, newLng]);
-				panPath.shift();
-				setTimeout(doPan, 10);
-			}
-		};
-
-		var doPan = function doPan() {
-			var next = panPath.shift();
-			if (next != null) {
-				map.panTo(new google.maps.LatLng(next[0], next[1]));
-				setTimeout(doPan, 10);
-			} else {
-				var queued = panQueue.shift();
-				if (queued != null) {
-					panTo(queued[0], queued[1]);
-				}
-			}
-		};
-
-		var markers = [];
-		onMarkerLoad(arrayOfPins);
-		var triggers = $(element).closest('.contact-section').find('.js-map-trigger');
-		var panPath = []; // путь
-		var panQueue = []; // очередь
-		var STEPS = 10; // шаг
-		triggers.each(function () {
-			var _ = $(this),
-			    ind = _.index();
-			_.on('click', function () {
-				_.addClass('active').siblings().removeClass('active');
-				var lat = markers[ind].position.lat(),
-				    lng = markers[ind].position.lng();
-				panTo(lat, lng);
-			});
-		});
+		})();
 	}
 	if (autoFoundMarkers) {
 		map.fitBounds(bounds);
@@ -493,7 +443,7 @@ var styleMapContacts = [{
 }, {
 	'featureType': 'landscape',
 	'elementType': 'labels',
-	'stylers': [{ 'visibility': 'off' }]
+	'stylers': [{ 'visibility': 'on' }]
 }, {
 	'featureType': 'landscape.man_made',
 	'elementType': 'all',
@@ -505,7 +455,7 @@ var styleMapContacts = [{
 }, {
 	'featureType': 'landscape.man_made',
 	'elementType': 'labels.text',
-	'stylers': [{ 'visibility': 'off' }]
+	'stylers': [{ 'visibility': 'on' }]
 }, {
 	'featureType': 'landscape.natural.landcover',
 	'elementType': 'labels.text',
@@ -517,7 +467,7 @@ var styleMapContacts = [{
 }, {
 	'featureType': 'poi',
 	'elementType': 'labels',
-	'stylers': [{ 'visibility': 'off' }]
+	'stylers': [{ 'visibility': 'on' }]
 }, {
 	'featureType': 'poi',
 	'elementType': 'labels.text',
@@ -993,8 +943,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		console.log('lazyImage init');
 		var arr = document.querySelectorAll('.js-image');
 		var images = [];
-		for (var _i4 = 0; _i4 < arr.length; _i4++) {
-			images.push(arr[_i4]);
+		for (var _i3 = 0; _i3 < arr.length; _i3++) {
+			images.push(arr[_i3]);
 		}
 		var config = {
 			rootMargin: '0px 0px',
@@ -1004,16 +954,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		var imageCount = images.length;
 		var observer = void 0;
 		if (!('IntersectionObserver' in window)) {
-			for (var _i5 = 0; _i5 < imageCount; _i5++) {
-				preloadImage(images[_i5]);
+			for (var _i4 = 0; _i4 < imageCount; _i4++) {
+				preloadImage(images[_i4]);
 			}
 		} else {
 			observer = new IntersectionObserver(onIntersection, config);
-			for (var _i6 = 0; _i6 < imageCount; _i6++) {
-				if (images[_i6].classList.contains('js-image-handled')) {
+			for (var _i5 = 0; _i5 < imageCount; _i5++) {
+				if (images[_i5].classList.contains('js-image-handled')) {
 					return;
 				}
-				observer.observe(images[_i6]);
+				observer.observe(images[_i5]);
 			}
 		}
 
@@ -1037,8 +987,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		function loadImagesImmediately(images) {
-			for (var _i7 = 0; _i7 < images.length; _i7++) {
-				return preloadImage(images[_i7]);
+			for (var _i6 = 0; _i6 < images.length; _i6++) {
+				return preloadImage(images[_i6]);
 			}
 		}
 

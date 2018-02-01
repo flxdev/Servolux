@@ -129,13 +129,16 @@ function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false, autoFoundMark
 		latcord = parseFloat(element.getAttribute('data-lat')),
 		loncord = parseFloat(element.getAttribute('data-lon')),
 		imgpath = element.getAttribute('data-icon'),
-		centercords = {lat: latcord, lng: loncord}
+		centercords = {lat: latcord, lng: loncord};
+
 	if (manyMaps) {
-		latcord = arrayOfPins.lat
-		loncord = arrayOfPins.lng
-		centercords = {lat: latcord, lng: loncord}
+		latcord = arrayOfPins.lat;
+		loncord = arrayOfPins.lng;
+		centercords = {lat: latcord, lng: loncord};
 	}
+
 	let bounds = new google.maps.LatLngBounds();
+
 	let map = new google.maps.Map(element, {
 		zoom: zoomIn,
 		center: centercords,
@@ -149,116 +152,60 @@ function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false, autoFoundMark
 			position: google.maps.ControlPosition.RIGHT_CENTER
 		},
 		styles: styleMap
-	})
-	let img = {
-		url: imgpath,
-		// This marker is 20 pixels wide by 32 pixels high.
-		size: new google.maps.Size(35, 56),
-		origin: new google.maps.Point(0, 0),
-		anchor: new google.maps.Point(8.8, 28),
-		scaledSize: new google.maps.Size(17.5, 28)
+	});
+
+	if(manyMaps){
+		let obj = arrayOfPins;
+
+		let marker = new MarkerWithLabel({
+			position: new google.maps.LatLng(obj.lat, obj.lng),
+			title: obj.title,
+			map: map,
+			icon: '..'+imgpath,
+			zIndex: 999999,
+			labelContent: '<p class="goggle-map-text">' + obj.name + '</p>',
+			labelAnchor: new google.maps.Point(0, 0),
+			labelClass: 'labels place_open',
+		});
 	}
-	let mainmarkermarker = new google.maps.Marker({
-		position: centercords,
-		map: map,
-		icon: img,
-		zIndex: 99999
-	})
+
 	if ($(element).hasClass('map-elem-near')) {
 		let markers = []
-		onMarkerLoad(arrayOfPins)
-		let triggers = $(element).closest('.contact-section').find('.js-map-trigger')
-		let panPath = []   // путь
-		let panQueue = []  // очередь
-		let STEPS = 10     // шаг
-		triggers.each(function () {
-			let _ = $(this),
-				ind = _.index()
-			_.on('click', function () {
-				_.addClass('active').siblings().removeClass('active')
-				let lat = markers[ind].position.lat(),
-					lng = markers[ind].position.lng()
-				panTo(lat, lng)
-			})
-		})
+		for (let i = 0; i < arrayOfPins.length; i++) {
+			// Current object
+			let obj = arrayOfPins[i];
 
-		function onMarkerLoad (json) {
-			let markerarr = []
-			mainmarkermarker.setMap(null)
-			for (let i = 0; i < json.length; i++) {
-				// Current object
-				let obj = json[i]
-				let imgType = {
-					url: imgpath,
-					// This marker is 20 pixels wide by 32 pixels high.
-					size: new google.maps.Size(17.5, 28),
-					origin: new google.maps.Point(0, 0),
-					anchor: new google.maps.Point(8.8, 28),
-					scaledSize: new google.maps.Size(17.5, 28)
-				}
-				// Adding a new marker for the object
-				let pos = new google.maps.LatLng(obj.lat, obj.lng)
-				markerarr.push(pos)
-				let marker = new MarkerWithLabel({
-					position: new google.maps.LatLng(obj.lat, obj.lng),
-					title: obj.title,
-					map: map,
-					icon: imgType,
-					zIndex: 999999,
-					labelContent: '<div id="content"><div class="siteNotice"><div class="u-text lt">' + obj.name + '</div></div></div>',
-					labelAnchor: new google.maps.Point(0, 0),
-					labelClass: 'labels',
-				})
-				bounds.extend(marker.position);
-				markers.push(marker)
-				google.maps.event.addListener(marker, 'click', function (e) {
-					hidemarkers(markers)
-					this.set('labelClass', 'labels place_open')
-				})
-			} // end loop
-			google.maps.event.addListener(map, 'click', function (e) {
-				if (!$(e.target).hasClass('labels')) {
-					hidemarkers(markers)
-				}
+			let marker = new MarkerWithLabel({
+				position: new google.maps.LatLng(obj.lat, obj.lng),
+				title: obj.title,
+				map: map,
+				icon: '..'+imgpath,
+				zIndex: 999999,
+				labelContent: '<p class="goggle-map-text">' + obj.name + '</p>',
+				labelAnchor: new google.maps.Point(0, 0),
+				labelClass: 'labels',
+			});
+
+			bounds.extend(marker.position);
+
+			markers.push(marker);
+
+			google.maps.event.addListener(marker, 'click', function (e) {
+				hidemarkers(markers);
+				this.set('labelClass', 'labels place_open')
 			})
-		}
+		} // end loop
+
+		google.maps.event.addListener(map, 'click', function (e) {
+			if (!$(e.target).hasClass('labels')) {
+				hidemarkers(markers)
+			}
+		});
 
 		function hidemarkers (array) {
 			for (let i = 0; i < array.length; i++) {
-				let cur = array[i]
+				let cur = array[i];
 				cur.set('labelClass', 'labels')
-			}
-		}
-
-		function panTo (newLat, newLng) {
-			if (panPath.length > 0) {
-				panQueue.push([newLat, newLng])
-			} else {
-				// Lets compute the points we'll use
-				panPath.push('LAZY SYNCRONIZED LOCK')
-				let curLat = map.getCenter().lat()
-				let curLng = map.getCenter().lng()
-				let dLat = (newLat - curLat) / STEPS
-				let dLng = (newLng - curLng) / STEPS
-				for (let i = 0; i < STEPS; i++) {
-					panPath.push([curLat + dLat * i, curLng + dLng * i])
-				}
-				panPath.push([newLat, newLng])
-				panPath.shift()
-				setTimeout(doPan, 10)
-			}
-		}
-
-		function doPan () {
-			let next = panPath.shift()
-			if (next != null) {
-				map.panTo(new google.maps.LatLng(next[0], next[1]))
-				setTimeout(doPan, 10)
-			} else {
-				let queued = panQueue.shift()
-				if (queued != null) {
-					panTo(queued[0], queued[1])
-				}
 			}
 		}
 	}
@@ -495,7 +442,7 @@ const styleMapContacts = [
 }, {
 	'featureType': 'landscape',
 	'elementType': 'labels',
-	'stylers': [{'visibility': 'off'}]
+	'stylers': [{'visibility': 'on'}]
 }, {
 	'featureType': 'landscape.man_made',
 	'elementType': 'all',
@@ -507,7 +454,7 @@ const styleMapContacts = [
 }, {
 	'featureType': 'landscape.man_made',
 	'elementType': 'labels.text',
-	'stylers': [{'visibility': 'off'}]
+	'stylers': [{'visibility': 'on'}]
 }, {
 	'featureType': 'landscape.natural.landcover',
 	'elementType': 'labels.text',
@@ -519,7 +466,7 @@ const styleMapContacts = [
 }, {
 	'featureType': 'poi',
 	'elementType': 'labels',
-	'stylers': [{'visibility': 'off'}]
+	'stylers': [{'visibility': 'on'}]
 }, {
 	'featureType': 'poi',
 	'elementType': 'labels.text',
