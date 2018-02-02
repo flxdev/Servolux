@@ -147,60 +147,70 @@ function initMap (mapArg, arrayOfPins, styleMap, manyMaps = false, autoFoundMark
 		mapTypeControl: false,
 		scaleControl: true,
 		streetViewControl: false,
-		gestureHandling: 'greedy',
+	//	gestureHandling: 'greedy',
 		zoomControlOptions: {
 			position: google.maps.ControlPosition.RIGHT_CENTER
 		},
 		styles: styleMap
 	});
 
-	if(manyMaps){
-		let obj = arrayOfPins;
+	let markerIcon = {
+		url: '',
+		scaledSize: new google.maps.Size(16, 26),
+		origin: new google.maps.Point(0, 0),
+		anchor: new google.maps.Point(8, 26)
+	};
 
-		let marker = new MarkerWithLabel({
+	const markerMaker = (obj) => {
+
+		let labelTemplate = `
+		<div class="map-label-wrapper">
+				<img src="${imgpath}"/>
+				<p class="map-label-text">${obj.name}</p>
+		</div>`
+
+		return new MarkerWithLabel({
 			position: new google.maps.LatLng(obj.lat, obj.lng),
 			title: obj.title,
 			map: map,
-			icon: '..'+imgpath,
+			icon: markerIcon,
 			zIndex: 999999,
-			labelContent: '<p class="goggle-map-text">' + obj.name + '</p>',
-			labelAnchor: new google.maps.Point(0, 0),
-			labelClass: 'labels place_open',
+			labelContent: labelTemplate,
+			labelAnchor: new google.maps.Point(0, 26),
+			labelClass: "labels", // the CSS class for the label
+			labelInBackground: false
 		});
+	};
+
+	if(manyMaps){
+		let obj = arrayOfPins;
+		let marker = markerMaker(obj)
 	}
 
 	if ($(element).hasClass('map-elem-near')) {
 		let markers = []
+
 		for (let i = 0; i < arrayOfPins.length; i++) {
-			// Current object
 			let obj = arrayOfPins[i];
 
-			let marker = new MarkerWithLabel({
-				position: new google.maps.LatLng(obj.lat, obj.lng),
-				title: obj.title,
-				map: map,
-				icon: '..'+imgpath,
-				zIndex: 999999,
-				labelContent: '<p class="goggle-map-text">' + obj.name + '</p>',
-				labelAnchor: new google.maps.Point(0, 0),
-				labelClass: 'labels',
-			});
+			let marker = markerMaker(obj)
+
+			marker.fromTop = 0;
 
 			bounds.extend(marker.position);
 
 			markers.push(marker);
 
-			google.maps.event.addListener(marker, 'click', function (e) {
+			google.maps.event.addListener(marker, 'click', function () {
 				hidemarkers(markers);
-				this.set('labelClass', 'labels place_open')
-			})
-		} // end loop
+				this.set('labelClass', 'labels place_open');
+				console.log('asd')
+			});
 
-		google.maps.event.addListener(map, 'click', function (e) {
-			if (!$(e.target).hasClass('labels')) {
-				hidemarkers(markers)
-			}
-		});
+			google.maps.event.addListener(map, 'click', function () {
+				hidemarkers(markers);
+			});
+		} // end loop
 
 		function hidemarkers (array) {
 			for (let i = 0; i < array.length; i++) {

@@ -1120,9 +1120,9 @@ main
 				background: linear-gradient(to top, #aaa, #ccc)
 		#main-screen
 			margin: auto
-			+rem(max-width, 1440px)
-			+rem(padding-left, 120px)
-			+rem(padding-right, 120px)
+			+rem(max-width, 1480px)
+			+rem(padding-left, 100px)
+			+rem(padding-right, 100px)
 			+r(992)
 				+rem(padding-left, 50px)
 				+rem(padding-right, 50px)
@@ -1161,27 +1161,27 @@ main
 						padding-right: 0px
 					.title-main
 						text-align: left
-						+rem(font-size, 70px)
-						+rem(line-height, 75px)
+						+rem(font-size, 50px)
+						+rem(line-height, 65px)
 						letter-spacing: 1px
-						+r(992)
-							+rem(line-height, 70px)
-						+r(492)
-							+rem(line-height, 60px)
-						+r(400)
-							+rem(font-size, 40px)
+						+r(1280)
 							+rem(line-height, 50px)
-						&.title2
-							+rem(font-size, 50px)
-							+rem(line-height, 60px)
-							+rem(max-width, 600px)
+							+rem(font-size, 45px)
+						+r(992)
+							+rem(font-size, 40px)
 						+r(492)
-							+rem(font-size, 52px)
+							+rem(font-size, 26px)
+							+rem(line-height, 35px)
+						//&.title2
+						//	+rem(font-size, 50px)
+						//	+rem(line-height, 60px)
+						//	+rem(max-width, 600px)
 					.sub-title
 						+rem(font-size, 26px)
 						+rem(line-height, 35px)
 						+rem(max-width, 500px)
 						+rem(margin-top, 30px)
+						+rem(margin-bottom, 50px)
 						font-weight: 300
 						opacity: 1
 						color: $white
@@ -1778,7 +1778,6 @@ $slSize: 410px
 	#map
 		.labels
 			opacity: 0
-			transform: translate(-140%, -150%)
 			transition: opacity 0.2s
 			&.place_open
 				opacity: 1
@@ -2465,8 +2464,6 @@ $galleryBigHeight: 590px
 		position: absolute
 		right: 0
 		top: 0
-		.labels
-			transform: translate(-140%, -150%)
 		+r(992)
 			position: relative
 			+rem(height, 350px)
@@ -3063,33 +3060,33 @@ $galleryBigHeight: 590px
 	.row
 		+rem(margin-top, 50px)
 
+.labels
+	transform: translateX(-50%)
+	.map-label-wrapper
+		text-align: center
+		img
+			width: 16px
+			height: 26px
+			display: inline-block
+			margin: auto
+		p
+			text-align: center
+			display: block
+			margin: 0
+			font-size: 12px
+			color: #000
+			line-height: 12px
+
 #chart
 	.labels
-		display: none!important
-	.labels.place_open
-		display: block!important
+		.map-label-wrapper
+			p
+				display: none!important
+		&.place_open
+			.map-label-wrapper
+				p
+					display: block!important
 
-.map
-	.labels
-		position: relative
-		transform: translatex(-50%)
-		p
-			margin: 0
-			font-size: 12px
-			color: #000
-			background-color: #fff
-			padding: 4px 10px
-			display: inline-block
-			line-height: 16px
-#map
-	.labels
-		position: relative
-		transform: translatex(-50%)
-		p
-			margin: 0
-			font-size: 12px
-			color: #000
-			line-height: 16px
 
 #whywe
 	background: url('../img/3-0/earth.jpg') 50% 50% no-repeat

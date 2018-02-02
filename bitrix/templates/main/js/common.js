@@ -149,30 +149,46 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 		mapTypeControl: false,
 		scaleControl: true,
 		streetViewControl: false,
-		gestureHandling: 'greedy',
+		//	gestureHandling: 'greedy',
 		zoomControlOptions: {
 			position: google.maps.ControlPosition.RIGHT_CENTER
 		},
 		styles: styleMap
 	});
 
-	if (manyMaps) {
-		var obj = arrayOfPins;
+	var markerIcon = {
+		url: '',
+		scaledSize: new google.maps.Size(16, 26),
+		origin: new google.maps.Point(0, 0),
+		anchor: new google.maps.Point(8, 26)
+	};
 
-		var marker = new MarkerWithLabel({
+	var markerMaker = function markerMaker(obj) {
+
+		var labelTemplate = '\n\t\t<div class="map-label-wrapper">\n\t\t\t\t<img src="' + imgpath + '"/>\n\t\t\t\t<p class="map-label-text">' + obj.name + '</p>\n\t\t</div>';
+
+		return new MarkerWithLabel({
 			position: new google.maps.LatLng(obj.lat, obj.lng),
 			title: obj.title,
 			map: map,
-			icon: '..' + imgpath,
+			icon: markerIcon,
 			zIndex: 999999,
-			labelContent: '<p class="goggle-map-text">' + obj.name + '</p>',
-			labelAnchor: new google.maps.Point(0, 0),
-			labelClass: 'labels place_open'
+			labelContent: labelTemplate,
+			labelAnchor: new google.maps.Point(0, 26),
+			labelClass: "labels", // the CSS class for the label
+			labelInBackground: false
 		});
+	};
+
+	if (manyMaps) {
+		var obj = arrayOfPins;
+		var marker = markerMaker(obj);
 	}
 
 	if ($(element).hasClass('map-elem-near')) {
 		(function () {
+			// end loop
+
 			var hidemarkers = function hidemarkers(array) {
 				for (var _i2 = 0; _i2 < array.length; _i2++) {
 					var cur = array[_i2];
@@ -181,36 +197,28 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 			};
 
 			var markers = [];
+
 			for (var _i = 0; _i < arrayOfPins.length; _i++) {
-				// Current object
 				var _obj = arrayOfPins[_i];
 
-				var _marker = new MarkerWithLabel({
-					position: new google.maps.LatLng(_obj.lat, _obj.lng),
-					title: _obj.title,
-					map: map,
-					icon: '..' + imgpath,
-					zIndex: 999999,
-					labelContent: '<p class="goggle-map-text">' + _obj.name + '</p>',
-					labelAnchor: new google.maps.Point(0, 0),
-					labelClass: 'labels'
-				});
+				var _marker = markerMaker(_obj);
+
+				_marker.fromTop = 0;
 
 				bounds.extend(_marker.position);
 
 				markers.push(_marker);
 
-				google.maps.event.addListener(_marker, 'click', function (e) {
+				google.maps.event.addListener(_marker, 'click', function () {
 					hidemarkers(markers);
 					this.set('labelClass', 'labels place_open');
+					console.log('asd');
 				});
-			} // end loop
 
-			google.maps.event.addListener(map, 'click', function (e) {
-				if (!$(e.target).hasClass('labels')) {
+				google.maps.event.addListener(map, 'click', function () {
 					hidemarkers(markers);
-				}
-			});
+				});
+			}
 		})();
 	}
 	if (autoFoundMarkers) {
