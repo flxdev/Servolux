@@ -1,33 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="v 1.7.0 map in js">
+    <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/0-0jobs.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/0-0jobs.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/0-1jobs.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/0-1jobs.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/2-0activity.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/3-0partnership.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/4-0work.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/404.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/404.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/5-0contacts.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/6-0news.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/6-0news.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/6-1news.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/6-1news.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/7-0search.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/7-0search.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/pin.png" afterPath="$PROJECT_DIR$/bitrix/templates/main/img/1-0/pin.png" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/js/marker.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/marker.js" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/js/marker.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/marker.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/img/1-0/pin.png" afterPath="$PROJECT_DIR$/src/img/1-0/pin.png" />
-      <change beforePath="$PROJECT_DIR$/src/js/common.js" afterPath="$PROJECT_DIR$/src/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/marker.js" afterPath="$PROJECT_DIR$/src/js/marker.js" />
-      <change beforePath="$PROJECT_DIR$/src/pug/2-0activity.pug" afterPath="$PROJECT_DIR$/src/pug/2-0activity.pug" />
-      <change beforePath="$PROJECT_DIR$/src/sass/_main.sass" afterPath="$PROJECT_DIR$/src/sass/_main.sass" />
+      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/css/font.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/font.css" />
+      <change beforePath="$PROJECT_DIR$/src/sass/font.sass" afterPath="$PROJECT_DIR$/src/sass/font.sass" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -129,17 +106,17 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pin.svg" pinned="false" current-in-tab="false">
+          <file leaf-file-name="pin.svg" pinned="false" current-in-tab="true">
             <entry file="file://$USER_HOME$/Downloads/pin.svg">
               <provider selected="true" editor-type-id="images">
                 <state />
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="2-0activity.pug" pinned="false" current-in-tab="true">
+          <file leaf-file-name="2-0activity.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/2-0activity.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
+                <state relative-caret-position="240">
                   <caret line="18" column="83" lean-forward="false" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
                   <folding />
                 </state>
@@ -170,11 +147,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="font.sass" pinned="false" current-in-tab="false">
+          <file leaf-file-name="font.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sass/font.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="14600">
-                  <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+                <state relative-caret-position="340">
+                  <caret line="17" column="39555" lean-forward="true" selection-start-line="17" selection-start-column="39555" selection-end-line="17" selection-end-column="39555" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_transfonter.org-20180202-131605.zip/stylesheet.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="43677" />
                   <folding />
                 </state>
               </provider>
@@ -192,11 +179,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/js/common.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="440">
-                  <caret line="141" column="42" lean-forward="true" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
+                  <caret line="141" column="42" lean-forward="false" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
                   <folding>
                     <element signature="e#61#98#0" expanded="false" />
                     <element signature="e#125#747#0" expanded="false" />
@@ -377,7 +364,6 @@
         <option value="$PROJECT_DIR$/src/js/lib/rellax.min.js" />
         <option value="$PROJECT_DIR$/src/sass/lib/_mixins.sass" />
         <option value="$USER_HOME$/Desktop/scheme.svg" />
-        <option value="$PROJECT_DIR$/src/sass/font.sass" />
         <option value="$PROJECT_DIR$/src/pug/includes/_scheme.pug" />
         <option value="$PROJECT_DIR$/src/pug/0-0jobs.pug" />
         <option value="$PROJECT_DIR$/src/pug/includes/_modals.pug" />
@@ -392,6 +378,7 @@
         <option value="$PROJECT_DIR$/src/pug/2-0activity.pug" />
         <option value="$PROJECT_DIR$/src/sass/_main.sass" />
         <option value="$PROJECT_DIR$/src/js/common.js" />
+        <option value="$PROJECT_DIR$/src/sass/font.sass" />
       </list>
     </option>
   </component>
@@ -825,14 +812,7 @@
       <workItem from="1517324541948" duration="7186000" />
       <workItem from="1517476681082" duration="3004000" />
       <workItem from="1517493320524" duration="3931000" />
-      <workItem from="1517554363546" duration="8755000" />
-    </task>
-    <task id="LOCAL-00006" summary="1-1brand modal in progress">
-      <created>1505230712253</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1505230712253</updated>
+      <workItem from="1517554363546" duration="10853000" />
     </task>
     <task id="LOCAL-00007" summary="brand, brands, activity ready">
       <created>1505313008895</created>
@@ -1170,11 +1150,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517497814594</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="v 1.7.2 map in js, pins for map, header title">
+      <created>1517574306965</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1517574306965</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="598516000" />
+    <option name="totallyTimeSpent" value="600614000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1258,7 +1245,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="index media in progress" />
     <MESSAGE value="media fixes" />
     <MESSAGE value="all pages" />
     <MESSAGE value="Change in layout footer. Inline scripts for charts." />
@@ -1283,7 +1269,8 @@
     <MESSAGE value="v 1.5.1 map in brands and styles for header" />
     <MESSAGE value="v 1.6.4 map in brands, styles, js" />
     <MESSAGE value="v 1.7.0 map in js" />
-    <option name="LAST_COMMIT_MESSAGE" value="v 1.7.0 map in js" />
+    <MESSAGE value="v 1.7.2 map in js, pins for map, header title" />
+    <option name="LAST_COMMIT_MESSAGE" value="v 1.7.2 map in js, pins for map, header title" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1292,13 +1279,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gulp/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1471,14 +1451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/font.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14600">
-          <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/0-0jobs.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2980">
@@ -1566,14 +1538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="323" column="38" lean-forward="false" selection-start-line="323" selection-start-column="38" selection-end-line="323" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/marker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3460">
@@ -1601,14 +1565,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/pin.svg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/2-0activity.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="240">
           <caret line="18" column="83" lean-forward="false" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
           <folding />
         </state>
@@ -1625,7 +1584,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="141" column="42" lean-forward="true" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
+          <caret line="141" column="42" lean-forward="false" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
           <folding>
             <element signature="e#61#98#0" expanded="false" />
             <element signature="e#125#747#0" expanded="false" />
@@ -1659,6 +1618,35 @@
             <element signature="e#29188#29674#0" expanded="false" />
             <marker date="1517562927376" expanded="true" signature="3719:3802" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_transfonter.org-20180202-131605.zip/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="43677" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/1-0company.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="323" column="38" lean-forward="false" selection-start-line="323" selection-start-column="38" selection-end-line="323" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/pin.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/font.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="39555" lean-forward="true" selection-start-line="17" selection-start-column="39555" selection-end-line="17" selection-end-column="39555" />
+          <folding />
         </state>
       </provider>
     </entry>
