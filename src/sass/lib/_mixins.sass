@@ -10,16 +10,44 @@
 	@media only screen and (min-width: $width+ "px")
 		@content
 
+
+@mixin viewport-unit($property, $value)
+	#{$property}: $value
+	$unit: unit($value)
+	@if (index((vw, vh, vmin, vmax), $unit) != null)
+		$devices: (	(768px, 1024px), (320px, 480px), (320px, 568px))
+		@each $device in $devices
+			$device-width: nth($device, 1)
+			$device-height: nth($device, 2)
+
+			$device-query: "only screen and (-webkit-min-device-pixel-ratio: 1)"
+			$device-query: "#{$device-query} and (device-width: #{$device-width})"
+			$device-query: "#{$device-query} and (device-height: #{$device-height})"
+
+			$percent: $value / ($value * 0 + 1)
+
+			$percent-width: $device-width * $percent / 100
+			$percent-height: $device-height * $percent / 100
+
+			@if ($unit == vmin or $unit == vmax)
+				@media #{$device-query}
+					#{$property}: if($unit == vmin, $percent-width, $percent-height)
+			@else
+				@media #{$device-query} and (orientation: portrait)
+					#{$property}: if($unit == vw, $percent-width, $percent-height)
+				@media #{$device-query} and (orientation: landscape)
+					#{$property}: if($unit == vw, $percent-height, $percent-width)
+
 // height, less than X
 =rh($height)
 	@media only screen and (max-height: $height + "px")
 		@content
 =ie11
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
-		@content 
+		@content
 =notouch
 	@media not all and (-moz-touch-enabled: 1), not all and (pointer:coarse),not all and (-ms-high-contrast: none) and (max-width: 600px)
-		@content 
+		@content
 =clr
 	&:after
 		content: " "
@@ -57,7 +85,7 @@
 		vertical-align: middle
 		width: 0
 		height: 100%
-		
+
 // justify, set on parent
 =justify
 	text-align: justify
@@ -97,14 +125,14 @@
 	-ms-text-overflow: ellipsis
 	text-overflow: ellipsis
 	white-space: nowrap
-	
+
 =ie
 	*display: inline
 	*zoom: 1
-	
+
 =box
 	box-sizing: border-box
-	
+
 %pseudo
 	position: relative
 	&:before,&:after
@@ -266,7 +294,7 @@
 =blur($var)
 	-webkit-filter: blur($var)
 	filter: blur($var)
-	
+
 =scale($var)
 	transform: scale($var)
 
@@ -285,7 +313,7 @@
 
 =longshadow($color)
 	text-shadow: makelongshadow($color)
-	
+
 =fs($sizeValue: 16)
 	font-size: $sizeValue + px
 	font-size: $sizeValue / 10 + rem
@@ -298,18 +326,18 @@
 	$px-values: ()
 	$rem-values: ()
 
-	@each $value in $values 
-		@if $value == 0 or $value == 0px 
+	@each $value in $values
+		@if $value == 0 or $value == 0px
 			$px-values: join($px-values, 0)
 			$rem-values: join($rem-values, 0)
-		@else if type-of($value) == number and not unitless($value) and (unit($value) == px) 
+		@else if type-of($value) == number and not unitless($value) and (unit($value) == px)
 			$new-rem-value: $value / $base-font-size
 			$px-values: join($px-values, round($value))
 			$rem-values: join($rem-values, #{$new-rem-value}rem)
-		@else if $value == auto or $value == inherit 
+		@else if $value == auto or $value == inherit
 			$px-values: join($px-values, $value)
 			$rem-values: join($rem-values, $value)
-		@else 
+		@else
 			$px-values: join($px-values, round($value * $base-font-size))
 			$rem-values: join($rem-values, #{$value}rem)
 

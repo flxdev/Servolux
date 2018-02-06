@@ -827,6 +827,11 @@ main {
   width: 100%;
   margin: auto; }
 
+#header-menu-wrapper.sticked {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  will-change: scroll-position; }
+
 #header-mainwrap {
   z-index: 999;
   left: 0;
@@ -2457,6 +2462,10 @@ main {
   left: 0;
   height: 100vh;
   z-index: 99; }
+  #aside-menu.is_stuck {
+    will-change: scroll-position;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px); }
   #aside-menu .aside-menu-wrapper {
     position: absolute;
     top: 50%;
@@ -5184,6 +5193,30 @@ html.menu-is-locked {
 
 .lt-ie9 .remodal {
   width: 700px; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    #aside-menu {
+      height: 1024px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+    #aside-menu {
+      height: 768px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
+    #aside-menu {
+      height: 568px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: landscape) {
+    #aside-menu {
+      height: 320px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) {
+    #aside-menu {
+      height: 480px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: landscape) {
+    #aside-menu {
+      height: 320px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   * {

@@ -717,6 +717,12 @@ main
 	width: 100%
 	margin: auto
 
+
+#header-menu-wrapper
+	&.sticked
+		transform: translate3d(0px,0px,0px)
+		will-change: scroll-position
+
 // Menu
 #header
 	&-mainwrap
@@ -2509,8 +2515,11 @@ $galleryBigHeight: 590px
 	position: absolute
 	top: 0
 	left: 0
-	height: 100vh
+	+viewport-unit(height, 100vh)
 	z-index: 99
+	&.is_stuck
+		will-change: scroll-position
+		transform: translate3d(0px,0px,0px)
 	+r(492)
 		display: none
 	.aside-menu-wrapper
