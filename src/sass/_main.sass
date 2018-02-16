@@ -745,6 +745,10 @@ main
 		transition: top 0.2s
 		.logo
 			height: 100%
+			opacity: 1
+			transition: opacity .15s ease-out
+			&:hover
+				opacity: .7
 		.jobs-logo-add
 			display: inline-block
 			+rem(padding, 10px)
@@ -1121,8 +1125,9 @@ main
 				left: 50%
 				min-width: 100%
 				margin: auto
+				will-change: auto
 				transform: translate(-50%, -50%) scale(1.1)
-				transition: transform .1s ease-out
+				//transition: transform .1s ease-out
 				background: linear-gradient(to top, #aaa, #ccc)
 		#main-screen
 			margin: auto
@@ -1150,10 +1155,12 @@ main
 					+rem(bottom, 40px)
 					left: 0
 					width: 100%
-					max-width: 1200px
+					+rem(max-width, 1200px)
 					right: 0
 					margin: auto
 					display: block
+					+r(1440)
+						+rem(max-width, 1320px)
 					+r(992)
 						transition: none
 						position: relative
@@ -1218,7 +1225,7 @@ main
 		top: 0
 		left: 0
 		width: 100%
-		will-change: transform
+		will-change: auto
 		height: 100vh
 		z-index: -1
 		.filter

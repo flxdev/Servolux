@@ -387,6 +387,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	var docWindow = $(window),
+	    $body = $('body'),
 	    vHeight = docWindow.height(),
 	    $headerMenuWrapper = $('#header-menu-wrapper'),
 	    $headerModalWrapper = $('#header-modal-wrapper'),
@@ -399,6 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	    mobile = isMobile(),
 	    asideMenu = $('#aside-menu').length ? true : false,
 	    hasParallax = $('#parallax').length ? true : false,
+	    firstScreenFading = videoWrapper.find('.firstScreenFading'),
 	    topMenu = void 0,
 	    menuItems = void 0,
 	    scrollItems = void 0;
@@ -407,6 +409,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (!isMobile() && videoWrapper.data('src')) {
 		videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video class="firstScreenFading" id="main-video" muted loop><source src="' + videoWrapper.data('src') + '" type="video/mp4"></video></div></div>');
 		//videoWrapper.find('.video-poster').remove()
+		firstScreenFading = videoWrapper.find('.firstScreenFading');
 	}
 
 	$('.callback-button').on('click', function () {
@@ -505,8 +508,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Main screen fade out and video zoom out on scroll
 	function scrollMainScreen(scrollPos) {
 
-		var i = (110 - scrollPos / screenWrapperHeight * 30) / 100;
-		videoWrapper.css('opacity', vHeight / scrollPos / 3).find('.firstScreenFading').css('transform', 'translate(-50%, -50%) scale(' + (i <= 1 ? 1 : i) + ')');
+		var oneProcentOfTop = (scrollPos / (screenWrapperHeight / 100) / 100).toFixed(4);
+		var i = 1 + (1 - oneProcentOfTop) / 10;
+		var opacityScroll = 1 - oneProcentOfTop;
+
+		videoWrapper.css('opacity', opacityScroll);
+		firstScreenFading.css('transform', 'translate(-50%, -50%) scale(' + i + ')');
+
+		console.log(oneProcentOfTop);
+
 		if (scrollPos > 150 && !screenLinks.hasClass('hiddened')) {
 			screenLinks.fadeOut().addClass('hiddened');
 		} else if (scrollPos < 150 && screenLinks.hasClass('hiddened')) {
@@ -538,7 +548,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			this.safeScrollHeight = this.parentHeight - this.imageHeight;
 			this.safePercentage = this.safeScrollHeight / (this.imageHeight / 100);
 			$(window).on('scroll', function () {
-				var scrollBottom = $(window).scrollTop() + _this2.windowHeight / 2;
+				var scrollBottom = $(window).scrollTop() + _this2.windowHeight / 1.5;
 				if (scrollBottom >= _this2.parentStart && scrollBottom <= _this2.parentEnd) {
 					setTimeout(function () {
 						_this2.scrollPosition(scrollBottom, _this2.$image);
@@ -565,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Scroll triggers
 	docWindow.scroll(function (event) {
 		var scrollPos = docWindow.scrollTop();
-		if (scrollPos > screenWrapperHeight && !$('body').hasClass('menu-mobile')) {
+		if (scrollPos > screenWrapperHeight && !$body.hasClass('menu-mobile')) {
 			$headerMenuWrapper.addClass('sticked animated fadeInDownFast').css('animation-delay', '0');
 			if (!mobile) {
 				if (asideMenu) {
@@ -573,15 +583,17 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			}
 			return;
-		} else if (scrollPos < 0) {
-			return;
 		}
+		// else if (scrollPos < 0) {
+		// 	return
+		// }
 		if (!mobile) {
 			scrollMainScreen(scrollPos);
 			scrollMainTitle(scrollPos);
 		}
 		$headerMenuWrapper.removeClass('sticked animated fadeInDownFast');
 	});
+	docWindow.trigger('scroll');
 
 	// InView checker
 	if ($(window).width() >= 992) {
