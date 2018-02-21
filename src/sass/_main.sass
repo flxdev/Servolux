@@ -240,6 +240,8 @@ blockquote
 	display: flex
 	flex-wrap: wrap
 	flex-direction: row
+	justify-content: flex-start
+	align-items: flex-start
 	& > *
 		position: relative
 	&.column
@@ -250,7 +252,7 @@ blockquote
 	+r(992)
 		&:not(.row)
 			flex-direction: column
-			align-items: center
+			align-items: flex-start
 	+r(400)
 		&:not(.row)
 			flex-direction: column
@@ -300,6 +302,8 @@ blockquote
 	+rem(margin-top, 15px)
 	+rem(padding-bottom, 30px)
 	+rem(padding-right, 40px)
+	text-align: left
+	width: 100%
 	p
 		margin: 0
 	&:before
@@ -308,7 +312,7 @@ blockquote
 		background-color: $green
 		content: ''
 		+rem(width, 27px)
-		+rem(height, 2px)
+		height: 2px
 		top: 0
 		left: 0
 
@@ -830,6 +834,8 @@ main
 				position: relative
 				width: 100%
 				+rem(top, 20px)
+				+r(992)
+					+rem(top, 30px)
 				+r(480)
 					+rem(top, $topstep + 60px)
 			&-middle
@@ -853,7 +859,7 @@ main
 					justify-content: space-between
 					background-color: $white
 					transform: translate(80px, -20px)
-					+r(1366)
+					+r(1370)
 						transform: translate(80px, 20px)
 						.callback-wrap
 							+rem(margin-top, 20px)
@@ -871,7 +877,7 @@ main
 						max-height: 500px
 						flex-wrap: wrap
 						align-items: center
-						justify-content: center
+						justify-content: flex-start
 					+r(600)
 						display: block
 					.column
@@ -1041,7 +1047,7 @@ main
 	+rem(max-width, 1400px)
 	width: 100%
 	margin: auto
-	+r(1366)
+	+r(1370)
 		max-width: 1200px
 	+r(992)
 		max-width: 80%
@@ -1063,163 +1069,8 @@ main
 	position: relative
 	overflow: hidden
 	+r(1024)
-		height: auto
-		+rem(min-height, 500px)
+		height: 100%
 		background-color: rgba(85, 181, 33, .2)
-	+r(492)
-		+rem(min-height, 380px)
-	&.advancedPage,
-	&.advancedPage.page21
-		+rem(padding-left, 80px)
-		+rem(padding-right, 40px)
-		background-position: 50% 50%
-		background-size: cover
-		background-repeat: no-repeat
-		background-color: rgba(85, 181, 33, .05)
-		+rem(height, 420px)
-		+r(1366)
-			+rem(height, 320px)
-		+r(1024)
-			+rem(padding-left, 50px)
-			+rem(padding-right, 20px)
-		+r(992)
-			+rem(padding-left, 0px)
-			+rem(padding-right, 0px)
-		&.page2
-			+rem(height, 500px)
-			#title-wrapper
-				margin-top: -110px
-			#main-screen
-				#main-screen-title
-					+r(1366)
-						+rem(top, 100px)
-			+r(1024)
-				#main-first-screen-fading-wrapper
-					.firstScreenFading
-						left: 50%
-						transform: translate(-50%, -50%)
-			+r(492)
-				+rem(height, 400px)
-				#title-wrapper
-					margin-top: 0px
-			+r(420)
-				+rem(height, 500px)
-				#title-wrapper
-					margin-top: 35px!important
-			+r(380)
-				+rem(height, 550px)
-				#title-wrapper
-					margin-top: 50px!important
-		#main-first-screen-fading-wrapper
-			height: inherit
-			+r(1024)
-				+rem(min-height, 500px)
-			+r(492)
-				+rem(min-height, 380px)
-			.firstScreenFading
-				opacity: 1
-				bottom: auto
-				right: auto
-				position: absolute
-				top: 50%
-				left: 50%
-				min-width: 100%
-				margin: auto
-				will-change: auto
-				transform: translate(-50%, -50%) scale(1.1)
-				//transition: transform .1s ease-out
-				background: linear-gradient(to top, #aaa, #ccc)
-		#main-screen
-			margin: auto
-			+rem(max-width, 1480px)
-			+rem(padding-left, 100px)
-			+rem(padding-right, 100px)
-			+r(992)
-				+rem(padding-left, 50px)
-				+rem(padding-right, 50px)
-			+r(492)
-				+rem(padding-left, 20px)
-				+rem(padding-right, 20px)
-				height: 100%
-			#main-screen-title
-				+rem(max-width, 1440px)
-				+rem(top, 100px)
-				left: 0
-				+r(1366)
-					+rem(top, 0px)
-				+r(992)
-					top: auto
-					transform: none
-				#title-wrapper
-					position: absolute
-					+rem(bottom, 40px)
-					left: 0
-					width: 100%
-					+rem(max-width, 1200px)
-					right: 0
-					margin: auto
-					display: block
-					+r(1440)
-						+rem(max-width, 1320px)
-					+r(992)
-						transition: none
-						position: relative
-						display: inline-block
-						transform: none
-					+r(768)
-						+rem(padding-left, 10px)
-						+rem(padding-right, 10px)
-					+r(480)
-						padding-left: 0px
-						padding-right: 0px
-					.title-main
-						text-align: left
-						+rem(font-size, 50px)
-						+rem(line-height, 65px)
-						letter-spacing: 1px
-						+r(1280)
-							+rem(line-height, 50px)
-							+rem(font-size, 45px)
-						+r(992)
-							+rem(font-size, 40px)
-						+r(492)
-							+rem(font-size, 26px)
-							+rem(line-height, 35px)
-						//&.title2
-						//	+rem(font-size, 50px)
-						//	+rem(line-height, 60px)
-						//	+rem(max-width, 600px)
-					.sub-title
-						+rem(font-size, 26px)
-						+rem(line-height, 35px)
-						+rem(max-width, 500px)
-						+rem(margin-top, 30px)
-						+rem(margin-bottom, 50px)
-						font-weight: 300
-						opacity: 1
-						color: $white
-					.bread
-						a
-							+rem(font-size, 16px)
-							font-weight: normal
-							color: #fff
-							opacity: 0.5
-							display: inline-block
-							position: relative
-							+rem(padding-right, 16px)
-							transition: opacity .2s
-							+rem(margin-bottom, 20px)
-							+rem(margin-right, 10px)
-							&:first-child
-								font-weight: 500
-							&:after
-								content: '/'
-								display: block
-								position: absolute
-								right: 0
-								top: 0
-							&:hover
-								opacity: 1
 	#main-first-screen-fading-wrapper
 		position: fixed
 		top: 0
@@ -1277,18 +1128,23 @@ main
 			bottom: 0
 			margin: auto
 			width: 100%
-			+rem(height, 320px)
-			+r(992)
-				+rem(min-height, 500px)
-				position: relative
+			height: 100%
 			#title-wrapper
 				width: 100%
+				height: inherit
+				min-height: inherit
 				#title-wrapper-inner
 					transform: scale(1)
 					transition: transform 0.6s cubic-bezier(.445, .05, .55, .95)
 					margin: auto
 					text-align: center
 					+rem(height, 320px)
+					position: absolute
+					top: 50%
+					left: 0
+					right: 0
+					margin: auto
+					+rem(margin-top, -180px)
 					&.active
 						transform: scale(0.7)
 					+r(992)
@@ -1394,6 +1250,108 @@ main
 							transform: translate(0, 30px)
 							transition: transform 0.4s ease-out 0.1s, opacity 0.4s ease-out 0.1s
 							opacity: 1
+	&.advancedPage
+		+rem(padding-left, 80px)
+		+rem(padding-right, 40px)
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+		background-color: rgba(85, 181, 33, .05)
+		+rem(height, 420px)
+		+r(992)
+			+rem(padding-left, 50px)
+		+r(492)
+			+rem(padding-left, 20px)
+			+rem(padding-right, 20px)
+		#main-first-screen-fading-wrapper
+			height: inherit
+			.firstScreenFading
+				opacity: 1
+				bottom: auto
+				right: auto
+				position: absolute
+				top: 50%
+				left: 50%
+				min-width: 100%
+				margin: auto
+				will-change: auto
+				transform: translate(-50%, -50%) scale(1.1)
+				//transition: transform .1s ease-out
+				background: linear-gradient(to top, #aaa, #ccc)
+		#main-screen
+			margin: auto
+			width: 100%
+			+r(992)
+				min-height: inherit
+				height: inherit
+			#main-screen-title
+				+rem(max-width, 1440px)
+				left: 0
+				position: relative
+				height: inherit
+				min-height: inherit
+				+r(992)
+					transform: none!important
+				#title-wrapper
+					position: absolute
+					display: block
+					+rem(bottom, 50px)
+					left: 0
+					right: 0
+					margin: auto
+					width: 100%
+					height: auto
+					min-height: auto
+					+r(992)
+						transition: none
+						display: inline-block
+						transform: none!important
+						top: auto
+					.title-main
+						text-align: left
+						+rem(font-size, 50px)
+						+rem(line-height, 65px)
+						letter-spacing: 1px
+						+r(992)
+							+rem(font-size, 40px)
+							+rem(line-height, 50px)
+						+r(648)
+							+rem(font-size, 34px)
+							+rem(line-height, 45px)
+						+r(648)
+							+rem(font-size, 30px)
+							+rem(line-height, 40px)
+					.sub-title
+						+rem(font-size, 26px)
+						+rem(line-height, 35px)
+						+rem(max-width, 500px)
+						+rem(margin-top, 30px)
+						+rem(margin-bottom, 50px)
+						font-weight: 300
+						opacity: 1
+						color: $white
+					.bread
+						a
+							+rem(font-size, 16px)
+							font-weight: normal
+							color: #fff
+							opacity: 0.5
+							display: inline-block
+							position: relative
+							+rem(padding-right, 16px)
+							transition: opacity .2s
+							+rem(margin-bottom, 20px)
+							+rem(margin-right, 10px)
+							&:first-child
+								font-weight: 500
+							&:after
+								content: '/'
+								display: block
+								position: absolute
+								right: 0
+								top: 0
+							&:hover
+								opacity: 1
 
 #index-chart-wrapper
 	+r(992)
@@ -2614,7 +2572,18 @@ $galleryBigHeight: 590px
 	position: absolute
 	+rem(left, -33px)
 	+rem(top, 70px)
+	+r(1024)
+		position: relative
+		text-align: left
+		margin: auto
+		margin-bottom: 50px
+		left: 0
+		top: 0
+		max-width: 640px
 	.brand-logo-wrapper
+		+r(1024)
+			max-width: 200px
+			text-align: center
 		.brand-logo-img
 			+rem(max-width, 100px)
 			+rem(max-height, 100px)
@@ -2855,10 +2824,11 @@ $galleryBigHeight: 590px
 		+rem(margin-top, 8px)
 .brand-email-title
 	+rem(padding-left, 80px)
+	+r(1024)
+		padding-left: 0!important
 .brand-email
 	display: block
 	+rem(line-height, 28px)
-.brand-email, .brand-email-title
 
 
 
@@ -2920,7 +2890,8 @@ $galleryBigHeight: 590px
 			.modal-img-slide-inner
 				+rem(height, 300px)
 				img
-					height: 100%
+					max-height: 100%
+					max-width: 100%
 			.h2
 				+rem(margin-top, 20px)
 		#modal-content

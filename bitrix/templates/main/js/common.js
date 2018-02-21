@@ -212,7 +212,6 @@ function initMap(mapArg, arrayOfPins, styleMap) {
 				google.maps.event.addListener(_marker, 'click', function () {
 					hidemarkers(markers);
 					this.set('labelClass', 'labels place_open');
-					console.log('asd');
 				});
 
 				google.maps.event.addListener(map, 'click', function () {
@@ -417,11 +416,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('#modal-title').text(buttonText);
 	});
 
-	//burger-menu
-	burger.on('click', function () {
+	function toggleMenu() {
 		$headerMenuWrapper.toggleClass('active');
 		$headerModalWrapper.toggleClass('active');
 		$('html').toggleClass('menu-is-locked');
+	}
+
+	//burger-menu
+	burger.on('click', function () {
+		toggleMenu();
+	});
+	$headerModalWrapper.find('.menu-columns ul li a').on('click', function () {
+		toggleMenu();
 	});
 
 	if ($('#modal').length) {
@@ -515,8 +521,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		videoWrapper.css('opacity', opacityScroll);
 		firstScreenFading.css('transform', 'translate(-50%, -50%) scale(' + i + ')');
 
-		console.log(oneProcentOfTop);
-
 		if (scrollPos > 150 && !screenLinks.hasClass('hiddened')) {
 			screenLinks.fadeOut().addClass('hiddened');
 		} else if (scrollPos < 150 && screenLinks.hasClass('hiddened')) {
@@ -571,29 +575,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		var p = new Parallax('.rellax');
 	}
-
-	// Scroll triggers
-	docWindow.scroll(function (event) {
-		var scrollPos = docWindow.scrollTop();
-		if (scrollPos > screenWrapperHeight && !$body.hasClass('menu-mobile')) {
-			$headerMenuWrapper.addClass('sticked animated fadeInDownFast').css('animation-delay', '0');
-			if (!mobile) {
-				if (asideMenu) {
-					changeAsideMenu();
-				}
-			}
-			return;
-		}
-		// else if (scrollPos < 0) {
-		// 	return
-		// }
-		if (!mobile) {
-			scrollMainScreen(scrollPos);
-			scrollMainTitle(scrollPos);
-		}
-		$headerMenuWrapper.removeClass('sticked animated fadeInDownFast');
-	});
-	docWindow.trigger('scroll');
 
 	// InView checker
 	if ($(window).width() >= 992) {
@@ -728,6 +709,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
+	if ($('.sticky-block').length && $(window).width() > 992) {
+		var $stickyBlock = $('.sticky-block');
+		$stickyBlock.filter(function () {
+			var stickyBlockOffsetTop = $(this).data('offsettop');
+			$(this).stick_in_parent({ offset_top: stickyBlockOffsetTop });
+		});
+	}
+
 	if (asideMenu) {
 		var asideItems = 0;
 		var $asideMenu = $('#aside-menu');
@@ -741,6 +730,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		if (asideItems <= 0) {
 			$asideMenu.remove();
+			asideMenu = false;
 		} else {
 			menuItems = _topMenu.find('a');
 			scrollItems = menuItems.map(function () {
@@ -755,19 +745,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	if ($('.sticky-block').length && $(window).width() > 992) {
-
-		var $stickyBlock = $('.sticky-block');
-
-		$stickyBlock.filter(function () {
-
-			var stickyBlockOffsetTop = $(this).data('offsettop');
-			$(this).stick_in_parent({ offset_top: stickyBlockOffsetTop });
-		});
-	}
-
 	function animateAsideMenu() {
-
 		$('#aside-menu').find('a').on('click', function (el) {
 			el.preventDefault();
 			var _asideHref = $(this).attr('href');
@@ -827,7 +805,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function lazyImage() {
-		console.log('lazyImage init');
 		var arr = document.querySelectorAll('.js-image');
 		var images = [];
 		for (var _i3 = 0; _i3 < arr.length; _i3++) {
@@ -939,6 +916,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			$('#countryBlock' + contBlock + ' .country-block:nth-of-type(' + contCountries + ')').addClass('active').siblings().removeClass('active');
 		});
 	}
+
 	if ($('#jobs-content-wrapper').length) {
 		$('.jobs-tags-title-wrapper').on('click', function () {
 			$(this).toggleClass('deactive');
@@ -1080,4 +1058,27 @@ document.addEventListener('DOMContentLoaded', function () {
 	window.scrollTo = function (x, y) {
 		return true;
 	};
+
+	// Scroll triggers
+	docWindow.scroll(function (event) {
+		var scrollPos = docWindow.scrollTop();
+		if (scrollPos > screenWrapperHeight && !$body.hasClass('menu-mobile')) {
+			$headerMenuWrapper.addClass('sticked animated fadeInDownFast').css('animation-delay', '0');
+			if (!mobile) {
+				if (asideMenu) {
+					changeAsideMenu();
+				}
+			}
+			return;
+		}
+		// else if (scrollPos < 0) {
+		// 	return
+		// }
+		if (!mobile) {
+			scrollMainScreen(scrollPos);
+			scrollMainTitle(scrollPos);
+		}
+		$headerMenuWrapper.removeClass('sticked animated fadeInDownFast');
+	});
+	docWindow.trigger('scroll');
 });
