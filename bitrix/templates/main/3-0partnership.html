@@ -629,66 +629,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFkgUmSnM7fy40cDnRn8BB_xu1cp7Ros&amp;callback="></script>
     <script src="js/marker.js"></script>
     <!--END for google map-->
-    <!--For tabs chart-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-      	console.log(typeof Chart)
-      	if ($('.graphic-tab').length && typeof Chart == 'function') {
-      		$('.graphic-tab').filter(function () {
-      			var thisChart = barChartData[$(this).data('t')]
-      			var barNumber = 0,
-      				chartOptions = {
-      					type: 'bar',
-      					data: thisChart[barNumber],
-      					options: {
-      						title: {
-      							display: true,
-      							text: thisChart[barNumber].title
-      						},
-      						legend: {
-      							display: true,
-      							position: 'bottom'
-      						},
-      						tooltips: {
-      							mode: 'index',
-      							intersect: false
-      						},
-      						responsive: true,
-      						scales: {
-      							xAxes: [{
-      								stacked: true,
-      							}],
-      							yAxes: [{
-      								stacked: true,
-      								ticks: {
-      									// Include a dollar sign in the ticks
-      									callback: function (value) {
-      										return value + " " + thisChart[barNumber].value;
-      									}
-      								}
-      							}]
-      						}
-      					}
-      				}
-      
-      			let ctx = document.getElementById($(this).attr('id') + '').getContext("2d");
-      			window.myBar = new Chart(ctx, chartOptions);
-      
-      			$('#chart-control .button').on('click', function () {
-      				$(this).siblings().removeClass('active');
-      				$(this).addClass('active');
-      				barNumber = $(this).data('chart')
-      				chartOptions.data = thisChart[barNumber]
-      				chartOptions.options.title.text = thisChart[barNumber].title
-      				chartOptions.options.scales.yAxes[0].ticks.callback = function (value) {return value + " " + thisChart[barNumber].value;}
-      				myBar.update()
-      			})
-      		})
-      	}
-      });
-    </script>
-    <!--End for tabs chart-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/dropzone.min.js"></script>
     <script>Dropzone.autoDiscover = false;</script>

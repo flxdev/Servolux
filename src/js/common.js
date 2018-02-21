@@ -1,3 +1,12 @@
+function asyncro(u, c) {
+	let d = document, t = 'script',
+		o = d.createElement(t),
+		s = d.getElementsByTagName(t)[0];
+	o.src = u;
+	if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+	s.parentNode.insertBefore(o, s);
+}
+
 window.onload = function () {
 
 	if ($('#main-video').length) {
@@ -1057,6 +1066,122 @@ document.addEventListener('DOMContentLoaded', function () {
 		return true;
 	}
 
+	if ($('.graphic-line').length) {
+		function initGraphLine () {
+			$('.graphic-line').filter(function () {
+				let thisChart = chartData[$(this).data('t')];
+				let chartButton = $('.chart-controls .button'),
+					chartCurrent = 0,
+					chartParams = {
+						data: thisChart[chartCurrent].values,
+						animate_on_load: true,
+						width: 600,
+						height: 500,
+						full_width: true,
+						full_height: true,
+						left: 100,
+						y_extended_ticks: true,
+						x_extended_ticks: true,
+						point_size: 4,
+						target: '#' + $(this).attr('id'),
+						x_accessor: 'date',
+						y_accessor: 'value',
+						y_label: thisChart[chartCurrent].title,
+						color_accessor: 'v',
+						color_type: 'category',
+						mouseover: function (d, i) {
+							d3.select('#company-chart svg .mg-active-datapoint')
+								.text('В ' + (i + 2011) + ' году произведено ' + d.value + ' тыс.тонн')
+						}
+					}
+
+				chartButton.on('click', function () {
+					var _thisChartButton = $(this)
+					if (!_thisChartButton.hasClass('active')) {
+						chartCurrent = _thisChartButton.data('chart')
+					}
+					chartParams.data = thisChart[chartCurrent].values
+					chartParams.y_label = thisChart[chartCurrent].title
+					// change button state
+					_thisChartButton.addClass('active').siblings().removeClass('active')
+					// update data
+					delete chartParams.xax_format
+					MG.data_graphic(chartParams)
+				});
+				MG.data_graphic(chartParams)
+			})
+		}
+
+		asyncro('https://d3js.org/d3.v4.min.js', function () {
+
+			asyncro('https://rawgit.com/mozilla/metrics-graphics/7b2f88189da8fcba055a4e9af75fe19b837144eb/dist/metricsgraphics.min.js', function () {
+				initGraphLine();
+			})
+		})
+
+	}
+
+	if ($('.graphic-tab').length) {
+
+		function initGraphTab() {
+			$('.graphic-tab').filter(function () {
+				let thisChart = barChartData[$(this).data('t')];
+				let barNumber = 0,
+					chartOptions = {
+						type: 'bar',
+						data: thisChart[barNumber],
+						options: {
+							title: {
+								display: true,
+								text: thisChart[barNumber].title
+							},
+							legend: {
+								display: true,
+								position: 'bottom'
+							},
+							tooltips: {
+								mode: 'index',
+								intersect: false
+							},
+							responsive: true,
+							scales: {
+								xAxes: [{
+									stacked: true,
+								}],
+								yAxes: [{
+									stacked: true,
+									ticks: {
+										// Include a dollar sign in the ticks
+										callback: function (value) {
+											return value + " " + thisChart[barNumber].value;
+										}
+									}
+								}]
+							}
+						}
+					}
+
+				let ctx = document.getElementById($(this).attr('id') + '').getContext("2d");
+				window.myBar = new Chart(ctx, chartOptions);
+
+				$('#chart-control .button').on('click', function () {
+					$(this).siblings().removeClass('active');
+					$(this).addClass('active');
+					barNumber = $(this).data('chart')
+					chartOptions.data = thisChart[barNumber]
+					chartOptions.options.title.text = thisChart[barNumber].title
+					chartOptions.options.scales.yAxes[0].ticks.callback = function (value) {return value + " " + thisChart[barNumber].value;}
+					myBar.update()
+				})
+			})
+		}
+
+		asyncro('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js', function () {
+			initGraphTab();
+		})
+
+	};
+
 	// Scroll triggers
 	docWindow.scroll(function (event) {
 		let scrollPos = docWindow.scrollTop();
@@ -1069,12 +1194,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 			return
 		}
-		// else if (scrollPos < 0) {
-		// 	return
-		// }
 		if (!mobile) {
-			scrollMainScreen(scrollPos)
-			scrollMainTitle(scrollPos)
+			scrollMainScreen(scrollPos);
+			scrollMainTitle(scrollPos);
 		}
 		$headerMenuWrapper.removeClass('sticked animated fadeInDownFast')
 	})
