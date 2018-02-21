@@ -241,7 +241,7 @@ blockquote
 	flex-wrap: wrap
 	flex-direction: row
 	justify-content: flex-start
-	align-items: flex-start
+	align-items: stretch
 	& > *
 		position: relative
 	&.column
@@ -2580,7 +2580,7 @@ $galleryBigHeight: 590px
 		margin-bottom: 50px
 		left: 0
 		top: 0
-		max-width: 640px
+		+rem(max-width, 700px)
 	.brand-logo-wrapper
 		+r(1024)
 			max-width: 200px
