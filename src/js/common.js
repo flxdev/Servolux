@@ -128,12 +128,14 @@ function scrollMainScreen (scrollPos) {
 	window.DOM.videoWrapper.css('opacity', opacityScroll);
 	window.DOM.firstScreenFading.css('transform', 'translate(-50%, -50%) scale(' + i + ')');
 
-	if (scrollPos > 150 && !window.DOM.screenLinks.hasClass('hiddened')) {
-		window.DOM.screenLinks.fadeOut().addClass('hiddened')
-	}
-	else if (scrollPos < 150 && window.DOM.screenLinks.hasClass('hiddened')) {
-		window.DOM.screenLinks.fadeIn().removeClass('hiddened')
-	}
+	window.DOM.screenLinks.forEach((item) => {
+		if (scrollPos > 150 && !item.classList.contains('hiddened')) {
+			$(item).fadeOut().addClass('hiddened')
+		}
+		else if (scrollPos < 150 && item.classList.contains('hiddened')) {
+			$(item).fadeIn().removeClass('hiddened')
+		}
+	})
 }
 // Main title fade out on scroll
 function scrollMainTitle (scrollPos) {
@@ -506,11 +508,9 @@ let initials = {
 			let _href = item.getAttribute("href");
 			if(_href.indexOf("#") !== -1) {
 				let _hrefTo = document.getElementById(_href.slice(1)) || false;
-				console.log(_hrefTo, item);
 				if(_hrefTo && !_hrefTo.classList.contains('remodal')){
 					item.addEventListener('click', (e) => {
 						e.preventDefault();
-						console.log(_hrefTo.getBoundingClientRect().top + pageYOffset - 100);
 						$('html, body').animate({
 							scrollTop: _hrefTo.getBoundingClientRect().top + pageYOffset - 100
 						}, 1000)
@@ -521,9 +521,7 @@ let initials = {
 	}
 }
 
-//LOADED
-window.onload = function () {
-
+document.addEventListener('DOMContentLoaded', () => {
 	window.DOM = {
 		hrefs: document.querySelectorAll('a'),
 		body: document.body,
@@ -542,12 +540,66 @@ window.onload = function () {
 		asideMenu: document.getElementById('aside-menu') ? true : false,
 		hasParallax: document.getElementById('parallax') ? true : false,
 		formFocus: $('.formFocus'),
-		screenLinks: document.querySelectorAll('#main-screen .screen-link-text') || false,
+		screenLinks: document.querySelectorAll('.screen-link-text') || false,
 		chartBar: $('#index-chart .chart-bar'),
 		$maps: $('.map'),
 		$map: $('#map'),
 		$brandContacts: $('#brand-contacts')
 	};
+
+	// InView checker
+	if ($(window).width() >= 992) {
+		inView.offset(50);
+		inView('.animateThis').on('enter', function (el) {
+			$(el).addClass('animated ' + $(el).data('anim'))
+		})
+	}
+	//Prevent default scrollTo
+	window.scrollTo = function( x,y ) {
+		return true;
+	};
+
+	// Scroll triggers
+	window.addEventListener('scroll', (event) => {
+		let scrollPos = pageYOffset;
+		if (scrollPos > window.DOM.screenWrapperHeight) {
+			window.DOM.headerMenuWrapper.classList.add('sticked', 'animated', 'fadeInDownFast');
+			window.DOM.headerMenuWrapper.style.animationDelay = '0';
+			if (!window.DOM.mobile && window.DOM.asideMenu) {
+				changeAsideMenu();
+			}
+			return
+		}
+		if (!window.DOM.mobile) {
+			scrollMainScreen(scrollPos);
+			scrollMainTitle(scrollPos);
+		}
+		window.DOM.headerMenuWrapper.classList.remove('sticked', 'animated', 'fadeInDownFast');
+	});
+	window.dispatchEvent( new Event('scroll') );
+
+	//Ramodal close hash delete
+	$(document).on('closed', function () {
+		let scrollV, scrollH, loc = window.location;
+		if ('pushState' in history)
+			history.pushState('', document.title, loc.pathname + loc.search);
+		else {
+			// Prevent scrolling by storing the page's current scroll offset
+			scrollV = document.body.scrollTop;
+			scrollH = document.body.scrollLeft;
+
+			loc.hash = '';
+
+			// Restore the scroll offset, should be flicker free
+			document.body.scrollTop = scrollV;
+			document.body.scrollLeft = scrollH;
+		}
+	});
+
+});
+
+//LOADED
+window.onload = function () {
 
 	if (window.DOM.$map.length) {
 			initMap(document.getElementById('map'), arrayOfPins, window.DOM.$brandContacts.length ? styleMapContacts : styleMapBig, false, window.DOM.$brandContacts.length)
@@ -675,14 +727,6 @@ window.onload = function () {
 
 		let p = new Parallax('.rellax')
 
-	}
-
-	// InView checker
-	if ($(window).width() >= 992) {
-		inView.offset(50)
-		inView('.animateThis').on('enter', function (el) {
-			$(el).addClass('animated ' + $(el).data('anim'))
-		})
 	}
 
 	// Chart bar width maker
@@ -1193,47 +1237,4 @@ window.onload = function () {
 			responsive: true
 		})
 	}
-
-	//Prevent default scrollTo
-	window.scrollTo = function( x,y ) {
-		return true;
-	};
-
-	// Scroll triggers
-	window.addEventListener('scroll', (event) => {
-		let scrollPos = pageYOffset;
-		if (scrollPos > window.DOM.screenWrapperHeight) {
-			window.DOM.headerMenuWrapper.classList.add('sticked', 'animated', 'fadeInDownFast');
-			window.DOM.headerMenuWrapper.style.animationDelay = '0';
-			if (!window.DOM.mobile && window.DOM.asideMenu) {
-				changeAsideMenu();
-			}
-			return
-		}
-		if (!window.DOM.mobile) {
-			scrollMainScreen(scrollPos);
-			scrollMainTitle(scrollPos);
-		}
-		window.DOM.headerMenuWrapper.classList.remove('sticked', 'animated', 'fadeInDownFast');
-	});
-	window.dispatchEvent( new Event('scroll') );
-
-	//Ramodal close hash delete
-	$(document).on('closed', function () {
-		let scrollV, scrollH, loc = window.location;
-		if ('pushState' in history)
-			history.pushState('', document.title, loc.pathname + loc.search);
-		else {
-			// Prevent scrolling by storing the page's current scroll offset
-			scrollV = document.body.scrollTop;
-			scrollH = document.body.scrollLeft;
-
-			loc.hash = '';
-
-			// Restore the scroll offset, should be flicker free
-			document.body.scrollTop = scrollV;
-			document.body.scrollLeft = scrollH;
-		}
-	});
-
-}
+};

@@ -139,11 +139,13 @@ function scrollMainScreen(scrollPos) {
 	window.DOM.videoWrapper.css('opacity', opacityScroll);
 	window.DOM.firstScreenFading.css('transform', 'translate(-50%, -50%) scale(' + i + ')');
 
-	if (scrollPos > 150 && !window.DOM.screenLinks.hasClass('hiddened')) {
-		window.DOM.screenLinks.fadeOut().addClass('hiddened');
-	} else if (scrollPos < 150 && window.DOM.screenLinks.hasClass('hiddened')) {
-		window.DOM.screenLinks.fadeIn().removeClass('hiddened');
-	}
+	window.DOM.screenLinks.forEach(function (item) {
+		if (scrollPos > 150 && !item.classList.contains('hiddened')) {
+			$(item).fadeOut().addClass('hiddened');
+		} else if (scrollPos < 150 && item.classList.contains('hiddened')) {
+			$(item).fadeIn().removeClass('hiddened');
+		}
+	});
 }
 // Main title fade out on scroll
 function scrollMainTitle(scrollPos) {
@@ -536,11 +538,9 @@ var initials = {
 			var _href = item.getAttribute("href");
 			if (_href.indexOf("#") !== -1) {
 				var _hrefTo = document.getElementById(_href.slice(1)) || false;
-				console.log(_hrefTo, item);
 				if (_hrefTo && !_hrefTo.classList.contains('remodal')) {
 					item.addEventListener('click', function (e) {
 						e.preventDefault();
-						console.log(_hrefTo.getBoundingClientRect().top + pageYOffset - 100);
 						$('html, body').animate({
 							scrollTop: _hrefTo.getBoundingClientRect().top + pageYOffset - 100
 						}, 1000);
@@ -549,9 +549,9 @@ var initials = {
 			}
 		});
 	}
+};
 
-	//LOADED
-};window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
 	var _window$DOM;
 
 	window.DOM = (_window$DOM = {
@@ -572,7 +572,60 @@ var initials = {
 		asideMenu: document.getElementById('aside-menu') ? true : false,
 		hasParallax: document.getElementById('parallax') ? true : false,
 		formFocus: $('.formFocus')
-	}, _defineProperty(_window$DOM, 'screenLinks', document.querySelectorAll('#main-screen .screen-link-text') || false), _defineProperty(_window$DOM, 'chartBar', $('#index-chart .chart-bar')), _defineProperty(_window$DOM, '$maps', $('.map')), _defineProperty(_window$DOM, '$map', $('#map')), _defineProperty(_window$DOM, '$brandContacts', $('#brand-contacts')), _window$DOM);
+	}, _defineProperty(_window$DOM, 'screenLinks', document.querySelectorAll('.screen-link-text') || false), _defineProperty(_window$DOM, 'chartBar', $('#index-chart .chart-bar')), _defineProperty(_window$DOM, '$maps', $('.map')), _defineProperty(_window$DOM, '$map', $('#map')), _defineProperty(_window$DOM, '$brandContacts', $('#brand-contacts')), _window$DOM);
+
+	// InView checker
+	if ($(window).width() >= 992) {
+		inView.offset(50);
+		inView('.animateThis').on('enter', function (el) {
+			$(el).addClass('animated ' + $(el).data('anim'));
+		});
+	}
+	//Prevent default scrollTo
+	window.scrollTo = function (x, y) {
+		return true;
+	};
+
+	// Scroll triggers
+	window.addEventListener('scroll', function (event) {
+		var scrollPos = pageYOffset;
+		if (scrollPos > window.DOM.screenWrapperHeight) {
+			window.DOM.headerMenuWrapper.classList.add('sticked', 'animated', 'fadeInDownFast');
+			window.DOM.headerMenuWrapper.style.animationDelay = '0';
+			if (!window.DOM.mobile && window.DOM.asideMenu) {
+				changeAsideMenu();
+			}
+			return;
+		}
+		if (!window.DOM.mobile) {
+			scrollMainScreen(scrollPos);
+			scrollMainTitle(scrollPos);
+		}
+		window.DOM.headerMenuWrapper.classList.remove('sticked', 'animated', 'fadeInDownFast');
+	});
+	window.dispatchEvent(new Event('scroll'));
+
+	//Ramodal close hash delete
+	$(document).on('closed', function () {
+		var scrollV = void 0,
+		    scrollH = void 0,
+		    loc = window.location;
+		if ('pushState' in history) history.pushState('', document.title, loc.pathname + loc.search);else {
+			// Prevent scrolling by storing the page's current scroll offset
+			scrollV = document.body.scrollTop;
+			scrollH = document.body.scrollLeft;
+
+			loc.hash = '';
+
+			// Restore the scroll offset, should be flicker free
+			document.body.scrollTop = scrollV;
+			document.body.scrollLeft = scrollH;
+		}
+	});
+});
+
+//LOADED
+window.onload = function () {
 
 	if (window.DOM.$map.length) {
 		initMap(document.getElementById('map'), arrayOfPins, window.DOM.$brandContacts.length ? styleMapContacts : styleMapBig, false, window.DOM.$brandContacts.length);
@@ -693,14 +746,6 @@ var initials = {
 	if (window.DOM.hasParallax) {
 
 		var p = new Parallax('.rellax');
-	}
-
-	// InView checker
-	if ($(window).width() >= 992) {
-		inView.offset(50);
-		inView('.animateThis').on('enter', function (el) {
-			$(el).addClass('animated ' + $(el).data('anim'));
-		});
 	}
 
 	// Chart bar width maker
@@ -1192,46 +1237,4 @@ var initials = {
 			responsive: true
 		});
 	}
-
-	//Prevent default scrollTo
-	window.scrollTo = function (x, y) {
-		return true;
-	};
-
-	// Scroll triggers
-	window.addEventListener('scroll', function (event) {
-		var scrollPos = pageYOffset;
-		if (scrollPos > window.DOM.screenWrapperHeight) {
-			window.DOM.headerMenuWrapper.classList.add('sticked', 'animated', 'fadeInDownFast');
-			window.DOM.headerMenuWrapper.style.animationDelay = '0';
-			if (!window.DOM.mobile && window.DOM.asideMenu) {
-				changeAsideMenu();
-			}
-			return;
-		}
-		if (!window.DOM.mobile) {
-			scrollMainScreen(scrollPos);
-			scrollMainTitle(scrollPos);
-		}
-		window.DOM.headerMenuWrapper.classList.remove('sticked', 'animated', 'fadeInDownFast');
-	});
-	window.dispatchEvent(new Event('scroll'));
-
-	//Ramodal close hash delete
-	$(document).on('closed', function () {
-		var scrollV = void 0,
-		    scrollH = void 0,
-		    loc = window.location;
-		if ('pushState' in history) history.pushState('', document.title, loc.pathname + loc.search);else {
-			// Prevent scrolling by storing the page's current scroll offset
-			scrollV = document.body.scrollTop;
-			scrollH = document.body.scrollLeft;
-
-			loc.hash = '';
-
-			// Restore the scroll offset, should be flicker free
-			document.body.scrollTop = scrollV;
-			document.body.scrollLeft = scrollH;
-		}
-	});
 };
