@@ -33,10 +33,20 @@
 				p Ваш вопрос
 				.form-input-wrapper.control-label
 					input(type='text' name='userMsg' data-validation="required").form-control
+		//TODO 21.03.2018
 		.form-bottom-items
-			//TODO new wrapper
-			.files-input-wrapper
-				.files-input
+			.tpl(style="display: none")
+				.dz-preview.dz-file-preview
+					.dz-details
+						.dz-filename(data-dz-name)
+						.dz-size(data-dz-size)
+						.dz-remove(data-dz-remove) X
+					.dz-progress
+						span(data-dz-uploadprogress)
+					.dz-error-message
+						span(data-dz-errormessage)
+			.dropzone
+				.dz-show.dropzone-previews
 			button(type="submit").callback-button-modal Отправить
 #callbackSuccess.remodal(data-remodal-id="callbackSuccess")
 	button(data-remodal-action="close").remodal-close
