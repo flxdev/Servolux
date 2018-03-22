@@ -151,6 +151,8 @@ function scrollMainScreen(scrollPos) {
 function scrollMainTitle(scrollPos) {
 	window.DOM.mainScreenTitle.style.transform = 'translatey(' + Math.round(-scrollPos / 2) + 'px)';
 }
+var toggleVideo = function toggleVideo() {};
+var scrollHeader = function scrollHeader() {};
 
 //Map
 function initMap(mapArg, arrayOfPins, styleMap) {
@@ -548,6 +550,19 @@ var initials = {
 				}
 			}
 		});
+	},
+	passiveOrNot: function passiveOrNot() {
+		return window.DOM.passiveSupported ? { passive: true } : false;
+	},
+	checkPassive: function checkPassive() {
+		try {
+			var options = Object.defineProperty({}, 'passive', {
+				get: function get() {
+					window.DOM.passiveSupported = true;
+				}
+			});
+			window.addEventListener('test', null, options);
+		} catch (err) {}
 	}
 };
 
@@ -572,7 +587,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		asideMenu: document.getElementById('aside-menu') ? true : false,
 		hasParallax: document.getElementById('parallax') ? true : false,
 		formFocus: $('.formFocus')
-	}, _defineProperty(_window$DOM, 'screenLinks', document.querySelectorAll('.screen-link-text') || false), _defineProperty(_window$DOM, 'chartBar', $('#index-chart .chart-bar')), _defineProperty(_window$DOM, '$maps', $('.map')), _defineProperty(_window$DOM, '$map', $('#map')), _defineProperty(_window$DOM, '$brandContacts', $('#brand-contacts')), _window$DOM);
+	}, _defineProperty(_window$DOM, 'screenLinks', document.querySelectorAll('.screen-link-text') || false), _defineProperty(_window$DOM, 'chartBar', $('#index-chart .chart-bar')), _defineProperty(_window$DOM, '$maps', $('.map')), _defineProperty(_window$DOM, '$map', $('#map')), _defineProperty(_window$DOM, '$brandContacts', $('#brand-contacts')), _defineProperty(_window$DOM, 'activeHeader', false), _window$DOM);
+
+	initials.checkPassive();
 
 	// InView checker
 	if ($(window).width() >= 992) {
@@ -589,20 +606,36 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Scroll triggers
 	window.addEventListener('scroll', function (event) {
 		var scrollPos = pageYOffset;
-		if (scrollPos > window.DOM.screenWrapperHeight) {
-			window.DOM.headerMenuWrapper.classList.add('sticked', 'animated', 'fadeInDownFast');
-			window.DOM.headerMenuWrapper.style.animationDelay = '0';
+
+		if (scrollPos >= window.DOM.screenWrapperHeight) {
+			if (!window.DOM.activeHeader) {
+				window.DOM.activeHeader = true;
+				window.DOM.headerMenuWrapper.classList.add('sticked', 'animated', 'fadeInDownFast');
+				window.DOM.headerMenuWrapper.style.animationDelay = '0';
+				toggleVideo(window.DOM.activeHeader);
+			}
 			if (!window.DOM.mobile && window.DOM.asideMenu) {
 				changeAsideMenu();
 			}
 			return;
 		}
-		if (!window.DOM.mobile) {
+
+		if (window.DOM.activeHeader) {
+			window.DOM.activeHeader = false;
+			window.DOM.headerMenuWrapper.classList.remove('sticked', 'animated', 'fadeInDownFast');
+			toggleVideo(window.DOM.activeHeader);
+		}
+
+		scrollHeader(scrollPos);
+	}, initials.passiveOrNot());
+
+	if (!window.DOM.mobile) {
+		scrollHeader = function scrollHeader(scrollPos) {
 			scrollMainScreen(scrollPos);
 			scrollMainTitle(scrollPos);
-		}
-		window.DOM.headerMenuWrapper.classList.remove('sticked', 'animated', 'fadeInDownFast');
-	});
+		};
+	}
+
 	window.dispatchEvent(new Event('scroll'));
 
 	//Ramodal close hash delete
@@ -637,8 +670,12 @@ window.onload = function () {
 
 	// Video append if not mobile
 	if (!window.DOM.mobile && window.DOM.videoWrapper.data('src')) {
-		window.DOM.videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video class="firstScreenFading" id="main-video" muted loop><source src="' + window.DOM.videoWrapper.data('src') + '" type="video/mp4"></video></div></div>');
+		window.DOM.videoWrapper.append('<div class="homepage-hero-module"><div class="video-container"><div class="filter"></div><video class="firstScreenFading" id="main-video" autoplay muted loop><source src="' + window.DOM.videoWrapper.data('src') + '" type="video/mp4"></video></div></div>');
 		window.DOM.firstScreenFading = window.DOM.videoWrapper.find('.firstScreenFading');
+		window.DOM.mainVideo = $('#main-video');
+		toggleVideo = function toggleVideo(active) {
+			active ? window.DOM.mainVideo.get(0).pause() : window.DOM.mainVideo.get(0).play();
+		};
 	}
 
 	//Change header in modals depend on open buttons text
@@ -1127,10 +1164,6 @@ window.onload = function () {
 		asyncro('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js', function () {
 			initGraphTab();
 		});
-	}
-
-	if ($('#main-video').length) {
-		$('#main-video').get(0).play();
 	}
 
 	if ($('#dates').length) {
