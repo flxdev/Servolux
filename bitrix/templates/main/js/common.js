@@ -571,6 +571,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	window.DOM = (_window$DOM = {
 		hrefs: document.querySelectorAll('a'),
+		wWidth: $(window).width(),
 		body: document.body,
 		html: document.getElementsByTagName('html')[0],
 		headerMenuWrapper: document.getElementById('header-menu-wrapper') || false,
@@ -587,7 +588,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		asideMenu: document.getElementById('aside-menu') ? true : false,
 		hasParallax: document.getElementById('parallax') ? true : false,
 		formFocus: $('.formFocus')
-	}, _defineProperty(_window$DOM, 'screenLinks', document.querySelectorAll('.screen-link-text') || false), _defineProperty(_window$DOM, 'chartBar', $('#index-chart .chart-bar')), _defineProperty(_window$DOM, '$maps', $('.map')), _defineProperty(_window$DOM, '$map', $('#map')), _defineProperty(_window$DOM, '$brandContacts', $('#brand-contacts')), _defineProperty(_window$DOM, 'activeHeader', false), _window$DOM);
+	}, _defineProperty(_window$DOM, 'screenLinks', document.querySelectorAll('.screen-link-text') || false), _defineProperty(_window$DOM, 'chartBar', $('#index-chart .chart-bar')), _defineProperty(_window$DOM, '$maps', $('.map')), _defineProperty(_window$DOM, '$map', $('#map')), _defineProperty(_window$DOM, '$brandContacts', $('#brand-contacts')), _defineProperty(_window$DOM, 'activeHeader', false), _defineProperty(_window$DOM, 'jobsTags', document.querySelectorAll('.jobs-tags-title-wrapper') || false), _window$DOM);
 
 	initials.checkPassive();
 
@@ -687,14 +688,18 @@ window.onload = function () {
 	});
 
 	//Menu
-	window.DOM.burger.addEventListener('click', function () {
-		toggleMenu();
-	});
-	window.DOM.headerModalWrapper.querySelectorAll('.menu-columns ul li a').forEach(function (item) {
-		item.addEventListener('click', function () {
+	if (window.DOM.burger) {
+		window.DOM.burger.addEventListener('click', function () {
 			toggleMenu();
 		});
-	});
+	}
+	if (window.DOM.headerModalWrapper) {
+		window.DOM.headerModalWrapper.querySelectorAll('.menu-columns ul li a').forEach(function (item) {
+			item.addEventListener('click', function () {
+				toggleMenu();
+			});
+		});
+	}
 
 	//Modals in products
 	if ($('#modal').length) {
@@ -1021,10 +1026,18 @@ window.onload = function () {
 		});
 	}
 
-	if ($('#jobs-content-wrapper').length) {
-		$('.jobs-tags-title-wrapper').on('click', function () {
-			$(this).toggleClass('deactive');
-			$(this).next().toggleClass('deactive');
+	if (window.DOM.jobsTags) {
+		var tg = window.DOM.wWidth <= 1024;
+		window.DOM.jobsTags.forEach(function (item) {
+			item.addEventListener('click', function () {
+				item.classList.toggle('deactive');
+				item.nextElementSibling.classList.toggle('deactive');
+			});
+
+			if (tg) {
+				item.classList.toggle('deactive');
+				item.nextElementSibling.classList.toggle('deactive');
+			}
 		});
 	}
 
@@ -1047,10 +1060,12 @@ window.onload = function () {
 			});
 		});
 
-		var formsFocusArr = [];
-		document.querySelectorAll('.formFocus').forEach(function (item) {
-			formsFocusArr.push(new FormFocus(item));
-		});
+		if (typeof $.validate === 'function') {
+			var formsFocusArr = [];
+			document.querySelectorAll('.formFocus').forEach(function (item) {
+				formsFocusArr.push(new FormFocus(item));
+			});
+		}
 	}
 
 	if ($('.graphic-line').length) {

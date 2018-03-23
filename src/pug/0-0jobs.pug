@@ -99,14 +99,18 @@ block content
 										+jobs-tag('Фаниполь')
 					.three-four
 						#jobs-content-inner-wrapper
-							#jobs-content-inner-sorting.animateThis(data-anim="fadeInUp")
+							#jobs-content-inner-sorting.animateThis(data-anim="fadeInUp" tabindex=0)
 								.jobs-content-sorting-finded
 									.jobs-content-sorting__text.caption По вашему запросу найдено
 									.jobs-content-sorting__bold-text.darker 16 вакансий
 								.jobs-content-sorting.-sort
 									._text.caption Сортировать по:
-									._select-wrapper
+									//TODO 23.03.2018
+									._select-wrapper(tabindex=1)
 										._bold-text.darker.current Датe
+											._arrow.upside
+												svg(class="icon icon-vacancy")
+													use(xlink:href="#arrow_sort" xmlns:xlink="http://www.w3.org/1999/xlink")
 										._select-inner-wrapper
 											._select
 												._select-item.active
@@ -123,11 +127,8 @@ block content
 													p._bold-text Региону от А до Я
 												._select-item
 													p._bold-text Региону от Я до А
-									._arrow.upside
-										svg(class="icon icon-vacancy")
-											use(xlink:href="#arrow_sort" xmlns:xlink="http://www.w3.org/1999/xlink")
 							.clearfix
-							#jobs-content-inner-tags.animateThis(data-anim="fadeInUp")
+							#jobs-content-inner-tags.animateThis(data-anim="fadeInUp" tabindex=0)
 								.jobs-content-inner-tags-wrapper
 									.jobs-content-inner-tag
 										p._text Автомобильный бизнес

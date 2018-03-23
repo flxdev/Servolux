@@ -539,6 +539,7 @@ let initials = {
 document.addEventListener('DOMContentLoaded', () => {
 	window.DOM = {
 		hrefs: document.querySelectorAll('a'),
+		wWidth: $(window).width(),
 		body: document.body,
 		html: document.getElementsByTagName('html')[0],
 		headerMenuWrapper: document.getElementById('header-menu-wrapper') || false,
@@ -560,7 +561,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		$maps: $('.map'),
 		$map: $('#map'),
 		$brandContacts: $('#brand-contacts'),
-		activeHeader: false
+		activeHeader: false,
+		jobsTags: document.querySelectorAll('.jobs-tags-title-wrapper') || false,
 	};
 
 	initials.checkPassive();
@@ -663,14 +665,18 @@ window.onload = function () {
 	});
 
 	//Menu
-	window.DOM.burger.addEventListener('click', () => {
-		toggleMenu()
-	})
-	window.DOM.headerModalWrapper.querySelectorAll('.menu-columns ul li a').forEach((item) =>{
-		item.addEventListener('click', function () {
+	if(window.DOM.burger){
+		window.DOM.burger.addEventListener('click', () => {
+			toggleMenu()
+		})
+	}
+	if(window.DOM.headerModalWrapper){
+		window.DOM.headerModalWrapper.querySelectorAll('.menu-columns ul li a').forEach((item) =>{
+			item.addEventListener('click', function () {
 				toggleMenu();
 			})
 		});
+	}
 
 	//Modals in products
 	if ($('#modal').length) {
@@ -1012,11 +1018,19 @@ window.onload = function () {
 
 	}
 
-	if ($('#jobs-content-wrapper').length) {
-		$('.jobs-tags-title-wrapper').on('click', function () {
-			$(this).toggleClass('deactive')
-			$(this).next().toggleClass('deactive')
-		})
+	if (window.DOM.jobsTags) {
+		let tg = window.DOM.wWidth <= 1024;
+		window.DOM.jobsTags.forEach((item) => {
+			item.addEventListener('click', () => {
+				item.classList.toggle('deactive');
+				item.nextElementSibling.classList.toggle('deactive');
+			});
+
+			if(tg){
+				item.classList.toggle('deactive');
+				item.nextElementSibling.classList.toggle('deactive');
+			}
+		});
 	}
 
 	if (window.DOM.formFocus.length) {
@@ -1038,10 +1052,12 @@ window.onload = function () {
 			})
 		})
 
-		let formsFocusArr = [];
-		document.querySelectorAll('.formFocus').forEach((item) => {
-			formsFocusArr.push(new FormFocus(item));
-		})
+		if(typeof $.validate === 'function') {
+			let formsFocusArr = [];
+			document.querySelectorAll('.formFocus').forEach((item) => {
+				formsFocusArr.push(new FormFocus(item));
+			})
+		}
 	}
 
 	if ($('.graphic-line').length) {

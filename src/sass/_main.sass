@@ -454,9 +454,10 @@ blockquote
 		.brand
 			border: 1px solid $lineColor
 			+rem(height, 220px)
-			+rem(max-width, 220px)
+			//+rem(max-width, 220px)
 			+rem(min-width, 190px)
 			display: inline-block
+			width: 100%
 			max-width: 100%
 			z-index: 0
 			position: relative
@@ -2663,7 +2664,7 @@ $galleryBigHeight: 590px
 		margin: auto
 		+rem(width, 30px)
 		+rem(height, 30px)
-		transform: translate(-50px, 0) rotate(180deg)
+		transform: translate(-60px, 0) rotate(180deg)
 		background: url("../img/1-1/arrow.svg") 50% 50% no-repeat
 		background-size: cover
 		font-size: 0
@@ -2674,11 +2675,11 @@ $galleryBigHeight: 590px
 	.slick-dots
 		position: absolute
 		+rem(bottom, -7px)
-		left: 0
-		right: 0
-		margin: auto
-		+rem(width, 20px)
+		right: 50%
+		+rem(margin-right, -15px)
+		display: inline-block
 		transform: translate(-12px, 0)
+		text-align: right
 		li
 			display: inline-block
 			display: none
@@ -2696,10 +2697,10 @@ $galleryBigHeight: 590px
 		color: #484f42
 		font-weight: 300
 		font-family: "GothamPro", 'Roboto', 'Arial'
-		left: 0
-		right: 0
-		margin: auto
-		+rem(width, 30px)
+		left: 50%
+		+rem(margin-left, -15px)
+		display: inline-block
+		white-space: nowrap
 		transform: translate(20px, 0)
 .slick-vertical
 	.slick-slide
@@ -2874,6 +2875,7 @@ $galleryBigHeight: 590px
 	margin: auto
 	overflow: hidden
 	#modal-block-wrapper
+		width: 100%
 		+vcenter
 		.block
 			+rem(max-width, 800px)
@@ -2982,6 +2984,8 @@ $galleryBigHeight: 590px
 			.sub
 				font-size: 16px
 				font-weight: 400
+				+r(1024)
+					margin-bottom: 0
 	.side-block-img-wrapper
 		width: 50%
 		height: 100%
@@ -3514,20 +3518,29 @@ $galleryBigHeight: 590px
 	+rem(margin-bottom, 20px)
 	z-index: 2
 	position: relative
+	+r(1024)
+		cursor: pointer
 	.jobs-content-sorting
 		z-index: 10
 		position: relative
+		padding-right: 30px
 		&__arrow
 			+rem(width, 16px)
 			+rem(height, 16px)
 			transition: transform .2s
 			cursor: pointer
 			vertical-align: middle
+			position: absolute
+			right: 10px
+			top: 5px
 			+rem(margin-top, 0px)
 			&.upside
 				transform: rotate(180deg)
 		&-finded
 			display: inline-block
+			cursor: default
+			.jobs-content-sorting__bold-text
+				cursor: default
 			&>*
 				display: inline-block
 				font-weight: 300
@@ -3549,7 +3562,7 @@ $galleryBigHeight: 590px
 			margin: 0
 			+rem(margin-right, 5px)
 		&__select-wrapper
-			&:hover
+			&:focus
 				.jobs-content-sorting__select
 					height: auto
 					border: 1px solid #eee
@@ -3587,7 +3600,11 @@ $galleryBigHeight: 590px
 						color: $active
 
 #jobs-content-inner-tags
+	+r(1024)
+		cursor: pointer
 	+rem(margin-bottom, 20px)
+.jobs-content-inner-tags-wrapper
+	cursor: default
 
 .jobs-content-inner
 	&-content
@@ -3752,6 +3769,9 @@ form.formFocus
 		+rem(height, 70px)
 		transition: margin 0.2s ease-out, border .2s, padding 0.2s
 		cursor: text
+		+r(400)
+			margin: 0
+			margin-bottom: 20px
 		.form-error
 			position: absolute
 			top: 100%
@@ -3939,7 +3959,18 @@ form.formFocus
 		margin-bottom: 0
 		+rem(margin-left, 20px)
 
+.modal-is-opened
+	.remodal
+		display: block
+		position: fixed
+		top: 50%
+		left: 50%
+		z-index: 9999;
+		transform: translate(-50%, -50%)
+
 .remodal
+	+r(360)
+		padding: 20px
 	form.formFocus
 		position: relative
 		&:after
