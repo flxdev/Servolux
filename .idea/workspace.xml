@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eba7d7be-3f5e-4fdc-a936-f56b7a4492c0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/0-0jobs.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/0-0jobs.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/0-1jobs.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/0-1jobs.html" />
       <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-0company.html" />
       <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-1brand.html" />
       <change beforePath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/1-2brands.html" />
@@ -19,16 +17,7 @@
       <change beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.css" />
       <change beforePath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" afterPath="$PROJECT_DIR$/bitrix/templates/main/css/screen.min.css" />
       <change beforePath="$PROJECT_DIR$/bitrix/templates/main/index.html" afterPath="$PROJECT_DIR$/bitrix/templates/main/index.html" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/common.min.js" />
-      <change beforePath="$PROJECT_DIR$/bitrix/templates/main/js/lib.js" afterPath="$PROJECT_DIR$/bitrix/templates/main/js/lib.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/common.js" afterPath="$PROJECT_DIR$/src/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/lib/remodal.min.js" afterPath="$PROJECT_DIR$/src/js/lib/remodal.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/pug/0-0jobs.pug" afterPath="$PROJECT_DIR$/src/pug/0-0jobs.pug" />
-      <change beforePath="$PROJECT_DIR$/src/pug/includes/_head.pug" afterPath="$PROJECT_DIR$/src/pug/includes/_head.pug" />
       <change beforePath="$PROJECT_DIR$/src/sass/_main.sass" afterPath="$PROJECT_DIR$/src/sass/_main.sass" />
-      <change beforePath="$PROJECT_DIR$/src/sass/lib/_remodal-default-theme.scss" afterPath="$PROJECT_DIR$/src/sass/lib/_remodal-default-theme.scss" />
-      <change beforePath="$PROJECT_DIR$/src/sass/lib/_remodal.scss" afterPath="$PROJECT_DIR$/src/sass/lib/_remodal.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -133,7 +122,7 @@
           <file leaf-file-name="_layout.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
+                <state relative-caret-position="600">
                   <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
                   <folding />
                 </state>
@@ -143,7 +132,7 @@
           <file leaf-file-name="_modals.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
+                <state relative-caret-position="1060">
                   <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
                   <folding />
                 </state>
@@ -157,8 +146,8 @@
           <file leaf-file-name="_main.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="3606" column="17" lean-forward="false" selection-start-line="3606" selection-start-column="17" selection-end-line="3606" selection-end-column="17" />
+                <state relative-caret-position="674">
+                  <caret line="1996" column="13" lean-forward="true" selection-start-line="1996" selection-start-column="13" selection-end-line="1996" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -187,7 +176,7 @@
           <file leaf-file-name="_mixins.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sass/lib/_mixins.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="776">
+                <state relative-caret-position="1580">
                   <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
                   <folding />
                 </state>
@@ -197,7 +186,7 @@
           <file leaf-file-name="font.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sass/font.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
+                <state relative-caret-position="420">
                   <caret line="17" column="39555" lean-forward="false" selection-start-line="17" selection-start-column="39555" selection-end-line="17" selection-end-column="39555" />
                   <folding />
                 </state>
@@ -207,7 +196,7 @@
           <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/js/common.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
+                <state relative-caret-position="2700">
                   <caret line="1025" column="61" lean-forward="false" selection-start-line="1025" selection-start-column="61" selection-end-line="1025" selection-end-column="61" />
                   <folding>
                     <element signature="n#!!block;n#asyncro#0" expanded="false" />
@@ -268,7 +257,7 @@
           <file leaf-file-name="_remodal.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sass/lib/_remodal.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-180">
+                <state relative-caret-position="0">
                   <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="12" />
                   <folding />
                 </state>
@@ -278,7 +267,7 @@
           <file leaf-file-name="_remodal-default-theme.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sass/lib/_remodal-default-theme.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
+                <state relative-caret-position="860">
                   <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
                   <folding />
                 </state>
@@ -288,7 +277,7 @@
           <file leaf-file-name="_head.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pug/includes/_head.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="376">
+                <state relative-caret-position="420">
                   <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
                   <folding />
                 </state>
@@ -298,7 +287,7 @@
           <file leaf-file-name="remodal.min.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/js/lib/remodal.min.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
+                <state relative-caret-position="20">
                   <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -322,7 +311,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>headerMenuWrapper</find>
       <find>$headerModalWrapper</find>
       <find>firstScreenFading</find>
       <find>videoWrapper</find>
@@ -352,6 +340,7 @@
       <find>formFocus</find>
       <find>brand</find>
       <find>.jobs-content-sorting</find>
+      <find>change-la</find>
     </findStrings>
     <replaceStrings>
       <replace>latest</replace>
@@ -635,10 +624,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -666,6 +652,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -878,14 +867,8 @@
       <workItem from="1521096900890" duration="1226000" />
       <workItem from="1521184912531" duration="37000" />
       <workItem from="1521641812430" duration="3190000" />
-      <workItem from="1521701299994" duration="32692000" />
-    </task>
-    <task id="LOCAL-00017" summary="many fixes. new header and footer">
-      <created>1505747423937</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1505747423937</updated>
+      <workItem from="1521701299994" duration="33350000" />
+      <workItem from="1524034418260" duration="295000" />
     </task>
     <task id="LOCAL-00018" summary="news ready +-">
       <created>1505753511837</created>
@@ -1223,11 +1206,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521728521374</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="v 2.1.05 - styles - js - 1-TODO in html">
+      <created>1521797221263</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1521797221263</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="676304000" />
+    <option name="totallyTimeSpent" value="677257000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1239,7 +1229,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1080" y="-601" width="1080" height="1920" extended-state="6" />
+    <frame x="-1080" y="-712" width="1080" height="1920" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1249,14 +1239,15 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15166394" sideWeight="0.75482625" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14556277" sideWeight="0.77799225" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14502165" sideWeight="0.7799228" order="15" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32738096" sideWeight="0.84578997" order="11" side_tool="false" content_ui="tabs" x="-1060" y="36" width="1058" height="665" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16937229" sideWeight="0.46332046" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14556277" sideWeight="0.22200772" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14502165" sideWeight="0.22007722" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.242278" sideWeight="0.061959654" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24710424" sideWeight="0.061959654" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275573" sideWeight="0.4894027" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1274,7 +1265,6 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275573" sideWeight="0.4894027" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13470067" sideWeight="0.47976878" order="5" side_tool="false" content_ui="tabs" />
@@ -1311,7 +1301,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="v 0.8.9" />
     <MESSAGE value="v 0.9.2" />
     <MESSAGE value="v 0.9.9" />
     <MESSAGE value="v 0.9.95" />
@@ -1336,7 +1325,8 @@
     <MESSAGE value="v 2.0" />
     <MESSAGE value="v 2.0.1" />
     <MESSAGE value="v 2.1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="v 2.1.0" />
+    <MESSAGE value="v 2.1.05 - styles - js - 1-TODO in html" />
+    <option name="LAST_COMMIT_MESSAGE" value="v 2.1.05 - styles - js - 1-TODO in html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1498,26 +1488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8300">
           <caret line="548" column="2" lean-forward="false" selection-start-line="548" selection-start-column="2" selection-end-line="548" selection-end-column="2" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="n#!!doc;n#inherits#0" expanded="false" />
-            <element signature="n#!!doc;n#MarkerLabel_#0" expanded="false" />
-            <element signature="e#2881#3104#0" expanded="false" />
-            <element signature="e#3603#3768#0" expanded="false" />
-            <element signature="e#11330#11536#0" expanded="false" />
-            <element signature="e#11789#11839#0" expanded="false" />
-            <element signature="e#11945#12052#0" expanded="false" />
-            <element signature="e#12353#12484#0" expanded="false" />
-            <element signature="e#12592#12718#0" expanded="false" />
-            <element signature="e#13259#13449#0" expanded="false" />
-            <element signature="e#14106#14164#0" expanded="false" />
-            <element signature="e#14370#14467#0" expanded="false" />
-            <element signature="e#14823#15137#0" expanded="false" />
-            <element signature="e#15476#15669#0" expanded="false" />
-            <element signature="e#15898#19908#0" expanded="false" />
-            <element signature="n#!!doc;n#MarkerWithLabel#0" expanded="false" />
-            <element signature="e#21925#22061#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1566,15 +1536,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/lib/remodal.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="20">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1584,7 +1551,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/includes/_modals.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="1060">
           <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
           <folding />
         </state>
@@ -1592,7 +1559,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="2700">
           <caret line="1025" column="61" lean-forward="false" selection-start-line="1025" selection-start-column="61" selection-end-line="1025" selection-end-column="61" />
           <folding>
             <element signature="n#!!block;n#asyncro#0" expanded="false" />
@@ -1651,7 +1618,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/includes/_head.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="420">
           <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
           <folding />
         </state>
@@ -1667,7 +1634,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/font.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="420">
           <caret line="17" column="39555" lean-forward="false" selection-start-line="17" selection-start-column="39555" selection-end-line="17" selection-end-column="39555" />
           <folding />
         </state>
@@ -1675,7 +1642,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/lib/_mixins.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
+        <state relative-caret-position="1580">
           <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
           <folding />
         </state>
@@ -1691,7 +1658,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/lib/_remodal.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
+        <state relative-caret-position="0">
           <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="12" />
           <folding />
         </state>
@@ -1699,7 +1666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/lib/_remodal-default-theme.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="860">
           <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding />
         </state>
@@ -1707,7 +1674,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/_layout.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
+        <state relative-caret-position="600">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
@@ -1723,8 +1690,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/_main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="3606" column="17" lean-forward="false" selection-start-line="3606" selection-start-column="17" selection-end-line="3606" selection-end-column="17" />
+        <state relative-caret-position="674">
+          <caret line="1996" column="13" lean-forward="true" selection-start-line="1996" selection-start-column="13" selection-end-line="1996" selection-end-column="13" />
           <folding />
         </state>
       </provider>
